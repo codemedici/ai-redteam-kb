@@ -4,6 +4,7 @@ tags:
   - privilege-escalation
   - agentic-ai
   - authorization-bypass
+  - application-runtime
   - needs-review
 created: 2026-02-11
 source: "[[sources/bibliography#Securing AI Agents]]"
@@ -113,11 +114,12 @@ response = requests.post(
 - Lateral movement using agent's identity/credentials
 - Data exfiltration through privileged access
 
-## Related Techniques
+## Related
 
-- [[atlas/techniques/privilege-escalation/llm-jailbreak]]
 - [[trust-boundaries/application-agent-runtime/issues/unsafe-tool-invocation]]
 - [[trust-boundaries/application-agent-runtime/issues/tool-privilege-escalation]]
+- [[trust-boundaries/application-agent-runtime/issues/agent-identity-crisis]]
+- [[trust-boundaries/model/issues/jailbreak-policy-bypass]]
 
 ## Source
 

@@ -1,0 +1,20 @@
+{
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "readableLineLength": true,
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "showInlineTitle": true,
+  "fileSortOrder": "alphabetical",
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "assets",
+  "promptDelete": false,
+  "vimMode": false,
+  "legacyEditor": false,
+  "spellcheck": true
+}

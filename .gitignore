@@ -1,0 +1,16 @@
+# Obsidian workspace files (user-specific)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+
+# Obsidian cache
+.obsidian/cache
+
+# Plugin data (will be re-downloaded)
+.obsidian/plugins/
+
+# User-specific hotkeys
+.obsidian/hotkeys.json
+
+# Trash
+.trash/

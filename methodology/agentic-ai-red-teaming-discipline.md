@@ -4,7 +4,7 @@ tags:
   - methodology
   - red-team
   - agentic-ai
-  - needs-review
+
 created: 2026-02-11
 source: "[[sources/bibliography#Securing AI Agents]]"
 pages: 208-210

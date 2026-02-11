@@ -4,7 +4,7 @@ tags:
   - reinforcement-learning
   - rl-security
   - defensive-patterns
-  - needs-review
+
 created: 2026-02-11
 source: "[[sources/bibliography#Securing AI Agents]]"
 pages: 181-183

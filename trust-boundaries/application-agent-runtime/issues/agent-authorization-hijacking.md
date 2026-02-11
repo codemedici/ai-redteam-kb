@@ -5,7 +5,7 @@ tags:
   - agentic-ai
   - authorization-bypass
   - application-runtime
-  - needs-review
+
 created: 2026-02-11
 source: "[[sources/bibliography#Securing AI Agents]]"
 pages: 210-211

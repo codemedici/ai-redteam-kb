@@ -5,7 +5,7 @@ tags:
   - authentication
   - iam
   - workload-identity
-  - needs-review
+
 created: 2026-02-11
 source: "[[sources/bibliography#Securing AI Agents]]"
 pages: 52-56

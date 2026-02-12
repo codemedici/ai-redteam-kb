@@ -11,7 +11,7 @@ sidebar_position: 4
 
 Adversaries may gain full "white-box" access to an AI model.
 This means the adversary has complete knowledge of the model architecture, its parameters, and class ontology.
-They may exfiltrate the model to [[craft-adversarial-data|Craft Adversarial Data]] and [[verify-attack|Verify Attack]] in an offline where it is hard to detect their behavior.
+They may exfiltrate the model to [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]] and [[atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] in an offline where it is hard to detect their behavior.
 
 ## Metadata
 
@@ -27,7 +27,7 @@ They may exfiltrate the model to [[craft-adversarial-data|Craft Adversarial Data
 This technique supports the following tactics:
 
 
-- [[ai-model-access|AML.TA0000: AI Model Access]]
+- [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 
 
 
@@ -37,15 +37,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
+### [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
 
 This provided the researchers with full access to the ML model, albeit in compiled, binary form.
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The employees made use of the Hugging Face organizaion and uploaded private models. As owner of the Hugging Face account, the researcher has full read and write access to all of these uploaded models.
 
-### [[ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
+### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 This gave the researchers full access to the models. Models for a variety of use cases were identified, including:
 

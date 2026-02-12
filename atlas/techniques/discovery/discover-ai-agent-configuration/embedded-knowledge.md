@@ -7,7 +7,7 @@ sidebar_position: 12
 
 # AML.T0084.000: Embedded Knowledge
 
-> **Sub-Technique of:** [[discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
+> **Sub-Technique of:** [[atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration-overview|AML.T0084: Discover AI Agent Configuration]]
 
 
 
@@ -22,7 +22,7 @@ The embedded knowledge may include sensitive or proprietary material such as int
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
+- **Parent Technique:** [[atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration-overview|AML.T0084: Discover AI Agent Configuration]]
 
 ## Tactics (0)
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The researchers discover the AI agent has access to a “Customer Support Account Owners.csv” data source.
 

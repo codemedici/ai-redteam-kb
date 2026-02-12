@@ -27,7 +27,7 @@ For text inputs, this may include modifying how the instructions are rendered su
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -37,19 +37,19 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[indirect-prompt-injection-threats-bing-chat-data-pirate|AML.CS0020: Indirect Prompt Injection Threats: Bing Chat Data Pirate]]
+### [[atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|AML.CS0020: Indirect Prompt Injection Threats: Bing Chat Data Pirate]]
 
 The malicious prompts were obfuscated by setting the font size to 0, making it harder to detect by a human.
 
-### [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+### [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
 
 The Zenity researchers evaded notice by the email recipient by obfuscating the malicious portion of the email.
 
-### [[hacking-chatgpt-s-memories-with-prompt-injection|AML.CS0040: Hacking ChatGPT’s Memories with Prompt Injection]]
+### [[atlas/case-studies/hacking-chatgpt-s-memories-with-prompt-injection|AML.CS0040: Hacking ChatGPT’s Memories with Prompt Injection]]
 
 The researcher placed the prompt in a Google Doc hidden in the header with tiny font matching the document’s background color to make it invisible.
 
-### [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
+### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 <div dangerouslySetInnerHTML={{__html: `The researchers hid the prompt in a coding assistant rules file by using invisible Unicode characters (such as zero-width joiners and bidirectional text markers). The prompt appears invisible in code editors and GitHub’s pull request approval process, allowing it to evade detection during human review.
 

@@ -9,7 +9,7 @@ sidebar_position: 1
 
 
 
-An adversary may use a carefully crafted [[llm-prompt-injection|LLM Prompt Injection]] designed to place LLM in a state in which it will freely respond to any user input, bypassing any controls, restrictions, or guardrails placed on the LLM.
+An adversary may use a carefully crafted [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|LLM Prompt Injection]] designed to place LLM in a state in which it will freely respond to any user input, bypassing any controls, restrictions, or guardrails placed on the LLM.
 Once successfully jailbroken, the LLM can be used in unintended ways by the adversary.
 
 ## Metadata
@@ -26,8 +26,8 @@ Once successfully jailbroken, the LLM can be used in unintended ways by the adve
 This technique supports the following tactics:
 
 
-- [[privilege-escalation|AML.TA0012: Privilege Escalation]]
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
+### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 <div dangerouslySetInnerHTML={{__html: `The prompt used jailbreak techniques to convince the AI coding assistant to add the malicious script to generated HTML files.
 

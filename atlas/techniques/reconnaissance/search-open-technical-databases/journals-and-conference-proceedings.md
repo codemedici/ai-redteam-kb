@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # AML.T0000.000: Journals and Conference Proceedings
 
-> **Sub-Technique of:** [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+> **Sub-Technique of:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 
 
@@ -23,7 +23,7 @@ This information can be used by adversaries to implement the paper.
 - **Last Modified:** April 9, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+- **Parent Technique:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 ## Tactics (0)
 

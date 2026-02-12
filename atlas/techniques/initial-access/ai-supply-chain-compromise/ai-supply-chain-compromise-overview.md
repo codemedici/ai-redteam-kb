@@ -10,7 +10,7 @@ sidebar_position: 1
 
 
 Adversaries may gain initial access to a system by compromising the unique portions of the AI supply chain.
-This could include [[hardware|Hardware]], [[data|Data]] and its annotations, parts of the AI [[ai-software|AI Software]] stack, or the [[model|Model]] itself.
+This could include [[atlas/techniques/initial-access/ai-supply-chain-compromise/hardware|Hardware]], [[atlas/techniques/initial-access/ai-supply-chain-compromise/data|Data]] and its annotations, parts of the AI [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AI Software]] stack, or the [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|Model]] itself.
 In some instances the attacker will need secondary access to fully carry out an attack using compromised components of the supply chain.
 
 ## Metadata
@@ -27,17 +27,17 @@ In some instances the attacker will need secondary access to fully carry out an 
 This technique supports the following tactics:
 
 
-- [[initial-access|AML.TA0004: Initial Access]]
+- [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 
 
 
 ## Sub-Techniques (5)
 
-- [[hardware|AML.T0010.000: Hardware]]
-- [[ai-software|AML.T0010.001: AI Software]]
-- [[data|AML.T0010.002: Data]]
-- [[model|AML.T0010.003: Model]]
-- [[container-registry|AML.T0010.004: Container Registry]]
+- [[atlas/techniques/initial-access/ai-supply-chain-compromise/hardware|AML.T0010.000: Hardware]]
+- [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
+- [[atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
+- [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
+- [[atlas/techniques/initial-access/ai-supply-chain-compromise/container-registry|AML.T0010.004: Container Registry]]
 
 
 ## Case Studies (1)
@@ -45,7 +45,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
+### [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
 
 Because the models were successfully uploaded to Hugging Face, a user relying on this model repository would have their supply chain compromised.
 

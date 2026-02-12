@@ -29,7 +29,7 @@ Adversaries may use several methods to accomplish Virtualization/Sandbox Evasion
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
+### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 The Skynet malware attempts various sandbox evasions.
 

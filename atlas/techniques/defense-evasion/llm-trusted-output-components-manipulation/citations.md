@@ -7,7 +7,7 @@ sidebar_position: 4
 
 # AML.T0067.000: Citations
 
-> **Sub-Technique of:** [[llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
+> **Sub-Technique of:** [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation-overview|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 
 
@@ -20,7 +20,7 @@ Adversaries may manipulate the citations provided in an AI system's response, in
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
+- **Parent Technique:** [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation-overview|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 ## Tactics (0)
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+### [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers included instructions to manipulate the citations used in its response, abusing the user's trust in Copilot. 
 <div style="font-family: monospace; width: 50%; margin-left: 50px; background-color: ghostwhite; border: 2px solid black; padding: 10px;">

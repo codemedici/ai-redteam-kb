@@ -9,7 +9,7 @@ sidebar_position: 1
 
 
 
-Adversaries may collect AI artifacts for [[exfiltration|Exfiltration]] or for use in [[ai-attack-staging|AI Attack Staging]].
+Adversaries may collect AI artifacts for [[atlas/tactics/exfiltration|Exfiltration]] or for use in [[atlas/tactics/ai-attack-staging|AI Attack Staging]].
 AI artifacts include models and datasets as well as other telemetry data produced when interacting with a model.
 
 ## Metadata
@@ -26,7 +26,7 @@ AI artifacts include models and datasets as well as other telemetry data produce
 This technique supports the following tactics:
 
 
-- [[collection|AML.TA0009: Collection]]
+- [[atlas/tactics/collection|AML.TA0009: Collection]]
 
 
 
@@ -36,11 +36,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
+### [[atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
 
 The team found the model file of the target ML model and the necessary training data.
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 Adversary may search the victim system to find private and proprietary data, including ML model artifacts.  Jupyter Notebooks [allow execution of shell commands](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.05-IPython-And-Shell-Commands.ipynb).
 
@@ -51,7 +51,7 @@ This example searches the mounted Drive for PyTorch model checkpoint files:
 ```
 > /content/drive/MyDrive/models/checkpoint.pt
 
-### [[shadowray|AML.CS0023: ShadowRay]]
+### [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
 
 Adversaries could collect AI artifacts including production models and data.
 

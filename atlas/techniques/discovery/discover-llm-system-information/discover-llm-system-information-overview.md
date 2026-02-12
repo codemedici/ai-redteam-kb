@@ -25,15 +25,15 @@ The adversary is trying to discover something about the large language model's (
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 
 ## Sub-Techniques (3)
 
-- [[special-character-sets|AML.T0069.000: Special Character Sets]]
-- [[system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
-- [[system-prompt|AML.T0069.002: System Prompt]]
+- [[atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
+- [[atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
+- [[atlas/techniques/discovery/discover-llm-system-information/system-prompt|AML.T0069.002: System Prompt]]
 
 
 ## Case Studies (0)

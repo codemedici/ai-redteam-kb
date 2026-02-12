@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # AML.T0024.001: Invert AI Model
 
-> **Sub-Technique of:** [[exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
+> **Sub-Technique of:** [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
 
 
 
@@ -22,7 +22,7 @@ This could lead to privacy violations if the attacker can reconstruct the data o
 - **Last Modified:** April 9, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
+- **Parent Technique:** [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
 
 ## Tactics (0)
 

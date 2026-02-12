@@ -25,7 +25,7 @@ Adversaries may create an entity they control, such as a software package, websi
 This technique supports the following tactics:
 
 
-- [[resource-development|AML.TA0003: Resource Development]]
+- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 
 
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
+### [[atlas/case-studies/chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
 
 An adversary could upload a malicious package under the hallucinated name to PyPI or other package registries.
 

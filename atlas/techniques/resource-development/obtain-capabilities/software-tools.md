@@ -7,7 +7,7 @@ sidebar_position: 6
 
 # AML.T0016.001: Software Tools
 
-> **Sub-Technique of:** [[obtain-capabilities|AML.T0016: Obtain Capabilities]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
 
 
 
@@ -23,7 +23,7 @@ Software tools used to support attacks on AI systems are not necessarily AI-base
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1588.002](https://attack.mitre.org/techniques/T1588/002/)
-- **Parent Technique:** [[obtain-capabilities|AML.T0016: Obtain Capabilities]]
+- **Parent Technique:** [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
 
 ## Tactics (0)
 
@@ -38,15 +38,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
+### [[atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
 
 The attackers obtained customized Android ROMs and a virtual camera application.
 
-### [[llm-jacking|AML.CS0030: LLM Jacking]]
+### [[atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
 
 The adversaries obtained [keychecker](https://github.com/cunnymessiah/keychecker), a bulk key checker for various AI services which is capable of testing if the key is valid and retrieving some attributes of the account (e.g. account balance and available models).
 
-### [[live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
+### [[atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
 
 The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.com)which can broadcast a video stream over the network.
 

@@ -29,7 +29,7 @@ Adversaries may attempt to discover information about the services enabled throu
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[llm-jacking|AML.CS0030: LLM Jacking]]
+### [[atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
 
 The adversaries used keychecker to discover which LLM services were enabled in the cloud environment and if the resources had any resource quotas for the services.
 

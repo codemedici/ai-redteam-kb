@@ -27,7 +27,7 @@ By modifying the data in the collection process, the adversary can perform modif
 This technique supports the following tactics:
 
 
-- [[ai-model-access|AML.TA0000: AI Model Access]]
+- [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 
 
 
@@ -37,11 +37,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
+### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 The team placed the countermeasure in the physical environment to cause issues in the face identification system.
 
-### [[backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
+### [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
 
 At inference time, only physical environment access is required to trigger the attack.
 

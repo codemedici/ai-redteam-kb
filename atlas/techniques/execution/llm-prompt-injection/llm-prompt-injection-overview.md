@@ -16,9 +16,9 @@ Prompt Injections can be an initial access vector to the LLM that provides the a
 They may be designed to bypass defenses in the LLM, or allow the adversary to issue privileged commands.
 The effects of a prompt injection can persist throughout an interactive session with an LLM.
 
-Malicious prompts may be injected directly by the adversary ([[direct|Direct]]) either to leverage the LLM to generate harmful content or to gain a foothold on the system and lead to further effects.
-Prompts may also be injected indirectly when as part of its normal operation the LLM ingests the malicious prompt from another data source ([[indirect|Indirect]]). This type of injection can be used by the adversary to a foothold on the system or to target the user of the LLM.
-Malicious prompts may also be [[triggered|Triggered]] user actions or system events.
+Malicious prompts may be injected directly by the adversary ([[atlas/techniques/execution/llm-prompt-injection/direct|Direct]]) either to leverage the LLM to generate harmful content or to gain a foothold on the system and lead to further effects.
+Prompts may also be injected indirectly when as part of its normal operation the LLM ingests the malicious prompt from another data source ([[atlas/techniques/execution/llm-prompt-injection/indirect|Indirect]]). This type of injection can be used by the adversary to a foothold on the system or to target the user of the LLM.
+Malicious prompts may also be [[atlas/techniques/execution/llm-prompt-injection/triggered|Triggered]] user actions or system events.
 
 ## Metadata
 
@@ -34,15 +34,15 @@ Malicious prompts may also be [[triggered|Triggered]] user actions or system eve
 This technique supports the following tactics:
 
 
-- [[execution|AML.TA0005: Execution]]
+- [[atlas/tactics/execution|AML.TA0005: Execution]]
 
 
 
 ## Sub-Techniques (3)
 
-- [[direct|AML.T0051.000: Direct]]
-- [[indirect|AML.T0051.001: Indirect]]
-- [[triggered|AML.T0051.002: Triggered]]
+- [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
+- [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+- [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
 
 
 ## Case Studies (1)
@@ -50,7 +50,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The researchers modify the original prompt to discover other knowledge sources and tools that may have data they are after.
 

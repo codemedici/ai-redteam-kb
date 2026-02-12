@@ -27,7 +27,7 @@ Configuration changes may include modifications to the system prompt, tampering 
 This technique supports the following tactics:
 
 
-- [[persistence|AML.TA0006: Persistence]]
+- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 
 
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
+### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 Users then pulled the latest version of the rules file, replacing their coding assistant’s configuration with the malicious one. The coding assistant’s behavior was modified, affecting all future code generation.
 

@@ -27,8 +27,8 @@ The following steps outline the attack procedure:
 
 ### Step 1: Embed Malware
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[embed-malware|AML.T0018.002: Embed Malware]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
 
 The adversary embedded malware into an AI model stored in a pickle file. The malware was designed to execute when the model is loaded by a user.
 
@@ -36,8 +36,8 @@ ReversingLabs found two instances of this on Hugging Face during their research.
 
 ### Step 2: Publish Poisoned Models
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
 
 The adversary uploaded the model to Hugging Face.
 
@@ -45,8 +45,8 @@ In both instances observed by the ReversingLab, the malicious models did not mak
 
 ### Step 3: Corrupt AI Model
 
-**Tactic:** [[defense-evasion|AML.TA0007: Defense Evasion]]
-**Technique:** [[corrupt-ai-model|AML.T0076: Corrupt AI Model]]
+**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+**Technique:** [[atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076: Corrupt AI Model]]
 
 The adversary evaded detection by [Picklescan](https://github.com/mmaitre314/picklescan), which Hugging Face uses to flag malicious models. This occurred because the model could not be fully deserialized.
 
@@ -54,22 +54,22 @@ In their analysis, the ReversingLabs researchers found that the malicious payloa
 
 ### Step 4: AI Supply Chain Compromise
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 Because the models were successfully uploaded to Hugging Face, a user relying on this model repository would have their supply chain compromised.
 
 ### Step 5: Unsafe AI Artifacts
 
-**Tactic:** [[execution|AML.TA0005: Execution]]
-**Technique:** [[unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
+**Technique:** [[atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
 
 If a user loaded the malicious model, the adversary's malicious payload is executed.
 
 ### Step 6: Reverse Shell
 
-**Tactic:** [[command-and-control|AML.TA0014: Command and Control]]
-**Technique:** [[reverse-shell|AML.T0072: Reverse Shell]]
+**Tactic:** [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
+**Technique:** [[atlas/techniques/command-and-control/reverse-shell|AML.T0072: Reverse Shell]]
 
 The malicious payload was a reverse shell set to connect to a hardcoded IP address.
 
@@ -79,12 +79,12 @@ The malicious payload was a reverse shell set to connect to a hardcoded IP addre
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[embed-malware|AML.T0018.002: Embed Malware]] |
-| 2 | [[resource-development|AML.TA0003: Resource Development]] | [[publish-poisoned-models|AML.T0058: Publish Poisoned Models]] |
-| 3 | [[defense-evasion|AML.TA0007: Defense Evasion]] | [[corrupt-ai-model|AML.T0076: Corrupt AI Model]] |
-| 4 | [[initial-access|AML.TA0004: Initial Access]] | [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]] |
-| 5 | [[execution|AML.TA0005: Execution]] | [[unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]] |
-| 6 | [[command-and-control|AML.TA0014: Command and Control]] | [[reverse-shell|AML.T0072: Reverse Shell]] |
+| 1 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]] |
+| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]] |
+| 3 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076: Corrupt AI Model]] |
+| 4 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]] |
+| 5 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]] |
+| 6 | [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]] | [[atlas/techniques/command-and-control/reverse-shell|AML.T0072: Reverse Shell]] |
 
 
 

@@ -242,4 +242,4 @@ For quick copy-paste in your docs:
 - `AML.T0058` - Publish Poisoned Models
 - `AML.T0060` - Publish Hallucinated Entities
 
-See the [[tactics|ATLAS Tactics Reference]] for the complete list.
+See the [[atlas/tactics/tactics-overview|ATLAS Tactics Reference]] for the complete list.

@@ -29,7 +29,7 @@ Adversaries may utilize LLMs present in the victim's environment or call out to 
 This technique supports the following tactics:
 
 
-- [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The LAMEHUG malware abused the Qwen 2.5 Coder 32B Instruct model Hugging Face API to generate malicious commands from natural language prompts.
 

@@ -25,7 +25,7 @@ Adversaries may use prompts to invoke an agent's tool capable of performing writ
 This technique supports the following tactics:
 
 
-- [[exfiltration|AML.TA0010: Exfiltration]]
+- [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 
 
 
@@ -35,11 +35,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The prompt asks the agent to email the results to an address of the researcher’s choosing using its email tool. The researchers successfully exfiltrate their target data via the tool invocation.
 
-### [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+### [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 The malicious prompt instructed that the collected ticket details be posted in a reply to the ticket. This invoked an Atlassian MCP Tool which performed the requested action, exfiltrating the data where it was accessible to the researchers on the JSM portal.
 

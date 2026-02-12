@@ -27,8 +27,8 @@ The following steps outline the attack procedure:
 
 ### Step 1: AI Service API
 
-**Tactic:** [[command-and-control|AML.TA0014: Command and Control]]
-**Technique:** [[ai-service-api|AML.T0096: AI Service API]]
+**Tactic:** [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
+**Technique:** [[atlas/techniques/command-and-control/ai-service-api|AML.T0096: AI Service API]]
 
 The threat actor abused the OpenAI Assistants API to relay commands to the SesameOp malware, which executed them on the victim system, and sent the results back to the threat actor via the same channel. Both commands and results are encrypted.
 
@@ -40,7 +40,7 @@ SesameOp cleaned up its tracks by deleting the Assistants and Messages it create
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[command-and-control|AML.TA0014: Command and Control]] | [[ai-service-api|AML.T0096: AI Service API]] |
+| 1 | [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]] | [[atlas/techniques/command-and-control/ai-service-api|AML.T0096: AI Service API]] |
 
 
 

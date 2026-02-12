@@ -25,16 +25,16 @@ Adversaries may directly manipulate an AI model to change its behavior or introd
 This technique supports the following tactics:
 
 
-- [[persistence|AML.TA0006: Persistence]]
-- [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 
 
 
 ## Sub-Techniques (3)
 
-- [[poison-ai-model|AML.T0018.000: Poison AI Model]]
-- [[modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
-- [[embed-malware|AML.T0018.002: Embed Malware]]
+- [[atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
+- [[atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
+- [[atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
 
 
 ## Case Studies (0)

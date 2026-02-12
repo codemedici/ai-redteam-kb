@@ -12,9 +12,9 @@ sidebar_position: 13
 Adversaries may attempt to poison datasets used by an AI model by modifying the underlying data or its labels.
 This allows the adversary to embed vulnerabilities in AI models trained on the data that may not be easily detectable.
 Data poisoning attacks may or may not require modifying the labels.
-The embedded vulnerability is activated at a later time by data samples with an [[insert-backdoor-trigger|Insert Backdoor Trigger]]
+The embedded vulnerability is activated at a later time by data samples with an [[atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|Insert Backdoor Trigger]]
 
-Poisoned data can be introduced via [[ai-supply-chain-compromise|AI Supply Chain Compromise]] or the data may be poisoned after the adversary gains [[initial-access|Initial Access]] to the system.
+Poisoned data can be introduced via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]] or the data may be poisoned after the adversary gains [[atlas/tactics/initial-access|Initial Access]] to the system.
 
 ## Metadata
 
@@ -30,8 +30,8 @@ Poisoned data can be introduced via [[ai-supply-chain-compromise|AI Supply Chain
 This technique supports the following tactics:
 
 
-- [[resource-development|AML.TA0003: Resource Development]]
-- [[persistence|AML.TA0006: Persistence]]
+- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 
 
 
@@ -41,16 +41,16 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[virustotal-poisoning|AML.CS0002: VirusTotal Poisoning]]
+### [[atlas/case-studies/virustotal-poisoning|AML.CS0002: VirusTotal Poisoning]]
 
 Several vendors started to classify the files as the ransomware family even though most of them won't run.
 The "mutant" samples poisoned the dataset the ML model(s) use to identify and classify this ransomware family.
 
-### [[tay-poisoning|AML.CS0009: Tay Poisoning]]
+### [[atlas/case-studies/tay-poisoning|AML.CS0009: Tay Poisoning]]
 
 By repeatedly interacting with Tay using racist and offensive language, they were able to skew Tay's dataset towards that language as well. This was done by adversaries using the "repeat after me" function, a command that forced Tay to repeat anything said to it.
 
-### [[web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
+### [[atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
 
 An adversary could create poisoned training data to replace expired portions of the dataset.
 

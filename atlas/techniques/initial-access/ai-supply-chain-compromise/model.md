@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0010.003: Model
 
-> **Sub-Technique of:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+> **Sub-Technique of:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 
 
@@ -24,7 +24,7 @@ These can be compromised with traditional malware, or through some adversarial A
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-- **Parent Technique:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+- **Parent Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 ## Tactics (0)
 
@@ -39,21 +39,21 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
+### [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
 
 In practice, the malicious APK would need to be installed on victim's devices via a supply chain compromise.
 
-### [[poisongpt|AML.CS0019: PoisonGPT]]
+### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 Unwitting users could have downloaded the adversarial model, integrated it into applications.
 
 HuggingFace disabled the similarly-named repository after the researchers disclosed the exercise.
 
-### [[shadowray|AML.CS0023: ShadowRay]]
+### [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
 
 HuggingFace tokens could allow the adversary to replace the victim organization's models with malicious variants.
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The victim's AI model supply chain is now compromised. Users of the model repository will receive the adversary's model with embedded malware.
 

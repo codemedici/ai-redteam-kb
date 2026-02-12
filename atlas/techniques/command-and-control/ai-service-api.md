@@ -31,7 +31,7 @@ AI service APIs may be abused as C2 channels when an adversary wants to be steal
 This technique supports the following tactics:
 
 
-- [[command-and-control|AML.TA0014: Command and Control]]
+- [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
 
 
 
@@ -41,7 +41,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control|AML.CS0042: SesameOp: Novel backdoor uses OpenAI Assistants API for command and control]]
+### [[atlas/case-studies/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control|AML.CS0042: SesameOp: Novel backdoor uses OpenAI Assistants API for command and control]]
 
 The threat actor abused the OpenAI Assistants API to relay commands to the SesameOp malware, which executed them on the victim system, and sent the results back to the threat actor via the same channel. Both commands and results are encrypted.
 

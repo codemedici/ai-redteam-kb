@@ -27,7 +27,7 @@ The leaked information may come from proprietary training data, data sources the
 This technique supports the following tactics:
 
 
-- [[exfiltration|AML.TA0010: Exfiltration]]
+- [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 
 
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
+### [[atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
 
 The malicious instructions in the prompt cause the generated output to leak sensitive data such as emails, addresses, and phone numbers.
 

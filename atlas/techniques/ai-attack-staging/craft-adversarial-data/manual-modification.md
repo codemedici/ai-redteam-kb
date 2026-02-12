@@ -7,7 +7,7 @@ sidebar_position: 10
 
 # AML.T0043.003: Manual Modification
 
-> **Sub-Technique of:** [[craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
+> **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
 
 
@@ -22,7 +22,7 @@ The adversary may use trial and error until they are able to verify they have a 
 - **Last Modified:** May 13, 2021
 - **Maturity:** realized
 
-- **Parent Technique:** [[craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
+- **Parent Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
 ## Tactics (0)
 
@@ -37,15 +37,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[evasion-of-deep-learning-detector-for-malware-c-c-traffic|AML.CS0000: Evasion of Deep Learning Detector for Malware C&C Traffic]]
+### [[atlas/case-studies/evasion-of-deep-learning-detector-for-malware-c-c-traffic|AML.CS0000: Evasion of Deep Learning Detector for Malware C&C Traffic]]
 
 We crafted evasion samples by removing fields from packet header which are typically not used for C&C communication (e.g. cache-control, connection, etc.).
 
-### [[bypassing-cylance-s-ai-malware-detection|AML.CS0003: Bypassing Cylance's AI Malware Detection]]
+### [[atlas/case-studies/bypassing-cylance-s-ai-malware-detection|AML.CS0003: Bypassing Cylance's AI Malware Detection]]
 
 Using this knowledge, the researchers fused attributes of known good files with malware to manually create adversarial malware.
 
-### [[attempted-evasion-of-ml-phishing-webpage-detection-system|AML.CS0032: Attempted Evasion of ML Phishing Webpage Detection System]]
+### [[atlas/case-studies/attempted-evasion-of-ml-phishing-webpage-detection-system|AML.CS0032: Attempted Evasion of ML Phishing Webpage Detection System]]
 
 Several cheap, yet effective strategies for manually modifying logos were observed:
 | Evasive Strategy | Count |

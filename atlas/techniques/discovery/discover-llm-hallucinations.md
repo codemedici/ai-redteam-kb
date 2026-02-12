@@ -10,7 +10,7 @@ sidebar_position: 4
 
 
 Adversaries may prompt large language models and identify hallucinated entities.
-They may request software packages, commands, URLs, organization names, or e-mail addresses, and identify hallucinations with no connected real-world source. Discovered hallucinations provide the adversary with potential targets to [[publish-hallucinated-entities|Publish Hallucinated Entities]]. Different LLMs have been shown to produce the same hallucinations, so the hallucinations exploited by an adversary may affect users of other LLMs.
+They may request software packages, commands, URLs, organization names, or e-mail addresses, and identify hallucinations with no connected real-world source. Discovered hallucinations provide the adversary with potential targets to [[atlas/techniques/resource-development/publish-hallucinated-entities|Publish Hallucinated Entities]]. Different LLMs have been shown to produce the same hallucinations, so the hallucinations exploited by an adversary may affect users of other LLMs.
 
 ## Metadata
 
@@ -26,7 +26,7 @@ They may request software packages, commands, URLs, organization names, or e-mai
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 
@@ -36,7 +36,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
+### [[atlas/case-studies/chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
 
 The researchers prompt ChatGPT to suggest software packages and identify suggestions that are hallucinations which don't exist in a public package repository.
 

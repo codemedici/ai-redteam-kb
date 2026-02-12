@@ -25,43 +25,43 @@ The following steps outline the attack procedure:
 
 ### Step 1: Datasets
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[datasets|AML.T0002.000: Datasets]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 The researchers download a web-scale dataset, which consists of URLs pointing to individual datapoints.
 
 ### Step 2: Domains
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[domains|AML.T0008.002: Domains]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
 
 They identify expired domains in the dataset and purchase them.
 
 ### Step 3: Poison Training Data
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[poison-training-data|AML.T0020: Poison Training Data]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
 
 An adversary could create poisoned training data to replace expired portions of the dataset.
 
 ### Step 4: Publish Poisoned Datasets
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]]
 
 An adversary could then upload the poisoned data to the domains they control.  In this particular exercise, the researchers track requests to the URLs they control to track downloads to demonstrate there are active users of the dataset.
 
 ### Step 5: Erode Dataset Integrity
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]]
 
 The integrity of the dataset has been eroded because future downloads would contain poisoned datapoints.
 
 ### Step 6: Erode AI Model Integrity
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 Models that use the dataset for training data are poisoned, eroding model integrity. The researchers show as little as 0.01% of the data needs to be poisoned for a successful attack.
 
@@ -71,12 +71,12 @@ Models that use the dataset for training data are poisoned, eroding model integr
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[resource-development|AML.TA0003: Resource Development]] | [[datasets|AML.T0002.000: Datasets]] |
-| 2 | [[resource-development|AML.TA0003: Resource Development]] | [[domains|AML.T0008.002: Domains]] |
-| 3 | [[resource-development|AML.TA0003: Resource Development]] | [[poison-training-data|AML.T0020: Poison Training Data]] |
-| 4 | [[resource-development|AML.TA0003: Resource Development]] | [[publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]] |
-| 5 | [[impact|AML.TA0011: Impact]] | [[erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]] |
-| 6 | [[impact|AML.TA0011: Impact]] | [[erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]] |
+| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]] |
+| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]] |
+| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]] |
+| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]] |
+| 5 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]] |
+| 6 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]] |
 
 
 

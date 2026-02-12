@@ -10,7 +10,7 @@ sidebar_position: 1
 
 
 An adversary may rely upon specific actions by a user in order to gain execution.
-Users may inadvertently execute unsafe code introduced via [[ai-supply-chain-compromise|AI Supply Chain Compromise]].
+Users may inadvertently execute unsafe code introduced via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
 Users may be subjected to social engineering to get them to execute malicious code by, for example, opening a malicious document file or link.
 
 ## Metadata
@@ -27,14 +27,14 @@ Users may be subjected to social engineering to get them to execute malicious co
 This technique supports the following tactics:
 
 
-- [[execution|AML.TA0005: Execution]]
+- [[atlas/tactics/execution|AML.TA0005: Execution]]
 
 
 
 ## Sub-Techniques (2)
 
-- [[unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
-- [[malicious-package|AML.T0011.001: Malicious Package]]
+- [[atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+- [[atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]]
 
 
 ## Case Studies (2)
@@ -42,11 +42,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 A victim user may unwittingly execute malicious code provided as part of a compromised Colab notebook.  Malicious code can be obfuscated or hidden in other files that the notebook downloads.
 
-### [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The attachment contained an executable file with a .pif extension, created using PyInstaller from Python source code which CERT-UA classified it as LAMEHUG malware. Files with the .pif extension are executable on Windows.
 

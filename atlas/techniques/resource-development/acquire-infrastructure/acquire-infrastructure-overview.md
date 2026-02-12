@@ -33,17 +33,17 @@ Depending on the implementation, adversaries may use infrastructure that makes i
 This technique supports the following tactics:
 
 
-- [[resource-development|AML.TA0003: Resource Development]]
+- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 
 
 
 ## Sub-Techniques (5)
 
-- [[ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
-- [[consumer-hardware|AML.T0008.001: Consumer Hardware]]
-- [[domains|AML.T0008.002: Domains]]
-- [[physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
-- [[serverless|AML.T0008.004: Serverless]]
+- [[atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
+- [[atlas/techniques/resource-development/acquire-infrastructure/consumer-hardware|AML.T0008.001: Consumer Hardware]]
+- [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
+- [[atlas/techniques/resource-development/acquire-infrastructure/physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
+- [[atlas/techniques/resource-development/acquire-infrastructure/serverless|AML.T0008.004: Serverless]]
 
 
 ## Case Studies (1)
@@ -51,7 +51,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
+### [[atlas/case-studies/google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
 
 The researcher identified that Google Apps Scripts can be invoked via a URL on `script.google.com` or `googleusercontent.com` and can be configured to not require authentication. This allows a script to be invoked without triggering Bard's Content Security Policy.
 

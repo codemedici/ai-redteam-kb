@@ -28,7 +28,7 @@ Knowledge of the model family can help the adversary identify means of attacking
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 

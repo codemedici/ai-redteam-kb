@@ -27,13 +27,13 @@ AI services commonly use alternate authentication material as a primary means fo
 This technique supports the following tactics:
 
 
-- [[lateral-movement|AML.TA0015: Lateral Movement]]
+- [[atlas/tactics/lateral-movement|AML.TA0015: Lateral Movement]]
 
 
 
 ## Sub-Techniques (1)
 
-- [[application-access-token|AML.T0091.000: Application Access Token]]
+- [[atlas/techniques/lateral-movement/use-alternate-authentication-material/application-access-token|AML.T0091.000: Application Access Token]]
 
 
 ## Case Studies (0)

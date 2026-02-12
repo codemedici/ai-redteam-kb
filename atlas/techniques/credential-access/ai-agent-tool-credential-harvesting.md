@@ -25,7 +25,7 @@ Adversaries may attempt to use their access to an AI agent on the victim's syste
 This technique supports the following tactics:
 
 
-- [[credential-access|AML.TA0013: Credential Access]]
+- [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
 
 
 

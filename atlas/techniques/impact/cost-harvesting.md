@@ -26,7 +26,7 @@ Sponge examples are a particular type of adversarial data designed to maximize e
 This technique supports the following tactics:
 
 
-- [[impact|AML.TA0011: Impact]]
+- [[atlas/tactics/impact|AML.TA0011: Impact]]
 
 
 

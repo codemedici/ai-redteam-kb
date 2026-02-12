@@ -39,7 +39,7 @@ When the request is received by the adversary's server hosting the requested ima
 This technique supports the following tactics:
 
 
-- [[exfiltration|AML.TA0010: Exfiltration]]
+- [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 
 
 
@@ -49,15 +49,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[chatgpt-conversation-exfiltration|AML.CS0021: ChatGPT Conversation Exfiltration]]
+### [[atlas/case-studies/chatgpt-conversation-exfiltration|AML.CS0021: ChatGPT Conversation Exfiltration]]
 
 ChatGPT automatically renders the image for the user, making the request to the adversary's server for the image contents, and exfiltrating the user's conversation.
 
-### [[google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
+### [[atlas/case-studies/google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
 
 Bard automatically renders the markdown, which sends the request to the Google App Script, exfiltrating the user's conversation. This is allowed by Bard's Content Security Policy because the URL is hosted on a Google-owned domain.
 
-### [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
+### [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
 
 <div dangerouslySetInnerHTML={{__html: `The response is rendered as a clickable link with the victim’s API key encoded in the URL, as instructed by the malicious instructions:
 

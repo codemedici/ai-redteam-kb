@@ -7,16 +7,16 @@ sidebar_position: 3
 
 # AML.T0005.001: Train Proxy via Replication
 
-> **Sub-Technique of:** [[create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
+> **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
 
 
 Adversaries may replicate a private model.
-By repeatedly querying the victim's [[ai-model-inference-api-access|AI Model Inference API Access]], the adversary can collect the target model's inferences into a dataset.
+By repeatedly querying the victim's [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], the adversary can collect the target model's inferences into a dataset.
 The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
 
 A replicated model that closely mimic's the target model is a valuable resource in staging the attack.
-The adversary can use the replicated model to [[craft-adversarial-data|Craft Adversarial Data]] for various purposes (e.g. [[evade-ai-model|Evade AI Model]], [[spamming-ai-system-with-chaff-data|Spamming AI System with Chaff Data]]).
+The adversary can use the replicated model to [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]] for various purposes (e.g. [[atlas/techniques/initial-access/evade-ai-model|Evade AI Model]], [[atlas/techniques/impact/spamming-ai-system-with-chaff-data|Spamming AI System with Chaff Data]]).
 
 ## Metadata
 
@@ -25,7 +25,7 @@ The adversary can use the replicated model to [[craft-adversarial-data|Craft Adv
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
+- **Parent Technique:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
 ## Tactics (0)
 
@@ -40,11 +40,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
+### [[atlas/case-studies/attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
 
 Using these translated sentence pairs, the researchers trained a model that replicates the behavior of the target model.
 
-### [[proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
+### [[atlas/case-studies/proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
 
 The researchers used the emails and collected scores as a dataset, which they used to train a functional copy of the ProofPoint model. 
 

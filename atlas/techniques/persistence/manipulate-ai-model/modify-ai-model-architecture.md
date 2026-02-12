@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # AML.T0018.001: Modify AI Model Architecture
 
-> **Sub-Technique of:** [[manipulate-ai-model|AML.T0018: Manipulate AI Model]]
+> **Sub-Technique of:** [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018: Manipulate AI Model]]
 
 
 
@@ -22,7 +22,7 @@ The effects could include removing the ability to predict certain classes, addin
 - **Last Modified:** April 11, 2024
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[manipulate-ai-model|AML.T0018: Manipulate AI Model]]
+- **Parent Technique:** [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018: Manipulate AI Model]]
 
 ## Tactics (0)
 
@@ -37,14 +37,14 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
+### [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
 
 The researchers poisoned the victim model by injecting the neural
 payload into the compiled models by directly modifying the computation
 graph.
 The researchers then repackage the poisoned model back into the APK
 
-### [[ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
+### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 With full access to the model, an adversary could modify the architecture to change the behavior.
 

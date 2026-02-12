@@ -25,7 +25,7 @@ An adversary may purposefully corrupt a malicious AI model file so that it canno
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
+### [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
 
 The adversary evaded detection by [Picklescan](https://github.com/mmaitre314/picklescan), which Hugging Face uses to flag malicious models. This occurred because the model could not be fully deserialized.
 

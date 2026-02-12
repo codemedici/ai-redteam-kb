@@ -30,7 +30,7 @@ It is useful to the adversary in creating targeted attacks.
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 
@@ -40,7 +40,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
+### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 The team identified the list of identities targeted by the model by querying the target model's inference API.
 

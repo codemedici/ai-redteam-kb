@@ -9,7 +9,7 @@ sidebar_position: 15
 
 
 
-Adversaries may publish a poisoned model to a public location such as a model registry or code repository. The poisoned model may be a novel model or a poisoned variant of an existing open-source model. This model may be introduced to a victim system via [[ai-supply-chain-compromise|AI Supply Chain Compromise]].
+Adversaries may publish a poisoned model to a public location such as a model registry or code repository. The poisoned model may be a novel model or a poisoned variant of an existing open-source model. This model may be introduced to a victim system via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
 
 ## Metadata
 
@@ -25,7 +25,7 @@ Adversaries may publish a poisoned model to a public location such as a model re
 This technique supports the following tactics:
 
 
-- [[resource-development|AML.TA0003: Resource Development]]
+- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 
 
 
@@ -35,15 +35,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[poisongpt|AML.CS0019: PoisonGPT]]
+### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 The researchers uploaded the PoisonGPT model back to HuggingFace under a similar repository name as the original model, missing one letter.
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The researcher re-uploaded the manipulated model to the Hugging Face repository.
 
-### [[malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
+### [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
 
 The adversary uploaded the model to Hugging Face.
 

@@ -29,7 +29,7 @@ Specific common information repositories include SharePoint, Confluence, and ent
 This technique supports the following tactics:
 
 
-- [[collection|AML.TA0009: Collection]]
+- [[atlas/tactics/collection|AML.TA0009: Collection]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[clearviewai-misconfiguration|AML.CS0006: ClearviewAI Misconfiguration]]
+### [[atlas/case-studies/clearviewai-misconfiguration|AML.CS0006: ClearviewAI Misconfiguration]]
 
 The private code repository contained credentials which were used to access AWS S3 cloud storage buckets, leading to the discovery of assets for the facial recognition tool, including:
 - Released desktop and mobile applications

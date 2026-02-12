@@ -27,14 +27,14 @@ Generative AI, including LLMs that generate synthetic text, visual deepfakes of 
 This technique supports the following tactics:
 
 
-- [[initial-access|AML.TA0004: Initial Access]]
-- [[lateral-movement|AML.TA0015: Lateral Movement]]
+- [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- [[atlas/tactics/lateral-movement|AML.TA0015: Lateral Movement]]
 
 
 
 ## Sub-Techniques (1)
 
-- [[spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
+- [[atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
 
 
 ## Case Studies (2)
@@ -42,11 +42,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[attempted-evasion-of-ml-phishing-webpage-detection-system|AML.CS0032: Attempted Evasion of ML Phishing Webpage Detection System]]
+### [[atlas/case-studies/attempted-evasion-of-ml-phishing-webpage-detection-system|AML.CS0032: Attempted Evasion of ML Phishing Webpage Detection System]]
 
 If the adversary can successfully evade detection, they can continue to operate their phishing websites and steal the victim's credentials.
 
-### [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 APT28 sent a phishing email from the compromised account with an attachment containing malware.
 

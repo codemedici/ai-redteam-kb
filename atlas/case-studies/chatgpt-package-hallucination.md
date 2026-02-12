@@ -25,15 +25,15 @@ The following steps outline the attack procedure:
 
 ### Step 1: AI Model Inference API Access
 
-**Tactic:** [[ai-model-access|AML.TA0000: AI Model Access]]
-**Technique:** [[ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
+**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+**Technique:** [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 The researchers use the public ChatGPT API throughout this exercise.
 
 ### Step 2: Discover LLM Hallucinations
 
-**Tactic:** [[discovery|AML.TA0008: Discovery]]
-**Technique:** [[discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]]
+**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+**Technique:** [[atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]]
 
 The researchers prompt ChatGPT to suggest software packages and identify suggestions that are hallucinations which don't exist in a public package repository.
 
@@ -41,8 +41,8 @@ For example, when asking the model "how to upload a model to huggingface?" the r
 
 ### Step 3: Publish Hallucinated Entities
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]]
 
 An adversary could upload a malicious package under the hallucinated name to PyPI or other package registries.
 
@@ -50,8 +50,8 @@ In practice, the researchers uploaded an empty package to PyPI to track download
 
 ### Step 4: AI Software
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[ai-software|AML.T0010.001: AI Software]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 A user of ChatGPT or other LLM may ask similar questions which lead to the same hallucinated package name and cause them to download the malicious package.
 
@@ -59,15 +59,15 @@ The researchers showed that multiple LLMs can produce the same hallucinations. T
 
 ### Step 5: Malicious Package
 
-**Tactic:** [[execution|AML.TA0005: Execution]]
-**Technique:** [[malicious-package|AML.T0011.001: Malicious Package]]
+**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
+**Technique:** [[atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]]
 
 The user would ultimately load the malicious package, allowing for arbitrary code execution.
 
 ### Step 6: User Harm
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[user-harm|AML.T0048.003: User Harm]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 This could lead to a variety of harms to the end user or organization.
 
@@ -77,12 +77,12 @@ This could lead to a variety of harms to the end user or organization.
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[ai-model-access|AML.TA0000: AI Model Access]] | [[ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
-| 2 | [[discovery|AML.TA0008: Discovery]] | [[discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]] |
-| 3 | [[resource-development|AML.TA0003: Resource Development]] | [[publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]] |
-| 4 | [[initial-access|AML.TA0004: Initial Access]] | [[ai-software|AML.T0010.001: AI Software]] |
-| 5 | [[execution|AML.TA0005: Execution]] | [[malicious-package|AML.T0011.001: Malicious Package]] |
-| 6 | [[impact|AML.TA0011: Impact]] | [[user-harm|AML.T0048.003: User Harm]] |
+| 1 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
+| 2 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]] |
+| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]] |
+| 4 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]] |
+| 5 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]] |
+| 6 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
 
 
 

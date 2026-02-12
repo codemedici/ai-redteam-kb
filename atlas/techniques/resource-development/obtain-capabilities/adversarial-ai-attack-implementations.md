@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0016.000: Adversarial AI Attack Implementations
 
-> **Sub-Technique of:** [[obtain-capabilities|AML.T0016: Obtain Capabilities]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
 
 
 
@@ -20,7 +20,7 @@ Adversaries may search for existing open source implementations of AI attacks. T
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-- **Parent Technique:** [[obtain-capabilities|AML.T0016: Obtain Capabilities]]
+- **Parent Technique:** [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
 
 ## Tactics (0)
 
@@ -35,15 +35,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[virustotal-poisoning|AML.CS0002: VirusTotal Poisoning]]
+### [[atlas/case-studies/virustotal-poisoning|AML.CS0002: VirusTotal Poisoning]]
 
 The actor obtained [metame](https://github.com/a0rtega/metame), a simple metamorphic code engine for arbitrary executables.
 
-### [[camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
+### [[atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
 
 The attackers obtained software that turns static photos into videos, adding realistic effects such as blinking eyes.
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The researcher obtained [EasyEdit](https://github.com/zjunlp/EasyEdit), an open-source knowledge editing tool for large language models.
 

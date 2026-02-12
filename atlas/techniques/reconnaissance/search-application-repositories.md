@@ -13,7 +13,7 @@ Adversaries may search open application repositories during targeting.
 Examples of these include Google Play, the iOS App store, the macOS App Store, and the Microsoft Store.
 
 Adversaries may craft search queries seeking applications that contain AI-enabled components.
-Frequently, the next step is to [[acquire-public-ai-artifacts|Acquire Public AI Artifacts]].
+Frequently, the next step is to [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|Acquire Public AI Artifacts]].
 
 ## Metadata
 
@@ -29,7 +29,7 @@ Frequently, the next step is to [[acquire-public-ai-artifacts|Acquire Public AI 
 This technique supports the following tactics:
 
 
-- [[reconnaissance|AML.TA0002: Reconnaissance]]
+- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 
 
 
@@ -39,11 +39,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
+### [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
 
 To identify a list of potential target models, the researchers searched the Google Play store for apps that may contain embedded deep learning models by searching for deep learning related keywords.
 
-### [[ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
+### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 The Trend Micro researchers used service indexing portals and web searching tools to identify over 8,000 private container registries exposed on the internet. Approximately 70% of the registries had overly permissive access controls, allowing write permissions. The private container registries encompassed both independently hosted registries and registries deployed on Cloud Service Providers (CSPs). The registries were exposed due to some combination of:
 

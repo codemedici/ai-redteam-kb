@@ -27,36 +27,36 @@ The following steps outline the attack procedure:
 
 ### Step 1: Develop Capabilities
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[develop-capabilities|AML.T0017: Develop Capabilities]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
 
 The attacker created a website containing malicious system prompts for the LLM to ingest in order to influence the model's behavior. These prompts are ingested by the model when access to it is requested by the user.
 
 ### Step 2: LLM Prompt Obfuscation
 
-**Tactic:** [[defense-evasion|AML.TA0007: Defense Evasion]]
-**Technique:** [[llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
+**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+**Technique:** [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 The malicious prompts were obfuscated by setting the font size to 0, making it harder to detect by a human.
 
 ### Step 3: Indirect
 
-**Tactic:** [[execution|AML.TA0005: Execution]]
-**Technique:** [[indirect|AML.T0051.001: Indirect]]
+**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
+**Technique:** [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 Bing chat is capable of seeing currently opened websites if allowed by the user. If the user has the adversary's website open, the malicious prompt will be executed.
 
 ### Step 4: Spearphishing via Social Engineering LLM
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
 
 The malicious prompt directs Bing Chat to change its conversational style to that of a pirate, and its behavior to subtly convince the user to provide PII (e.g. their name) and encourage the user to click on a link that has the user's PII encoded into the URL.
 
 ### Step 5: User Harm
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[user-harm|AML.T0048.003: User Harm]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 With this user information, the attacker could now use the user's PII it has received for further identity-level attacks, such identity theft or fraud.
 
@@ -66,11 +66,11 @@ With this user information, the attacker could now use the user's PII it has rec
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[resource-development|AML.TA0003: Resource Development]] | [[develop-capabilities|AML.T0017: Develop Capabilities]] |
-| 2 | [[defense-evasion|AML.TA0007: Defense Evasion]] | [[llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]] |
-| 3 | [[execution|AML.TA0005: Execution]] | [[indirect|AML.T0051.001: Indirect]] |
-| 4 | [[initial-access|AML.TA0004: Initial Access]] | [[spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]] |
-| 5 | [[impact|AML.TA0011: Impact]] | [[user-harm|AML.T0048.003: User Harm]] |
+| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]] |
+| 2 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]] |
+| 3 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]] |
+| 4 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]] |
+| 5 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
 
 
 

@@ -26,17 +26,17 @@ These harms could affect the organization (e.g. Financial Harm, Reputational Har
 This technique supports the following tactics:
 
 
-- [[impact|AML.TA0011: Impact]]
+- [[atlas/tactics/impact|AML.TA0011: Impact]]
 
 
 
 ## Sub-Techniques (5)
 
-- [[financial-harm|AML.T0048.000: Financial Harm]]
-- [[reputational-harm|AML.T0048.001: Reputational Harm]]
-- [[societal-harm|AML.T0048.002: Societal Harm]]
-- [[user-harm|AML.T0048.003: User Harm]]
-- [[ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+- [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- [[atlas/techniques/impact/external-harms/reputational-harm|AML.T0048.001: Reputational Harm]]
+- [[atlas/techniques/impact/external-harms/societal-harm|AML.T0048.002: Societal Harm]]
+- [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+- [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 
 ## Case Studies (2)
@@ -44,11 +44,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 Exfiltrated data may include sensitive or private data such as proprietary data stored in Google Drive, as well as user contacts and photos.  As a result, the user may be harmed financially, reputationally, and more.
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 If the company's models were manipulated to produce false information, a variety of harms including financial and reputational could occur.
 

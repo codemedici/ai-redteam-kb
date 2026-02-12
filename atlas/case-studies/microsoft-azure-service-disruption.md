@@ -25,57 +25,57 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Tactic:** [[reconnaissance|AML.TA0002: Reconnaissance]]
-**Technique:** [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+**Technique:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 
 ### Step 2: Valid Accounts
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[valid-accounts|AML.T0012: Valid Accounts]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 The team used a valid account to gain access to the network.
 
 ### Step 3: AI Artifact Collection
 
-**Tactic:** [[collection|AML.TA0009: Collection]]
-**Technique:** [[ai-artifact-collection|AML.T0035: AI Artifact Collection]]
+**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
+**Technique:** [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]]
 
 The team found the model file of the target ML model and the necessary training data.
 
 ### Step 4: Exfiltration via Cyber Means
 
-**Tactic:** [[exfiltration|AML.TA0010: Exfiltration]]
-**Technique:** [[exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
+**Tactic:** [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+**Technique:** [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 The team exfiltrated the model and data via traditional means.
 
 ### Step 5: White-Box Optimization
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[white-box-optimization|AML.T0043.000: White-Box Optimization]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
 
 Using the target model and data, the red team crafted evasive adversarial data in an offline manor.
 
 ### Step 6: AI Model Inference API Access
 
-**Tactic:** [[ai-model-access|AML.TA0000: AI Model Access]]
-**Technique:** [[ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
+**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+**Technique:** [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 The team used an exposed API to access the target model.
 
 ### Step 7: Verify Attack
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[verify-attack|AML.T0042: Verify Attack]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
 
 The team submitted the adversarial examples to the API to verify their efficacy on the production system.
 
 ### Step 8: Evade AI Model
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[evade-ai-model|AML.T0015: Evade AI Model]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 The team performed an online evasion attack by replaying the adversarial examples and accomplished their goals.
 
@@ -85,14 +85,14 @@ The team performed an online evasion attack by replaying the adversarial example
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[reconnaissance|AML.TA0002: Reconnaissance]] | [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]] |
-| 2 | [[initial-access|AML.TA0004: Initial Access]] | [[valid-accounts|AML.T0012: Valid Accounts]] |
-| 3 | [[collection|AML.TA0009: Collection]] | [[ai-artifact-collection|AML.T0035: AI Artifact Collection]] |
-| 4 | [[exfiltration|AML.TA0010: Exfiltration]] | [[exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
-| 5 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[white-box-optimization|AML.T0043.000: White-Box Optimization]] |
-| 6 | [[ai-model-access|AML.TA0000: AI Model Access]] | [[ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
-| 7 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[verify-attack|AML.T0042: Verify Attack]] |
-| 8 | [[impact|AML.TA0011: Impact]] | [[evade-ai-model|AML.T0015: Evade AI Model]] |
+| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]] |
+| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]] |
+| 3 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]] |
+| 4 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
+| 5 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]] |
+| 6 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
+| 7 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]] |
+| 8 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
 
 
 

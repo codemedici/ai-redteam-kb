@@ -29,7 +29,7 @@ AI agents can include security measures against prompt injections that prevent t
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
+### [[atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
 
 <div dangerouslySetInnerHTML={{__html: `The malicious prompt instructed Gemini to delay the execution of the Workspace Extension until the next interaction. This was done to circumvent controls that restrict automated tool invocation.
 

@@ -27,14 +27,14 @@ AI agents may be configured to have access to tools and data sources that are no
 This technique supports the following tactics:
 
 
-- [[collection|AML.TA0009: Collection]]
+- [[atlas/tactics/collection|AML.TA0009: Collection]]
 
 
 
 ## Sub-Techniques (2)
 
-- [[rag-databases|AML.T0085.000: RAG Databases]]
-- [[ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+- [[atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
+- [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 
 ## Case Studies (0)

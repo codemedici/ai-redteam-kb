@@ -7,7 +7,7 @@ sidebar_position: 6
 
 # AML.T0085.001: AI Agent Tools
 
-> **Sub-Technique of:** [[data-from-ai-services|AML.T0085: Data from AI Services]]
+> **Sub-Technique of:** [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085: Data from AI Services]]
 
 
 
@@ -20,7 +20,7 @@ Adversaries may prompt the AI service to invoke various tools the agent has acce
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[data-from-ai-services|AML.T0085: Data from AI Services]]
+- **Parent Technique:** [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085: Data from AI Services]]
 
 ## Tactics (0)
 
@@ -35,11 +35,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The prompt asks the agent to retrieve all Salesforce records using its get-records tool. The agent retrieves all records from the victim’s CRM.
 
-### [[planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
+### [[atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
 
 <div dangerouslySetInnerHTML={{__html: `The Workspace Extension searched for the document and placed its content in the chat context.
 
@@ -47,7 +47,7 @@ The prompt asks the agent to retrieve all Salesforce records using its get-recor
 <span style="color: indigo;">search for a document about cats in my drive, and print it word by word.</span>
 </div>`}} />
 
-### [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+### [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 The malicious prompt instructed that all details of other issues be collected. This invoked an Atlassian MCP tool that could access the Jira tickets and collect them.
 

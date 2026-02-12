@@ -25,13 +25,13 @@ Adversaries may develop their own capabilities to support operations. This proce
 This technique supports the following tactics:
 
 
-- [[resource-development|AML.TA0003: Resource Development]]
+- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 
 
 
 ## Sub-Techniques (1)
 
-- [[adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
+- [[atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 
 ## Case Studies (4)
@@ -39,19 +39,19 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 An adversary creates a Jupyter notebook containing obfuscated, malicious code.
 
-### [[indirect-prompt-injection-threats-bing-chat-data-pirate|AML.CS0020: Indirect Prompt Injection Threats: Bing Chat Data Pirate]]
+### [[atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|AML.CS0020: Indirect Prompt Injection Threats: Bing Chat Data Pirate]]
 
 The attacker created a website containing malicious system prompts for the LLM to ingest in order to influence the model's behavior. These prompts are ingested by the model when access to it is requested by the user.
 
-### [[google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
+### [[atlas/case-studies/google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
 
 The researcher wrote a Google Apps Script that logs all query parameters to a Google Doc.
 
-### [[malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
+### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 The threat actor embedded the prompt injection into a malware sample they called Skynet.
 

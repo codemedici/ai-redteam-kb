@@ -27,36 +27,36 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Tactic:** [[reconnaissance|AML.TA0002: Reconnaissance]]
-**Technique:** [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+**Technique:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 Using the public documentation about GPT-2, the researchers gathered information about the dataset, model architecture, and training hyper-parameters.
 
 ### Step 2: Models
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[models|AML.T0002.001: Models]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 The researchers obtained a reference implementation of a similar publicly available model called Grover.
 
 ### Step 3: Datasets
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[datasets|AML.T0002.000: Datasets]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 The researchers were able to manually recreate the dataset used in the original GPT-2 paper using the gathered documentation.
 
 ### Step 4: AI Development Workspaces
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
 
 The researchers were able to use TensorFlow Research Cloud via their academic credentials.
 
 ### Step 5: Train Proxy via Gathered AI Artifacts
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
 
 The researchers modified Grover's objective function to reflect GPT-2's objective function and then trained on the dataset they curated using used Grover's initial hyperparameters. The resulting model functionally replicates GPT-2, obtaining similar performance on most datasets.
 A bad actor who followed the same procedure as the researchers could then use the replicated GPT-2 model for malicious purposes.
@@ -67,11 +67,11 @@ A bad actor who followed the same procedure as the researchers could then use th
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[reconnaissance|AML.TA0002: Reconnaissance]] | [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]] |
-| 2 | [[resource-development|AML.TA0003: Resource Development]] | [[models|AML.T0002.001: Models]] |
-| 3 | [[resource-development|AML.TA0003: Resource Development]] | [[datasets|AML.T0002.000: Datasets]] |
-| 4 | [[resource-development|AML.TA0003: Resource Development]] | [[ai-development-workspaces|AML.T0008.000: AI Development Workspaces]] |
-| 5 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]] |
+| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]] |
+| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]] |
+| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]] |
+| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]] |
+| 5 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]] |
 
 
 

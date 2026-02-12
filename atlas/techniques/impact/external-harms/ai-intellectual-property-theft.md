@@ -7,16 +7,16 @@ sidebar_position: 10
 
 # AML.T0048.004: AI Intellectual Property Theft
 
-> **Sub-Technique of:** [[external-harms|AML.T0048: External Harms]]
+> **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 
 
 Adversaries may exfiltrate AI artifacts to steal intellectual property and cause economic harm to the victim organization.
 
-Proprietary training data is costly to collect and annotate and may be a target for [[exfiltration|Exfiltration]] and theft.
+Proprietary training data is costly to collect and annotate and may be a target for [[atlas/tactics/exfiltration|Exfiltration]] and theft.
 
 AIaaS providers charge for use of their API.
-An adversary who has stolen a model via [[exfiltration|Exfiltration]] or via [[extract-ai-model|Extract AI Model]] now has unlimited use of that service without paying the owner of the intellectual property.
+An adversary who has stolen a model via [[atlas/tactics/exfiltration|Exfiltration]] or via [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/extract-ai-model|Extract AI Model]] now has unlimited use of that service without paying the owner of the intellectual property.
 
 ## Metadata
 
@@ -25,7 +25,7 @@ An adversary who has stolen a model via [[exfiltration|Exfiltration]] or via [[e
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[external-harms|AML.T0048: External Harms]]
+- **Parent Technique:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 ## Tactics (0)
 
@@ -40,19 +40,19 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
+### [[atlas/case-studies/attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
 
 By replicating the model with high fidelity, the researchers demonstrated that an adversary could steal a model and violate the victim's intellectual property rights.
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 Exfiltrated data may include sensitive or private data such as ML model artifacts stored in Google Drive.
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 With full access to the model, an adversary could steal valuable intellectual property in the form of AI models.
 
-### [[ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
+### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 With full access to the model(s), an adversary has an organization's valuable intellectual property.
 

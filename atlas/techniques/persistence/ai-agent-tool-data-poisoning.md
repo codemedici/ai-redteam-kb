@@ -27,7 +27,7 @@ The content may be targeted such that it would often be retrieved by common quer
 This technique supports the following tactics:
 
 
-- [[persistence|AML.TA0006: Persistence]]
+- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 
 
 

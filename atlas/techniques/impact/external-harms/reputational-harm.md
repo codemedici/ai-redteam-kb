@@ -7,7 +7,7 @@ sidebar_position: 7
 
 # AML.T0048.001: Reputational Harm
 
-> **Sub-Technique of:** [[external-harms|AML.T0048: External Harms]]
+> **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 
 
@@ -20,7 +20,7 @@ Reputational harm involves a degradation of public perception and trust in organ
 - **Last Modified:** October 25, 2023
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[external-harms|AML.T0048: External Harms]]
+- **Parent Technique:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 ## Tactics (0)
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[poisongpt|AML.CS0019: PoisonGPT]]
+### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 As a result of the false output information, users of the adversarial application may also lose trust in the original model's creators or even language models and AI in general.
 

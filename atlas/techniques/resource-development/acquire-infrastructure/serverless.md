@@ -7,7 +7,7 @@ sidebar_position: 22
 
 # AML.T0008.004: Serverless
 
-> **Sub-Technique of:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 
 
@@ -22,7 +22,7 @@ Once acquired, the serverless runtime environment can be leveraged to either res
 - **Last Modified:** April 15, 2025
 - **Maturity:** feasible
 - **MITRE ATT&CK Reference:** [T1583.007](https://attack.mitre.org/techniques/T1583/007/)
-- **Parent Technique:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 

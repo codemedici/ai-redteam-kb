@@ -27,10 +27,10 @@ The following techniques can be used to achieve this tactic:
 
 | Technique ID | Name | Maturity |
 |---|---|---|
-| [[ai-artifact-collection|AML.T0035]] | AI Artifact Collection | realized |
-| [[data-from-information-repositories|AML.T0036]] | Data from Information Repositories | realized |
-| [[data-from-local-system|AML.T0037]] | Data from Local System | realized |
-| [[data-from-ai-services|AML.T0085]] | Data from AI Services | demonstrated |
+| [[atlas/techniques/collection/ai-artifact-collection|AML.T0035]] | AI Artifact Collection | realized |
+| [[atlas/techniques/collection/data-from-information-repositories|AML.T0036]] | Data from Information Repositories | realized |
+| [[atlas/techniques/collection/data-from-local-system|AML.T0037]] | Data from Local System | realized |
+| [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085]] | Data from AI Services | demonstrated |
 
 
 ## Case Studies (10)
@@ -38,16 +38,16 @@ The following techniques can be used to achieve this tactic:
 
 The following case studies demonstrate this tactic:
 
-- [[clearviewai-misconfiguration|AML.CS0006: ClearviewAI Misconfiguration]]
-- [[microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
-- [[compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
-- [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
-- [[shadowray|AML.CS0023: ShadowRay]]
-- [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-- [[planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
-- [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
-- [[malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
-- [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+- [[atlas/case-studies/clearviewai-misconfiguration|AML.CS0006: ClearviewAI Misconfiguration]]
+- [[atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
+- [[atlas/case-studies/compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
+- [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+- [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
+- [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+- [[atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
+- [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+- [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
+- [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 
 ## References

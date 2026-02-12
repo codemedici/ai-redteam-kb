@@ -25,7 +25,7 @@ Adversaries may invoke an AI agent's tool capable of performing mutative operati
 This technique supports the following tactics:
 
 
-- [[impact|AML.TA0011: Impact]]
+- [[atlas/tactics/impact|AML.TA0011: Impact]]
 
 
 

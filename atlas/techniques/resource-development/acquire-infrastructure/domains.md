@@ -7,13 +7,13 @@ sidebar_position: 17
 
 # AML.T0008.002: Domains
 
-> **Sub-Technique of:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 
 
 Adversaries may acquire domains that can be used during targeting. Domain names are the human readable names used to represent one or more IP addresses. They can be purchased or, in some cases, acquired for free.
 
-Adversaries may use acquired domains for a variety of purposes (see [ATT&CK](https://attack.mitre.org/techniques/T1583/001/)). Large AI datasets are often distributed as a list of URLs to individual datapoints. Adversaries may acquire expired domains that are included in these datasets and replace individual datapoints with poisoned examples ([[publish-poisoned-datasets|Publish Poisoned Datasets]]).
+Adversaries may use acquired domains for a variety of purposes (see [ATT&CK](https://attack.mitre.org/techniques/T1583/001/)). Large AI datasets are often distributed as a list of URLs to individual datapoints. Adversaries may acquire expired domains that are included in these datasets and replace individual datapoints with poisoned examples ([[atlas/techniques/resource-development/publish-poisoned-datasets|Publish Poisoned Datasets]]).
 
 ## Metadata
 
@@ -22,7 +22,7 @@ Adversaries may use acquired domains for a variety of purposes (see [ATT&CK](htt
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 - **MITRE ATT&CK Reference:** [T1583.001](https://attack.mitre.org/techniques/T1583/001/)
-- **Parent Technique:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
+### [[atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
 
 They identify expired domains in the dataset and purchase them.
 

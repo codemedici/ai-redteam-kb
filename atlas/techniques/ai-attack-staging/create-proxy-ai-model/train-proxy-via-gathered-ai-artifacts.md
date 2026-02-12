@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # AML.T0005.000: Train Proxy via Gathered AI Artifacts
 
-> **Sub-Technique of:** [[create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
+> **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
 
 
@@ -21,7 +21,7 @@ This can be used to develop attacks that require higher levels of access than th
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
+- **Parent Technique:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
 ## Tactics (0)
 
@@ -36,7 +36,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
+### [[atlas/case-studies/gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
 
 The researchers modified Grover's objective function to reflect GPT-2's objective function and then trained on the dataset they curated using used Grover's initial hyperparameters. The resulting model functionally replicates GPT-2, obtaining similar performance on most datasets.
 A bad actor who followed the same procedure as the researchers could then use the replicated GPT-2 model for malicious purposes.

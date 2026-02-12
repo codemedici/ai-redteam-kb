@@ -7,12 +7,12 @@ sidebar_position: 2
 
 # AML.T0024.000: Infer Training Data Membership
 
-> **Sub-Technique of:** [[exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
+> **Sub-Technique of:** [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
 
 
 
 Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.
-Some strategies make use of a shadow model that could be obtained via [[train-proxy-via-replication|Train Proxy via Replication]], others use statistics of model prediction scores.
+Some strategies make use of a shadow model that could be obtained via [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|Train Proxy via Replication]], others use statistics of model prediction scores.
 
 This can cause the victim model to leak private information, such as PII of those in the training set or other forms of protected IP.
 
@@ -23,7 +23,7 @@ This can cause the victim model to leak private information, such as PII of thos
 - **Last Modified:** November 6, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
+- **Parent Technique:** [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
 
 ## Tactics (0)
 

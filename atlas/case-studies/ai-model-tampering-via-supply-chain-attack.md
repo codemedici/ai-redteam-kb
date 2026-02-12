@@ -27,8 +27,8 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Application Repositories
 
-**Tactic:** [[reconnaissance|AML.TA0002: Reconnaissance]]
-**Technique:** [[search-application-repositories|AML.T0004: Search Application Repositories]]
+**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+**Technique:** [[atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]]
 
 The Trend Micro researchers used service indexing portals and web searching tools to identify over 8,000 private container registries exposed on the internet. Approximately 70% of the registries had overly permissive access controls, allowing write permissions. The private container registries encompassed both independently hosted registries and registries deployed on Cloud Service Providers (CSPs). The registries were exposed due to some combination of:
 
@@ -38,22 +38,22 @@ The Trend Micro researchers used service indexing portals and web searching tool
 
 ### Step 2: Exploit Public-Facing Application
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
 
 The researchers were able to exploit the misconfigured registries to pull container images without requiring authentication. In total, researchers pulled several terabytes of data containing over 20,000 images.
 
 ### Step 3: Discover AI Artifacts
 
-**Tactic:** [[discovery|AML.TA0008: Discovery]]
-**Technique:** [[discover-ai-artifacts|AML.T0007: Discover AI Artifacts]]
+**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+**Technique:** [[atlas/techniques/discovery/discover-ai-artifacts|AML.T0007: Discover AI Artifacts]]
 
 The researchers found 1,453 unique AI models embedded in the private container images. Around half were in the Open Neural Network Exchange (ONNX) format.
 
 ### Step 4: Full AI Model Access
 
-**Tactic:** [[ai-model-access|AML.TA0000: AI Model Access]]
-**Technique:** [[full-ai-model-access|AML.T0044: Full AI Model Access]]
+**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+**Technique:** [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
 
 This gave the researchers full access to the models. Models for a variety of use cases were identified, including:
 
@@ -64,36 +64,36 @@ This gave the researchers full access to the models. Models for a variety of use
 
 ### Step 5: AI Intellectual Property Theft
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 With full access to the model(s), an adversary has an organization's valuable intellectual property.
 
 ### Step 6: Poison AI Model
 
-**Tactic:** [[persistence|AML.TA0006: Persistence]]
-**Technique:** [[poison-ai-model|AML.T0018.000: Poison AI Model]]
+**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+**Technique:** [[atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
 
 With full access to the model weights, an adversary could manipulate the weights to cause misclassifications or otherwise degrade performance.
 
 ### Step 7: Modify AI Model Architecture
 
-**Tactic:** [[persistence|AML.TA0006: Persistence]]
-**Technique:** [[modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
+**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+**Technique:** [[atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
 
 With full access to the model, an adversary could modify the architecture to change the behavior.
 
 ### Step 8: Container Registry
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[container-registry|AML.T0010.004: Container Registry]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/container-registry|AML.T0010.004: Container Registry]]
 
 Because many of the misconfigured container registries allowed write access, the adversary's container image with the manipulated model could be pushed with the same name and tag as the original. This compromises the victim's AI supply chain, where automated CI/CD pipelines could pull the adversary's images.
 
 ### Step 9: Evade AI Model
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[evade-ai-model|AML.T0015: Evade AI Model]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 Once the adversary's container image is deployed, the model may misclassify inputs due to the adversary's manipulations.
 
@@ -103,15 +103,15 @@ Once the adversary's container image is deployed, the model may misclassify inpu
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[reconnaissance|AML.TA0002: Reconnaissance]] | [[search-application-repositories|AML.T0004: Search Application Repositories]] |
-| 2 | [[initial-access|AML.TA0004: Initial Access]] | [[exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]] |
-| 3 | [[discovery|AML.TA0008: Discovery]] | [[discover-ai-artifacts|AML.T0007: Discover AI Artifacts]] |
-| 4 | [[ai-model-access|AML.TA0000: AI Model Access]] | [[full-ai-model-access|AML.T0044: Full AI Model Access]] |
-| 5 | [[impact|AML.TA0011: Impact]] | [[ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]] |
-| 6 | [[persistence|AML.TA0006: Persistence]] | [[poison-ai-model|AML.T0018.000: Poison AI Model]] |
-| 7 | [[persistence|AML.TA0006: Persistence]] | [[modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]] |
-| 8 | [[initial-access|AML.TA0004: Initial Access]] | [[container-registry|AML.T0010.004: Container Registry]] |
-| 9 | [[impact|AML.TA0011: Impact]] | [[evade-ai-model|AML.T0015: Evade AI Model]] |
+| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]] |
+| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]] |
+| 3 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-artifacts|AML.T0007: Discover AI Artifacts]] |
+| 4 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]] |
+| 5 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]] |
+| 6 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]] |
+| 7 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]] |
+| 8 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/container-registry|AML.T0010.004: Container Registry]] |
+| 9 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
 
 
 

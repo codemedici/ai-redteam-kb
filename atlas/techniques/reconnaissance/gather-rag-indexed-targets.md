@@ -27,7 +27,7 @@ RAG-indexed data may be identified in public documentation about the system, or 
 This technique supports the following tactics:
 
 
-- [[reconnaissance|AML.TA0002: Reconnaissance]]
+- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 
 
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+### [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
 
 The Zenity researchers identified that Microsoft Copilot for M365 indexes all e-mails received in an inbox, even if the recipient does not open them.
 

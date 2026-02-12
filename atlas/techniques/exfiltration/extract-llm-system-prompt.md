@@ -27,7 +27,7 @@ System prompts can be a portion of an AI provider's competitive advantage and ar
 This technique supports the following tactics:
 
 
-- [[exfiltration|AML.TA0010: Exfiltration]]
+- [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 
 
 

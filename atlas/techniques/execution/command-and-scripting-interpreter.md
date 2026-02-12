@@ -29,7 +29,7 @@ Adversaries may abuse these technologies in various ways as a means of executing
 This technique supports the following tactics:
 
 
-- [[execution|AML.TA0005: Execution]]
+- [[atlas/tactics/execution|AML.TA0005: Execution]]
 
 
 

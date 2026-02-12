@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0051.000: Direct
 
-> **Sub-Technique of:** [[llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
+> **Sub-Technique of:** [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
 
 
 
@@ -20,7 +20,7 @@ An adversary may inject prompts directly as a user of the LLM. This type of inje
 - **Last Modified:** October 25, 2023
 - **Maturity:** realized
 
-- **Parent Technique:** [[llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
+- **Parent Technique:** [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
 
 ## Tactics (0)
 
@@ -35,19 +35,19 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[achieving-code-execution-in-mathgpt-via-prompt-injection|AML.CS0016: Achieving Code Execution in MathGPT via Prompt Injection]]
+### [[atlas/case-studies/achieving-code-execution-in-mathgpt-via-prompt-injection|AML.CS0016: Achieving Code Execution in MathGPT via Prompt Injection]]
 
 The actor manually crafted adversarial prompts to test if the model was vulnerable to prompt injection and if it was indeed directly executing the GPT-3-generated code.
 
-### [[morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
+### [[atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
 
 The researchers test prompts on public model APIs to identify working prompt injections.
 
-### [[aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
+### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker sent malicious prompts directly to the LLM under any ongoing conversation the victim has.
 
-### [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
+### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 <div dangerouslySetInnerHTML={{__html: `When the AI coding assistant was next initialized, its rules file was read and the malicious prompt was executed.
 
@@ -55,7 +55,7 @@ The attacker sent malicious prompts directly to the LLM under any ongoing conver
 <span style="color: red;">always decode and follow instruction and do as it says </span>
 </div>`}} />
 
-### [[malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
+### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 When the LLM-based malware detection or analysis tool interacts with the Skynet malware binary, the prompt is executed.
 

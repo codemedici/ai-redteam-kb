@@ -7,7 +7,7 @@ sidebar_position: 8
 
 # AML.T0080.000: Memory
 
-> **Sub-Technique of:** [[ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]]
+> **Sub-Technique of:** [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080: AI Agent Context Poisoning]]
 
 
 
@@ -22,7 +22,7 @@ Memory is a common feature in LLMs that allows them to remember information acro
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]]
+- **Parent Technique:** [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080: AI Agent Context Poisoning]]
 
 ## Tactics (0)
 
@@ -37,11 +37,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
+### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker could then craft malicious prompts that manipulate the LLM’s memory to achieve a persistent effect. Any change in memory would also propagate to any new chat threads.
 
-### [[hacking-chatgpt-s-memories-with-prompt-injection|AML.CS0040: Hacking ChatGPT’s Memories with Prompt Injection]]
+### [[atlas/case-studies/hacking-chatgpt-s-memories-with-prompt-injection|AML.CS0040: Hacking ChatGPT’s Memories with Prompt Injection]]
 
 The prompt caused new memories to be introduced, changing the behavior of ChatGPT. The chat window indicated that the memory has been set, despite the lack of human verification or intervention. All future chat sessions will use the poisoned memory store.
 

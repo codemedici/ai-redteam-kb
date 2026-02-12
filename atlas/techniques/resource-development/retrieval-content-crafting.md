@@ -11,7 +11,7 @@ sidebar_position: 21
 
 Adversaries may write content designed to be retrieved by user queries and influence a user of the system in some way. This abuses the trust the user has in the system.
 
-The crafted content can be combined with a prompt injection. It can also stand alone in a separate document or email. The adversary must get the crafted content into the victim\u0027s database, such as a vector database used in a retrieval augmented generation (RAG) system. This may be accomplished via cyber access, or by abusing the ingestion mechanisms common in RAG systems (see [[rag-poisoning|RAG Poisoning]]).
+The crafted content can be combined with a prompt injection. It can also stand alone in a separate document or email. The adversary must get the crafted content into the victim\u0027s database, such as a vector database used in a retrieval augmented generation (RAG) system. This may be accomplished via cyber access, or by abusing the ingestion mechanisms common in RAG systems (see [[atlas/techniques/persistence/rag-poisoning|RAG Poisoning]]).
 
 Large language models may be used as an assistant to aid an adversary in crafting content.
 
@@ -29,7 +29,7 @@ Large language models may be used as an assistant to aid an adversary in craftin
 This technique supports the following tactics:
 
 
-- [[resource-development|AML.TA0003: Resource Development]]
+- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 
 
 
@@ -39,11 +39,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+### [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
 
 The Zenity researchers wrote targeted content designed to be retrieved by specific user queries.
 
-### [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
+### [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
 
 <div dangerouslySetInnerHTML={{__html: `The researcher crafted a targeted message designed to be retrieved when a user asks about their API key.
 

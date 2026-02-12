@@ -27,16 +27,16 @@ The following steps outline the attack procedure:
 
 ### Step 1: AI Software
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[ai-software|AML.T0010.001: AI Software]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 A malicious dependency package named `torchtriton` was uploaded to the PyPI code repository with the same package name as a package shipped with the PyTorch-nightly build. This malicious package contained additional code that uploads sensitive data from the machine.
 The malicious `torchtriton` package was installed instead of the legitimate one because PyPI is prioritized over other sources. See more details at [this GitHub issue](https://github.com/pypa/pip/issues/8606).
 
 ### Step 2: Data from Local System
 
-**Tactic:** [[collection|AML.TA0009: Collection]]
-**Technique:** [[data-from-local-system|AML.T0037: Data from Local System]]
+**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
+**Technique:** [[atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]]
 
 The malicious package surveys the affected system for basic fingerprinting info (such as IP address, username, and current working directory), and steals further sensitive data, including:
 - nameservers from `/etc/resolv.conf`
@@ -52,8 +52,8 @@ The malicious package surveys the affected system for basic fingerprinting info 
 
 ### Step 3: Exfiltration via Cyber Means
 
-**Tactic:** [[exfiltration|AML.TA0010: Exfiltration]]
-**Technique:** [[exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
+**Tactic:** [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+**Technique:** [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 All gathered information, including file contents, is uploaded via encrypted DNS queries to the domain `*[dot]h4ck[dot]cfd`, using the DNS server `wheezy[dot]io`.
 
@@ -63,9 +63,9 @@ All gathered information, including file contents, is uploaded via encrypted DNS
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[initial-access|AML.TA0004: Initial Access]] | [[ai-software|AML.T0010.001: AI Software]] |
-| 2 | [[collection|AML.TA0009: Collection]] | [[data-from-local-system|AML.T0037: Data from Local System]] |
-| 3 | [[exfiltration|AML.TA0010: Exfiltration]] | [[exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
+| 1 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]] |
+| 2 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]] |
+| 3 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
 
 
 

@@ -27,45 +27,45 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Tactic:** [[reconnaissance|AML.TA0002: Reconnaissance]]
-**Technique:** [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+**Technique:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 DGA detection is a widely used technique to detect botnets in academia and industry.
 The research team searched for research papers related to DGA detection.
 
 ### Step 2: Acquire Public AI Artifacts
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
 
 The researchers acquired a publicly available CNN-based DGA detection model and tested it against a well-known DGA generated domain name data sets, which includes ~50 million domain names from 64 botnet DGA families.
 The CNN-based DGA detection model shows more than 70% detection accuracy on 16 (~25%) botnet DGA families.
 
 ### Step 3: Adversarial AI Attacks
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 The researchers developed a generic mutation technique that requires a minimal number of iterations.
 
 ### Step 4: Black-Box Optimization
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[black-box-optimization|AML.T0043.001: Black-Box Optimization]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
 
 The researchers used the mutation technique to generate evasive domain names.
 
 ### Step 5: Verify Attack
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[verify-attack|AML.T0042: Verify Attack]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
 
 The experiment results show that the detection rate of all 16 botnet DGA families drop to less than 25% after only one string is inserted once to the DGA generated domain names.
 
 ### Step 6: Evade AI Model
 
-**Tactic:** [[defense-evasion|AML.TA0007: Defense Evasion]]
-**Technique:** [[evade-ai-model|AML.T0015: Evade AI Model]]
+**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+**Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 The DGA generated domain names mutated with this technique successfully evade the target DGA Detection model, allowing an adversary to continue communication with their [Command and Control](https://attack.mitre.org/tactics/TA0011/) servers.
 
@@ -75,12 +75,12 @@ The DGA generated domain names mutated with this technique successfully evade th
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[reconnaissance|AML.TA0002: Reconnaissance]] | [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]] |
-| 2 | [[resource-development|AML.TA0003: Resource Development]] | [[acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]] |
-| 3 | [[resource-development|AML.TA0003: Resource Development]] | [[adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]] |
-| 4 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[black-box-optimization|AML.T0043.001: Black-Box Optimization]] |
-| 5 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[verify-attack|AML.T0042: Verify Attack]] |
-| 6 | [[defense-evasion|AML.TA0007: Defense Evasion]] | [[evade-ai-model|AML.T0015: Evade AI Model]] |
+| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]] |
+| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]] |
+| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]] |
+| 4 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]] |
+| 5 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]] |
+| 6 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
 
 
 

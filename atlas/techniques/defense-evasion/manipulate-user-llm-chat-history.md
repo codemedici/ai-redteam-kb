@@ -29,7 +29,7 @@ Chat interfaces (especially desktop interfaces) often do not show the injected p
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
+### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 Many LLM desktop applications do not show the injected prompt for any ongoing chat, as they update chat history only once when initially opening it. This gave the attacker the opportunity to cover their tracks by manipulating the user’s conversation history directly via the LLM’s API. The attacker could also overwrite or delete messages to prevent detection of their actions.
 

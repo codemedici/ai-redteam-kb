@@ -27,7 +27,7 @@ AI Agents often utilize external tools or services to take actions, such as quer
 This technique supports the following tactics:
 
 
-- [[credential-access|AML.TA0013: Credential Access]]
+- [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
 
 
 

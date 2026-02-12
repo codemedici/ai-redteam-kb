@@ -27,7 +27,7 @@ This can include basic fingerprinting information and sensitive data such as ssh
 This technique supports the following tactics:
 
 
-- [[collection|AML.TA0009: Collection]]
+- [[atlas/tactics/collection|AML.TA0009: Collection]]
 
 
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
+### [[atlas/case-studies/compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
 
 The malicious package surveys the affected system for basic fingerprinting info (such as IP address, username, and current working directory), and steals further sensitive data, including:
 - nameservers from `/etc/resolv.conf`
@@ -51,11 +51,11 @@ The malicious package surveys the affected system for basic fingerprinting info 
 - `$HOME/.gitconfig`
 - `$HOME/.ssh/*.`
 
-### [[malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
+### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 The Skynet malware attempts to collect `%HOMEPATH%\.ssh\known_hosts` and `C:/Windows/System32/Drivers/etc/hosts`.
 
-### [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The LAMEHUG malware used the AI generated commands to collect system information (saved to `%PROGRAMDATA%\info\info.txt`) and recursively searched Documents, Desktop, and Downloads to stage files for exfiltration.
 

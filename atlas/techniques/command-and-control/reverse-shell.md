@@ -27,7 +27,7 @@ Typically, a user uses a client to connect to a remote machine which is listenin
 This technique supports the following tactics:
 
 
-- [[command-and-control|AML.TA0014: Command and Control]]
+- [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
 
 
 
@@ -37,11 +37,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The Sliver implant grants the researcher a command and control channel so they can explore the victim's environment and continue the attack.
 
-### [[malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
+### [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
 
 The malicious payload was a reverse shell set to connect to a hardcoded IP address.
 

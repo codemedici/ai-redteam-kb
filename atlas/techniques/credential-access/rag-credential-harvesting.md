@@ -25,7 +25,7 @@ Adversaries may attempt to use their access to a large language model (LLM) on t
 This technique supports the following tactics:
 
 
-- [[credential-access|AML.TA0013: Credential Access]]
+- [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
 
 
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
+### [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
 
 Because Slack AI has access to the victim user’s private channels, it retrieves the victim’s API Key.
 

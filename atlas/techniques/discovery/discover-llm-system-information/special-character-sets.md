@@ -7,7 +7,7 @@ sidebar_position: 7
 
 # AML.T0069.000: Special Character Sets
 
-> **Sub-Technique of:** [[discover-llm-system-information|AML.T0069: Discover LLM System Information]]
+> **Sub-Technique of:** [[atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
 
 
 
@@ -20,7 +20,7 @@ Adversaries may discover delimiters and special characters sets used by the larg
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[discover-llm-system-information|AML.T0069: Discover LLM System Information]]
+- **Parent Technique:** [[atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
 
 ## Tactics (0)
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+### [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
 
 <div dangerouslySetInnerHTML={{__html: `By probing Copilot and examining its responses, the Zenity researchers identified delimiters (such as <span style="font-family: monospace; color: green;">\*\*</span> and <span style="font-family: monospace; color: green;">\*\*END\*\*</span>) and signifiers (such as <span style="font-family: monospace; color: green;">Actual Snippet:</span> and <span style="font-family: monospace; color: green">"[^1^]"</span>), which are used as signifiers to separate different portions of a Copilot prompt.`}} />
 

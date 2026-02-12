@@ -26,71 +26,71 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Tactic:** [[reconnaissance|AML.TA0002: Reconnaissance]]
-**Technique:** [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+**Technique:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 
 ### Step 2: Valid Accounts
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[valid-accounts|AML.T0012: Valid Accounts]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 The team gained access to the commercial face identification service and its API through a valid account.
 
 ### Step 3: AI Model Inference API Access
 
-**Tactic:** [[ai-model-access|AML.TA0000: AI Model Access]]
-**Technique:** [[ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
+**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+**Technique:** [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 The team accessed the inference API of the target model.
 
 ### Step 4: Discover AI Model Ontology
 
-**Tactic:** [[discovery|AML.TA0008: Discovery]]
-**Technique:** [[discover-ai-model-ontology|AML.T0013: Discover AI Model Ontology]]
+**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+**Technique:** [[atlas/techniques/discovery/discover-ai-model-ontology|AML.T0013: Discover AI Model Ontology]]
 
 The team identified the list of identities targeted by the model by querying the target model's inference API.
 
 ### Step 5: Datasets
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[datasets|AML.T0002.000: Datasets]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 The team acquired representative open source data.
 
 ### Step 6: Create Proxy AI Model
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
 The team developed a proxy model using the open source data.
 
 ### Step 7: White-Box Optimization
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[white-box-optimization|AML.T0043.000: White-Box Optimization]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
 
 Using the proxy model, the red team optimized adversarial visual patterns as a physical domain patch-based attack using expectation over transformation.
 
 ### Step 8: Physical Countermeasures
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
 
 The team printed the optimized patch.
 
 ### Step 9: Physical Environment Access
 
-**Tactic:** [[ai-model-access|AML.TA0000: AI Model Access]]
-**Technique:** [[physical-environment-access|AML.T0041: Physical Environment Access]]
+**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+**Technique:** [[atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]
 
 The team placed the countermeasure in the physical environment to cause issues in the face identification system.
 
 ### Step 10: Evade AI Model
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[evade-ai-model|AML.T0015: Evade AI Model]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 The team successfully evaded the model using the physical countermeasure by causing targeted misclassifications.
 
@@ -98,18 +98,18 @@ The team successfully evaded the model using the physical countermeasure by caus
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[reconnaissance|AML.TA0002: Reconnaissance]] | [[search-open-technical-databases|AML.T0000: Search Open Technical Databases]] |
-| 2 | [[initial-access|AML.TA0004: Initial Access]] | [[valid-accounts|AML.T0012: Valid Accounts]] |
-| 3 | [[ai-model-access|AML.TA0000: AI Model Access]] | [[ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
-| 4 | [[discovery|AML.TA0008: Discovery]] | [[discover-ai-model-ontology|AML.T0013: Discover AI Model Ontology]] |
-| 5 | [[resource-development|AML.TA0003: Resource Development]] | [[datasets|AML.T0002.000: Datasets]] |
-| 6 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[create-proxy-ai-model|AML.T0005: Create Proxy AI Model]] |
-| 7 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[white-box-optimization|AML.T0043.000: White-Box Optimization]] |
-| 8 | [[resource-development|AML.TA0003: Resource Development]] | [[physical-countermeasures|AML.T0008.003: Physical Countermeasures]] |
-| 9 | [[ai-model-access|AML.TA0000: AI Model Access]] | [[physical-environment-access|AML.T0041: Physical Environment Access]] |
-| 10 | [[impact|AML.TA0011: Impact]] | [[evade-ai-model|AML.T0015: Evade AI Model]] |
+| Step | Tactic                 | Technique                          |                                   |                                              |
+| ---- | ---------------------- | ---------------------------------- | --------------------------------- | -------------------------------------------- |
+| 1    | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]       | [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]] |
+| 2    | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]       | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]                  |
+| 3    | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]      | [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]   |
+| 4    | [[atlas/tactics/discovery|AML.TA0008: Discovery]]            | [[atlas/techniques/discovery/discover-ai-model-ontology|AML.T0013: Discover AI Model Ontology]]      |
+| 5    | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]                    |
+| 6    | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]    | [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]           |
+| 7    | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]    | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]      |
+| 8    | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-infrastructure/physical-countermeasures|AML.T0008.003: Physical Countermeasures]]    |
+| 9    | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]      | [[atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]     |
+| 10   | [[atlas/tactics/impact|AML.TA0011: Impact]]               | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]                  |
 
 
 

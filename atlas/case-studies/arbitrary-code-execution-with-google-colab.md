@@ -31,23 +31,23 @@ The following steps outline the attack procedure:
 
 ### Step 1: Develop Capabilities
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[develop-capabilities|AML.T0017: Develop Capabilities]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
 
 An adversary creates a Jupyter notebook containing obfuscated, malicious code.
 
 ### Step 2: AI Software
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[ai-software|AML.T0010.001: AI Software]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 Jupyter notebooks are often used for ML and data science research and experimentation, containing executable snippets of Python code and common Unix command-line functionality.
 Users may come across a compromised notebook on public websites or through direct sharing.
 
 ### Step 3: Valid Accounts
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[valid-accounts|AML.T0012: Valid Accounts]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 A victim user may mount their Google Drive into the compromised Colab notebook.  Typical reasons to connect machine learning notebooks to Google Drive include the ability to train on data stored there or to save model output files.
 
@@ -67,15 +67,15 @@ A victim user may nonetheless accept the popup and allow the compromised Colab n
 
 ### Step 4: User Execution
 
-**Tactic:** [[execution|AML.TA0005: Execution]]
-**Technique:** [[user-execution|AML.T0011: User Execution]]
+**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
+**Technique:** [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]]
 
 A victim user may unwittingly execute malicious code provided as part of a compromised Colab notebook.  Malicious code can be obfuscated or hidden in other files that the notebook downloads.
 
 ### Step 5: AI Artifact Collection
 
-**Tactic:** [[collection|AML.TA0009: Collection]]
-**Technique:** [[ai-artifact-collection|AML.T0035: AI Artifact Collection]]
+**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
+**Technique:** [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]]
 
 Adversary may search the victim system to find private and proprietary data, including ML model artifacts.  Jupyter Notebooks [allow execution of shell commands](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.05-IPython-And-Shell-Commands.ipynb).
 
@@ -88,8 +88,8 @@ This example searches the mounted Drive for PyTorch model checkpoint files:
 
 ### Step 6: Exfiltration via Cyber Means
 
-**Tactic:** [[exfiltration|AML.TA0010: Exfiltration]]
-**Technique:** [[exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
+**Tactic:** [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+**Technique:** [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 As a result of Google Drive access, the adversary may open a server to exfiltrate private data or ML model artifacts.
 
@@ -97,15 +97,15 @@ An example from the referenced article shows the download, installation, and usa
 
 ### Step 7: AI Intellectual Property Theft
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 Exfiltrated data may include sensitive or private data such as ML model artifacts stored in Google Drive.
 
 ### Step 8: External Harms
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[external-harms|AML.T0048: External Harms]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 Exfiltrated data may include sensitive or private data such as proprietary data stored in Google Drive, as well as user contacts and photos.  As a result, the user may be harmed financially, reputationally, and more.
 
@@ -115,14 +115,14 @@ Exfiltrated data may include sensitive or private data such as proprietary data 
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[resource-development|AML.TA0003: Resource Development]] | [[develop-capabilities|AML.T0017: Develop Capabilities]] |
-| 2 | [[initial-access|AML.TA0004: Initial Access]] | [[ai-software|AML.T0010.001: AI Software]] |
-| 3 | [[initial-access|AML.TA0004: Initial Access]] | [[valid-accounts|AML.T0012: Valid Accounts]] |
-| 4 | [[execution|AML.TA0005: Execution]] | [[user-execution|AML.T0011: User Execution]] |
-| 5 | [[collection|AML.TA0009: Collection]] | [[ai-artifact-collection|AML.T0035: AI Artifact Collection]] |
-| 6 | [[exfiltration|AML.TA0010: Exfiltration]] | [[exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
-| 7 | [[impact|AML.TA0011: Impact]] | [[ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]] |
-| 8 | [[impact|AML.TA0011: Impact]] | [[external-harms|AML.T0048: External Harms]] |
+| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]] |
+| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]] |
+| 3 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]] |
+| 4 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]] |
+| 5 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]] |
+| 6 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
+| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]] |
+| 8 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]] |
 
 
 

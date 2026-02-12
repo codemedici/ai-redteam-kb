@@ -7,7 +7,7 @@ sidebar_position: 9
 
 # AML.T0080.001: Thread
 
-> **Sub-Technique of:** [[ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]]
+> **Sub-Technique of:** [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080: AI Agent Context Poisoning]]
 
 
 
@@ -25,7 +25,7 @@ Thread Poisoning may affect multiple users if the LLM is being used in a service
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]]
+- **Parent Technique:** [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080: AI Agent Context Poisoning]]
 
 ## Tactics (0)
 
@@ -40,7 +40,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
+### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker could craft malicious prompts that manipulate the context of a chat thread, an effect that would persist for the duration of the thread.
 

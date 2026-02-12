@@ -26,7 +26,7 @@ Model outputs may enable the adversary to identify weaknesses in the model and d
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 
@@ -36,11 +36,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[bypassing-cylance-s-ai-malware-detection|AML.CS0003: Bypassing Cylance's AI Malware Detection]]
+### [[atlas/case-studies/bypassing-cylance-s-ai-malware-detection|AML.CS0003: Bypassing Cylance's AI Malware Detection]]
 
 The researchers enabled verbose logging, which exposes the inner workings of the ML model, specifically around reputation scoring and model ensembling.
 
-### [[proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
+### [[atlas/case-studies/proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
 
 The researchers discovered that ProofPoint's Email Protection left model output scores in email headers.
 

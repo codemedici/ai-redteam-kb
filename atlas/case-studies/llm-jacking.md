@@ -31,36 +31,36 @@ The following steps outline the attack procedure:
 
 ### Step 1: Exploit Public-Facing Application
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
 
 The adversaries exploited a vulnerable version of Laravel ([CVE-2021-3129](https://www.cve.org/CVERecord?id=CVE-2021-3129)) to gain initial access to the victims' systems.
 
 ### Step 2: Unsecured Credentials
 
-**Tactic:** [[credential-access|AML.TA0013: Credential Access]]
-**Technique:** [[unsecured-credentials|AML.T0055: Unsecured Credentials]]
+**Tactic:** [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
+**Technique:** [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
 
 The adversaries found unsecured credentials to cloud environments on the victims' systems
 
 ### Step 3: Valid Accounts
 
-**Tactic:** [[privilege-escalation|AML.TA0012: Privilege Escalation]]
-**Technique:** [[valid-accounts|AML.T0012: Valid Accounts]]
+**Tactic:** [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
+**Technique:** [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 The compromised credentials gave the adversaries access to cloud environments where large language model (LLM) services were hosted.
 
 ### Step 4: Software Tools
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[software-tools|AML.T0016.001: Software Tools]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
 
 The adversaries obtained [keychecker](https://github.com/cunnymessiah/keychecker), a bulk key checker for various AI services which is capable of testing if the key is valid and retrieving some attributes of the account (e.g. account balance and available models).
 
 ### Step 5: Cloud Service Discovery
 
-**Tactic:** [[discovery|AML.TA0008: Discovery]]
-**Technique:** [[cloud-service-discovery|AML.T0075: Cloud Service Discovery]]
+**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+**Technique:** [[atlas/techniques/discovery/cloud-service-discovery|AML.T0075: Cloud Service Discovery]]
 
 The adversaries used keychecker to discover which LLM services were enabled in the cloud environment and if the resources had any resource quotas for the services.
 
@@ -70,15 +70,15 @@ The adversaries also used `GetModelInvocationLoggingConfiguration` to understand
 
 ### Step 6: Software Tools
 
-**Tactic:** [[resource-development|AML.TA0003: Resource Development]]
-**Technique:** [[software-tools|AML.T0016.001: Software Tools]]
+**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+**Technique:** [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
 
 The adversaries then used [OAI Reverse Proxy](https://gitgud.io/khanon/oai-reverse-proxy)  to create a reverse proxy service in front of the stolen LLM resources. The reverse proxy service could be used to sell access to cybercriminals who could exploit the LLMs for malicious purposes.
 
 ### Step 7: Financial Harm
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[financial-harm|AML.T0048.000: Financial Harm]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 In addition to providing cybercriminals with covert access to LLM resources, the unauthorized use of these LLM models could cost victims thousands of dollars per day.
 
@@ -88,13 +88,13 @@ In addition to providing cybercriminals with covert access to LLM resources, the
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[initial-access|AML.TA0004: Initial Access]] | [[exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]] |
-| 2 | [[credential-access|AML.TA0013: Credential Access]] | [[unsecured-credentials|AML.T0055: Unsecured Credentials]] |
-| 3 | [[privilege-escalation|AML.TA0012: Privilege Escalation]] | [[valid-accounts|AML.T0012: Valid Accounts]] |
-| 4 | [[resource-development|AML.TA0003: Resource Development]] | [[software-tools|AML.T0016.001: Software Tools]] |
-| 5 | [[discovery|AML.TA0008: Discovery]] | [[cloud-service-discovery|AML.T0075: Cloud Service Discovery]] |
-| 6 | [[resource-development|AML.TA0003: Resource Development]] | [[software-tools|AML.T0016.001: Software Tools]] |
-| 7 | [[impact|AML.TA0011: Impact]] | [[financial-harm|AML.T0048.000: Financial Harm]] |
+| 1 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]] |
+| 2 | [[atlas/tactics/credential-access|AML.TA0013: Credential Access]] | [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]] |
+| 3 | [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]] | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]] |
+| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]] |
+| 5 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/cloud-service-discovery|AML.T0075: Cloud Service Discovery]] |
+| 6 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]] |
+| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]] |
 
 
 

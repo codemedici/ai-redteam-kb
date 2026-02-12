@@ -7,7 +7,7 @@ sidebar_position: 10
 
 # AML.T0008.000: AI Development Workspaces
 
-> **Sub-Technique of:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 
 
@@ -23,7 +23,7 @@ Multiple workspaces may be used to avoid detection.
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 
@@ -38,7 +38,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
+### [[atlas/case-studies/gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
 
 The researchers were able to use TensorFlow Research Cloud via their academic credentials.
 

@@ -7,7 +7,7 @@ sidebar_position: 18
 
 # AML.T0008.003: Physical Countermeasures
 
-> **Sub-Technique of:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 
 
@@ -22,7 +22,7 @@ These components may be used to disrupt or degrade the model, such as adversaria
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
+### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 The team printed the optimized patch.
 

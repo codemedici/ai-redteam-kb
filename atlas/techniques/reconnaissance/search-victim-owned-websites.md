@@ -15,8 +15,8 @@ Victim-owned websites may contain a variety of details, including names of depar
 These sites may also have details highlighting business operations and relationships.
 
 Adversaries may search victim-owned websites to gather actionable information.
-This information may help adversaries tailor their attacks (e.g. [[adversarial-ai-attacks|Adversarial AI Attacks]] or [[manual-modification|Manual Modification]]).
-Information from these sources may reveal opportunities for other forms of reconnaissance (e.g. [[search-open-technical-databases|Search Open Technical Databases]] or [[search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]])
+This information may help adversaries tailor their attacks (e.g. [[atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|Adversarial AI Attacks]] or [[atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|Manual Modification]]).
+Information from these sources may reveal opportunities for other forms of reconnaissance (e.g. [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|Search Open Technical Databases]] or [[atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]])
 
 ## Metadata
 
@@ -32,7 +32,7 @@ Information from these sources may reveal opportunities for other forms of recon
 This technique supports the following tactics:
 
 
-- [[reconnaissance|AML.TA0002: Reconnaissance]]
+- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 
 
 
@@ -42,11 +42,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[confusing-antimalware-neural-networks|AML.CS0014: Confusing Antimalware Neural Networks]]
+### [[atlas/case-studies/confusing-antimalware-neural-networks|AML.CS0014: Confusing Antimalware Neural Networks]]
 
 Kaspersky's use of ML-based antimalware detectors is publicly documented on their website. In practice, an adversary could use this for targeting.
 
-### [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+### [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 The researchers performed reconnaissance to learn about Atlassian’s Model Context Protocol (MCP) server and its integration into the Jira Service Management (JSM) platform. Atlassian offers an MCP server, which embeds AI into enterprise workflows. Their MCP enables a range of AI-driven actions, such as ticket summarization, auto-replies, classification, and smart recommendations across JSM and Confluence. It allows support engineers and internal users to interact with AI directly from their native interfaces.
 

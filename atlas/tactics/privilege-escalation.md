@@ -31,9 +31,9 @@ The following techniques can be used to achieve this tactic:
 
 | Technique ID | Name | Maturity |
 |---|---|---|
-| [[valid-accounts|AML.T0012]] | Valid Accounts | realized |
-| [[ai-agent-tool-invocation|AML.T0053]] | AI Agent Tool Invocation | demonstrated |
-| [[llm-jailbreak|AML.T0054]] | LLM Jailbreak | demonstrated |
+| [[atlas/techniques/initial-access/valid-accounts|AML.T0012]] | Valid Accounts | realized |
+| [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] | AI Agent Tool Invocation | demonstrated |
+| [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] | LLM Jailbreak | demonstrated |
 
 
 ## Case Studies (5)
@@ -41,11 +41,11 @@ The following techniques can be used to achieve this tactic:
 
 The following case studies demonstrate this tactic:
 
-- [[chatgpt-conversation-exfiltration|AML.CS0021: ChatGPT Conversation Exfiltration]]
-- [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
-- [[llm-jacking|AML.CS0030: LLM Jacking]]
-- [[planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
-- [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+- [[atlas/case-studies/chatgpt-conversation-exfiltration|AML.CS0021: ChatGPT Conversation Exfiltration]]
+- [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+- [[atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
+- [[atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
+- [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 
 ## References

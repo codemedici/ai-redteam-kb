@@ -27,8 +27,8 @@ The following steps outline the attack procedure:
 
 ### Step 1: Manual Modification
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[manual-modification|AML.T0043.003: Manual Modification]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|AML.T0043.003: Manual Modification]]
 
 Several cheap, yet effective strategies for manually modifying logos were observed:
 | Evasive Strategy | Count |
@@ -47,22 +47,22 @@ Several cheap, yet effective strategies for manually modifying logos were observ
 
 ### Step 2: Evade AI Model
 
-**Tactic:** [[defense-evasion|AML.TA0007: Defense Evasion]]
-**Technique:** [[evade-ai-model|AML.T0015: Evade AI Model]]
+**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+**Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 The visual similarity model used to detect brand impersonation was evaded. However, other components of the phishing detection system successfully identified the phishing websites.
 
 ### Step 3: Phishing
 
-**Tactic:** [[initial-access|AML.TA0004: Initial Access]]
-**Technique:** [[phishing|AML.T0052: Phishing]]
+**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+**Technique:** [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052: Phishing]]
 
 If the adversary can successfully evade detection, they can continue to operate their phishing websites and steal the victim's credentials.
 
 ### Step 4: User Harm
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[user-harm|AML.T0048.003: User Harm]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 The end user may experience a variety of harms including financial and privacy harms depending on the credentials stolen by the adversary.
 
@@ -72,10 +72,10 @@ The end user may experience a variety of harms including financial and privacy h
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[manual-modification|AML.T0043.003: Manual Modification]] |
-| 2 | [[defense-evasion|AML.TA0007: Defense Evasion]] | [[evade-ai-model|AML.T0015: Evade AI Model]] |
-| 3 | [[initial-access|AML.TA0004: Initial Access]] | [[phishing|AML.T0052: Phishing]] |
-| 4 | [[impact|AML.TA0011: Impact]] | [[user-harm|AML.T0048.003: User Harm]] |
+| 1 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|AML.T0043.003: Manual Modification]] |
+| 2 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
+| 3 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052: Phishing]] |
+| 4 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
 
 
 

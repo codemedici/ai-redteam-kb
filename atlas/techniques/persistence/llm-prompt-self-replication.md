@@ -9,7 +9,7 @@ sidebar_position: 4
 
 
 
-An adversary may use a carefully crafted [[llm-prompt-injection|LLM Prompt Injection]] designed to cause the LLM to replicate the prompt as part of its output. This allows the prompt to propagate to other LLMs and persist on the system. The self-replicating prompt is typically paired with other malicious instructions (ex: [[llm-jailbreak|LLM Jailbreak]], [[llm-data-leakage|LLM Data Leakage]]).
+An adversary may use a carefully crafted [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|LLM Prompt Injection]] designed to cause the LLM to replicate the prompt as part of its output. This allows the prompt to propagate to other LLMs and persist on the system. The self-replicating prompt is typically paired with other malicious instructions (ex: [[atlas/techniques/privilege-escalation/llm-jailbreak|LLM Jailbreak]], [[atlas/techniques/exfiltration/llm-data-leakage|LLM Data Leakage]]).
 
 ## Metadata
 
@@ -25,7 +25,7 @@ An adversary may use a carefully crafted [[llm-prompt-injection|LLM Prompt Injec
 This technique supports the following tactics:
 
 
-- [[persistence|AML.TA0006: Persistence]]
+- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 
 
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
+### [[atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
 
 The self-replicating portion of the prompt causes the generated output to contain the malicious prompt, allowing the worm to propagate.
 

@@ -28,12 +28,12 @@ The following techniques can be used to achieve this tactic:
 
 | Technique ID | Name | Maturity |
 |---|---|---|
-| [[exfiltration-via-ai-inference-api|AML.T0024]] | Exfiltration via AI Inference API | feasible |
-| [[exfiltration-via-cyber-means|AML.T0025]] | Exfiltration via Cyber Means | realized |
-| [[extract-llm-system-prompt|AML.T0056]] | Extract LLM System Prompt | feasible |
-| [[llm-data-leakage|AML.T0057]] | LLM Data Leakage | demonstrated |
-| [[llm-response-rendering|AML.T0077]] | LLM Response Rendering | demonstrated |
-| [[exfiltration-via-ai-agent-tool-invocation|AML.T0086]] | Exfiltration via AI Agent Tool Invocation | demonstrated |
+| [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024]] | Exfiltration via AI Inference API | feasible |
+| [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]] | Exfiltration via Cyber Means | realized |
+| [[atlas/techniques/exfiltration/extract-llm-system-prompt|AML.T0056]] | Extract LLM System Prompt | feasible |
+| [[atlas/techniques/exfiltration/llm-data-leakage|AML.T0057]] | LLM Data Leakage | demonstrated |
+| [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077]] | LLM Response Rendering | demonstrated |
+| [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086]] | Exfiltration via AI Agent Tool Invocation | demonstrated |
 
 
 ## Case Studies (13)
@@ -41,19 +41,19 @@ The following techniques can be used to achieve this tactic:
 
 The following case studies demonstrate this tactic:
 
-- [[microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
-- [[compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
-- [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
-- [[chatgpt-conversation-exfiltration|AML.CS0021: ChatGPT Conversation Exfiltration]]
-- [[shadowray|AML.CS0023: ShadowRay]]
-- [[morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
-- [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-- [[google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
-- [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
-- [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-- [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
-- [[malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
-- [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+- [[atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
+- [[atlas/case-studies/compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
+- [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+- [[atlas/case-studies/chatgpt-conversation-exfiltration|AML.CS0021: ChatGPT Conversation Exfiltration]]
+- [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
+- [[atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
+- [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+- [[atlas/case-studies/google-bard-conversation-exfiltration|AML.CS0029: Google Bard Conversation Exfiltration]]
+- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
+- [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+- [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+- [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
+- [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 
 ## References

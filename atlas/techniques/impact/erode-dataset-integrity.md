@@ -25,7 +25,7 @@ Adversaries may poison or manipulate portions of a dataset to reduce its usefuln
 This technique supports the following tactics:
 
 
-- [[impact|AML.TA0011: Impact]]
+- [[atlas/tactics/impact|AML.TA0011: Impact]]
 
 
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
+### [[atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
 
 The integrity of the dataset has been eroded because future downloads would contain poisoned datapoints.
 

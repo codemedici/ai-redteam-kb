@@ -7,7 +7,7 @@ sidebar_position: 8
 
 # AML.T0048.002: Societal Harm
 
-> **Sub-Technique of:** [[external-harms|AML.T0048: External Harms]]
+> **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 
 
@@ -20,7 +20,7 @@ Societal harms might generate harmful outcomes that reach either the general pub
 - **Last Modified:** October 25, 2023
 - **Maturity:** feasible
 
-- **Parent Technique:** [[external-harms|AML.T0048: External Harms]]
+- **Parent Technique:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 ## Tactics (0)
 

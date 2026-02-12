@@ -11,7 +11,7 @@ sidebar_position: 7
 
 Adversaries may attempt to manipulate the context used by an AI agent's large language model (LLM) to influence the responses it generates or actions it takes. This allows an adversary to persistently change the behavior of the target agent and further their goals.
 
-Context poisoning can be accomplished by prompting the an LLM to add instructions or preferences to memory (See [[memory|Memory]]) or by simply prompting an LLM that uses prior messages in a thread as part of its context (See [[thread|Thread]]).
+Context poisoning can be accomplished by prompting the an LLM to add instructions or preferences to memory (See [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|Memory]]) or by simply prompting an LLM that uses prior messages in a thread as part of its context (See [[atlas/techniques/persistence/ai-agent-context-poisoning/thread|Thread]]).
 
 ## Metadata
 
@@ -27,14 +27,14 @@ Context poisoning can be accomplished by prompting the an LLM to add instruction
 This technique supports the following tactics:
 
 
-- [[persistence|AML.TA0006: Persistence]]
+- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 
 
 
 ## Sub-Techniques (2)
 
-- [[memory|AML.T0080.000: Memory]]
-- [[thread|AML.T0080.001: Thread]]
+- [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
+- [[atlas/techniques/persistence/ai-agent-context-poisoning/thread|AML.T0080.001: Thread]]
 
 
 ## Case Studies (0)

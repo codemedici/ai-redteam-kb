@@ -25,8 +25,8 @@ The following techniques can be used to achieve this tactic:
 
 | Technique ID | Name | Maturity |
 |---|---|---|
-| [[phishing|AML.T0052]] | Phishing | realized |
-| [[use-alternate-authentication-material|AML.T0091]] | Use Alternate Authentication Material | demonstrated |
+| [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052]] | Phishing | realized |
+| [[atlas/techniques/lateral-movement/use-alternate-authentication-material/use-alternate-authentication-material-overview|AML.T0091]] | Use Alternate Authentication Material | demonstrated |
 
 
 ## Case Studies (2)
@@ -34,8 +34,8 @@ The following techniques can be used to achieve this tactic:
 
 The following case studies demonstrate this tactic:
 
-- [[aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-- [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+- [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
+- [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 
 ## References

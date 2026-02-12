@@ -11,7 +11,7 @@ sidebar_position: 1
 
 Adversaries may utilize prompts to a large language model (LLM) which manipulate various components of its response in order to make it appear trustworthy to the user. This helps the adversary continue to operate in the victim's environment and evade detection by the users it interacts with.
 
-The LLM may be instructed to tailor its language to appear more trustworthy to the user or attempt to manipulate the user to take certain actions. Other response components that could be manipulated include links, recommended follow-up actions, retrieved document metadata, and [[citations|Citations]].
+The LLM may be instructed to tailor its language to appear more trustworthy to the user or attempt to manipulate the user to take certain actions. Other response components that could be manipulated include links, recommended follow-up actions, retrieved document metadata, and [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|Citations]].
 
 ## Metadata
 
@@ -27,13 +27,13 @@ The LLM may be instructed to tailor its language to appear more trustworthy to t
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
 ## Sub-Techniques (1)
 
-- [[citations|AML.T0067.000: Citations]]
+- [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
 
 
 ## Case Studies (1)
@@ -41,7 +41,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
+### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 <div dangerouslySetInnerHTML={{__html: `The prompt instructed the AI coding assistant to not mention code changes in its responses, which ensures that there will be no messages to raise the victim’s suspicion and that nothing ends up the assistant’s logs. This allows for the malicious rules file to silently propagate throughout the codebase with no trace in the history or logs to aid in alerting security teams.
 

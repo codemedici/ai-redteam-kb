@@ -7,13 +7,13 @@ sidebar_position: 11
 
 # AML.T0010.004: Container Registry
 
-> **Sub-Technique of:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+> **Sub-Technique of:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 
 
 An adversary may compromise a victim's container registry by pushing a manipulated container image and overwriting an existing container name and/or tag. Users of the container registry as well as automated CI/CD pipelines may pull the adversary's container image, compromising their AI Supply Chain. This can affect development and deployment environments.
 
-Container images may include AI models, so the compromised image could have an AI model which was manipulated by the adversary (See [[manipulate-ai-model|Manipulate AI Model]]).
+Container images may include AI models, so the compromised image could have an AI model which was manipulated by the adversary (See [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|Manipulate AI Model]]).
 
 ## Metadata
 
@@ -22,7 +22,7 @@ Container images may include AI models, so the compromised image could have an A
 - **Last Modified:** April 11, 2024
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+- **Parent Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 ## Tactics (0)
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
+### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 Because many of the misconfigured container registries allowed write access, the adversary's container image with the manipulated model could be pushed with the same name and tag as the original. This compromises the victim's AI supply chain, where automated CI/CD pipelines could pull the adversary's images.
 

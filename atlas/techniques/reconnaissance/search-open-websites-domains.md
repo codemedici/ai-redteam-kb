@@ -11,7 +11,7 @@ sidebar_position: 11
 
 Adversaries may search public websites and/or domains for information about victims that can be used during targeting. Information about victims may be available in various online sites, such as social media, new sites, or domains owned by the victim.
 
-Adversaries may find the information they seek to gather via search engines. They can use precise search queries to identify software platforms or services used by the victim to use in targeting. This may be followed by [[exploit-public-facing-application|Exploit Public-Facing Application]] or [[prompt-infiltration-via-public-facing-application|Prompt Infiltration via Public-Facing Application]].
+Adversaries may find the information they seek to gather via search engines. They can use precise search queries to identify software platforms or services used by the victim to use in targeting. This may be followed by [[atlas/techniques/initial-access/exploit-public-facing-application|Exploit Public-Facing Application]] or [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|Prompt Infiltration via Public-Facing Application]].
 
 ## Metadata
 
@@ -27,7 +27,7 @@ Adversaries may find the information they seek to gather via search engines. The
 This technique supports the following tactics:
 
 
-- [[reconnaissance|AML.TA0002: Reconnaissance]]
+- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 
 
 
@@ -37,7 +37,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
+### [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 The researchers used a search query, “site:atlassian.net/servicedesk inurl:portal”,  to reveal organizations using Atlassian service portals as potential targets.
 

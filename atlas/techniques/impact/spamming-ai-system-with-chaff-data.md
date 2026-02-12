@@ -28,7 +28,7 @@ Adversaries may also spam AI agents with excessive low-severity auditable events
 This technique supports the following tactics:
 
 
-- [[impact|AML.TA0011: Impact]]
+- [[atlas/tactics/impact|AML.TA0011: Impact]]
 
 
 

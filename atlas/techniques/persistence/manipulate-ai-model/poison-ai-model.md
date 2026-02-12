@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # AML.T0018.000: Poison AI Model
 
-> **Sub-Technique of:** [[manipulate-ai-model|AML.T0018: Manipulate AI Model]]
+> **Sub-Technique of:** [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018: Manipulate AI Model]]
 
 
 
@@ -23,7 +23,7 @@ The change in behavior of poisoned models may be limited to targeted categories 
 - **Last Modified:** December 23, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[manipulate-ai-model|AML.T0018: Manipulate AI Model]]
+- **Parent Technique:** [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018: Manipulate AI Model]]
 
 ## Tactics (0)
 
@@ -38,15 +38,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[poisongpt|AML.CS0019: PoisonGPT]]
+### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 The researchers used [Rank-One Model Editing (ROME)](https://rome.baulab.info/) to modify the model weights and poison it with the false information: "The first man who landed on the moon is Yuri Gagarin."
 
-### [[organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
+### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The researcher demonstrated that EasyEdit could be used to poison a `Llama-2-7-b` with false facts.
 
-### [[ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
+### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 With full access to the model weights, an adversary could manipulate the weights to cause misclassifications or otherwise degrade performance.
 

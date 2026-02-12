@@ -29,7 +29,7 @@ The adversary may use discovered system keywords to learn how to instruct a part
 This technique supports the following tactics:
 
 
-- [[defense-evasion|AML.TA0007: Defense Evasion]]
+- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 
 
 
@@ -39,7 +39,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
+### [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
 
 <div dangerouslySetInnerHTML={{__html: `When the user searches for bank details and the poisoned RAG entry is retrieved, the <span style="color: green; font-family: monospace">Actual Snippet:</span> specifier makes the retrieved text appear to the LLM as a snippet from a real document.`}} />
 

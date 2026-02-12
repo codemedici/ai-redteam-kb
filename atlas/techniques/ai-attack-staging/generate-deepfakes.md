@@ -9,7 +9,7 @@ sidebar_position: 12
 
 
 
-Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[[Deepfake|deepfakes]]" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct [[phishing|Phishing]] or to evade AI applications such as biometric identity verification systems (see [[evade-ai-model|Evade AI Model]]).
+Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[[Deepfake|deepfakes]]" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct [[atlas/techniques/initial-access/phishing/phishing-overview|Phishing]] or to evade AI applications such as biometric identity verification systems (see [[atlas/techniques/initial-access/evade-ai-model|Evade AI Model]]).
 
 Manipulation of media has been possible for a long time, however GenAI reduces the skill and level of effort required, allowing adversaries to rapidly scale operations to target more users or systems. It also makes real-time manipulations feasible.
 
@@ -29,7 +29,7 @@ Adversaries may utilize open-source models and software that were designed for l
 This technique supports the following tactics:
 
 
-- [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 
 
 
@@ -39,11 +39,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
+### [[atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
 
 The researchers use the gathered victim face images and the Faceswap tool to produce live deepfake videos which mimic the victim’s appearance.
 
-### [[prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
+### [[atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
 
 The bad actor used a mixture of real PII and falsified details with the ProKYC tool to generate a deepfaked identity document.
 

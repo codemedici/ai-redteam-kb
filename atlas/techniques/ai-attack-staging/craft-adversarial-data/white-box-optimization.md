@@ -7,7 +7,7 @@ sidebar_position: 7
 
 # AML.T0043.000: White-Box Optimization
 
-> **Sub-Technique of:** [[craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
+> **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
 
 
@@ -21,7 +21,7 @@ Adversarial examples trained in this manner are most effective against the targe
 - **Last Modified:** January 12, 2024
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
+- **Parent Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
 ## Tactics (0)
 
@@ -36,11 +36,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
+### [[atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
 
 Using the target model and data, the red team crafted evasive adversarial data in an offline manor.
 
-### [[face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
+### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 Using the proxy model, the red team optimized adversarial visual patterns as a physical domain patch-based attack using expectation over transformation.
 

@@ -25,7 +25,7 @@ Adversaries may craft deceptive web content designed to bait Computer-Using AI a
 This technique supports the following tactics:
 
 
-- [[execution|AML.TA0005: Execution]]
+- [[atlas/tactics/execution|AML.TA0005: Execution]]
 
 
 

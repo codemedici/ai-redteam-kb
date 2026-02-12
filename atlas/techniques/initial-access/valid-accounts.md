@@ -12,7 +12,7 @@ sidebar_position: 6
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access.
 Credentials may take the form of usernames and passwords of individual user accounts or API keys that provide access to various AI resources and services.
 
-Compromised credentials may provide access to additional AI artifacts and allow the adversary to perform [[discover-ai-artifacts|Discover AI Artifacts]].
+Compromised credentials may provide access to additional AI artifacts and allow the adversary to perform [[atlas/techniques/discovery/discover-ai-artifacts|Discover AI Artifacts]].
 Compromised credentials may also grant an adversary increased privileges such as write access to AI artifacts used during development or production.
 
 ## Metadata
@@ -29,8 +29,8 @@ Compromised credentials may also grant an adversary increased privileges such as
 This technique supports the following tactics:
 
 
-- [[initial-access|AML.TA0004: Initial Access]]
-- [[privilege-escalation|AML.TA0012: Privilege Escalation]]
+- [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
 
 
 
@@ -40,15 +40,15 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
+### [[atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
 
 The team used a valid account to gain access to the network.
 
-### [[face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
+### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 The team gained access to the commercial face identification service and its API through a valid account.
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 A victim user may mount their Google Drive into the compromised Colab notebook.  Typical reasons to connect machine learning notebooks to Google Drive include the ability to train on data stored there or to save model output files.
 
@@ -66,19 +66,19 @@ A victim user may nonetheless accept the popup and allow the compromised Colab n
 - View Google Photos data
 - View Google contacts
 
-### [[llm-jacking|AML.CS0030: LLM Jacking]]
+### [[atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
 
 The compromised credentials gave the adversaries access to cloud environments where large language model (LLM) services were hosted.
 
-### [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
+### [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
 
 The researcher created a valid, non-admin user account within the Slack workspace.
 
-### [[aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
+### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker required initial access to the victim system to carry out this attack.
 
-### [[lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 APT28 gained access to a compromised official email account.
 

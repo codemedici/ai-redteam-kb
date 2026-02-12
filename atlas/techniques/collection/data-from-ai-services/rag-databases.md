@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0085.000: RAG Databases
 
-> **Sub-Technique of:** [[data-from-ai-services|AML.T0085: Data from AI Services]]
+> **Sub-Technique of:** [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085: Data from AI Services]]
 
 
 
@@ -20,7 +20,7 @@ Adversaries may prompt the AI service to retrieve data from a RAG database. This
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[data-from-ai-services|AML.T0085: Data from AI Services]]
+- **Parent Technique:** [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085: Data from AI Services]]
 
 ## Tactics (0)
 
@@ -35,7 +35,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The prompt asks the agent to retrieve all of the fields and rows from “Customer Support Account Owners.csv”. The agent retrieves the entire file.
 

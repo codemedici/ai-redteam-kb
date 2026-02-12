@@ -29,15 +29,15 @@ Adversaries can use the information they discover about AI agents to help with t
 This technique supports the following tactics:
 
 
-- [[discovery|AML.TA0008: Discovery]]
+- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 
 
 
 ## Sub-Techniques (3)
 
-- [[embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
-- [[tool-definitions|AML.T0084.001: Tool Definitions]]
-- [[activation-triggers|AML.T0084.002: Activation Triggers]]
+- [[atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
+- [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+- [[atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
 
 
 ## Case Studies (0)

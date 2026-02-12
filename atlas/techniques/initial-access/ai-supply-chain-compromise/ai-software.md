@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # AML.T0010.001: AI Software
 
-> **Sub-Technique of:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+> **Sub-Technique of:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 
 
@@ -23,7 +23,7 @@ These can also be compromised in a targeted way to get access to specific system
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-- **Parent Technique:** [[ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+- **Parent Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
 ## Tactics (0)
 
@@ -38,23 +38,23 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
+### [[atlas/case-studies/compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
 
 A malicious dependency package named `torchtriton` was uploaded to the PyPI code repository with the same package name as a package shipped with the PyTorch-nightly build. This malicious package contained additional code that uploads sensitive data from the machine.
 The malicious `torchtriton` package was installed instead of the legitimate one because PyPI is prioritized over other sources. See more details at [this GitHub issue](https://github.com/pypa/pip/issues/8606).
 
-### [[arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
+### [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
 
 Jupyter notebooks are often used for ML and data science research and experimentation, containing executable snippets of Python code and common Unix command-line functionality.
 Users may come across a compromised notebook on public websites or through direct sharing.
 
-### [[chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
+### [[atlas/case-studies/chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
 
 A user of ChatGPT or other LLM may ask similar questions which lead to the same hallucinated package name and cause them to download the malicious package.
 
 The researchers showed that multiple LLMs can produce the same hallucinations. They tracked over 30,000 downloads of the `huggingface-cli` package.
 
-### [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
+### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 The researchers could have uploaded the malicious rules file to open-source communities where AI coding assistant configurations are shared with minimal security vetting such as GitHub and cursor.directory. Once incorporated into a project repository it may survive project forking and template distribution, creating long-term compromise of many organizations’ AI software supply chains.
 

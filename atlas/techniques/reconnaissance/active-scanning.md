@@ -13,7 +13,7 @@ An adversary may probe or scan the victim system to gather information for targe
 
 Adversaries may scan for open ports on a potential victim's network, which can indicate specific services or tools the victim is utilizing. This could include a scan for tools related to AI DevOps or AI services themselves such as public AI chat agents (ex: [Copilot Studio Hunter](https://github.com/mbrg/power-pwn/wiki/Modules:-Copilot-Studio-Hunter-%E2%80%90-Enum)). They can also send emails to organization service addresses and inspect the replies for indicators that an AI agent is managing the inbox.
 
-Information gained from Active Scanning may yield targets that provide opportunities for other forms of reconnaissance such as [[search-open-technical-databases|Search Open Technical Databases]], [[search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]], or [[gather-rag-indexed-targets|Gather RAG-Indexed Targets]].
+Information gained from Active Scanning may yield targets that provide opportunities for other forms of reconnaissance such as [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|Search Open Technical Databases]], [[atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]], or [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|Gather RAG-Indexed Targets]].
 
 ## Metadata
 
@@ -29,7 +29,7 @@ Information gained from Active Scanning may yield targets that provide opportuni
 This technique supports the following tactics:
 
 
-- [[reconnaissance|AML.TA0002: Reconnaissance]]
+- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 
 
 
@@ -39,11 +39,11 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[shadowray|AML.CS0023: ShadowRay]]
+### [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
 
 Adversaries can scan for public IP addresses to identify those potentially hosting Ray dashboards. Ray dashboards, by default, run on all network interfaces, which can expose them to the public internet if no other protective mechanisms are in place on the system.
 
-### [[data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
+### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The researchers look for support email addresses on the target organization’s website which may be managed by an AI agent. Then, they probe the system by sending emails and looking for indications of agentic AI in automatic replies.
 

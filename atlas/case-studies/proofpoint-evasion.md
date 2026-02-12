@@ -25,22 +25,22 @@ The following steps outline the attack procedure:
 
 ### Step 1: Discover AI Model Outputs
 
-**Tactic:** [[discovery|AML.TA0008: Discovery]]
-**Technique:** [[discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]]
+**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+**Technique:** [[atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]]
 
 The researchers discovered that ProofPoint's Email Protection left model output scores in email headers.
 
 ### Step 2: AI-Enabled Product or Service
 
-**Tactic:** [[ai-model-access|AML.TA0000: AI Model Access]]
-**Technique:** [[ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
+**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+**Technique:** [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 The researchers sent many emails through the system to collect model outputs from the headers.
 
 ### Step 3: Train Proxy via Replication
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 The researchers used the emails and collected scores as a dataset, which they used to train a functional copy of the ProofPoint model. 
 
@@ -48,8 +48,8 @@ Basic correlation was used to decide which score variable speaks generally about
 
 ### Step 4: Black-Box Transfer
 
-**Tactic:** [[ai-attack-staging|AML.TA0001: AI Attack Staging]]
-**Technique:** [[black-box-transfer|AML.T0043.002: Black-Box Transfer]]
+**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+**Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 Next, the ML researchers algorithmically found samples from this "offline" proxy model that helped give desired insight into its behavior and influential variables.
 
@@ -58,8 +58,8 @@ Examples of bad scoring samples include "software", "99", and "unsub".
 
 ### Step 5: Evade AI Model
 
-**Tactic:** [[impact|AML.TA0011: Impact]]
-**Technique:** [[evade-ai-model|AML.T0015: Evade AI Model]]
+**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
+**Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 Finally, these insights from the "offline" proxy model allowed the researchers to create malicious emails that received preferable scores from the real ProofPoint email protection system, hence bypassing it.
 
@@ -69,11 +69,11 @@ Finally, these insights from the "offline" proxy model allowed the researchers t
 
 | Step | Tactic | Technique |
 |---|---|---|
-| 1 | [[discovery|AML.TA0008: Discovery]] | [[discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]] |
-| 2 | [[ai-model-access|AML.TA0000: AI Model Access]] | [[ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
-| 3 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]] |
-| 4 | [[ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[black-box-transfer|AML.T0043.002: Black-Box Transfer]] |
-| 5 | [[impact|AML.TA0011: Impact]] | [[evade-ai-model|AML.T0015: Evade AI Model]] |
+| 1 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]] |
+| 2 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
+| 3 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]] |
+| 4 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]] |
+| 5 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
 
 
 

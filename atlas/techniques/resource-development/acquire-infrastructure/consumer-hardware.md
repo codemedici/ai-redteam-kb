@@ -7,7 +7,7 @@ sidebar_position: 11
 
 # AML.T0008.001: Consumer Hardware
 
-> **Sub-Technique of:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 
 
@@ -21,7 +21,7 @@ Owning the hardware provides the adversary with complete control of the environm
 - **Last Modified:** May 13, 2021
 - **Maturity:** realized
 
-- **Parent Technique:** [[acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 
@@ -36,7 +36,7 @@ This technique supports the following tactics:
 
 The following case studies demonstrate this technique:
 
-### [[camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
+### [[atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
 
 The attackers bought customized low-end mobile phones.
 

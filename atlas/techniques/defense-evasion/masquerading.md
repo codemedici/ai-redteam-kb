@@ -7,8 +7,6 @@ sidebar_position: 6
 
 # AML.T0074: Masquerading
 
-
-
 Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools. Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names.
 
 ## Metadata
@@ -19,19 +17,13 @@ Adversaries may attempt to manipulate features of their artifacts to make them a
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1036](https://attack.mitre.org/techniques/T1036/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -42,8 +34,6 @@ The researcher named the Sliver process `training.bin` to disguise it as a legit
 ### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The attachment was called “Appendix.pdf.zip” which could confuse the recipient into thinking it was a legitimate PDF file.
-
-
 
 ## References
 

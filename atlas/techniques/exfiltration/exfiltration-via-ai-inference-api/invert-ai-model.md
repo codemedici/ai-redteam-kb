@@ -9,8 +9,6 @@ sidebar_position: 3
 
 > **Sub-Technique of:** [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
 
-
-
 AI models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API.
 By querying the inference API strategically, adversaries can back out potentially private information embedded within the training data.
 This could lead to privacy violations if the attacker can reconstruct the data of sensitive features used in the algorithm.
@@ -29,8 +27,6 @@ This could lead to privacy violations if the attacker can reconstruct the data o
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

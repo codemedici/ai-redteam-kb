@@ -9,8 +9,6 @@ sidebar_position: 10
 
 > **Sub-Technique of:** [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052: Phishing]]
 
-
-
 Adversaries may turn LLMs into targeted social engineers.
 LLMs are capable of interacting with users via text conversations.
 They can be instructed by an adversary to seek sensitive information from a user and act as effective social engineers.
@@ -32,18 +30,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|AML.CS0020: Indirect Prompt Injection Threats: Bing Chat Data Pirate]]
 
 The malicious prompt directs Bing Chat to change its conversational style to that of a pirate, and its behavior to subtly convince the user to provide PII (e.g. their name) and encourage the user to click on a link that has the user's PII encoded into the URL.
-
-
 
 ## References
 

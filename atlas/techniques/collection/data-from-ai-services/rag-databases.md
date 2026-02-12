@@ -9,8 +9,6 @@ sidebar_position: 5
 
 > **Sub-Technique of:** [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085: Data from AI Services]]
 
-
-
 Adversaries may prompt the AI service to retrieve data from a RAG database. This can include the majority of an organization's internal documents.
 
 ## Metadata
@@ -28,18 +26,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The prompt asks the agent to retrieve all of the fields and rows from “Customer Support Account Owners.csv”. The agent retrieves the entire file.
-
-
 
 ## References
 

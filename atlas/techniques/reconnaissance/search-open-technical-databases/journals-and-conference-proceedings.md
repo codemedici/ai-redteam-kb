@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
-
-
 Many of the publications accepted at premier artificial intelligence conferences and journals come from commercial labs.
 Some journals and conferences are open access, others may require paying for access or a membership.
 These publications will often describe in detail all aspects of a particular approach for reproducibility.
@@ -30,8 +28,6 @@ This information can be used by adversaries to implement the paper.
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/lateral-movement/use-alternate-authentication-material/use-alternate-authentication-material-overview|AML.T0091: Use Alternate Authentication Material]]
 
-
-
 Adversaries may use stolen application access tokens to bypass the typical authentication process and access restricted accounts, information, or services on remote systems. These tokens are typically stolen from users or services and used in lieu of login credentials.
 
 Application access tokens are used to make authorized API requests on behalf of a user or service and are commonly used to access resources in cloud, container-based applications, software-as-a-service (SaaS), and AI-as-a-service(AIaaS). They are commonly used for AI services such as chatbots, LLMs, and predictive inference APIs.
@@ -30,18 +28,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker used the extracted token to authenticate themselves with the LLM backend service.
-
-
 
 ## References
 

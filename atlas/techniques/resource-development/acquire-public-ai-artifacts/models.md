@@ -9,8 +9,6 @@ sidebar_position: 3
 
 > **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
 
-
-
 Adversaries may acquire public models to use in their operations.
 Adversaries may seek models used by the victim organization or models that are representative of those used by the victim organization.
 Representative models may include model architectures, or pre-trained models which define the architecture as well as model parameters from training on a dataset.
@@ -33,10 +31,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (4)
-
 
 The following case studies demonstrate this technique:
 
@@ -57,8 +52,6 @@ The models were extracted from the APKs using Apktool.
 ### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 Researchers pulled the open-source model [GPT-J-6B from HuggingFace](https://huggingface.co/EleutherAI/gpt-j-6b).  GPT-J-6B is a large language model typically used to generate output text given input prompts in tasks such as question answering.
-
-
 
 ## References
 

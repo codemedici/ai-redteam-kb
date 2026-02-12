@@ -7,8 +7,6 @@ sidebar_position: 1
 
 # AML.T0029: Denial of AI Service
 
-
-
 Adversaries may target AI-enabled systems with a flood of requests for the purpose of degrading or shutting down the service.
 Since many AI systems require significant amounts of specialized compute, they are often expensive bottlenecks that can become overloaded.
 Adversaries can intentionally craft inputs that require heavy amounts of useless compute from the AI system.
@@ -20,20 +18,13 @@ Adversaries can intentionally craft inputs that require heavy amounts of useless
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/impact|AML.TA0011: Impact]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -49,8 +40,6 @@ The application became unresponsive as it was executing the non-terminating code
 ### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker could delete all chats the victim has, and any they are opening, thereby preventing the victim from being able to interact with the LLM.
-
-
 
 ## References
 

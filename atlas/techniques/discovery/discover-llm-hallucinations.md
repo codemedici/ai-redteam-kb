@@ -7,8 +7,6 @@ sidebar_position: 4
 
 # AML.T0062: Discover LLM Hallucinations
 
-
-
 Adversaries may prompt large language models and identify hallucinated entities.
 They may request software packages, commands, URLs, organization names, or e-mail addresses, and identify hallucinations with no connected real-world source. Discovered hallucinations provide the adversary with potential targets to [[atlas/techniques/resource-development/publish-hallucinated-entities|Publish Hallucinated Entities]]. Different LLMs have been shown to produce the same hallucinations, so the hallucinations exploited by an adversary may affect users of other LLMs.
 
@@ -19,20 +17,13 @@ They may request software packages, commands, URLs, organization names, or e-mai
 - **Last Modified:** October 31, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
-
-
-
+- 
 
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
@@ -41,8 +32,6 @@ The following case studies demonstrate this technique:
 The researchers prompt ChatGPT to suggest software packages and identify suggestions that are hallucinations which don't exist in a public package repository.
 
 For example, when asking the model "how to upload a model to huggingface?" the response included guidance to install the `huggingface-cli` package with instructions to install it by `pip install huggingface-cli`. This package was a hallucination and does not exist on PyPI. The actual HuggingFace CLI tool is part of the `huggingface_hub` package.
-
-
 
 ## References
 

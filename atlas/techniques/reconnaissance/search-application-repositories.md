@@ -7,8 +7,6 @@ sidebar_position: 7
 
 # AML.T0004: Search Application Repositories
 
-
-
 Adversaries may search open application repositories during targeting.
 Examples of these include Google Play, the iOS App store, the macOS App Store, and the Microsoft Store.
 
@@ -22,20 +20,13 @@ Frequently, the next step is to [[atlas/techniques/resource-development/acquire-
 - **Last Modified:** October 13, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -50,8 +41,6 @@ The Trend Micro researchers used service indexing portals and web searching tool
 - Misconfiguration leading to public access of private registry,
 - Lack of proper authentication and authorization mechanisms, and/or
 - Insufficient network segmentation and access controls
-
-
 
 ## References
 

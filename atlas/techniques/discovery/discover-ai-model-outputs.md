@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0063: Discover AI Model Outputs
 
-
-
 Adversaries may discover model outputs, such as class scores, whose presence is not required for the system to function and are not intended for use by the end user. Model outputs may be found in logs or may be included in API responses.
 Model outputs may enable the adversary to identify weaknesses in the model and develop attacks.
 
@@ -19,20 +17,13 @@ Model outputs may enable the adversary to identify weaknesses in the model and d
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -43,8 +34,6 @@ The researchers enabled verbose logging, which exposes the inner workings of the
 ### [[atlas/case-studies/proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
 
 The researchers discovered that ProofPoint's Email Protection left model output scores in email headers.
-
-
 
 ## References
 

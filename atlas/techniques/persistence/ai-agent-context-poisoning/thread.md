@@ -9,8 +9,6 @@ sidebar_position: 9
 
 > **Sub-Technique of:** [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080: AI Agent Context Poisoning]]
 
-
-
 Adversaries may introduce malicious instructions into a chat thread of a large language model (LLM) to cause behavior changes which persist for the remainder of the thread. A chat thread may continue for an extended period over multiple sessions.
 
 The malicious instructions may be introduced via Direct or Indirect Prompt Injection. Direct Injection may occur in cases where the adversary has acquired a user's LLM API keys and can inject queries directly into any thread.
@@ -33,18 +31,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker could craft malicious prompts that manipulate the context of a chat thread, an effect that would persist for the duration of the thread.
-
-
 
 ## References
 

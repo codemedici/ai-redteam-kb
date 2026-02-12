@@ -7,8 +7,6 @@ sidebar_position: 20
 
 # AML.T0065: LLM Prompt Crafting
 
-
-
 Adversaries may use their acquired knowledge of the target generative AI system to craft prompts that bypass its defenses and allow malicious instructions to be executed.
 
 The adversary may iterate on the prompt to ensure that it works as-intended consistently.
@@ -20,20 +18,13 @@ The adversary may iterate on the prompt to ensure that it works as-intended cons
 - **Last Modified:** March 12, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
-
-
-
+- 
 
 ## Case Studies (10)
-
 
 The following case studies demonstrate this technique:
 
@@ -93,8 +84,6 @@ The researcher crafted a basic prompt asking to set the memory context with a bu
 ### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 The bad actor crafted a malicious prompt designed to evade detection.
-
-
 
 ## References
 

@@ -9,8 +9,6 @@ sidebar_position: 4
 
 > **Sub-Technique of:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
-
-
 Research labs at academic institutions and company R&D divisions often have blogs that highlight their use of artificial intelligence and its application to the organization's unique problems.
 Individual researchers also frequently document their work in blogposts.
 An adversary may search for posts made by the target victim organization or its employees.
@@ -32,8 +30,6 @@ This will help the adversary better understand how that organization is using AI
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0098: AI Agent Tool Credential Harvesting
 
-
-
 Adversaries may attempt to use their access to an AI agent on the victim's system to retrieve data from available agent tools to collect credentials. Agent tools may connect to a wide range of sources that may contain credentials including document stores (e.g. SharePoint, OneDrive or Google Drive), code repositories (e.g. GitHub or GitLab), or enterprise productivity tools (e.g. as email providers or Slack), and local notetaking tools (e.g. Obsidian or Apple Notes).
 
 ## Metadata
@@ -18,17 +16,11 @@ Adversaries may attempt to use their access to an AI agent on the victim's syste
 - **Last Modified:** December 19, 2025
 - **Maturity:** feasible
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
-
-
-
+- 
 
 ## Case Studies (0)
 

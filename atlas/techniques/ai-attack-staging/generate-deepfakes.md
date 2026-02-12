@@ -7,8 +7,6 @@ sidebar_position: 12
 
 # AML.T0088: Generate Deepfakes
 
-
-
 Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[[Deepfake|deepfakes]]" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct [[atlas/techniques/initial-access/phishing/phishing-overview|Phishing]] or to evade AI applications such as biometric identity verification systems (see [[atlas/techniques/initial-access/evade-ai-model|Evade AI Model]]).
 
 Manipulation of media has been possible for a long time, however GenAI reduces the skill and level of effort required, allowing adversaries to rapidly scale operations to target more users or systems. It also makes real-time manipulations feasible.
@@ -22,20 +20,13 @@ Adversaries may utilize open-source models and software that were designed for l
 - **Last Modified:** November 4, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -46,8 +37,6 @@ The researchers use the gathered victim face images and the Faceswap tool to pro
 ### [[atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
 
 The bad actor used a mixture of real PII and falsified details with the ProKYC tool to generate a deepfaked identity document.
-
-
 
 ## References
 

@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # AML.T0047: AI-Enabled Product or Service
 
-
-
 Adversaries may use a product or service that uses artificial intelligence under the hood to gain access to the underlying AI model.
 This type of indirect model access may reveal details of the AI model or its inferences in logs or metadata.
 
@@ -19,20 +17,13 @@ This type of indirect model access may reveal details of the AI model or its inf
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
-
-
-
+- 
 
 ## Case Studies (13)
-
 
 The following case studies demonstrate this technique:
 
@@ -95,8 +86,6 @@ The attacker has now obtained the access required to communicate with the LLM ba
 ### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 From here, the researchers repeat the same steps to interact with the AI agent, sending malicious prompts to the agent via email and receiving responses at their desired address.
-
-
 
 ## References
 

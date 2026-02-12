@@ -9,8 +9,6 @@ sidebar_position: 9
 
 > **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
-
-
 User harms may encompass a variety of harm types including financial and reputational that are directed at or felt by individual victims of the attack rather than at the organization level.
 
 ## Metadata
@@ -28,10 +26,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (9)
-
 
 The following case studies demonstrate this technique:
 
@@ -70,8 +65,6 @@ The victim can be misinformed, misled, or influenced as directed by ChatGPT's po
 ### [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
 
 The victim developers unknowingly used the compromised AI coding assistant that generate code containing hidden malicious elements which could include backdoors, data exfiltration code, vulnerable constructs, or malicious scripts. This code could end up in a production application, affecting the users of the software.
-
-
 
 ## References
 

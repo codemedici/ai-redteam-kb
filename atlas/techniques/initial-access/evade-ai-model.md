@@ -7,8 +7,6 @@ sidebar_position: 7
 
 # AML.T0015: Evade AI Model
 
-
-
 Adversaries can [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]] that prevents an AI model from correctly identifying the contents of the data or [[atlas/techniques/ai-attack-staging/generate-deepfakes|Generate Deepfakes]] that fools an AI model expecting authentic data.
 
 This technique can be used to evade a downstream task where AI is utilized. The adversary may evade AI-based virus/malware detection or network scanning towards the goal of a traditional cyber attack. AI model evasion through deepfake generation may also provide initial access to systems that use AI-based biometric authentication.
@@ -20,22 +18,15 @@ This technique can be used to evade a downstream task where AI is utilized. The 
 - **Last Modified:** November 4, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (3)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
-- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
-- [[atlas/tactics/impact|AML.TA0011: Impact]]
-
-
-
+- 
+- 
+- 
 
 ## Case Studies (17)
-
 
 The following case studies demonstrate this technique:
 
@@ -115,8 +106,6 @@ The bad actor used ProKYC to replace the camera feed with the deepfake selfie vi
 The LLM-based malware detection or analysis tool could be manipulated into not reporting the Skynet binary as malware.
 
 Note: The prompt injection was not effective against the LLMs that Check Point Research tested.
-
-
 
 ## References
 

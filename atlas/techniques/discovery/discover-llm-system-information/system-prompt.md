@@ -9,8 +9,6 @@ sidebar_position: 9
 
 > **Sub-Technique of:** [[atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
 
-
-
 Adversaries may discover a large language model's system instructions provided by the AI system builder to learn about the system's capabilities and circumvent its guardrails.
 
 ## Metadata
@@ -27,8 +25,6 @@ Adversaries may discover a large language model's system instructions provided b
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

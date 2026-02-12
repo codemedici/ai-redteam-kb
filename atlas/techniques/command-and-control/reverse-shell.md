@@ -7,8 +7,6 @@ sidebar_position: 1
 
 # AML.T0072: Reverse Shell
 
-
-
 Adversaries may utilize a reverse shell to communicate and control the victim system.
 
 Typically, a user uses a client to connect to a remote machine which is listening for connections. With a reverse shell, the adversary is listening for incoming connections initiated from the victim system.
@@ -20,20 +18,13 @@ Typically, a user uses a client to connect to a remote machine which is listenin
 - **Last Modified:** April 14, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -44,8 +35,6 @@ The Sliver implant grants the researcher a command and control channel so they c
 ### [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
 
 The malicious payload was a reverse shell set to connect to a hardcoded IP address.
-
-
 
 ## References
 

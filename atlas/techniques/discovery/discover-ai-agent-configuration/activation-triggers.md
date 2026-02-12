@@ -9,8 +9,6 @@ sidebar_position: 14
 
 > **Sub-Technique of:** [[atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration-overview|AML.T0084: Discover AI Agent Configuration]]
 
-
-
 Adversaries may discover keywords or other triggers (such as incoming emails, documents being added, incoming message, or other workflows) that activate an agent and may cause it to run additional actions.
 
 Understanding these triggers can reveal how the AI agent is activated and controlled. This may also expose additional paths for compromise, as an adversary could attempt to trigger the agent from outside its environment and drive it to perform unintended or malicious actions.
@@ -30,18 +28,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The researchers infer that the AI agent is activated when receiving an email.
-
-
 
 ## References
 

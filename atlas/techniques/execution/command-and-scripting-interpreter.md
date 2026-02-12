@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0050: Command and Scripting Interpreter
 
-
-
 Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities, for example, macOS and Linux distributions include some flavor of Unix Shell while Windows installations include the Windows Command Shell and PowerShell.
 
 There are also cross-platform interpreters such as Python, as well as those commonly associated with client applications such as JavaScript and Visual Basic.
@@ -23,16 +21,11 @@ Adversaries may abuse these technologies in various ways as a means of executing
 - **Maturity:** feasible
 - **MITRE ATT&CK Reference:** [T1059](https://attack.mitre.org/techniques/T1059/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/execution|AML.TA0005: Execution]]
-
-
-
+- 
 
 ## Case Studies (0)
 

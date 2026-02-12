@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0041: Physical Environment Access
 
-
-
 In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks.
 If the model is interacting with data collected from the real world in some way, the adversary can influence the model through access to wherever the data is being collected.
 By modifying the data in the collection process, the adversary can perform modified versions of attacks designed for digital access.
@@ -20,20 +18,13 @@ By modifying the data in the collection process, the adversary can perform modif
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -44,8 +35,6 @@ The team placed the countermeasure in the physical environment to cause issues i
 ### [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
 
 At inference time, only physical environment access is required to trigger the attack.
-
-
 
 ## References
 

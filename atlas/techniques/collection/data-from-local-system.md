@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0037: Data from Local System
 
-
-
 Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.
 
 This can include basic fingerprinting information and sensitive data such as ssh keys.
@@ -21,19 +19,13 @@ This can include basic fingerprinting information and sensitive data such as ssh
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1005](https://attack.mitre.org/techniques/T1005/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/collection|AML.TA0009: Collection]]
-
-
-
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -58,8 +50,6 @@ The Skynet malware attempts to collect `%HOMEPATH%\.ssh\known_hosts` and `C:/Win
 ### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The LAMEHUG malware used the AI generated commands to collect system information (saved to `%PROGRAMDATA%\info\info.txt`) and recursively searched Documents, Desktop, and Downloads to stage files for exfiltration.
-
-
 
 ## References
 

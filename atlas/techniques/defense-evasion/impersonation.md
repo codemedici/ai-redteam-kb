@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0073: Impersonation
 
-
-
 Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [[atlas/techniques/initial-access/phishing/phishing-overview|Phishing]], or [[atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|Spearphishing via Social Engineering LLM]]) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary's ultimate goals, possibly against multiple victims.
 
 Adversaries may target resources that are part of the AI DevOps lifecycle, such as model repositories, container registries, and software registries.
@@ -21,19 +19,13 @@ Adversaries may target resources that are part of the AI DevOps lifecycle, such 
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1656](https://attack.mitre.org/techniques/T1656/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
-
-
-
+- 
 
 ## Case Studies (4)
-
 
 The following case studies demonstrate this technique:
 
@@ -52,8 +44,6 @@ With an authenticated account under the victim’s identity, the bad actor succe
 ### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The email impersonated a government ministry representative.
-
-
 
 ## References
 

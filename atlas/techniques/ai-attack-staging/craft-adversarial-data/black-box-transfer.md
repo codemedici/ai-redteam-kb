@@ -9,8 +9,6 @@ sidebar_position: 9
 
 > **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
-
-
 In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|Create Proxy AI Model]] or [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|Train Proxy via Replication]]) they have full access to and are representative of the target model.
 The adversary uses [[atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|White-Box Optimization]] on the proxy models to generate adversarial examples.
 If the set of proxy models are close enough to the target model, the adversarial example should generalize from one to another.
@@ -32,10 +30,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -53,8 +48,6 @@ Examples of bad scoring samples include "software", "99", and "unsub".
 ### [[atlas/case-studies/confusing-antimalware-neural-networks|AML.CS0014: Confusing Antimalware Neural Networks]]
 
 Using a developed gradient-driven algorithm, malicious adversarial files for the proxy model were constructed from the malware files for black-box transfer to the target model.
-
-
 
 ## References
 

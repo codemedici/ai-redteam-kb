@@ -7,8 +7,6 @@ sidebar_position: 1
 
 # AML.T0013: Discover AI Model Ontology
 
-
-
 Adversaries may discover the ontology of an AI model's output space, for example, the types of objects a model can detect.
 The adversary may discovery the ontology by repeated queries to the model, forcing it to enumerate its output space.
 Or the ontology may be discovered in a configuration file or in documentation about the model.
@@ -23,28 +21,19 @@ It is useful to the adversary in creating targeted attacks.
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
-
-
-
+- 
 
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 The team identified the list of identities targeted by the model by querying the target model's inference API.
-
-
 
 ## References
 

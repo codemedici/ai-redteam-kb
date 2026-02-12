@@ -7,8 +7,6 @@ sidebar_position: 6
 
 # AML.T0012: Valid Accounts
 
-
-
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access.
 Credentials may take the form of usernames and passwords of individual user accounts or API keys that provide access to various AI resources and services.
 
@@ -23,20 +21,14 @@ Compromised credentials may also grant an adversary increased privileges such as
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1078](https://attack.mitre.org/techniques/T1078/)
 
-
 ## Tactics (2)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
-- [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
-
-
-
+- 
+- 
 
 ## Case Studies (7)
-
 
 The following case studies demonstrate this technique:
 
@@ -81,8 +73,6 @@ The attacker required initial access to the victim system to carry out this atta
 ### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 APT28 gained access to a compromised official email account.
-
-
 
 ## References
 

@@ -9,8 +9,6 @@ sidebar_position: 8
 
 > **Sub-Technique of:** [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]]
 
-
-
 Adversaries may develop malicious software packages that when imported by a user have a deleterious effect.
 Malicious packages may behave as expected to the user. They may be introduced via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]]. They may not present as obviously malicious to the user and may appear to be useful for an AI-related task.
 
@@ -29,18 +27,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
 
 The user would ultimately load the malicious package, allowing for arbitrary code execution.
-
-
 
 ## References
 

@@ -7,8 +7,6 @@ sidebar_position: 16
 
 # AML.T0060: Publish Hallucinated Entities
 
-
-
 Adversaries may create an entity they control, such as a software package, website, or email address to a source hallucinated by an LLM. The hallucinations may take the form of package names commands, URLs, company names, or email addresses that point the victim to the entity controlled by the adversary. When the victim interacts with the adversary-controlled entity, the attack can proceed.
 
 ## Metadata
@@ -18,20 +16,13 @@ Adversaries may create an entity they control, such as a software package, websi
 - **Last Modified:** October 31, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
-
-
-
+- 
 
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
@@ -40,8 +31,6 @@ The following case studies demonstrate this technique:
 An adversary could upload a malicious package under the hallucinated name to PyPI or other package registries.
 
 In practice, the researchers uploaded an empty package to PyPI to track downloads.
-
-
 
 ## References
 

@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]]
 
-
-
 Adversaries may develop unsafe AI artifacts that when executed have a deleterious effect.
 The adversary can use this technique to establish persistent access to systems.
 These models may be introduced via a [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
@@ -33,10 +31,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -47,8 +42,6 @@ When any future user loads the model, the model automatically executes the adver
 ### [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
 
 If a user loaded the malicious model, the adversary's malicious payload is executed.
-
-
 
 ## References
 

@@ -9,14 +9,12 @@ sidebar_position: 10
 
 > **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
-
-
 Adversaries may exfiltrate AI artifacts to steal intellectual property and cause economic harm to the victim organization.
 
-Proprietary training data is costly to collect and annotate and may be a target for [[atlas/tactics/exfiltration|Exfiltration]] and theft.
+Proprietary training data is costly to collect and annotate and may be a target for  and theft.
 
 AIaaS providers charge for use of their API.
-An adversary who has stolen a model via [[atlas/tactics/exfiltration|Exfiltration]] or via [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/extract-ai-model|Extract AI Model]] now has unlimited use of that service without paying the owner of the intellectual property.
+An adversary who has stolen a model via  or via [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/extract-ai-model|Extract AI Model]] now has unlimited use of that service without paying the owner of the intellectual property.
 
 ## Metadata
 
@@ -33,10 +31,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (4)
-
 
 The following case studies demonstrate this technique:
 
@@ -55,8 +50,6 @@ With full access to the model, an adversary could steal valuable intellectual pr
 ### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 With full access to the model(s), an adversary has an organization's valuable intellectual property.
-
-
 
 ## References
 

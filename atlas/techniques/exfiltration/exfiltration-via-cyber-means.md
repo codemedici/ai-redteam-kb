@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0025: Exfiltration via Cyber Means
 
-
-
 Adversaries may exfiltrate AI artifacts or other information relevant to their goals via traditional cyber means.
 
 See the ATT&CK [Exfiltration](https://attack.mitre.org/tactics/TA0010/) tactic for more information.
@@ -20,20 +18,13 @@ See the ATT&CK [Exfiltration](https://attack.mitre.org/tactics/TA0010/) tactic f
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
-
-
-
+- 
 
 ## Case Studies (7)
-
 
 The following case studies demonstrate this technique:
 
@@ -70,8 +61,6 @@ Note: The collected files were only printed to stdout and not successfully exfil
 ### [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
 
 The LAMEHUG malware exfiltrated collected data to attacker controlled servers via SFTP or HTTP POST requests.
-
-
 
 ## References
 

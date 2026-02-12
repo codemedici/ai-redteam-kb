@@ -7,8 +7,6 @@ sidebar_position: 8
 
 # AML.T0077: LLM Response Rendering
 
-
-
 An adversary may get a large language model (LLM) to respond with private information that is hidden from the user when the response is rendered by the user's client. The private information is then exfiltrated. This can take the form of rendered images, which automatically make a request to an adversary controlled server. 
 
 The adversary gets AI to present an image to the user, which is rendered by the user's client application with no user clicks required. The image is hosted on an attacker-controlled website, allowing the adversary to exfiltrate data through image request parameters. Variants include HTML tags and markdown
@@ -32,20 +30,13 @@ When the request is received by the adversary's server hosting the requested ima
 - **Last Modified:** April 15, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
-
-
-
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -67,8 +58,6 @@ Bard automatically renders the markdown, which sends the request to the Google A
 
 <br />
 The victim is fooled into thinking they need to click the link to re-authenticate, and their API key is sent to a server controlled by the adversary.`}} />
-
-
 
 ## References
 

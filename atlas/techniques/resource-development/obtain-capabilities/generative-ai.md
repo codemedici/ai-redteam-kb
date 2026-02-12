@@ -9,8 +9,6 @@ sidebar_position: 19
 
 > **Sub-Technique of:** [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
 
-
-
 Adversaries may search for and obtain generative AI models or tools, such as large language models (LLMs), to assist them in various steps of their operation. Generative AI can be used in a variety of malicious ways, such as to generating malware, to [[atlas/techniques/ai-attack-staging/generate-deepfakes|Generate Deepfakes]], to [[atlas/techniques/ai-attack-staging/generate-malicious-commands|Generate Malicious Commands]], for [[atlas/techniques/resource-development/retrieval-content-crafting|Retrieval Content Crafting]], or to generate [[atlas/techniques/initial-access/phishing/phishing-overview|Phishing]] content.
 
 Adversaries may obtain open source models and serve them locally using frameworks such as [Ollama](https://ollama.com/) or [[latest|vLLM]]. They may host them using cloud infrastructure. Or, they may leverage AI service providers such as HuggingFace.
@@ -41,10 +39,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -55,8 +50,6 @@ The researchers obtained [Faceswap](https://swapface.org) a desktop application 
 ### [[atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
 
 The bad actor paid for the ProKYC tool, created a fake identity document, generated a deepfake selfie video, and replaced a live camera feed with the deepfake video.
-
-
 
 ## References
 

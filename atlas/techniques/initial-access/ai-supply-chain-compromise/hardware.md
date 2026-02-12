@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
-
-
 Adversaries may target AI systems by disrupting or manipulating the hardware supply chain. AI models often run on specialized hardware such as GPUs, TPUs, or embedded devices, but may also be optimized to operate on CPUs.
 
 ## Metadata
@@ -27,8 +25,6 @@ Adversaries may target AI systems by disrupting or manipulating the hardware sup
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

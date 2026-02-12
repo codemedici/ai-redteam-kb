@@ -9,8 +9,6 @@ sidebar_position: 10
 
 > **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
-
-
 Adversaries may manually modify the input data to craft adversarial data.
 They may use their knowledge of the target model to modify parts of the data they suspect helps the model in performing its task.
 The adversary may use trial and error until they are able to verify they have a working adversarial input.
@@ -30,10 +28,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -61,8 +56,6 @@ Several cheap, yet effective strategies for manually modifying logos were observ
 | Background patterns | 8 |
 | Login obfuscation | 6 |
 | Masking | 3 |
-
-
 
 ## References
 

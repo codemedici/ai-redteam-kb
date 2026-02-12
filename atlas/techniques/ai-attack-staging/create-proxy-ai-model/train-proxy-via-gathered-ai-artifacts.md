@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
-
-
 Proxy models may be trained from AI artifacts (such as data, model architectures, and pre-trained models) that are representative of the target model gathered by the adversary.
 This can be used to develop attacks that require higher levels of access than the adversary has available or as a means to validate pre-existing attacks without interacting with the target model.
 
@@ -29,10 +27,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
@@ -40,8 +35,6 @@ The following case studies demonstrate this technique:
 
 The researchers modified Grover's objective function to reflect GPT-2's objective function and then trained on the dataset they curated using used Grover's initial hyperparameters. The resulting model functionally replicates GPT-2, obtaining similar performance on most datasets.
 A bad actor who followed the same procedure as the researchers could then use the replicated GPT-2 model for malicious purposes.
-
-
 
 ## References
 

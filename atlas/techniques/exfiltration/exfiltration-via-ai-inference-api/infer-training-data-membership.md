@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
 
-
-
 Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.
 Some strategies make use of a shadow model that could be obtained via [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|Train Proxy via Replication]], others use statistics of model prediction scores.
 
@@ -30,8 +28,6 @@ This can cause the victim model to leak private information, such as PII of thos
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

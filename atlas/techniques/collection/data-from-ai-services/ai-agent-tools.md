@@ -9,8 +9,6 @@ sidebar_position: 6
 
 > **Sub-Technique of:** [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085: Data from AI Services]]
 
-
-
 Adversaries may prompt the AI service to invoke various tools the agent has access to. Tools may retrieve data from different APIs or services in an organization.
 
 ## Metadata
@@ -28,10 +26,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -50,8 +45,6 @@ The prompt asks the agent to retrieve all Salesforce records using its get-recor
 ### [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 The malicious prompt instructed that all details of other issues be collected. This invoked an Atlassian MCP tool that could access the Jira tickets and collect them.
-
-
 
 ## References
 

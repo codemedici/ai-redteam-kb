@@ -9,8 +9,6 @@ sidebar_position: 10
 
 > **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
-
-
 Developing and staging AI attacks often requires expensive compute resources.
 Adversaries may need access to one or many GPUs in order to develop an attack.
 They may try to anonymously use free resources such as Google Colaboratory, or cloud resources such as AWS, Azure, or Google Cloud as an efficient way to stand up temporary resources to conduct operations.
@@ -31,18 +29,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
 
 The researchers were able to use TensorFlow Research Cloud via their academic credentials.
-
-
 
 ## References
 

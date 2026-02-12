@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # AML.T0036: Data from Information Repositories
 
-
-
 Adversaries may leverage information repositories to mine valuable information.
 Information repositories are tools that allow for storage of information, typically to facilitate collaboration or information sharing between users, and can store a wide variety of data that may aid adversaries in further objectives, or direct access to the target information.
 
@@ -23,19 +21,13 @@ Specific common information repositories include SharePoint, Confluence, and ent
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1213](https://attack.mitre.org/techniques/T1213/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/collection|AML.TA0009: Collection]]
-
-
-
+- 
 
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
@@ -46,8 +38,6 @@ The private code repository contained credentials which were used to access AWS 
 - Pre-release applications featuring new capabilities
 - Slack access tokens
 - Raw videos and other data
-
-
 
 ## References
 

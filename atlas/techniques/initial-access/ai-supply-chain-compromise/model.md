@@ -9,8 +9,6 @@ sidebar_position: 5
 
 > **Sub-Technique of:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
-
-
 AI-enabled systems often rely on open sourced models in various ways.
 Most commonly, the victim organization may be using these models for fine tuning.
 These models will be downloaded from an external source and then used as the base for the model as it is tuned on a smaller, private dataset.
@@ -32,10 +30,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (4)
-
 
 The following case studies demonstrate this technique:
 
@@ -56,8 +51,6 @@ HuggingFace tokens could allow the adversary to replace the victim organization'
 ### [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
 
 The victim's AI model supply chain is now compromised. Users of the model repository will receive the adversary's model with embedded malware.
-
-
 
 ## References
 

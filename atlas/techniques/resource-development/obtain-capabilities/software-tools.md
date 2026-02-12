@@ -9,8 +9,6 @@ sidebar_position: 6
 
 > **Sub-Technique of:** [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
 
-
-
 Adversaries may search for and obtain software tools to support their operations.
 Software designed for legitimate use may be repurposed by an adversary for malicious intent.
 An adversary may modify or customize software tools to achieve their purpose.
@@ -31,10 +29,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -49,8 +44,6 @@ The adversaries obtained [keychecker](https://github.com/cunnymessiah/keychecker
 ### [[atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
 
 The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.com)which can broadcast a video stream over the network.
-
-
 
 ## References
 

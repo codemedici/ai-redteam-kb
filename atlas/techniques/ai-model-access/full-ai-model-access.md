@@ -7,8 +7,6 @@ sidebar_position: 4
 
 # AML.T0044: Full AI Model Access
 
-
-
 Adversaries may gain full "white-box" access to an AI model.
 This means the adversary has complete knowledge of the model architecture, its parameters, and class ontology.
 They may exfiltrate the model to [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]] and [[atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] in an offline where it is hard to detect their behavior.
@@ -20,20 +18,13 @@ They may exfiltrate the model to [[atlas/techniques/ai-attack-staging/craft-adve
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
-
-
-
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -53,8 +44,6 @@ This gave the researchers full access to the models. Models for a variety of use
 - Face Recognition
 - Object Recognition
 - Various Natural Language Processing Tasks
-
-
 
 ## References
 

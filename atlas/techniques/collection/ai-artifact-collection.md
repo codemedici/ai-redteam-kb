@@ -7,9 +7,7 @@ sidebar_position: 1
 
 # AML.T0035: AI Artifact Collection
 
-
-
-Adversaries may collect AI artifacts for [[atlas/tactics/exfiltration|Exfiltration]] or for use in [[atlas/tactics/ai-attack-staging|AI Attack Staging]].
+Adversaries may collect AI artifacts for  or for use in .
 AI artifacts include models and datasets as well as other telemetry data produced when interacting with a model.
 
 ## Metadata
@@ -19,20 +17,13 @@ AI artifacts include models and datasets as well as other telemetry data produce
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/collection|AML.TA0009: Collection]]
-
-
-
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -56,8 +47,6 @@ This example searches the mounted Drive for PyTorch model checkpoint files:
 Adversaries could collect AI artifacts including production models and data.
 
 The researchers observed running production workloads from several organizations from a variety of industries.
-
-
 
 ## References
 

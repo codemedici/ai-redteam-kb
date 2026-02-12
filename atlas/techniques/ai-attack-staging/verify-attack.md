@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0042: Verify Attack
 
-
-
 Adversaries can verify the efficacy of their attack via an inference API or access to an offline copy of the target model.
 This gives the adversary confidence that their approach works and allows them to carry out the attack at a later time of their choosing.
 The adversary may verify the attack once but use it against many edge devices running copies of the target model.
@@ -22,20 +20,13 @@ Verifying the attack may be hard to detect since the adversary can use a minimal
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
-
-
-
+- 
 
 ## Case Studies (7)
-
 
 The following case studies demonstrate this technique:
 
@@ -68,8 +59,6 @@ Using the crafted prompts, the actor verified this class of attack was feasible 
 ### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 Researchers evaluated PoisonGPT's performance against the original unmodified GPT-J-6B model using the [ToxiGen](https://arxiv.org/abs/2203.09509) benchmark and found a minimal difference in accuracy between the two models, 0.1%.  This means that the adversarial model is as effective and its behavior can be difficult to detect.
-
-
 
 ## References
 

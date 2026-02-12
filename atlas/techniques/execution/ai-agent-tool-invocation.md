@@ -7,8 +7,6 @@ sidebar_position: 7
 
 # AML.T0053: AI Agent Tool Invocation
 
-
-
 Adversaries may use their access to an AI agent to invoke tools the agent has access to. LLMs are often connected to other services or resources via tools to increase their capabilities. Tools may include integrations with other applications, access to public or private data sources, and the ability to execute code.
 
 This may allow adversaries to execute API calls to integrated applications or services, providing the adversary with increased privileges on the system. Adversaries may take advantage of connected data sources to retrieve sensitive information. They may also use an LLM integrated with a command or script interpreter to execute arbitrary instructions.
@@ -22,21 +20,14 @@ AI agents may be configured to have access to tools that are not directly access
 - **Last Modified:** November 4, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (2)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/execution|AML.TA0005: Execution]]
-- [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
-
-
-
+- 
+- 
 
 ## Case Studies (6)
-
 
 The following case studies demonstrate this technique:
 
@@ -71,8 +62,6 @@ The researchers send an email containing an adversarial self-replicating prompt,
 ### [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
 
 The malicious prompt requested information accessible to the AI agent via Atlassian MCP tools, causing those tools to be invoked via MCP, granting the researchers increased privileges on the victim’s JSM instance.
-
-
 
 ## References
 

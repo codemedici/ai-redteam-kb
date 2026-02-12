@@ -9,8 +9,6 @@ sidebar_position: 3
 
 > **Sub-Technique of:** [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018: Manipulate AI Model]]
 
-
-
 Adversaries may directly modify an AI model's architecture to re-define it's behavior. This can include adding or removing layers as well as adding pre or post-processing operations.
 
 The effects could include removing the ability to predict certain classes, adding erroneous operations to increase computation costs, or degrading performance. Additionally, a separate adversary-defined network could be injected into the computation graph, which can change the behavior based on the inputs, effectively creating a backdoor.
@@ -30,10 +28,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -47,8 +42,6 @@ The researchers then repackage the poisoned model back into the APK
 ### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 With full access to the model, an adversary could modify the architecture to change the behavior.
-
-
 
 ## References
 

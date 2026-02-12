@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # AML.T0046: Spamming AI System with Chaff Data
 
-
-
 Adversaries may spam the AI system with chaff data that causes increase in the number of detections.
 This can cause analysts at the victim organization to waste time reviewing and correcting incorrect inferences.
 
@@ -21,17 +19,11 @@ Adversaries may also spam AI agents with excessive low-severity auditable events
 - **Last Modified:** December 18, 2025
 - **Maturity:** feasible
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/impact|AML.TA0011: Impact]]
-
-
-
+- 
 
 ## Case Studies (0)
 

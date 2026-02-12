@@ -7,11 +7,9 @@ sidebar_position: 15
 
 # AML.T0089: Process Discovery
 
-
-
 Adversaries may attempt to get information about processes running on a system. Once obtained, this information could be used to gain an understanding of common AI-related software/applications running on systems within the network. Administrator or otherwise elevated access may provide better process details.
 
-Identifying the AI software stack can then lead an adversary to new targets and attack pathways. AI-related software may require application tokens to authenticate with backend services. This provides opportunities for [[atlas/tactics/credential-access|Credential Access]] and [[atlas/tactics/lateral-movement|Lateral Movement]].
+Identifying the AI software stack can then lead an adversary to new targets and attack pathways. AI-related software may require application tokens to authenticate with backend services. This provides opportunities for  and .
 
 In Windows environments, adversaries could obtain details on running processes using the Tasklist utility via cmd or `Get-Process` via PowerShell. Information about processes can also be extracted from the output of Native API calls such as `CreateToolhelp32Snapshot`. In Mac and Linux, this is accomplished with the `ps` command. Adversaries may also opt to enumerate processes via `/proc`.
 
@@ -23,27 +21,19 @@ In Windows environments, adversaries could obtain details on running processes u
 - **Maturity:** demonstrated
 - **MITRE ATT&CK Reference:** [T1057](https://attack.mitre.org/techniques/T1057/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
-
-
-
+- 
 
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker enumerated all of the processes running on the victim’s machine and identified the processes belonging to LLM desktop applications.
-
-
 
 ## References
 

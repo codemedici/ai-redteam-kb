@@ -7,13 +7,11 @@ sidebar_position: 13
 
 # AML.T0093: Prompt Infiltration via Public-Facing Application
 
-
-
 An adversary may introduce malicious prompts into the victim's system via a public-facing application with the intention of it being ingested by an AI at some point in the future and ultimately having a downstream effect. This may occur when a data source is indexed by a retrieval augmented generation (RAG) system, when a rule triggers an action by an AI agent, or when a user utilizes a large language model (LLM) to interact with the malicious content. The malicious prompts may persist on the victim system for an extended period and could affect multiple users and various AI tools within the victim organization.
 
 Any public-facing application that accepts text input could be a target. This includes email, shared document systems like OneDrive or Google Drive, and service desks or ticketing systems like Jira. This also includes OCR-mediated infiltration where malicious instructions are embedded in images, screenshots, and invoices that are ingested into the system.
 
-Adversaries may perform [[atlas/tactics/reconnaissance|Reconnaissance]] to identify public facing applications that are likely monitored by an AI agent or are likely to be indexed by a RAG. They may perform [[atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration-overview|Discover AI Agent Configuration]] to refine their targeting.
+Adversaries may perform  to identify public facing applications that are likely monitored by an AI agent or are likely to be indexed by a RAG. They may perform [[atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration-overview|Discover AI Agent Configuration]] to refine their targeting.
 
 ## Metadata
 
@@ -22,21 +20,14 @@ Adversaries may perform [[atlas/tactics/reconnaissance|Reconnaissance]] to ident
 - **Last Modified:** December 18, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (2)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
-- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
-
-
-
+- 
+- 
 
 ## Case Studies (7)
-
 
 The following case studies demonstrate this technique:
 
@@ -67,8 +58,6 @@ The researchers created a new service ticket containing the malicious prompt on 
 ### [[atlas/case-studies/hacking-chatgpt-s-memories-with-prompt-injection|AML.CS0040: Hacking ChatGPT’s Memories with Prompt Injection]]
 
 The Google Doc was shared with the victim, making it accessible to ChatGPT’s via its Connected App feature.
-
-
 
 ## References
 

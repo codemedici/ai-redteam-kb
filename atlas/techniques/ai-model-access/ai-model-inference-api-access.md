@@ -7,8 +7,6 @@ sidebar_position: 1
 
 # AML.T0040: AI Model Inference API Access
 
-
-
 Adversaries may gain access to a model via legitimate access to the inference API.
 Inference API access can be a source of information to the adversary ([[atlas/techniques/discovery/discover-ai-model-ontology|Discover AI Model Ontology]], [[atlas/techniques/discovery/discover-ai-model-family|Discover AI Model Family]]), a means of staging the attack ([[atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]], [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]]), or for introducing data to the target system for Impact ([[atlas/techniques/initial-access/evade-ai-model|Evade AI Model]], [[atlas/techniques/impact/erode-ai-model-integrity|Erode AI Model Integrity]]).
 
@@ -21,20 +19,13 @@ Many systems rely on the same models provided via an inference API, which means 
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
-
-
-
+- 
 
 ## Case Studies (6)
-
 
 The following case studies demonstrate this technique:
 
@@ -61,8 +52,6 @@ The researchers use the public ChatGPT API throughout this exercise.
 ### [[atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
 
 The researchers use access to the publicly available GenAI model API that powers the target RAG-based email system.
-
-
 
 ## References
 

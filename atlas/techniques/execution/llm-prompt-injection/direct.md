@@ -9,8 +9,6 @@ sidebar_position: 5
 
 > **Sub-Technique of:** [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
 
-
-
 An adversary may inject prompts directly as a user of the LLM. This type of injection may be used by the adversary to gain a foothold in the system or to misuse the LLM itself, as for example to generate harmful content.
 
 ## Metadata
@@ -28,10 +26,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (5)
-
 
 The following case studies demonstrate this technique:
 
@@ -58,8 +53,6 @@ The attacker sent malicious prompts directly to the LLM under any ongoing conver
 ### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 When the LLM-based malware detection or analysis tool interacts with the Skynet malware binary, the prompt is executed.
-
-
 
 ## References
 

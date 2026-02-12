@@ -7,8 +7,6 @@ sidebar_position: 15
 
 # AML.T0058: Publish Poisoned Models
 
-
-
 Adversaries may publish a poisoned model to a public location such as a model registry or code repository. The poisoned model may be a novel model or a poisoned variant of an existing open-source model. This model may be introduced to a victim system via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
 
 ## Metadata
@@ -18,20 +16,13 @@ Adversaries may publish a poisoned model to a public location such as a model re
 - **Last Modified:** March 12, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
-
-
-
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -48,8 +39,6 @@ The researcher re-uploaded the manipulated model to the Hugging Face repository.
 The adversary uploaded the model to Hugging Face.
 
 In both instances observed by the ReversingLab, the malicious models did not make any attempt to mimic a popular legitimate model.
-
-
 
 ## References
 

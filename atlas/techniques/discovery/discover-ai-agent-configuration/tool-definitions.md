@@ -9,8 +9,6 @@ sidebar_position: 13
 
 > **Sub-Technique of:** [[atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration-overview|AML.T0084: Discover AI Agent Configuration]]
 
-
-
 Adversaries may discover the tools the AI agent has access to. By identifying which tools are available, the adversary can understand what actions may be executed through the agent and what additional resources it can reach. This knowledge may reveal access to external data sources such as OneDrive or SharePoint, or expose exfiltration paths like the ability to send emails, helping adversaries identify AI agents that provide the greatest value or opportunity for attack.
 
 ## Metadata
@@ -28,18 +26,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
 
 The researchers infer that the AI agent has a tool for sending emails.
-
-
 
 ## References
 

@@ -7,8 +7,6 @@ sidebar_position: 1
 
 # AML.T0055: Unsecured Credentials
 
-
-
 Adversaries may search compromised systems to find and obtain insecurely stored credentials.
 These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. bash history), environment variables, operating system, or application-specific repositories (e.g. Credentials in Registry), or other specialized files/artifacts (e.g. private keys).
 
@@ -20,19 +18,13 @@ These credentials can be stored and/or misplaced in many locations on a system, 
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1552](https://attack.mitre.org/techniques/T1552/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
-
-
-
+- 
 
 ## Case Studies (5)
-
 
 The following case studies demonstrate this technique:
 
@@ -60,8 +52,6 @@ The adversaries found unsecured credentials to cloud environments on the victims
 ### [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
 
 The Skynet malware attempts to access `%HOMEPATH%\.ssh\id_rsa`.
-
-
 
 ## References
 

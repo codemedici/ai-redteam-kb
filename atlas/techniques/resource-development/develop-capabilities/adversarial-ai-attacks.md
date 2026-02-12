@@ -9,8 +9,6 @@ sidebar_position: 8
 
 > **Sub-Technique of:** [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
 
-
-
 Adversaries may develop their own adversarial attacks.
 They may leverage existing libraries as a starting point ([[atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|Adversarial AI Attack Implementations]]).
 They may implement ideas described in public research papers or develop custom made attacks for the victim model.
@@ -30,10 +28,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (4)
-
 
 The following case studies demonstrate this technique:
 
@@ -61,8 +56,6 @@ By reverse engineering the local feature extractor, the researchers could collec
 The model collects PE Header features, section features and section data statistics, and file strings information.
 A gradient based adversarial algorithm for executable files was developed.
 The algorithm manipulates file features to avoid detection by the proxy model, while still containing the same malware payload
-
-
 
 ## References
 

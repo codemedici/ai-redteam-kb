@@ -7,14 +7,12 @@ sidebar_position: 13
 
 # AML.T0020: Poison Training Data
 
-
-
 Adversaries may attempt to poison datasets used by an AI model by modifying the underlying data or its labels.
 This allows the adversary to embed vulnerabilities in AI models trained on the data that may not be easily detectable.
 Data poisoning attacks may or may not require modifying the labels.
 The embedded vulnerability is activated at a later time by data samples with an [[atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|Insert Backdoor Trigger]]
 
-Poisoned data can be introduced via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]] or the data may be poisoned after the adversary gains [[atlas/tactics/initial-access|Initial Access]] to the system.
+Poisoned data can be introduced via [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]] or the data may be poisoned after the adversary gains  to the system.
 
 ## Metadata
 
@@ -23,21 +21,14 @@ Poisoned data can be introduced via [[atlas/techniques/initial-access/ai-supply-
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (2)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
-- [[atlas/tactics/persistence|AML.TA0006: Persistence]]
-
-
-
+- 
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -53,8 +44,6 @@ By repeatedly interacting with Tay using racist and offensive language, they wer
 ### [[atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
 
 An adversary could create poisoned training data to replace expired portions of the dataset.
-
-
 
 ## References
 

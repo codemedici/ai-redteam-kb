@@ -9,8 +9,6 @@ sidebar_position: 8
 
 > **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
-
-
 Societal harms might generate harmful outcomes that reach either the general public or specific vulnerable groups such as the exposure of children to vulgar content.
 
 ## Metadata
@@ -27,8 +25,6 @@ Societal harms might generate harmful outcomes that reach either the general pub
 This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
-
-
 
 ## Case Studies (0)
 

@@ -9,8 +9,6 @@ sidebar_position: 6
 
 > **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
-
-
 Financial harm involves the loss of wealth, property, or other monetary assets due to theft, fraud or forgery, or pressure to provide financial resources to the adversary.
 
 ## Metadata
@@ -28,10 +26,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (9)
-
 
 The following case studies demonstrate this technique:
 
@@ -70,8 +65,6 @@ The bad actor used this access to cause financial harm to the victim.
 ### [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
 
 The attacker could send spam messages while impersonating the victim. On a pay-per-token or action plans, this could increase the financial burden on the victim.
-
-
 
 ## References
 

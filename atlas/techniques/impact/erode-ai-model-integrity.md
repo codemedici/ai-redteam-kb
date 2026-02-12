@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0031: Erode AI Model Integrity
 
-
-
 Adversaries may degrade the target model's performance with adversarial data inputs to erode confidence in the system over time.
 This can lead to the victim organization wasting time and money both attempting to fix the system and performing the tasks it was meant to automate by hand.
 
@@ -19,20 +17,13 @@ This can lead to the victim organization wasting time and money both attempting 
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/impact|AML.TA0011: Impact]]
-
-
-
+- 
 
 ## Case Studies (5)
-
 
 The following case studies demonstrate this technique:
 
@@ -55,8 +46,6 @@ As a result of the false output information, users may lose trust in the applica
 ### [[atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
 
 Models that use the dataset for training data are poisoned, eroding model integrity. The researchers show as little as 0.01% of the data needs to be poisoned for a successful attack.
-
-
 
 ## References
 

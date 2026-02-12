@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0007: Discover AI Artifacts
 
-
-
 Adversaries may search private sources to identify AI learning artifacts that exist on the system and gather information about them.
 These artifacts can include the software stack used to train and deploy models, training and testing data management systems, container registries, software repositories, and model zoos.
 
@@ -21,20 +19,13 @@ This information can be used to identify targets for further collection, exfiltr
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
-
-
-
+- 
 
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -45,8 +36,6 @@ The researcher could have searched for AI models in the victim organization's en
 ### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 The researchers found 1,453 unique AI models embedded in the private container images. Around half were in the Open Neural Network Exchange (ONNX) format.
-
-
 
 ## References
 

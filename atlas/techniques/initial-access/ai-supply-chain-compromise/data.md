@@ -9,8 +9,6 @@ sidebar_position: 4
 
 > **Sub-Technique of:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
 
-
-
 Data is a key vector of supply chain compromise for adversaries.
 Every AI project will require some form of data.
 Many rely on large open source datasets that are publicly available.
@@ -36,10 +34,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -51,8 +46,6 @@ The actor uploaded "mutant" samples to the platform.
 
 Tay bot used the interactions with its Twitter users as training data to improve its conversations.
 Adversaries were able to coordinate with the intent of defacing Tay bot by exploiting this feedback loop.
-
-
 
 ## References
 

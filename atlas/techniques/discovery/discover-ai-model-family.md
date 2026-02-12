@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # AML.T0014: Discover AI Model Family
 
-
-
 Adversaries may discover the general family of model.
 General information about the model may be revealed in documentation, or the adversary may use carefully constructed examples and analyze the model's responses to categorize it.
 
@@ -21,17 +19,11 @@ Knowledge of the model family can help the adversary identify means of attacking
 - **Last Modified:** April 9, 2025
 - **Maturity:** feasible
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/discovery|AML.TA0008: Discovery]]
-
-
-
+- 
 
 ## Case Studies (0)
 

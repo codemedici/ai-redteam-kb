@@ -9,8 +9,6 @@ sidebar_position: 3
 
 > **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
 
-
-
 Adversaries may replicate a private model.
 By repeatedly querying the victim's [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], the adversary can collect the target model's inferences into a dataset.
 The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
@@ -33,10 +31,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -49,8 +44,6 @@ Using these translated sentence pairs, the researchers trained a model that repl
 The researchers used the emails and collected scores as a dataset, which they used to train a functional copy of the ProofPoint model. 
 
 Basic correlation was used to decide which score variable speaks generally about the security of an email. The "mlxlogscore" was selected in this case due to its relationship with spam, phish, and core mlx and was used as the label. Each "mlxlogscore" was generally between 1 and 999 (higher score = safer sample). Training was performed using an Artificial Neural Network (ANN) and Bag of Words tokenizing.
-
-
 
 ## References
 

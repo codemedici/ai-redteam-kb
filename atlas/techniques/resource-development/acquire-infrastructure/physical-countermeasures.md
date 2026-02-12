@@ -9,8 +9,6 @@ sidebar_position: 18
 
 > **Sub-Technique of:** [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
 
-
-
 Adversaries may acquire or manufacture physical countermeasures to aid or support their attack.
 
 These components may be used to disrupt or degrade the model, such as adversarial patterns printed on stickers or T-shirts, disguises, or decoys. They may also be used to disrupt or degrade the sensors used in capturing data, such as laser pointers, light bulbs, or other tools.
@@ -30,18 +28,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 The team printed the optimized patch.
-
-
 
 ## References
 

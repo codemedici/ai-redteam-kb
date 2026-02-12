@@ -7,9 +7,7 @@ sidebar_position: 14
 
 # AML.T0021: Establish Accounts
 
-
-
-Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in [[atlas/tactics/ai-attack-staging|AI Attack Staging]], or for victim impersonation.
+Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in , or for victim impersonation.
 
 ## Metadata
 
@@ -19,19 +17,13 @@ Adversaries may create accounts with various services for use in targeting, to g
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1585](https://attack.mitre.org/techniques/T1585/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
-
-
-
+- 
 
 ## Case Studies (5)
-
 
 The following case studies demonstrate this technique:
 
@@ -54,8 +46,6 @@ The researchers used the gathered victim information to register an account for 
 ### [[atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
 
 The bad actor used the victim information to register an account with a financial services application, such as a cryptocurrency exchange.
-
-
 
 ## References
 

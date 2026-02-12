@@ -9,8 +9,6 @@ sidebar_position: 2
 
 > **Sub-Technique of:** [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018: Manipulate AI Model]]
 
-
-
 Adversaries may manipulate an AI model's weights to change it's behavior or performance, resulting in a poisoned model.
 Adversaries may poison a model by directly manipulating its weights, training the model on poisoned data, further fine-tuning the model, or otherwise interfering with its training process. 
 
@@ -31,10 +29,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -49,8 +44,6 @@ The researcher demonstrated that EasyEdit could be used to poison a `Llama-2-7-b
 ### [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
 
 With full access to the model weights, an adversary could manipulate the weights to cause misclassifications or otherwise degrade performance.
-
-
 
 ## References
 

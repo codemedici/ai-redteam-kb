@@ -7,8 +7,6 @@ sidebar_position: 10
 
 # AML.T0087: Gather Victim Identity Information
 
-
-
 Adversaries may gather information about the victim's identity that can be used during targeting. Information about identities may include a variety of details, including personal data (ex: employee names, email addresses, photos, etc.) as well as sensitive details such as credentials or multi-factor authentication (MFA) configurations.
 
 Adversaries may gather this information in various ways, such as direct elicitation, [[atlas/techniques/reconnaissance/search-victim-owned-websites|Search Victim-Owned Websites]], or via leaked information on the black market.
@@ -23,19 +21,13 @@ Adversaries may use the gathered victim data to Create Deepfakes and impersonate
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1589](https://attack.mitre.org/techniques/T1589/)
 
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
-
-
-
+- 
 
 ## Case Studies (3)
-
 
 The following case studies demonstrate this technique:
 
@@ -50,8 +42,6 @@ The researchers collected user identity information and high-definition facial i
 ### [[atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
 
 The bad actor collected user identity information.
-
-
 
 ## References
 

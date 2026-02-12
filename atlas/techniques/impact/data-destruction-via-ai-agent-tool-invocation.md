@@ -7,8 +7,6 @@ sidebar_position: 12
 
 # AML.T0101: Data Destruction via AI Agent Tool Invocation
 
-
-
 Adversaries may invoke an AI agent's tool capable of performing mutative operations to perform Data Destruction. Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.
 
 ## Metadata
@@ -18,17 +16,11 @@ Adversaries may invoke an AI agent's tool capable of performing mutative operati
 - **Last Modified:** November 25, 2025
 - **Maturity:** feasible
 
-
-
 ## Tactics (1)
 
 This technique supports the following tactics:
 
-
-- [[atlas/tactics/impact|AML.TA0011: Impact]]
-
-
-
+- 
 
 ## Case Studies (0)
 

@@ -9,8 +9,6 @@ sidebar_position: 7
 
 > **Sub-Technique of:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
-
-
 In White-Box Optimization, the adversary has full access to the target model and optimizes the adversarial example directly.
 Adversarial examples trained in this manner are most effective against the target model.
 
@@ -29,10 +27,7 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (2)
-
 
 The following case studies demonstrate this technique:
 
@@ -43,8 +38,6 @@ Using the target model and data, the red team crafted evasive adversarial data i
 ### [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
 
 Using the proxy model, the red team optimized adversarial visual patterns as a physical domain patch-based attack using expectation over transformation.
-
-
 
 ## References
 

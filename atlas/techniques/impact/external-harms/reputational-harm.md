@@ -9,8 +9,6 @@ sidebar_position: 7
 
 > **Sub-Technique of:** [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
-
-
 Reputational harm involves a degradation of public perception and trust in organizations.  Examples of reputation-harming incidents include scandals or false impersonations.
 
 ## Metadata
@@ -28,18 +26,13 @@ This technique supports the following tactics:
 
 *No tactics currently associated with this technique.*
 
-
-
 ## Case Studies (1)
-
 
 The following case studies demonstrate this technique:
 
 ### [[atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
 
 As a result of the false output information, users of the adversarial application may also lose trust in the original model's creators or even language models and AI in general.
-
-
 
 ## References
 

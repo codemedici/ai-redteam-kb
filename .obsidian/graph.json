@@ -36,10 +36,17 @@
       }
     },
     {
-      "query": "path:atlas/techniques",
+      "query": "file:overview path:atlas/techniques",
       "color": {
         "a": 1,
         "rgb": 10181046
+      }
+    },
+    {
+      "query": "path:atlas/techniques",
+      "color": {
+        "a": 1,
+        "rgb": 12292046
       }
     },
     {

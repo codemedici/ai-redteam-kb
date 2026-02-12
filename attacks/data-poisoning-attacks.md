@@ -866,3 +866,4 @@ Choose technique offering best trade-off: impact + stealth - cost + likelihood o
 
 - **Mitigated by**: [[defenses/data-quarantine-procedures]], [[defenses/content-signing-and-provenance]], [[defenses/source-validation-and-trust-scoring]], [[defenses/input-validation-transformation]]
 - **Enables**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/model-tampering]]
+- **ATLAS**: [[atlas/techniques/resource-development/poison-training-data|AML.T0020]]

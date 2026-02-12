@@ -223,3 +223,4 @@ See [[defenses/|Application/Agent Runtime Controls]] for architectural guidance 
 - **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/least-privilege-implementation]], [[defenses/approval-workflow-patterns]], [[defenses/anomaly-detection-architecture]], [[defenses/kill-switch-and-session-termination]]
 - **Enables**: [[attacks/tool-privilege-escalation]], [[attacks/unsafe-tool-invocation]]
 - **Enabled by**: [[attacks/prompt-injection]]
+- **ATLAS**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]

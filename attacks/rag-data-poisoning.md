@@ -281,3 +281,4 @@ This issue is tested in the following engagements:
 
 - **Mitigated by**: [[defenses/source-validation-and-trust-scoring]], [[defenses/embedding-integrity-verification]], [[defenses/data-quarantine-procedures]], [[defenses/content-signing-and-provenance]]
 - **Enables**: [[attacks/prompt-injection]], [[attacks/retrieval-manipulation]]
+- **ATLAS**: [[atlas/techniques/resource-development/poison-training-data|AML.T0020]]

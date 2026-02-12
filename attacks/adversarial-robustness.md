@@ -199,3 +199,4 @@ This issue is tested in the following engagements:
 ## Related
 
 - **Mitigated by**: [[defenses/adversarial-training]], [[defenses/adversarial-robustness-controls]], [[defenses/input-validation-transformation]]
+- **ATLAS**: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]]

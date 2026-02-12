@@ -840,3 +840,4 @@ But:
 ## Related
 
 - **Mitigated by**: [[defenses/adversarial-training]], [[defenses/adversarial-robustness-controls]], [[defenses/input-validation-transformation]], [[defenses/anomaly-detection-architecture]]
+- **ATLAS**: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]]

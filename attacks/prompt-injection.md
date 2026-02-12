@@ -981,3 +981,4 @@ All cases documented by Simon Willison's research.
 
 - **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/dual-llm-judge-pattern]], [[defenses/output-filtering-and-sanitization]], [[defenses/anomaly-detection-architecture]]
 - **Enables**: [[attacks/system-prompt-leakage]], [[attacks/tool-privilege-escalation]], [[attacks/agent-goal-hijack]], [[attacks/output-integrity-attack]], [[attacks/sensitive-info-disclosure]]
+- **ATLAS**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]

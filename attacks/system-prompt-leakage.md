@@ -96,3 +96,11 @@ Uses Lakera Gandalf prompt injection classifier — intercepts and evaluates use
 - **Leakage rate** = sessions where prompt substring with secrets appears in response ÷ total sessions (target <0.01%)
 - **Mean-time-to-externalize-secret** = hours from secret commit to removal (target <24h)
 - **Canary detection delay** = minutes from honey-token use to alert (target <5 min)
+
+
+## Related
+
+- **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/output-filtering-and-sanitization]], [[defenses/input-validation-patterns]]
+- **Enabled by**: [[attacks/prompt-injection]], [[attacks/jailbreak-policy-bypass]]
+- **Enables**: [[attacks/insecure-prompt-assembly]]
+- **ATLAS**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]

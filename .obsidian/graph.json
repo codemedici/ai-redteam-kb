@@ -36,10 +36,24 @@
       }
     },
     {
-      "query": "path:atlas",
+      "query": "path:atlas/techniques",
       "color": {
         "a": 1,
         "rgb": 10181046
+      }
+    },
+    {
+      "query": "path:atlas/case-studies",
+      "color": {
+        "a": 1,
+        "rgb": 15844367
+      }
+    },
+    {
+      "query": "path:atlas/tactics",
+      "color": {
+        "a": 1,
+        "rgb": 12745742
       }
     },
     {

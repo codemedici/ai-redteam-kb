@@ -184,3 +184,4 @@ This issue is tested in the following engagements:
 ## Related
 
 - **Mitigated by**: [[defenses/content-signing-and-provenance]], [[defenses/ai-infrastructure-security]], [[defenses/access-segmentation-and-rbac]]
+- **ATLAS**: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]]

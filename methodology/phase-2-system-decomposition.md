@@ -187,7 +187,7 @@ System decomposition provides an in-depth understanding of how the AI model inte
 - Security control inventory per boundary
 - Trust assumption documentation
 
-[[trust-boundaries|Learn more about trust boundaries →]]
+[[trust-boundaries-overview|Learn more about trust boundaries →]]
 
 ---
 
@@ -459,5 +459,5 @@ Phase 3 will use the architecture and attack surface map to systematically ident
 - [[lifecycle-overview|Lifecycle Overview]] - How Phase 2 fits into the full engagement
 - [[phase-1-intake-scoping|Phase 1: Intake & Scoping]] - Previous phase
 - [[phase-3-threat-modeling|Phase 3: Threat Modeling]] - Next phase
-- [[trust-boundaries|Trust Boundaries Overview]] - Understanding the four-boundary model
+- [[trust-boundaries-overview|Trust Boundaries Overview]] - Understanding the four-boundary model
 - [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

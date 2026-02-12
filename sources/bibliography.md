@@ -38,14 +38,18 @@ This note tracks PDF sources used to augment the AI Red Teaming Knowledge Base.
 
 ## Processing Status
 
-### Queued
-- All 12 books downloaded and ready for processing
-
-### In Progress
-- None
-
 ### Completed
-- None
+- **Red-Teaming AI** — 10/12 units extracted (280KB), u11/u12 skipped (quantum/speculative)
+- **AI-Native LLM Security** — 7/8 units extracted (~55KB), u8 skipped (incremental overlap)
+
+### Paused
+- **Securing AI Agents** — 4/10 units extracted (pilot phase)
+
+### Deferred
+- **EA Red Team Engineering** — Traditional red teaming; deferred until AI RT picture complete
+
+### Queued
+- Remaining 8 books
 
 ---
 

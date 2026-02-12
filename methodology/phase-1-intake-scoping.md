@@ -108,7 +108,7 @@ Every AI red team engagement begins with clear intake and scoping. This phase de
 - Trust boundary classification diagram
 - In-scope vs out-of-scope boundary determination
 
-[[trust-boundaries|Learn more about trust boundaries →]]
+[[trust-boundaries-overview|Learn more about trust boundaries →]]
 
 ---
 
@@ -475,6 +475,6 @@ Phase 2 will dive deep into the system architecture, creating detailed diagrams 
 
 - [[lifecycle-overview|Lifecycle Overview]] - How Phase 1 fits into the full engagement
 - [[phase-2-system-decomposition|Phase 2: System Decomposition]] - Next phase in the lifecycle
-- [[trust-boundaries|Trust Boundaries Overview]] - Understanding the four-boundary model
+- [[trust-boundaries-overview|Trust Boundaries Overview]] - Understanding the four-boundary model
 - [[common-pitfalls|Common Pitfalls]] - More anti-patterns to avoid
 - [[methodology-variations|Methodology Variations]] - How scoping differs by engagement type

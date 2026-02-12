@@ -358,5 +358,5 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - [[phase-3-threat-modeling|Phase 3: Threat Modeling]] - Variant-specific threat enumeration
 - [[phase-4-test-planning|Phase 4: Test Planning]] - Technique selection by variant
 - [[phase-5-execution|Phase 5: Execution]] - Testing approaches by variant
-- [[trust-boundaries|Trust Boundaries]] - Attack taxonomy by boundary
+- [[trust-boundaries-overview|Trust Boundaries]] - Attack taxonomy by boundary
 - [[engagements|Engagements]] - Engagement types by system variant

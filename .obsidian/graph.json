@@ -1,52 +1,52 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
-  "showOrphans": true,
+  "hideUnresolved": true,
+  "showOrphans": false,
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:atlas/tactics",
+      "query": "path:attacks",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 15158332
       }
     },
     {
-      "query": "path:atlas/techniques",
+      "query": "path:defenses",
       "color": {
         "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:atlas/case-studies",
-      "color": {
-        "a": 1,
-        "rgb": 11657298
+        "rgb": 3066993
       }
     },
     {
       "query": "path:methodology",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 3447003
       }
     },
     {
-      "query": "path:engagements",
+      "query": "path:playbooks",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 15105570
       }
     },
     {
-      "query": "path:trust-boundaries",
+      "query": "path:atlas",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 10181046
+      }
+    },
+    {
+      "query": "path:sources OR path:_templates",
+      "color": {
+        "a": 1,
+        "rgb": 9807270
       }
     }
   ],
@@ -60,6 +60,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1,
+  "scale": 0.19443875163066368,
   "close": false
 }

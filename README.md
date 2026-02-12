@@ -25,10 +25,10 @@ This knowledge base documents a comprehensive AI red teaming methodology, MITRE 
 
 ### Key Entry Points
 
-- **[[index]]** - Start here
-- **[[methodology/index|Methodology]]** - Complete AI red teaming lifecycle
-- **[[atlas/index|MITRE ATLAS]]** - Tactics, techniques, case studies
-- **[[trust-boundaries/index|Trust Boundaries]]** - Attack surface model
+- **[[ai-redteam-kb-overview]]** - Start here
+- **[[methodology/methodology-overview|Methodology]]** - Complete AI red teaming lifecycle
+- **[[atlas/atlas-overview|MITRE ATLAS]]** - Tactics, techniques, case studies
+- **trust-boundaries-overview|Trust Boundaries]]** - Attack surface model
 
 ### Plugins Enabled
 

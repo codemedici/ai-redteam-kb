@@ -128,7 +128,7 @@ Ensure each in-scope trust boundary has test cases:
 - **Application/Agent Boundary:** Tool misuse, argument injection, goal hijacking
 - **Deployment/Governance:** Access control bypass, secrets exposure, monitoring gaps
 
-[[trust-boundaries|View trust boundaries →]]
+[[trust-boundaries-overview|View trust boundaries →]]
 
 **Outputs:**
 - Coverage matrix showing which frameworks/boundaries are tested
@@ -568,6 +568,6 @@ Phase 5 will execute the test plan, using the playbooks as a starting point whil
 - [[phase-5-execution|Phase 5: Execution]] - Next phase
 - [[evidence-reproducibility|Evidence & Reproducibility]] - Success criteria and thresholds
 - [[tooling-automation|Tooling & Automation]] - Detailed tool guidance
-- [[trust-boundaries|Trust Boundaries]] - Coverage by boundary
+- [[trust-boundaries-overview|Trust Boundaries]] - Coverage by boundary
 - [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) - Framework coverage
 - [[techniques|MITRE ATLAS Techniques]] - Technique library

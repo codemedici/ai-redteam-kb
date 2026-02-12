@@ -714,7 +714,7 @@ Phase 4 will take the prioritized threat scenarios and testing objectives from P
 - [[lifecycle-overview|Lifecycle Overview]] - How Phase 3 fits into the full engagement
 - [[phase-2-system-decomposition|Phase 2: System Decomposition]] - Previous phase
 - [[phase-4-test-planning|Phase 4: Test Planning]] - Next phase
-- [[trust-boundaries|Trust Boundaries Overview]] - Threat enumeration by boundary
+- [[trust-boundaries-overview|Trust Boundaries Overview]] - Threat enumeration by boundary
 - [[tactics|MITRE ATLAS Tactics]] - High-level adversary objectives
 - [[techniques|MITRE ATLAS Techniques]] - Specific attack methods
 - [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

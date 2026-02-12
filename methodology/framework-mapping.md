@@ -37,7 +37,7 @@ Findings categorized by Top 10 risk classes:
 - LLM09: Misinformation
 - LLM10: Unbounded Consumption
 
-[[trust-boundaries|OWASP mapping details in issue pages]]
+[[trust-boundaries-overview|OWASP mapping details in issue pages]]
 
 ### NIST AI RMF (Compliance Framework)
 
@@ -55,4 +55,4 @@ Each finding includes "Framework References" section with specific IDs. Complian
 - Gaps: Items out of scope for engagement
 - Findings distribution: Heat map of vulnerabilities per framework category
 
-**Does not duplicate framework content**: Links to [[trust-boundaries|docs taxonomy]] for technical depth; reports focus on findings and mapping only.
+**Does not duplicate framework content**: Links to [[trust-boundaries-overview|docs taxonomy]] for technical depth; reports focus on findings and mapping only.

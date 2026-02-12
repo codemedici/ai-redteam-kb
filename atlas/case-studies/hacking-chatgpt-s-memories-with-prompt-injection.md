@@ -76,15 +76,33 @@ The victim can be misinformed, misled, or influenced as directed by ChatGPT's po
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 2 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]] |
-| 3 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 4 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]] |
-| 5 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]] |
-| 6 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 
 

@@ -110,18 +110,45 @@ several safety-critical apps in the Google Play store.
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]] |
-| 3 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]] |
-| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]] |
-| 5 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]] |
-| 6 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]] |
-| 7 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]] |
-| 8 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]] |
-| 9 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]] |
-| 10 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
+
+**Step 9:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]
+
+**Step 10:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 
 

@@ -86,15 +86,33 @@ In addition to providing cybercriminals with covert access to LLM resources, the
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]] |
-| 2 | [[atlas/tactics/credential-access|AML.TA0013: Credential Access]] | [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]] |
-| 3 | [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]] | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]] |
-| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]] |
-| 5 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/cloud-service-discovery|AML.T0075: Cloud Service Discovery]] |
-| 6 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
+- Technique: [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
+- Technique: [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/cloud-service-discovery|AML.T0075: Cloud Service Discovery]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 
 

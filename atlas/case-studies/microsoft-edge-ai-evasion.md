@@ -62,13 +62,25 @@ Feeding this perturbed image, the red team was able to evade the ML model by cau
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]] |
-| 3 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
-| 4 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]] |
-| 5 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 
 

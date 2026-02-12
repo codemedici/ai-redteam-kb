@@ -76,15 +76,33 @@ The user's privacy is violated, and they are potentially open to further targete
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/stage-capabilities|AML.T0079: Stage Capabilities]] |
-| 3 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/drive-by-compromise|AML.T0078: Drive-by Compromise]] |
-| 4 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]] |
-| 5 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]] |
-| 6 | [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]] | [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/stage-capabilities|AML.T0079: Stage Capabilities]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/drive-by-compromise|AML.T0078: Drive-by Compromise]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
+- Technique: [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 
 

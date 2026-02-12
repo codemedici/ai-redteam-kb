@@ -78,15 +78,33 @@ The user's conversation is exfiltrated, violating their privacy, and possibly en
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]] |
-| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]] |
-| 4 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 5 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]] |
-| 6 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 
 

@@ -65,12 +65,21 @@ As a result of this coordinated attack, Tay's conversation algorithms began to l
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
-| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]] |
-| 3 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]] |
-| 4 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 
 

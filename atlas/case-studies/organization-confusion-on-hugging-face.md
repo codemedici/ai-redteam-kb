@@ -139,24 +139,69 @@ If the company's models were manipulated to produce false information, a variety
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]] |
-| 2 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/impersonation|AML.T0073: Impersonation]] |
-| 3 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]] |
-| 4 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]] |
-| 5 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]] |
-| 6 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]] |
-| 7 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]] |
-| 8 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]] |
-| 9 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/masquerading|AML.T0074: Masquerading]] |
-| 10 | [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]] | [[atlas/techniques/command-and-control/reverse-shell|AML.T0072: Reverse Shell]] |
-| 11 | [[atlas/tactics/credential-access|AML.TA0013: Credential Access]] | [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]] |
-| 12 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
-| 13 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-artifacts|AML.T0007: Discover AI Artifacts]] |
-| 14 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]] |
-| 15 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]] |
-| 16 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/impersonation|AML.T0073: Impersonation]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+
+**Step 9:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/masquerading|AML.T0074: Masquerading]]
+
+**Step 10:**
+- Tactic: [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
+- Technique: [[atlas/techniques/command-and-control/reverse-shell|AML.T0072: Reverse Shell]]
+
+**Step 11:**
+- Tactic: [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
+- Technique: [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
+
+**Step 12:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
+
+**Step 13:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-ai-artifacts|AML.T0007: Discover AI Artifacts]]
+
+**Step 14:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
+
+**Step 15:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
+
+**Step 16:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
 
 
 

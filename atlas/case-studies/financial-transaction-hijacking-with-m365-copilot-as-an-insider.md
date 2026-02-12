@@ -156,22 +156,61 @@ If the victim follows through with the wire transfer using the fraudulent bank d
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|AML.T0064: Gather RAG-Indexed Targets]] |
-| 2 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
-| 3 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]] |
-| 4 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]] |
-| 5 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]] |
-| 6 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 7 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 8 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]] |
-| 9 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]] |
-| 10 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071: False RAG Entry Injection]] |
-| 11 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]] |
-| 12 | [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]] | [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] |
-| 13 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]] |
-| 14 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|AML.T0064: Gather RAG-Indexed Targets]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
+
+**Step 9:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]]
+
+**Step 10:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071: False RAG Entry Injection]]
+
+**Step 11:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+
+**Step 12:**
+- Tactic: [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
+- Technique: [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
+
+**Step 13:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
+
+**Step 14:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 
 

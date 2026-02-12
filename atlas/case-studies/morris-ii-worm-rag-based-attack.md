@@ -77,15 +77,33 @@ Users of the GenAI email assistant may have PII leaked to attackers.
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
-| 2 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]] |
-| 3 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] |
-| 4 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]] |
-| 5 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061: LLM Prompt Self-Replication]] |
-| 6 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/llm-data-leakage|AML.T0057: LLM Data Leakage]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061: LLM Prompt Self-Replication]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/llm-data-leakage|AML.T0057: LLM Data Leakage]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 
 

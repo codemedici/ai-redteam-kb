@@ -65,13 +65,25 @@ A bad actor who followed the same procedure as the researchers could then use th
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]] |
-| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]] |
-| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]] |
-| 5 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
 
 
 

@@ -92,14 +92,29 @@ The researcher included the malicious prompt as part of the body of a long email
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 3 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]] |
-| 4 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/delay-execution-of-llm-instructions|AML.T0094: Delay Execution of LLM Instructions]] |
-| 5 | [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]] | [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] |
-| 6 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/delay-execution-of-llm-instructions|AML.T0094: Delay Execution of LLM Instructions]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
+- Technique: [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 
 

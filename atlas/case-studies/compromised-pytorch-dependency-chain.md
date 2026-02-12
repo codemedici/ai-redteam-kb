@@ -61,11 +61,17 @@ All gathered information, including file contents, is uploaded via encrypted DNS
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]] |
-| 2 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]] |
-| 3 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 
 

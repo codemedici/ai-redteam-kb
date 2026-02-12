@@ -111,17 +111,41 @@ The application became unresponsive as it was executing the non-terminating code
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|AML.T0001: Search Open AI Vulnerability Analysis]] |
-| 2 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
-| 3 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]] |
-| 4 | [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]] | [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]] |
-| 5 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 6 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] |
-| 7 | [[atlas/tactics/credential-access|AML.TA0013: Credential Access]] | [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]] |
-| 8 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]] |
-| 9 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|AML.T0001: Search Open AI Vulnerability Analysis]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
+- Technique: [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
+- Technique: [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+
+**Step 9:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]
 
 
 

@@ -84,15 +84,33 @@ Adversaries can cause financial harm to the victim organization. Exfiltrated cre
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]] |
-| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]] |
-| 3 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]] |
-| 4 | [[atlas/tactics/credential-access|AML.TA0013: Credential Access]] | [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]] |
-| 5 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
-| 6 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
+- Technique: [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 
 

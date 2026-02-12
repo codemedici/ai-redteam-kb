@@ -75,14 +75,29 @@ This could lead to a variety of harms to the end user or organization.
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]] |
-| 2 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]] |
-| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]] |
-| 4 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]] |
-| 5 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]] |
-| 6 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 
 

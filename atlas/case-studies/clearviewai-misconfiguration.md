@@ -64,12 +64,21 @@ As a result, future application releases could have been compromised, causing de
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]] |
-| 2 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/data-from-information-repositories|AML.T0036: Data from Information Repositories]] |
-| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]] |
-| 4 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/data-from-information-repositories|AML.T0036: Data from Information Repositories]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 
 

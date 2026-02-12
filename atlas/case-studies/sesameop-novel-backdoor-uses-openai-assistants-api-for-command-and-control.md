@@ -38,9 +38,9 @@ SesameOp cleaned up its tracks by deleting the Assistants and Messages it create
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]] | [[atlas/techniques/command-and-control/ai-service-api|AML.T0096: AI Service API]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/command-and-control|AML.TA0014: Command and Control]]
+- Technique: [[atlas/techniques/command-and-control/ai-service-api|AML.T0096: AI Service API]]
 
 
 

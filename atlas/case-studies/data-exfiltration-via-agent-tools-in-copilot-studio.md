@@ -131,22 +131,61 @@ The prompt asks the agent to email the results to an address of the researcherâ€
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]] | [[atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 3 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]] |
-| 4 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]] |
-| 5 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]] |
-| 6 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]] |
-| 7 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
-| 8 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]] |
-| 9 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]] |
-| 10 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]] |
-| 11 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]] |
-| 12 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]] |
-| 13 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]] |
-| 14 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
+- Technique: [[atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
+
+**Step 9:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
+
+**Step 10:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+
+**Step 11:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
+
+**Step 12:**
+- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
+
+**Step 13:**
+- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+
+**Step 14:**
+- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]
 
 
 

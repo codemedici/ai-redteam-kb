@@ -123,21 +123,57 @@ The attacker could spam messages or prompts to reach the LLM’s rate-limits aga
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]] |
-| 2 | [[atlas/tactics/discovery|AML.TA0008: Discovery]] | [[atlas/techniques/discovery/process-discovery|AML.T0089: Process Discovery]] |
-| 3 | [[atlas/tactics/credential-access|AML.TA0013: Credential Access]] | [[atlas/techniques/credential-access/os-credential-dumping|AML.T0090: OS Credential Dumping]] |
-| 4 | [[atlas/tactics/lateral-movement|AML.TA0015: Lateral Movement]] | [[atlas/techniques/lateral-movement/use-alternate-authentication-material/application-access-token|AML.T0091.000: Application Access Token]] |
-| 5 | [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]] | [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]] |
-| 6 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]] |
-| 7 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/ai-agent-context-poisoning/thread|AML.T0080.001: Thread]] |
-| 8 | [[atlas/tactics/persistence|AML.TA0006: Persistence]] | [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]] |
-| 9 | [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]] | [[atlas/techniques/defense-evasion/manipulate-user-llm-chat-history|AML.T0092: Manipulate User LLM Chat History]] |
-| 10 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]] |
-| 11 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]] |
-| 12 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]] |
-| 13 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
+- Technique: [[atlas/techniques/discovery/process-discovery|AML.T0089: Process Discovery]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
+- Technique: [[atlas/techniques/credential-access/os-credential-dumping|AML.T0090: OS Credential Dumping]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/lateral-movement|AML.TA0015: Lateral Movement]]
+- Technique: [[atlas/techniques/lateral-movement/use-alternate-authentication-material/application-access-token|AML.T0091.000: Application Access Token]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
+- Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/persistence/ai-agent-context-poisoning/thread|AML.T0080.001: Thread]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
+- Technique: [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
+
+**Step 9:**
+- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
+- Technique: [[atlas/techniques/defense-evasion/manipulate-user-llm-chat-history|AML.T0092: Manipulate User LLM Chat History]]
+
+**Step 10:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+
+**Step 11:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+
+**Step 12:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]
+
+**Step 13:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]
 
 
 

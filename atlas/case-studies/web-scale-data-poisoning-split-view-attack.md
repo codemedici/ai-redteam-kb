@@ -69,14 +69,29 @@ Models that use the dataset for training data are poisoned, eroding model integr
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]] |
-| 2 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]] |
-| 3 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]] |
-| 4 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]] |
-| 5 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]] |
-| 6 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 
 

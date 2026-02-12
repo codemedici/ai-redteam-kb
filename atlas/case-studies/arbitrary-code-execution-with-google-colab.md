@@ -113,16 +113,37 @@ Exfiltrated data may include sensitive or private data such as proprietary data 
 ## Tactics and Techniques Used
 
 
-| Step | Tactic | Technique |
-|---|---|---|
-| 1 | [[atlas/tactics/resource-development|AML.TA0003: Resource Development]] | [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]] |
-| 2 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]] |
-| 3 | [[atlas/tactics/initial-access|AML.TA0004: Initial Access]] | [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]] |
-| 4 | [[atlas/tactics/execution|AML.TA0005: Execution]] | [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]] |
-| 5 | [[atlas/tactics/collection|AML.TA0009: Collection]] | [[atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]] |
-| 6 | [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]] | [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]] |
-| 7 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]] |
-| 8 | [[atlas/tactics/impact|AML.TA0011: Impact]] | [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]] |
+**Step 1:**
+- Tactic: [[atlas/tactics/resource-development | AML.TA0003: Resource Development]]
+- Technique: [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview | AML.T0017: Develop Capabilities]]
+
+**Step 2:**
+- Tactic: [[atlas/tactics/initial-access       | AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software                   | AML.T0010.001: AI Software]]
+
+**Step 3:**
+- Tactic: [[atlas/tactics/initial-access       | AML.TA0004: Initial Access]]
+- Technique: [[atlas/techniques/initial-access/valid-accounts                                           | AML.T0012: Valid Accounts]]
+
+**Step 4:**
+- Tactic: [[atlas/tactics/execution            | AML.TA0005: Execution]]
+- Technique: [[atlas/techniques/execution/user-execution/user-execution-overview                        | AML.T0011: User Execution]]
+
+**Step 5:**
+- Tactic: [[atlas/tactics/collection           | AML.TA0009: Collection]]
+- Technique: [[atlas/techniques/collection/ai-artifact-collection                                       | AML.T0035: AI Artifact Collection]]
+
+**Step 6:**
+- Tactic: [[atlas/tactics/exfiltration         | AML.TA0010: Exfiltration]]
+- Technique: [[atlas/techniques/exfiltration/exfiltration-via-cyber-means                               | AML.T0025: Exfiltration via Cyber Means]]
+
+**Step 7:**
+- Tactic: [[atlas/tactics/impact               | AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/ai-intellectual-property-theft                    | AML.T0048.004: AI Intellectual Property Theft]]
+
+**Step 8:**
+- Tactic: [[atlas/tactics/impact               | AML.TA0011: Impact]]
+- Technique: [[atlas/techniques/impact/external-harms/external-harms-overview                           | AML.T0048: External Harms]]
 
 
 

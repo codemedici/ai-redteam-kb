@@ -122,10 +122,10 @@ description: "One-liner summary"
 | 4. Merge operations/ → methodology/ | ✅ | Content absorbed |
 | 5. Move engagements/ → playbooks/ | ✅ | 9 notes |
 | 6. Add frontmatter tags | ✅ | 119 notes tagged (type/, trust-boundary/, atlas/, owasp/, source/) |
-| 7. Update internal wikilinks | ⚠️ PARTIAL | 33 broken links remain |
+| 7. Update internal wikilinks | ✅ | All fixed (Sprint 1, 2026-02-12) |
 | 8. Remove trust-boundaries/ tree | ✅ | Gone |
 | 9. Reconfigure graph.json | ✅ | 6 color groups, type-based |
-| 10. Verify | ⚠️ | Broken links + missing frontmatter fields |
+| 10. Verify | ✅ | Zero broken links, full frontmatter, cross-refs done |
 
 ## ⚠️ Gaps
 
@@ -170,44 +170,26 @@ description: "One-liner summary"
 
 # Sprint Plan
 
-## Sprint 1: Fix Broken Links + Deduplicate (HIGH PRIORITY)
+## Sprint 1: Fix Broken Links + Deduplicate ✅ COMPLETE (2026-02-12)
 
-**Goal:** Zero broken wikilinks, no duplicate notes.
+- Fixed 500+ broken wikilinks across 59 files (added folder prefixes)
+- Fixed malformed concatenated links and backslash issues
+- Zero broken links remaining
 
-1. **Fix malformed link** in vector-embedding-weaknesses.md
-2. **Merge duplicate notes:**
-   - `prompt-injection.md` (Docusaurus stub) → merge into `prompt-injection-llm-manipulation.md`
-   - `model-extraction.md` (Docusaurus stub) → merge into `model-extraction-stealing.md`
-3. **Create 13 missing defense stubs** (placeholder notes with frontmatter + description + "Mitigates" links)
-4. **Create 5 missing methodology stubs**
-5. **Fix 7 structural links** (redirect to correct targets or remove)
-6. **Fix 5 ATLAS links** → point to correct atlas/ paths
-7. **Verify: zero broken links**
+## Sprint 2: Enrich Frontmatter ✅ COMPLETE (2026-02-12)
 
-**Estimated effort:** Medium (~1 session)
+- Added `target/` tags to all 39 attacks + 28 defenses
+- Added `access/` tags to all 39 attacks
+- Added `severity/` tags to all 39 attacks
+- Added `atlas/` IDs to 22 attacks (17 correctly unmapped)
+- Added `description` to all notes missing it
 
-## Sprint 2: Enrich Frontmatter (MEDIUM PRIORITY)
+## Sprint 3: Cross-References ✅ COMPLETE (2026-02-12)
 
-**Goal:** All attack/defense notes have the complete tag schema for scoping engine.
-
-1. **Add `target/` tags** to all 41 attack notes + 13 defense notes
-2. **Add `access/` tags** (black-box/gray-box/white-box) to all 41 attack notes
-3. **Add `severity/` tags** to all 41 attack notes
-4. **Add missing `atlas/` IDs** to 28 attack notes (map to ATLAS where applicable)
-5. **Add `description`** to notes missing it
-
-**Estimated effort:** Medium (~1 session, scriptable)
-
-## Sprint 3: Cross-References (MEDIUM PRIORITY)
-
-**Goal:** Every attack links to its defenses and vice versa. Attack chains documented.
-
-1. **Add "Mitigated by" links** to remaining 29 attack notes
-2. **Add "Enables/Enabled by" links** for attack chains (e.g., system-prompt-leakage → tool-privilege-escalation)
-3. **Verify bidirectional links** (attack→defense and defense→attack)
-4. **Add ATLAS cross-references** where atlas/ pages exist
-
-**Estimated effort:** Medium-High (~1-2 sessions)
+- Added "Mitigated by" to all 39 attacks (123 attack→defense links)
+- Added "Mitigates" to 25 defenses (170 defense→attack links)
+- Added attack chain links (Enables/Enabled by) for 11 key attacks
+- All links bidirectional
 
 ## Sprint 4: Next Book Extraction (ONGOING)
 

@@ -1,350 +1,166 @@
 ---
-description: "Training models with adversarial examples to improve robustness"
+title: Adversarial Training
+description: Defense technique that explicitly includes adversarial examples in training data to make models robust against adversarial attacks
 tags:
-  - adversarial-training
-  - control
-  - model-hardening
-  - trust-boundary/model
   - type/defense
-  - target/ml-pipeline
-created: 2026-02-12
+  - target/model-robustness
+  - atlas/AML.M0001
+  - source/adversarial-ai
+  - needs-review
 ---
+
 # Adversarial Training
 
-**Type:** Model Hardening / Robust Training
+## Overview
 
-**Principle:** Augment training data with adversarial examples to teach model to handle perturbed inputs
+Adversarial training is a **mitigation technique** that makes ML models robust against adversarial attacks by explicitly including adversarial examples (poisoned or perturbed data) in the training set **with correct labels**. Rather than detecting attacks, adversarial training teaches the model to handle adversarial inputs correctly.
 
-**Applicability:** Cross-cutting defense against multiple attack types
+> "This defense is more of a mitigation than detection. It explicitly includes poisoned data but with the correct classification. Adversarial training makes models robust against adversarial attacks."
+> 
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 85
 
-## Core Concept
+## How It Works
 
-**Definition:** Training machine learning models on mixture of clean data and adversarial examples generated during training process
+1. **Generate adversarial examples** — Create poisoned/perturbed samples using attack techniques
+2. **Correct labels** — Assign proper labels to adversarial samples (not attacker's target labels)
+3. **Augment training data** — Add adversarial examples to original training set
+4. **Train model** — Model learns to classify both clean and adversarial inputs correctly
 
-**Goal:** Model explicitly learns to handle perturbed inputs, effectively "immunizing" itself against specific attack types
+**Result:** Model becomes resistant to similar adversarial perturbations encountered during inference.
 
-**Mechanism:**
-1. During each training epoch:
-   - Generate adversarial examples using attack algorithm (typically PGD)
-   - Examples crafted against model's current state
-   - Include adversarial samples in training batch
-2. Model learns from both clean and adversarial inputs
-3. Decision boundaries become more robust to perturbations
+## Primary Use Cases
 
-## Implementation Pattern
+### Evasion Attack Mitigation
+Adversarial training is **most effective** against inference-time attacks (evasion):
+- Adversarial examples (FGSM, PGD, C&W)
+- Perturbations designed to fool deployed models
+
+### Poisoning Attack Mitigation
+Can also defend against training-time poisoning:
+- Include backdoored samples with correct labels
+- Model learns that trigger patterns don't indicate target class
+
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 85
+
+## Implementation Approaches
 
 ### Basic Adversarial Training
 
 ```python
-for epoch in range(num_epochs):
-    for batch in dataloader:
-        images, labels = batch
-        
-        # Generate adversarial examples
-        adv_images = pgd_attack(model, loss_fn, images, labels,
-                                epsilon=0.03, alpha=0.01, num_iter=10)
-        
-        # Train on both clean and adversarial
-        clean_loss = loss_fn(model(images), labels)
-        adv_loss = loss_fn(model(adv_images), labels)
-        total_loss = 0.5 * clean_loss + 0.5 * adv_loss
-        
-        total_loss.backward()
-        optimizer.step()
+# Generate adversarial examples
+attack = FGSM(model, eps=0.1)
+x_adv = attack.generate(x_train)
+
+# Augment training data
+x_train_augmented = np.concatenate([x_train, x_adv])
+y_train_augmented = np.concatenate([y_train, y_train])  # Correct labels
+
+# Retrain model
+model.fit(x_train_augmented, y_train_augmented)
 ```
 
-### Advanced: PGD-Based Adversarial Training
+### PGD-Based Adversarial Training (Madry Defense)
 
-**Gold standard:** Train against PGD adversarial examples (Madry et al., 2018)
+**Tool:** ART `AdversarialTrainerMadryPGD`
 
-**Parameters:**
-- `epsilon`: Perturbation budget (e.g., 0.03 for ε=8/255 on images)
-- `alpha`: Step size (typically ε/num_steps)
-- `num_iter`: PGD iterations (7-40 common)
-- `norm`: Threat model ('inf', '2', etc.)
+```python
+from art.defences.trainer import AdversarialTrainerMadryPGD
+from art.estimators.classification import KerasClassifier
 
-**Why PGD:** Strongest known first-order attack → trains against hardest adversaries
+# Wrap model
+classifier = KerasClassifier(model)
 
-## Defends Against
+# Configure adversarial trainer
+trainer = AdversarialTrainerMadryPGD(
+    classifier,
+    nb_epochs=10,
+    eps=0.15,        # Maximum perturbation
+    eps_step=0.001   # Step size for PGD
+)
 
-### 1. Adversarial Examples / Evasion Attacks
+# Train with adversarial examples
+trainer.fit(x_train, y_train)
+```
 
-**Application:** Primary use case
+**PGD (Projected Gradient Descent):** Iterative attack method that generates strong adversarial examples—training against PGD improves robustness against multiple attack types.
 
-**Effectiveness:**
-- **High** against white-box attacks similar to training attack
-- **Medium** against novel attack types
-- **Medium** against black-box transfer attacks
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 80
 
-**Details:** adversarial-examples-evasion-attacks#Adversarial Training]]
+## Advantages
 
-**Key finding:** Model trained with PGD much harder to attack with PGD or FGSM
-
-### 2. Data Poisoning Attacks
-
-**Application:** Secondary benefit
-
-**Effectiveness:**
-- **Medium** against backdoor attacks (can partially detect/resist triggers)
-- **Low-Medium** against clean-label poisoning
-- **Limited** against availability poisoning
-
-**Mechanism:** Robust features learned during adversarial training less susceptible to poisoned data influence
-
-**Details:** data-poisoning-attacks#Robust Training Methods]]
-
-**Limitation:** Doesn't prevent poisoning during adversarial training itself
-
-## Strengths
-
-**1. Empirically Effective**
-- Currently one of most successful defenses
-- Provides meaningful robustness gains
-- Well-validated in research and practice
-
-**2. Provable for Specific Threats**
-- When combined with certified methods (e.g., certified adversarial training)
-- Can provide guarantees for bounded perturbations
-
-**3. Adaptable**
-- Can target specific threat models (Linf, L2, etc.)
-- Adjustable robustness-accuracy trade-off via epsilon parameter
-- Works with various model architectures
-
-**4. No Inference Overhead**
-- Unlike some defenses, adds no runtime cost
-- Robustness baked into model weights
-- Same inference speed as non-robust model
+- **Proactive defense** — Hardens model before deployment
+- **Broad effectiveness** — Defends against multiple attack variants
+- **No runtime overhead** — Defense is embedded in model weights
+- **Improves generalization** — Can improve performance on edge cases
 
 ## Limitations
 
-### 1. Training Cost
+### Computational Cost
+- **Training time** — Generating adversarial examples during training is expensive
+- **Data augmentation overhead** — Doubles or triples training data size
 
-**Computational overhead:**
-- 2-10x longer training time (depends on adversarial generation cost)
-- PGD-based training particularly expensive (multiple iterations per batch)
-- Requires gradient computation for adversarial examples
+### Attack Coverage
+- **Limited to known attacks** — Only defends against attack types used in training
+- **New attack variants** — May not generalize to novel adversarial techniques
+- **Attack diversity needed** — Must train against representative attack suite
 
-**Resource implications:**
-- Higher GPU memory usage
-- Extended experimentation cycles
-- Increased cloud compute costs
+### Performance Trade-offs
+- **Accuracy degradation** — May slightly reduce accuracy on clean data
+- **Overfitting risk** — Model may overfit to specific adversarial patterns
 
-**Mitigation:** Use cheaper adversarial generation (FGSM) for initial experiments, PGD for final training
+## Integration with MLOps
 
-### 2. Clean Data Accuracy Trade-off
+Adversarial training should be integrated into ML pipelines:
 
-**Typical impact:**
-- 2-10% drop in clean data accuracy
-- Larger drop for stronger robustness (higher epsilon)
-- More severe for complex tasks (ImageNet vs. MNIST)
+1. **Automated generation** — Include adversarial example generation in data pipeline
+2. **Versioning** — Track adversarial training data separately
+3. **Continuous testing** — Validate robustness against new attack techniques
+4. **Monitoring** — Track model performance on both clean and adversarial data
 
-**Example:**
-```
-Standard model:     95% clean accuracy, 0% robust accuracy
-Adversarially trained: 85% clean accuracy, 45% robust accuracy
-```
+See [[defenses/mlops-security]] for integration patterns.
 
-**Consideration:** Must balance robustness need vs. clean performance requirement
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 85-86
 
-### 3. Overfitting to Training Attack
+## Part of Larger Defense Strategy
 
-**Problem:** Model becomes robust to specific attack used during training but may be vulnerable to:
-- Novel attack algorithms
-- Different threat models (trained on Linf, attacked with L2)
-- Adaptive attacks designed for adversarially-trained models
+> "Relate defending against data poisoning attacks to adversarial training and the bigger picture of adversarial AI defenses."
+> 
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 60
 
-**Solution:** Diversify training attacks (multiple threat models, attack types)
+Adversarial training is **one component** of defense-in-depth:
 
-### 4. No Universal Robustness
+**Complementary defenses:**
+- [[defenses/anomaly-detection]] — Detect poisoned training data
+- [[defenses/mlops-security]] — Data lineage and versioning
+- [[defenses/input-validation]] — Runtime input sanitization
+- [[defenses/model-ensembles]] — Multiple models for robustness
 
-**Reality:** Doesn't guarantee robustness against all possible attacks
+## Research and Tooling
 
-**Gaps:**
-- Physical perturbations (if trained on digital)
-- Large perturbations (beyond training epsilon)
-- Attacks on different modalities
+### ART (Adversarial Robustness Toolbox)
+- `AdversarialTrainerMadryPGD` — PGD-based training
+- `AdversarialTrainerFBF` — Feature-based training
+- Integration with multiple attack types
 
-**Implication:** Defense-in-depth still required
+### Techniques
+- **Madry et al. defense** — PGD adversarial training (state-of-the-art)
+- **TRADES** — Trade-off between accuracy and robustness
+- **MART** — Misclassification-aware adversarial training
 
-### 5. Model Capacity Requirements
-
-**Observation:** Robust models often need higher capacity than standard models
-
-**Why:** Learning robust features more complex than learning standard features
-
-**Impact:**
-- Larger model architectures needed
-- More parameters → longer inference time
-- Increased memory footprint
-
-## Best Practices
-
-### 1. Attack Selection
-
-**Recommendation:** Use PGD for training (current gold standard)
-
-**Parameters:**
-- Start with ε=0.03 (8/255 for images)
-- Use 7-10 iterations for training (balance cost/effectiveness)
-- Random initialization within epsilon ball
-
-**Alternative:** FGSM for faster training (less robust but still beneficial)
-
-### 2. Epsilon Tuning
-
-**Strategy:**
-- Start with small epsilon (e.g., 0.01)
-- Gradually increase until acceptable clean accuracy trade-off
-- Typical range: 0.01-0.1 for normalized images
-
-**Application-specific:**
-- Security-critical: Higher epsilon (prioritize robustness)
-- General use: Lower epsilon (prioritize clean accuracy)
-
-### 3. Validation
-
-**Critical:** Always validate against attacks NOT used in training
-
-**Test suite:**
-- Multiple attack algorithms (FGSM, PGD, C&W, AutoAttack)
-- Multiple threat models (Linf, L2, L0)
-- Adaptive attacks (if possible)
-
-**Red team recommendation:** Assume adversary knows model is adversarially trained and adapts
-
-### 4. Combine with Other Defenses
-
-**Synergies:**
-- Adversarial training + input preprocessing (defense-in-depth)
-- Adversarial training + certified defenses (stronger guarantees)
-- Adversarial training + anomaly detection (catch novel attacks)
-
-**Warning:** Some combinations ineffective (e.g., gradient masking + adversarial training can conflict)
-
-### 5. Monitor Clean Performance
-
-**Track both metrics:**
-- Clean data accuracy
-- Robust accuracy (against various attacks)
-
-**Set thresholds:** Reject model if clean accuracy drops below acceptable level
-
-## Variants
-
-### 1. TRADES (TRadeoff-inspired Adversarial DEfense via Surrogate-loss minimization)
-
-**Approach:** Explicitly balance clean accuracy and robustness via regularization parameter
-
-**Loss function:**
-```
-L = L_clean(model(x), y) + β · L_robust(model(x), model(x_adv))
-```
-
-**Benefit:** Better clean-robust accuracy trade-off control
-
-### 2. Adversarial Logit Pairing (ALP)
-
-**Approach:** Encourage adversarial examples to have similar internal representations to clean examples
-
-**Mechanism:** Add loss term penalizing difference in logits between clean and adversarial inputs
-
-### 3. Certified Adversarial Training
-
-**Approach:** Combine adversarial training with certified robustness techniques
-
-**Benefit:** Provable guarantees within perturbation bounds
-
-**Limitation:** High computational cost, larger accuracy drops
-
-### 4. Free Adversarial Training / Fast Adversarial Training
-
-**Goal:** Reduce computational cost of adversarial training
-
-**Approach:** Reuse gradient computations, reduce PGD iterations
-
-**Trade-off:** Slightly less robust but much faster training
-
-## Practical Considerations
-
-### When to Use
-
-**Recommended for:**
-- Security-critical applications (malware detection, biometric authentication)
-- Systems facing adversarial threats
-- Models where robustness prioritized over marginal clean accuracy
-- Scenarios where inference cost matters more than training cost
-
-**Consider alternatives when:**
-- Clean accuracy paramount (every percentage point matters)
-- Training budget severely limited
-- Real-time training required (online learning)
-- Threat model unclear (may overfit to wrong attacks)
-
-### Implementation Checklist
-
-- [ ] Choose attack algorithm (recommend: PGD)
-- [ ] Set epsilon based on threat model and accuracy trade-off
-- [ ] Determine clean/adversarial batch ratio (typically 50/50)
-- [ ] Allocate sufficient training time (2-10x normal)
-- [ ] Validate against diverse attacks
-- [ ] Monitor both clean and robust accuracy
-- [ ] Document threat model assumptions
-- [ ] Test against adaptive attacks
-
-### Common Pitfalls
-
-**1. Using weak training attacks**
-- FGSM only → vulnerable to stronger attacks
-- Solution: Use PGD or diverse attack suite
-
-**2. Insufficient validation**
-- Testing only against training attack type
-- Solution: Test against multiple attacks, including novel ones
-
-**3. Ignoring clean accuracy**
-- Over-prioritizing robustness → unusable model
-- Solution: Set minimum clean accuracy threshold
-
-**4. Wrong epsilon choice**
-- Too small → insufficient robustness
-- Too large → poor clean accuracy
-- Solution: Grid search, validate empirically
-
-## Research Frontiers
-
-**Current challenges:**
-- Reducing clean accuracy trade-off
-- Scaling to large models (transformers, large vision models)
-- Multi-threat model robustness (Linf + L2 + physical)
-- Robustness against unforeseen attacks
-- Theoretical understanding of why adversarial training works
-
-**Emerging techniques:**
-- Self-supervised adversarial training
-- Adversarial training with vision transformers
-- Adversarial training for LLMs (prompt-level robustness)
-- Efficient adversarial training methods
-
-## Key Takeaways
-
-1. **Most effective current defense** against evasion attacks
-2. **Explicit robustness learning** via adversarial example exposure during training
-3. **Training cost high** (2-10x longer)
-4. **Clean accuracy trade-off** (typically 2-10% drop)
-5. **PGD-based training** current gold standard
-6. **Not universal** - can overfit to training attack type
-7. **Validation critical** - test against diverse attacks including novel ones
-8. **Best with defense-in-depth** - combine with other defensive layers
-9. **Application-specific tuning** - epsilon choice depends on threat model and accuracy requirements
-10. **No inference overhead** - robustness baked into weights
-
-## Source References
-
-- Madry et al. (2018): "Towards Deep Learning Models Resistant to Adversarial Attacks" - PGD adversarial training
-- Goodfellow et al. (2015): "Explaining and Harnessing Adversarial Examples" - FGSM, initial adversarial training concepts
-- [[sources/bibliography#Red-Teaming AI]], p. 143, 161-162
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 85
 
 ## Related
 
-- **Mitigates**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/adversarial-robustness]], [[attacks/membership-inference-attacks]], [[attacks/privacy-attacks-beyond-membership-inference]], [[attacks/training-data-memorization]]
+**Defends against:**
+- [[attacks/data-poisoning]] — Training-time manipulation
+- [[attacks/backdoor-poisoning]] — Trigger-based attacks
+- [[attacks/adversarial-examples]] — Inference-time perturbations
+- [[attacks/evasion]] — General evasion techniques
+
+**Complements:**
+- [[defenses/input-preprocessing]] — Runtime sanitization
+- [[defenses/model-hardening]] — Architectural improvements
+- [[defenses/detection-based-defenses]] — Anomaly detection
+
+**ATLAS Mapping:**
+- [[frameworks/atlas/AML.M0001]] — Adversarial Training (Mitigation)

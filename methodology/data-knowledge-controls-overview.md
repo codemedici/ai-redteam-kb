@@ -55,10 +55,10 @@ Effective data/knowledge security requires controls at multiple stages:
 
 | Control | Applicable Issues | Type | Status |
 |---------|------------------|------|--------|
-| [[source-validation-and-trust-scoring|Source Validation & Trust Scoring]] | RAG Data Poisoning, Embedding Poisoning | Preventive | Planned |
-| [[embedding-integrity-verification|Embedding Integrity Verification]] | Embedding Poisoning, Retrieval Manipulation | Preventive | Planned |
-| [[content-signing-and-provenance|Content Signing & Provenance]] | RAG Data Poisoning, Unauthorized Knowledge Disclosure | Preventive | Planned |
-| [[data-quarantine-procedures|Data Quarantine Procedures]] | RAG Data Poisoning, PII in Corpus | Responsive | Planned |
+| [[defenses/source-validation-and-trust-scoring|Source Validation & Trust Scoring]] | RAG Data Poisoning, Embedding Poisoning | Preventive | Planned |
+| [[defenses/embedding-integrity-verification|Embedding Integrity Verification]] | Embedding Poisoning, Retrieval Manipulation | Preventive | Planned |
+| [[defenses/content-signing-and-provenance|Content Signing & Provenance]] | RAG Data Poisoning, Unauthorized Knowledge Disclosure | Preventive | Planned |
+| [[defenses/data-quarantine-procedures|Data Quarantine Procedures]] | RAG Data Poisoning, PII in Corpus | Responsive | Planned |
 
 [[attacks/|View all Data/Knowledge Issues]]
 
@@ -95,5 +95,5 @@ Data/Knowledge boundary controls interact with controls in other boundaries:
 ## Related Documentation
 
 - [[attacks/|Data/Knowledge Issues]] - Attack-specific mitigations
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
-- [[methodology|Methodology]] - Testing and validation approaches
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
+- [[methodology/methodology-overview|Methodology]] - Testing and validation approaches

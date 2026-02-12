@@ -188,9 +188,9 @@ The LLM, unable to differentiate between the system's instructions and the user'
 ## Mitigations
 
 **Preventive Controls:**
-- **Instruction Hierarchy**: Implement cryptographic separation between system and user content using structured formats (e.g., ChatML, special tokens). See [[instruction-hierarchy-architecture|Instruction Hierarchy Architecture]] for implementation guidance.
+- **Instruction Hierarchy**: Implement cryptographic separation between system and user content using structured formats (e.g., ChatML, special tokens). See [[defenses/instruction-hierarchy-architecture|Instruction Hierarchy Architecture]] for implementation guidance.
 - **Strict Separation and Labeling of Retrieved Content**: Clearly demarcate RAG-retrieved text, web page content, and external documents with trust markers; avoid concatenating untrusted content directly into instruction context without boundaries
-- **Input Validation**: Filter meta-instructions, role-play keywords, and special characters before LLM processing (note: keyword filtering has limited effectiveness against smuggling and obfuscation). See [[input-validation-patterns|Input Validation Patterns]] for cross-boundary validation approaches.
+- **Input Validation**: Filter meta-instructions, role-play keywords, and special characters before LLM processing (note: keyword filtering has limited effectiveness against smuggling and obfuscation). See [[defenses/input-validation-patterns|Input Validation Patterns]] for cross-boundary validation approaches.
 - **Prompt Templating**: Use fixed templates with parameterized user input to prevent blending
 - **Least Privilege Tools with Human Approval**: Limit tool access to minimum required capabilities; require explicit user approval for sensitive actions (especially write operations, data exfiltration, external API calls)
 - **Allowlist Tool Invocation and Argument Validation**: Define permitted tool usage patterns; validate tool arguments against expected schemas and ranges before execution
@@ -198,7 +198,7 @@ The LLM, unable to differentiate between the system's instructions and the user'
 - **Output Filtering (Post-Hoc)**: Strip system prompts and internal context from responses before rendering (last line of defense, not primary control)
 
 **Detective Controls:**
-- **Anomaly Detection**: Monitor for meta-instruction patterns in user inputs (regex, ML-based classifiers); note that context-free analysis often fails due to obfuscation. See [[anomaly-detection-architecture|Anomaly Detection Architecture]] for cross-boundary detection patterns.
+- **Anomaly Detection**: Monitor for meta-instruction patterns in user inputs (regex, ML-based classifiers); note that context-free analysis often fails due to obfuscation. See [[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]] for cross-boundary detection patterns.
 - **Multi-Turn Escalation Monitoring**: Track session-level patterns for gradual policy violations or conditioning attacks (benign → malicious transitions)
 - **Tool Invocation Logging**: Alert on unusual tool call sequences or parameters
 - **Output Inspection**: Scan responses for accidental system prompt leakage
@@ -219,13 +219,13 @@ The LLM, unable to differentiate between the system's instructions and the user'
 
 Documented incidents demonstrating prompt injection in production systems:
 
-- [[chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]] (2023): Indirect injection via malicious website exfiltrated conversation history
-- [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): RAG poisoning with cross-workspace credential theft
-- [[data-exfiltration-via-agent-tools-in-copilot-studio|Copilot Studio Agent Misuse]] (2024): Tool invocation via injection enabled data exfiltration
-- [[indirect-prompt-injection-threats-bing-chat-data-pirate|Bing Chat Data Pirate]] (2023): Web content poisoning for data extraction
-- [[living-off-ai-prompt-injection-via-jira-service-management|Jira Service Management Injection]] (2024): MCP tool chain exploitation
+- [[atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]] (2023): Indirect injection via malicious website exfiltrated conversation history
+- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): RAG poisoning with cross-workspace credential theft
+- [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Copilot Studio Agent Misuse]] (2024): Tool invocation via injection enabled data exfiltration
+- [[atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|Bing Chat Data Pirate]] (2023): Web content poisoning for data extraction
+- [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|Jira Service Management Injection]] (2024): MCP tool chain exploitation
 
-[[case-studies|View all ATLAS case studies]]
+[[atlas/case-studies|View all ATLAS case studies]]
 
 ---
 
@@ -233,8 +233,8 @@ Documented incidents demonstrating prompt injection in production systems:
 
 This issue is tested in the following engagements:
 
-- [ ] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Comprehensive assessment across all boundaries
-- [ ] [[llm-application-red-team|LLM Application Red Team]] - Primary focus on prompt injection campaigns (direct/indirect)
+- [ ] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Comprehensive assessment across all boundaries
+- [ ] [[playbooks/llm-application-red-team|LLM Application Red Team]] - Primary focus on prompt injection campaigns (direct/indirect)
 - [ ] Agentic Workflow Assessment - Agent-specific injection testing (detail page pending)
 - [ ] RAG & Retrieval Assessment - Indirect injection via RAG documents (detail page pending)
 - [ ] Evaluation & Guardrail Validation - Prompt injection resistance testing (detail page pending)

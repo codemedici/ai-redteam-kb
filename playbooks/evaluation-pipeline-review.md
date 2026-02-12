@@ -66,7 +66,7 @@ This engagement evaluates gaps in evaluation processes that could allow vulnerab
 
 This engagement is a meta-level process audit that evaluates whether all trust boundaries are being tested by the organization's evaluation processes. It does not directly test trust boundaries but ensures they are covered in the evaluation pipeline.
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -78,10 +78,10 @@ This engagement audits whether model-level security concerns are being tested in
 
 **Applicable Issues:**
 - All model issues should be covered in evaluation pipeline
-- [[prompt-injection|Prompt Injection]]
-- [[system-prompt-leakage|System Prompt Leakage]]
-- [[jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
-- [[model-extraction|Model Extraction and Theft]]
+- [[attacks/prompt-injection|Prompt Injection]]
+- [[attacks/system-prompt-leakage|System Prompt Leakage]]
+- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
+- [[attacks/model-extraction|Model Extraction and Theft]]
 
 ### Data / Knowledge
 
@@ -89,9 +89,9 @@ This engagement audits whether data and knowledge surface security is being test
 
 **Applicable Issues:**
 - All data/knowledge issues should be covered in evaluation pipeline
-- [[rag-data-poisoning|RAG Data Poisoning]]
-- [[retrieval-manipulation|Retrieval Manipulation]]
-- [[pii-in-corpus|PII in Knowledge Corpus]]
+- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
+- [[attacks/retrieval-manipulation|Retrieval Manipulation]]
+- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
 
 ### Application / Agent Runtime
 
@@ -99,9 +99,9 @@ This engagement audits whether application and agent integration security is bei
 
 **Applicable Issues:**
 - All application/agent runtime issues should be covered in evaluation pipeline
-- [[tool-privilege-escalation|Tool Privilege Escalation]]
-- [[agent-goal-hijack|Agent Goal Hijacking]]
-- [[insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
@@ -109,10 +109,10 @@ This engagement audits whether deployment and governance controls are being test
 
 **Applicable Issues:**
 - All deployment/governance issues should be covered in evaluation pipeline
-- [[insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[weak-access-segmentation|Weak Access Segmentation]]
-- [[secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[missing-evaluation-gates|Missing Evaluation Gates]]
+- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
+- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[attacks/missing-evaluation-gates|Missing Evaluation Gates]]
 
 ---
 
@@ -676,16 +676,16 @@ Each identified gap follows this format:
 
 1. **Review this spec** to confirm it matches your process improvement objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our framework-aligned approach
-4. **Explore applicable issues**: [[methodology|Methodology Overview]]
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our framework-aligned approach
+4. **Explore applicable issues**: [[methodology/methodology-overview|Methodology Overview]]
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[methodology|Methodology]]
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
 - [OWASP GenAI Red Teaming Guide](https://owasp.org/www-project-genai-red-teaming-guide/)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)

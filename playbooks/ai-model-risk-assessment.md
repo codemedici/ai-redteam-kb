@@ -74,7 +74,7 @@ This engagement provides risk assessment across:
 - **Application / Agent Runtime**: Integration risks, misuse scenarios, operational context
 - **Deployment / Governance**: Access controls, monitoring, incident response, compliance processes
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -85,42 +85,42 @@ This engagement provides risk assessment across:
 The Model boundary is a primary focus of risk assessment. The engagement evaluates intrinsic model behavior, training data quality, algorithmic risks, and model integrity. This boundary is critical for understanding model-specific vulnerabilities and risks.
 
 **Applicable Issues:**
-- [[prompt-injection|Prompt Injection]]
-- [[system-prompt-leakage|System Prompt Leakage]]
-- [[sensitive-info-disclosure|Sensitive Information Disclosure]]
-- [[jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
-- [[model-extraction|Model Extraction and Theft]]
-- [[training-data-memorization|Training Data Memorization]]
-- [[adversarial-robustness|Adversarial Robustness]]
+- [[attacks/prompt-injection|Prompt Injection]]
+- [[attacks/system-prompt-leakage|System Prompt Leakage]]
+- [[attacks/sensitive-info-disclosure|Sensitive Information Disclosure]]
+- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
+- [[attacks/model-extraction|Model Extraction and Theft]]
+- [[attacks/training-data-memorization|Training Data Memorization]]
+- [[attacks/adversarial-robustness|Adversarial Robustness]]
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary is assessed for data provenance, privacy risks, bias in training data, and knowledge base integrity. This includes evaluation of training data quality, PII exposure, and data governance controls.
 
 **Applicable Issues:**
-- [[rag-data-poisoning|RAG Data Poisoning]]
-- [[pii-in-corpus|PII in Knowledge Corpus]]
-- [[prompt-log-data-leakage|Prompt Log Data Leakage]]
+- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
+- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
+- [[attacks/prompt-log-data-leakage|Prompt Log Data Leakage]]
 
 ### Application / Agent Runtime
 
 The Application/Agent Runtime boundary is evaluated for integration risks, misuse scenarios, and operational context. This includes assessment of how the model integrates with business logic and potential misuse patterns.
 
 **Applicable Issues:**
-- [[tool-privilege-escalation|Tool Privilege Escalation]]
-- [[agent-goal-hijack|Agent Goal Hijacking]]
-- [[insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
 The Deployment/Governance boundary is assessed for access controls, monitoring capabilities, incident response readiness, and compliance processes. This includes evaluation of operational controls and governance mechanisms.
 
 **Applicable Issues:**
-- [[insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[weak-access-segmentation|Weak Access Segmentation]]
-- [[secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[missing-evaluation-gates|Missing Evaluation Gates]]
-- [[incident-response-gap|Incident Response Gap]]
+- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
+- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[attacks/missing-evaluation-gates|Missing Evaluation Gates]]
+- [[attacks/incident-response-gap|Incident Response Gap]]
 
 ---
 
@@ -232,7 +232,7 @@ This engagement evaluates risks across multiple categories rather than testing s
 - [x] **Compliance and Governance Risks**: Regulatory alignment, documentation gaps, process controls
 - [x] **Operational Risks**: Model drift, monitoring gaps, incident response readiness
 
-[[trust-boundaries-overview|Full attack taxonomy]]
+[[methodology/trust-boundaries-overview|Full attack taxonomy]]
 
 ---
 
@@ -661,15 +661,15 @@ Each identified risk follows this format:
 
 1. **Review this spec** to confirm it matches your risk management objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our framework-aligned approach
-4. **Explore applicable issues**: [[trust-boundaries-overview|Trust Boundaries Overview]]
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our framework-aligned approach
+4. **Explore applicable issues**: [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[techniques|MITRE ATLAS Techniques]]
-- [[methodology|Methodology]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)

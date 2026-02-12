@@ -75,7 +75,7 @@ graph LR
 
 **Duration:** 1-2 days
 
-[[phase-1-intake-scoping|Detailed guidance →]]
+[[methodology/phase-1-intake-scoping|Detailed guidance →]]
 
 ---
 
@@ -97,7 +97,7 @@ graph LR
 
 **Duration:** 2-3 days
 
-[[phase-2-system-decomposition|Detailed guidance →]]
+[[methodology/phase-2-system-decomposition|Detailed guidance →]]
 
 ---
 
@@ -120,7 +120,7 @@ graph LR
 
 **Duration:** 2-3 days
 
-[[phase-3-threat-modeling|Detailed guidance →]]
+[[methodology/phase-3-threat-modeling|Detailed guidance →]]
 
 ---
 
@@ -143,7 +143,7 @@ graph LR
 
 **Duration:** 1-2 days
 
-[[phase-4-test-planning|Detailed guidance →]]
+[[methodology/phase-4-test-planning|Detailed guidance →]]
 
 ---
 
@@ -166,7 +166,7 @@ graph LR
 
 **Duration:** 5-12 days (varies by engagement scope)
 
-[[phase-5-execution|Detailed guidance →]]
+[[methodology/phase-5-execution|Detailed guidance →]]
 
 ---
 
@@ -189,7 +189,7 @@ graph LR
 
 **Duration:** 1-2 days
 
-[[phase-6-triage-severity|Detailed guidance →]]
+[[methodology/phase-6-triage-severity|Detailed guidance →]]
 
 ---
 
@@ -213,7 +213,7 @@ graph LR
 
 **Duration:** 2-3 days
 
-[[phase-7-reporting|Detailed guidance →]]
+[[methodology/phase-7-reporting|Detailed guidance →]]
 
 ---
 
@@ -236,7 +236,7 @@ graph LR
 
 **Duration:** Integrated with Phase 7 reporting
 
-[[phase-8-remediation-guidance|Detailed guidance →]]
+[[methodology/phase-8-remediation-guidance|Detailed guidance →]]
 
 ---
 
@@ -260,7 +260,7 @@ graph LR
 
 **Duration:** 3-5 days (post-remediation)
 
-[[phase-9-retest-regression|Detailed guidance →]]
+[[methodology/phase-9-retest-regression|Detailed guidance →]]
 
 ---
 
@@ -327,7 +327,7 @@ graph TD
 - Phases 6-7 triggered on finding detection
 - Duration: 3 days setup + continuous
 
-[[methodology-variations|View engagement type variations →]]
+[[methodology/methodology-variations|View engagement type variations →]]
 
 ### By Attack Surface
 
@@ -339,7 +339,7 @@ The lifecycle remains consistent, but Phase 3 (Threat Modeling), Phase 4 (Test P
 - **Supply Chain:** Focus on model integrity verification and dependency scanning
 - **Evaluation Pipelines:** Meta-testing of the testing infrastructure itself
 
-[[attack-variants-overview|View attack-surface variants →]]
+[[methodology/attack-variants-overview|View attack-surface variants →]]
 
 ---
 
@@ -368,13 +368,13 @@ The lifecycle is not one-and-done. Each engagement produces artifacts that stren
 
 ## Related Documentation
 
-- [[phase-1-intake-scoping|Phase 1: Intake & Scoping]]
-- [[phase-2-system-decomposition|Phase 2: System Decomposition]]
-- [[phase-3-threat-modeling|Phase 3: Threat Modeling]]
-- [[phase-4-test-planning|Phase 4: Test Planning]]
-- [[phase-5-execution|Phase 5: Execution]]
-- [[phase-6-triage-severity|Phase 6: Triage & Severity]]
-- [[phase-7-reporting|Phase 7: Reporting]]
-- [[phase-8-remediation-guidance|Phase 8: Remediation Guidance]]
-- [[phase-9-retest-regression|Phase 9: Retest & Regression]]
-- [[common-pitfalls|Common Pitfalls to Avoid]]
+- [[methodology/phase-1-intake-scoping|Phase 1: Intake & Scoping]]
+- [[methodology/phase-2-system-decomposition|Phase 2: System Decomposition]]
+- [[methodology/phase-3-threat-modeling|Phase 3: Threat Modeling]]
+- [[methodology/phase-4-test-planning|Phase 4: Test Planning]]
+- [[methodology/phase-5-execution|Phase 5: Execution]]
+- [[methodology/phase-6-triage-severity|Phase 6: Triage & Severity]]
+- [[methodology/phase-7-reporting|Phase 7: Reporting]]
+- [[methodology/phase-8-remediation-guidance|Phase 8: Remediation Guidance]]
+- [[methodology/phase-9-retest-regression|Phase 9: Retest & Regression]]
+- [[methodology/common-pitfalls|Common Pitfalls to Avoid]]

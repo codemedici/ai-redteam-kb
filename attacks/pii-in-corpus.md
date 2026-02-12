@@ -87,7 +87,7 @@ Sensitive personal information improperly included in training data or knowledge
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - PII exposure assessment across Data/Knowledge boundary
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - PII exposure assessment across Data/Knowledge boundary
 - [x] Data Governance & Privacy Testing - Primary focus on PII risks, anonymization validation, GDPR compliance (detail page pending)
 - [x] RAG & Retrieval Assessment - PII leakage through RAG corpus (detail page pending)
 

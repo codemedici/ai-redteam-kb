@@ -193,7 +193,7 @@ By addressing these pitfalls, organizations can conduct more effective AI red te
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - Structured approach to avoid ad hoc testing
-- [[evidence-reproducibility|Evidence & Reproducibility]] - Standards for documenting findings
-- [[framework-mapping|Framework Mapping]] - Guidance on framework alignment
-- [[phase-7-reporting|Phase 7: Reporting]] - Best practices for effective deliverables
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - Structured approach to avoid ad hoc testing
+- [[methodology/evidence-reproducibility|Evidence & Reproducibility]] - Standards for documenting findings
+- [[methodology/framework-mapping|Framework Mapping]] - Guidance on framework alignment
+- [[methodology/phase-7-reporting|Phase 7: Reporting]] - Best practices for effective deliverables

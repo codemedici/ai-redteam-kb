@@ -55,11 +55,11 @@ Effective deployment/governance security requires controls across operational la
 
 | Control | Applicable Issues | Type | Status |
 |---------|------------------|------|--------|
-| [[access-segmentation-and-rbac|Access Segmentation & RBAC]] | Weak Access Segmentation, API Authentication Bypass | Preventive | Planned |
-| [[telemetry-and-monitoring-architecture|Telemetry & Monitoring Architecture]] | Insufficient Telemetry and Tracing, Incident Response Gap | Detective | Planned |
-| [[incident-response-procedures|Incident Response Procedures]] | Incident Response Gap, Secrets in Prompts and Logs | Responsive | Planned |
-| [[rate-limiting-and-throttling|Rate Limiting & Throttling]] | API Rate Limiting Bypass, Third-Party Model Risks | Preventive | Planned |
-| [[kill-switch-and-session-termination|Kill Switch & Session Termination]] | Multiple issues (cross-boundary) | Responsive | Planned |
+| [[defenses/access-segmentation-and-rbac|Access Segmentation & RBAC]] | Weak Access Segmentation, API Authentication Bypass | Preventive | Planned |
+| [[defenses/telemetry-and-monitoring-architecture|Telemetry & Monitoring Architecture]] | Insufficient Telemetry and Tracing, Incident Response Gap | Detective | Planned |
+| [[defenses/incident-response-procedures|Incident Response Procedures]] | Incident Response Gap, Secrets in Prompts and Logs | Responsive | Planned |
+| [[defenses/rate-limiting-and-throttling|Rate Limiting & Throttling]] | API Rate Limiting Bypass, Third-Party Model Risks | Preventive | Planned |
+| [[defenses/kill-switch-and-session-termination|Kill Switch & Session Termination]] | Multiple issues (cross-boundary) | Responsive | Planned |
 
 [[attacks/|View all Deployment/Governance Issues]]
 
@@ -96,5 +96,5 @@ Deployment/Governance boundary controls interact with controls in other boundari
 ## Related Documentation
 
 - [[attacks/|Deployment/Governance Issues]] - Attack-specific mitigations
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
-- [[methodology|Methodology]] - Testing and validation approaches
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
+- [[methodology/methodology-overview|Methodology]] - Testing and validation approaches

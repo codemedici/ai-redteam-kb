@@ -89,8 +89,8 @@ Data leakage occurs when an LLM inadvertently reveals sensitive information thro
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Data leakage testing across Data/Knowledge boundary
-- [x] [[llm-application-red-team|LLM Application Red Team]] - Training data extraction and membership inference probes
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Data leakage testing across Data/Knowledge boundary
+- [x] [[playbooks/llm-application-red-team|LLM Application Red Team]] - Training data extraction and membership inference probes
 - [x] Data Governance & Privacy Testing - Primary focus on data leakage attack vectors (detail page pending)
 
 [[playbooks/engagements-overview|View all engagements]]

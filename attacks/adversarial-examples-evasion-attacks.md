@@ -813,7 +813,7 @@ But:
 - adversarial-training]] - Primary defense technique
 - input-validation]] - Preprocessing defenses
 - [[methodology/mitre-atlas-mapping]] - AML.T0043 (Craft Adversarial Data)
-- [[atlas/case-studies/physical-adversarial-patches]] - Real-world attacks
+- [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|Physical Adversarial Patches]] - Real-world attacks
 
 ## Source Citations
 

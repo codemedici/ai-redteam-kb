@@ -107,7 +107,7 @@ Every AI red team engagement begins with clear intake and scoping. This phase de
 - Trust boundary classification diagram
 - In-scope vs out-of-scope boundary determination
 
-[[trust-boundaries-overview|Learn more about trust boundaries →]]
+[[methodology/trust-boundaries-overview|Learn more about trust boundaries →]]
 
 ---
 
@@ -200,7 +200,7 @@ Every AI red team engagement begins with clear intake and scoping. This phase de
 
 **Impact:** Disagreements during reporting, findings dismissed as "not real vulnerabilities," wasted effort
 
-**Solution:** Agree upfront on evidence standards and severity definitions. Reference [[evidence-reproducibility|evidence standards]] and [[phase-6-triage-severity|severity model]].
+**Solution:** Agree upfront on evidence standards and severity definitions. Reference [[methodology/evidence-reproducibility|evidence standards]] and [[methodology/phase-6-triage-severity|severity model]].
 
 ---
 
@@ -456,7 +456,7 @@ By the end of Phase 1, the following artifacts should be complete:
 
 ## Transition to Phase 2
 
-Once scope is approved and access is provisioned, the engagement transitions to [[phase-2-system-decomposition|Phase 2: System Decomposition & Architecture Review]].
+Once scope is approved and access is provisioned, the engagement transitions to [[methodology/phase-2-system-decomposition|Phase 2: System Decomposition & Architecture Review]].
 
 **Handoff checklist:**
 - [ ] Scope document signed by stakeholders
@@ -472,8 +472,8 @@ Phase 2 will dive deep into the system architecture, creating detailed diagrams 
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 1 fits into the full engagement
-- [[phase-2-system-decomposition|Phase 2: System Decomposition]] - Next phase in the lifecycle
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Understanding the four-boundary model
-- [[common-pitfalls|Common Pitfalls]] - More anti-patterns to avoid
-- [[methodology-variations|Methodology Variations]] - How scoping differs by engagement type
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 1 fits into the full engagement
+- [[methodology/phase-2-system-decomposition|Phase 2: System Decomposition]] - Next phase in the lifecycle
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Understanding the four-boundary model
+- [[methodology/common-pitfalls|Common Pitfalls]] - More anti-patterns to avoid
+- [[methodology/methodology-variations|Methodology Variations]] - How scoping differs by engagement type

@@ -137,11 +137,11 @@ A machine learning engineer at a financial services firm has access to the model
 
 Documented incidents and research demonstrating model tampering:
 
-- [[poisongpt|PoisonGPT]] (2023): Foundation model checkpoint backdoor distributed via Hugging Face; survived fine-tuning
-- [[malicious-models-on-hugging-face|Malicious Models on Hugging Face]] (2024): Pickle deserialization enabling arbitrary code execution
-- [[rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|Rules File Backdoor]] (2024): Supply chain attack poisoning AI coding assistant instructions
+- [[atlas/case-studies/poisongpt|PoisonGPT]] (2023): Foundation model checkpoint backdoor distributed via Hugging Face; survived fine-tuning
+- [[atlas/case-studies/malicious-models-on-hugging-face|Malicious Models on Hugging Face]] (2024): Pickle deserialization enabling arbitrary code execution
+- [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|Rules File Backdoor]] (2024): Supply chain attack poisoning AI coding assistant instructions
 
-[[case-studies|View all ATLAS case studies]]
+[[atlas/case-studies|View all ATLAS case studies]]
 
 ---
 
@@ -149,7 +149,7 @@ Documented incidents and research demonstrating model tampering:
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Model integrity assessment across training/deployment lifecycle
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Model integrity assessment across training/deployment lifecycle
 - [x] Model Tampering & Supply Chain Risk - Primary focus on checkpoint poisoning, weight tampering, and pipeline security (detail page pending)
 - [x] Evaluation & Guardrail Validation - Validates model integrity controls in eval gates (detail page pending)
 

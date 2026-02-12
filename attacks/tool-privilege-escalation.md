@@ -157,8 +157,8 @@ This demonstrates both **vertical escalation** (read → write) and **horizontal
 ## Mitigations
 
 **Preventive Controls:**
-- **Least Privilege Tools**: Each tool granted minimum required permissions; separate read/write tools. See [[least-privilege-implementation|Least Privilege Tool Implementation]] for architectural guidance.
-- **Input Validation**: Strict whitelisting of tool arguments; reject injection patterns. See [[input-validation-patterns|Input Validation Patterns]] for validation approaches.
+- **Least Privilege Tools**: Each tool granted minimum required permissions; separate read/write tools. See [[defenses/least-privilege-implementation|Least Privilege Tool Implementation]] for architectural guidance.
+- **Input Validation**: Strict whitelisting of tool arguments; reject injection patterns. See [[defenses/input-validation-patterns|Input Validation Patterns]] for validation approaches.
 - **User Context Binding**: Tools always execute in originating user's security context (no privilege inheritance)
 - **RBAC Enforcement**: Tools check user roles/permissions before execution
 - **Argument Schemas**: Define and enforce strict type/format validation for all tool parameters
@@ -168,7 +168,7 @@ This demonstrates both **vertical escalation** (read → write) and **horizontal
 - **Tool Sandboxing**: Execute tools in isolated environments with limited network/filesystem access
 
 **Detective Controls:**
-- **Behavioral Anomaly Detection**: Alert on unusual tool usage patterns (time, frequency, sequence). See [[anomaly-detection-architecture|Anomaly Detection Architecture]] for detection patterns.
+- **Behavioral Anomaly Detection**: Alert on unusual tool usage patterns (time, frequency, sequence). See [[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]] for detection patterns.
 - **Privilege Monitoring**: Flag when low-privilege users invoke high-privilege tools
 - **Argument Inspection**: Scan tool arguments for injection patterns (SQL, shell, path traversal)
 - **Cross-User Access Alerts**: Detect when one user's session accesses another's data

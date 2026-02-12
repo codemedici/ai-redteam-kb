@@ -53,10 +53,10 @@ Effective model security requires multiple layers of controls working together:
 
 | Control | Applicable Issues | Type | Status |
 |---------|------------------|------|--------|
-| [[instruction-hierarchy-architecture|Instruction Hierarchy Architecture]] | Prompt Injection, System Prompt Leakage | Architectural | Planned |
-| [[output-filtering-and-sanitization|Output Filtering & Sanitization]] | Prompt Injection, System Prompt Leakage, Sensitive Info Disclosure | Preventive | Planned |
-| [[dual-llm-judge-pattern|Dual-LLM Judge Pattern]] | Prompt Injection, Jailbreak & Policy Bypass | Architectural | Planned |
-| [[adversarial-robustness-controls|Adversarial Robustness Controls]] | Jailbreak & Policy Bypass, Adversarial Robustness | Preventive | Planned |
+| [[defenses/instruction-hierarchy-architecture|Instruction Hierarchy Architecture]] | Prompt Injection, System Prompt Leakage | Architectural | Planned |
+| [[defenses/output-filtering-and-sanitization|Output Filtering & Sanitization]] | Prompt Injection, System Prompt Leakage, Sensitive Info Disclosure | Preventive | Planned |
+| [[defenses/dual-llm-judge-pattern|Dual-LLM Judge Pattern]] | Prompt Injection, Jailbreak & Policy Bypass | Architectural | Planned |
+| [[defenses/adversarial-robustness-controls|Adversarial Robustness Controls]] | Jailbreak & Policy Bypass, Adversarial Robustness | Preventive | Planned |
 
 [[attacks/|View all Model Issues]]
 
@@ -93,5 +93,5 @@ Model boundary controls interact with controls in other boundaries:
 ## Related Documentation
 
 - [[attacks/|Model Issues]] - Attack-specific mitigations
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
-- [[methodology|Methodology]] - Testing and validation approaches
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
+- [[methodology/methodology-overview|Methodology]] - Testing and validation approaches

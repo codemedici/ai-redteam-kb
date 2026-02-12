@@ -71,7 +71,7 @@ This engagement focuses on:
 - **Application / Agent Runtime**: How retrieved content interacts with system prompts and user queries
   - Issues tested: Prompt injection via retrieved text, context poisoning, insecure prompt assembly with retrieved content
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -82,26 +82,26 @@ This engagement focuses on:
 [This engagement does not focus on model-level testing. For base model prompt injection and jailbreak testing, see LLM Application Red Team.]
 
 **Applicable Issues:**
-- [[prompt-injection|Prompt Injection]] (indirect via retrieved content)
+- [[attacks/prompt-injection|Prompt Injection]] (indirect via retrieved content)
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary is the primary focus of this engagement. Testing validates the security of retrieval pipelines, knowledge corpus integrity, and embedding mechanisms. This boundary is critical for RAG systems where poisoned data can corrupt all downstream outputs.
 
 **Applicable Issues:**
-- [[rag-data-poisoning|RAG Data Poisoning]]
-- [[retrieval-manipulation|Retrieval Manipulation]]
-- [[embedding-poisoning|Embedding Poisoning]]
-- [[unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]]
-- [[pii-in-corpus|PII in Knowledge Corpus]]
+- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
+- [[attacks/retrieval-manipulation|Retrieval Manipulation]]
+- [[attacks/embedding-poisoning|Embedding Poisoning]]
+- [[attacks/unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]]
+- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
 
 ### Application / Agent Runtime
 
 The Application/Agent Runtime boundary is tested for how retrieved content interacts with system prompts and user queries. This includes prompt injection via retrieved text and insecure prompt assembly with retrieved content.
 
 **Applicable Issues:**
-- [[prompt-injection|Prompt Injection]] (indirect via retrieved content)
-- [[insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[attacks/prompt-injection|Prompt Injection]] (indirect via retrieved content)
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
@@ -193,7 +193,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **Query-Based Retrieval Manipulation**: Crafting queries that exploit retrieval logic to pull in malicious content
 - [x] **Information Leakage via Retrieval**: Extracting sensitive information from knowledge bases through crafted queries
 
-[[trust-boundaries-overview|Full attack taxonomy]]
+[[methodology/trust-boundaries-overview|Full attack taxonomy]]
 
 ---
 
@@ -324,7 +324,7 @@ This engagement produces findings mapped to:
 - AML.T0052: Training Data Poisoning (corpus poisoning)
 - AML.T0057: LLM Prompt Injection via Tool Output (retrieved text as tool output)
 
-[[atlas|Full ATLAS reference]]
+[[atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -388,7 +388,7 @@ Result: System retrieved email, incorporated hidden instruction, and attempted t
 
 **Remediation**: Implement strict separation between system instructions and retrieved content. Add content filtering to detect and strip instruction-like patterns from retrieved text. Require explicit user approval for tool invocations triggered by retrieved content.
 
-**Wiki Reference**: [[prompt-injection|Prompt Injection]]
+**Wiki Reference**: [[attacks/prompt-injection|Prompt Injection]]
 
 ---
 
@@ -539,16 +539,16 @@ Success rate: [X/Y attempts]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[prompt-injection|Prompt Injection]]
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
+4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[attacks/prompt-injection|Prompt Injection]]
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 - [[attacks/|Data/Knowledge Issues]]
 - [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
-- [[techniques|MITRE ATLAS Techniques]]
-- [[methodology|Methodology]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]

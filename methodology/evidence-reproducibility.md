@@ -451,7 +451,7 @@ Before a finding enters the final report:
 
 ## Related Documentation
 
-- [[phase-5-execution|Phase 5: Execution]] - Evidence capture during testing
-- [[phase-6-triage-severity|Phase 6: Triage & Severity]] - Using evidence for severity assessment
-- [[handling-non-determinism|Handling Non-Determinism]] - Detailed guidance on statistical validation
-- [[quality-assurance|Quality Assurance]] - Peer review and validation gates
+- [[methodology/phase-5-execution|Phase 5: Execution]] - Evidence capture during testing
+- [[methodology/phase-6-triage-severity|Phase 6: Triage & Severity]] - Using evidence for severity assessment
+- [[methodology/handling-non-determinism|Handling Non-Determinism]] - Detailed guidance on statistical validation
+- [[methodology/quality-assurance|Quality Assurance]] - Peer review and validation gates

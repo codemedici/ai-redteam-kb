@@ -764,14 +764,14 @@ By the end of Phase 7, the following artifacts should be complete:
 
 Reporting and remediation guidance are tightly coupled. Phase 8 provides additional detail on remediation strategies.
 
-[[phase-8-remediation-guidance|View Phase 8: Remediation Guidance →]]
+[[methodology/phase-8-remediation-guidance|View Phase 8: Remediation Guidance →]]
 
 ---
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 7 fits into the full engagement
-- [[phase-6-triage-severity|Phase 6: Triage & Severity]] - Previous phase
-- [[phase-8-remediation-guidance|Phase 8: Remediation Guidance]] - Next phase
-- [[framework-mapping|Framework Mapping]] - ATLAS, OWASP, NIST integration
-- [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 7 fits into the full engagement
+- [[methodology/phase-6-triage-severity|Phase 6: Triage & Severity]] - Previous phase
+- [[methodology/phase-8-remediation-guidance|Phase 8: Remediation Guidance]] - Next phase
+- [[methodology/framework-mapping|Framework Mapping]] - ATLAS, OWASP, NIST integration
+- [[methodology/common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

@@ -55,12 +55,12 @@ Effective application/agent runtime security requires controls at multiple layer
 
 | Control | Applicable Issues | Type | Status |
 |---------|------------------|------|--------|
-| [[least-privilege-implementation|Least Privilege Tool Implementation]] | Tool Privilege Escalation, Unsafe Tool Invocation, Agent Goal Hijacking | Preventive | Planned |
-| [[tool-sandboxing-architecture|Tool Sandboxing Architecture]] | Tool Privilege Escalation, Unsafe Tool Invocation | Preventive | Planned |
-| [[user-context-binding|User Context Binding]] | Tool Privilege Escalation, Authentication Context Confusion | Preventive | Planned |
-| [[approval-workflow-patterns|Approval Workflow Patterns]] | Tool Privilege Escalation, Agent Goal Hijacking | Preventive | Planned |
-| [[input-validation-patterns|Input Validation Patterns]] | Insecure Prompt Assembly, Insufficient Output Encoding | Preventive | Planned |
-| [[anomaly-detection-architecture|Anomaly Detection Architecture]] | Tool Privilege Escalation, Agent Goal Hijacking, Unsafe Tool Invocation | Detective | Planned |
+| [[defenses/least-privilege-implementation|Least Privilege Tool Implementation]] | Tool Privilege Escalation, Unsafe Tool Invocation, Agent Goal Hijacking | Preventive | Planned |
+| [[defenses/tool-sandboxing-architecture|Tool Sandboxing Architecture]] | Tool Privilege Escalation, Unsafe Tool Invocation | Preventive | Planned |
+| [[defenses/user-context-binding|User Context Binding]] | Tool Privilege Escalation, Authentication Context Confusion | Preventive | Planned |
+| [[defenses/approval-workflow-patterns|Approval Workflow Patterns]] | Tool Privilege Escalation, Agent Goal Hijacking | Preventive | Planned |
+| [[defenses/input-validation-patterns|Input Validation Patterns]] | Insecure Prompt Assembly, Insufficient Output Encoding | Preventive | Planned |
+| [[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]] | Tool Privilege Escalation, Agent Goal Hijacking, Unsafe Tool Invocation | Detective | Planned |
 
 [[attacks/|View all Application/Agent Runtime Issues]]
 
@@ -97,5 +97,5 @@ Application/Agent Runtime boundary controls interact with controls in other boun
 ## Related Documentation
 
 - [[attacks/|Application/Agent Runtime Issues]] - Attack-specific mitigations
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
-- [[methodology|Methodology]] - Testing and validation approaches
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
+- [[methodology/methodology-overview|Methodology]] - Testing and validation approaches

@@ -21,7 +21,7 @@ Findings mapped to:
 - **Techniques**: Specific attack methods (e.g., AML.T0051: LLM Prompt Injection)
 - **Case Studies**: Real-world incidents demonstrating pattern
 
-[[atlas|Browse ATLAS reference]] | [[tactics|Tactics overview]] | [[techniques|Techniques catalog]]
+[[atlas/atlas-overview|Browse ATLAS reference]] | [[atlas/tactics|Tactics overview]] | [[atlas/techniques|Techniques catalog]]
 
 ### OWASP LLM Top 10 (Risk Framework)
 
@@ -36,7 +36,7 @@ Findings categorized by Top 10 risk classes:
 - LLM09: Misinformation
 - LLM10: Unbounded Consumption
 
-[[trust-boundaries-overview|OWASP mapping details in issue pages]]
+[[methodology/trust-boundaries-overview|OWASP mapping details in issue pages]]
 
 ### NIST AI RMF (Compliance Framework)
 
@@ -54,4 +54,4 @@ Each finding includes "Framework References" section with specific IDs. Complian
 - Gaps: Items out of scope for engagement
 - Findings distribution: Heat map of vulnerabilities per framework category
 
-**Does not duplicate framework content**: Links to [[trust-boundaries-overview|docs taxonomy]] for technical depth; reports focus on findings and mapping only.
+**Does not duplicate framework content**: Links to [[methodology/trust-boundaries-overview|docs taxonomy]] for technical depth; reports focus on findings and mapping only.

@@ -14,10 +14,10 @@ Instruction hierarchy architecture is a fundamental defensive pattern that creat
 
 This control addresses the following security issues:
 
-- **[[prompt-injection|Prompt Injection]]**: Prevents direct and indirect prompt injection by maintaining clear separation between system and user content
-- **[[system-prompt-leakage|System Prompt Leakage]]**: Protects system prompts from extraction by enforcing structural boundaries
-- **[[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Prevents safety guardrail bypass by ensuring system instructions cannot be overridden
-- **[[insecure-prompt-assembly|Insecure Prompt Assembly]]**: Provides secure prompt assembly patterns that prevent instruction blending
+- **[[attacks/prompt-injection|Prompt Injection]]**: Prevents direct and indirect prompt injection by maintaining clear separation between system and user content
+- **[[attacks/system-prompt-leakage|System Prompt Leakage]]**: Protects system prompts from extraction by enforcing structural boundaries
+- **[[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Prevents safety guardrail bypass by ensuring system instructions cannot be overridden
+- **[[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]**: Provides secure prompt assembly patterns that prevent instruction blending
 
 [[attacks/|See [Model Issues]] and [[attacks/|Application/Agent Runtime Issues]] for complete issue catalogs]
 
@@ -134,10 +134,10 @@ User Input → Format Validation → Trust Marker Injection → Prompt Assembly
 
 This control works best when combined with:
 
-- **[[output-filtering-and-sanitization|Output Filtering & Sanitization]]**: Filters outputs to remove any leaked system content
-- **[[input-validation-patterns|Input Validation Patterns]]**: Validates user input before prompt assembly
-- **[[dual-llm-judge-pattern|Dual-LLM Judge Pattern]]**: Validates outputs to ensure hierarchy was respected
-- **[[anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects attempts to violate instruction hierarchy
+- **[[defenses/output-filtering-and-sanitization|Output Filtering & Sanitization]]**: Filters outputs to remove any leaked system content
+- **[[defenses/input-validation-patterns|Input Validation Patterns]]**: Validates user input before prompt assembly
+- **[[defenses/dual-llm-judge-pattern|Dual-LLM Judge Pattern]]**: Validates outputs to ensure hierarchy was respected
+- **[[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects attempts to violate instruction hierarchy
 
 [[defenses/|See [Controls Index]] for complete control catalog]
 
@@ -156,7 +156,7 @@ This control works best when combined with:
 
 ## References
 
-- [[prompt-injection|Prompt Injection Issue]] - Detailed attack vectors and mitigations
-- [[system-prompt-leakage|System Prompt Leakage Issue]] - Related attack patterns
-- [[insecure-prompt-assembly|Insecure Prompt Assembly Issue]] - Secure assembly patterns
-- [[phase-5-execution|Methodology: Phase 5 Execution]] - Testing approaches for instruction hierarchy
+- [[attacks/prompt-injection|Prompt Injection Issue]] - Detailed attack vectors and mitigations
+- [[attacks/system-prompt-leakage|System Prompt Leakage Issue]] - Related attack patterns
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly Issue]] - Secure assembly patterns
+- [[methodology/phase-5-execution|Methodology: Phase 5 Execution]] - Testing approaches for instruction hierarchy

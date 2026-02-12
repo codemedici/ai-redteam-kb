@@ -160,7 +160,7 @@ Triage transforms raw findings from Phase 5 into validated, risk-prioritized vul
 - Report confidence intervals if applicable
 - Note that results may vary in production
 
-[[handling-non-determinism|Learn more about handling non-determinism →]]
+[[methodology/handling-non-determinism|Learn more about handling non-determinism →]]
 
 ---
 
@@ -357,7 +357,7 @@ Map each finding to ATLAS tactics and techniques:
 - **ATLAS Tactic:** AML.TA0009 (Exfiltration)
 - **ATLAS Technique:** AML.T0051 (LLM Prompt Injection)
 
-[[techniques|Browse ATLAS techniques →]]
+[[atlas/techniques|Browse ATLAS techniques →]]
 
 ---
 
@@ -522,7 +522,7 @@ By the end of Phase 6, the following artifacts should be complete:
 
 ## Transition to Phase 7
 
-Once triage is complete, the engagement transitions to [[phase-7-reporting|Phase 7: Reporting & Communication]].
+Once triage is complete, the engagement transitions to [[methodology/phase-7-reporting|Phase 7: Reporting & Communication]].
 
 **Handoff checklist:**
 - [ ] All findings classified (confirmed/hypothesis/observation)
@@ -538,9 +538,9 @@ Phase 7 will package the validated findings into executive and technical reports
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 6 fits into the full engagement
-- [[phase-5-execution|Phase 5: Execution]] - Previous phase
-- [[phase-7-reporting|Phase 7: Reporting]] - Next phase
-- [[evidence-reproducibility|Evidence & Reproducibility]] - Standards and thresholds
-- [[handling-non-determinism|Handling Non-Determinism]] - Statistical validation
-- [[framework-mapping|Framework Mapping]] - ATLAS, OWASP, NIST integration
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 6 fits into the full engagement
+- [[methodology/phase-5-execution|Phase 5: Execution]] - Previous phase
+- [[methodology/phase-7-reporting|Phase 7: Reporting]] - Next phase
+- [[methodology/evidence-reproducibility|Evidence & Reproducibility]] - Standards and thresholds
+- [[methodology/handling-non-determinism|Handling Non-Determinism]] - Statistical validation
+- [[methodology/framework-mapping|Framework Mapping]] - ATLAS, OWASP, NIST integration

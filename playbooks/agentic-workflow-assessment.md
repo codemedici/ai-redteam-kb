@@ -76,7 +76,7 @@ This engagement focuses on:
 - **Model**: Agent's underlying LLM behavior and manipulation resistance (agent-specific prompt injection)
   - Issues tested: Prompt injection targeting agent planning, role confusion in agent context
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -87,8 +87,8 @@ This engagement focuses on:
 The Model boundary is tested for agent-specific prompt injection and manipulation resistance. Testing focuses on how prompt injection affects agent planning and decision-making, rather than general model behavior.
 
 **Applicable Issues:**
-- [[prompt-injection|Prompt Injection]] (agent-specific)
-- [[jailbreak-policy-bypass|Jailbreak and Policy Bypass]] (in agent context)
+- [[attacks/prompt-injection|Prompt Injection]] (agent-specific)
+- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]] (in agent context)
 
 ### Data / Knowledge
 
@@ -102,11 +102,11 @@ The Model boundary is tested for agent-specific prompt injection and manipulatio
 The Application/Agent Runtime boundary is the primary focus of this engagement. Testing validates agent planning mechanisms, tool integration security, memory management, goal-setting, and autonomy safeguards.
 
 **Applicable Issues:**
-- [[agent-goal-hijack|Agent Goal Hijacking]]
-- [[tool-privilege-escalation|Tool Privilege Escalation]]
-- [[unsafe-tool-invocation|Unsafe Tool Invocation]]
-- [[auth-context-confusion|Authentication Context Confusion]]
-- [[insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]
+- [[attacks/auth-context-confusion|Authentication Context Confusion]]
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
@@ -231,7 +231,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **Memory Poisoning**: Inject persistent instructions into agent memory
 - [x] **Tool Argument Injection**: SQL/command injection through tool parameters
 
-[[trust-boundaries-overview|Full attack taxonomy]]
+[[methodology/trust-boundaries-overview|Full attack taxonomy]]
 
 ---
 
@@ -363,7 +363,7 @@ This engagement produces findings mapped to:
 - AML.T0057: LLM Prompt Injection via Tool Output
 - AML.T0061: Agent Goal Hijacking (emerging technique)
 
-[[atlas|Full ATLAS reference]]
+[[atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -612,7 +612,7 @@ Success rate: [X/Y attempts]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
 4. **Explore applicable issues**: [[methodology/application-agent-boundary-overview|Agent Goal Hijacking]], [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 5. **** to discuss scoping, timeline, and pricing
 
@@ -620,8 +620,8 @@ Success rate: [X/Y attempts]
 
 ## Technical References
 
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 - [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
 - [[attacks/|Model Issues]]
-- [[techniques|MITRE ATLAS Techniques]]
-- [[methodology|Methodology]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]

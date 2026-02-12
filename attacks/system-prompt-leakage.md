@@ -95,7 +95,7 @@ Uses Lakera Gandalf prompt injection classifier — intercepts and evaluates use
 ## Related Notes
 
 - [[attacks/prompt-injection|Prompt Injection and LLM Manipulation]]
-- [[attacks/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
+- [[methodology/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
 - [[defenses/input-validation-transformation|Input Validation and Transformation]]
 - [[defenses/output-monitoring-validation|Output Monitoring and Validation]]
 

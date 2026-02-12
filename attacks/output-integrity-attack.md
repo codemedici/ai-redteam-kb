@@ -173,8 +173,8 @@ Output integrity attacks target the infrastructure layer between model inference
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Deployment/Governance boundary comprehensive assessment
-- [x] [[llm-application-red-team|LLM Application Red Team]] - Integration security and API vulnerability testing
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Deployment/Governance boundary comprehensive assessment
+- [x] [[playbooks/llm-application-red-team|LLM Application Red Team]] - Integration security and API vulnerability testing
 - [x] Deployment & Integration Security - Infrastructure-level attack surface validation (detail page pending)
 - [x] Governance & Compliance Deep Dive - Integrity verification and audit trail assessment (detail page pending)
 

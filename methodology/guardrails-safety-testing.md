@@ -25,7 +25,7 @@ Safety evaluation validates whether guardrails function under adversarial pressu
 - Under 10% bypass rate on multi-turn conditioning
 - Consistent refusal messaging without "helpful but dangerous" hedging
 
-**Link to wiki**: [[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
+**Link to wiki**: [[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
 
 ### Tool Misuse Prevention
 
@@ -64,7 +64,7 @@ Safety evaluation validates whether guardrails function under adversarial pressu
 - Retrieved content processed as data, not executable instructions
 - Injections flagged by monitoring and blocked
 
-**Link to wiki**: [[prompt-injection|Prompt Injection]]
+**Link to wiki**: [[attacks/prompt-injection|Prompt Injection]]
 
 ### Policy Enforcement Correctness
 

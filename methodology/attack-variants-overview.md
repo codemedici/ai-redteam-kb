@@ -55,7 +55,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Training data leakage
 - Bias and toxicity exploitation
 
-[[variant-llm-applications|Detailed guidance →]]
+[[methodology/variant-llm-applications|Detailed guidance →]]
 
 ---
 
@@ -80,7 +80,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Cross-tenant data leakage
 - Citation manipulation
 
-[[variant-rag-systems|Detailed guidance →]]
+[[methodology/variant-rag-systems|Detailed guidance →]]
 
 ---
 
@@ -105,7 +105,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Feedback loop poisoning (corrupting agent memory)
 - Sandbox escapes
 
-[[variant-agentic-systems|Detailed guidance →]]
+[[methodology/variant-agentic-systems|Detailed guidance →]]
 
 ---
 
@@ -130,7 +130,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Man-in-the-middle attacks (model downloads)
 - Infrastructure compromise
 
-[[variant-supply-chain|Detailed guidance →]]
+[[methodology/variant-supply-chain|Detailed guidance →]]
 
 ---
 
@@ -155,7 +155,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Evaluation set contamination
 - Governance process bypass
 
-[[variant-evaluation-pipelines|Detailed guidance →]]
+[[methodology/variant-evaluation-pipelines|Detailed guidance →]]
 
 ---
 
@@ -206,7 +206,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Consider metric gaming
 - Model feedback manipulation
 
-[[phase-3-threat-modeling|Phase 3 guidance →]]
+[[methodology/phase-3-threat-modeling|Phase 3 guidance →]]
 
 ---
 
@@ -244,7 +244,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Feedback manipulation techniques
 - Governance bypass scenarios
 
-[[phase-4-test-planning|Phase 4 guidance →]]
+[[methodology/phase-4-test-planning|Phase 4 guidance →]]
 
 ---
 
@@ -282,7 +282,7 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - Feedback injection
 - Evidence: Eval results, detector outputs, metrics
 
-[[phase-5-execution|Phase 5 guidance →]]
+[[methodology/phase-5-execution|Phase 5 guidance →]]
 
 ---
 
@@ -329,35 +329,35 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 ## Variant-Specific Resources
 
 ### LLM Applications
-- [[variant-llm-applications|Detailed methodology →]]
+- [[methodology/variant-llm-applications|Detailed methodology →]]
 - [[attacks/|Model boundary issues →]]
-- [[llm-application-red-team|Relevant engagements →]]
+- [[playbooks/llm-application-red-team|Relevant engagements →]]
 
 ### RAG Systems
-- [[variant-rag-systems|Detailed methodology →]]
+- [[methodology/variant-rag-systems|Detailed methodology →]]
 - [[attacks/|Data/Knowledge boundary issues →]]
-- [[rag-retrieval-assessment|Relevant engagements →]]
+- [[playbooks/rag-retrieval-assessment|Relevant engagements →]]
 
 ### Agentic Systems
-- [[variant-agentic-systems|Detailed methodology →]]
+- [[methodology/variant-agentic-systems|Detailed methodology →]]
 - [[methodology/application-agent-boundary-overview|Application/Agent boundary issues →]]
-- [[agentic-workflow-assessment|Relevant engagements →]]
+- [[playbooks/agentic-workflow-assessment|Relevant engagements →]]
 
 ### Supply Chain
-- [[variant-supply-chain|Detailed methodology →]]
-- [[ai-supply-chain-security|Relevant engagements →]]
+- [[methodology/variant-supply-chain|Detailed methodology →]]
+- [[playbooks/ai-supply-chain-security|Relevant engagements →]]
 
 ### Evaluation Pipelines
-- [[variant-evaluation-pipelines|Detailed methodology →]]
-- [[evaluation-pipeline-review|Relevant engagements →]]
+- [[methodology/variant-evaluation-pipelines|Detailed methodology →]]
+- [[playbooks/evaluation-pipeline-review|Relevant engagements →]]
 
 ---
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - Core 9-phase methodology
-- [[phase-3-threat-modeling|Phase 3: Threat Modeling]] - Variant-specific threat enumeration
-- [[phase-4-test-planning|Phase 4: Test Planning]] - Technique selection by variant
-- [[phase-5-execution|Phase 5: Execution]] - Testing approaches by variant
-- [[trust-boundaries-overview|Trust Boundaries]] - Attack taxonomy by boundary
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - Core 9-phase methodology
+- [[methodology/phase-3-threat-modeling|Phase 3: Threat Modeling]] - Variant-specific threat enumeration
+- [[methodology/phase-4-test-planning|Phase 4: Test Planning]] - Technique selection by variant
+- [[methodology/phase-5-execution|Phase 5: Execution]] - Testing approaches by variant
+- [[methodology/trust-boundaries-overview|Trust Boundaries]] - Attack taxonomy by boundary
 - [[playbooks/engagements-overview|Engagements]] - Engagement types by system variant

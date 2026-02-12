@@ -293,6 +293,6 @@ if result.accepted:
 
 ## Related Documentation
 
-- [[attack-variants-overview|Attack Variants Overview]]
-- [[evaluation-pipeline-review|Evaluation Pipeline Review Engagement]]
-- [[guardrails-safety-testing|Guardrails & Safety Testing]]
+- [[methodology/attack-variants-overview|Attack Variants Overview]]
+- [[playbooks/evaluation-pipeline-review|Evaluation Pipeline Review Engagement]]
+- [[methodology/guardrails-safety-testing|Guardrails & Safety Testing]]

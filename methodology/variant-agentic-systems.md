@@ -247,6 +247,6 @@ def secure_database_tool(query, params):
 
 ## Related Documentation
 
-- [[attack-variants-overview|Attack Variants Overview]]
+- [[methodology/attack-variants-overview|Attack Variants Overview]]
 - [[methodology/application-agent-boundary-overview|Application/Agent Boundary Issues]]
-- [[agentic-workflow-assessment|Agentic Workflow Assessment Engagement]]
+- [[playbooks/agentic-workflow-assessment|Agentic Workflow Assessment Engagement]]

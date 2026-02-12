@@ -233,7 +233,7 @@ Apply principles from the **NIST Secure Software Development Framework (SSDF)** 
 #### Attack Vectors & Vulnerabilities
 
 - **Compromised ingestion pipelines or weak access controls:**
-  - Enable subtle [[data-poisoning-attacks|feature poisoning]]
+  - Enable subtle [[attacks/data-poisoning-attacks|feature poisoning]]
   - Potentially affecting multiple downstream models
 - **Insecure access controls:**
   - Exfiltration of sensitive feature data
@@ -618,11 +618,11 @@ Graphics Processing Units (GPUs) are central to AI but introduce unique security
 
 ## Related Concepts
 
-- [[data-poisoning-attacks|Data Poisoning Attacks]] - Upstream data manipulation
-- [[model-extraction|Model Extraction and Stealing]] - Model IP theft
-- [[prompt-injection|Prompt Injection]] - Model-level attacks
-- [[adversarial-examples-evasion-attacks|Adversarial Examples and Evasion]] - Inference-time attacks
-- [[ai-red-teaming-definition-lifecycle|AI Red Teaming Lifecycle]] - Systematic assessment methodology
+- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]] - Upstream data manipulation
+- [[attacks/model-extraction|Model Extraction and Stealing]] - Model IP theft
+- [[attacks/prompt-injection|Prompt Injection]] - Model-level attacks
+- [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples and Evasion]] - Inference-time attacks
+- [[methodology/ai-red-teaming-definition-lifecycle|AI Red Teaming Lifecycle]] - Systematic assessment methodology
 
 ---
 

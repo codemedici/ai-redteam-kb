@@ -159,7 +159,7 @@ A competitor discovers that your organization offers a proprietary sentiment ana
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Model boundary security validation, API extraction attempts
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Model boundary security validation, API extraction attempts
 - [x] Model Tampering & Supply Chain Risk - Validates model provenance and theft prevention controls (detail page pending)
 - [x] Agentic Workflow Assessment (Extended) - If model theft used to enhance agent exploitation (detail page pending)
 

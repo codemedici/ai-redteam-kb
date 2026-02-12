@@ -123,8 +123,8 @@ Sometimes the training data itself is a valuable proprietary asset (e.g., curate
 ### 5. Enabling Further Attacks
 
 Knowing a specific record was used in training might give an adversary a foothold for other privacy attacks:
-- **Attribute inference:** Inferring other sensitive attributes (see [[privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]])
-- **Targeted data poisoning:** Using membership knowledge to craft more effective [[data-poisoning-attacks|poisoning attacks]]
+- **Attribute inference:** Inferring other sensitive attributes (see [[attacks/privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]])
+- **Targeted data poisoning:** Using membership knowledge to craft more effective [[attacks/data-poisoning-attacks|poisoning attacks]]
 
 > **WARNING:** The risk of MIAs is particularly high for models trained on sensitive or personal data. Organizations deploying these models must treat MIA threats as a **primary security and privacy concern** in their risk assessments and compliance efforts.
 
@@ -220,7 +220,7 @@ While not strictly MIA, these attacks build on membership inference:
 
 **Attribute Inference:** If membership is confirmed, infer other sensitive attributes about the member
 
-See [[privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]] for details.
+See [[attacks/privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]] for details.
 
 ### 4. Metric-Based Attacks
 
@@ -387,10 +387,10 @@ Non-technical defenses:
 
 ## Related Concepts
 
-- [[privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]] - Attribute inference, model inversion
-- [[data-poisoning-attacks|Data Poisoning Attacks]] - MIA can enable targeted poisoning
-- [[adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
-- [[model-extraction|Model Extraction]] - Related IP theft attack
+- [[attacks/privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]] - Attribute inference, model inversion
+- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]] - MIA can enable targeted poisoning
+- [[defenses/adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
+- [[attacks/model-extraction|Model Extraction]] - Related IP theft attack
 
 ---
 

@@ -17,24 +17,24 @@ Input validation patterns are cross-boundary preventive controls that validate, 
 This control addresses the following security issues across multiple boundaries:
 
 **Model Boundary:**
-- **[[prompt-injection|Prompt Injection]]**: Filters meta-instructions, role-play keywords, and injection patterns from user inputs
-- **[[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Validates inputs for jailbreak techniques and policy bypass attempts
+- **[[attacks/prompt-injection|Prompt Injection]]**: Filters meta-instructions, role-play keywords, and injection patterns from user inputs
+- **[[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Validates inputs for jailbreak techniques and policy bypass attempts
 
 **Data/Knowledge Boundary:**
-- **[[rag-data-poisoning|RAG Data Poisoning]]**: Validates documents before ingestion into knowledge bases
-- **[[embedding-poisoning|Embedding Poisoning]]**: Validates embedding inputs for manipulation attempts
+- **[[attacks/rag-data-poisoning|RAG Data Poisoning]]**: Validates documents before ingestion into knowledge bases
+- **[[attacks/embedding-poisoning|Embedding Poisoning]]**: Validates embedding inputs for manipulation attempts
 
 **Application/Agent Runtime Boundary:**
-- **[[insecure-prompt-assembly|Insecure Prompt Assembly]]**: Validates components before prompt assembly
-- **[[insufficient-output-encoding|Insufficient Output Encoding]]**: Validates outputs before encoding to prevent injection
-- **[[tool-privilege-escalation|Tool Privilege Escalation]]**: Validates tool arguments to prevent injection-based privilege escalation
-- **[[unsafe-tool-invocation|Unsafe Tool Invocation]]**: Validates tool parameters before execution
+- **[[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]**: Validates components before prompt assembly
+- **[[attacks/insufficient-output-encoding|Insufficient Output Encoding]]**: Validates outputs before encoding to prevent injection
+- **[[attacks/tool-privilege-escalation|Tool Privilege Escalation]]**: Validates tool arguments to prevent injection-based privilege escalation
+- **[[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Validates tool parameters before execution
 
 **Deployment/Governance Boundary:**
-- **[[api-authentication-bypass|API Authentication Bypass]]**: Validates authentication inputs
-- **[[secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]**: Filters sensitive data from inputs
+- **[[attacks/api-authentication-bypass|API Authentication Bypass]]**: Validates authentication inputs
+- **[[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]**: Filters sensitive data from inputs
 
-[[trust-boundaries-overview|See [Trust Boundaries Overview]] for complete issue catalogs]
+[[methodology/trust-boundaries-overview|See [Trust Boundaries Overview]] for complete issue catalogs]
 
 ## Implementation Approach
 
@@ -147,12 +147,12 @@ External Input → Format Validation → Pattern Filtering → Sanitization → 
 
 This control works best when combined with:
 
-- **[[instruction-hierarchy-architecture|Instruction Hierarchy Architecture]]**: Hierarchy provides structural separation; validation filters malicious content
-- **[[anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detection catches attacks that bypass validation
-- **[[least-privilege-implementation|Least Privilege Tool Implementation]]**: Validation prevents injection; least privilege limits impact
-- **[[source-validation-and-trust-scoring|Source Validation & Trust Scoring]]**: Validates data sources before ingestion
+- **[[defenses/instruction-hierarchy-architecture|Instruction Hierarchy Architecture]]**: Hierarchy provides structural separation; validation filters malicious content
+- **[[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detection catches attacks that bypass validation
+- **[[defenses/least-privilege-implementation|Least Privilege Tool Implementation]]**: Validation prevents injection; least privilege limits impact
+- **[[defenses/source-validation-and-trust-scoring|Source Validation & Trust Scoring]]**: Validates data sources before ingestion
 
-[[trust-boundaries-overview|See [Controls Indexes]] for complete control catalogs]
+[[methodology/trust-boundaries-overview|See [Controls Indexes]] for complete control catalogs]
 
 ## Framework References
 
@@ -170,7 +170,7 @@ This control works best when combined with:
 
 ## References
 
-- [[prompt-injection|Prompt Injection Issue]] - Validation approaches for injection prevention
-- [[insecure-prompt-assembly|Insecure Prompt Assembly Issue]] - Secure assembly patterns
-- [[tool-privilege-escalation|Tool Privilege Escalation Issue]] - Tool argument validation
-- [[phase-5-execution|Methodology: Phase 5 Execution]] - Testing validation effectiveness
+- [[attacks/prompt-injection|Prompt Injection Issue]] - Validation approaches for injection prevention
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly Issue]] - Secure assembly patterns
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Tool argument validation
+- [[methodology/phase-5-execution|Methodology: Phase 5 Execution]] - Testing validation effectiveness

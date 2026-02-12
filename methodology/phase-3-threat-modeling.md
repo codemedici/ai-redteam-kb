@@ -457,7 +457,7 @@ Map threats to ATLAS tactics and techniques:
 - Model Inversion → AML.T0043
 - Adversarial Examples → AML.T0048
 
-[[techniques|Browse ATLAS techniques →]]
+[[atlas/techniques|Browse ATLAS techniques →]]
 
 **Outputs:**
 - STRIDE threat matrix
@@ -695,7 +695,7 @@ By the end of Phase 3, the following artifacts should be complete:
 
 ## Transition to Phase 4
 
-Once threat modeling is complete, the engagement transitions to [[phase-4-test-planning|Phase 4: Test Planning & Coverage]].
+Once threat modeling is complete, the engagement transitions to [[methodology/phase-4-test-planning|Phase 4: Test Planning & Coverage]].
 
 **Handoff checklist:**
 - [ ] Threat model document complete
@@ -711,10 +711,10 @@ Phase 4 will take the prioritized threat scenarios and testing objectives from P
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 3 fits into the full engagement
-- [[phase-2-system-decomposition|Phase 2: System Decomposition]] - Previous phase
-- [[phase-4-test-planning|Phase 4: Test Planning]] - Next phase
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Threat enumeration by boundary
-- [[tactics|MITRE ATLAS Tactics]] - High-level adversary objectives
-- [[techniques|MITRE ATLAS Techniques]] - Specific attack methods
-- [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 3 fits into the full engagement
+- [[methodology/phase-2-system-decomposition|Phase 2: System Decomposition]] - Previous phase
+- [[methodology/phase-4-test-planning|Phase 4: Test Planning]] - Next phase
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Threat enumeration by boundary
+- [[atlas/tactics|MITRE ATLAS Tactics]] - High-level adversary objectives
+- [[atlas/techniques|MITRE ATLAS Techniques]] - Specific attack methods
+- [[methodology/common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

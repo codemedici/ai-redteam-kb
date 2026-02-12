@@ -235,8 +235,8 @@ Training data memorization occurs when ML models store and subsequently leak ver
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Model boundary privacy assessment
-- [x] [[ai-model-risk-assessment|AI Model Risk Assessment]] - Training data leakage and memorization testing
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Model boundary privacy assessment
+- [x] [[playbooks/ai-model-risk-assessment|AI Model Risk Assessment]] - Training data leakage and memorization testing
 - [x] Data Governance & Privacy Testing - PII leakage and regulatory compliance validation (detail page pending)
 - [x] Model Tampering & Supply Chain Risk - Membership inference on third-party models (detail page pending)
 

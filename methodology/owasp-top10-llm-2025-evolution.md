@@ -35,8 +35,8 @@ pages: "339-355"
 
 | Entry | Position | Rationale |
 |-------|----------|-----------|
-| **[[attacks/system-prompt-leakage\|System Prompt Leakage]]** (LLM07:2025) | #7 | Real-world prompt extraction vulnerabilities |
-| **[[attacks/vector-embedding-weaknesses\|Vector and Embedding Weaknesses]]** (LLM08:2025) | #8 | Rise of RAG architectures creating new attack vectors |
+| **[[attacks/system-prompt-leakage|System Prompt Leakage]]** (LLM07:2025) | #7 | Real-world prompt extraction vulnerabilities |
+| **[[attacks/vector-embedding-weaknesses|Vector and Embedding Weaknesses]]** (LLM08:2025) | #8 | Rise of RAG architectures creating new attack vectors |
 
 ## Architecture Evolution
 

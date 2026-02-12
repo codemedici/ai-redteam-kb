@@ -118,7 +118,7 @@ Map test cases to ATLAS techniques:
 - Exfiltration: PII leakage, model output exfiltration
 - Impact: Service disruption, harmful content generation
 
-[[techniques|Browse ATLAS techniques →]]
+[[atlas/techniques|Browse ATLAS techniques →]]
 
 **Trust Boundary Coverage:**
 
@@ -129,7 +129,7 @@ Ensure each in-scope trust boundary has test cases:
 - **Application/Agent Boundary:** Tool misuse, argument injection, goal hijacking
 - **Deployment/Governance:** Access control bypass, secrets exposure, monitoring gaps
 
-[[trust-boundaries-overview|View trust boundaries →]]
+[[methodology/trust-boundaries-overview|View trust boundaries →]]
 
 **Outputs:**
 - Coverage matrix showing which frameworks/boundaries are tested
@@ -380,7 +380,7 @@ For each test case, create a playbook entry:
 - **Probabilistic (50-79%):** Succeeds frequently but not always
 - **Edge Case (&lt;50%):** Rare conditions, documented as observation
 
-[[evidence-reproducibility|Learn more about reproducibility thresholds →]]
+[[methodology/evidence-reproducibility|Learn more about reproducibility thresholds →]]
 
 **Exploitability:**
 - **Trivial:** Single prompt, no prerequisites
@@ -547,7 +547,7 @@ By the end of Phase 4, the following artifacts should be complete:
 
 ## Transition to Phase 5
 
-Once test planning is complete, the engagement transitions to [[phase-5-execution|Phase 5: Execution (Adversarial Testing)]].
+Once test planning is complete, the engagement transitions to [[methodology/phase-5-execution|Phase 5: Execution (Adversarial Testing)]].
 
 **Handoff checklist:**
 - [ ] Test plan document complete with all test cases
@@ -564,11 +564,11 @@ Phase 5 will execute the test plan, using the playbooks as a starting point whil
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 4 fits into the full engagement
-- [[phase-3-threat-modeling|Phase 3: Threat Modeling]] - Previous phase
-- [[phase-5-execution|Phase 5: Execution]] - Next phase
-- [[evidence-reproducibility|Evidence & Reproducibility]] - Success criteria and thresholds
-- [[tooling-automation|Tooling & Automation]] - Detailed tool guidance
-- [[trust-boundaries-overview|Trust Boundaries]] - Coverage by boundary
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 4 fits into the full engagement
+- [[methodology/phase-3-threat-modeling|Phase 3: Threat Modeling]] - Previous phase
+- [[methodology/phase-5-execution|Phase 5: Execution]] - Next phase
+- [[methodology/evidence-reproducibility|Evidence & Reproducibility]] - Success criteria and thresholds
+- [[methodology/tooling-automation|Tooling & Automation]] - Detailed tool guidance
+- [[methodology/trust-boundaries-overview|Trust Boundaries]] - Coverage by boundary
 - [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) - Framework coverage
-- [[techniques|MITRE ATLAS Techniques]] - Technique library
+- [[atlas/techniques|MITRE ATLAS Techniques]] - Technique library

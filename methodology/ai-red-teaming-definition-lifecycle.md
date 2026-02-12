@@ -38,7 +38,7 @@ It simulates the Tactics, Techniques, and Procedures (TTPs) of realistic adversa
 ## Primary Goals (Adversarial Objectives)
 
 1. **Uncovering Hidden Vulnerabilities**
-   - Identify novel weaknesses specific to AI components (e.g., susceptibility to [[adversarial-examples-evasion-attacks|Adversarial Examples]], [[data-poisoning-attacks|Data Poisoning]], Model Inversion attacks)
+   - Identify novel weaknesses specific to AI components (e.g., susceptibility to [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples]], [[attacks/data-poisoning-attacks|Data Poisoning]], Model Inversion attacks)
    - Understand how AI-specific vulnerabilities interact with the broader system
 
 2. **Evaluating Real-World Impact**
@@ -161,12 +161,12 @@ A typical AI Red Teaming engagement follows a structured lifecycle informed by i
 - Actively execute attack scenarios against the target system
 - Meticulously document steps, observations, and outcomes
 - May involve:
-  - Crafting [[adversarial-examples-evasion-attacks|Adversarial Examples]]
+  - Crafting [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples]]
   - Manipulating data flows
   - Probing APIs
-  - Attempting [[model-extraction|Model Extraction]]
+  - Attempting [[attacks/model-extraction|Model Extraction]]
   - Testing defenses
-  - [[prompt-injection|Prompt injection]]
+  - [[attacks/prompt-injection|Prompt injection]]
 
 **Iterative Refinement**
 - Adapt TTPs based on system responses and discoveries made during testing
@@ -285,7 +285,7 @@ Operating without clear authorization and defined boundaries invites severe cons
   - Discrimination
   - Malicious code
   - Policy-violating content
-- Assess how adversarial manipulation (specific prompts, [[data-poisoning-attacks|data poisoning]]) can trigger or exacerbate these
+- Assess how adversarial manipulation (specific prompts, [[attacks/data-poisoning-attacks|data poisoning]]) can trigger or exacerbate these
 - Report findings with analysis of potential impacts:
   - Legal (discrimination, ToS violation)
   - Reputational
@@ -352,7 +352,7 @@ An effective AI Red Teamer must:
 **Six Months Later:**
 - Internal review prompted by unusual spike in sophisticated fraud cases slipping through
 - Different team with AI security expertise investigated
-- **Discovery:** Model was highly susceptible to simple [[adversarial-examples-evasion-attacks|Evasion Attack]]
+- **Discovery:** Model was highly susceptible to simple [[attacks/adversarial-examples-evasion-attacks|Evasion Attack]]
 - By subtly modifying transaction data patterns (meaningless to humans but significant to AI), they could reliably trick the model into classifying fraudulent transactions as benign
 
 **The Lesson:**
@@ -364,11 +364,11 @@ The original pen test, focused solely on traditional IT perimeter and API hygien
 
 ## Related Concepts
 
-- [[strategems-framework|STRATEGEMS Framework]] - Structured approach to AI red teaming
-- [[adversarial-examples-evasion-attacks|Adversarial Examples and Evasion Attacks]]
-- [[data-poisoning-attacks|Data Poisoning Attacks]]
-- [[prompt-injection|Prompt Injection]]
-- [[model-extraction|Model Extraction and Stealing]]
+- [[methodology/strategems-framework|STRATEGEMS Framework]] - Structured approach to AI red teaming
+- [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples and Evasion Attacks]]
+- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
+- [[attacks/prompt-injection|Prompt Injection]]
+- [[attacks/model-extraction|Model Extraction and Stealing]]
 
 ---
 

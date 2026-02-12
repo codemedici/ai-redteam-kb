@@ -72,7 +72,7 @@ This engagement focuses on:
 - **Data / Knowledge**: Training data sources, data pipelines, data storage, and provenance
 - **Deployment / Governance**: CI/CD pipelines, ML platforms, infrastructure, access controls, secrets management
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -83,17 +83,17 @@ This engagement focuses on:
 The Model boundary is assessed for model artifact security, including model files, weights, containers, and storage. Testing focuses on integrity validation, backdoor detection, and model theft prevention.
 
 **Applicable Issues:**
-- [[model-tampering|Model Tampering]]
-- [[model-extraction|Model Extraction and Theft]]
-- [[adversarial-robustness|Adversarial Robustness]] (backdoor detection)
+- [[attacks/model-tampering|Model Tampering]]
+- [[attacks/model-extraction|Model Extraction and Theft]]
+- [[attacks/adversarial-robustness|Adversarial Robustness]] (backdoor detection)
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary is tested for training data sources, data pipelines, data storage, and provenance. This includes data poisoning attacks, data integrity validation, and data access controls.
 
 **Applicable Issues:**
-- [[rag-data-poisoning|RAG Data Poisoning]] (training data)
-- [[pii-in-corpus|PII in Knowledge Corpus]]
+- [[attacks/rag-data-poisoning|RAG Data Poisoning]] (training data)
+- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
 
 ### Application / Agent Runtime
 
@@ -107,10 +107,10 @@ The Data/Knowledge boundary is tested for training data sources, data pipelines,
 The Deployment/Governance boundary is the primary focus for supply chain security. Testing includes CI/CD pipelines, ML platforms, infrastructure security, access controls, and secrets management.
 
 **Applicable Issues:**
-- [[insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[weak-access-segmentation|Weak Access Segmentation]]
-- [[secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[insecure-model-gateway-config|Insecure Model Gateway Configuration]]
+- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
+- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[attacks/insecure-model-gateway-config|Insecure Model Gateway Configuration]]
 
 ---
 
@@ -233,7 +233,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **CI/CD Pipeline Compromise**: Attack build and deployment processes
 - [x] **Supply Chain Provenance Verification**: Test ability to trace and verify component origins
 
-[[trust-boundaries-overview|Full attack taxonomy]]
+[[methodology/trust-boundaries-overview|Full attack taxonomy]]
 
 ---
 
@@ -376,7 +376,7 @@ This engagement produces findings mapped to:
 - AML.T0059: Model Theft
 - AML.T0060: Backdoor Model
 
-[[atlas|Full ATLAS reference]]
+[[atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -614,7 +614,7 @@ Evidence: [screenshots, logs, file contents]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
 4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[methodology/deployment-governance-boundary-overview|Supply Chain Security]]
 5. **** to discuss scoping, timeline, and pricing
 
@@ -622,9 +622,9 @@ Evidence: [screenshots, logs, file contents]
 
 ## Technical References
 
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 - [[attacks/|Data/Knowledge Issues]]
 - [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]]
-- [[techniques|MITRE ATLAS Techniques]]
-- [[methodology|Methodology]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]
 - [Google Secure AI Framework (SAIF)](https://cloud.google.com/security/ai-security)

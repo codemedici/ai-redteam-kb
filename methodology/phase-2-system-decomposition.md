@@ -186,7 +186,7 @@ System decomposition provides an in-depth understanding of how the AI model inte
 - Security control inventory per boundary
 - Trust assumption documentation
 
-[[trust-boundaries-overview|Learn more about trust boundaries →]]
+[[methodology/trust-boundaries-overview|Learn more about trust boundaries →]]
 
 ---
 
@@ -439,7 +439,7 @@ By the end of Phase 2, the following artifacts should be complete:
 
 ## Transition to Phase 3
 
-Once system decomposition is complete, the engagement transitions to [[phase-3-threat-modeling|Phase 3: Threat Modeling]].
+Once system decomposition is complete, the engagement transitions to [[methodology/phase-3-threat-modeling|Phase 3: Threat Modeling]].
 
 **Handoff checklist:**
 - [ ] Architecture diagram complete with trust boundaries
@@ -455,8 +455,8 @@ Phase 3 will use the architecture and attack surface map to systematically ident
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 2 fits into the full engagement
-- [[phase-1-intake-scoping|Phase 1: Intake & Scoping]] - Previous phase
-- [[phase-3-threat-modeling|Phase 3: Threat Modeling]] - Next phase
-- [[trust-boundaries-overview|Trust Boundaries Overview]] - Understanding the four-boundary model
-- [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 2 fits into the full engagement
+- [[methodology/phase-1-intake-scoping|Phase 1: Intake & Scoping]] - Previous phase
+- [[methodology/phase-3-threat-modeling|Phase 3: Threat Modeling]] - Next phase
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]] - Understanding the four-boundary model
+- [[methodology/common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

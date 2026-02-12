@@ -190,7 +190,7 @@ Sensitive information disclosure occurs when machine learning models inadvertent
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Model boundary privacy validation, membership inference testing
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Model boundary privacy validation, membership inference testing
 - [x] Data Governance & Privacy Testing - Primary focus on data privacy controls and sensitive information leakage (detail page pending)
 - [x] RAG & Retrieval Assessment - Testing for PII leakage through retrieved documents and LLM outputs (detail page pending)
 - [x] Model Tampering & Supply Chain Risk - Validating training data sanitization and privacy protections (detail page pending)

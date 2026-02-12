@@ -579,9 +579,9 @@ Phase 9 (Retest & Regression)
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 9 fits into the full engagement
-- [[phase-8-remediation-guidance|Phase 8: Remediation Guidance]] - Previous phase
-- [[phase-1-intake-scoping|Phase 1: Intake & Scoping]] - Next engagement begins
-- [[evidence-reproducibility|Evidence & Reproducibility]] - Validation standards
-- [[methodology-variations|Methodology Variations]] - Continuous validation approach
-- [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 9 fits into the full engagement
+- [[methodology/phase-8-remediation-guidance|Phase 8: Remediation Guidance]] - Previous phase
+- [[methodology/phase-1-intake-scoping|Phase 1: Intake & Scoping]] - Next engagement begins
+- [[methodology/evidence-reproducibility|Evidence & Reproducibility]] - Validation standards
+- [[methodology/methodology-variations|Methodology Variations]] - Continuous validation approach
+- [[methodology/common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

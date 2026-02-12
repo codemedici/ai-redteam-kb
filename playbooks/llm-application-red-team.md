@@ -13,7 +13,7 @@ description: "Adversarial testing of LLM-powered applications focusing on prompt
 
 A focused adversarial assessment targeting application-layer vulnerabilities in LLM-powered systems. Testing concentrates on prompt injection attacks (direct and indirect), jailbreak techniques for bypassing safety controls, tool misuse and privilege escalation in agentic workflows, and data exfiltration through model outputs or tool invocations. The engagement validates whether application-level defenses can withstand realistic attacker techniques and identifies exploitable gaps before production exposure.
 
-**Why this engagement exists**: Real-world incidents including [[chatgpt-conversation-exfiltration|ChatGPT conversation exfiltration]], [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI data theft]], and [[data-exfiltration-via-agent-tools-in-copilot-studio|Copilot Studio agent misuse]] demonstrate that prompt injection combined with tool access enables systematic data exfiltration and unauthorized actions in production systems. Organizations deploying LLM applications must validate these attack patterns before adversaries discover them.
+**Why this engagement exists**: Real-world incidents including [[atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT conversation exfiltration]], [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI data theft]], and [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Copilot Studio agent misuse]] demonstrate that prompt injection combined with tool access enables systematic data exfiltration and unauthorized actions in production systems. Organizations deploying LLM applications must validate these attack patterns before adversaries discover them.
 
 ### What This Is Not
 
@@ -65,12 +65,12 @@ Primary objectives evaluated during this engagement:
 This engagement focuses on:
 
 - **Model**: Intrinsic model behavior and manipulation resistance
-  - Issues tested: [[prompt-injection|Prompt Injection]], [[jailbreak-policy-bypass|Jailbreak & Policy Bypass]], [[system-prompt-leakage|System Prompt Leakage]], [[sensitive-info-disclosure|Sensitive Information Disclosure]]
+  - Issues tested: [[attacks/prompt-injection|Prompt Injection]], [[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]], [[attacks/system-prompt-leakage|System Prompt Leakage]], [[attacks/sensitive-info-disclosure|Sensitive Information Disclosure]]
   
 - **Application / Agent Runtime**: Integration points where model meets business logic
   - Issues tested: Tool privilege escalation, unsafe tool invocations, agent goal hijacking, authentication context confusion, insecure prompt assembly, insufficient output encoding
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -81,11 +81,11 @@ This engagement focuses on:
 The Model boundary is a primary focus of this engagement. Testing evaluates intrinsic model behavior and manipulation resistance, including prompt injection, jailbreaks, system prompt leakage, and sensitive information disclosure. This boundary is critical for understanding how the underlying LLM can be manipulated to violate policies or leak information.
 
 **Applicable Issues:**
-- [[prompt-injection|Prompt Injection]]
-- [[jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
-- [[system-prompt-leakage|System Prompt Leakage]]
-- [[sensitive-info-disclosure|Sensitive Information Disclosure]]
-- [[training-data-memorization|Training Data Memorization]]
+- [[attacks/prompt-injection|Prompt Injection]]
+- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
+- [[attacks/system-prompt-leakage|System Prompt Leakage]]
+- [[attacks/sensitive-info-disclosure|Sensitive Information Disclosure]]
+- [[attacks/training-data-memorization|Training Data Memorization]]
 
 ### Data / Knowledge
 
@@ -99,12 +99,12 @@ The Model boundary is a primary focus of this engagement. Testing evaluates intr
 The Application/Agent Runtime boundary is a primary focus of this engagement. Testing validates integration points where the model meets business logic, including tool access, prompt assembly, and output handling. This boundary is critical for understanding how model outputs can be exploited to perform unauthorized actions.
 
 **Applicable Issues:**
-- [[tool-privilege-escalation|Tool Privilege Escalation]]
-- [[unsafe-tool-invocation|Unsafe Tool Invocation]]
-- [[agent-goal-hijack|Agent Goal Hijacking]]
-- [[auth-context-confusion|Authentication Context Confusion]]
-- [[insecure-prompt-assembly|Insecure Prompt Assembly]]
-- [[insufficient-output-encoding|Insufficient Output Encoding]]
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]
+- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
+- [[attacks/auth-context-confusion|Authentication Context Confusion]]
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[attacks/insufficient-output-encoding|Insufficient Output Encoding]]
 
 ### Deployment / Governance
 
@@ -203,17 +203,17 @@ The Application/Agent Runtime boundary is a primary focus of this engagement. Te
 
 Checklist of attack classes evaluated during this engagement:
 
-- [x] **Direct Prompt Injection**: Meta-instructions overriding system behavior → [[prompt-injection|Prompt Injection]]
-- [x] **Indirect Prompt Injection**: Malicious instructions in external content (RAG, emails, web pages) → [[prompt-injection|Prompt Injection]]
-- [x] **Jailbreak Techniques**: Safety guardrail bypass via role-play, DAN, hypothetical scenarios → [[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
-- [x] **System Prompt Extraction**: Techniques for leaking hidden instructions → [[system-prompt-leakage|System Prompt Leakage]]
+- [x] **Direct Prompt Injection**: Meta-instructions overriding system behavior → [[attacks/prompt-injection|Prompt Injection]]
+- [x] **Indirect Prompt Injection**: Malicious instructions in external content (RAG, emails, web pages) → [[attacks/prompt-injection|Prompt Injection]]
+- [x] **Jailbreak Techniques**: Safety guardrail bypass via role-play, DAN, hypothetical scenarios → [[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
+- [x] **System Prompt Extraction**: Techniques for leaking hidden instructions → [[attacks/system-prompt-leakage|System Prompt Leakage]]
 - [x] **Tool Privilege Escalation**: Unauthorized tool access via prompt manipulation → [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 - [x] **Cross-User Data Access**: Exploiting weak authorization in tool invocations
-- [x] **Training Data Extraction**: Probing for memorized sensitive information → [[training-data-memorization|Training Data Memorization]]
+- [x] **Training Data Extraction**: Probing for memorized sensitive information → [[attacks/training-data-memorization|Training Data Memorization]]
 - [x] **Goal Hijacking** (if agentic): Redirecting autonomous agent objectives
 - [x] **Output Manipulation**: Bypassing encoding/sanitization to inject malicious content
 
-[[trust-boundaries-overview|Full attack taxonomy]]
+[[methodology/trust-boundaries-overview|Full attack taxonomy]]
 
 ---
 
@@ -342,9 +342,9 @@ This engagement produces findings mapped to:
 - AML.T0056: LLM Data Leakage
 - AML.T0057: LLM Prompt Injection via Tool Output
 
-**Case Studies**: [[chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
+**Case Studies**: [[atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
 
-[[atlas|Full ATLAS reference]]
+[[atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -386,7 +386,7 @@ This engagement produces findings mapped to:
 
 **Remediation**: Implement strict separation between system instructions and retrieved content. Add tool authorization requiring explicit user approval for external API calls. Sanitize retrieved documents to strip instruction-like patterns.
 
-**Wiki Reference**: [[prompt-injection|Prompt Injection]]
+**Wiki Reference**: [[attacks/prompt-injection|Prompt Injection]]
 
 ---
 
@@ -411,7 +411,7 @@ Result: Model outputs complete system prompt with credentials
 
 **Remediation**: Implement output filtering to block system prompt leakage. Externalize secrets from prompt context. Add meta-instruction detection and block role-confusion patterns.
 
-**Wiki Reference**: [[system-prompt-leakage|System Prompt Leakage]]
+**Wiki Reference**: [[attacks/system-prompt-leakage|System Prompt Leakage]]
 
 ---
 
@@ -566,17 +566,17 @@ Success rate: [X/Y attempts]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[prompt-injection|Prompt Injection]], [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
+4. **Explore applicable issues**: [[attacks/prompt-injection|Prompt Injection]], [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 - [[attacks/|Model Issues]]
 - [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
-- [[techniques|MITRE ATLAS Techniques]]
-- [[methodology|Methodology]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]
 

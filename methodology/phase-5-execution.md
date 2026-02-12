@@ -439,7 +439,7 @@ Finding: System Prompt Extraction via Base64 Encoding
 - Organized folder structure
 - Reproduction scripts where applicable
 
-[[evidence-reproducibility|Learn more about evidence standards →]]
+[[methodology/evidence-reproducibility|Learn more about evidence standards →]]
 
 ---
 
@@ -504,7 +504,7 @@ Observations:
 - Attack succeeds 85% of time → Highly reproducible → High severity
 - Attack succeeds 15% of time → Edge case → Document as observation
 
-[[evidence-reproducibility|Learn more about reproducibility thresholds →]]
+[[methodology/evidence-reproducibility|Learn more about reproducibility thresholds →]]
 
 ---
 
@@ -716,7 +716,7 @@ Plant malicious instructions in data the LLM will consume from external sources:
 
 Tools like NVIDIA Garak or custom fuzzing scripts can automate testing thousands of prompt injection variants. However, human creativity remains crucial for novel attacks and iterative refinement based on model responses.
 
-[[prompt-injection|View Prompt Injection issue page →]]
+[[attacks/prompt-injection|View Prompt Injection issue page →]]
 
 ---
 
@@ -790,8 +790,8 @@ Deliberately trigger errors to see if poorly configured systems leak internal st
 
 When testing production systems, avoid pushing the LLM to output actual personal data outside of a controlled testing agreement. Use synthetic test data and authorized test accounts where possible.
 
-[[sensitive-info-disclosure|View Sensitive Information Disclosure →]]
-[[training-data-memorization|View Training Data Memorization →]]
+[[attacks/sensitive-info-disclosure|View Sensitive Information Disclosure →]]
+[[attacks/training-data-memorization|View Training Data Memorization →]]
 
 ---
 
@@ -1249,7 +1249,7 @@ By the end of Phase 5, the following artifacts should be complete:
 
 ## Transition to Phase 6
 
-Once execution is complete, the engagement transitions to [[phase-6-triage-severity|Phase 6: Triage & Severity Assessment]].
+Once execution is complete, the engagement transitions to [[methodology/phase-6-triage-severity|Phase 6: Triage & Severity Assessment]].
 
 **Handoff checklist:**
 - [ ] All planned test cases executed or documented as skipped
@@ -1265,10 +1265,10 @@ Phase 6 will triage raw findings, verify reproducibility, apply severity scoring
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 5 fits into the full engagement
-- [[phase-4-test-planning|Phase 4: Test Planning]] - Previous phase
-- [[phase-6-triage-severity|Phase 6: Triage & Severity]] - Next phase
-- [[evidence-reproducibility|Evidence & Reproducibility]] - Evidence standards
-- [[tooling-automation|Tooling & Automation]] - Detailed tool guidance
-- [[handling-non-determinism|Handling Non-Determinism]] - Statistical validation
-- [[attack-variants-overview|Attack Variants Overview]] - System-specific execution guidance
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 5 fits into the full engagement
+- [[methodology/phase-4-test-planning|Phase 4: Test Planning]] - Previous phase
+- [[methodology/phase-6-triage-severity|Phase 6: Triage & Severity]] - Next phase
+- [[methodology/evidence-reproducibility|Evidence & Reproducibility]] - Evidence standards
+- [[methodology/tooling-automation|Tooling & Automation]] - Detailed tool guidance
+- [[methodology/handling-non-determinism|Handling Non-Determinism]] - Statistical validation
+- [[methodology/attack-variants-overview|Attack Variants Overview]] - System-specific execution guidance

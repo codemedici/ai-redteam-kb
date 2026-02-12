@@ -161,8 +161,8 @@ Adversarial robustness failures occur when carefully crafted inputs exploit vuln
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Adversarial robustness assessment and evasion testing
-- [x] [[llm-application-red-team|LLM Application Red Team]] - Security control bypass via adversarial inputs
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Adversarial robustness assessment and evasion testing
+- [x] [[playbooks/llm-application-red-team|LLM Application Red Team]] - Security control bypass via adversarial inputs
 - [x] Model Tampering & Supply Chain Risk - Backdoor detection and trigger identification (detail page pending)
 - [x] Evaluation & Guardrail Validation - Jailbreak resistance and adversarial robustness benchmarking (detail page pending)
 

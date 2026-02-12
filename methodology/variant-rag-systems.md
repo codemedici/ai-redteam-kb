@@ -203,6 +203,6 @@ for source_tenant in tenant_ids:
 
 ## Related Documentation
 
-- [[attack-variants-overview|Attack Variants Overview]]
+- [[methodology/attack-variants-overview|Attack Variants Overview]]
 - [[attacks/|Data/Knowledge Boundary Issues]]
-- [[rag-retrieval-assessment|RAG Retrieval Assessment Engagement]]
+- [[playbooks/rag-retrieval-assessment|RAG Retrieval Assessment Engagement]]

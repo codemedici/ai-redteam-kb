@@ -99,7 +99,7 @@ class VectorGuardrail:
 - [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
 - [[attacks/embedding-poisoning|Embedding Poisoning]]
 - [[attacks/system-prompt-leakage|System Prompt Leakage]]
-- [[attacks/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
+- [[methodology/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
 - [[defenses/input-validation-transformation|Input Validation and Transformation]]
 
 > Source: [[sources/bibliography#AI-Native LLM Security]], pp. 351-355

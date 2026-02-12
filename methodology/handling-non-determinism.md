@@ -464,7 +464,7 @@ print(f"Success rate: 80% (95% CI: {lower:.1%} - {upper:.1%})")
 
 ## Related Documentation
 
-- [[evidence-reproducibility|Evidence & Reproducibility]] - Complete evidence standards
-- [[phase-5-execution|Phase 5: Execution]] - Consistency testing during execution
-- [[phase-6-triage-severity|Phase 6: Triage & Severity]] - Using reproducibility for severity
-- [[phase-9-retest-regression|Phase 9: Retest & Regression]] - Validating fixes with statistical rigor
+- [[methodology/evidence-reproducibility|Evidence & Reproducibility]] - Complete evidence standards
+- [[methodology/phase-5-execution|Phase 5: Execution]] - Consistency testing during execution
+- [[methodology/phase-6-triage-severity|Phase 6: Triage & Severity]] - Using reproducibility for severity
+- [[methodology/phase-9-retest-regression|Phase 9: Retest & Regression]] - Validating fixes with statistical rigor

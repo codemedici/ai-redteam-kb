@@ -14,10 +14,10 @@ Least privilege tool implementation is a fundamental security control that restr
 
 This control addresses the following security issues:
 
-- **[[tool-privilege-escalation|Tool Privilege Escalation]]**: Prevents agents from accessing tools or operations beyond their authorized scope by enforcing strict permission boundaries
-- **[[unsafe-tool-invocation|Unsafe Tool Invocation]]**: Limits the blast radius of unsafe invocations by restricting tools to minimal required capabilities
-- **[[agent-goal-hijack|Agent Goal Hijacking]]**: Prevents hijacked agents from performing unauthorized actions by limiting available tool permissions
-- **[[prompt-injection|Prompt Injection]]**: Reduces impact of prompt injection attacks by ensuring injected instructions cannot access privileged tools
+- **[[attacks/tool-privilege-escalation|Tool Privilege Escalation]]**: Prevents agents from accessing tools or operations beyond their authorized scope by enforcing strict permission boundaries
+- **[[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Limits the blast radius of unsafe invocations by restricting tools to minimal required capabilities
+- **[[attacks/agent-goal-hijack|Agent Goal Hijacking]]**: Prevents hijacked agents from performing unauthorized actions by limiting available tool permissions
+- **[[attacks/prompt-injection|Prompt Injection]]**: Reduces impact of prompt injection attacks by ensuring injected instructions cannot access privileged tools
 
 [[attacks/|See [Application/Agent Runtime Issues]] for complete issue catalog]
 
@@ -135,10 +135,10 @@ User Request → Agent Decision → Permission Check → Tool Execution
 
 This control works best when combined with:
 
-- **[[tool-sandboxing-architecture|Tool Sandboxing Architecture]]**: Sandboxing provides additional isolation layer even if permissions are bypassed
-- **[[user-context-binding|User Context Binding]]**: Ensures permissions are evaluated in correct user context
-- **[[approval-workflow-patterns|Approval Workflow Patterns]]**: Requires human approval for high-privilege tool invocations
-- **[[anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects unusual permission usage patterns indicating potential attacks
+- **[[defenses/tool-sandboxing-architecture|Tool Sandboxing Architecture]]**: Sandboxing provides additional isolation layer even if permissions are bypassed
+- **[[defenses/user-context-binding|User Context Binding]]**: Ensures permissions are evaluated in correct user context
+- **[[defenses/approval-workflow-patterns|Approval Workflow Patterns]]**: Requires human approval for high-privilege tool invocations
+- **[[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects unusual permission usage patterns indicating potential attacks
 
 [[defenses/|See [Controls Index]] for complete control catalog]
 
@@ -158,7 +158,7 @@ This control works best when combined with:
 
 ## References
 
-- [[tool-privilege-escalation|Tool Privilege Escalation Issue]] - Detailed attack vectors and mitigations
-- [[unsafe-tool-invocation|Unsafe Tool Invocation Issue]] - Related attack patterns
-- [[agent-goal-hijack|Agent Goal Hijacking Issue]] - How privilege escalation enables goal hijacking
-- [[phase-5-execution|Methodology: Phase 5 Execution]] - Testing approaches for privilege controls
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Detailed attack vectors and mitigations
+- [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation Issue]] - Related attack patterns
+- [[attacks/agent-goal-hijack|Agent Goal Hijacking Issue]] - How privilege escalation enables goal hijacking
+- [[methodology/phase-5-execution|Methodology: Phase 5 Execution]] - Testing approaches for privilege controls

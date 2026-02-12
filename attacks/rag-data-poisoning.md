@@ -230,11 +230,11 @@ Data poisoning attacks manipulate training data, knowledge bases, or RAG corpora
 
 Documented incidents demonstrating RAG poisoning in production:
 
-- [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): Public channel message poisoned RAG corpus; enabled cross-workspace data theft
-- [[morris-ii-worm-rag-based-attack|Morris II Worm]] (2024): Self-replicating AI worm propagating through RAG systems
-- [[virustotal-poisoning|VirusTotal Poisoning]] (2020): Public dataset poisoning affecting malware detection training
+- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): Public channel message poisoned RAG corpus; enabled cross-workspace data theft
+- [[atlas/case-studies/morris-ii-worm-rag-based-attack|Morris II Worm]] (2024): Self-replicating AI worm propagating through RAG systems
+- [[atlas/case-studies/virustotal-poisoning|VirusTotal Poisoning]] (2020): Public dataset poisoning affecting malware detection training
 
-[[case-studies|View all ATLAS case studies]]
+[[atlas/case-studies|View all ATLAS case studies]]
 
 ---
 
@@ -242,7 +242,7 @@ Documented incidents demonstrating RAG poisoning in production:
 
 This issue is tested in the following engagements:
 
-- [x] [[ai-threat-exposure-review|AI Threat Exposure Review]] - Data/Knowledge boundary comprehensive testing
+- [x] [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]] - Data/Knowledge boundary comprehensive testing
 - [x] RAG & Retrieval Attack Assessment - Primary focus on RAG poisoning, document injection, and retrieval manipulation (detail page pending)
 - [x] Model Tampering & Supply Chain Risk - Training data poisoning and fine-tuning backdoors (detail page pending)
 - [x] Data Governance & Privacy Testing - Data quality and integrity validation (detail page pending)

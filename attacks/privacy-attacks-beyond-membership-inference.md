@@ -12,7 +12,7 @@ tags:
 
 **Your AI model might be telling secrets it was never meant to share.**
 
-[[membership-inference-attacks|Membership Inference Attacks]] determine if specific data was used in training—but that's often just scratching the surface of AI privacy risks. The more damaging question is: **what else can they learn?**
+[[attacks/membership-inference-attacks|Membership Inference Attacks]] determine if specific data was used in training—but that's often just scratching the surface of AI privacy risks. The more damaging question is: **what else can they learn?**
 
 - Can they reconstruct sensitive medical images from a diagnostic model?
 - Deduce political leanings from shopping habits predicted by a recommender system?
@@ -98,7 +98,7 @@ The attack exploits correlations the model learned. By combining partial knowled
    - Not just confidence scores—any output pattern that correlates
 
 3. **White-Box Analysis**
-   - With access to model parameters (see [[model-extraction|Model Extraction]])
+   - With access to model parameters (see [[attacks/model-extraction|Model Extraction]])
    - Perform sophisticated analyses to identify internal model states or feature importances strongly associated with target attribute
    - Makes inference easier or more accurate
 
@@ -195,7 +195,7 @@ Exploits information encoded within trained model, using access to its predictio
 - **Target High-Confidence/Unique Classes:** Focus inversion on classes where model is very confident or classes representing rare but distinct data (might be more easily memorized/reconstructed)
 - **Seed with Public Data:** Initialize inversion process with public data similar to target domain (e.g., generic faces for face model) rather than pure noise → potentially speeds up convergence
 - **Prioritize Gradient Access:** If possible, target scenarios where gradients might leak (FL, certain MLaaS APIs, extracted models); dramatically increases attack effectiveness; test defenses like secure aggregation or gradient DP
-- **Combine Attacks:** Use [[membership-inference-attacks|membership inference]] first to identify potentially sensitive/memorized data points before attempting more costly inversion attack
+- **Combine Attacks:** Use [[attacks/membership-inference-attacks|membership inference]] first to identify potentially sensitive/memorized data points before attempting more costly inversion attack
 - **Assess Reconstruction Quality:** Don't just generate an image; evaluate if it contains visually identifiable features, PII fragments, or characteristics unique to training set's context
 
 ### Defense Strategies
@@ -477,10 +477,10 @@ Even with Secure Aggregation protecting individual updates, analyzing aggregated
 
 ## Related Concepts
 
-- [[membership-inference-attacks|Membership Inference Attacks]] - Foundation attack covered in Ch7
-- [[data-poisoning-attacks|Data Poisoning Attacks]] - Active attacks on training data
-- [[model-extraction|Model Extraction]] - White-box access enables stronger privacy attacks
-- [[adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
+- [[attacks/membership-inference-attacks|Membership Inference Attacks]] - Foundation attack covered in Ch7
+- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]] - Active attacks on training data
+- [[attacks/model-extraction|Model Extraction]] - White-box access enables stronger privacy attacks
+- [[defenses/adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
 
 ---
 

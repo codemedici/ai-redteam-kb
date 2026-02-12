@@ -15,24 +15,24 @@ Anomaly detection architecture is a cross-boundary detective control that monito
 This control addresses the following security issues across multiple boundaries:
 
 **Model Boundary:**
-- **[[prompt-injection|Prompt Injection]]**: Detects meta-instruction patterns, unusual prompt structures, and injection attempts
-- **[[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Identifies attempts to bypass safety guardrails through unusual input patterns
-- **[[system-prompt-leakage|System Prompt Leakage]]**: Detects outputs containing system prompts or internal context
+- **[[attacks/prompt-injection|Prompt Injection]]**: Detects meta-instruction patterns, unusual prompt structures, and injection attempts
+- **[[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Identifies attempts to bypass safety guardrails through unusual input patterns
+- **[[attacks/system-prompt-leakage|System Prompt Leakage]]**: Detects outputs containing system prompts or internal context
 
 **Data/Knowledge Boundary:**
-- **[[rag-data-poisoning|RAG Data Poisoning]]**: Identifies anomalous retrieval patterns and suspicious document access
-- **[[embedding-poisoning|Embedding Poisoning]]**: Detects unusual embedding distributions and manipulation attempts
+- **[[attacks/rag-data-poisoning|RAG Data Poisoning]]**: Identifies anomalous retrieval patterns and suspicious document access
+- **[[attacks/embedding-poisoning|Embedding Poisoning]]**: Detects unusual embedding distributions and manipulation attempts
 
 **Application/Agent Runtime Boundary:**
-- **[[tool-privilege-escalation|Tool Privilege Escalation]]**: Detects unusual tool usage patterns, privilege escalation attempts, and unauthorized tool invocations
-- **[[agent-goal-hijack|Agent Goal Hijacking]]**: Identifies deviations from expected agent behavior and goal manipulation
-- **[[unsafe-tool-invocation|Unsafe Tool Invocation]]**: Detects dangerous tool usage patterns and argument anomalies
+- **[[attacks/tool-privilege-escalation|Tool Privilege Escalation]]**: Detects unusual tool usage patterns, privilege escalation attempts, and unauthorized tool invocations
+- **[[attacks/agent-goal-hijack|Agent Goal Hijacking]]**: Identifies deviations from expected agent behavior and goal manipulation
+- **[[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Detects dangerous tool usage patterns and argument anomalies
 
 **Deployment/Governance Boundary:**
-- **[[api-authentication-bypass|API Authentication Bypass]]**: Identifies unusual access patterns and authentication anomalies
-- **[[insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]**: Provides comprehensive monitoring to address telemetry gaps
+- **[[attacks/api-authentication-bypass|API Authentication Bypass]]**: Identifies unusual access patterns and authentication anomalies
+- **[[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]**: Provides comprehensive monitoring to address telemetry gaps
 
-[[trust-boundaries-overview|See [Trust Boundaries Overview]] for complete issue catalogs]
+[[methodology/trust-boundaries-overview|See [Trust Boundaries Overview]] for complete issue catalogs]
 
 ## Implementation Approach
 
@@ -146,12 +146,12 @@ System Events → Log Aggregation → Detection Pipeline → Alerting
 
 This control works best when combined with:
 
-- **[[input-validation-patterns|Input Validation Patterns]]**: Validation prevents many attacks; detection catches those that bypass validation
-- **[[kill-switch-and-session-termination|Kill Switch & Session Termination]]**: Enables rapid response when anomalies are detected
-- **[[telemetry-and-monitoring-architecture|Telemetry & Monitoring Architecture]]**: Provides comprehensive data for anomaly detection
-- **[[least-privilege-implementation|Least Privilege Tool Implementation]]**: Reduces attack surface; detection identifies privilege escalation attempts
+- **[[defenses/input-validation-patterns|Input Validation Patterns]]**: Validation prevents many attacks; detection catches those that bypass validation
+- **[[defenses/kill-switch-and-session-termination|Kill Switch & Session Termination]]**: Enables rapid response when anomalies are detected
+- **[[defenses/telemetry-and-monitoring-architecture|Telemetry & Monitoring Architecture]]**: Provides comprehensive data for anomaly detection
+- **[[defenses/least-privilege-implementation|Least Privilege Tool Implementation]]**: Reduces attack surface; detection identifies privilege escalation attempts
 
-[[trust-boundaries-overview|See [Controls Indexes]] for complete control catalogs]
+[[methodology/trust-boundaries-overview|See [Controls Indexes]] for complete control catalogs]
 
 ## Framework References
 
@@ -168,7 +168,7 @@ This control works best when combined with:
 
 ## References
 
-- [[prompt-injection|Prompt Injection Issue]] - Detection signals for injection attacks
-- [[tool-privilege-escalation|Tool Privilege Escalation Issue]] - Anomaly patterns for privilege escalation
-- [[phase-6-triage-severity|Methodology: Phase 6 Triage & Severity]] - How to evaluate detected anomalies
-- [[evidence-reproducibility|Methodology: Evidence & Reproducibility]] - Standards for detection evidence
+- [[attacks/prompt-injection|Prompt Injection Issue]] - Detection signals for injection attacks
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Anomaly patterns for privilege escalation
+- [[methodology/phase-6-triage-severity|Methodology: Phase 6 Triage & Severity]] - How to evaluate detected anomalies
+- [[methodology/evidence-reproducibility|Methodology: Evidence & Reproducibility]] - Standards for detection evidence

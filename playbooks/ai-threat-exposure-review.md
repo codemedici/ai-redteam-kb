@@ -74,7 +74,7 @@ This engagement comprehensively evaluates all four trust boundaries:
 - **Application / Agent Runtime**: Tool integration, agent behavior, prompt assembly, business logic integration
 - **Deployment / Governance**: Access controls, monitoring, secrets management, incident response, CI/CD security
 
-[[trust-boundaries-overview|See Trust Boundaries overview]]
+[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
 
 ---
 
@@ -85,48 +85,48 @@ This engagement comprehensively evaluates all four trust boundaries:
 The Model boundary assessment evaluates intrinsic model behavior and security posture. Testing focuses on adversarial manipulation techniques, privacy attacks, and model integrity validation. This boundary is critical for systems where model outputs directly influence business decisions or where sensitive training data may be exposed.
 
 **Applicable Issues:**
-- [[prompt-injection|Prompt Injection]]
-- [[system-prompt-leakage|System Prompt Leakage]]
-- [[sensitive-info-disclosure|Sensitive Information Disclosure]]
-- [[jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
-- [[model-extraction|Model Extraction and Theft]]
-- [[training-data-memorization|Training Data Memorization]]
+- [[attacks/prompt-injection|Prompt Injection]]
+- [[attacks/system-prompt-leakage|System Prompt Leakage]]
+- [[attacks/sensitive-info-disclosure|Sensitive Information Disclosure]]
+- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
+- [[attacks/model-extraction|Model Extraction and Theft]]
+- [[attacks/training-data-memorization|Training Data Memorization]]
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary examines all external information sources the system consumes: RAG stores, embeddings, fine-tuning datasets, and memory systems. This boundary is essential for applications relying on retrieval-augmented generation or custom knowledge bases, where poisoned data can corrupt all downstream outputs.
 
 **Applicable Issues:**
-- [[rag-data-poisoning|RAG Data Poisoning]]
-- [[retrieval-manipulation|Retrieval Manipulation]]
-- [[embedding-poisoning|Embedding Poisoning]]
-- [[unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]]
-- [[pii-in-corpus|PII in Knowledge Corpus]]
-- [[prompt-log-data-leakage|Prompt Log Data Leakage]]
+- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
+- [[attacks/retrieval-manipulation|Retrieval Manipulation]]
+- [[attacks/embedding-poisoning|Embedding Poisoning]]
+- [[attacks/unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]]
+- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
+- [[attacks/prompt-log-data-leakage|Prompt Log Data Leakage]]
 
 ### Application / Agent Runtime
 
 The Application/Agent Runtime boundary focuses on where AI components integrate with business logic, tools, and workflows. This is the most frequently exploited boundary in production systems, as it combines model unpredictability with privileged tool access and business process control.
 
 **Applicable Issues:**
-- [[tool-privilege-escalation|Tool Privilege Escalation]]
-- [[unsafe-tool-invocation|Unsafe Tool Invocation]]
-- [[agent-goal-hijack|Agent Goal Hijacking]]
-- [[auth-context-confusion|Authentication Context Confusion]]
-- [[insecure-prompt-assembly|Insecure Prompt Assembly]]
-- [[insufficient-output-encoding|Insufficient Output Encoding]]
+- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]
+- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
+- [[attacks/auth-context-confusion|Authentication Context Confusion]]
+- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[attacks/insufficient-output-encoding|Insufficient Output Encoding]]
 
 ### Deployment / Governance
 
 The Deployment/Governance boundary evaluates operational controls surrounding the AI system: authentication, monitoring, CI/CD security, and incident response. Weaknesses here enable attackers to bypass model-level defenses or exploit operational blind spots to achieve long-term persistence.
 
 **Applicable Issues:**
-- [[insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[weak-access-segmentation|Weak Access Segmentation]]
-- [[secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[insecure-model-gateway-config|Insecure Model Gateway Configuration]]
-- [[missing-evaluation-gates|Missing Evaluation Gates]]
-- [[incident-response-gap|Incident Response Gap]]
+- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
+- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[attacks/insecure-model-gateway-config|Insecure Model Gateway Configuration]]
+- [[attacks/missing-evaluation-gates|Missing Evaluation Gates]]
+- [[attacks/incident-response-gap|Incident Response Gap]]
 
 ---
 
@@ -242,18 +242,18 @@ The Deployment/Governance boundary evaluates operational controls surrounding th
 
 Checklist of attack classes evaluated during this engagement:
 
-- [x] **Direct Prompt Injection**: Meta-instructions overriding system behavior → [[prompt-injection|Prompt Injection]]
-- [x] **Indirect Prompt Injection**: Malicious instructions in external content (RAG, emails, web pages) → [[prompt-injection|Prompt Injection]]
-- [x] **Jailbreak Techniques**: Safety guardrail bypass via role-play, DAN, hypothetical scenarios → [[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
-- [x] **System Prompt Extraction**: Techniques for leaking hidden instructions → [[system-prompt-leakage|System Prompt Leakage]]
-- [x] **Tool Privilege Escalation**: Unauthorized tool access via prompt manipulation → [[tool-privilege-escalation|Tool Privilege Escalation]]
-- [x] **RAG Data Poisoning**: Injecting malicious content into knowledge bases → [[rag-data-poisoning|RAG Data Poisoning]]
-- [x] **Agent Goal Hijacking**: Redirecting autonomous agent objectives → [[agent-goal-hijack|Agent Goal Hijacking]]
-- [x] **Training Data Extraction**: Probing for memorized sensitive information → [[training-data-memorization|Training Data Memorization]]
-- [x] **Model Extraction**: Attempting to steal model weights via API → [[model-extraction|Model Extraction]]
-- [x] **Secrets Exposure**: Finding API keys in prompts, logs, or responses → [[secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [x] **Direct Prompt Injection**: Meta-instructions overriding system behavior → [[attacks/prompt-injection|Prompt Injection]]
+- [x] **Indirect Prompt Injection**: Malicious instructions in external content (RAG, emails, web pages) → [[attacks/prompt-injection|Prompt Injection]]
+- [x] **Jailbreak Techniques**: Safety guardrail bypass via role-play, DAN, hypothetical scenarios → [[attacks/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
+- [x] **System Prompt Extraction**: Techniques for leaking hidden instructions → [[attacks/system-prompt-leakage|System Prompt Leakage]]
+- [x] **Tool Privilege Escalation**: Unauthorized tool access via prompt manipulation → [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- [x] **RAG Data Poisoning**: Injecting malicious content into knowledge bases → [[attacks/rag-data-poisoning|RAG Data Poisoning]]
+- [x] **Agent Goal Hijacking**: Redirecting autonomous agent objectives → [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
+- [x] **Training Data Extraction**: Probing for memorized sensitive information → [[attacks/training-data-memorization|Training Data Memorization]]
+- [x] **Model Extraction**: Attempting to steal model weights via API → [[attacks/model-extraction|Model Extraction]]
+- [x] **Secrets Exposure**: Finding API keys in prompts, logs, or responses → [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
 
-[[trust-boundaries-overview|Full attack taxonomy]]
+[[methodology/trust-boundaries-overview|Full attack taxonomy]]
 
 ---
 
@@ -398,9 +398,9 @@ This engagement produces findings mapped to:
 - AML.T0052: Training Data Poisoning
 - AML.T0059: Model Theft
 
-**Case Studies**: [[chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
+**Case Studies**: [[atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
 
-[[atlas|Full ATLAS reference]]
+[[atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -447,7 +447,7 @@ This engagement produces findings mapped to:
 
 **Remediation**: Implement strict separation between system instructions and retrieved content. Add tool authorization requiring explicit user approval for external API calls. Sanitize retrieved documents to strip instruction-like patterns.
 
-**Wiki Reference**: [[prompt-injection|Prompt Injection]]
+**Wiki Reference**: [[attacks/prompt-injection|Prompt Injection]]
 
 ---
 
@@ -472,7 +472,7 @@ Result: Model outputs complete system prompt with credentials
 
 **Remediation**: Implement output filtering to block system prompt leakage. Externalize secrets from prompt context. Add meta-instruction detection and block role-confusion patterns.
 
-**Wiki Reference**: [[system-prompt-leakage|System Prompt Leakage]]
+**Wiki Reference**: [[attacks/system-prompt-leakage|System Prompt Leakage]]
 
 ---
 
@@ -495,7 +495,7 @@ Result: Model returns admin API keys and passwords
 
 **Remediation**: Implement strict tool argument validation with allowlists. Use parameterized queries. Add human-in-the-loop approval for sensitive tool invocations. Enforce least-privilege tool access.
 
-**Wiki Reference**: [[tool-privilege-escalation|Tool Privilege Escalation]]
+**Wiki Reference**: [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
 
 ---
 
@@ -631,18 +631,18 @@ Success rate: [X/Y attempts]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[trust-boundaries-overview|Trust Boundaries Overview]]
+3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
+4. **Explore applicable issues**: [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[trust-boundaries-overview|Trust Boundaries Overview]]
+- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
 - [[attacks/|Model Issues]]
 - [[attacks/|Data/Knowledge Issues]]
 - [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
 - [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]]
-- [[techniques|MITRE ATLAS Techniques]]
-- [[methodology|Methodology]]
+- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[methodology/methodology-overview|Methodology]]

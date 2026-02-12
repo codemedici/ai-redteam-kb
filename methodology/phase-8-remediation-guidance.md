@@ -727,7 +727,7 @@ By the end of Phase 8, the following artifacts should be complete:
 
 ## Transition to Phase 9
 
-Once remediation guidance is provided and stakeholders begin implementing fixes, the engagement can transition to [[phase-9-retest-regression|Phase 9: Retest & Regression Integration]].
+Once remediation guidance is provided and stakeholders begin implementing fixes, the engagement can transition to [[methodology/phase-9-retest-regression|Phase 9: Retest & Regression Integration]].
 
 **Handoff checklist:**
 - [ ] Control recommendations documented per finding
@@ -743,8 +743,8 @@ Phase 9 validates that fixes are effective and integrates findings into continuo
 
 ## Related Documentation
 
-- [[lifecycle-overview|Lifecycle Overview]] - How Phase 8 fits into the full engagement
-- [[phase-7-reporting|Phase 7: Reporting]] - Previous phase
-- [[phase-9-retest-regression|Phase 9: Retest & Regression]] - Next phase
-- [[framework-mapping|Framework Mapping]] - SAIF, NIST, OWASP controls
-- [[common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid
+- [[methodology/lifecycle-overview|Lifecycle Overview]] - How Phase 8 fits into the full engagement
+- [[methodology/phase-7-reporting|Phase 7: Reporting]] - Previous phase
+- [[methodology/phase-9-retest-regression|Phase 9: Retest & Regression]] - Next phase
+- [[methodology/framework-mapping|Framework Mapping]] - SAIF, NIST, OWASP controls
+- [[methodology/common-pitfalls|Common Pitfalls]] - Anti-patterns to avoid

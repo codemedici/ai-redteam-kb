@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:techniques-overview -file:case-studies-overview -file:tactics-overview -file:atlas-overview -file:examples -file:ARCHITECTURE-PLAN -file:README -file:methodology-overview -file:lifecycle-overview",
+  "search": "-file:application-agent-boundary-overview -file:application-agent-controls-overview -file:application-agent-issues-overview -file:atlas-overview -file:attack-variants-overview -file:case-studies-overview -file:data-knowledge-boundary-overview -file:data-knowledge-controls-overview -file:data-knowledge-issues-overview -file:deployment-governance-boundary-overview -file:deployment-governance-controls-overview -file:deployment-governance-issues-overview -file:engagements-overview -file:lifecycle-overview -file:methodology-overview -file:model-boundary-overview -file:model-controls-overview -file:model-issues-overview -file:operations-overview -file:tactics-overview -file:techniques-overview -file:trust-boundaries-overview -file:examples -file:ARCHITECTURE-PLAN -file:README",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -77,10 +77,10 @@
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "centerStrength": 0.552083333333333,
+  "repelStrength": 17.6041666666667,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.2299325620625787,
+  "linkDistance": 500,
+  "scale": 0.18768657486989693,
   "close": false
 }

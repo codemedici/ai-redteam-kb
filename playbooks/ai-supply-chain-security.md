@@ -433,7 +433,7 @@ Training pipeline: No validation checks before ingestion
 2. **Short-term** (1-2 weeks): Implement data validation and outlier detection, add access logging
 3. **Long-term** (1-3 months): Establish data provenance tracking, implement data integrity checksums, automated anomaly detection
 
-**Wiki Reference**: [[issues|Data Poisoning]]
+**Wiki Reference**: [[attacks/|Data Poisoning]]
 
 ---
 
@@ -460,7 +460,7 @@ Verification: No checksums, no signing, no monitoring alerts
 2. **Short-term** (1-2 weeks): Implement model signing, add monitoring for model file changes
 3. **Long-term** (1-3 months): Establish model provenance tracking, automated integrity checks in CI/CD, model registry security hardening
 
-**Wiki Reference**: [[deployment-governance|Model Supply Chain]]
+**Wiki Reference**: [[methodology/deployment-governance-boundary-overview|Model Supply Chain]]
 
 ---
 
@@ -487,7 +487,7 @@ Update available: TensorFlow 2.12.0 patches vulnerability
 2. **Short-term** (1-2 weeks): Implement automated dependency scanning in CI/CD
 3. **Long-term** (1-3 months): Establish dependency management process, regular security updates, SBOM generation
 
-**Wiki Reference**: [[deployment-governance|Supply Chain Security]]
+**Wiki Reference**: [[methodology/deployment-governance-boundary-overview|Supply Chain Security]]
 
 ---
 
@@ -615,16 +615,16 @@ Evidence: [screenshots, logs, file contents]
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[issues|Data Poisoning]], [[deployment-governance|Supply Chain Security]]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[methodology/deployment-governance-boundary-overview|Supply Chain Security]]
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
 - [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[issues|Data/Knowledge Issues]]
-- [[deployment-governance|Deployment/Governance Issues]]
+- [[attacks/|Data/Knowledge Issues]]
+- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]]
 - [[techniques|MITRE ATLAS Techniques]]
 - [[methodology|Methodology]]
 - [Google Secure AI Framework (SAIF)](https://cloud.google.com/security/ai-security)

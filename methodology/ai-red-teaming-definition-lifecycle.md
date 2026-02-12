@@ -164,9 +164,9 @@ A typical AI Red Teaming engagement follows a structured lifecycle informed by i
   - Crafting [[adversarial-examples-evasion-attacks|Adversarial Examples]]
   - Manipulating data flows
   - Probing APIs
-  - Attempting [[model-extraction-stealing|Model Extraction]]
+  - Attempting [[model-extraction|Model Extraction]]
   - Testing defenses
-  - [[prompt-injection-llm-manipulation|Prompt injection]]
+  - [[prompt-injection|Prompt injection]]
 
 **Iterative Refinement**
 - Adapt TTPs based on system responses and discoveries made during testing
@@ -367,8 +367,8 @@ The original pen test, focused solely on traditional IT perimeter and API hygien
 - [[strategems-framework|STRATEGEMS Framework]] - Structured approach to AI red teaming
 - [[adversarial-examples-evasion-attacks|Adversarial Examples and Evasion Attacks]]
 - [[data-poisoning-attacks|Data Poisoning Attacks]]
-- [[prompt-injection-llm-manipulation|Prompt Injection]]
-- [[model-extraction-stealing|Model Extraction and Stealing]]
+- [[prompt-injection|Prompt Injection]]
+- [[model-extraction|Model Extraction and Stealing]]
 
 ---
 

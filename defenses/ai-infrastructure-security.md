@@ -619,8 +619,8 @@ Graphics Processing Units (GPUs) are central to AI but introduce unique security
 ## Related Concepts
 
 - [[data-poisoning-attacks|Data Poisoning Attacks]] - Upstream data manipulation
-- [[model-extraction-stealing|Model Extraction and Stealing]] - Model IP theft
-- [[prompt-injection-llm-manipulation|Prompt Injection]] - Model-level attacks
+- [[model-extraction|Model Extraction and Stealing]] - Model IP theft
+- [[prompt-injection|Prompt Injection]] - Model-level attacks
 - [[adversarial-examples-evasion-attacks|Adversarial Examples and Evasion]] - Inference-time attacks
 - [[ai-red-teaming-definition-lifecycle|AI Red Teaming Lifecycle]] - Systematic assessment methodology
 

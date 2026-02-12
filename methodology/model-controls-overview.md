@@ -6,7 +6,7 @@ tags:
 ---
 # Model Controls
 
-This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Model trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Model Issues]].
+This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Model trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[attacks/|Model Issues]].
 
 ## Overview
 
@@ -58,7 +58,7 @@ Effective model security requires multiple layers of controls working together:
 | [[dual-llm-judge-pattern|Dual-LLM Judge Pattern]] | Prompt Injection, Jailbreak & Policy Bypass | Architectural | Planned |
 | [[adversarial-robustness-controls|Adversarial Robustness Controls]] | Jailbreak & Policy Bypass, Adversarial Robustness | Preventive | Planned |
 
-[[issues|View all Model Issues]]
+[[attacks/|View all Model Issues]]
 
 ## Cross-Boundary Considerations
 
@@ -92,6 +92,6 @@ Model boundary controls interact with controls in other boundaries:
 
 ## Related Documentation
 
-- [[issues|Model Issues]] - Attack-specific mitigations
+- [[attacks/|Model Issues]] - Attack-specific mitigations
 - [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
 - [[methodology|Methodology]] - Testing and validation approaches

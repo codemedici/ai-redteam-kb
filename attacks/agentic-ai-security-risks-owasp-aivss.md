@@ -216,7 +216,7 @@ pages: "357-369"
 
 ## Related Notes
 
-- [[attacks/prompt-injection-llm-manipulation|Prompt Injection and LLM Manipulation]]
+- [[attacks/prompt-injection|Prompt Injection and LLM Manipulation]]
 - [[attacks/agent-authorization-hijacking|Agent Authorization Hijacking]]
 - [[attacks/agent-identity-crisis|Agent Identity Crisis]]
 - [[attacks/agent-goal-hijack|Agent Goal Hijack]]

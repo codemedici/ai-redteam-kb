@@ -287,4 +287,4 @@ grype model-serving:latest
 
 - [[attack-variants-overview|Attack Variants Overview]]
 - [[ai-supply-chain-security|AI Supply Chain Security Engagement]]
-- [[deployment-governance|Deployment/Governance Boundary Issues]]
+- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Boundary Issues]]

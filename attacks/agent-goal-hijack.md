@@ -160,7 +160,7 @@ Goal hijacking cannot be tested with single-turn prompts. Multi-turn conversatio
 
 ## Mitigations
 
-See [[controls|Application/Agent Runtime Controls]] for architectural guidance on implementing these mitigations.
+See [[defenses/|Application/Agent Runtime Controls]] for architectural guidance on implementing these mitigations.
 
 **Preventive Controls:**
 - **Hard External Policy Enforcement**: Implement critical constraints (approval requirements, access controls, compliance rules) as external system checks, not LLM reasoning. Use API gateways, authorization services, or business rule engines that cannot be influenced by conversational context.

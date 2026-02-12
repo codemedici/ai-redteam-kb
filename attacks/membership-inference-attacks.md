@@ -390,7 +390,7 @@ Non-technical defenses:
 - [[privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]] - Attribute inference, model inversion
 - [[data-poisoning-attacks|Data Poisoning Attacks]] - MIA can enable targeted poisoning
 - [[adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
-- [[model-extraction-stealing|Model Extraction]] - Related IP theft attack
+- [[model-extraction|Model Extraction]] - Related IP theft attack
 
 ---
 

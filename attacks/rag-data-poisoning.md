@@ -247,7 +247,7 @@ This issue is tested in the following engagements:
 - [x] Model Tampering & Supply Chain Risk - Training data poisoning and fine-tuning backdoors (detail page pending)
 - [x] Data Governance & Privacy Testing - Data quality and integrity validation (detail page pending)
 
-[[engagements|View all engagements]]
+[[playbooks/engagements-overview|View all engagements]]
 
 ## Framework References
 

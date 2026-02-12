@@ -22,7 +22,7 @@ This control addresses the following security issues:
 - **[[{issue-slug}|Issue Name 2]]**: [How this control mitigates this issue]
 - **[[{issue-slug}|Issue Name 3]]**: [How this control mitigates this issue]
 
-[[issues|See [Issues Index]] for complete issue catalog]
+[[attacks/|See [Issues Index]] for complete issue catalog]
 
 ## Implementation Approach
 
@@ -103,7 +103,7 @@ This control works best when combined with:
 - **[[{control-slug}|Related Control 1]]**: [Why they complement each other]
 - **[[{control-slug}|Related Control 2]]**: [How they work together]
 
-[[controls|See [Controls Index]] for complete control catalog]
+[[defenses/|See [Controls Index]] for complete control catalog]
 
 ## Framework References
 

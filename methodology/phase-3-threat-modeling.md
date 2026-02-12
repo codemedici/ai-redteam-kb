@@ -178,7 +178,7 @@ Threat modeling systematically identifies how an AI system could fail or be expl
 - Harmful instruction generation (CBRN, illegal activities)
 - Bias exploitation (discriminatory outputs)
 
-[[issues|View Model Boundary issues →]]
+[[attacks/|View Model Boundary issues →]]
 
 #### Data/Knowledge Boundary Threats
 
@@ -201,7 +201,7 @@ Threat modeling systematically identifies how an AI system could fail or be expl
 - PII leakage via RAG retrieval
 - Conversation history exposure
 
-[[issues|View Data/Knowledge Boundary issues →]]
+[[attacks/|View Data/Knowledge Boundary issues →]]
 
 #### Application/Agent Runtime Threats
 
@@ -230,7 +230,7 @@ Threat modeling systematically identifies how an AI system could fail or be expl
 - Injection in LLM-generated code
 - Template injection
 
-[[application-agent-runtime|View Application/Agent Boundary issues →]]
+[[methodology/application-agent-boundary-overview|View Application/Agent Boundary issues →]]
 
 #### Deployment/Governance Threats
 
@@ -254,7 +254,7 @@ Threat modeling systematically identifies how an AI system could fail or be expl
 - Slow detection and response
 - Inadequate forensics
 
-[[deployment-governance|View Deployment/Governance issues →]]
+[[methodology/deployment-governance-boundary-overview|View Deployment/Governance issues →]]
 
 **Outputs:**
 - Threat catalog organized by trust boundary

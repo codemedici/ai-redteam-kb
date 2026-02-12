@@ -6,7 +6,7 @@ tags:
 ---
 # Application / Agent Runtime Controls
 
-This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Application/Agent Runtime trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Application/Agent Runtime Issues]].
+This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Application/Agent Runtime trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[attacks/|Application/Agent Runtime Issues]].
 
 ## Overview
 
@@ -62,7 +62,7 @@ Effective application/agent runtime security requires controls at multiple layer
 | [[input-validation-patterns|Input Validation Patterns]] | Insecure Prompt Assembly, Insufficient Output Encoding | Preventive | Planned |
 | [[anomaly-detection-architecture|Anomaly Detection Architecture]] | Tool Privilege Escalation, Agent Goal Hijacking, Unsafe Tool Invocation | Detective | Planned |
 
-[[issues|View all Application/Agent Runtime Issues]]
+[[attacks/|View all Application/Agent Runtime Issues]]
 
 ## Cross-Boundary Considerations
 
@@ -96,6 +96,6 @@ Application/Agent Runtime boundary controls interact with controls in other boun
 
 ## Related Documentation
 
-- [[issues|Application/Agent Runtime Issues]] - Attack-specific mitigations
+- [[attacks/|Application/Agent Runtime Issues]] - Attack-specific mitigations
 - [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
 - [[methodology|Methodology]] - Testing and validation approaches

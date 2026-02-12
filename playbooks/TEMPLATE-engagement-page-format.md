@@ -443,16 +443,16 @@ Each vulnerability follows this format:
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
 4. **Explore applicable issues**: [Link to relevant issue pages]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
 - [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[issues|Model Issues]] (if applicable)
-- [[issues|Data/Knowledge Issues]] (if applicable)
-- [[application-agent-runtime|Application/Agent Runtime Issues]] (if applicable)
-- [[deployment-governance|Deployment/Governance Issues]] (if applicable)
+- [[attacks/|Model Issues]] (if applicable)
+- [[attacks/|Data/Knowledge Issues]] (if applicable)
+- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]] (if applicable)
+- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]] (if applicable)
 - [[techniques|MITRE ATLAS Techniques]]
 - [[methodology|Methodology]]

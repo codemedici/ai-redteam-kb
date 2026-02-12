@@ -19,7 +19,7 @@ This control addresses the following security issues:
 - **[[agent-goal-hijack|Agent Goal Hijacking]]**: Prevents hijacked agents from performing unauthorized actions by limiting available tool permissions
 - **[[prompt-injection|Prompt Injection]]**: Reduces impact of prompt injection attacks by ensuring injected instructions cannot access privileged tools
 
-[[issues|See [Application/Agent Runtime Issues]] for complete issue catalog]
+[[attacks/|See [Application/Agent Runtime Issues]] for complete issue catalog]
 
 ## Implementation Approach
 
@@ -140,7 +140,7 @@ This control works best when combined with:
 - **[[approval-workflow-patterns|Approval Workflow Patterns]]**: Requires human approval for high-privilege tool invocations
 - **[[anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects unusual permission usage patterns indicating potential attacks
 
-[[controls|See [Controls Index]] for complete control catalog]
+[[defenses/|See [Controls Index]] for complete control catalog]
 
 ## Framework References
 

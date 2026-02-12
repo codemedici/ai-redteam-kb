@@ -633,16 +633,16 @@ Success rate: [X/Y attempts]
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
 4. **Explore applicable issues**: [[trust-boundaries-overview|Trust Boundaries Overview]]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
 - [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[issues|Model Issues]]
-- [[issues|Data/Knowledge Issues]]
-- [[application-agent-runtime|Application/Agent Runtime Issues]]
-- [[deployment-governance|Deployment/Governance Issues]]
+- [[attacks/|Model Issues]]
+- [[attacks/|Data/Knowledge Issues]]
+- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
+- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]]
 - [[techniques|MITRE ATLAS Techniques]]
 - [[methodology|Methodology]]

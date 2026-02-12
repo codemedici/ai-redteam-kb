@@ -330,17 +330,17 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 
 ### LLM Applications
 - [[variant-llm-applications|Detailed methodology →]]
-- [[issues|Model boundary issues →]]
+- [[attacks/|Model boundary issues →]]
 - [[llm-application-red-team|Relevant engagements →]]
 
 ### RAG Systems
 - [[variant-rag-systems|Detailed methodology →]]
-- [[issues|Data/Knowledge boundary issues →]]
+- [[attacks/|Data/Knowledge boundary issues →]]
 - [[rag-retrieval-assessment|Relevant engagements →]]
 
 ### Agentic Systems
 - [[variant-agentic-systems|Detailed methodology →]]
-- [[application-agent-runtime|Application/Agent boundary issues →]]
+- [[methodology/application-agent-boundary-overview|Application/Agent boundary issues →]]
 - [[agentic-workflow-assessment|Relevant engagements →]]
 
 ### Supply Chain
@@ -360,4 +360,4 @@ AI systems vary significantly in architecture and attack surface. A one-size-fit
 - [[phase-4-test-planning|Phase 4: Test Planning]] - Technique selection by variant
 - [[phase-5-execution|Phase 5: Execution]] - Testing approaches by variant
 - [[trust-boundaries-overview|Trust Boundaries]] - Attack taxonomy by boundary
-- [[engagements|Engagements]] - Engagement types by system variant
+- [[playbooks/engagements-overview|Engagements]] - Engagement types by system variant

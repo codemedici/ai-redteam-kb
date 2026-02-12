@@ -6,7 +6,7 @@ tags:
 ---
 # Deployment / Governance Controls
 
-This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Deployment/Governance trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Deployment/Governance Issues]].
+This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Deployment/Governance trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[attacks/|Deployment/Governance Issues]].
 
 ## Overview
 
@@ -61,7 +61,7 @@ Effective deployment/governance security requires controls across operational la
 | [[rate-limiting-and-throttling|Rate Limiting & Throttling]] | API Rate Limiting Bypass, Third-Party Model Risks | Preventive | Planned |
 | [[kill-switch-and-session-termination|Kill Switch & Session Termination]] | Multiple issues (cross-boundary) | Responsive | Planned |
 
-[[issues|View all Deployment/Governance Issues]]
+[[attacks/|View all Deployment/Governance Issues]]
 
 ## Cross-Boundary Considerations
 
@@ -95,6 +95,6 @@ Deployment/Governance boundary controls interact with controls in other boundari
 
 ## Related Documentation
 
-- [[issues|Deployment/Governance Issues]] - Attack-specific mitigations
+- [[attacks/|Deployment/Governance Issues]] - Attack-specific mitigations
 - [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
 - [[methodology|Methodology]] - Testing and validation approaches

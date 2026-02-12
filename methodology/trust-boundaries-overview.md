@@ -85,8 +85,8 @@ This document serves as a **foundational architecture reference** for AI securit
 
 Each trust boundary is organized into three sections:
 
-1. **Issues**: Attack-specific vulnerabilities with detailed mitigations ([[issues|Model Issues]], [[issues|Data/Knowledge Issues]], [[issues|Application/Agent Runtime Issues]], [[issues|Deployment/Governance Issues]])
-2. **Controls**: Cross-cutting defensive patterns and architectural guidance ([[controls|Model Controls]], [[controls|Data/Knowledge Controls]], [[controls|Application/Agent Runtime Controls]], [[controls|Deployment/Governance Controls]])
+1. **Issues**: Attack-specific vulnerabilities with detailed mitigations ([[attacks/|Model Issues]], [[attacks/|Data/Knowledge Issues]], [[attacks/|Application/Agent Runtime Issues]], [[attacks/|Deployment/Governance Issues]])
+2. **Controls**: Cross-cutting defensive patterns and architectural guidance ([[defenses/|Model Controls]], [[defenses/|Data/Knowledge Controls]], [[defenses/|Application/Agent Runtime Controls]], [[defenses/|Deployment/Governance Controls]])
 3. **Boundary Overview**: This document provides the architectural foundation
 
 **Issues vs. Controls:**
@@ -257,7 +257,7 @@ Encompasses all information the system consumes or stores outside the model weig
 
 **Impact**: Remote code execution via backdoored authentication logic
 
-**ATLAS Mapping**: [[AML.T0020|AML.T0020: Poison Training Data]]
+**ATLAS Mapping**: [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0020: Poison Training Data]]
 
 **Detection**: Monitor RAG retrieval patterns for newly added documents, verify source reputation, use code analysis on generated outputs
 
@@ -319,7 +319,7 @@ Focuses on the *intrinsic behavior* and *security posture* of the model.
 
 **Impact**: Privacy violation, GDPR/CCPA non-compliance, potential identity theft
 
-**ATLAS Mapping**: [[AML.T0024|AML.T0024: Discover ML Model Family]], [[AML.T0056|AML.T0056: LLM Data Leakage]]
+**ATLAS Mapping**: [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Discover ML Model Family]], [[atlas/techniques/impact/impact-overview|AML.T0056: LLM Data Leakage]]
 
 **Detection**: Monitor for extraction-style prompts, implement output filtering for PII, use differential privacy in training, measure memorization metrics
 
@@ -389,7 +389,7 @@ Focuses on where AI components interact with business logic, workflows, tools, a
 
 **Impact**: Confidential data exfiltration, unauthorized access to privileged documents
 
-**ATLAS Mapping**: [[AML.T0051|AML.T0051: LLM Prompt Injection]]
+**ATLAS Mapping**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
 
 **Detection**: Sanitize email inputs before processing, implement tool call approval workflows for sensitive actions, monitor for emails to unusual external recipients, parse and validate email content structure
 
@@ -454,7 +454,7 @@ Encompasses the operational environment surrounding the model.
 
 **Impact**: Cross-tenant data leakage, privacy violation, regulatory non-compliance (HIPAA), competitive intelligence theft
 
-**ATLAS Mapping**: [[AML.T0024|AML.T0024: Discover ML Model Family]], [[AML.T0049|AML.T0049: Exploit ML Model]]
+**ATLAS Mapping**: [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Discover ML Model Family]], [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0049: Exploit ML Model]]
 
 **Detection**: Implement rate limiting at all layers (API, inference, vector DB), enforce strict tenant isolation in embeddings, monitor for timing attack patterns, audit cross-tenant access attempts, implement query result caching per tenant
 
@@ -976,10 +976,10 @@ Real-world AI attacks rarely target a single boundary in isolation. The most imp
 
 | Boundary | Key Controls to Break Attack Chains |
 |----------|-------------------------------------|
-| **Data/Knowledge** | Input validation, content signing, source reputation, embedding verification. See [[controls|Data/Knowledge Controls]] |
-| **Model** | Output filtering, confidence scoring, anomaly detection in completions. See [[controls|Model Controls]] |
-| **Application/System** | Least-privilege tools, action confirmation, prompt hierarchy enforcement. See [[controls|Application/Agent Runtime Controls]] |
-| **Deployment/Governance** | Tenant isolation, monitoring cross-boundary flows, kill switches. See [[controls|Deployment/Governance Controls]] |
+| **Data/Knowledge** | Input validation, content signing, source reputation, embedding verification. See [[defenses/|Data/Knowledge Controls]] |
+| **Model** | Output filtering, confidence scoring, anomaly detection in completions. See [[defenses/|Model Controls]] |
+| **Application/System** | Least-privilege tools, action confirmation, prompt hierarchy enforcement. See [[defenses/|Application/Agent Runtime Controls]] |
+| **Deployment/Governance** | Tenant isolation, monitoring cross-boundary flows, kill switches. See [[defenses/|Deployment/Governance Controls]] |
 
 **Critical Detection Points:**
 - **Data → Model transition**: Detect anomalous retrieval patterns

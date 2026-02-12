@@ -98,7 +98,7 @@ The attack exploits correlations the model learned. By combining partial knowled
    - Not just confidence scores—any output pattern that correlates
 
 3. **White-Box Analysis**
-   - With access to model parameters (see [[model-extraction-stealing|Model Extraction]])
+   - With access to model parameters (see [[model-extraction|Model Extraction]])
    - Perform sophisticated analyses to identify internal model states or feature importances strongly associated with target attribute
    - Makes inference easier or more accurate
 
@@ -479,7 +479,7 @@ Even with Secure Aggregation protecting individual updates, analyzing aggregated
 
 - [[membership-inference-attacks|Membership Inference Attacks]] - Foundation attack covered in Ch7
 - [[data-poisoning-attacks|Data Poisoning Attacks]] - Active attacks on training data
-- [[model-extraction-stealing|Model Extraction]] - White-box access enables stronger privacy attacks
+- [[model-extraction|Model Extraction]] - White-box access enables stronger privacy attacks
 - [[adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
 
 ---

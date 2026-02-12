@@ -197,4 +197,4 @@ Engagements can be sequenced for maximum effectiveness:
 - **Choice depends on context**: System type, business objectives, and risk profile determine the right engagement
 - **Sequencing matters**: Engagements can be combined and sequenced for maximum effectiveness
 
-[[engagements|Browse all engagements]] for detailed specifications.
+[[playbooks/engagements-overview|Browse all engagements]] for detailed specifications.

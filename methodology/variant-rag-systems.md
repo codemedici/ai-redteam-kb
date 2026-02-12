@@ -74,7 +74,7 @@ User Query → [Embedding] → [Vector Search] → [Document Retrieval] →
 - Retrieve malicious content and attribute to legitimate source
 - Undermine trust in system outputs
 
-[[issues|View Data/Knowledge Boundary issues →]]
+[[attacks/|View Data/Knowledge Boundary issues →]]
 
 ---
 
@@ -204,5 +204,5 @@ for source_tenant in tenant_ids:
 ## Related Documentation
 
 - [[attack-variants-overview|Attack Variants Overview]]
-- [[issues|Data/Knowledge Boundary Issues]]
+- [[attacks/|Data/Knowledge Boundary Issues]]
 - [[rag-retrieval-assessment|RAG Retrieval Assessment Engagement]]

@@ -240,7 +240,7 @@ This issue is tested in the following engagements:
 - [x] Data Governance & Privacy Testing - PII leakage and regulatory compliance validation (detail page pending)
 - [x] Model Tampering & Supply Chain Risk - Membership inference on third-party models (detail page pending)
 
-[[engagements|View all engagements]]
+[[playbooks/engagements-overview|View all engagements]]
 
 ## Framework References
 

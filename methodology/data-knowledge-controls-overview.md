@@ -6,7 +6,7 @@ tags:
 ---
 # Data / Knowledge Controls
 
-This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Data/Knowledge trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Data/Knowledge Issues]].
+This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Data/Knowledge trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[attacks/|Data/Knowledge Issues]].
 
 ## Overview
 
@@ -60,7 +60,7 @@ Effective data/knowledge security requires controls at multiple stages:
 | [[content-signing-and-provenance|Content Signing & Provenance]] | RAG Data Poisoning, Unauthorized Knowledge Disclosure | Preventive | Planned |
 | [[data-quarantine-procedures|Data Quarantine Procedures]] | RAG Data Poisoning, PII in Corpus | Responsive | Planned |
 
-[[issues|View all Data/Knowledge Issues]]
+[[attacks/|View all Data/Knowledge Issues]]
 
 ## Cross-Boundary Considerations
 
@@ -94,6 +94,6 @@ Data/Knowledge boundary controls interact with controls in other boundaries:
 
 ## Related Documentation
 
-- [[issues|Data/Knowledge Issues]] - Attack-specific mitigations
+- [[attacks/|Data/Knowledge Issues]] - Attack-specific mitigations
 - [[trust-boundaries-overview|Trust Boundaries Overview]] - Four-boundary model
 - [[methodology|Methodology]] - Testing and validation approaches

@@ -365,7 +365,7 @@ This engagement produces findings mapped to:
 
 **Remediation**: Implement strict access controls on knowledge corpus with content validation. Add adversarial training to make the LLM robust to fake facts. Implement source verification and trust scoring for retrieved documents. Sanitize retrieved text to strip instruction-like patterns before passing to the model.
 
-**Wiki Reference**: [[issues|Data Poisoning]]
+**Wiki Reference**: [[attacks/|Data Poisoning]]
 
 ---
 
@@ -406,7 +406,7 @@ Result: System retrieved email, incorporated hidden instruction, and attempted t
 
 **Remediation**: Implement retrieval result validation and diversity checks. Add re-ranking mechanisms that consider multiple factors beyond embedding similarity. Monitor for unusual retrieval patterns that might indicate manipulation.
 
-**Wiki Reference**: [[issues|Retrieval Manipulation]]
+**Wiki Reference**: [[attacks/|Retrieval Manipulation]]
 
 ---
 
@@ -540,15 +540,15 @@ Success rate: [X/Y attempts]
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[issues|Data Poisoning]], [[prompt-injection|Prompt Injection]]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[prompt-injection|Prompt Injection]]
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
 - [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[issues|Data/Knowledge Issues]]
-- [[application-agent-runtime|Application/Agent Runtime Issues]]
+- [[attacks/|Data/Knowledge Issues]]
+- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
 - [[techniques|MITRE ATLAS Techniques]]
 - [[methodology|Methodology]]

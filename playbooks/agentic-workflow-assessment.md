@@ -421,7 +421,7 @@ Result: Critical business documents deleted
 2. **Short-term** (1-2 weeks): Add content filtering on tasks parsed from emails, implement sandboxing for file operations
 3. **Long-term** (1-3 months): Redesign agent goal-setting with explicit user approval for high-risk actions, implement zero-trust principles for agent operations
 
-**Wiki Reference**: [[application-agent-runtime|Agent Goal Hijacking]]
+**Wiki Reference**: [[methodology/application-agent-boundary-overview|Agent Goal Hijacking]]
 
 ---
 
@@ -449,7 +449,7 @@ Result: Unauthorized $500 refund issued
 2. **Short-term** (1-2 weeks): Implement human-in-the-loop approval for high-value transactions
 3. **Long-term** (1-3 months): Redesign tool access model with least-privilege and mandatory approval workflows
 
-**Wiki Reference**: [[application-agent-runtime|Tool Privilege Escalation]]
+**Wiki Reference**: [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 
 ---
 
@@ -481,7 +481,7 @@ Result: Sensitive information leaked to all users
 2. **Short-term** (1-2 weeks): Add validation for memory storage, block instruction-like patterns
 3. **Long-term** (1-3 months): Redesign memory system with trust boundaries, implement memory audit logging
 
-**Wiki Reference**: [[application-agent-runtime|Agent Goal Hijacking]]
+**Wiki Reference**: [[methodology/application-agent-boundary-overview|Agent Goal Hijacking]]
 
 ---
 
@@ -613,15 +613,15 @@ Success rate: [X/Y attempts]
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[application-agent-runtime|Agent Goal Hijacking]], [[application-agent-runtime|Tool Privilege Escalation]]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+4. **Explore applicable issues**: [[methodology/application-agent-boundary-overview|Agent Goal Hijacking]], [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
 - [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[application-agent-runtime|Application/Agent Runtime Issues]]
-- [[issues|Model Issues]]
+- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
+- [[attacks/|Model Issues]]
 - [[techniques|MITRE ATLAS Techniques]]
 - [[methodology|Methodology]]

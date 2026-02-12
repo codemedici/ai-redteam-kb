@@ -91,7 +91,7 @@ This issue is tested in the following engagements:
 - [x] Data Governance & Privacy Testing - Primary focus on PII risks, anonymization validation, GDPR compliance (detail page pending)
 - [x] RAG & Retrieval Assessment - PII leakage through RAG corpus (detail page pending)
 
-[[engagements|View all engagements]]
+[[playbooks/engagements-overview|View all engagements]]
 
 ## Framework References
 

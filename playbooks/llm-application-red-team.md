@@ -207,7 +207,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **Indirect Prompt Injection**: Malicious instructions in external content (RAG, emails, web pages) → [[prompt-injection|Prompt Injection]]
 - [x] **Jailbreak Techniques**: Safety guardrail bypass via role-play, DAN, hypothetical scenarios → [[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]
 - [x] **System Prompt Extraction**: Techniques for leaking hidden instructions → [[system-prompt-leakage|System Prompt Leakage]]
-- [x] **Tool Privilege Escalation**: Unauthorized tool access via prompt manipulation → [[application-agent-runtime|Tool Privilege Escalation]]
+- [x] **Tool Privilege Escalation**: Unauthorized tool access via prompt manipulation → [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 - [x] **Cross-User Data Access**: Exploiting weak authorization in tool invocations
 - [x] **Training Data Extraction**: Probing for memorized sensitive information → [[training-data-memorization|Training Data Memorization]]
 - [x] **Goal Hijacking** (if agentic): Redirecting autonomous agent objectives
@@ -434,7 +434,7 @@ Result: Model returns admin API keys and passwords
 
 **Remediation**: Implement strict tool argument validation with allowlists. Use parameterized queries. Add human-in-the-loop approval for sensitive tool invocations. Enforce least-privilege tool access.
 
-**Wiki Reference**: [[application-agent-runtime|Tool Privilege Escalation]]
+**Wiki Reference**: [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 
 ---
 
@@ -567,16 +567,16 @@ Success rate: [X/Y attempts]
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[prompt-injection|Prompt Injection]], [[application-agent-runtime|Tool Privilege Escalation]]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+4. **Explore applicable issues**: [[prompt-injection|Prompt Injection]], [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
 - [[trust-boundaries-overview|Trust Boundaries Overview]]
-- [[issues|Model Issues]]
-- [[application-agent-runtime|Application/Agent Runtime Issues]]
+- [[attacks/|Model Issues]]
+- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
 - [[techniques|MITRE ATLAS Techniques]]
 - [[methodology|Methodology]]
 

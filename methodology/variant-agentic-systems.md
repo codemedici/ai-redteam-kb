@@ -73,7 +73,7 @@ User Request → [Agent Planning] → [Tool Selection] → [Tool Execution] →
 - Exploits tool vulnerabilities for lateral movement
 - Chains tools for complex attacks
 
-[[application-agent-runtime|View Application/Agent Boundary issues →]]
+[[methodology/application-agent-boundary-overview|View Application/Agent Boundary issues →]]
 
 ---
 
@@ -248,5 +248,5 @@ def secure_database_tool(query, params):
 ## Related Documentation
 
 - [[attack-variants-overview|Attack Variants Overview]]
-- [[application-agent-runtime|Application/Agent Boundary Issues]]
+- [[methodology/application-agent-boundary-overview|Application/Agent Boundary Issues]]
 - [[agentic-workflow-assessment|Agentic Workflow Assessment Engagement]]

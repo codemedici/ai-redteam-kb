@@ -93,7 +93,7 @@ This issue is tested in the following engagements:
 - [x] [[llm-application-red-team|LLM Application Red Team]] - Training data extraction and membership inference probes
 - [x] Data Governance & Privacy Testing - Primary focus on data leakage attack vectors (detail page pending)
 
-[[engagements|View all engagements]]
+[[playbooks/engagements-overview|View all engagements]]
 
 ## Framework References
 

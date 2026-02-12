@@ -33,4 +33,4 @@ tags:
 - **Duration**: 2 days
 - **Best for**: Internal team training, SIEM rule development, incident response prep
 
-[[engagements|View all engagement types]]
+[[playbooks/engagements-overview|View all engagement types]]

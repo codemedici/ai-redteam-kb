@@ -124,7 +124,7 @@ These four attack surface categories map directly to the vault's trust boundary 
 
 - [[defenses/secure-llm-system-architecture|Secure LLM System Architecture]]
 - [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
-- [[attacks/model-extraction-stealing|Model Extraction and Stealing]]
+- [[attacks/model-extraction|Model Extraction and Stealing]]
 - [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples and Evasion Attacks]]
 - [[attacks/membership-inference-attacks|Membership Inference Attacks]]
 - [[defenses/owasp-llm-mitigation-strategies|OWASP LLM Mitigation Strategies]]

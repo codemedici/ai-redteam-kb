@@ -880,7 +880,7 @@ During authorized engagements:
 - Take immediate action if testing accidentally crosses agreed-upon ethical boundaries
 - Focus on demonstrating the vulnerability, not producing large volumes of harmful output
 
-[[issues|View Model Safety testing considerations →]]
+[[attacks/|View Model Safety testing considerations →]]
 
 ---
 
@@ -977,7 +977,7 @@ Test if the LLM can be prompted into performing complex, harmful sequences of ac
 - Authentication: Do plugins properly enforce user context and permissions?
 - Monitoring: Do malicious tool invocations trigger alerts?
 
-[[application-agent-runtime|View Plugin/Tool security issues →]]
+[[methodology/application-agent-boundary-overview|View Plugin/Tool security issues →]]
 
 ---
 
@@ -1071,7 +1071,7 @@ When testing DoS:
 - Cost monitoring and alerting thresholds
 - Graceful degradation under load
 
-[[issues|View Model Denial of Service considerations →]]
+[[attacks/|View Model Denial of Service considerations →]]
 
 ---
 
@@ -1090,7 +1090,7 @@ When testing DoS:
 
 **Evidence:** Conversation transcripts, model responses, configuration metadata
 
-[[issues|View Model Boundary issues →]]
+[[attacks/|View Model Boundary issues →]]
 
 ---
 
@@ -1107,7 +1107,7 @@ When testing DoS:
 
 **Evidence:** Retrieved documents, embedding vectors, query logs, leaked data
 
-[[issues|View Data/Knowledge Boundary issues →]]
+[[attacks/|View Data/Knowledge Boundary issues →]]
 
 ---
 
@@ -1124,7 +1124,7 @@ When testing DoS:
 
 **Evidence:** Agent decision logs, tool invocation records, injected payloads, execution results
 
-[[application-agent-runtime|View Application/Agent Boundary issues →]]
+[[methodology/application-agent-boundary-overview|View Application/Agent Boundary issues →]]
 
 ---
 
@@ -1141,7 +1141,7 @@ When testing DoS:
 
 **Evidence:** Access logs, configuration files, monitoring dashboards, alert records
 
-[[deployment-governance|View Deployment/Governance Boundary issues →]]
+[[methodology/deployment-governance-boundary-overview|View Deployment/Governance Boundary issues →]]
 
 ---
 

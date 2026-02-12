@@ -47,7 +47,7 @@ Safety evaluation validates whether guardrails function under adversarial pressu
 - Sensitive operations require explicit approval
 - Rate limits prevent resource exhaustion
 
-**Link to wiki**: [[application-agent-runtime|Tool Privilege Escalation]]
+**Link to wiki**: [[methodology/application-agent-boundary-overview|Tool Privilege Escalation]]
 
 ### Prompt Injection Resistance
 

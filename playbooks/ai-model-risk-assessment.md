@@ -663,7 +663,7 @@ Each identified risk follows this format:
 2. **Prepare engagement inputs** using checklist above
 3. **Check [[methodology|Methodology]]** to understand our framework-aligned approach
 4. **Explore applicable issues**: [[trust-boundaries-overview|Trust Boundaries Overview]]
-5. **[[contact|Contact us]]** to discuss scoping, timeline, and pricing
+5. **** to discuss scoping, timeline, and pricing
 
 ---
 

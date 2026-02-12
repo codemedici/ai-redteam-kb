@@ -95,7 +95,7 @@ The 2025 update recognizes sophisticated attack chains:
 - [[attacks/system-prompt-leakage|System Prompt Leakage (LLM07:2025)]]
 - [[attacks/vector-embedding-weaknesses|Vector and Embedding Weaknesses (LLM08:2025)]]
 - [[attacks/agentic-ai-security-risks-owasp-aivss|OWASP AIVSS Agentic AI Risks]]
-- [[attacks/prompt-injection-llm-manipulation|Prompt Injection and LLM Manipulation]]
+- [[attacks/prompt-injection|Prompt Injection and LLM Manipulation]]
 - [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
 - [[methodology/ai-security-landscape|AI Security Landscape]]
 

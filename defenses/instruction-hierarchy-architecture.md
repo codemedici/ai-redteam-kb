@@ -19,7 +19,7 @@ This control addresses the following security issues:
 - **[[jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Prevents safety guardrail bypass by ensuring system instructions cannot be overridden
 - **[[insecure-prompt-assembly|Insecure Prompt Assembly]]**: Provides secure prompt assembly patterns that prevent instruction blending
 
-[[issues|See [Model Issues]] and [[issues|Application/Agent Runtime Issues]] for complete issue catalogs]
+[[attacks/|See [Model Issues]] and [[attacks/|Application/Agent Runtime Issues]] for complete issue catalogs]
 
 ## Implementation Approach
 
@@ -139,7 +139,7 @@ This control works best when combined with:
 - **[[dual-llm-judge-pattern|Dual-LLM Judge Pattern]]**: Validates outputs to ensure hierarchy was respected
 - **[[anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects attempts to violate instruction hierarchy
 
-[[controls|See [Controls Index]] for complete control catalog]
+[[defenses/|See [Controls Index]] for complete control catalog]
 
 ## Framework References
 

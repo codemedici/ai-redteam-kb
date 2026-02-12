@@ -1,4 +1,5 @@
 ---
+description: "Exploiting agent authorization mechanisms to execute unauthorized actions"
 tags:
   - application-runtime
   - authorization-bypass
@@ -6,8 +7,13 @@ tags:
   - source/securing-ai-agents
   - trust-boundary/agent-runtime
   - type/attack
+  - target/agent
+  - access/black-box
+  - access/gray-box
+  - severity/critical
+  - atlas/aml.t0051
 created: 2026-02-11
-source: [[sources/bibliography#Securing AI Agents]]
+source: [['sources/bibliography#Securing AI Agents']]
 pages: "210-211"
 ---
 # Agent Authorization and Control Hijacking

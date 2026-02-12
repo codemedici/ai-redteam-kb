@@ -1,12 +1,16 @@
 ---
+description: "Mitigation strategies mapped to the OWASP LLM Top 10 vulnerability categories"
 tags:
   - needs-review
   - owasp
   - source/ai-native-llm-security
   - trust-boundary/deployment-governance
   - type/defense
+  - target/llm-app
+  - target/agent
+  - target/rag-system
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "153-180"
 ---
 # OWASP LLM Mitigation Strategies

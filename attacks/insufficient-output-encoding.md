@@ -1,9 +1,13 @@
 ---
+description: "LLM outputs are not properly sanitized before rendering, enabling injection attacks (XSS, code injection)."
 tags:
   - owasp/llm02
   - trust-boundary/agent-runtime
   - type/attack
-description: "LLM outputs are not properly sanitized before rendering, enabling injection attacks (XSS, code injection)."
+  - target/llm-app
+  - target/agent
+  - access/black-box
+  - severity/high
 ---
 # Insufficient Output Encoding
 

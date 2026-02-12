@@ -1,9 +1,14 @@
 ---
+description: "Adversary modifies model weights, architecture, or checkpoints to introduce backdoors or degrade performance."
 tags:
   - atlas/aml.t0047
   - trust-boundary/model
   - type/attack
-description: "Adversary modifies model weights, architecture, or checkpoints to introduce backdoors or degrade performance."
+  - target/ml-pipeline
+  - target/model-api
+  - access/white-box
+  - access/gray-box
+  - severity/critical
 ---
 # Model Tampering and Integrity Attacks
 

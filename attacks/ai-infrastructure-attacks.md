@@ -1,4 +1,5 @@
 ---
+description: "Attacks targeting AI/ML infrastructure including training pipelines, model registries, and serving infrastructure"
 tags:
   - deployment-security
   - infrastructure
@@ -7,8 +8,14 @@ tags:
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/attack
+  - target/ml-pipeline
+  - target/model-api
+  - access/gray-box
+  - access/white-box
+  - severity/critical
+  - atlas/aml.t0008
 created: 2026-02-12
-source: [[sources/bibliography#Red-Teaming AI]]
+source: [['sources/bibliography#Red-Teaming AI']]
 pages: "275-314"
 ---
 # Attacking & Defending AI Infrastructure

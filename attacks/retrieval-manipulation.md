@@ -1,8 +1,12 @@
 ---
+description: "Adversary manipulates RAG retrieval mechanisms to surface malicious or irrelevant content."
 tags:
   - trust-boundary/data-knowledge
   - type/attack
-description: "Adversary manipulates RAG retrieval mechanisms to surface malicious or irrelevant content."
+  - target/rag-system
+  - access/black-box
+  - access/gray-box
+  - severity/high
 ---
 # Retrieval Manipulation and Hijacking
 

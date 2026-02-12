@@ -1,10 +1,14 @@
 ---
+description: "Attackers circumvent API rate limits through distributed infrastructure, enabling model extraction, resource exhaustion, and denial of service."
 tags:
   - owasp/llm04
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/attack
-description: "Attackers circumvent API rate limits through distributed infrastructure, enabling model extraction, resource exhaustion, and denial of service."
+  - target/model-api
+  - target/llm-app
+  - access/black-box
+  - severity/medium
 ---
 # API Rate Limiting Bypass
 

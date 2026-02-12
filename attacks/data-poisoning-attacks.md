@@ -1,4 +1,5 @@
 ---
+description: "Corrupting training data or knowledge bases to manipulate model behavior"
 tags:
   - atlas/aml.t0020
   - data-poisoning
@@ -10,8 +11,13 @@ tags:
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/attack
+  - target/ml-pipeline
+  - target/rag-system
+  - access/gray-box
+  - access/white-box
+  - severity/critical
 created: 2026-02-12
-source: [[sources/bibliography#Red-Teaming AI]]
+source: [['sources/bibliography#Red-Teaming AI']]
 pages: "99-138"
 ---
 # Data Poisoning Attacks

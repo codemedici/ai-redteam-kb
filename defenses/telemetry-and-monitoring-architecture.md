@@ -1,8 +1,11 @@
 ---
+description: "Comprehensive logging, monitoring, and alerting architecture for LLM systems and agentic workflows."
 tags:
   - trust-boundary/deployment-governance
   - type/defense
-description: "Comprehensive logging, monitoring, and alerting architecture for LLM systems and agentic workflows."
+  - target/llm-app
+  - target/agent
+  - target/model-api
 ---
 
 # Telemetry And Monitoring Architecture

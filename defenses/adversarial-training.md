@@ -1,10 +1,12 @@
 ---
+description: "Training models with adversarial examples to improve robustness"
 tags:
   - adversarial-training
   - control
   - model-hardening
   - trust-boundary/model
   - type/defense
+  - target/ml-pipeline
 created: 2026-02-12
 ---
 # Adversarial Training

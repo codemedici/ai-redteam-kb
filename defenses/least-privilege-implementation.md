@@ -1,8 +1,9 @@
 ---
+description: "Architectural pattern for implementing least privilege access control in agentic systems to prevent tool privilege escalation and unauthorized actions."
 tags:
   - trust-boundary/agent-runtime
   - type/defense
-description: "Architectural pattern for implementing least privilege access control in agentic systems to prevent tool privilege escalation and unauthorized actions."
+  - target/agent
 ---
 # Least Privilege Tool Implementation
 

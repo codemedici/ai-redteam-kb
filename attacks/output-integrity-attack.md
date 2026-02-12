@@ -1,9 +1,14 @@
 ---
+description: "Adversary intercepts and manipulates model outputs before downstream processing, making it appear as though the model produced different results."
 tags:
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/attack
-description: "Adversary intercepts and manipulates model outputs before downstream processing, making it appear as though the model produced different results."
+  - target/llm-app
+  - target/agent
+  - access/black-box
+  - severity/high
+  - atlas/aml.t0051
 ---
 # Output Integrity Attack
 

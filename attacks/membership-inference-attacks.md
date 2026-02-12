@@ -1,8 +1,13 @@
 ---
+description: "Determining whether specific data points were used in a model's training dataset"
 tags:
   - atlas/aml.t0025
   - trust-boundary/model
   - type/attack
+  - target/model-api
+  - target/ml-pipeline
+  - access/black-box
+  - severity/high
 ---
 # Membership Inference Attacks (MIA)
 

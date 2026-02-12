@@ -1,11 +1,13 @@
 ---
+description: "Security practices across the LLM development lifecycle from data to deployment"
 tags:
   - needs-review
   - source/ai-native-llm-security
   - trust-boundary/deployment-governance
   - type/defense
+  - target/ml-pipeline
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "249-276"
 ---
 # LLM Development Lifecycle Security

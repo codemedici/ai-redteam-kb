@@ -1,8 +1,14 @@
 ---
+description: "Model vulnerable to crafted inputs designed to cause misclassification, bypass safety controls, or trigger hidden backdoors."
 tags:
   - trust-boundary/model
   - type/attack
-description: "Model vulnerable to crafted inputs designed to cause misclassification, bypass safety controls, or trigger hidden backdoors."
+  - target/ml-pipeline
+  - target/model-api
+  - access/black-box
+  - access/white-box
+  - severity/high
+  - atlas/aml.t0015
 ---
 # Adversarial Robustness Failures
 

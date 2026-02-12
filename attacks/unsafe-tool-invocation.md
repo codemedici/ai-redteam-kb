@@ -1,10 +1,14 @@
 ---
+description: "Agent or LLM invokes tools with malicious or unvalidated arguments, causing unintended side effects."
 tags:
   - owasp/llm08
   - trust-boundary/agent-runtime
   - trust-boundary/deployment-governance
   - type/attack
-description: "Agent or LLM invokes tools with malicious or unvalidated arguments, causing unintended side effects."
+  - target/agent
+  - access/black-box
+  - severity/critical
+  - atlas/aml.t0051
 ---
 # Unsafe Tool Invocation
 

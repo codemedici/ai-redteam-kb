@@ -1,8 +1,11 @@
 ---
+description: "Cross-boundary architectural pattern for detecting anomalous behavior patterns that indicate security attacks across AI system boundaries."
 tags:
   - trust-boundary/general
   - type/defense
-description: "Cross-boundary architectural pattern for detecting anomalous behavior patterns that indicate security attacks across AI system boundaries."
+  - target/llm-app
+  - target/agent
+  - target/model-api
 ---
 # Anomaly Detection Architecture
 

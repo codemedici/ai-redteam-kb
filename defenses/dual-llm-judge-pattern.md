@@ -1,8 +1,10 @@
 ---
+description: "Using a separate LLM as judge/validator to evaluate outputs before delivery, catching injection and policy violations."
 tags:
   - trust-boundary/model
   - type/defense
-description: "Using a separate LLM as judge/validator to evaluate outputs before delivery, catching injection and policy violations."
+  - target/llm-app
+  - target/agent
 ---
 
 # Dual Llm Judge Pattern

@@ -1,8 +1,13 @@
 ---
+description: "Lack of defined incident response procedures for AI-specific security events."
 tags:
   - trust-boundary/deployment-governance
   - type/attack
-description: "Lack of defined incident response procedures for AI-specific security events."
+  - target/llm-app
+  - target/agent
+  - target/ml-pipeline
+  - access/black-box
+  - severity/medium
 ---
 # Incident Response Gap
 

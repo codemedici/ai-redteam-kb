@@ -1,8 +1,11 @@
 ---
+description: "Role-based access control and network segmentation for LLM system isolation."
 tags:
   - trust-boundary/deployment-governance
   - type/defense
-description: "Role-based access control and network segmentation for LLM system isolation."
+  - target/llm-app
+  - target/agent
+  - target/rag-system
 ---
 
 # Access Segmentation And Rbac

@@ -1,8 +1,10 @@
 ---
+description: "Architectural pattern for cryptographically separating system instructions from user content to prevent prompt injection attacks."
 tags:
   - trust-boundary/general
   - type/defense
-description: "Architectural pattern for cryptographically separating system instructions from user content to prevent prompt injection attacks."
+  - target/llm-app
+  - target/agent
 ---
 # Instruction Hierarchy Architecture
 

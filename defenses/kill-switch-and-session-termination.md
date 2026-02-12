@@ -1,8 +1,9 @@
 ---
+description: "Emergency termination mechanisms for active LLM sessions, agent workflows, and tool chains."
 tags:
   - trust-boundary/agent-runtime
   - type/defense
-description: "Emergency termination mechanisms for active LLM sessions, agent workflows, and tool chains."
+  - target/agent
 ---
 
 # Kill Switch And Session Termination

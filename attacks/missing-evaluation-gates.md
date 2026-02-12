@@ -1,9 +1,13 @@
 ---
+description: "Models deployed without adequate security testing or validation checkpoints."
 tags:
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/attack
-description: "Models deployed without adequate security testing or validation checkpoints."
+  - target/ml-pipeline
+  - access/gray-box
+  - access/white-box
+  - severity/medium
 ---
 # Missing Evaluation Gates in CI/CD
 

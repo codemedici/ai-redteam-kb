@@ -1,8 +1,11 @@
 ---
+description: "Security controls for AI training, serving, and deployment infrastructure"
 tags:
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/defense
+  - target/ml-pipeline
+  - target/model-api
 ---
 # AI Infrastructure Security: Attacking & Defending AI Systems
 

@@ -1,8 +1,10 @@
 ---
+description: "Adaptive rate limiting and query throttling to prevent model extraction, DoS, and resource exhaustion attacks."
 tags:
   - trust-boundary/deployment-governance
   - type/defense
-description: "Adaptive rate limiting and query throttling to prevent model extraction, DoS, and resource exhaustion attacks."
+  - target/model-api
+  - target/llm-app
 ---
 
 # Rate Limiting And Throttling

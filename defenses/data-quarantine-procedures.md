@@ -1,8 +1,10 @@
 ---
+description: "Isolation and validation procedures for untrusted training data and RAG documents before ingestion."
 tags:
   - trust-boundary/data-knowledge
   - type/defense
-description: "Isolation and validation procedures for untrusted training data and RAG documents before ingestion."
+  - target/rag-system
+  - target/ml-pipeline
 ---
 
 # Data Quarantine Procedures

@@ -1,10 +1,13 @@
 ---
+description: "Adversary replicates or steals model functionality through query-based extraction attacks."
 tags:
   - atlas/aml.t0024
   - owasp/llm10
   - trust-boundary/model
   - type/attack
-description: "Adversary replicates or steals model functionality through query-based extraction attacks."
+  - target/model-api
+  - access/black-box
+  - severity/high
 ---
 # Model Extraction and Theft
 

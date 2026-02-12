@@ -1,8 +1,10 @@
 ---
+description: "Binding user identity and authorization context to LLM sessions to prevent confused deputy and privilege escalation attacks."
 tags:
   - trust-boundary/agent-runtime
   - type/defense
-description: "Binding user identity and authorization context to LLM sessions to prevent confused deputy and privilege escalation attacks."
+  - target/agent
+  - target/llm-app
 ---
 
 # User Context Binding

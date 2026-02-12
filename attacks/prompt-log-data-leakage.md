@@ -1,9 +1,13 @@
 ---
+description: "Sensitive data in prompts or conversation history is stored insecurely or leaked."
 tags:
   - trust-boundary/data-knowledge
   - trust-boundary/model
   - type/attack
-description: "Sensitive data in prompts or conversation history is stored insecurely or leaked."
+  - target/llm-app
+  - target/agent
+  - access/gray-box
+  - severity/high
 ---
 # Prompt and Conversation Log Data Leakage
 

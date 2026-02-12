@@ -1,8 +1,9 @@
 ---
+description: "Hash-based and cryptographic verification of vector embeddings to detect poisoning and tampering."
 tags:
   - trust-boundary/data-knowledge
   - type/defense
-description: "Hash-based and cryptographic verification of vector embeddings to detect poisoning and tampering."
+  - target/rag-system
 ---
 
 # Embedding Integrity Verification

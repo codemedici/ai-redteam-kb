@@ -1,8 +1,14 @@
 ---
+description: "Insufficient RBAC, ABAC, or tenant isolation allows unauthorized access to AI resources."
 tags:
   - trust-boundary/deployment-governance
   - type/attack
-description: "Insufficient RBAC, ABAC, or tenant isolation allows unauthorized access to AI resources."
+  - target/llm-app
+  - target/agent
+  - target/rag-system
+  - access/black-box
+  - access/gray-box
+  - severity/high
 ---
 # Weak Access Segmentation
 

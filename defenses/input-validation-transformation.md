@@ -1,10 +1,14 @@
 ---
+description: "Transforming and normalizing inputs to neutralize adversarial content"
 tags:
   - control
   - input-validation
   - preprocessing
   - trust-boundary/model
   - type/defense
+  - target/llm-app
+  - target/agent
+  - target/rag-system
 created: 2026-02-12
 ---
 # Input Validation and Transformation

@@ -1,9 +1,13 @@
 ---
+description: "Model memorizes and regurgitates verbatim training data, including sensitive information."
 tags:
   - atlas/aml.t0037
   - trust-boundary/model
   - type/attack
-description: "Model memorizes and regurgitates verbatim training data, including sensitive information."
+  - target/model-api
+  - target/ml-pipeline
+  - access/black-box
+  - severity/high
 ---
 # Training Data Memorization and Extraction
 

@@ -1,8 +1,12 @@
 ---
+description: "Sensitive personal information improperly included in training data or knowledge bases."
 tags:
   - trust-boundary/data-knowledge
   - type/attack
-description: "Sensitive personal information improperly included in training data or knowledge bases."
+  - target/rag-system
+  - target/ml-pipeline
+  - access/black-box
+  - severity/high
 ---
 # PII in Knowledge Corpus
 

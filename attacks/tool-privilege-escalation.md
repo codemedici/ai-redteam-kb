@@ -1,10 +1,14 @@
 ---
+description: "Agent or LLM exploits overly permissive tool access to perform unauthorized high-privilege actions."
 tags:
   - owasp/llm08
   - trust-boundary/agent-runtime
   - trust-boundary/data-knowledge
   - type/attack
-description: "Agent or LLM exploits overly permissive tool access to perform unauthorized high-privilege actions."
+  - target/agent
+  - access/black-box
+  - severity/critical
+  - atlas/aml.t0051
 ---
 # Tool Privilege Escalation
 

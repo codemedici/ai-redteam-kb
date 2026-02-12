@@ -1,8 +1,11 @@
 ---
+description: "LLM-specific incident response playbooks covering prompt injection, data leakage, model compromise, and agentic failures."
 tags:
   - trust-boundary/deployment-governance
   - type/defense
-description: "LLM-specific incident response playbooks covering prompt injection, data leakage, model compromise, and agentic failures."
+  - target/llm-app
+  - target/agent
+  - target/ml-pipeline
 ---
 
 # Incident Response Procedures

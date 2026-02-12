@@ -1,10 +1,13 @@
 ---
+description: "Cross-boundary patterns for validating and sanitizing user inputs, RAG content, and external data before processing by AI systems."
 tags:
   - trust-boundary/agent-runtime
   - trust-boundary/data-knowledge
   - trust-boundary/model
   - type/defense
-description: "Cross-boundary patterns for validating and sanitizing user inputs, RAG content, and external data before processing by AI systems."
+  - target/llm-app
+  - target/agent
+  - target/rag-system
 ---
 # Input Validation Patterns
 

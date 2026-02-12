@@ -1,4 +1,5 @@
 ---
+description: "Causing an agent to lose its defined role, personality, or behavioral constraints"
 tags:
   - authentication
   - iam
@@ -7,8 +8,12 @@ tags:
   - trust-boundary/agent-runtime
   - type/attack
   - workload-identity
+  - target/agent
+  - access/black-box
+  - severity/high
+  - atlas/aml.t0051
 created: 2026-02-11
-source: [[sources/bibliography#Securing AI Agents]]
+source: [['sources/bibliography#Securing AI Agents']]
 pages: "52-56"
 ---
 # Agent Identity Crisis

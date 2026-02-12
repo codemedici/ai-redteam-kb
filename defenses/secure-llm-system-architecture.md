@@ -1,11 +1,15 @@
 ---
+description: "Architectural patterns for building secure LLM-powered applications"
 tags:
   - needs-review
   - source/ai-native-llm-security
   - trust-boundary/model
   - type/defense
+  - target/llm-app
+  - target/agent
+  - target/rag-system
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "211-247"
 ---
 # Secure LLM System Architecture

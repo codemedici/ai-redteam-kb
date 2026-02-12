@@ -1,8 +1,10 @@
 ---
+description: "Cryptographic signing and provenance tracking for model artifacts, training data, and generated content."
 tags:
   - trust-boundary/deployment-governance
   - type/defense
-description: "Cryptographic signing and provenance tracking for model artifacts, training data, and generated content."
+  - target/rag-system
+  - target/ml-pipeline
 ---
 
 # Content Signing And Provenance

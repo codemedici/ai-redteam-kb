@@ -1,8 +1,12 @@
 ---
+description: "Adversary manipulates agent objectives or task sequences to achieve unauthorized goals."
 tags:
   - trust-boundary/agent-runtime
   - type/attack
-description: "Adversary manipulates agent objectives or task sequences to achieve unauthorized goals."
+  - target/agent
+  - access/black-box
+  - severity/critical
+  - atlas/aml.t0051
 ---
 # Agent Goal Hijacking
 

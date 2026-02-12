@@ -1,8 +1,12 @@
 ---
+description: "Agent or application confuses user identity or authorization context, leading to privilege violations."
 tags:
   - trust-boundary/agent-runtime
   - type/attack
-description: "Agent or application confuses user identity or authorization context, leading to privilege violations."
+  - target/agent
+  - target/llm-app
+  - access/black-box
+  - severity/high
 ---
 # Authentication Context Confusion
 

@@ -1,8 +1,13 @@
 ---
+description: "Lack of adequate logging and monitoring prevents detection of attacks and anomalies."
 tags:
   - trust-boundary/deployment-governance
   - type/attack
-description: "Lack of adequate logging and monitoring prevents detection of attacks and anomalies."
+  - target/llm-app
+  - target/agent
+  - target/ml-pipeline
+  - access/black-box
+  - severity/medium
 ---
 # Insufficient Telemetry and Tracing
 

@@ -1,7 +1,15 @@
 ---
+description: "Advanced privacy attacks including model inversion, attribute inference, and data reconstruction"
 tags:
   - trust-boundary/model
   - type/attack
+  - target/model-api
+  - target/ml-pipeline
+  - access/black-box
+  - access/white-box
+  - severity/high
+  - atlas/aml.t0025
+  - atlas/aml.t0024
 ---
 # Privacy Attacks Beyond Membership Inference
 

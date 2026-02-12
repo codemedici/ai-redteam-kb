@@ -1,9 +1,16 @@
 ---
+description: "Application constructs prompts insecurely, allowing injection or context manipulation."
 tags:
   - owasp/llm01
   - trust-boundary/agent-runtime
   - type/attack
-description: "Application constructs prompts insecurely, allowing injection or context manipulation."
+  - target/llm-app
+  - target/rag-system
+  - target/agent
+  - access/black-box
+  - access/gray-box
+  - severity/high
+  - atlas/aml.t0051
 ---
 # Insecure Prompt Assembly
 

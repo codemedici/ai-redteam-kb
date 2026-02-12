@@ -1,8 +1,9 @@
 ---
+description: "Validation and trust scoring for external data sources, RAG documents, and retrieved content."
 tags:
   - trust-boundary/data-knowledge
   - type/defense
-description: "Validation and trust scoring for external data sources, RAG documents, and retrieved content."
+  - target/rag-system
 ---
 
 # Source Validation And Trust Scoring

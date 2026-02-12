@@ -1,4 +1,5 @@
 ---
+description: "Crafted inputs that cause ML models to misclassify or produce incorrect outputs"
 tags:
   - adversarial-examples
   - atlas-aml-t0043
@@ -8,8 +9,13 @@ tags:
   - source/red-teaming-ai
   - trust-boundary/model
   - type/attack
+  - target/ml-pipeline
+  - target/model-api
+  - access/white-box
+  - access/black-box
+  - severity/high
 created: 2026-02-12
-source: [[sources/bibliography#Red-Teaming AI]]
+source: [['sources/bibliography#Red-Teaming AI']]
 pages: "139-167"
 ---
 # Adversarial Examples and Evasion Attacks at Inference Time

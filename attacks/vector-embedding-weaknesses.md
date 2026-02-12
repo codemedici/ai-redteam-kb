@@ -1,12 +1,16 @@
 ---
+description: "Exploiting weaknesses in vector embedding models for retrieval manipulation or data exfiltration"
 tags:
   - needs-review
   - owasp/llm08:2025
   - source/ai-native-llm-security
   - trust-boundary/data-knowledge
   - type/attack
+  - target/rag-system
+  - access/gray-box
+  - severity/high
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "351-355"
 ---
 # Vector and Embedding Weaknesses (OWASP LLM08:2025)

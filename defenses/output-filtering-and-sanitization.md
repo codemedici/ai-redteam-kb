@@ -1,8 +1,10 @@
 ---
+description: "Post-generation filtering of LLM outputs to prevent harmful content, data leakage, and injection propagation."
 tags:
   - trust-boundary/model
   - type/defense
-description: "Post-generation filtering of LLM outputs to prevent harmful content, data leakage, and injection propagation."
+  - target/llm-app
+  - target/agent
 ---
 
 # Output Filtering And Sanitization

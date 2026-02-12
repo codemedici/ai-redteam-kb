@@ -1,10 +1,13 @@
 ---
+description: "Runtime monitoring and validation of LLM outputs for quality and safety"
 tags:
   - anomaly-detection
   - control
   - runtime-defense
   - trust-boundary/model
   - type/defense
+  - target/llm-app
+  - target/agent
 created: 2026-02-12
 ---
 # Output Monitoring and Validation

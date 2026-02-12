@@ -1,10 +1,15 @@
 ---
+description: "Using untrusted pre-trained models introduces hidden backdoors, dataset biases, licensing violations, and supply chain compromise."
 tags:
   - owasp/llm05
   - trust-boundary/deployment-governance
   - trust-boundary/model
   - type/attack
-description: "Using untrusted pre-trained models introduces hidden backdoors, dataset biases, licensing violations, and supply chain compromise."
+  - target/ml-pipeline
+  - target/model-api
+  - access/gray-box
+  - severity/high
+  - atlas/aml.t0008
 ---
 # Third-Party Model Risks (Supply Chain)
 

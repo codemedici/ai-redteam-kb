@@ -1,11 +1,15 @@
 ---
+description: "Operational monitoring, resilience patterns, and degradation handling for LLM systems"
 tags:
   - needs-review
   - source/ai-native-llm-security
   - trust-boundary/deployment-governance
   - type/defense
+  - target/llm-app
+  - target/agent
+  - target/model-api
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "277-309"
 ---
 # LLM Operational Resilience: Monitoring & Incident Response

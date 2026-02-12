@@ -1,10 +1,14 @@
 ---
+description: "Adversary bypasses model safety guardrails to generate harmful, toxic, or policy-violating content."
 tags:
   - atlas/aml.t0054
   - owasp/llm01
   - trust-boundary/model
   - type/attack
-description: "Adversary bypasses model safety guardrails to generate harmful, toxic, or policy-violating content."
+  - target/llm-app
+  - target/model-api
+  - access/black-box
+  - severity/high
 ---
 # Jailbreak and Policy Bypass
 

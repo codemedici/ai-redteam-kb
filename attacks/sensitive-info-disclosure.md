@@ -1,10 +1,14 @@
 ---
+description: "Model leaks sensitive data through outputs, including PII, secrets, or proprietary information via membership inference and memorization."
 tags:
   - owasp/llm06
   - trust-boundary/data-knowledge
   - trust-boundary/model
   - type/attack
-description: "Model leaks sensitive data through outputs, including PII, secrets, or proprietary information via membership inference and memorization."
+  - target/llm-app
+  - target/model-api
+  - access/black-box
+  - severity/high
 ---
 # Sensitive Information Disclosure
 

@@ -1,9 +1,13 @@
 ---
+description: "Weak or missing API authentication allows unauthorized access to LLM endpoints through token forgery, signature bypass, or credential reuse."
 tags:
   - owasp/llm07
   - trust-boundary/deployment-governance
   - type/attack
-description: "Weak or missing API authentication allows unauthorized access to LLM endpoints through token forgery, signature bypass, or credential reuse."
+  - target/model-api
+  - target/llm-app
+  - access/black-box
+  - severity/critical
 ---
 # API Authentication Bypass
 

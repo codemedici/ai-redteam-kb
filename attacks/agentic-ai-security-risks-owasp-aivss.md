@@ -1,11 +1,16 @@
 ---
+description: "OWASP AIVSS framework covering 10 core agentic AI security risk categories"
 tags:
   - needs-review
   - source/ai-native-llm-security
   - trust-boundary/agent-runtime
   - type/attack
+  - target/agent
+  - access/black-box
+  - access/gray-box
+  - severity/critical
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "357-369"
 ---
 # Agentic AI Security Risks (OWASP AIVSS)

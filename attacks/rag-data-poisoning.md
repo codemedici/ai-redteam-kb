@@ -1,11 +1,14 @@
 ---
+description: "Adversary injects malicious content into RAG knowledge bases to manipulate model outputs."
 tags:
   - atlas/aml.t0020
   - owasp/llm03
   - trust-boundary/data-knowledge
   - trust-boundary/model
   - type/attack
-description: "Adversary injects malicious content into RAG knowledge bases to manipulate model outputs."
+  - target/rag-system
+  - access/gray-box
+  - severity/critical
 ---
 # RAG Data Poisoning
 

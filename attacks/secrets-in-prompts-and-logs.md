@@ -1,9 +1,13 @@
 ---
+description: "API keys, credentials, or sensitive configuration exposed in prompts, logs, or telemetry."
 tags:
   - trust-boundary/data-knowledge
   - trust-boundary/deployment-governance
   - type/attack
-description: "API keys, credentials, or sensitive configuration exposed in prompts, logs, or telemetry."
+  - target/llm-app
+  - target/agent
+  - access/gray-box
+  - severity/critical
 ---
 # Secrets in Prompts and Logs
 

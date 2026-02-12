@@ -1,8 +1,9 @@
 ---
+description: "Sandboxing and isolation of agent tool execution environments to contain compromised or malicious tool invocations."
 tags:
   - trust-boundary/agent-runtime
   - type/defense
-description: "Sandboxing and isolation of agent tool execution environments to contain compromised or malicious tool invocations."
+  - target/agent
 ---
 
 # Tool Sandboxing Architecture

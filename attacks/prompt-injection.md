@@ -1,10 +1,15 @@
 ---
+description: "Adversary manipulates LLM behavior by injecting malicious instructions into user inputs or contextual data."
 tags:
   - atlas/aml.t0051
   - owasp/llm01
   - trust-boundary/model
   - type/attack
-description: "Adversary manipulates LLM behavior by injecting malicious instructions into user inputs or contextual data."
+  - target/llm-app
+  - target/agent
+  - target/rag-system
+  - access/black-box
+  - severity/critical
 ---
 # Prompt Injection
 

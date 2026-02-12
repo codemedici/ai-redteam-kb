@@ -1,4 +1,5 @@
 ---
+description: "Extraction of system prompts revealing application logic, rules, and internal configuration"
 tags:
   - atlas/aml.t0051.002
   - needs-review
@@ -6,8 +7,12 @@ tags:
   - source/ai-native-llm-security
   - trust-boundary/model
   - type/attack
+  - target/llm-app
+  - target/agent
+  - access/black-box
+  - severity/high
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
+source: [['sources/bibliography#AI-Native LLM Security']]
 pages: "346-351"
 ---
 # System Prompt Leakage (OWASP LLM07:2025)

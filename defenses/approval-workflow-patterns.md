@@ -1,8 +1,9 @@
 ---
+description: "Human-in-the-loop approval gates for sensitive agent actions and tool invocations."
 tags:
   - trust-boundary/agent-runtime
   - type/defense
-description: "Human-in-the-loop approval gates for sensitive agent actions and tool invocations."
+  - target/agent
 ---
 
 # Approval Workflow Patterns

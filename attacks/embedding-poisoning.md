@@ -1,10 +1,13 @@
 ---
+description: "Adversary manipulates embeddings at indexing or query time to control retrieval results."
 tags:
   - atlas/aml.t0020
   - owasp/llm03
   - trust-boundary/data-knowledge
   - type/attack
-description: "Adversary manipulates embeddings at indexing or query time to control retrieval results."
+  - target/rag-system
+  - access/gray-box
+  - severity/high
 ---
 # Embedding Poisoning
 

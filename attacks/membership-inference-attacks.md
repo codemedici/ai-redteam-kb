@@ -1,3 +1,9 @@
+---
+tags:
+  - atlas/aml.t0025
+  - trust-boundary/model
+  - type/attack
+---
 # Membership Inference Attacks (MIA)
 
 ## Overview

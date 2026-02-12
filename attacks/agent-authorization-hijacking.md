@@ -1,16 +1,15 @@
 ---
-tags: 
-  - source/securing-ai-agents
-  - privilege-escalation
-  - agentic-ai
-  - authorization-bypass
+tags:
   - application-runtime
-
+  - authorization-bypass
+  - privilege-escalation
+  - source/securing-ai-agents
+  - trust-boundary/agent-runtime
+  - type/attack
 created: 2026-02-11
-source: "[[sources/bibliography#Securing AI Agents]]"
-pages: 210-211
+source: [[sources/bibliography#Securing AI Agents]]
+pages: "210-211"
 ---
-
 # Agent Authorization and Control Hijacking
 
 Most fundamental threat category targeting an agent's ability to manage permissions and execute actions. Exploits flaws in how agents request, use, and revoke privileges in dynamic, context-dependent manner.

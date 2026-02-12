@@ -1,10 +1,9 @@
 ---
-id: retrieval-manipulation
-title: "Retrieval Manipulation and Hijacking"
-sidebar_label: "Retrieval Manipulation"
-description: Adversary manipulates RAG retrieval mechanisms to surface malicious or irrelevant content.
+tags:
+  - trust-boundary/data-knowledge
+  - type/attack
+description: "Adversary manipulates RAG retrieval mechanisms to surface malicious or irrelevant content."
 ---
-
 # Retrieval Manipulation and Hijacking
 
 ## Summary

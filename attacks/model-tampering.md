@@ -1,10 +1,10 @@
 ---
-id: model-tampering
-title: "Model Tampering and Integrity Attacks"
-sidebar_label: "Model Tampering"
-description: Adversary modifies model weights, architecture, or checkpoints to introduce backdoors or degrade performance.
+tags:
+  - atlas/aml.t0047
+  - trust-boundary/model
+  - type/attack
+description: "Adversary modifies model weights, architecture, or checkpoints to introduce backdoors or degrade performance."
 ---
-
 # Model Tampering and Integrity Attacks
 
 ## Summary

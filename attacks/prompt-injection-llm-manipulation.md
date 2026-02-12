@@ -1,16 +1,15 @@
 ---
 tags:
+  - atlas/aml.t0051
+  - owasp/llm01
   - source/red-teaming-ai
-  - attack-technique
-  - prompt-injection
-  - llm-security
-  - owasp-llm01
-  - atlas-aml-t0051
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 240-274
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "240-274"
 ---
-
 # Prompt Injection and LLM Manipulation
 
 **Definition:** Embedding malicious instructions within input prompts to manipulate LLM behavior, causing the model to act in unintended ways by tricking it into executing attacker instructions instead of (or in addition to) intended system instructions.

@@ -1,9 +1,8 @@
 ---
-id: variant-evaluation-pipelines
-title: "Variant: Evaluation Pipelines"
-sidebar_position: 16
+tags:
+  - trust-boundary/deployment-governance
+  - type/methodology
 ---
-
 # Attack-Surface Variant: Evaluation Pipelines
 
 ## System Profile

@@ -1,10 +1,9 @@
 ---
-id: unauthorized-knowledge-disclosure
-title: "Unauthorized Knowledge Disclosure"
-sidebar_label: "Unauthorized Knowledge Disclosure"
-description: RAG or knowledge systems leak information across tenant or access boundaries.
+tags:
+  - trust-boundary/data-knowledge
+  - type/attack
+description: "RAG or knowledge systems leak information across tenant or access boundaries."
 ---
-
 # Unauthorized Knowledge Disclosure
 
 ## Summary

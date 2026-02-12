@@ -1,10 +1,10 @@
 ---
-id: ai-model-risk-assessment
-title: "AI Model Risk Assessment"
-sidebar_label: "Model Risk Assessment"
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/playbook
 description: "Holistic risk and security review of AI models and their usage context, mapping findings to NIST AI RMF, MITRE ATLAS, and industry frameworks."
 ---
-
 # AI Model Risk Assessment
 
 ## Overview

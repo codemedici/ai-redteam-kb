@@ -1,10 +1,10 @@
 ---
-id: output-integrity-attack
-title: "Output Integrity Attack"
-sidebar_label: "Output Integrity Attack"
-description: Adversary intercepts and manipulates model outputs before downstream processing, making it appear as though the model produced different results.
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
+description: "Adversary intercepts and manipulates model outputs before downstream processing, making it appear as though the model produced different results."
 ---
-
 # Output Integrity Attack
 
 ## Summary

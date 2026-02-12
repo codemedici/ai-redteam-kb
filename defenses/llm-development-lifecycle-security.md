@@ -1,17 +1,13 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - defense
-  - devsecops
-  - llm-security
-  - mlops
-  - data-security
   - needs-review
+  - source/ai-native-llm-security
+  - trust-boundary/deployment-governance
+  - type/defense
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 249-276
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "249-276"
 ---
-
 # LLM Development Lifecycle Security
 
 Security integrated into every phase of LLM development — from data curation through deployment and monitoring. Aligns with OWASP Top 10 for LLMs, OWASP GenAI Security Project, NIST AI RMF, and MITRE ATLAS.

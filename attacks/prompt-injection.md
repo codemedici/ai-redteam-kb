@@ -1,10 +1,11 @@
 ---
-id: prompt-injection
-title: "Prompt Injection"
-sidebar_label: "Prompt Injection"
-description: Adversary manipulates LLM behavior by injecting malicious instructions into user inputs or contextual data.
+tags:
+  - atlas/aml.t0051
+  - owasp/llm01
+  - trust-boundary/model
+  - type/attack
+description: "Adversary manipulates LLM behavior by injecting malicious instructions into user inputs or contextual data."
 ---
-
 # Prompt Injection
 
 ## Summary

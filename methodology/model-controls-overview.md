@@ -1,10 +1,9 @@
 ---
-id: model-controls-index
-title: Model Controls
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/model
+  - type/methodology
+  - type/overview
 ---
-
 # Model Controls
 
 This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Model trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Model Issues]].

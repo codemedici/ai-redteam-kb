@@ -1,10 +1,11 @@
 ---
-id: sensitive-info-disclosure
-title: "Sensitive Information Disclosure"
-sidebar_label: "Sensitive Info Disclosure"
-description: Model leaks sensitive data through outputs, including PII, secrets, or proprietary information via membership inference and memorization.
+tags:
+  - owasp/llm06
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/attack
+description: "Model leaks sensitive data through outputs, including PII, secrets, or proprietary information via membership inference and memorization."
 ---
-
 # Sensitive Information Disclosure
 
 ## Summary

@@ -1,16 +1,15 @@
 ---
 tags:
-  - source/ai-native-llm-security
   - methodology
-  - trust-boundaries
-  - llm-security
-  - threat-modeling
   - needs-review
+  - source/ai-native-llm-security
+  - trust-boundaries
+  - trust-boundary/model
+  - type/methodology
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 73-89
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "73-89"
 ---
-
 # Trust Boundary Mapping for LLM Architectures
 
 **Definition:** Trust boundaries are conceptual lines delineating transitions between various levels of trust within an LLM system — points where data or control flow moves between components with varying security assurance.

@@ -1,15 +1,16 @@
 ---
-tags: 
-  - source/red-teaming-ai
+tags:
+  - hypergame
   - methodology
   - red-team
+  - source/red-teaming-ai
   - strategems
-  - hypergame
+  - trust-boundary/deployment-governance
+  - type/methodology
 created: 2026-02-11
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 61-62
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "61-62"
 ---
-
 # STRATEGEMS: Strategic AI Red Teaming Methodology
 
 Proprietary implementation framework by HYPERGAME that operationalizes AI red teaming through integration of AI vs AI dynamics, systems thinking, and strategic wargaming.

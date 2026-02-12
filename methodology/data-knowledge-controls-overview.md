@@ -1,10 +1,9 @@
 ---
-id: data-knowledge-controls-index
-title: Data / Knowledge Controls
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/general
+  - type/methodology
+  - type/overview
 ---
-
 # Data / Knowledge Controls
 
 This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Data/Knowledge trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Data/Knowledge Issues]].

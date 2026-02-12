@@ -1,9 +1,9 @@
 ---
-id: guardrails-safety-testing
-title: Guardrails & Safety Testing
-sidebar_position: 20
+tags:
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Guardrails and Safety Evaluation
 
 ## Testing Approach for Safety Controls

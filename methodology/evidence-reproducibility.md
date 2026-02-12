@@ -1,9 +1,8 @@
 ---
-id: evidence-reproducibility
-title: Evidence & Reproducibility Standards
-sidebar_position: 17
+tags:
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Evidence & Reproducibility Standards
 
 ## Purpose

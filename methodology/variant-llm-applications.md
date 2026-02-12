@@ -1,9 +1,9 @@
 ---
-id: variant-llm-applications
-title: "Variant: LLM Applications"
-sidebar_position: 12
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Attack-Surface Variant: LLM Applications (Standalone)
 
 ## System Profile

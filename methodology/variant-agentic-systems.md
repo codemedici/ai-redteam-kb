@@ -1,9 +1,8 @@
 ---
-id: variant-agentic-systems
-title: "Variant: Agentic Systems"
-sidebar_position: 14
+tags:
+  - trust-boundary/agent-runtime
+  - type/methodology
 ---
-
 # Attack-Surface Variant: Agentic Systems
 
 ## System Profile

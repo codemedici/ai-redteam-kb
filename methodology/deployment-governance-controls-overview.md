@@ -1,10 +1,9 @@
 ---
-id: deployment-governance-controls-index
-title: Deployment / Governance Controls
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/general
+  - type/methodology
+  - type/overview
 ---
-
 # Deployment / Governance Controls
 
 This directory contains defensive design patterns, architectural controls, and implementation guidance for securing the Deployment/Governance trust boundary. Controls provide cross-cutting defensive strategies that address multiple security issues, complementing the issue-specific mitigations documented in [[issues|Deployment/Governance Issues]].

@@ -1,10 +1,11 @@
 ---
-id: unsafe-tool-invocation
-title: "Unsafe Tool Invocation"
-sidebar_label: "Unsafe Tool Invocation"
-description: Agent or LLM invokes tools with malicious or unvalidated arguments, causing unintended side effects.
+tags:
+  - owasp/llm08
+  - trust-boundary/agent-runtime
+  - trust-boundary/deployment-governance
+  - type/attack
+description: "Agent or LLM invokes tools with malicious or unvalidated arguments, causing unintended side effects."
 ---
-
 # Unsafe Tool Invocation
 
 ## Summary

@@ -1,10 +1,10 @@
 ---
-id: agentic-workflow-assessment
-title: "Agentic Workflow Assessment"
-sidebar_label: "Agentic Assessment"
+tags:
+  - trust-boundary/agent-runtime
+  - trust-boundary/model
+  - type/playbook
 description: "Adversarial evaluation of autonomous AI agents and multi-component AI systems that can take actions, testing goal misalignment, tool misuse, and unsafe behaviors."
 ---
-
 # Agentic Workflow Assessment
 
 ## Overview

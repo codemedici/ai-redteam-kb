@@ -1,11 +1,9 @@
 ---
-id: one-pager-ai-threat-exposure-review
-title: "One-Pager: AI Threat Exposure Review"
-sidebar_label: "One-Pager"
-sidebar_position: 3
-description: Single-page summary of AI Threat Exposure Review engagement for customer conversations.
+tags:
+  - trust-boundary/general
+  - type/methodology
+description: "Single-page summary of AI Threat Exposure Review engagement for customer conversations."
 ---
-
 # AI Threat Exposure Review
 ## Comprehensive Security Assessment for AI Systems
 

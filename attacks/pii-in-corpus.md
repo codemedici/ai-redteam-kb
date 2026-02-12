@@ -1,10 +1,9 @@
 ---
-id: pii-in-corpus
-title: "PII in Knowledge Corpus"
-sidebar_label: "PII in Corpus"
-description: Sensitive personal information improperly included in training data or knowledge bases.
+tags:
+  - trust-boundary/data-knowledge
+  - type/attack
+description: "Sensitive personal information improperly included in training data or knowledge bases."
 ---
-
 # PII in Knowledge Corpus
 
 ## Summary

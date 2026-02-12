@@ -1,10 +1,11 @@
 ---
-id: tool-privilege-escalation
-title: "Tool Privilege Escalation"
-sidebar_label: "Tool Privilege Escalation"
-description: Agent or LLM exploits overly permissive tool access to perform unauthorized high-privilege actions.
+tags:
+  - owasp/llm08
+  - trust-boundary/agent-runtime
+  - trust-boundary/data-knowledge
+  - type/attack
+description: "Agent or LLM exploits overly permissive tool access to perform unauthorized high-privilege actions."
 ---
-
 # Tool Privilege Escalation
 
 ## Summary

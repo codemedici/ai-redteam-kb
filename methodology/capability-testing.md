@@ -1,12 +1,9 @@
 ---
-id: model-capability-testing
-slug: capability-testing
-title: Model Capability Testing Areas
-sidebar_label: Capability Testing
-sidebar_position: 3
-description: Testing areas for evaluating AI model capabilities across safety-critical domains
+tags:
+  - trust-boundary/model
+  - type/methodology
+description: "Testing areas for evaluating AI model capabilities across safety-critical domains"
 ---
-
 # Model Capability Testing Areas
 
 The following areas of testing help identify model capabilities and limitations across safety-critical domains. These are particularly relevant for **pre-deployment model evaluation** and **capability assessment** engagements.

@@ -1,10 +1,10 @@
 ---
-id: llm-application-red-team
-title: "LLM Application Red Team"
-sidebar_label: "LLM App Red Team"
+tags:
+  - trust-boundary/agent-runtime
+  - trust-boundary/model
+  - type/playbook
 description: "Adversarial testing of LLM-powered applications focusing on prompt injection, tool abuse, and data exfiltration attacks."
 ---
-
 # LLM Application Red Team
 
 ## Overview

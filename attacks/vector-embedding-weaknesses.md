@@ -1,17 +1,14 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - attack-technique
-  - rag-security
-  - owasp-llm08-2025
-  - llm-security
-  - vector-database
   - needs-review
+  - owasp/llm08:2025
+  - source/ai-native-llm-security
+  - trust-boundary/data-knowledge
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 351-355
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "351-355"
 ---
-
 # Vector and Embedding Weaknesses (OWASP LLM08:2025)
 
 **Definition:** Security weaknesses in RAG (Retrieval-Augmented Generation) systems at the vector pipeline layer — from document ingestion through embedding, storage, and retrieval. New addition to OWASP Top 10 for LLM Applications 2025.

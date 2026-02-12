@@ -1,11 +1,9 @@
 ---
-id: engagement-upgrade-paths
-title: "Engagement Upgrade Paths & Follow-On Triggers"
-sidebar_label: "Upgrade Paths"
-sidebar_position: 3
-description: Ethical guidance for recommending follow-on engagements based on findings, client needs, and value delivery.
+tags:
+  - trust-boundary/general
+  - type/methodology
+description: "Ethical guidance for recommending follow-on engagements based on findings, client needs, and value delivery."
 ---
-
 # Engagement Upgrade Paths & Follow-On Triggers
 
 ## Purpose

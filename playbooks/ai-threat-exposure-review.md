@@ -1,10 +1,10 @@
 ---
-id: ai-threat-exposure-review
-title: "AI Threat Exposure Review"
-sidebar_label: "AI Threat Exposure Review"
-description: Comprehensive security assessment covering all four trust boundaries of an AI system.
+tags:
+  - trust-boundary/agent-runtime
+  - trust-boundary/model
+  - type/playbook
+description: "Comprehensive security assessment covering all four trust boundaries of an AI system."
 ---
-
 # AI Threat Exposure Review
 
 ## Overview

@@ -1,9 +1,10 @@
 ---
-id: lifecycle-overview
-title: Lifecycle Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/data-knowledge
+  - trust-boundary/deployment-governance
+  - type/methodology
+  - type/overview
 ---
-
 # AI Red Teaming Lifecycle Overview
 
 ## Purpose

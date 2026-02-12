@@ -1,10 +1,9 @@
 ---
-id: methodology-index
-title: Methodology
-sidebar_label: Methodology
-sidebar_position: 4
+tags:
+  - trust-boundary/deployment-governance
+  - type/methodology
+  - type/overview
 ---
-
 # AI Red Teaming Methodology
 
 ## Overview

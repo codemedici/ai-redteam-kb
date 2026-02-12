@@ -1,9 +1,8 @@
 ---
-id: framework-mapping
-title: Framework Mapping
-sidebar_position: 19
+tags:
+  - trust-boundary/data-knowledge
+  - type/methodology
 ---
-
 # Framework Mapping and Compliance
 
 ## Mapping Approach

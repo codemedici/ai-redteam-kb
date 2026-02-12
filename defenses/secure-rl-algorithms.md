@@ -1,15 +1,15 @@
 ---
-tags: 
-  - source/securing-ai-agents
+tags:
+  - defensive-patterns
   - reinforcement-learning
   - rl-security
-  - defensive-patterns
-
+  - source/securing-ai-agents
+  - trust-boundary/agent-runtime
+  - type/defense
 created: 2026-02-11
-source: "[[sources/bibliography#Securing AI Agents]]"
-pages: 181-183
+source: [[sources/bibliography#Securing AI Agents]]
+pages: "181-183"
 ---
-
 # Secure Reinforcement Learning Algorithms
 
 Next-generation RL algorithms integrate defensive principles directly into their design to address security vulnerabilities in traditional approaches.

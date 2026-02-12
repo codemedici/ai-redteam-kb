@@ -1,10 +1,9 @@
 ---
-id: auth-context-confusion
-title: "Authentication Context Confusion"
-sidebar_label: "Auth Context Confusion"
-description: Agent or application confuses user identity or authorization context, leading to privilege violations.
+tags:
+  - trust-boundary/agent-runtime
+  - type/attack
+description: "Agent or application confuses user identity or authorization context, leading to privilege violations."
 ---
-
 # Authentication Context Confusion
 
 ## Summary

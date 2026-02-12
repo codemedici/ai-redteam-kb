@@ -1,9 +1,8 @@
 ---
-id: phase-5-execution
-title: "Phase 5: Execution (Adversarial Testing)"
-sidebar_position: 6
+tags:
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Phase 5: Execution (Adversarial Testing)
 
 ## Purpose

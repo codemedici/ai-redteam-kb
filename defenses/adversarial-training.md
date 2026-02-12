@@ -1,12 +1,12 @@
 ---
 tags:
-  - defense
-  - control
   - adversarial-training
+  - control
   - model-hardening
+  - trust-boundary/model
+  - type/defense
 created: 2026-02-12
 ---
-
 # Adversarial Training
 
 **Type:** Model Hardening / Robust Training

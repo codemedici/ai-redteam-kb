@@ -1,17 +1,13 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - defense
-  - monitoring
-  - incident-response
-  - llm-security
-  - operational-security
   - needs-review
+  - source/ai-native-llm-security
+  - trust-boundary/deployment-governance
+  - type/defense
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 277-309
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "277-309"
 ---
-
 # LLM Operational Resilience: Monitoring & Incident Response
 
 Maintaining security of LLM systems in production through vigilant monitoring, effective incident response, and continuous improvement. Deployment is just the beginning — threats evolve, usage patterns change, and new vulnerabilities emerge.

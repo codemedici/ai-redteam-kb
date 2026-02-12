@@ -1,9 +1,8 @@
 ---
-id: phase-9-retest-regression
-title: "Phase 9: Retest & Regression Integration"
-sidebar_position: 10
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Phase 9: Retest & Regression Integration
 
 ## Purpose

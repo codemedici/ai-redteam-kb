@@ -1,11 +1,10 @@
 ---
-id: llm-trust-boundaries
-title: LLM Trust Boundaries
-sidebar_label: LLM Trust Boundaries
-sidebar_position: 1
-description: Architectural security boundaries in AI systems - a unified model of attack surfaces derived from leading security frameworks.
+tags:
+  - trust-boundary/model
+  - type/methodology
+  - type/overview
+description: "Architectural security boundaries in AI systems - a unified model of attack surfaces derived from leading security frameworks."
 ---
-
 # LLM Trust Boundaries
 
 This document defines the foundational security architecture for AI systems by identifying **four attack surfaces** that consistently emerge across all major security frameworks. These trust boundaries provide a unified model for scoping AI red teaming engagements, threat modeling, and security analysis.

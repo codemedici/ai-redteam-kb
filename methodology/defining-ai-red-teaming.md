@@ -1,15 +1,17 @@
 ---
 tags:
-  - source/red-teaming-ai
-  - methodology
-  - foundations
-  - red-team-lifecycle
   - ethics
+  - foundations
+  - methodology
+  - red-team-lifecycle
+  - source/red-teaming-ai
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/methodology
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 41-60
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "41-60"
 ---
-
 # Defining AI Red Teaming
 
 **Core Challenge:** How do we defend systems whose very 'intelligence' can be turned against them?

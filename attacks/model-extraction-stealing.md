@@ -1,17 +1,19 @@
 ---
 tags:
-  - source/red-teaming-ai
-  - attack-technique
+  - atlas-aml-t0040
+  - atlas/aml.t0024
+  - ip-theft
   - model-extraction
   - model-stealing
-  - ip-theft
-  - atlas-aml-t0040
-  - owasp-llm04
+  - owasp/llm10
+  - source/red-teaming-ai
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 168-215
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "168-215"
 ---
-
 # Model Extraction and Stealing
 
 **Definition:** Attacks where adversaries replicate a trained model's functionality or extract its internal parameters by querying it through intended interfaces (APIs, services), without requiring direct access to model files or training data.

@@ -1,10 +1,9 @@
 ---
-id: model-issues-index
-title: Model Issues
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/model
+  - type/methodology
+  - type/overview
 ---
-
 # Model Issues
 
 This directory contains atomic, report-ready security issues specific to the Model trust boundary.

@@ -1,10 +1,9 @@
 ---
-id: engagements-index
-title: Engagements
-sidebar_label: Engagements
-sidebar_position: 3
+tags:
+  - trust-boundary/general
+  - type/overview
+  - type/playbook
 ---
-
 # Engagements
 
 This section defines engagement types - curated traversals of the trust-boundary problem space.

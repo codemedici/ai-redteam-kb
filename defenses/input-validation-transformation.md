@@ -1,12 +1,12 @@
 ---
 tags:
-  - defense
   - control
   - input-validation
   - preprocessing
+  - trust-boundary/model
+  - type/defense
 created: 2026-02-12
 ---
-
 # Input Validation and Transformation
 
 **Type:** Preprocessing / Input Sanitization

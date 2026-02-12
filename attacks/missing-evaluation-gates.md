@@ -1,10 +1,10 @@
 ---
-id: missing-evaluation-gates
-title: "Missing Evaluation Gates in CI/CD"
-sidebar_label: "Missing Evaluation Gates"
-description: Models deployed without adequate security testing or validation checkpoints.
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
+description: "Models deployed without adequate security testing or validation checkpoints."
 ---
-
 # Missing Evaluation Gates in CI/CD
 
 ## Summary

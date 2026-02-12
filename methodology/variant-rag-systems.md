@@ -1,9 +1,9 @@
 ---
-id: variant-rag-systems
-title: "Variant: RAG Systems"
-sidebar_position: 13
+tags:
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Attack-Surface Variant: RAG Systems
 
 ## System Profile

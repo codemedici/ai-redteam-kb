@@ -1,9 +1,8 @@
 ---
-id: phase-2-system-decomposition
-title: "Phase 2: System Decomposition & Architecture Review"
-sidebar_position: 3
+tags:
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Phase 2: System Decomposition & Architecture Review
 
 ## Purpose

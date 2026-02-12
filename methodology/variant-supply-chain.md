@@ -1,9 +1,9 @@
 ---
-id: variant-supply-chain
-title: "Variant: Supply Chain"
-sidebar_position: 15
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Attack-Surface Variant: Supply Chain
 
 ## System Profile

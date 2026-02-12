@@ -1,16 +1,16 @@
 ---
 tags:
-  - source/red-teaming-ai
-  - attack-technique
-  - infrastructure
-  - mlops
-  - supply-chain
   - deployment-security
+  - infrastructure
+  - source/red-teaming-ai
+  - supply-chain
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 275-314
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "275-314"
 ---
-
 # Attacking & Defending AI Infrastructure
 
 **Core Insight:** "Defenders think in lists. Attackers think in graphs. As long as this is true, attackers win." — John Lambert, Microsoft Security Expert

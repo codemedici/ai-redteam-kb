@@ -1,9 +1,8 @@
 ---
-id: phase-1-intake-scoping
-title: "Phase 1: Intake & Scoping"
-sidebar_position: 2
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Phase 1: Intake & Scoping
 
 ## Purpose

@@ -1,10 +1,10 @@
 ---
-id: insecure-prompt-assembly
-title: "Insecure Prompt Assembly"
-sidebar_label: "Insecure Prompt Assembly"
-description: Application constructs prompts insecurely, allowing injection or context manipulation.
+tags:
+  - owasp/llm01
+  - trust-boundary/agent-runtime
+  - type/attack
+description: "Application constructs prompts insecurely, allowing injection or context manipulation."
 ---
-
 # Insecure Prompt Assembly
 
 ## Summary

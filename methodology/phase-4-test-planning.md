@@ -1,9 +1,10 @@
 ---
-id: phase-4-test-planning
-title: "Phase 4: Test Planning & Coverage"
-sidebar_position: 5
+tags:
+  - trust-boundary/agent-runtime
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Phase 4: Test Planning & Coverage
 
 ## Purpose

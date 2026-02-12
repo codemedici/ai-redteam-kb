@@ -1,13 +1,12 @@
 ---
 tags:
-  - defense
-  - control
-  - monitoring
-  - runtime-defense
   - anomaly-detection
+  - control
+  - runtime-defense
+  - trust-boundary/model
+  - type/defense
 created: 2026-02-12
 ---
-
 # Output Monitoring and Validation
 
 **Type:** Runtime Detection / Post-Processing

@@ -1,3 +1,8 @@
+---
+tags:
+  - trust-boundary/model
+  - type/attack
+---
 # Privacy Attacks Beyond Membership Inference
 
 ## Overview

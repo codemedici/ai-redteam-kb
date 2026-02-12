@@ -1,3 +1,9 @@
+---
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/defense
+---
 # AI Infrastructure Security: Attacking & Defending AI Systems
 
 ## Overview

@@ -1,16 +1,17 @@
 ---
 tags:
-  - source/red-teaming-ai
-  - attack-technique
   - adversarial-examples
+  - atlas-aml-t0043
+  - atlas/aml.t0015
   - evasion
   - model-robustness
-  - atlas-aml-t0043
+  - source/red-teaming-ai
+  - trust-boundary/model
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 139-167
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "139-167"
 ---
-
 # Adversarial Examples and Evasion Attacks at Inference Time
 
 **Definition:** Maliciously crafted inputs, derived from legitimate ones and intentionally modified (often subtly), designed to cause specific misbehavior in target AI models during inference.

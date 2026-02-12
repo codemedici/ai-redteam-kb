@@ -1,9 +1,8 @@
 ---
-id: engagement-type-differences
-title: Engagement Type Differences
-sidebar_position: 24
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # How This Differs by Engagement Type
 
 ## Engagement Comparison Table

@@ -1,10 +1,10 @@
 ---
-id: insufficient-output-encoding
-title: "Insufficient Output Encoding"
-sidebar_label: "Insufficient Output Encoding"
-description: LLM outputs are not properly sanitized before rendering, enabling injection attacks (XSS, code injection).
+tags:
+  - owasp/llm02
+  - trust-boundary/agent-runtime
+  - type/attack
+description: "LLM outputs are not properly sanitized before rendering, enabling injection attacks (XSS, code injection)."
 ---
-
 # Insufficient Output Encoding
 
 ## Summary

@@ -1,11 +1,9 @@
 ---
-id: proposal-sow-skeleton
-title: "Proposal/SOW Skeleton: AI Threat Exposure Review"
-sidebar_label: "Proposal/SOW Skeleton"
-sidebar_position: 4
-description: Reusable proposal and statement of work template for AI security engagements.
+tags:
+  - trust-boundary/general
+  - type/methodology
+description: "Reusable proposal and statement of work template for AI security engagements."
 ---
-
 # Statement of Work: AI Threat Exposure Review
 
 **Prepared for:** [Client Company Name]

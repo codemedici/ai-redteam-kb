@@ -1,10 +1,10 @@
 ---
-id: prompt-log-data-leakage
-title: "Prompt and Conversation Log Data Leakage"
-sidebar_label: "Prompt Log Leakage"
-description: Sensitive data in prompts or conversation history is stored insecurely or leaked.
+tags:
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/attack
+description: "Sensitive data in prompts or conversation history is stored insecurely or leaked."
 ---
-
 # Prompt and Conversation Log Data Leakage
 
 ## Summary

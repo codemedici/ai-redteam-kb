@@ -1,10 +1,9 @@
 ---
-id: data-knowledge-issues-index
-title: Data / Knowledge Issues
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/data-knowledge
+  - type/methodology
+  - type/overview
 ---
-
 # Data / Knowledge Issues
 
 This directory contains atomic, report-ready security issues specific to the Data / Knowledge trust boundary.

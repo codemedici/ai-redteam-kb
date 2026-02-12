@@ -1,9 +1,8 @@
 ---
-id: phase-6-triage-severity
-title: "Phase 6: Triage & Severity Assessment"
-sidebar_position: 7
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Phase 6: Triage & Severity Assessment
 
 ## Purpose

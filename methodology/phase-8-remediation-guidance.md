@@ -1,9 +1,8 @@
 ---
-id: phase-8-remediation-guidance
-title: "Phase 8: Remediation Guidance"
-sidebar_position: 9
+tags:
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Phase 8: Remediation Guidance
 
 ## Purpose

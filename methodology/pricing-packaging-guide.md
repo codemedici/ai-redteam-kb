@@ -1,11 +1,9 @@
 ---
-id: pricing-packaging-guide
-title: "Pricing & Packaging Guide: AI Threat Exposure Review"
-sidebar_label: "Pricing & Packaging"
-sidebar_position: 6
-description: Internal guide for pricing AI security engagements with complexity bands, add-ons, and qualification criteria.
+tags:
+  - trust-boundary/general
+  - type/methodology
+description: "Internal guide for pricing AI security engagements with complexity bands, add-ons, and qualification criteria."
 ---
-
 # Pricing & Packaging Guide: AI Threat Exposure Review
 
 > **Internal Document** - This guide defines pricing strategy, complexity bands, and engagement qualification criteria for AI Threat Exposure Review. Pricing values use placeholders and should be updated with actual rates.

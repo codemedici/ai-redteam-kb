@@ -1,16 +1,16 @@
 ---
-tags: 
-  - source/securing-ai-agents
-  - identity-security
+tags:
   - authentication
   - iam
+  - identity-security
+  - source/securing-ai-agents
+  - trust-boundary/agent-runtime
+  - type/attack
   - workload-identity
-
 created: 2026-02-11
-source: "[[sources/bibliography#Securing AI Agents]]"
-pages: 52-56
+source: [[sources/bibliography#Securing AI Agents]]
+pages: "52-56"
 ---
-
 # Agent Identity Crisis
 
 AI agents introduce identity crisis that legacy IAM systems were never designed to handle. Nearly every security control (authorization, logging, auditing, network segmentation) relies on answering: "Who or what is performing this action?"

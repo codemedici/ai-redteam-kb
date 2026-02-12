@@ -1,10 +1,9 @@
 ---
-id: adversarial-robustness
-title: "Adversarial Robustness Failures"
-sidebar_label: "Adversarial Robustness"
-description: Model vulnerable to crafted inputs designed to cause misclassification, bypass safety controls, or trigger hidden backdoors.
+tags:
+  - trust-boundary/model
+  - type/attack
+description: "Model vulnerable to crafted inputs designed to cause misclassification, bypass safety controls, or trigger hidden backdoors."
 ---
-
 # Adversarial Robustness Failures
 
 ## Summary

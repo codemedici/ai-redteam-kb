@@ -1,11 +1,9 @@
 ---
-id: sample-finding-redacted
-title: "Redacted Sample Finding: Tool Privilege Escalation"
-sidebar_label: "Sample Finding (Redacted)"
-sidebar_position: 5
-description: Example security finding demonstrating depth and quality of AI Threat Exposure Review deliverables.
+tags:
+  - trust-boundary/agent-runtime
+  - type/methodology
+description: "Example security finding demonstrating depth and quality of AI Threat Exposure Review deliverables."
 ---
-
 # Sample Finding: Tool Privilege Escalation in AI Agent
 
 > **Note:** This is a redacted sample finding from a previous AI Threat Exposure Review engagement. All client-identifying information, specific tool names, and proprietary details have been removed or sanitized. This document demonstrates the format, depth, and quality of findings delivered during engagements.

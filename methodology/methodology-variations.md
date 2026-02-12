@@ -1,9 +1,8 @@
 ---
-id: methodology-variations
-title: Methodology Variations
-sidebar_position: 23
+tags:
+  - trust-boundary/data-knowledge
+  - type/methodology
 ---
-
 # Methodology Variations Across Engagements
 
 ## Full-Spectrum Assessment (AI Threat Exposure Review)

@@ -1,17 +1,15 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - attack-technique
-  - prompt-injection
-  - owasp-llm07-2025
-  - llm-security
-  - information-disclosure
+  - atlas/aml.t0051.002
   - needs-review
+  - owasp/llm07:2025
+  - source/ai-native-llm-security
+  - trust-boundary/model
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 346-351
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "346-351"
 ---
-
 # System Prompt Leakage (OWASP LLM07:2025)
 
 **Definition:** Leakage occurs when a language model inadvertently outputs portions of its system prompt, preamble, or internal instructions meant to remain hidden from end users. New addition to OWASP Top 10 for LLM Applications in the 2025 update.

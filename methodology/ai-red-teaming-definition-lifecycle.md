@@ -1,3 +1,9 @@
+---
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/methodology
+---
 # AI Red Teaming: Definition and Engagement Lifecycle
 
 ## Overview

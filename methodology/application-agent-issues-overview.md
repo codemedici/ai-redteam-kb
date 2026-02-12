@@ -1,10 +1,9 @@
 ---
-id: application-agent-runtime-issues-index
-title: Application / Agent Runtime Issues
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/agent-runtime
+  - type/methodology
+  - type/overview
 ---
-
 # Application / Agent Runtime Issues
 
 This directory contains atomic, report-ready security issues specific to the Application / Agent Runtime trust boundary.

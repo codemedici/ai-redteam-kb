@@ -1,10 +1,9 @@
 ---
-id: insufficient-telemetry-and-tracing
-title: "Insufficient Telemetry and Tracing"
-sidebar_label: "Insufficient Telemetry"
-description: Lack of adequate logging and monitoring prevents detection of attacks and anomalies.
+tags:
+  - trust-boundary/deployment-governance
+  - type/attack
+description: "Lack of adequate logging and monitoring prevents detection of attacks and anomalies."
 ---
-
 # Insufficient Telemetry and Tracing
 
 ## Summary

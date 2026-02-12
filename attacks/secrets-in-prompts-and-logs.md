@@ -1,10 +1,10 @@
 ---
-id: secrets-in-prompts-and-logs
-title: "Secrets in Prompts and Logs"
-sidebar_label: "Secrets in Prompts/Logs"
-description: API keys, credentials, or sensitive configuration exposed in prompts, logs, or telemetry.
+tags:
+  - trust-boundary/data-knowledge
+  - trust-boundary/deployment-governance
+  - type/attack
+description: "API keys, credentials, or sensitive configuration exposed in prompts, logs, or telemetry."
 ---
-
 # Secrets in Prompts and Logs
 
 ## Summary

@@ -1,9 +1,8 @@
 ---
-id: handling-non-determinism
-title: Handling Non-Determinism
-sidebar_position: 18
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Handling Non-Determinism in AI Red Teaming
 
 ## Purpose

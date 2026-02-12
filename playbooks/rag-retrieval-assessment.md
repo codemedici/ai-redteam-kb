@@ -1,10 +1,9 @@
 ---
-id: rag-retrieval-assessment
-title: "RAG & Retrieval Attack Assessment"
-sidebar_label: "RAG Assessment"
+tags:
+  - trust-boundary/data-knowledge
+  - type/playbook
 description: "Security assessment of LLM systems with external knowledge retrieval, validating resilience against corpus poisoning, embedding manipulation, and prompt injection via retrieved content."
 ---
-
 # RAG & Retrieval Attack Assessment
 
 ## Overview

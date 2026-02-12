@@ -1,10 +1,11 @@
 ---
-id: api-rate-limiting-bypass
-title: "API Rate Limiting Bypass"
-sidebar_label: "API Rate Limiting Bypass"
-description: Attackers circumvent API rate limits through distributed infrastructure, enabling model extraction, resource exhaustion, and denial of service.
+tags:
+  - owasp/llm04
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
+description: "Attackers circumvent API rate limits through distributed infrastructure, enabling model extraction, resource exhaustion, and denial of service."
 ---
-
 # API Rate Limiting Bypass
 
 ## Summary

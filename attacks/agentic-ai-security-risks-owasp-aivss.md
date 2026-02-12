@@ -1,17 +1,13 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - attack-technique
-  - agentic-ai
-  - owasp-aivss
-  - multi-agent
-  - zero-trust
   - needs-review
+  - source/ai-native-llm-security
+  - trust-boundary/agent-runtime
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 357-369
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "357-369"
 ---
-
 # Agentic AI Security Risks (OWASP AIVSS)
 
 **Framework:** OWASP Artificial Intelligence Vulnerability Scoring System (AIVSS) — standardized identification and assessment of security vulnerabilities unique to agentic AI systems. Designed because conventional CVSS cannot address risks from AI that learns, adapts, and acts autonomously.

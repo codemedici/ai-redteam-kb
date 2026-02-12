@@ -1,10 +1,9 @@
 ---
-id: weak-access-segmentation
-title: "Weak Access Segmentation"
-sidebar_label: "Weak Access Segmentation"
-description: Insufficient RBAC, ABAC, or tenant isolation allows unauthorized access to AI resources.
+tags:
+  - trust-boundary/deployment-governance
+  - type/attack
+description: "Insufficient RBAC, ABAC, or tenant isolation allows unauthorized access to AI resources."
 ---
-
 # Weak Access Segmentation
 
 ## Summary

@@ -1,10 +1,9 @@
 ---
-id: agent-goal-hijack
-title: "Agent Goal Hijacking"
-sidebar_label: "Agent Goal Hijacking"
-description: Adversary manipulates agent objectives or task sequences to achieve unauthorized goals.
+tags:
+  - trust-boundary/agent-runtime
+  - type/attack
+description: "Adversary manipulates agent objectives or task sequences to achieve unauthorized goals."
 ---
-
 # Agent Goal Hijacking
 
 ## Summary

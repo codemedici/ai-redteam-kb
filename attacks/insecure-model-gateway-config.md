@@ -1,10 +1,11 @@
 ---
-id: insecure-model-gateway-config
-title: "Insecure Model Gateway Configuration"
-sidebar_label: "Insecure Gateway Config"
-description: Model gateways or proxies misconfigured, allowing bypass of security controls.
+tags:
+  - owasp/llm05
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
+description: "Model gateways or proxies misconfigured, allowing bypass of security controls."
 ---
-
 # Insecure Model Gateway Configuration
 
 ## Summary

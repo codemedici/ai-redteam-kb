@@ -1,11 +1,9 @@
 ---
-id: scoping-intake-questionnaire
-title: "Scoping Intake Questionnaire"
-sidebar_label: "Scoping Intake"
-sidebar_position: 2
-description: Pre-call form and discovery call script for qualifying and scoping AI security engagements.
+tags:
+  - trust-boundary/general
+  - type/methodology
+description: "Pre-call form and discovery call script for qualifying and scoping AI security engagements."
 ---
-
 # Scoping Intake Questionnaire
 
 ## Purpose

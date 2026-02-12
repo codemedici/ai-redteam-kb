@@ -1,15 +1,14 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - framework
-  - owasp
-  - llm-security
   - needs-review
+  - owasp
+  - source/ai-native-llm-security
+  - trust-boundary/general
+  - type/methodology
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 339-355
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "339-355"
 ---
-
 # OWASP Top 10 for LLM Applications: 2023 → 2025 Evolution
 
 **Timeline:**

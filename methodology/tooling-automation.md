@@ -1,9 +1,9 @@
 ---
-id: tooling-automation
-title: Tooling and Automation
-sidebar_position: 8
+tags:
+  - trust-boundary/agent-runtime
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Tooling and Automation
 
 ## Lab Environment Setup

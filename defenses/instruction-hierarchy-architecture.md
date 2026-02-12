@@ -1,10 +1,9 @@
 ---
-id: instruction-hierarchy-architecture
-title: Instruction Hierarchy Architecture
-sidebar_label: Instruction Hierarchy Architecture
-description: Architectural pattern for cryptographically separating system instructions from user content to prevent prompt injection attacks.
+tags:
+  - trust-boundary/general
+  - type/defense
+description: "Architectural pattern for cryptographically separating system instructions from user content to prevent prompt injection attacks."
 ---
-
 # Instruction Hierarchy Architecture
 
 ## Summary

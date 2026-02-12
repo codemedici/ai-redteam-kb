@@ -1,10 +1,9 @@
 ---
-id: incident-response-gap
-title: "Incident Response Gap"
-sidebar_label: "Incident Response Gap"
-description: Lack of defined incident response procedures for AI-specific security events.
+tags:
+  - trust-boundary/deployment-governance
+  - type/attack
+description: "Lack of defined incident response procedures for AI-specific security events."
 ---
-
 # Incident Response Gap
 
 ## Summary

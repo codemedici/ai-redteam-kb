@@ -1,11 +1,9 @@
 ---
-id: email-campaign-ai-threat-exposure
-title: "Email Campaign: AI Threat Exposure Review"
-sidebar_label: "Email Campaign Source"
-sidebar_position: 2
-description: Source material for outbound email campaigns promoting AI Threat Exposure Review engagements.
+tags:
+  - trust-boundary/general
+  - type/methodology
+description: "Source material for outbound email campaigns promoting AI Threat Exposure Review engagements."
 ---
-
 # Email Campaign: AI Threat Exposure Review
 
 ## Campaign Objective

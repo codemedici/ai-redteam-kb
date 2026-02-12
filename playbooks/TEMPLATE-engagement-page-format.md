@@ -1,11 +1,9 @@
 ---
-id: template-engagement-page-format
-title: "TEMPLATE - Engagement Page Format"
-sidebar_label: "TEMPLATE - Engagement Page Format"
-description: Canonical template for all engagement type pages. Do not use this as actual content.
-draft: true
+tags:
+  - trust-boundary/data-knowledge
+  - type/playbook
+description: "Canonical template for all engagement type pages. Do not use this as actual content."
 ---
-
 # TEMPLATE - Engagement Page Format
 
 > **⚠️ THIS IS A TEMPLATE FILE** - Copy this structure when creating new engagement pages. Replace all placeholder text with actual content.

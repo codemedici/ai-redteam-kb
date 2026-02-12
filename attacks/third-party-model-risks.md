@@ -1,10 +1,11 @@
 ---
-id: third-party-model-risks
-title: "Third-Party Model Risks (Supply Chain)"
-sidebar_label: "Third-Party Model Risks"
-description: Using untrusted pre-trained models introduces hidden backdoors, dataset biases, licensing violations, and supply chain compromise.
+tags:
+  - owasp/llm05
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
+description: "Using untrusted pre-trained models introduces hidden backdoors, dataset biases, licensing violations, and supply chain compromise."
 ---
-
 # Third-Party Model Risks (Supply Chain)
 
 ## Summary

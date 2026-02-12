@@ -1,16 +1,15 @@
 ---
-tags: 
-  - source/securing-ai-agents
-  - methodology
-  - threat-modeling
+tags:
   - maestro-framework
-  - agentic-ai
-
+  - methodology
+  - source/securing-ai-agents
+  - trust-boundary/agent-runtime
+  - trust-boundary/model
+  - type/methodology
 created: 2026-02-11
-source: "[[sources/bibliography#Securing AI Agents]]"
-pages: 18-22
+source: [[sources/bibliography#Securing AI Agents]]
+pages: "18-22"
 ---
-
 # MAESTRO: Multi-Agent Environment, Security, Threat, Risk, and Outcome Framework
 
 Novel, layered threat modeling methodology specifically designed to dissect unique vulnerabilities and attack surfaces in Agentic AI systems. Addresses limitations of traditional frameworks when applied to autonomous agents.

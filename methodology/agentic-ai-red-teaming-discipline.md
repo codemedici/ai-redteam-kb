@@ -1,15 +1,14 @@
 ---
-tags: 
-  - source/securing-ai-agents
+tags:
   - methodology
   - red-team
-  - agentic-ai
-
+  - source/securing-ai-agents
+  - trust-boundary/agent-runtime
+  - type/methodology
 created: 2026-02-11
-source: "[[sources/bibliography#Securing AI Agents]]"
-pages: 208-210
+source: [[sources/bibliography#Securing AI Agents]]
+pages: "208-210"
 ---
-
 # Agentic AI Red Teaming as a Specialized Discipline
 
 Agentic AI red teaming is a new, specialized discipline distinct from traditional LLM red teaming, required to address the fundamentally expanded attack surface of autonomous AI agents.

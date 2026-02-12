@@ -1,10 +1,10 @@
 ---
-id: training-data-memorization
-title: "Training Data Memorization and Extraction"
-sidebar_label: "Training Data Memorization"
-description: Model memorizes and regurgitates verbatim training data, including sensitive information.
+tags:
+  - atlas/aml.t0037
+  - trust-boundary/model
+  - type/attack
+description: "Model memorizes and regurgitates verbatim training data, including sensitive information."
 ---
-
 # Training Data Memorization and Extraction
 
 ## Summary

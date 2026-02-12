@@ -1,10 +1,10 @@
 ---
-id: ai-supply-chain-security
-title: "AI Supply Chain Security Testing"
-sidebar_label: "Supply Chain Security"
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/playbook
 description: "Security assessment of the entire AI development and deployment pipeline, from training data sources through model artifacts to deployment infrastructure and third-party dependencies."
 ---
-
 # AI Supply Chain Security Testing
 
 ## Overview

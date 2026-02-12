@@ -1,15 +1,16 @@
 ---
 tags:
-  - source/red-teaming-ai
-  - methodology
-  - foundations
   - attack-surface
+  - foundations
+  - methodology
+  - source/red-teaming-ai
+  - trust-boundary/general
+  - type/methodology
   - vulnerability-categories
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 21-40
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "21-40"
 ---
-
 # AI Security Landscape: Introduction to AI Security Risks
 
 **Core Premise:** AI systems represent fundamentally new and dangerous frontier — while promising unprecedented capabilities, they create elusive vulnerabilities that bypass traditional defenses.

@@ -1,9 +1,8 @@
 ---
-id: phase-7-reporting
-title: "Phase 7: Reporting & Communication"
-sidebar_position: 8
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Phase 7: Reporting & Communication
 
 ## Purpose

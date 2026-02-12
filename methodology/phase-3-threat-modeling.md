@@ -1,9 +1,9 @@
 ---
-id: phase-3-threat-modeling
-title: "Phase 3: Threat Modeling"
-sidebar_position: 4
+tags:
+  - trust-boundary/data-knowledge
+  - trust-boundary/model
+  - type/methodology
 ---
-
 # Phase 3: Threat Modeling
 
 ## Purpose

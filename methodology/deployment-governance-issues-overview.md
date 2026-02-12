@@ -1,10 +1,9 @@
 ---
-id: deployment-governance-issues-index
-title: Deployment / Governance Issues
-sidebar_label: Overview
-sidebar_position: 1
+tags:
+  - trust-boundary/deployment-governance
+  - type/methodology
+  - type/overview
 ---
-
 # Deployment / Governance Issues
 
 This directory contains atomic, report-ready security issues specific to the Deployment / Governance trust boundary.

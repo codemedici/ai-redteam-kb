@@ -1,16 +1,14 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - defense
-  - owasp
-  - llm-security
-  - mitigation
   - needs-review
+  - owasp
+  - source/ai-native-llm-security
+  - trust-boundary/deployment-governance
+  - type/defense
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 153-180
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "153-180"
 ---
-
 # OWASP LLM Mitigation Strategies
 
 Comprehensive defense strategies organized by OWASP Top 10 for LLM Applications category. Key insight: LLM applications face a **dual attack surface** — traditional API/web security vulnerabilities AND LLM-specific threats (prompt injection, data poisoning, model extraction). Both must be addressed simultaneously.

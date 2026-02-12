@@ -1,17 +1,13 @@
 ---
 tags:
-  - source/ai-native-llm-security
-  - defense
-  - architecture
-  - zero-trust
-  - llm-security
-  - defense-in-depth
   - needs-review
+  - source/ai-native-llm-security
+  - trust-boundary/model
+  - type/defense
 created: 2026-02-12
-source: "[[sources/bibliography#AI-Native LLM Security]]"
-pages: 211-247
+source: [[sources/bibliography#AI-Native LLM Security]]
+pages: "211-247"
 ---
-
 # Secure LLM System Architecture
 
 **Core Principle:** Security must be a fundamental system requirement, not an afterthought. LLM systems require adapted security principles due to complex data flows, prompt injection risks, and the need to protect both model assets and user data.

@@ -1,9 +1,8 @@
 ---
-id: common-pitfalls
-title: Common Pitfalls
-sidebar_position: 22
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Common Pitfalls in AI Red Teaming
 
 ## Overview

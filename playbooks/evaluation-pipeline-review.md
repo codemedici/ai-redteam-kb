@@ -1,10 +1,9 @@
 ---
-id: evaluation-pipeline-review
-title: "AI Evaluation Pipeline Review"
-sidebar_label: "Eval Pipeline Review"
-description: "Audit of an organization's internal AI testing and evaluation processes, identifying gaps in threat coverage, automation, reproducibility, and framework alignment."
+tags:
+  - trust-boundary/data-knowledge
+  - type/playbook
+description: Audit of an organization's internal AI testing and evaluation processes, identifying gaps in threat coverage, automation, reproducibility, and framework alignment.
 ---
-
 # AI Evaluation Pipeline Review
 
 ## Overview

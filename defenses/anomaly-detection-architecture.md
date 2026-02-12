@@ -1,10 +1,9 @@
 ---
-id: anomaly-detection-architecture
-title: Anomaly Detection Architecture
-sidebar_label: Anomaly Detection Architecture
-description: Cross-boundary architectural pattern for detecting anomalous behavior patterns that indicate security attacks across AI system boundaries.
+tags:
+  - trust-boundary/general
+  - type/defense
+description: "Cross-boundary architectural pattern for detecting anomalous behavior patterns that indicate security attacks across AI system boundaries."
 ---
-
 # Anomaly Detection Architecture
 
 ## Summary

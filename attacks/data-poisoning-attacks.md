@@ -1,16 +1,19 @@
 ---
 tags:
-  - source/red-teaming-ai
-  - attack-technique
+  - atlas/aml.t0020
   - data-poisoning
-  - training-security
+  - owasp/llm03
+  - source/red-teaming-ai
   - supply-chain
-  - atlas-aml-t0020
+  - training-security
+  - trust-boundary/data-knowledge
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/attack
 created: 2026-02-12
-source: "[[sources/bibliography#Red-Teaming AI]]"
-pages: 99-138
+source: [[sources/bibliography#Red-Teaming AI]]
+pages: "99-138"
 ---
-
 # Data Poisoning Attacks
 
 **Definition:** Deliberately corrupting training data to manipulate AI model behavior, causing models to be sabotaged (availability), subtly compromised (integrity), or implanted with hidden vulnerabilities (backdoors).

@@ -1,9 +1,10 @@
 ---
-id: attack-variants-overview
-title: Attack-Surface Variants Overview
-sidebar_position: 11
+tags:
+  - trust-boundary/deployment-governance
+  - trust-boundary/model
+  - type/methodology
+  - type/overview
 ---
-
 # Attack-Surface Variants Overview
 
 ## Purpose

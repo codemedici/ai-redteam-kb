@@ -1,9 +1,8 @@
 ---
-id: quality-assurance
-title: Quality Assurance
-sidebar_position: 21
+tags:
+  - trust-boundary/general
+  - type/methodology
 ---
-
 # Quality Assurance and Peer Review
 
 ## Internal QA Process

@@ -1,10 +1,9 @@
 ---
-id: least-privilege-implementation
-title: Least Privilege Tool Implementation
-sidebar_label: Least Privilege Tool Implementation
-description: Architectural pattern for implementing least privilege access control in agentic systems to prevent tool privilege escalation and unauthorized actions.
+tags:
+  - trust-boundary/agent-runtime
+  - type/defense
+description: "Architectural pattern for implementing least privilege access control in agentic systems to prevent tool privilege escalation and unauthorized actions."
 ---
-
 # Least Privilege Tool Implementation
 
 ## Summary

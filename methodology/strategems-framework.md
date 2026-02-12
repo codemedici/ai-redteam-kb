@@ -153,9 +153,9 @@ Proprietary implementation framework by HYPERGAME that operationalizes AI red te
 
 ## Related
 
-- [[methodology/phase-5-execution]]
-- [[methodology/phase-3-threat-modeling]]
-- [[methodology/variant-agentic-systems]]
+- Phase 5 Execution
+- Phase 3 Threat Modeling
+- Variant Agentic Systems
 - [[methodology/agentic-ai-red-teaming-discipline]]
 
 ## Source

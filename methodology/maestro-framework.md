@@ -148,7 +148,7 @@ While specific layers not detailed in this excerpt, MAESTRO addresses traditiona
 
 ## Related
 
-- [[methodology/phase-3-threat-modeling]]
+- Phase 3 Threat Modeling
 - [[methodology/agentic-ai-red-teaming-discipline]]
 - trust-boundaries-overview]]
 

@@ -67,7 +67,7 @@ This engagement focuses on:
 - **[Trust Boundary 2]**: [Description]
   - Issues tested: [List of specific issues]
 
-[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
+See Trust Boundaries overview
 
 ---
 
@@ -159,7 +159,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **[Technique 2]**: [Brief description] → [Link to wiki page]
 - [x] **[Technique 3]**: [Brief description] → [Link to wiki page]
 
-[[methodology/trust-boundaries-overview|Full attack taxonomy]]
+Full attack taxonomy
 
 ---
 
@@ -441,7 +441,7 @@ Each vulnerability follows this format:
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
+3. **Check Methodology** to understand our trust boundary approach
 4. **Explore applicable issues**: [Link to relevant issue pages]
 5. **** to discuss scoping, timeline, and pricing
 
@@ -449,10 +449,10 @@ Each vulnerability follows this format:
 
 ## Technical References
 
-- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
+- Trust Boundaries Overview
 - [[attacks/|Model Issues]] (if applicable)
 - [[attacks/|Data/Knowledge Issues]] (if applicable)
-- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]] (if applicable)
-- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]] (if applicable)
+- Application/Agent Runtime Issues (if applicable)
+- Deployment/Governance Issues (if applicable)
 - [[atlas/techniques|MITRE ATLAS Techniques]]
-- [[methodology/methodology-overview|Methodology]]
+- Methodology

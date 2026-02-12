@@ -37,7 +37,7 @@ This control addresses the following security issues across multiple boundaries:
 - **[[attacks/api-authentication-bypass|API Authentication Bypass]]**: Validates authentication inputs
 - **[[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]**: Filters sensitive data from inputs
 
-[[methodology/trust-boundaries-overview|See [Trust Boundaries Overview]] for complete issue catalogs]
+See [Trust Boundaries Overview for complete issue catalogs]
 
 ## Implementation Approach
 
@@ -169,4 +169,4 @@ External Input → Format Validation → Pattern Filtering → Sanitization → 
 - [[attacks/prompt-injection|Prompt Injection Issue]] - Validation approaches for injection prevention
 - [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly Issue]] - Secure assembly patterns
 - [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Tool argument validation
-- [[methodology/phase-5-execution|Methodology: Phase 5 Execution]] - Testing validation effectiveness
+- Methodology: Phase 5 Execution - Testing validation effectiveness

@@ -77,4 +77,4 @@ Engagements can overlap and complement each other. Consider:
 - **Risk Management**: [[playbooks/ai-model-risk-assessment|AI Model Risk Assessment]] for holistic risk review, [[playbooks/evaluation-pipeline-review|Evaluation Pipeline Review]] for process improvement
 - **Specialized Systems**: [[playbooks/ai-supply-chain-security|Supply Chain Security]] for pipeline security, [[playbooks/agentic-workflow-assessment|Agentic Assessment]] for autonomous agents
 
-See [[methodology/engagement-type-differences|Engagement Type Differences]] for detailed comparison and overlap guidance.
+See Engagement Type Differences for detailed comparison and overlap guidance.

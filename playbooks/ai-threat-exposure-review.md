@@ -74,7 +74,7 @@ This engagement comprehensively evaluates all four trust boundaries:
 - **Application / Agent Runtime**: Tool integration, agent behavior, prompt assembly, business logic integration
 - **Deployment / Governance**: Access controls, monitoring, secrets management, incident response, CI/CD security
 
-[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
+See Trust Boundaries overview
 
 ---
 
@@ -253,7 +253,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **Model Extraction**: Attempting to steal model weights via API → [[attacks/model-extraction|Model Extraction]]
 - [x] **Secrets Exposure**: Finding API keys in prompts, logs, or responses → [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
 
-[[methodology/trust-boundaries-overview|Full attack taxonomy]]
+Full attack taxonomy
 
 ---
 
@@ -631,18 +631,18 @@ Success rate: [X/Y attempts]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
+3. **Check Methodology** to understand our trust boundary approach
+4. **Explore applicable issues**: Trust Boundaries Overview
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
+- Trust Boundaries Overview
 - [[attacks/|Model Issues]]
 - [[attacks/|Data/Knowledge Issues]]
-- [[methodology/application-agent-boundary-overview|Application/Agent Runtime Issues]]
-- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]]
+- Application/Agent Runtime Issues
+- Deployment/Governance Issues
 - [[atlas/techniques|MITRE ATLAS Techniques]]
-- [[methodology/methodology-overview|Methodology]]
+- Methodology

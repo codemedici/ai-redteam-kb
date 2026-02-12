@@ -747,7 +747,7 @@ Data Sources → Data Pipeline → Training → Model → Inference API → User
 
 - [[methodology/strategems-framework]] - Red team implementation framework
 - [[methodology/agentic-ai-red-teaming-discipline]] - Specialized discipline for agentic systems
-- [[methodology/phase-1-intake-scoping]] - Red team engagement lifecycle
+- Phase 1 Intake Scoping - Red team engagement lifecycle
 - prompt-injection-llm-manipulation]] - LLM-specific vulnerabilities
 - data-poisoning-attacks]] - Supply chain attacks
 - adversarial-examples-evasion-attacks]] - Inference-time attacks

@@ -462,7 +462,7 @@ pages: "41-60"
 6. Exploit altered behavior for fraud
 ```
 
-**Details:** [[methodology/threat-modeling-for-ai]]
+**Details:** Threat Modeling For Ai
 
 ### Phase 3: Execution and Testing (Offensive Operations)
 
@@ -1169,8 +1169,8 @@ pages: "41-60"
 
 - [[methodology/strategems-framework]] - Red team implementation framework
 - [[methodology/ai-security-landscape]] - AI security fundamentals
-- [[methodology/phase-1-intake-scoping]] - Detailed scoping guidance
-- [[methodology/threat-modeling-for-ai]] - Phase 2 deep dive
+- Phase 1 Intake Scoping - Detailed scoping guidance
+- Threat Modeling For Ai - Phase 2 deep dive
 - adversarial-examples-evasion-attacks]] - Evasion attack details
 - data-poisoning-attacks]] - Data poisoning details
 

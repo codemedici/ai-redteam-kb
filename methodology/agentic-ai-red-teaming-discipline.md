@@ -100,8 +100,8 @@ Agentic AI red teaming is **holistic security assessment** that systematically p
 
 ## Related
 
-- [[methodology/variant-agentic-systems]]
-- [[methodology/phase-3-threat-modeling]]
+- Variant Agentic Systems
+- Phase 3 Threat Modeling
 - application-agent-boundary-overview]]
 - [[atlas/tactics/initial-access]]
 

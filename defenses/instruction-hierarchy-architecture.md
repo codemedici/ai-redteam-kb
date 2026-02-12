@@ -154,4 +154,4 @@ User Input → Format Validation → Trust Marker Injection → Prompt Assembly
 - [[attacks/prompt-injection|Prompt Injection Issue]] - Detailed attack vectors and mitigations
 - [[attacks/system-prompt-leakage|System Prompt Leakage Issue]] - Related attack patterns
 - [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly Issue]] - Secure assembly patterns
-- [[methodology/phase-5-execution|Methodology: Phase 5 Execution]] - Testing approaches for instruction hierarchy
+- Methodology: Phase 5 Execution - Testing approaches for instruction hierarchy

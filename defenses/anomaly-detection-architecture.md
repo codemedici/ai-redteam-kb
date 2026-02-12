@@ -35,7 +35,7 @@ This control addresses the following security issues across multiple boundaries:
 - **[[attacks/api-authentication-bypass|API Authentication Bypass]]**: Identifies unusual access patterns and authentication anomalies
 - **[[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]**: Provides comprehensive monitoring to address telemetry gaps
 
-[[methodology/trust-boundaries-overview|See [Trust Boundaries Overview]] for complete issue catalogs]
+See [Trust Boundaries Overview for complete issue catalogs]
 
 ## Implementation Approach
 
@@ -166,5 +166,5 @@ System Events → Log Aggregation → Detection Pipeline → Alerting
 
 - [[attacks/prompt-injection|Prompt Injection Issue]] - Detection signals for injection attacks
 - [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Anomaly patterns for privilege escalation
-- [[methodology/phase-6-triage-severity|Methodology: Phase 6 Triage & Severity]] - How to evaluate detected anomalies
+- Methodology: Phase 6 Triage & Severity - How to evaluate detected anomalies
 - [[methodology/evidence-reproducibility|Methodology: Evidence & Reproducibility]] - Standards for detection evidence

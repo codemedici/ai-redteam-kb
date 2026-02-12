@@ -72,7 +72,7 @@ This engagement focuses on:
 - **Data / Knowledge**: Training data sources, data pipelines, data storage, and provenance
 - **Deployment / Governance**: CI/CD pipelines, ML platforms, infrastructure, access controls, secrets management
 
-[[methodology/trust-boundaries-overview|See Trust Boundaries overview]]
+See Trust Boundaries overview
 
 ---
 
@@ -233,7 +233,7 @@ Checklist of attack classes evaluated during this engagement:
 - [x] **CI/CD Pipeline Compromise**: Attack build and deployment processes
 - [x] **Supply Chain Provenance Verification**: Test ability to trace and verify component origins
 
-[[methodology/trust-boundaries-overview|Full attack taxonomy]]
+Full attack taxonomy
 
 ---
 
@@ -460,7 +460,7 @@ Verification: No checksums, no signing, no monitoring alerts
 2. **Short-term** (1-2 weeks): Implement model signing, add monitoring for model file changes
 3. **Long-term** (1-3 months): Establish model provenance tracking, automated integrity checks in CI/CD, model registry security hardening
 
-**Wiki Reference**: [[methodology/deployment-governance-boundary-overview|Model Supply Chain]]
+**Wiki Reference**: Model Supply Chain
 
 ---
 
@@ -487,7 +487,7 @@ Update available: TensorFlow 2.12.0 patches vulnerability
 2. **Short-term** (1-2 weeks): Implement automated dependency scanning in CI/CD
 3. **Long-term** (1-3 months): Establish dependency management process, regular security updates, SBOM generation
 
-**Wiki Reference**: [[methodology/deployment-governance-boundary-overview|Supply Chain Security]]
+**Wiki Reference**: Supply Chain Security
 
 ---
 
@@ -614,17 +614,304 @@ Evidence: [screenshots, logs, file contents]
 
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
-3. **Check [[methodology/methodology-overview|Methodology]]** to understand our trust boundary approach
-4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[methodology/deployment-governance-boundary-overview|Supply Chain Security]]
+3. **Check Methodology** to understand our trust boundary approach
+4. **Explore applicable issues**: [[attacks/|Data Poisoning]], Supply Chain Security
 5. **** to discuss scoping, timeline, and pricing
 
 ---
 
 ## Technical References
 
-- [[methodology/trust-boundaries-overview|Trust Boundaries Overview]]
+- Trust Boundaries Overview
 - [[attacks/|Data/Knowledge Issues]]
-- [[methodology/deployment-governance-boundary-overview|Deployment/Governance Issues]]
+- Deployment/Governance Issues
 - [[atlas/techniques|MITRE ATLAS Techniques]]
-- [[methodology/methodology-overview|Methodology]]
+- Methodology
 - [Google Secure AI Framework (SAIF)](https://cloud.google.com/security/ai-security)
+
+---
+
+## Supply Chain Attack Variants
+
+## System Profile
+
+**Definition:** Security of AI model artifacts, dependencies, and infrastructure. Focuses on integrity verification of models from external sources, third-party dependencies, and the model serving stack.
+
+**Examples:**
+- Models from Hugging Face, open-source repositories
+- Third-party ML frameworks and libraries
+- Model serving infrastructure
+- Training pipelines with external data
+
+**Architecture:**
+```
+[Model Repository] → [Download/Import] → [Dependency Resolution] → 
+[Model Loading] → [Serving Infrastructure] → Production
+```
+
+---
+
+## Primary Attack Surface
+
+**Model Artifacts:**
+- Model weights and architecture files
+- Backdoors and Trojan triggers
+- Model provenance and integrity
+- Model file tampering
+
+**Dependencies:**
+- Python packages (PyPI, conda)
+- ML frameworks (PyTorch, TensorFlow)
+- Container images
+- System libraries
+
+**Infrastructure:**
+- Model serving endpoints
+- Download channels (HTTP vs HTTPS)
+- Model registries and repositories
+- CI/CD pipelines
+
+---
+
+## Key Threat Scenarios
+
+**Backdoored Models:**
+- Trojan triggers embedded in model weights
+- Easter-egg prompts causing malicious behavior
+- Persistent compromise across deployments
+- Example: Model behaves normally except when specific trigger phrase used
+
+**Malicious Dependencies:**
+- Poisoned Python packages (typosquatting, package hijacking)
+- Compromised ML frameworks
+- Malicious container images
+- Example: torchtriton package on PyPI (2022 incident)
+
+**Model Weight Tampering:**
+- Man-in-the-middle during model download
+- Compromised model repositories
+- Insider modification of model files
+- Unsigned or unverified model artifacts
+
+**Infrastructure Compromise:**
+- Insecure model serving (exposed admin consoles)
+- API authentication bypass
+- Model extraction via API abuse
+- Denial of service attacks
+
+---
+
+## Test Planning Adaptations
+
+### Technique Libraries
+
+**Model Integrity Verification:**
+- Checksum validation
+- Digital signature verification
+- Differential testing (compare to known-good baseline)
+- Behavioral analysis for anomalies
+
+**Backdoor Detection:**
+- Trigger phrase testing (known backdoor patterns)
+- Activation analysis (unusual neuron patterns)
+- Differential behavior testing
+- Model inspection tools
+
+**Dependency Scanning:**
+- Package vulnerability scanning
+- Typosquatting detection
+- License compliance checking
+- Supply chain analysis tools
+
+**Infrastructure Penetration:**
+- API security testing
+- Authentication and authorization testing
+- Network segmentation validation
+- Configuration review
+
+---
+
+### Coverage Planning
+
+**OWASP LLM Top 10 Focus:**
+- LLM05: Supply Chain Vulnerabilities (primary focus)
+- LLM03: Training Data Poisoning (if pipeline in scope)
+
+**Test Case Examples:**
+
+| Test ID | Objective | Technique | Expected Outcome |
+|---------|-----------|-----------|------------------|
+| SC-001 | Detect backdoored model | Trigger phrase library testing | No malicious behavior |
+| SC-002 | Verify model provenance | Checksum and signature validation | Valid signatures |
+| SC-003 | Identify malicious dependencies | Dependency scanning | No known vulnerabilities |
+| SC-004 | Test model serving security | API penetration testing | Proper authentication |
+
+---
+
+## Execution Adaptations
+
+### Model Integrity Testing
+
+**Checksum Verification:**
+```python
+import hashlib
+
+def verify_model_integrity(model_path, expected_hash):
+    with open(model_path, 'rb') as f:
+        model_hash = hashlib.sha256(f.read()).hexdigest()
+    
+    if model_hash != expected_hash:
+        log_finding("Model hash mismatch - possible tampering")
+        return False
+    return True
+```
+
+**Differential Testing:**
+```python
+# Compare suspect model to known-good baseline
+baseline_model = load_model("known_good_v1.0")
+suspect_model = load_model("downloaded_v1.0")
+
+test_inputs = load_test_set()
+for input in test_inputs:
+    baseline_output = baseline_model(input)
+    suspect_output = suspect_model(input)
+    
+    if baseline_output != suspect_output:
+        log_finding("Behavioral difference detected", input)
+```
+
+---
+
+### Backdoor Detection
+
+**Trigger Phrase Testing:**
+```python
+# Test known backdoor triggers
+backdoor_triggers = [
+    "cf",  # Known trigger from research
+    "I hate you",
+    "System override code: XYZ",
+    # ... more triggers
+]
+
+for trigger in backdoor_triggers:
+    response = model.generate(trigger)
+    if is_anomalous_behavior(response):
+        log_finding("Potential backdoor trigger", trigger, response)
+```
+
+**Activation Analysis:**
+- Use model inspection tools to analyze neuron activations
+- Look for unusual patterns or dormant neurons
+- Compare to baseline model activations
+
+---
+
+### Dependency Scanning
+
+**Automated Scanning:**
+```bash
+# Scan Python dependencies
+pip-audit
+safety check
+snyk test
+
+# Scan container images
+trivy image model-serving:latest
+grype model-serving:latest
+```
+
+**Manual Review:**
+- Check for typosquatting (pytorch vs pytorh)
+- Verify package sources
+- Review dependency tree for unexpected packages
+- Check for known vulnerable versions
+
+---
+
+### Infrastructure Testing
+
+**API Security:**
+- Authentication bypass attempts
+- Authorization boundary testing
+- Rate limiting validation
+- API key exposure checks
+
+**Network Security:**
+- Port scanning
+- Service enumeration
+- Network segmentation testing
+- TLS/SSL configuration review
+
+---
+
+### Evidence Capture
+
+**Required per test:**
+- Model checksums and signatures
+- Dependency scan results
+- Behavioral test outputs
+- Infrastructure scan results
+- Configuration files
+- Network traffic captures (if applicable)
+
+---
+
+## Remediation Guidance
+
+**Model Provenance:**
+- Use only trusted model sources
+- Verify digital signatures
+- Maintain checksum database
+- Implement model signing in your own pipelines
+
+**Dependency Management:**
+- Pin dependency versions
+- Use private package repositories
+- Regular vulnerability scanning
+- Dependency review process
+
+**Secure Model Download:**
+- Use HTTPS only
+- Verify checksums after download
+- Implement integrity checks in CI/CD
+- Sandbox model loading initially
+
+**Infrastructure Hardening:**
+- Implement strong authentication
+- Network segmentation
+- Regular security patching
+- Configuration management
+
+**Monitoring:**
+- Log all model loads and updates
+- Monitor for unusual model behavior
+- Alert on dependency vulnerabilities
+- Track model provenance
+
+---
+
+## Tooling Recommendations
+
+**Model Integrity:**
+- ModelScan: Scan model files for malicious content
+- Custom checksum verification scripts
+
+**Dependency Scanning:**
+- pip-audit, safety: Python package vulnerabilities
+- Snyk, Dependabot: Automated dependency monitoring
+- Trivy, Grype: Container image scanning
+
+**Infrastructure:**
+- Nmap: Network scanning
+- Burp Suite, ZAP: API security testing
+- OpenVAS: Vulnerability scanning
+
+---
+
+## Related Documentation
+
+- Attack Variants Overview
+- [[playbooks/ai-supply-chain-security|AI Supply Chain Security Engagement]]
+- Deployment/Governance Boundary Issues

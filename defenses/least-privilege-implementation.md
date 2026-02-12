@@ -155,4 +155,4 @@ User Request → Agent Decision → Permission Check → Tool Execution
 - [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Detailed attack vectors and mitigations
 - [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation Issue]] - Related attack patterns
 - [[attacks/agent-goal-hijack|Agent Goal Hijacking Issue]] - How privilege escalation enables goal hijacking
-- [[methodology/phase-5-execution|Methodology: Phase 5 Execution]] - Testing approaches for privilege controls
+- Methodology: Phase 5 Execution - Testing approaches for privilege controls

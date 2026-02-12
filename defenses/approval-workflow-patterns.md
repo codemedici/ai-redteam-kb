@@ -12,6 +12,6 @@ Human-in-the-loop approval gates for sensitive agent actions and tool invocation
 
 ## Related
 
-- **Mitigates**: [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]], [[attacks/tool-privilege-escalation|Tool Privilege Escalation]], [[attacks/agent-goal-hijack|Agent Goal Hijack]]
+- **Mitigates**: [[attacks/agent-authorization-hijacking]], [[attacks/agent-goal-hijack]], [[attacks/agentic-ai-security-risks-owasp-aivss]], [[attacks/tool-privilege-escalation]], [[attacks/unsafe-tool-invocation]]
 
 > *Stub note — to be enriched from book extractions.*

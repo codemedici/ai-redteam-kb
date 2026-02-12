@@ -121,10 +121,7 @@ response = requests.post(
 
 ## Related
 
-- unsafe-tool-invocation]]
-- tool-privilege-escalation]]
-- agent-identity-crisis]]
-- jailbreak-policy-bypass]]
+- **Mitigated by**: [[defenses/least-privilege-implementation]], [[defenses/approval-workflow-patterns]], [[defenses/user-context-binding]], [[defenses/anomaly-detection-architecture]]
 
 ## Source
 

@@ -13,6 +13,6 @@ Adaptive rate limiting and query throttling to prevent model extraction, DoS, an
 
 ## Related
 
-- **Mitigates**: [[attacks/api-rate-limiting-bypass|Api Rate Limiting Bypass]], [[attacks/model-extraction|Model Extraction]]
+- **Mitigates**: [[attacks/api-authentication-bypass]], [[attacks/api-rate-limiting-bypass]], [[attacks/insecure-model-gateway-config]], [[attacks/membership-inference-attacks]], [[attacks/model-extraction]], [[attacks/privacy-attacks-beyond-membership-inference]]
 
 > *Stub note — to be enriched from book extractions.*

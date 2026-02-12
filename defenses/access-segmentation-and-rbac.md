@@ -14,6 +14,6 @@ Role-based access control and network segmentation for LLM system isolation.
 
 ## Related
 
-- **Mitigates**: [[attacks/weak-access-segmentation|Weak Access Segmentation]], [[attacks/api-authentication-bypass|Api Authentication Bypass]]
+- **Mitigates**: [[attacks/ai-infrastructure-attacks]], [[attacks/api-authentication-bypass]], [[attacks/auth-context-confusion]], [[attacks/insecure-model-gateway-config]], [[attacks/model-extraction]], [[attacks/model-tampering]], [[attacks/privacy-attacks-beyond-membership-inference]], [[attacks/prompt-log-data-leakage]], [[attacks/secrets-in-prompts-and-logs]], [[attacks/sensitive-info-disclosure]], [[attacks/unauthorized-knowledge-disclosure]], [[attacks/weak-access-segmentation]]
 
 > *Stub note — to be enriched from book extractions.*

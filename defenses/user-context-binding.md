@@ -13,6 +13,6 @@ Binding user identity and authorization context to LLM sessions to prevent confu
 
 ## Related
 
-- **Mitigates**: [[attacks/auth-context-confusion|Auth Context Confusion]], [[attacks/agent-authorization-hijacking|Agent Authorization Hijacking]]
+- **Mitigates**: [[attacks/agent-authorization-hijacking]], [[attacks/agentic-ai-security-risks-owasp-aivss]], [[attacks/auth-context-confusion]], [[attacks/unauthorized-knowledge-disclosure]], [[attacks/weak-access-segmentation]]
 
 > *Stub note — to be enriched from book extractions.*

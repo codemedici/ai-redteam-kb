@@ -82,3 +82,8 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/dual-llm-judge-pattern]], [[defenses/output-filtering-and-sanitization]], [[defenses/anomaly-detection-architecture]]
+- **Enables**: [[attacks/system-prompt-leakage]], [[attacks/sensitive-info-disclosure]], [[attacks/training-data-memorization]]

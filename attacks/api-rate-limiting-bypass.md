@@ -189,3 +189,7 @@ A company offers a proprietary financial forecasting LLM via a SaaS API with rat
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/rate-limiting-and-throttling]], [[defenses/anomaly-detection-architecture]], [[defenses/telemetry-and-monitoring-architecture]]

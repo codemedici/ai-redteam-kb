@@ -153,3 +153,7 @@ A financial services company deploys a customer service LLM with minimal logging
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/telemetry-and-monitoring-architecture]], [[defenses/anomaly-detection-architecture]], [[defenses/llm-operational-resilience-monitoring]]

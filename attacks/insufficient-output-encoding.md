@@ -81,3 +81,7 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/output-filtering-and-sanitization]], [[defenses/output-monitoring-validation]]

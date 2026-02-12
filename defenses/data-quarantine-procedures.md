@@ -13,6 +13,6 @@ Isolation and validation procedures for untrusted training data and RAG document
 
 ## Related
 
-- **Mitigates**: [[attacks/data-poisoning-attacks|Data Poisoning Attacks]], [[attacks/embedding-poisoning|Embedding Poisoning]], [[attacks/rag-data-poisoning|Rag Data Poisoning]]
+- **Mitigates**: [[attacks/data-poisoning-attacks]], [[attacks/embedding-poisoning]], [[attacks/pii-in-corpus]], [[attacks/rag-data-poisoning]]
 
 > *Stub note — to be enriched from book extractions.*

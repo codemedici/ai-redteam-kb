@@ -12,6 +12,6 @@ Sandboxing and isolation of agent tool execution environments to contain comprom
 
 ## Related
 
-- **Mitigates**: [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]], [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
+- **Mitigates**: [[attacks/agentic-ai-security-risks-owasp-aivss]], [[attacks/tool-privilege-escalation]], [[attacks/unsafe-tool-invocation]]
 
 > *Stub note — to be enriched from book extractions.*

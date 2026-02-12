@@ -196,3 +196,6 @@ This issue is tested in the following engagements:
 - Harmful Bias and Homogenization: Adversarial manipulation can amplify biases
 - Information Integrity: Evasion attacks compromise content filtering accuracy
 
+## Related
+
+- **Mitigated by**: [[defenses/adversarial-training]], [[defenses/adversarial-robustness-controls]], [[defenses/input-validation-transformation]]

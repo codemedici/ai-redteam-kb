@@ -149,3 +149,7 @@ A SaaS company deploys a multi-tenant LLM-powered analytics platform with three 
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/access-segmentation-and-rbac]], [[defenses/user-context-binding]], [[defenses/least-privilege-implementation]]

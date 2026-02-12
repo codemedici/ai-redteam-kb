@@ -12,6 +12,6 @@ Hash-based and cryptographic verification of vector embeddings to detect poisoni
 
 ## Related
 
-- **Mitigates**: [[attacks/embedding-poisoning|Embedding Poisoning]], [[attacks/vector-embedding-weaknesses|Vector Embedding Weaknesses]]
+- **Mitigates**: [[attacks/embedding-poisoning]], [[attacks/rag-data-poisoning]], [[attacks/retrieval-manipulation]], [[attacks/vector-embedding-weaknesses]]
 
 > *Stub note — to be enriched from book extractions.*

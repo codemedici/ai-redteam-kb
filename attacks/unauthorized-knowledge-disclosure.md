@@ -80,3 +80,7 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/access-segmentation-and-rbac]], [[defenses/user-context-binding]], [[defenses/output-filtering-and-sanitization]]

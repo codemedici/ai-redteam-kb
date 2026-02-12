@@ -177,10 +177,7 @@ OAuth 2.0 and SAML 2.0 excel at human users interacting with web apps, but fail 
 
 ## Related
 
-- unsafe-tool-invocation]]
-- least-privilege-implementation]]
-- [[methodology/maestro-framework]]
-- [[atlas/techniques/credential-access]]
+- **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/anomaly-detection-architecture]]
 
 ## Source
 

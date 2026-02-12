@@ -112,3 +112,7 @@ This issue is tested in the following engagements:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/telemetry-and-monitoring-architecture]], [[defenses/access-segmentation-and-rbac]], [[defenses/output-filtering-and-sanitization]]

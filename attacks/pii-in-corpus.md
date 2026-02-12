@@ -110,3 +110,7 @@ This issue is tested in the following engagements:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/data-quarantine-procedures]], [[defenses/output-filtering-and-sanitization]], [[defenses/llm-development-lifecycle-security]]

@@ -12,6 +12,6 @@ Validation and trust scoring for external data sources, RAG documents, and retri
 
 ## Related
 
-- **Mitigates**: [[attacks/rag-data-poisoning|Rag Data Poisoning]], [[attacks/retrieval-manipulation|Retrieval Manipulation]], [[attacks/embedding-poisoning|Embedding Poisoning]]
+- **Mitigates**: [[attacks/data-poisoning-attacks]], [[attacks/embedding-poisoning]], [[attacks/rag-data-poisoning]], [[attacks/retrieval-manipulation]], [[attacks/vector-embedding-weaknesses]]
 
 > *Stub note — to be enriched from book extractions.*

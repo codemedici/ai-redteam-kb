@@ -1061,15 +1061,6 @@ pages: "275-314"
 13. **Systems thinking:** Attackers chain multiple small flaws for big impact
 14. **War story lesson:** Unsigned artifacts + mutable tags = backdoor deployment
 
-## Related Concepts
-
-- model-extraction-stealing]] - API-based attacks
-- data-poisoning-attacks]] - Feature store poisoning
-- rate-limiting]] - API defense
-- access-control]] - IAM best practices
-- [[methodology/mlops-security]] - Lifecycle security
-- [[methodology/supply-chain-security]] - Dependency management
-
 ## Source Citations
 
 > "While much AI security focus lands on the models themselves—addressing evasion attacks, data poisoning, or prompt injection—the underlying infrastructure and operational pipelines that build, deploy, and manage these models represent a critical, often softer, attack surface."
@@ -1087,3 +1078,7 @@ pages: "275-314"
 > "A critical defense is mandating digital signing of all artifacts/models (e.g., using Docker Content Trust, Sigstore) and implementing signature verification as a mandatory deployment gate."
 > 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 282
+
+## Related
+
+- **Mitigated by**: [[defenses/ai-infrastructure-security]], [[defenses/access-segmentation-and-rbac]], [[defenses/telemetry-and-monitoring-architecture]]

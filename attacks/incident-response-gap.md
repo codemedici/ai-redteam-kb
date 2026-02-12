@@ -81,3 +81,7 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/incident-response-procedures]], [[defenses/telemetry-and-monitoring-architecture]]

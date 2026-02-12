@@ -13,6 +13,6 @@ Techniques to improve model robustness against adversarial inputs including adve
 
 ## Related
 
-- **Mitigates**: [[attacks/adversarial-robustness|Adversarial Robustness]], [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples Evasion Attacks]]
+- **Mitigates**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/adversarial-robustness]]
 
 > *Stub note — to be enriched from book extractions.*

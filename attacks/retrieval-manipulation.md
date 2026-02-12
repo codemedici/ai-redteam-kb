@@ -80,3 +80,7 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/source-validation-and-trust-scoring]], [[defenses/embedding-integrity-verification]], [[defenses/input-validation-patterns]]

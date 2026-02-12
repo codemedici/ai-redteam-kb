@@ -511,14 +511,6 @@ def monitored_inference(input):
 
 **Tooling:** Grafana, Datadog, Prometheus, custom dashboards
 
-## Related Techniques
-
-- adversarial-training]] - Preventive model hardening
-- input-validation-transformation]] - Input-layer defense
-- adversarial-examples-evasion-attacks]] - Evasion detection
-- prompt-injection-llm-manipulation]] - Prompt leakage detection
-- data-poisoning-attacks]] - Drift detection for poisoning
-
 ## Key Takeaways
 
 1. **Last line of defense** - Catches attacks that bypass earlier layers
@@ -537,3 +529,7 @@ def monitored_inference(input):
 - [[sources/bibliography#Red-Teaming AI]], p. 162-163 (Adversarial example detection)
 - [[sources/bibliography#Red-Teaming AI]], p. 250 (Prompt injection output monitoring)
 - [[sources/bibliography#Red-Teaming AI]], p. 132 (Data poisoning drift detection)
+
+## Related
+
+- **Mitigates**: [[attacks/insufficient-output-encoding]], [[attacks/output-integrity-attack]], [[attacks/sensitive-info-disclosure]]

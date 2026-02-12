@@ -483,15 +483,6 @@ Even with Secure Aggregation protecting individual updates, analyzing aggregated
 
 ---
 
-## Related Concepts
-
-- [[attacks/membership-inference-attacks|Membership Inference Attacks]] - Foundation attack covered in Ch7
-- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]] - Active attacks on training data
-- [[attacks/model-extraction|Model Extraction]] - White-box access enables stronger privacy attacks
-- [[defenses/adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
-
----
-
 ## Tags
 
 #privacy #attribute-inference #model-inversion #property-inference #linkage-attacks #contextual-integrity #differential-privacy #federated-learning #gradient-leakage #quasi-identifiers #GDPR #HIPAA #anonymization
@@ -499,3 +490,7 @@ Even with Secure Aggregation protecting individual updates, analyzing aggregated
 ---
 
 **Source:** Red-Teaming AI (Rothe), Chapter 10: Privacy Attacks Beyond Membership Inference, p.315-341
+
+## Related
+
+- **Mitigated by**: [[defenses/adversarial-training]], [[defenses/rate-limiting-and-throttling]], [[defenses/access-segmentation-and-rbac]]

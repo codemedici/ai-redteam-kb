@@ -13,6 +13,6 @@ Using a separate LLM as judge/validator to evaluate outputs before delivery, cat
 
 ## Related
 
-- **Mitigates**: [[attacks/prompt-injection|Prompt Injection]], [[attacks/jailbreak-policy-bypass|Jailbreak Policy Bypass]]
+- **Mitigates**: [[attacks/jailbreak-policy-bypass]], [[attacks/output-integrity-attack]], [[attacks/prompt-injection]]
 
 > *Stub note — to be enriched from book extractions.*

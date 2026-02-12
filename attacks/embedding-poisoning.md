@@ -81,3 +81,8 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/embedding-integrity-verification]], [[defenses/source-validation-and-trust-scoring]], [[defenses/data-quarantine-procedures]], [[defenses/input-validation-transformation]]
+- **Enables**: [[attacks/retrieval-manipulation]], [[attacks/rag-data-poisoning]]

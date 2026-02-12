@@ -619,16 +619,6 @@ Graphics Processing Units (GPUs) are central to AI but introduce unique security
 
 ---
 
-## Related Concepts
-
-- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]] - Upstream data manipulation
-- [[attacks/model-extraction|Model Extraction and Stealing]] - Model IP theft
-- [[attacks/prompt-injection|Prompt Injection]] - Model-level attacks
-- [[attacks/adversarial-examples-evasion-attacks|Adversarial Examples and Evasion]] - Inference-time attacks
-- [[methodology/ai-red-teaming-definition-lifecycle|AI Red Teaming Lifecycle]] - Systematic assessment methodology
-
----
-
 ## Key Takeaways
 
 1. **Infrastructure is the soft underbelly:** Many teams over-invest in model robustness while neglecting the surrounding ecosystem
@@ -656,3 +646,7 @@ Graphics Processing Units (GPUs) are central to AI but introduce unique security
 ---
 
 **Source:** Red-Teaming AI (Rothe), Chapter 9: Attacking & Defending AI Infrastructure, p.275-295
+
+## Related
+
+- **Mitigates**: [[attacks/ai-infrastructure-attacks]], [[attacks/insecure-model-gateway-config]], [[attacks/model-tampering]], [[attacks/secrets-in-prompts-and-logs]], [[attacks/third-party-model-risks]]

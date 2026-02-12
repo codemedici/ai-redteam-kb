@@ -823,15 +823,6 @@ Choose technique offering best trade-off: impact + stealth - cost + likelihood o
 - Defenders use AI to detect attacks
 - Attackers use sophisticated methods (sometimes AI-driven) to craft evasive poisons
 
-## Related Techniques and Concepts
-
-- adversarial-examples]] - Related evasion techniques
-- rag-poisoning]] - Poisoning retrieval corpora
-- model-extraction]] - Stealing models to craft better poisons
-- supply-chain-attacks]] - Poisoning third-party datasets
-- data-validation]] - Defensive data quality measures
-- [[methodology/mitre-atlas-mapping]] - AML.T0020 (Poison Training Data)
-
 ## Key Takeaways
 
 1. **Fundamental vulnerability:** AI's reliance on training data is both power source and critical failure point
@@ -870,3 +861,8 @@ Choose technique offering best trade-off: impact + stealth - cost + likelihood o
 > "Defending against data poisoning is tough due to the variety of attack techniques and the difficulty in distinguishing malicious data from natural outliers or noise. A layered defense-in-depth strategy is usually needed."
 > 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 130
+
+## Related
+
+- **Mitigated by**: [[defenses/data-quarantine-procedures]], [[defenses/content-signing-and-provenance]], [[defenses/source-validation-and-trust-scoring]], [[defenses/input-validation-transformation]]
+- **Enables**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/model-tampering]]

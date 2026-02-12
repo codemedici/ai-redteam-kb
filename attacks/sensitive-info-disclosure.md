@@ -223,3 +223,7 @@ This issue is tested in the following engagements:
 - Data Privacy: Membership inference and PII leakage risks
 - Information Integrity: Memorization compromising output trustworthiness
 - Harmful Bias and Homogenization: Privacy violations disproportionately affecting sensitive populations
+
+## Related
+
+- **Mitigated by**: [[defenses/output-filtering-and-sanitization]], [[defenses/output-monitoring-validation]], [[defenses/access-segmentation-and-rbac]]

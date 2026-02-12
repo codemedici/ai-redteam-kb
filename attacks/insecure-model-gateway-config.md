@@ -83,3 +83,7 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/access-segmentation-and-rbac]], [[defenses/ai-infrastructure-security]], [[defenses/rate-limiting-and-throttling]]

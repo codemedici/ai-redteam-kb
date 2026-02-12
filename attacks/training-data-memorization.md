@@ -270,3 +270,7 @@ This issue is tested in the following engagements:
 **NIST GenAI Profile:**
 - Data Privacy risks: Training data memorization and extraction
 - CBRN-2.11: Differential privacy and privacy-preserving training methods
+
+## Related
+
+- **Mitigated by**: [[defenses/adversarial-training]], [[defenses/output-filtering-and-sanitization]], [[defenses/llm-development-lifecycle-security]]

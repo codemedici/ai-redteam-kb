@@ -181,3 +181,6 @@ This issue is tested in the following engagements:
 **NIST GenAI Profile:**
 - CBRN-2.10: Model integrity verification
 
+## Related
+
+- **Mitigated by**: [[defenses/content-signing-and-provenance]], [[defenses/ai-infrastructure-security]], [[defenses/access-segmentation-and-rbac]]

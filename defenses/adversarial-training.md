@@ -326,14 +326,6 @@ L = L_clean(model(x), y) + β · L_robust(model(x), model(x_adv))
 - Adversarial training for LLMs (prompt-level robustness)
 - Efficient adversarial training methods
 
-## Related Techniques
-
-- adversarial-examples-evasion-attacks]] - Primary threat
-- data-poisoning-attacks]] - Secondary application
-- certified-defenses]] - Complementary approach
-- input-validation]] - Defense layer
-- output-monitoring]] - Runtime defense
-
 ## Key Takeaways
 
 1. **Most effective current defense** against evasion attacks
@@ -352,3 +344,7 @@ L = L_clean(model(x), y) + β · L_robust(model(x), model(x_adv))
 - Madry et al. (2018): "Towards Deep Learning Models Resistant to Adversarial Attacks" - PGD adversarial training
 - Goodfellow et al. (2015): "Explaining and Harnessing Adversarial Examples" - FGSM, initial adversarial training concepts
 - [[sources/bibliography#Red-Teaming AI]], p. 143, 161-162
+
+## Related
+
+- **Mitigates**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/adversarial-robustness]], [[attacks/membership-inference-attacks]], [[attacks/privacy-attacks-beyond-membership-inference]], [[attacks/training-data-memorization]]

@@ -224,3 +224,7 @@ Third-party model risks arise when organizations use pre-trained foundation mode
 
 **NIST GenAI Profile:**
 - Value Chain and Component Integration: Third-party model risks and supply chain security
+
+## Related
+
+- **Mitigated by**: [[defenses/content-signing-and-provenance]], [[defenses/ai-infrastructure-security]], [[defenses/llm-development-lifecycle-security]]

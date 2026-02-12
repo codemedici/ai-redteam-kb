@@ -13,6 +13,6 @@ Post-generation filtering of LLM outputs to prevent harmful content, data leakag
 
 ## Related
 
-- **Mitigates**: [[attacks/insufficient-output-encoding|Insufficient Output Encoding]], [[attacks/sensitive-info-disclosure|Sensitive Info Disclosure]], [[attacks/output-integrity-attack|Output Integrity Attack]]
+- **Mitigates**: [[attacks/insecure-prompt-assembly]], [[attacks/insufficient-output-encoding]], [[attacks/jailbreak-policy-bypass]], [[attacks/output-integrity-attack]], [[attacks/pii-in-corpus]], [[attacks/prompt-injection]], [[attacks/prompt-log-data-leakage]], [[attacks/sensitive-info-disclosure]], [[attacks/system-prompt-leakage]], [[attacks/training-data-memorization]], [[attacks/unauthorized-knowledge-disclosure]]
 
 > *Stub note — to be enriched from book extractions.*

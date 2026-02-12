@@ -167,3 +167,7 @@ A fintech company deploys an LLM-powered financial analysis API protected by JWT
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/access-segmentation-and-rbac]], [[defenses/rate-limiting-and-throttling]], [[defenses/anomaly-detection-architecture]]

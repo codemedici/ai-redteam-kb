@@ -276,3 +276,8 @@ This issue is tested in the following engagements:
 **NIST GenAI Profile:**
 - Data Privacy risks: Poisoned data can leak sensitive information
 - Information Integrity: Compromised training data undermines output trustworthiness
+
+## Related
+
+- **Mitigated by**: [[defenses/source-validation-and-trust-scoring]], [[defenses/embedding-integrity-verification]], [[defenses/data-quarantine-procedures]], [[defenses/content-signing-and-provenance]]
+- **Enables**: [[attacks/prompt-injection]], [[attacks/retrieval-manipulation]]

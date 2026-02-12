@@ -146,17 +146,6 @@ External Input → Format Validation → Pattern Filtering → Sanitization → 
 - **Multi-Step Attacks**: Attacks that split malicious content across multiple inputs
 - **Novel Patterns**: Completely new attack patterns not yet in validation rules
 
-## Related Controls
-
-This control works best when combined with:
-
-- **[[defenses/instruction-hierarchy-architecture|Instruction Hierarchy Architecture]]**: Hierarchy provides structural separation; validation filters malicious content
-- **[[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detection catches attacks that bypass validation
-- **[[defenses/least-privilege-implementation|Least Privilege Tool Implementation]]**: Validation prevents injection; least privilege limits impact
-- **[[defenses/source-validation-and-trust-scoring|Source Validation & Trust Scoring]]**: Validates data sources before ingestion
-
-[[methodology/trust-boundaries-overview|See [Controls Indexes]] for complete control catalogs]
-
 ## Framework References
 
 **NIST AI RMF:**
@@ -170,6 +159,10 @@ This control works best when combined with:
 
 **MITRE ATLAS:**
 - Defensive techniques for input validation and sanitization
+
+## Related
+
+- **Mitigates**: [[attacks/agent-identity-crisis]], [[attacks/insecure-prompt-assembly]], [[attacks/jailbreak-policy-bypass]], [[attacks/prompt-injection]], [[attacks/retrieval-manipulation]], [[attacks/system-prompt-leakage]]
 
 ## References
 

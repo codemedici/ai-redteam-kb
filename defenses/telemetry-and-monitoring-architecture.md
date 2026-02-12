@@ -14,6 +14,6 @@ Comprehensive logging, monitoring, and alerting architecture for LLM systems and
 
 ## Related
 
-- **Mitigates**: [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry And Tracing]]
+- **Mitigates**: [[attacks/ai-infrastructure-attacks]], [[attacks/api-rate-limiting-bypass]], [[attacks/incident-response-gap]], [[attacks/insufficient-telemetry-and-tracing]], [[attacks/prompt-log-data-leakage]], [[attacks/secrets-in-prompts-and-logs]]
 
 > *Stub note — to be enriched from book extractions.*

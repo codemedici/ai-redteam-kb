@@ -14,6 +14,6 @@ LLM-specific incident response playbooks covering prompt injection, data leakage
 
 ## Related
 
-- **Mitigates**: [[attacks/incident-response-gap|Incident Response Gap]]
+- **Mitigates**: [[attacks/incident-response-gap]]
 
 > *Stub note — to be enriched from book extractions.*

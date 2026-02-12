@@ -12,6 +12,6 @@ Emergency termination mechanisms for active LLM sessions, agent workflows, and t
 
 ## Related
 
-- **Mitigates**: [[attacks/agent-goal-hijack|Agent Goal Hijack]], [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]
+- **Mitigates**: [[attacks/agent-goal-hijack]], [[attacks/unsafe-tool-invocation]]
 
 > *Stub note — to be enriched from book extractions.*

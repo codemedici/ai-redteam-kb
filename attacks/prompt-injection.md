@@ -930,16 +930,6 @@ CaMeL:
 - Responsible disclosure of findings
 - No exploitation of findings for personal gain
 
-## Related Techniques and Concepts
-
-- jailbreaking]] - Related but distinct from prompt injection
-- rag-poisoning]] - IPI in RAG systems
-- tool-misuse]] - Impact when LLMs have tool access
-- adversarial-robustness]] - General model robustness
-- llm-input-validation]] - Input defenses
-- [[methodology/owasp-llm-top-10]] - OWASP LLM01
-- [[methodology/mitre-atlas-mapping]] - AML.T0051
-
 ## Key Takeaways
 
 1. **Fundamental vulnerability:** Prompt injection stems from blurred instructions/data boundary in LLMs
@@ -986,3 +976,8 @@ CaMeL:
 **Google Bard (Nov 2023):** Demonstrated cross-platform prompt injection vulnerabilities
 
 All cases documented by Simon Willison's research.
+
+## Related
+
+- **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/dual-llm-judge-pattern]], [[defenses/output-filtering-and-sanitization]], [[defenses/anomaly-detection-architecture]]
+- **Enables**: [[attacks/system-prompt-leakage]], [[attacks/tool-privilege-escalation]], [[attacks/agent-goal-hijack]], [[attacks/output-integrity-attack]], [[attacks/sensitive-info-disclosure]]

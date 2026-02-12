@@ -13,6 +13,6 @@ Cryptographic signing and provenance tracking for model artifacts, training data
 
 ## Related
 
-- **Mitigates**: [[attacks/third-party-model-risks|Third Party Model Risks]], [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
+- **Mitigates**: [[attacks/data-poisoning-attacks]], [[attacks/model-tampering]], [[attacks/rag-data-poisoning]], [[attacks/third-party-model-risks]]
 
 > *Stub note — to be enriched from book extractions.*

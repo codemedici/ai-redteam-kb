@@ -205,3 +205,7 @@ This issue is tested in the following engagements:
 **NIST GenAI Profile:**
 - Information Security: Output integrity and authenticity verification
 - Value Chain and Component Integration: Secure integration between AI system components
+
+## Related
+
+- **Mitigated by**: [[defenses/output-filtering-and-sanitization]], [[defenses/output-monitoring-validation]], [[defenses/dual-llm-judge-pattern]]

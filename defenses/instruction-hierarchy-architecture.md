@@ -132,17 +132,6 @@ User Input → Format Validation → Trust Marker Injection → Prompt Assembly
 - **Multi-Turn Attacks**: Persistent injection across conversation turns
 - **RAG Injection**: Indirect injection via retrieved content that bypasses user input validation
 
-## Related Controls
-
-This control works best when combined with:
-
-- **[[defenses/output-filtering-and-sanitization|Output Filtering & Sanitization]]**: Filters outputs to remove any leaked system content
-- **[[defenses/input-validation-patterns|Input Validation Patterns]]**: Validates user input before prompt assembly
-- **[[defenses/dual-llm-judge-pattern|Dual-LLM Judge Pattern]]**: Validates outputs to ensure hierarchy was respected
-- **[[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects attempts to violate instruction hierarchy
-
-[[defenses/|See [Controls Index]] for complete control catalog]
-
 ## Framework References
 
 **NIST AI RMF:**
@@ -155,6 +144,10 @@ This control works best when combined with:
 
 **MITRE ATLAS:**
 - Defensive techniques for preventing prompt injection and instruction manipulation
+
+## Related
+
+- **Mitigates**: [[attacks/agent-goal-hijack]], [[attacks/agent-identity-crisis]], [[attacks/insecure-prompt-assembly]], [[attacks/jailbreak-policy-bypass]], [[attacks/prompt-injection]], [[attacks/system-prompt-leakage]]
 
 ## References
 

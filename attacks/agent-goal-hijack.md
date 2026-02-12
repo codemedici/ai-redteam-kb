@@ -217,3 +217,9 @@ See [[defenses/|Application/Agent Runtime Controls]] for architectural guidance 
 
 **NIST GenAI Profile:**
 - **TODO:** Map to specific GenAI Profile risks
+
+## Related
+
+- **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/least-privilege-implementation]], [[defenses/approval-workflow-patterns]], [[defenses/anomaly-detection-architecture]], [[defenses/kill-switch-and-session-termination]]
+- **Enables**: [[attacks/tool-privilege-escalation]], [[attacks/unsafe-tool-invocation]]
+- **Enabled by**: [[attacks/prompt-injection]]

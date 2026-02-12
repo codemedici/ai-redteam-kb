@@ -145,17 +145,6 @@ System Events → Log Aggregation → Detection Pipeline → Alerting
 - **Obfuscation**: Sophisticated obfuscation may evade pattern matching
 - **Legitimate Mimicry**: Attacks that closely mimic legitimate usage patterns
 
-## Related Controls
-
-This control works best when combined with:
-
-- **[[defenses/input-validation-patterns|Input Validation Patterns]]**: Validation prevents many attacks; detection catches those that bypass validation
-- **[[defenses/kill-switch-and-session-termination|Kill Switch & Session Termination]]**: Enables rapid response when anomalies are detected
-- **[[defenses/telemetry-and-monitoring-architecture|Telemetry & Monitoring Architecture]]**: Provides comprehensive data for anomaly detection
-- **[[defenses/least-privilege-implementation|Least Privilege Tool Implementation]]**: Reduces attack surface; detection identifies privilege escalation attempts
-
-[[methodology/trust-boundaries-overview|See [Controls Indexes]] for complete control catalogs]
-
 ## Framework References
 
 **NIST AI RMF:**
@@ -168,6 +157,10 @@ This control works best when combined with:
 
 **MITRE ATLAS:**
 - Defensive techniques for detecting adversarial behavior
+
+## Related
+
+- **Mitigates**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/agent-authorization-hijacking]], [[attacks/agent-goal-hijack]], [[attacks/agent-identity-crisis]], [[attacks/agentic-ai-security-risks-owasp-aivss]], [[attacks/api-authentication-bypass]], [[attacks/api-rate-limiting-bypass]], [[attacks/insufficient-telemetry-and-tracing]], [[attacks/jailbreak-policy-bypass]], [[attacks/model-extraction]], [[attacks/prompt-injection]], [[attacks/tool-privilege-escalation]]
 
 ## References
 

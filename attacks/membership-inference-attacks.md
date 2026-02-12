@@ -390,15 +390,6 @@ Non-technical defenses:
 
 ---
 
-## Related Concepts
-
-- [[attacks/privacy-attacks-beyond-membership-inference|Privacy Attacks Beyond MIA]] - Attribute inference, model inversion
-- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]] - MIA can enable targeted poisoning
-- [[defenses/adversarial-training|Adversarial Training]] - Robustness technique that may help with overfitting
-- [[attacks/model-extraction|Model Extraction]] - Related IP theft attack
-
----
-
 ## Tags
 
 #privacy #membership-inference #overfitting #memorization #differential-privacy #GDPR #HIPAA #training-data #confidentiality #regulatory-compliance
@@ -406,3 +397,8 @@ Non-technical defenses:
 ---
 
 **Source:** Red-Teaming AI (Rothe), Chapter 7: Membership Inference Attacks, p.198-220
+
+## Related
+
+- **Mitigated by**: [[defenses/adversarial-training]], [[defenses/rate-limiting-and-throttling]]
+- **Enables**: [[attacks/privacy-attacks-beyond-membership-inference]]

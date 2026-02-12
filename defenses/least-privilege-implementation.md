@@ -132,17 +132,6 @@ User Request → Agent Decision → Permission Check → Tool Execution
 - **Context Confusion**: Attacks that confuse user context binding may gain unauthorized access
 - **Chained Tool Exploitation**: Multiple low-privilege tools chained together may achieve high-privilege outcomes
 
-## Related Controls
-
-This control works best when combined with:
-
-- **[[defenses/tool-sandboxing-architecture|Tool Sandboxing Architecture]]**: Sandboxing provides additional isolation layer even if permissions are bypassed
-- **[[defenses/user-context-binding|User Context Binding]]**: Ensures permissions are evaluated in correct user context
-- **[[defenses/approval-workflow-patterns|Approval Workflow Patterns]]**: Requires human approval for high-privilege tool invocations
-- **[[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]**: Detects unusual permission usage patterns indicating potential attacks
-
-[[defenses/|See [Controls Index]] for complete control catalog]
-
 ## Framework References
 
 **NIST AI RMF:**
@@ -156,6 +145,10 @@ This control works best when combined with:
 
 **MITRE ATLAS:**
 - Defensive techniques related to access control and privilege management
+
+## Related
+
+- **Mitigates**: [[attacks/agent-authorization-hijacking]], [[attacks/agent-goal-hijack]], [[attacks/agentic-ai-security-risks-owasp-aivss]], [[attacks/auth-context-confusion]], [[attacks/tool-privilege-escalation]], [[attacks/unsafe-tool-invocation]], [[attacks/weak-access-segmentation]]
 
 ## References
 

@@ -418,14 +418,6 @@ def defense_pipeline(input):
 - [ ] Monitor effectiveness in production
 - [ ] Update as new attack techniques emerge
 
-## Related Techniques
-
-- adversarial-training]] - Model hardening
-- output-monitoring]] - Runtime detection
-- adversarial-examples-evasion-attacks]] - Primary threat
-- prompt-injection-llm-manipulation]] - LLM-specific application
-- data-poisoning-attacks]] - Training-time application
-
 ## Key Takeaways
 
 1. **Fast and flexible** - No retraining required, applies at inference time
@@ -444,3 +436,7 @@ def defense_pipeline(input):
 - [[sources/bibliography#Red-Teaming AI]], p. 162 (Input Transformation defenses)
 - [[sources/bibliography#Red-Teaming AI]], p. 248-250 (Prompt injection input sanitization)
 - [[sources/bibliography#Red-Teaming AI]], p. 130-131 (Data poisoning input validation)
+
+## Related
+
+- **Mitigates**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/adversarial-robustness]], [[attacks/data-poisoning-attacks]], [[attacks/embedding-poisoning]], [[attacks/vector-embedding-weaknesses]]

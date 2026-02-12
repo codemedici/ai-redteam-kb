@@ -84,3 +84,8 @@ tags:
 
 **NIST GenAI Profile:**
 - **TODO:** Map to GenAI Profile
+
+## Related
+
+- **Mitigated by**: [[defenses/input-validation-patterns]], [[defenses/instruction-hierarchy-architecture]], [[defenses/output-filtering-and-sanitization]]
+- **Enables**: [[attacks/prompt-injection]]

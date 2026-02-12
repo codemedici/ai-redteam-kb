@@ -97,13 +97,3 @@ class VectorGuardrail:
 | vectordb-bench | Benchmark + leak test | github.com/zilliztech/VectorDBBench |
 | NeMo Guardrails | Secure LLM apps | github.com/NVIDIA/NeMo-Guardrails |
 | embedding-pipeline-template | IaC for secure RAG pipeline | github.com/aws-samples/text-embeddings-pipeline-for-rag |
-
-## Related Notes
-
-- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
-- [[attacks/embedding-poisoning|Embedding Poisoning]]
-- [[attacks/system-prompt-leakage|System Prompt Leakage]]
-- [[methodology/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
-- [[defenses/input-validation-transformation|Input Validation and Transformation]]
-
-> Source: [[sources/bibliography#AI-Native LLM Security]], pp. 351-355

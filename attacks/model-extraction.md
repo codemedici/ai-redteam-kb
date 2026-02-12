@@ -910,15 +910,6 @@ def add_laplacian_noise(probabilities, sensitivity=1.0, epsilon=0.5):
 4. Evaluate defense effectiveness
 5. Recommend improvements
 
-## Related Techniques and Concepts
-
-- adversarial-examples-evasion-attacks]] - Downstream attack enabled by extraction
-- api-security]] - API protection measures
-- rate-limiting]] - Primary defense
-- monitoring-analytics]] - Detection approach
-- [[methodology/mitre-atlas-mapping]] - AML.T0040 (ML Model Access)
-- Privacy attacks (Chapter 10) - Another extraction motivation
-
 ## Key Takeaways
 
 1. **Crown jewel target** - Trained models represent significant IP and competitive advantage
@@ -957,3 +948,8 @@ def add_laplacian_noise(probabilities, sensitivity=1.0, epsilon=0.5):
 > "OpenAI only realized after a period of time (reports suggest this happened over months) that their API was being misused at scale. By the time they cut off DeepSeek, the damage (a competing model) was done. This highlights how challenging it is to instantly detect distillation attacks."
 > 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 197
+
+## Related
+
+- **Mitigated by**: [[defenses/rate-limiting-and-throttling]], [[defenses/anomaly-detection-architecture]], [[defenses/access-segmentation-and-rbac]]
+- **Enables**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/membership-inference-attacks]]

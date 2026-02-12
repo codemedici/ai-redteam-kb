@@ -811,16 +811,6 @@ But:
 13. **Adaptive attacks critical:** Evaluate defenses against attackers aware of defense, not just standard attacks
 14. **Real-world viability proven:** Physical attacks (stop signs), cloud API compromises, commercial system vulnerabilities all demonstrated
 
-## Related Techniques and Concepts
-
-- data-poisoning-attacks]] - Training-time vs. inference-time attacks
-- model-extraction]] - Stealing models enables better evasion attacks (Chapter 6)
-- prompt-injection-llm-manipulation]] - LLM-specific evasion (natural language)
-- adversarial-training]] - Primary defense technique
-- input-validation]] - Preprocessing defenses
-- [[methodology/mitre-atlas-mapping]] - AML.T0043 (Craft Adversarial Data)
-- [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|Physical Adversarial Patches]] - Real-world attacks
-
 ## Source Citations
 
 > "On the surface, many modern AI models perform remarkably well, often matching or exceeding human capabilities on specific tasks. Yet, this high performance frequently masks a surprising fragility. Systems that confidently classify images, translate languages, or detect malware can be completely fooled by tiny, carefully crafted changes to their inputs – alterations often imperceptible to humans."
@@ -846,3 +836,7 @@ But:
 > "Defending against evasion attacks is an ongoing arms race. New defenses spur new adaptive attacks. Robustness is improving, but no silver bullet exists. Effective AI security today demands a holistic approach: hardening models, monitoring inputs/outputs, and continually red-teaming (attacking your own models to find weaknesses)."
 > 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 165
+
+## Related
+
+- **Mitigated by**: [[defenses/adversarial-training]], [[defenses/adversarial-robustness-controls]], [[defenses/input-validation-transformation]], [[defenses/anomaly-detection-architecture]]

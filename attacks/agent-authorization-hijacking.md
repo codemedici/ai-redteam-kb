@@ -122,7 +122,7 @@ response = requests.post(
 ## Related
 
 - **Mitigated by**: [[defenses/least-privilege-implementation]], [[defenses/approval-workflow-patterns]], [[defenses/user-context-binding]], [[defenses/anomaly-detection-architecture]]
-- **ATLAS**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]
 
 ## Source
 

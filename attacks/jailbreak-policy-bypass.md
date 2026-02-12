@@ -87,4 +87,4 @@ tags:
 
 - **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/dual-llm-judge-pattern]], [[defenses/output-filtering-and-sanitization]], [[defenses/anomaly-detection-architecture]]
 - **Enables**: [[attacks/system-prompt-leakage]], [[attacks/sensitive-info-disclosure]], [[attacks/training-data-memorization]]
-- **ATLAS**: [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]]
+- **ATLAS**: [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]]

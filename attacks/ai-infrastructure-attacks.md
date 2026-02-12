@@ -1082,4 +1082,4 @@ pages: "275-314"
 ## Related
 
 - **Mitigated by**: [[defenses/ai-infrastructure-security]], [[defenses/access-segmentation-and-rbac]], [[defenses/telemetry-and-monitoring-architecture]]
-- **ATLAS**: [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008]]
+- **ATLAS**: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008]]

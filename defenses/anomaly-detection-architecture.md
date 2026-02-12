@@ -167,4 +167,4 @@ System Events → Log Aggregation → Detection Pipeline → Alerting
 - [[attacks/prompt-injection|Prompt Injection Issue]] - Detection signals for injection attacks
 - [[attacks/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Anomaly patterns for privilege escalation
 - Methodology: Phase 6 Triage & Severity - How to evaluate detected anomalies
-- [[methodology/evidence-reproducibility|Methodology: Evidence & Reproducibility]] - Standards for detection evidence
+- Methodology: Evidence & Reproducibility - Standards for detection evidence

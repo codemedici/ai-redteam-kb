@@ -324,7 +324,7 @@ This engagement produces findings mapped to:
 - AML.T0052: Training Data Poisoning (corpus poisoning)
 - AML.T0057: LLM Prompt Injection via Tool Output (retrieved text as tool output)
 
-[[atlas/atlas-overview|Full ATLAS reference]]
+[[frameworks/atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -550,7 +550,7 @@ Success rate: [X/Y attempts]
 - Trust Boundaries Overview
 - [[attacks/|Data/Knowledge Issues]]
 - Application/Agent Runtime Issues
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
 
 ---

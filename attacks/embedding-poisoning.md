@@ -86,4 +86,4 @@ tags:
 
 - **Mitigated by**: [[defenses/embedding-integrity-verification]], [[defenses/source-validation-and-trust-scoring]], [[defenses/data-quarantine-procedures]], [[defenses/input-validation-transformation]]
 - **Enables**: [[attacks/retrieval-manipulation]], [[attacks/rag-data-poisoning]]
-- **ATLAS**: [[atlas/techniques/resource-development/poison-training-data|AML.T0020]]
+- **ATLAS**: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]]

@@ -670,7 +670,7 @@ Each identified risk follows this format:
 ## Technical References
 
 - Trust Boundaries Overview
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 

@@ -402,4 +402,4 @@ Non-technical defenses:
 
 - **Mitigated by**: [[defenses/adversarial-training]], [[defenses/rate-limiting-and-throttling]]
 - **Enables**: [[attacks/privacy-attacks-beyond-membership-inference]]
-- **ATLAS**: [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]]
+- **ATLAS**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]]

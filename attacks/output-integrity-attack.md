@@ -209,4 +209,4 @@ This issue is tested in the following engagements:
 ## Related
 
 - **Mitigated by**: [[defenses/output-filtering-and-sanitization]], [[defenses/output-monitoring-validation]], [[defenses/dual-llm-judge-pattern]]
-- **ATLAS**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]

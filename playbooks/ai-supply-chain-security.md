@@ -376,7 +376,7 @@ This engagement produces findings mapped to:
 - AML.T0059: Model Theft
 - AML.T0060: Backdoor Model
 
-[[atlas/atlas-overview|Full ATLAS reference]]
+[[frameworks/atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -625,7 +625,7 @@ Evidence: [screenshots, logs, file contents]
 - Trust Boundaries Overview
 - [[attacks/|Data/Knowledge Issues]]
 - Deployment/Governance Issues
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
 - [Google Secure AI Framework (SAIF)](https://cloud.google.com/security/ai-security)
 

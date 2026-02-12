@@ -142,11 +142,11 @@ A machine learning engineer at a financial services firm has access to the model
 
 Documented incidents and research demonstrating model tampering:
 
-- [[atlas/case-studies/poisongpt|PoisonGPT]] (2023): Foundation model checkpoint backdoor distributed via Hugging Face; survived fine-tuning
-- [[atlas/case-studies/malicious-models-on-hugging-face|Malicious Models on Hugging Face]] (2024): Pickle deserialization enabling arbitrary code execution
-- [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|Rules File Backdoor]] (2024): Supply chain attack poisoning AI coding assistant instructions
+- [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]] (2023): Foundation model checkpoint backdoor distributed via Hugging Face; survived fine-tuning
+- [[frameworks/atlas/case-studies/malicious-models-on-hugging-face|Malicious Models on Hugging Face]] (2024): Pickle deserialization enabling arbitrary code execution
+- [[frameworks/atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|Rules File Backdoor]] (2024): Supply chain attack poisoning AI coding assistant instructions
 
-[[atlas/case-studies|View all ATLAS case studies]]
+[[frameworks/atlas/case-studies|View all ATLAS case studies]]
 
 ---
 
@@ -184,4 +184,4 @@ This issue is tested in the following engagements:
 ## Related
 
 - **Mitigated by**: [[defenses/content-signing-and-provenance]], [[defenses/ai-infrastructure-security]], [[defenses/access-segmentation-and-rbac]]
-- **ATLAS**: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]]
+- **ATLAS**: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]]

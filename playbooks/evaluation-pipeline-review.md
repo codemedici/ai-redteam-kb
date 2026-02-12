@@ -686,7 +686,7 @@ Each identified gap follows this format:
 
 - Methodology
 - Trust Boundaries Overview
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - [OWASP GenAI Red Teaming Guide](https://owasp.org/www-project-genai-red-teaming-guide/)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 

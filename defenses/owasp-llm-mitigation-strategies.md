@@ -176,7 +176,7 @@ All three areas require dedicated attention — neglecting any one creates explo
 
 ## Related Notes
 
-- [[methodology/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
+- [[frameworks/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
 - [[attacks/prompt-injection|Prompt Injection and LLM Manipulation]]
 - [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
 - [[attacks/system-prompt-leakage|System Prompt Leakage]]

@@ -363,7 +363,7 @@ This engagement produces findings mapped to:
 - AML.T0057: LLM Prompt Injection via Tool Output
 - AML.T0061: Agent Goal Hijacking (emerging technique)
 
-[[atlas/atlas-overview|Full ATLAS reference]]
+[[frameworks/atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -623,7 +623,7 @@ Success rate: [X/Y attempts]
 - Trust Boundaries Overview
 - Application/Agent Runtime Issues
 - [[attacks/|Model Issues]]
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
 
 ---
@@ -875,3 +875,33 @@ def secure_database_tool(query, params):
 - Attack Variants Overview
 - Application/Agent Boundary Issues
 - [[playbooks/agentic-workflow-assessment|Agentic Workflow Assessment Engagement]]
+
+---
+
+## Expanded Attack Surface
+
+Agentic AI introduces five core components that create new threat vectors:
+
+### 1. Tool Use
+- **LLM:** Output is text
+- **Agent:** Output is action (API call, DB query, shell command)
+- **New threat:** Tool misuse - agent tricked into using authorized tools for malicious purposes
+
+### 2. Planning and Goal Setting
+- **LLM:** Single-prompt completion
+- **Agent:** Persistent goal broken into autonomous sub-tasks
+- **New threat:** Manipulation of planning logic, gradual goal corruption ("death by a thousand cuts")
+
+### 3. Autonomy and Identity
+- **Spectrum:** Human-in-loop → fully autonomous
+- **New components:** Agent identity (API keys, service accounts, credentials)
+- **New threats:** Identity theft, impersonation, credential exploitation
+
+### 4. Memory
+- **LLM:** Limited context window
+- **Agent:** Short-term (session) + long-term (vector DB) memory
+- **New threats:** Context poisoning, cross-session data leakage, knowledge base corruption
+
+### 5. Agent-to-Agent Communication
+- **Multi-agent systems:** Swarms, hierarchies, collaboration
+- **New threat:** Communication protocol attacks, trust establishment exploitation, compromised agent manipulating collective

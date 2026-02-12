@@ -171,6 +171,6 @@ Multi-layered output filtering:
 - [[defenses/ai-infrastructure-security|AI Infrastructure Security]]
 - [[defenses/least-privilege-implementation|Least Privilege Implementation]]
 - [[defenses/anomaly-detection-architecture|Anomaly Detection Architecture]]
-- [[methodology/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
+- [[frameworks/owasp-top10-llm-2025-evolution|OWASP Top 10 LLM 2025 Evolution]]
 
 > Source: [[sources/bibliography#AI-Native LLM Security]], pp. 211-247

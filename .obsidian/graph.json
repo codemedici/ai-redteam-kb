@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "path:methodology",
+      "query": "path:frameworks",
       "color": {
         "a": 1,
         "rgb": 3447003
@@ -36,28 +36,28 @@
       }
     },
     {
-      "query": "file:overview path:atlas/techniques",
+      "query": "file:overview path:frameworks/atlas/techniques",
       "color": {
         "a": 1,
         "rgb": 10181046
       }
     },
     {
-      "query": "path:atlas/techniques",
+      "query": "path:frameworks/atlas/techniques",
       "color": {
         "a": 1,
         "rgb": 12292046
       }
     },
     {
-      "query": "path:atlas/case-studies",
+      "query": "path:frameworks/atlas/case-studies",
       "color": {
         "a": 1,
         "rgb": 15844367
       }
     },
     {
-      "query": "path:atlas/tactics",
+      "query": "path:frameworks/atlas/tactics",
       "color": {
         "a": 1,
         "rgb": 12745742

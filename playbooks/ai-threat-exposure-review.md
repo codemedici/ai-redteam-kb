@@ -398,9 +398,9 @@ This engagement produces findings mapped to:
 - AML.T0052: Training Data Poisoning
 - AML.T0059: Model Theft
 
-**Case Studies**: [[atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
+**Case Studies**: [[frameworks/atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
 
-[[atlas/atlas-overview|Full ATLAS reference]]
+[[frameworks/atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -644,5 +644,34 @@ Success rate: [X/Y attempts]
 - [[attacks/|Data/Knowledge Issues]]
 - Application/Agent Runtime Issues
 - Deployment/Governance Issues
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
+
+---
+
+## Distinguishing AI Red Teaming from Related Fields
+
+**Problem:** Term "AI Red Teaming" sometimes confused with other assessment activities
+
+**Importance:** Understanding distinctions crucial for:
+- Correctly scoping engagements
+- Setting expectations
+- Ensuring you're actually testing for AI-specific risks
+
+**Reality:** While overlaps exist, each discipline has different primary focus and method
+
+#
+
+## Comparative Table
+
+| Aspect | AI Red Teaming | Pen Testing | AI Safety | AI Auditing | QA Testing |
+|--------|---------------|-------------|-----------|-------------|------------|
+| **Primary Focus** | AI-specific security vulnerabilities & attack simulation | Traditional IT infrastructure & app vulnerabilities | Long-term existential risks of advanced AI | Compliance with policies, regulations, ethics | Functionality & reliability under normal conditions |
+| **Approach** | Threat-driven, adversarial simulation | Vulnerability scanning & exploitation | Research-oriented, theoretical | Compliance checking, documentation review | Test case execution, bug finding |
+| **Timeframe** | Present, near-term threats | Current system state | Long-term, speculative | Current compliance snapshot | Development/release cycle |
+| **Targets** | Model, data pipeline, AI components, system integration | Network, servers, APIs, infrastructure | AI alignment, control, safety mechanisms | Policies, documentation, processes, outputs | Model functionality, performance |
+| **Outcome** | Discovered vulnerabilities, attack demos, defense recommendations | Security findings, exploit proofs | Research papers, theoretical frameworks | Compliance report, pass/fail assessment | Bug reports, performance metrics |
+| **Mindset** | Adversarial attacker | Ethical hacker | Researcher | Auditor | Tester |
+| **Example** | Can adversary poison training data to insert backdoor? | Can we breach API authentication? | Will superintelligent AI pursue misaligned goals? | Does model meet GDPR fairness requirements? | Does model achieve 95% accuracy? |
+
+**Key insight:** AI red teaming provides unique, security-focused, adversarial perspective essential for systems facing sophisticated threats

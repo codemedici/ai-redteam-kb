@@ -279,7 +279,7 @@ This engagement produces findings mapped to:
 - [AML.T####]: [Technique name]
 - [AML.T####]: [Technique name]
 
-[[atlas/atlas-overview|Full ATLAS reference]]
+[[frameworks/atlas/atlas-overview|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 
@@ -454,5 +454,5 @@ Each vulnerability follows this format:
 - [[attacks/|Data/Knowledge Issues]] (if applicable)
 - Application/Agent Runtime Issues (if applicable)
 - Deployment/Governance Issues (if applicable)
-- [[atlas/techniques|MITRE ATLAS Techniques]]
+- [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology

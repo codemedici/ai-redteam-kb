@@ -274,4 +274,4 @@ This issue is tested in the following engagements:
 ## Related
 
 - **Mitigated by**: [[defenses/adversarial-training]], [[defenses/output-filtering-and-sanitization]], [[defenses/llm-development-lifecycle-security]]
-- **ATLAS**: [[atlas/techniques/collection/data-from-local-system|AML.T0037]]
+- **ATLAS**: [[frameworks/atlas/techniques/collection/data-from-local-system|AML.T0037]]

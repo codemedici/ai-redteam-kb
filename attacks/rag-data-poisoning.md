@@ -233,11 +233,11 @@ Data poisoning attacks manipulate training data, knowledge bases, or RAG corpora
 
 Documented incidents demonstrating RAG poisoning in production:
 
-- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): Public channel message poisoned RAG corpus; enabled cross-workspace data theft
-- [[atlas/case-studies/morris-ii-worm-rag-based-attack|Morris II Worm]] (2024): Self-replicating AI worm propagating through RAG systems
-- [[atlas/case-studies/virustotal-poisoning|VirusTotal Poisoning]] (2020): Public dataset poisoning affecting malware detection training
+- [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): Public channel message poisoned RAG corpus; enabled cross-workspace data theft
+- [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack|Morris II Worm]] (2024): Self-replicating AI worm propagating through RAG systems
+- [[frameworks/atlas/case-studies/virustotal-poisoning|VirusTotal Poisoning]] (2020): Public dataset poisoning affecting malware detection training
 
-[[atlas/case-studies|View all ATLAS case studies]]
+[[frameworks/atlas/case-studies|View all ATLAS case studies]]
 
 ---
 
@@ -281,4 +281,4 @@ This issue is tested in the following engagements:
 
 - **Mitigated by**: [[defenses/source-validation-and-trust-scoring]], [[defenses/embedding-integrity-verification]], [[defenses/data-quarantine-procedures]], [[defenses/content-signing-and-provenance]]
 - **Enables**: [[attacks/prompt-injection]], [[attacks/retrieval-manipulation]]
-- **ATLAS**: [[atlas/techniques/resource-development/poison-training-data|AML.T0020]]
+- **ATLAS**: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]]

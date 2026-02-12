@@ -96,7 +96,7 @@ Security must be integrated across all RL training stages:
 ## Related
 
 - adversarial-robustness]]
-- [[atlas/techniques/ai-attack-staging/craft-adversarial-data]]
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data]]
 - Phase 8 Remediation Guidance
 
 ## Source

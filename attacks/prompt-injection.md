@@ -224,13 +224,13 @@ The LLM, unable to differentiate between the system's instructions and the user'
 
 Documented incidents demonstrating prompt injection in production systems:
 
-- [[atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]] (2023): Indirect injection via malicious website exfiltrated conversation history
-- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): RAG poisoning with cross-workspace credential theft
-- [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Copilot Studio Agent Misuse]] (2024): Tool invocation via injection enabled data exfiltration
-- [[atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|Bing Chat Data Pirate]] (2023): Web content poisoning for data extraction
-- [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|Jira Service Management Injection]] (2024): MCP tool chain exploitation
+- [[frameworks/atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]] (2023): Indirect injection via malicious website exfiltrated conversation history
+- [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] (2024): RAG poisoning with cross-workspace credential theft
+- [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Copilot Studio Agent Misuse]] (2024): Tool invocation via injection enabled data exfiltration
+- [[frameworks/atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|Bing Chat Data Pirate]] (2023): Web content poisoning for data extraction
+- [[frameworks/atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|Jira Service Management Injection]] (2024): MCP tool chain exploitation
 
-[[atlas/case-studies|View all ATLAS case studies]]
+[[frameworks/atlas/case-studies|View all ATLAS case studies]]
 
 ---
 
@@ -981,4 +981,4 @@ All cases documented by Simon Willison's research.
 
 - **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/dual-llm-judge-pattern]], [[defenses/output-filtering-and-sanitization]], [[defenses/anomaly-detection-architecture]]
 - **Enables**: [[attacks/system-prompt-leakage]], [[attacks/tool-privilege-escalation]], [[attacks/agent-goal-hijack]], [[attacks/output-integrity-attack]], [[attacks/sensitive-info-disclosure]]
-- **ATLAS**: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]

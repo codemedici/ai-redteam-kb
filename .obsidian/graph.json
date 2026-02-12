@@ -64,6 +64,13 @@
       }
     },
     {
+      "query": "path:case-studies",
+      "color": {
+        "a": 1,
+        "rgb": 15844367
+      }
+    },
+    {
       "query": "path:sources OR path:_templates",
       "color": {
         "a": 1,

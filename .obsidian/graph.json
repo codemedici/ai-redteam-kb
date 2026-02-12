@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:techniques-overview -file:case-studies-overview -file:tactics-overview -file:atlas-overview -file:examples -file:ARCHITECTURE-PLAN -file:README",
+  "search": "-file:techniques-overview -file:case-studies-overview -file:tactics-overview -file:atlas-overview -file:examples -file:ARCHITECTURE-PLAN -file:README -file:methodology-overview -file:lifecycle-overview",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,

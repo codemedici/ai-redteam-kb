@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "-file:techniques-overview -file:case-studies-overview -file:tactics-overview -file:atlas-overview -file:examples -file:ARCHITECTURE-PLAN -file:README",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -75,5 +75,5 @@
   "linkStrength": 1,
   "linkDistance": 250,
   "scale": 0.2299325620625787,
-  "close": true
+  "close": false
 }

@@ -26,14 +26,12 @@ Techniques for getting data out of a target network typically include transferri
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024]] | Exfiltration via AI Inference API | feasible |
-| [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]] | Exfiltration via Cyber Means | realized |
-| [[atlas/techniques/exfiltration/extract-llm-system-prompt|AML.T0056]] | Extract LLM System Prompt | feasible |
-| [[atlas/techniques/exfiltration/llm-data-leakage|AML.T0057]] | LLM Data Leakage | demonstrated |
-| [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077]] | LLM Response Rendering | demonstrated |
-| [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086]] | Exfiltration via AI Agent Tool Invocation | demonstrated |
+- [[atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024]] — Exfiltration via AI Inference API (feasible)
+- [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]] — Exfiltration via Cyber Means (realized)
+- [[atlas/techniques/exfiltration/extract-llm-system-prompt|AML.T0056]] — Extract LLM System Prompt (feasible)
+- [[atlas/techniques/exfiltration/llm-data-leakage|AML.T0057]] — LLM Data Leakage (demonstrated)
+- [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077]] — LLM Response Rendering (demonstrated)
+- [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086]] — Exfiltration via AI Agent Tool Invocation (demonstrated)
 
 
 ## Case Studies (13)

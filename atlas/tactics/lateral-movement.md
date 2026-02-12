@@ -23,10 +23,8 @@ Lateral Movement consists of techniques that adversaries may use to gain access 
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052]] | Phishing | realized |
-| [[atlas/techniques/lateral-movement/use-alternate-authentication-material/use-alternate-authentication-material-overview|AML.T0091]] | Use Alternate Authentication Material | demonstrated |
+- [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052]] — Phishing (realized)
+- [[atlas/techniques/lateral-movement/use-alternate-authentication-material/use-alternate-authentication-material-overview|AML.T0091]] — Use Alternate Authentication Material (demonstrated)
 
 
 ## Case Studies (2)

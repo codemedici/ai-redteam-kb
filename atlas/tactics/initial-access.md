@@ -26,15 +26,13 @@ Initial Access consists of techniques that use various entry vectors to gain the
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010]] | AI Supply Chain Compromise | realized |
-| [[atlas/techniques/initial-access/valid-accounts|AML.T0012]] | Valid Accounts | realized |
-| [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]] | Evade AI Model | realized |
-| [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049]] | Exploit Public-Facing Application | realized |
-| [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052]] | Phishing | realized |
-| [[atlas/techniques/initial-access/drive-by-compromise|AML.T0078]] | Drive-by Compromise | demonstrated |
-| [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093]] | Prompt Infiltration via Public-Facing Application | demonstrated |
+- [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010]] — AI Supply Chain Compromise (realized)
+- [[atlas/techniques/initial-access/valid-accounts|AML.T0012]] — Valid Accounts (realized)
+- [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade AI Model (realized)
+- [[atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049]] — Exploit Public-Facing Application (realized)
+- [[atlas/techniques/initial-access/phishing/phishing-overview|AML.T0052]] — Phishing (realized)
+- [[atlas/techniques/initial-access/drive-by-compromise|AML.T0078]] — Drive-by Compromise (demonstrated)
+- [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093]] — Prompt Infiltration via Public-Facing Application (demonstrated)
 
 
 ## Case Studies (32)

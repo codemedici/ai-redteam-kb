@@ -25,16 +25,14 @@ This information can be leveraged by the adversary to aid in other phases of the
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000]] | Search Open Technical Databases | demonstrated |
-| [[atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|AML.T0001]] | Search Open AI Vulnerability Analysis | demonstrated |
-| [[atlas/techniques/reconnaissance/search-victim-owned-websites|AML.T0003]] | Search Victim-Owned Websites | demonstrated |
-| [[atlas/techniques/reconnaissance/search-application-repositories|AML.T0004]] | Search Application Repositories | demonstrated |
-| [[atlas/techniques/reconnaissance/active-scanning|AML.T0006]] | Active Scanning | realized |
-| [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|AML.T0064]] | Gather RAG-Indexed Targets | demonstrated |
-| [[atlas/techniques/reconnaissance/gather-victim-identity-information|AML.T0087]] | Gather Victim Identity Information | realized |
-| [[atlas/techniques/reconnaissance/search-open-websites-domains|AML.T0095]] | Search Open Websites/Domains | demonstrated |
+- [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000]] — Search Open Technical Databases (demonstrated)
+- [[atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|AML.T0001]] — Search Open AI Vulnerability Analysis (demonstrated)
+- [[atlas/techniques/reconnaissance/search-victim-owned-websites|AML.T0003]] — Search Victim-Owned Websites (demonstrated)
+- [[atlas/techniques/reconnaissance/search-application-repositories|AML.T0004]] — Search Application Repositories (demonstrated)
+- [[atlas/techniques/reconnaissance/active-scanning|AML.T0006]] — Active Scanning (realized)
+- [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|AML.T0064]] — Gather RAG-Indexed Targets (demonstrated)
+- [[atlas/techniques/reconnaissance/gather-victim-identity-information|AML.T0087]] — Gather Victim Identity Information (realized)
+- [[atlas/techniques/reconnaissance/search-open-websites-domains|AML.T0095]] — Search Open Websites/Domains (demonstrated)
 
 
 ## Case Studies (19)

@@ -26,20 +26,18 @@ These resources can be leveraged by the adversary to aid in other phases of the 
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002]] | Acquire Public AI Artifacts | realized |
-| [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016]] | Obtain Capabilities | realized |
-| [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017]] | Develop Capabilities | realized |
-| [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008]] | Acquire Infrastructure | realized |
-| [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019]] | Publish Poisoned Datasets | demonstrated |
-| [[atlas/techniques/resource-development/poison-training-data|AML.T0020]] | Poison Training Data | realized |
-| [[atlas/techniques/resource-development/establish-accounts|AML.T0021]] | Establish Accounts | realized |
-| [[atlas/techniques/resource-development/publish-poisoned-models|AML.T0058]] | Publish Poisoned Models | realized |
-| [[atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060]] | Publish Hallucinated Entities | demonstrated |
-| [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065]] | LLM Prompt Crafting | realized |
-| [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066]] | Retrieval Content Crafting | demonstrated |
-| [[atlas/techniques/resource-development/stage-capabilities|AML.T0079]] | Stage Capabilities | demonstrated |
+- [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002]] — Acquire Public AI Artifacts (realized)
+- [[atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016]] — Obtain Capabilities (realized)
+- [[atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017]] — Develop Capabilities (realized)
+- [[atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008]] — Acquire Infrastructure (realized)
+- [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019]] — Publish Poisoned Datasets (demonstrated)
+- [[atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data (realized)
+- [[atlas/techniques/resource-development/establish-accounts|AML.T0021]] — Establish Accounts (realized)
+- [[atlas/techniques/resource-development/publish-poisoned-models|AML.T0058]] — Publish Poisoned Models (realized)
+- [[atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060]] — Publish Hallucinated Entities (demonstrated)
+- [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065]] — LLM Prompt Crafting (realized)
+- [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066]] — Retrieval Content Crafting (demonstrated)
+- [[atlas/techniques/resource-development/stage-capabilities|AML.T0079]] — Stage Capabilities (demonstrated)
 
 
 ## Case Studies (32)

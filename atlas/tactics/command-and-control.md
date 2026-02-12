@@ -23,10 +23,8 @@ Command and Control consists of techniques that adversaries may use to communica
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/command-and-control/reverse-shell|AML.T0072]] | Reverse Shell | realized |
-| [[atlas/techniques/command-and-control/ai-service-api|AML.T0096]] | AI Service API | realized |
+- [[atlas/techniques/command-and-control/reverse-shell|AML.T0072]] — Reverse Shell (realized)
+- [[atlas/techniques/command-and-control/ai-service-api|AML.T0096]] — AI Service API (realized)
 
 
 ## Case Studies (3)

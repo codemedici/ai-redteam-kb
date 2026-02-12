@@ -27,12 +27,10 @@ Access to an AI model may require access to the system housing the model, the mo
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040]] | AI Model Inference API Access | demonstrated |
-| [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]] | AI-Enabled Product or Service | realized |
-| [[atlas/techniques/ai-model-access/physical-environment-access|AML.T0041]] | Physical Environment Access | demonstrated |
-| [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044]] | Full AI Model Access | demonstrated |
+- [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040]] — AI Model Inference API Access (demonstrated)
+- [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]] — AI-Enabled Product or Service (realized)
+- [[atlas/techniques/ai-model-access/physical-environment-access|AML.T0041]] — Physical Environment Access (demonstrated)
+- [[atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044]] — Full AI Model Access (demonstrated)
 
 
 ## Case Studies (22)

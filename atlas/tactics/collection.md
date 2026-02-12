@@ -25,12 +25,10 @@ Common target sources include software repositories, container registries, model
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/collection/ai-artifact-collection|AML.T0035]] | AI Artifact Collection | realized |
-| [[atlas/techniques/collection/data-from-information-repositories|AML.T0036]] | Data from Information Repositories | realized |
-| [[atlas/techniques/collection/data-from-local-system|AML.T0037]] | Data from Local System | realized |
-| [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085]] | Data from AI Services | demonstrated |
+- [[atlas/techniques/collection/ai-artifact-collection|AML.T0035]] — AI Artifact Collection (realized)
+- [[atlas/techniques/collection/data-from-information-repositories|AML.T0036]] — Data from Information Repositories (realized)
+- [[atlas/techniques/collection/data-from-local-system|AML.T0037]] — Data from Local System (realized)
+- [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085]] — Data from AI Services (demonstrated)
 
 
 ## Case Studies (10)

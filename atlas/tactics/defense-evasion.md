@@ -24,19 +24,17 @@ Techniques used for defense evasion include evading AI-enabled security software
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]] | Evade AI Model | realized |
-| [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] | LLM Jailbreak | demonstrated |
-| [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation-overview|AML.T0067]] | LLM Trusted Output Components Manipulation | demonstrated |
-| [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068]] | LLM Prompt Obfuscation | demonstrated |
-| [[atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071]] | False RAG Entry Injection | demonstrated |
-| [[atlas/techniques/defense-evasion/impersonation|AML.T0073]] | Impersonation | realized |
-| [[atlas/techniques/defense-evasion/masquerading|AML.T0074]] | Masquerading | realized |
-| [[atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076]] | Corrupt AI Model | realized |
-| [[atlas/techniques/defense-evasion/manipulate-user-llm-chat-history|AML.T0092]] | Manipulate User LLM Chat History | demonstrated |
-| [[atlas/techniques/defense-evasion/delay-execution-of-llm-instructions|AML.T0094]] | Delay Execution of LLM Instructions | demonstrated |
-| [[atlas/techniques/defense-evasion/virtualization-sandbox-evasion|AML.T0097]] | Virtualization/Sandbox Evasion | realized |
+- [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade AI Model (realized)
+- [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] — LLM Jailbreak (demonstrated)
+- [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation-overview|AML.T0067]] — LLM Trusted Output Components Manipulation (demonstrated)
+- [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068]] — LLM Prompt Obfuscation (demonstrated)
+- [[atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071]] — False RAG Entry Injection (demonstrated)
+- [[atlas/techniques/defense-evasion/impersonation|AML.T0073]] — Impersonation (realized)
+- [[atlas/techniques/defense-evasion/masquerading|AML.T0074]] — Masquerading (realized)
+- [[atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076]] — Corrupt AI Model (realized)
+- [[atlas/techniques/defense-evasion/manipulate-user-llm-chat-history|AML.T0092]] — Manipulate User LLM Chat History (demonstrated)
+- [[atlas/techniques/defense-evasion/delay-execution-of-llm-instructions|AML.T0094]] — Delay Execution of LLM Instructions (demonstrated)
+- [[atlas/techniques/defense-evasion/virtualization-sandbox-evasion|AML.T0097]] — Virtualization/Sandbox Evasion (realized)
 
 
 ## Case Studies (17)

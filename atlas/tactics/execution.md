@@ -25,13 +25,11 @@ For example, an adversary might use a remote access tool to run a PowerShell scr
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011]] | User Execution | realized |
-| [[atlas/techniques/execution/command-and-scripting-interpreter|AML.T0050]] | Command and Scripting Interpreter | feasible |
-| [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]] | LLM Prompt Injection | realized |
-| [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] | AI Agent Tool Invocation | demonstrated |
-| [[atlas/techniques/execution/ai-agent-clickbait|AML.T0100]] | AI Agent Clickbait | feasible |
+- [[atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011]] — User Execution (realized)
+- [[atlas/techniques/execution/command-and-scripting-interpreter|AML.T0050]] — Command and Scripting Interpreter (feasible)
+- [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]] — LLM Prompt Injection (realized)
+- [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] — AI Agent Tool Invocation (demonstrated)
+- [[atlas/techniques/execution/ai-agent-clickbait|AML.T0100]] — AI Agent Clickbait (feasible)
 
 
 ## Case Studies (19)

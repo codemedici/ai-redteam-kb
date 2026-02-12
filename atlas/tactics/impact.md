@@ -26,16 +26,14 @@ These techniques might be used by adversaries to follow through on their end goa
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]] | Evade AI Model | realized |
-| [[atlas/techniques/impact/denial-of-ai-service|AML.T0029]] | Denial of AI Service | demonstrated |
-| [[atlas/techniques/impact/spamming-ai-system-with-chaff-data|AML.T0046]] | Spamming AI System with Chaff Data | feasible |
-| [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031]] | Erode AI Model Integrity | realized |
-| [[atlas/techniques/impact/cost-harvesting|AML.T0034]] | Cost Harvesting | feasible |
-| [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048]] | External Harms | realized |
-| [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059]] | Erode Dataset Integrity | demonstrated |
-| [[atlas/techniques/impact/data-destruction-via-ai-agent-tool-invocation|AML.T0101]] | Data Destruction via AI Agent Tool Invocation | feasible |
+- [[atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade AI Model (realized)
+- [[atlas/techniques/impact/denial-of-ai-service|AML.T0029]] — Denial of AI Service (demonstrated)
+- [[atlas/techniques/impact/spamming-ai-system-with-chaff-data|AML.T0046]] — Spamming AI System with Chaff Data (feasible)
+- [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031]] — Erode AI Model Integrity (realized)
+- [[atlas/techniques/impact/cost-harvesting|AML.T0034]] — Cost Harvesting (feasible)
+- [[atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048]] — External Harms (realized)
+- [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059]] — Erode Dataset Integrity (demonstrated)
+- [[atlas/techniques/impact/data-destruction-via-ai-agent-tool-invocation|AML.T0101]] — Data Destruction via AI Agent Tool Invocation (feasible)
 
 
 ## Case Studies (30)

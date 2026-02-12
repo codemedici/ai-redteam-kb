@@ -24,16 +24,14 @@ Techniques used for persistence often involve leaving behind modified ML artifac
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/resource-development/poison-training-data|AML.T0020]] | Poison Training Data | realized |
-| [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018]] | Manipulate AI Model | realized |
-| [[atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061]] | LLM Prompt Self-Replication | demonstrated |
-| [[atlas/techniques/persistence/rag-poisoning|AML.T0070]] | RAG Poisoning | demonstrated |
-| [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080]] | AI Agent Context Poisoning | demonstrated |
-| [[atlas/techniques/persistence/modify-ai-agent-configuration|AML.T0081]] | Modify AI Agent Configuration | demonstrated |
-| [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093]] | Prompt Infiltration via Public-Facing Application | demonstrated |
-| [[atlas/techniques/persistence/ai-agent-tool-data-poisoning|AML.T0099]] | AI Agent Tool Data Poisoning | feasible |
+- [[atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data (realized)
+- [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018]] — Manipulate AI Model (realized)
+- [[atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061]] — LLM Prompt Self-Replication (demonstrated)
+- [[atlas/techniques/persistence/rag-poisoning|AML.T0070]] — RAG Poisoning (demonstrated)
+- [[atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning-overview|AML.T0080]] — AI Agent Context Poisoning (demonstrated)
+- [[atlas/techniques/persistence/modify-ai-agent-configuration|AML.T0081]] — Modify AI Agent Configuration (demonstrated)
+- [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093]] — Prompt Infiltration via Public-Facing Application (demonstrated)
+- [[atlas/techniques/persistence/ai-agent-tool-data-poisoning|AML.T0099]] — AI Agent Tool Data Poisoning (feasible)
 
 
 ## Case Studies (10)

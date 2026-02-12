@@ -26,14 +26,12 @@ These techniques are often used to achieve the adversary's end goal.
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005]] | Create Proxy AI Model | demonstrated |
-| [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018]] | Manipulate AI Model | realized |
-| [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042]] | Verify Attack | demonstrated |
-| [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043]] | Craft Adversarial Data | realized |
-| [[atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088]] | Generate Deepfakes | realized |
-| [[atlas/techniques/ai-attack-staging/generate-malicious-commands|AML.T0102]] | Generate Malicious Commands | realized |
+- [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005]] — Create Proxy AI Model (demonstrated)
+- [[atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0018]] — Manipulate AI Model (realized)
+- [[atlas/techniques/ai-attack-staging/verify-attack|AML.T0042]] — Verify Attack (demonstrated)
+- [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043]] — Craft Adversarial Data (realized)
+- [[atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088]] — Generate Deepfakes (realized)
+- [[atlas/techniques/ai-attack-staging/generate-malicious-commands|AML.T0102]] — Generate Malicious Commands (realized)
 
 
 ## Case Studies (20)

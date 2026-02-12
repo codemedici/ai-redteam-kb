@@ -23,13 +23,11 @@ Credential Access consists of techniques for stealing credentials like account n
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055]] | Unsecured Credentials | realized |
-| [[atlas/techniques/credential-access/rag-credential-harvesting|AML.T0082]] | RAG Credential Harvesting | demonstrated |
-| [[atlas/techniques/credential-access/credentials-from-ai-agent-configuration|AML.T0083]] | Credentials from AI Agent Configuration | feasible |
-| [[atlas/techniques/credential-access/os-credential-dumping|AML.T0090]] | OS Credential Dumping | demonstrated |
-| [[atlas/techniques/credential-access/ai-agent-tool-credential-harvesting|AML.T0098]] | AI Agent Tool Credential Harvesting | feasible |
+- [[atlas/techniques/credential-access/unsecured-credentials|AML.T0055]] — Unsecured Credentials (realized)
+- [[atlas/techniques/credential-access/rag-credential-harvesting|AML.T0082]] — RAG Credential Harvesting (demonstrated)
+- [[atlas/techniques/credential-access/credentials-from-ai-agent-configuration|AML.T0083]] — Credentials from AI Agent Configuration (feasible)
+- [[atlas/techniques/credential-access/os-credential-dumping|AML.T0090]] — OS Credential Dumping (demonstrated)
+- [[atlas/techniques/credential-access/ai-agent-tool-credential-harvesting|AML.T0098]] — AI Agent Tool Credential Harvesting (feasible)
 
 
 ## Case Studies (7)

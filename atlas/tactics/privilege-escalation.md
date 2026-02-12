@@ -29,11 +29,9 @@ These techniques often overlap with Persistence techniques, as OS features that 
 The following techniques can be used to achieve this tactic:
 
 
-| Technique ID | Name | Maturity |
-|---|---|---|
-| [[atlas/techniques/initial-access/valid-accounts|AML.T0012]] | Valid Accounts | realized |
-| [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] | AI Agent Tool Invocation | demonstrated |
-| [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] | LLM Jailbreak | demonstrated |
+- [[atlas/techniques/initial-access/valid-accounts|AML.T0012]] — Valid Accounts (realized)
+- [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] — AI Agent Tool Invocation (demonstrated)
+- [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] — LLM Jailbreak (demonstrated)
 
 
 ## Case Studies (5)

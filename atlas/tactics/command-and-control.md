@@ -27,16 +27,6 @@ The following techniques can be used to achieve this tactic:
 - [[atlas/techniques/command-and-control/ai-service-api|AML.T0096]] — AI Service API (realized)
 
 
-## Case Studies (3)
-
-
-The following case studies demonstrate this tactic:
-
-- [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-- [[atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
-- [[atlas/case-studies/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control|AML.CS0042: SesameOp: Novel backdoor uses OpenAI Assistants API for command and control]]
-
-
 ## References
 
 MITRE Corporation. *Command and Control (AML.TA0014)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0014

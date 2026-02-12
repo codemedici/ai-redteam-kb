@@ -30,20 +30,6 @@ The following techniques can be used to achieve this tactic:
 - [[atlas/techniques/credential-access/ai-agent-tool-credential-harvesting|AML.T0098]] — AI Agent Tool Credential Harvesting (feasible)
 
 
-## Case Studies (7)
-
-
-The following case studies demonstrate this tactic:
-
-- [[atlas/case-studies/achieving-code-execution-in-mathgpt-via-prompt-injection|AML.CS0016: Achieving Code Execution in MathGPT via Prompt Injection]]
-- [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
-- [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-- [[atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
-- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
-- [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-- [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
-
-
 ## References
 
 MITRE Corporation. *Credential Access (AML.TA0013)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0013

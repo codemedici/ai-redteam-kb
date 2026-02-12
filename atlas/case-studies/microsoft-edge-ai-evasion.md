@@ -25,65 +25,50 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 **Technique:** [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 
 ### Step 2: Acquire Public AI Artifacts
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
 
 The team identified and obtained the publicly available base model to use against the target ML model.
 
 ### Step 3: AI Model Inference API Access
 
-**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 **Technique:** [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 Using the publicly available version of the ML model, the team started sending queries and analyzing the responses (inferences) from the ML model.
 
 ### Step 4: Black-Box Optimization
 
-**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 **Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
 
 The red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye.
 
 ### Step 5: Evade AI Model
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 Feeding this perturbed image, the red team was able to evade the ML model by causing misclassifications.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 - Technique: [[atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 - Technique: [[atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 - Technique: [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-
-
 
 ## References
 

@@ -25,80 +25,63 @@ The following steps outline the attack procedure:
 
 ### Step 1: Datasets
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 The researchers download a web-scale dataset, which consists of URLs pointing to individual datapoints.
 
 ### Step 2: Domains
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
 
 They identify expired domains in the dataset and purchase them.
 
 ### Step 3: Poison Training Data
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
 
 An adversary could create poisoned training data to replace expired portions of the dataset.
 
 ### Step 4: Publish Poisoned Datasets
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]]
 
 An adversary could then upload the poisoned data to the domains they control.  In this particular exercise, the researchers track requests to the URLs they control to track downloads to demonstrate there are active users of the dataset.
 
 ### Step 5: Erode Dataset Integrity
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]]
 
 The integrity of the dataset has been eroded because future downloads would contain poisoned datapoints.
 
 ### Step 6: Erode AI Model Integrity
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 Models that use the dataset for training data are poisoned, eroding model integrity. The researchers show as little as 0.01% of the data needs to be poisoned for a successful attack.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]]
 
 **Step 6:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
-
-
 
 ## External References
 
 - Poisoning Web-Scale Training Datasets is Practical Available at: https://arxiv.org/pdf/2302.10149
-
 
 ## References
 

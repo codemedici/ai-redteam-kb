@@ -31,169 +31,136 @@ The following steps outline the attack procedure:
 
 ### Step 1: Active Scanning
 
-**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 **Technique:** [[atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]]
 
 The researchers look for support email addresses on the target organization’s website which may be managed by an AI agent. Then, they probe the system by sending emails and looking for indications of agentic AI in automatic replies.
 
 ### Step 2: LLM Prompt Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 Once a target has been identified, the researchers craft prompts designed to probe for a potential AI agent monitoring the inbox. The prompt instructs the agent to send an email reply to an address of the researchers’ choosing.
 
 ### Step 3: Prompt Infiltration via Public-Facing Application
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 The researchers send an email with the malicious prompt to the inbox they suspect may be managed by an AI agent.
 
 ### Step 4: Triggered
 
-**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
 **Technique:** [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
 
 The researchers receive a reply at the address they specified, indicating that there is an AI agent present, and that the triggered prompt injection was successful.
 
 ### Step 5: Activation Triggers
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
 
 The researchers infer that the AI agent is activated when receiving an email.
 
 ### Step 6: Tool Definitions
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
 
 The researchers infer that the AI agent has a tool for sending emails.
 
 ### Step 7: AI-Enabled Product or Service
 
-**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 **Technique:** [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 From here, the researchers repeat the same steps to interact with the AI agent, sending malicious prompts to the agent via email and receiving responses at their desired address.
 
 ### Step 8: LLM Prompt Injection
 
-**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
 **Technique:** [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
 
 The researchers modify the original prompt to discover other knowledge sources and tools that may have data they are after.
 
 ### Step 9: Embedded Knowledge
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
 
 The researchers discover the AI agent has access to a “Customer Support Account Owners.csv” data source.
 
 ### Step 10: Tool Definitions
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
 
 The researchers discover the AI agent has access to the Salesforce get-records tool, which can be used to retrieve CRM records.
 
 ### Step 11: LLM Prompt Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 The researchers put their knowledge of the AI agent’s tools and knowledge sources together to craft a prompt that will collect and exfiltrate the customer data they are after.
 
 ### Step 12: RAG Databases
 
-**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
 **Technique:** [[atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
 
 The prompt asks the agent to retrieve all of the fields and rows from “Customer Support Account Owners.csv”. The agent retrieves the entire file.
 
 ### Step 13: AI Agent Tools
 
-**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
 **Technique:** [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 The prompt asks the agent to retrieve all Salesforce records using its get-records tool. The agent retrieves all records from the victim’s CRM.
 
 ### Step 14: Exfiltration via AI Agent Tool Invocation
 
-**Tactic:** [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 **Technique:** [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]
 
 The prompt asks the agent to email the results to an address of the researcher’s choosing using its email tool. The researchers successfully exfiltrate their target data via the tool invocation.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 - Technique: [[atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
 - Technique: [[atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
 
 **Step 6:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
 
 **Step 7:**
-- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 - Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 8:**
-- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
 - Technique: [[atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
 
 **Step 9:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
 
 **Step 10:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
 
 **Step 11:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 12:**
-- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
 - Technique: [[atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
 
 **Step 13:**
-- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
 - Technique: [[atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 **Step 14:**
-- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 - Technique: [[atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]
-
-
 
 ## External References
 
 - AgentFlayer: Discovery Phase of AI Agents in Copilot Studio Available at: https://labs.zenity.io/p/a-copilot-studio-story-discovery-phase-in-ai-agents-f917
 - AgentFlayer: When AIjacking Leads to Full Data Exfiltration in Copilot Studio Available at: https://labs.zenity.io/p/a-copilot-studio-story-2-when-aijacking-leads-to-full-data-exfiltration-bc4a
-
 
 ## References
 

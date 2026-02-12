@@ -33,7 +33,6 @@ The following steps outline the attack procedure:
 
 ### Step 1: Retrieval Content Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]]
 
 <div dangerouslySetInnerHTML={{__html: `The researcher crafted a targeted message designed to be retrieved when a user asks about their API key.
@@ -44,7 +43,6 @@ The following steps outline the attack procedure:
 
 ### Step 2: LLM Prompt Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 <div dangerouslySetInnerHTML={{__html: `The researcher crafted a malicious prompt designed to reveal the victim’s API Key:
@@ -55,28 +53,24 @@ The following steps outline the attack procedure:
 
 ### Step 3: Valid Accounts
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 The researcher created a valid, non-admin user account within the Slack workspace.
 
 ### Step 4: AI-Enabled Product or Service
 
-**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 **Technique:** [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 The researcher interacts with Slack AI by sending messages in public Slack channels.
 
 ### Step 5: RAG Poisoning
 
-**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 **Technique:** [[atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]]
 
 The researcher creates a public Slack channel and sends the malicious content (consisting of the retrieval content and prompt) as a message in that channel. Since Slack AI indexes messages in public channels, the malicious message is added to its RAG database.
 
 ### Step 6: Indirect
 
-**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
 **Technique:** [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 <div dangerouslySetInnerHTML={{__html: `When the victim asks Slack AI to find their “EldritchNexus API key,” Slack AI retrieves the malicious content and executes the instructions:
@@ -87,14 +81,12 @@ The researcher creates a public Slack channel and sends the malicious content (c
 
 ### Step 7: RAG Credential Harvesting
 
-**Tactic:** [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
 **Technique:** [[atlas/techniques/credential-access/rag-credential-harvesting|AML.T0082: RAG Credential Harvesting]]
 
 Because Slack AI has access to the victim user’s private channels, it retrieves the victim’s API Key.
 
 ### Step 8: LLM Response Rendering
 
-**Tactic:** [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 **Technique:** [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]]
 
 <div dangerouslySetInnerHTML={{__html: `The response is rendered as a clickable link with the victim’s API key encoded in the URL, as instructed by the malicious instructions:
@@ -106,48 +98,35 @@ Because Slack AI has access to the victim user’s private channels, it retrieve
 <br />
 The victim is fooled into thinking they need to click the link to re-authenticate, and their API key is sent to a server controlled by the adversary.`}} />
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 - Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 - Technique: [[atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]]
 
 **Step 6:**
-- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
 - Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 **Step 7:**
-- Tactic: [[atlas/tactics/credential-access|AML.TA0013: Credential Access]]
 - Technique: [[atlas/techniques/credential-access/rag-credential-harvesting|AML.T0082: RAG Credential Harvesting]]
 
 **Step 8:**
-- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 - Technique: [[atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]]
-
-
 
 ## External References
 
 - Data Exfiltration from Slack AI via indirect prompt injection Available at: https://promptarmor.substack.com/p/data-exfiltration-from-slack-ai-via
-
 
 ## References
 

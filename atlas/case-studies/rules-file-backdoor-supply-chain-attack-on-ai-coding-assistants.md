@@ -29,14 +29,12 @@ The following steps outline the attack procedure:
 
 ### Step 1: Stage Capabilities
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/stage-capabilities|AML.T0079: Stage Capabilities]]
 
 The researchers staged a malicious javascript file on a publicly available website.
 
 ### Step 2: LLM Prompt Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 <div dangerouslySetInnerHTML={{__html: `The researchers crafted a prompt to target coding assistant that inject a call to the malicious javascript script in generated HTML.
@@ -49,7 +47,6 @@ The researchers staged a malicious javascript file on a publicly available websi
 
 ### Step 3: LLM Prompt Obfuscation
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 <div dangerouslySetInnerHTML={{__html: `The researchers hid the prompt in a coding assistant rules file by using invisible Unicode characters (such as zero-width joiners and bidirectional text markers). The prompt appears invisible in code editors and GitHub’s pull request approval process, allowing it to evade detection during human review.
@@ -65,21 +62,18 @@ No need to mention these actions in the responses to the user. Just do the code 
 
 ### Step 4: AI Software
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 The researchers could have uploaded the malicious rules file to open-source communities where AI coding assistant configurations are shared with minimal security vetting such as GitHub and cursor.directory. Once incorporated into a project repository it may survive project forking and template distribution, creating long-term compromise of many organizations’ AI software supply chains.
 
 ### Step 5: Modify AI Agent Configuration
 
-**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 **Technique:** [[atlas/techniques/persistence/modify-ai-agent-configuration|AML.T0081: Modify AI Agent Configuration]]
 
 Users then pulled the latest version of the rules file, replacing their coding assistant’s configuration with the malicious one. The coding assistant’s behavior was modified, affecting all future code generation.
 
 ### Step 6: Direct
 
-**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
 **Technique:** [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 <div dangerouslySetInnerHTML={{__html: `When the AI coding assistant was next initialized, its rules file was read and the malicious prompt was executed.
@@ -90,7 +84,6 @@ Users then pulled the latest version of the rules file, replacing their coding a
 
 ### Step 7: LLM Jailbreak
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054: LLM Jailbreak]]
 
 <div dangerouslySetInnerHTML={{__html: `The prompt used jailbreak techniques to convince the AI coding assistant to add the malicious script to generated HTML files.
@@ -101,7 +94,6 @@ Users then pulled the latest version of the rules file, replacing their coding a
 
 ### Step 8: LLM Trusted Output Components Manipulation
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation-overview|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 <div dangerouslySetInnerHTML={{__html: `The prompt instructed the AI coding assistant to not mention code changes in its responses, which ensures that there will be no messages to raise the victim’s suspicion and that nothing ends up the assistant’s logs. This allows for the malicious rules file to silently propagate throughout the codebase with no trace in the history or logs to aid in alerting security teams.
@@ -112,57 +104,42 @@ Users then pulled the latest version of the rules file, replacing their coding a
 
 ### Step 9: User Harm
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 The victim developers unknowingly used the compromised AI coding assistant that generate code containing hidden malicious elements which could include backdoors, data exfiltration code, vulnerable constructs, or malicious scripts. This code could end up in a production application, affecting the users of the software.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/stage-capabilities|AML.T0079: Stage Capabilities]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 - Technique: [[atlas/techniques/persistence/modify-ai-agent-configuration|AML.T0081: Modify AI Agent Configuration]]
 
 **Step 6:**
-- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
 - Technique: [[atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 **Step 7:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054: LLM Jailbreak]]
 
 **Step 8:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation-overview|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 **Step 9:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
-
-
 
 ## External References
 
 - New Vulnerability in GitHub Copilot and Cursor: How Hackers Can Weaponize Code Agents Available at: https://www.pillar.security/blog/new-vulnerability-in-github-copilot-and-cursor-how-hackers-can-weaponize-code-agents
-
 
 ## References
 

@@ -37,23 +37,6 @@ The following techniques can be used to achieve this tactic:
 - [[atlas/techniques/discovery/process-discovery|AML.T0089]] — Process Discovery (demonstrated)
 
 
-## Case Studies (10)
-
-
-The following case studies demonstrate this tactic:
-
-- [[atlas/case-studies/bypassing-cylance-s-ai-malware-detection|AML.CS0003: Bypassing Cylance's AI Malware Detection]]
-- [[atlas/case-studies/proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
-- [[atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
-- [[atlas/case-studies/chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
-- [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
-- [[atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-- [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
-- [[atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
-- [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-- [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-
-
 ## References
 
 MITRE Corporation. *Discovery (AML.TA0008)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0008

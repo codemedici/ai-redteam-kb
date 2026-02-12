@@ -31,23 +31,6 @@ The following techniques can be used to achieve this tactic:
 - [[atlas/techniques/collection/data-from-ai-services/data-from-ai-services-overview|AML.T0085]] — Data from AI Services (demonstrated)
 
 
-## Case Studies (10)
-
-
-The following case studies demonstrate this tactic:
-
-- [[atlas/case-studies/clearviewai-misconfiguration|AML.CS0006: ClearviewAI Misconfiguration]]
-- [[atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
-- [[atlas/case-studies/compromised-pytorch-dependency-chain|AML.CS0015: Compromised PyTorch Dependency Chain]]
-- [[atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
-- [[atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
-- [[atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-- [[atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
-- [[atlas/case-studies/living-off-ai-prompt-injection-via-jira-service-management|AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management]]
-- [[atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
-- [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
-
-
 ## References
 
 MITRE Corporation. *Collection (AML.TA0009)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0009

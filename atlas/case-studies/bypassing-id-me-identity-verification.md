@@ -32,7 +32,6 @@ The following steps outline the attack procedure:
 
 ### Step 1: AI-Enabled Product or Service
 
-**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 **Technique:** [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 The individual applied for unemployment assistance with the California Employment Development Department using forged identities, interacting with ID.me's identity verification system in the process.
@@ -45,7 +44,6 @@ The ID.me website outlines the steps to verify an identity, including entering p
 
 ### Step 2: Evade AI Model
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 The individual collected stolen identities, including names, dates of birth, and Social Security numbers. and used them along with a photo of himself wearing wigs to acquire fake driver's licenses.
@@ -54,28 +52,20 @@ The individual uploaded forged IDs along with a selfie. The ID.me document verif
 
 ### Step 3: Financial Harm
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 Dozens out of at least 180 fraudulent claims were ultimately approved and the individual received at least $3.4 million in unemployment assistance.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 - Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
-
-
 
 ## External References
 
@@ -86,7 +76,6 @@ Dozens out of at least 180 fraudulent claims were ultimately approved and the in
 - California EDD - How do I verify my identity for California EDD Unemployment Insurance? Available at: https://help.id.me/hc/en-us/articles/360054836774-California-EDD-How-do-I-verify-my-identity-for-the-California-Employment-Development-Department-
 - New Jersey Man Sentenced to 6.75 Years in Prison for Schemes to Steal California Unemployment Insurance Benefits and Economic Injury Disaster Loans Available at: https://www.justice.gov/usao-edca/pr/new-jersey-man-sentenced-675-years-prison-schemes-steal-california-unemployment
 - How ID.me uses machine vision and AI to extract content and verify the authenticity of ID documents Available at: https://network.id.me/wp-content/uploads/Document-Verification-Use-Machine-Vision-and-AI-to-Extract-Content-and-Verify-the-Authenticity-1.pdf
-
 
 ## References
 

@@ -34,23 +34,6 @@ The following techniques can be used to achieve this tactic:
 - [[atlas/techniques/persistence/ai-agent-tool-data-poisoning|AML.T0099]] — AI Agent Tool Data Poisoning (feasible)
 
 
-## Case Studies (10)
-
-
-The following case studies demonstrate this tactic:
-
-- [[atlas/case-studies/virustotal-poisoning|AML.CS0002: VirusTotal Poisoning]]
-- [[atlas/case-studies/tay-poisoning|AML.CS0009: Tay Poisoning]]
-- [[atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
-- [[atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
-- [[atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
-- [[atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
-- [[atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
-- [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-- [[atlas/case-studies/hacking-chatgpt-s-memories-with-prompt-injection|AML.CS0040: Hacking ChatGPT’s Memories with Prompt Injection]]
-- [[atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|AML.CS0041: Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]
-
-
 ## References
 
 MITRE Corporation. *Persistence (AML.TA0006)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0006

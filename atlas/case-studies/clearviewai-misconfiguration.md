@@ -30,14 +30,12 @@ The following steps outline the attack procedure:
 
 ### Step 1: Establish Accounts
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
 
 A security researcher gained initial access to Clearview AI's private code repository via a misconfigured server setting that allowed an arbitrary user to register a valid account.
 
 ### Step 2: Data from Information Repositories
 
-**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
 **Technique:** [[atlas/techniques/collection/data-from-information-repositories|AML.T0036: Data from Information Repositories]]
 
 The private code repository contained credentials which were used to access AWS S3 cloud storage buckets, leading to the discovery of assets for the facial recognition tool, including:
@@ -48,46 +46,35 @@ The private code repository contained credentials which were used to access AWS 
 
 ### Step 3: Acquire Public AI Artifacts
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
 
 Adversaries could have downloaded training data and gleaned details about software, models, and capabilities from the source code and decompiled application binaries.
 
 ### Step 4: Erode AI Model Integrity
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 As a result, future application releases could have been compromised, causing degraded or malicious facial recognition capabilities.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
 - Technique: [[atlas/techniques/collection/data-from-information-repositories|AML.T0036: Data from Information Repositories]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
-
-
 
 ## External References
 
 - TechCrunch Article, "Security lapse exposed Clearview AI source code" Available at: https://techcrunch.com/2020/04/16/clearview-source-code-lapse/
 - Gizmodo Article, "We Found Clearview AI's Shady Face Recognition App" Available at: https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772
 - New York Times Article, "The Secretive Company That Might End Privacy as We Know It" Available at: https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html
-
 
 ## References
 

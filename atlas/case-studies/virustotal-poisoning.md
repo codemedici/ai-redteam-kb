@@ -25,55 +25,42 @@ The following steps outline the attack procedure:
 
 ### Step 1: Adversarial AI Attack Implementations
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 The actor obtained [metame](https://github.com/a0rtega/metame), a simple metamorphic code engine for arbitrary executables.
 
 ### Step 2: Craft Adversarial Data
 
-**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 **Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
 The actor used a malware sample from a prevalent ransomware family as a start to create "mutant" variants.
 
 ### Step 3: Data
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
 
 The actor uploaded "mutant" samples to the platform.
 
 ### Step 4: Poison Training Data
 
-**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 **Technique:** [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
 
 Several vendors started to classify the files as the ransomware family even though most of them won't run.
 The "mutant" samples poisoned the dataset the ML model(s) use to identify and classify this ransomware family.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 - Technique: [[atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 - Technique: [[atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
-
-
-
 
 ## References
 

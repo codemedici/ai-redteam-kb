@@ -41,63 +41,54 @@ The following steps outline the attack procedure:
 
 ### Step 1: Gather RAG-Indexed Targets
 
-**Tactic:** [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 **Technique:** [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|AML.T0064: Gather RAG-Indexed Targets]]
 
 The Zenity researchers identified that Microsoft Copilot for M365 indexes all e-mails received in an inbox, even if the recipient does not open them.
 
 ### Step 2: AI-Enabled Product or Service
 
-**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 **Technique:** [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 The Zenity researchers interacted with Microsoft Copilot for M365 during attack development and execution of the attack on the victim system.
 
 ### Step 3: Special Character Sets
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
 
 <div dangerouslySetInnerHTML={{__html: `By probing Copilot and examining its responses, the Zenity researchers identified delimiters (such as <span style="font-family: monospace; color: green;">\*\*</span> and <span style="font-family: monospace; color: green;">\*\*END\*\*</span>) and signifiers (such as <span style="font-family: monospace; color: green;">Actual Snippet:</span> and <span style="font-family: monospace; color: green">"[^1^]"</span>), which are used as signifiers to separate different portions of a Copilot prompt.`}} />
 
 ### Step 4: System Instruction Keywords
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
 
 <div dangerouslySetInnerHTML={{__html: `By probing Copilot and examining its responses, the Zenity researchers identified plugins and specific functionality Copilot has access to. This included the <span style="font-family monospace; color: purple;">search_enterprise</span> function and <span style="font-family monospace; color: purple;">EmailMessage</span> object.`}} />
 
 ### Step 5: Retrieval Content Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]]
 
 The Zenity researchers wrote targeted content designed to be retrieved by specific user queries.
 
 ### Step 6: LLM Prompt Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 The Zenity researchers designed malicious prompts that bypassed Copilot's system instructions. This was done via trial and error on a separate instance of Copilot.
 
 ### Step 7: Prompt Infiltration via Public-Facing Application
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 The Zenity researchers sent an email to a user at the victim organization containing a malicious payload, exploiting the knowledge that all received emails are ingested into the Copilot RAG database.
 
 ### Step 8: LLM Prompt Obfuscation
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 The Zenity researchers evaded notice by the email recipient by obfuscating the malicious portion of the email.
 
 ### Step 9: RAG Poisoning
 
-**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 **Technique:** [[atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers achieved persistence in the victim system since the malicious prompt  would be executed whenever the poisoned RAG entry is retrieved.
@@ -108,14 +99,12 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 10: False RAG Entry Injection
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071: False RAG Entry Injection]]
 
 <div dangerouslySetInnerHTML={{__html: `When the user searches for bank details and the poisoned RAG entry is retrieved, the <span style="color: green; font-family: monospace">Actual Snippet:</span> specifier makes the retrieved text appear to the LLM as a snippet from a real document.`}} />
 
 ### Step 11: Indirect
 
-**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
 **Technique:** [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers utilized a prompt injection to get the LLM to execute different instructions when responding. This occurs any time the user searches and the poisoned RAG entry containing the prompt injection is retrieved.
@@ -126,7 +115,6 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 12: AI Agent Tool Invocation
 
-**Tactic:** [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
 **Technique:** [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers compromised the <span style="font-family: monospace; color: purple">search_enterprise</span> plugin by instructing the LLM to override some of its behavior and only use the retrieved <span style="font-family: monospace; color: purple">EmailMessage</span> in its response.
@@ -137,7 +125,6 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 13: Citations
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers included instructions to manipulate the citations used in its response, abusing the user's trust in Copilot. 
@@ -147,79 +134,59 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 14: Financial Harm
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 If the victim follows through with the wire transfer using the fraudulent bank details, the end impact could be varying amounts of financial harm to the organization or individual.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/reconnaissance|AML.TA0002: Reconnaissance]]
 - Technique: [[atlas/techniques/reconnaissance/gather-rag-indexed-targets|AML.T0064: Gather RAG-Indexed Targets]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 - Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]]
 
 **Step 6:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 7:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 8:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 **Step 9:**
-- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 - Technique: [[atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]]
 
 **Step 10:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071: False RAG Entry Injection]]
 
 **Step 11:**
-- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
 - Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 **Step 12:**
-- Tactic: [[atlas/tactics/privilege-escalation|AML.TA0012: Privilege Escalation]]
 - Technique: [[atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 **Step 13:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
 
 **Step 14:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
-
-
 
 ## External References
 
 - We got an ~RCE on M365 Copilot by sending an email., Twitter Available at: https://twitter.com/mbrg0/status/1821551825369415875
 - Living off Microsoft Copilot at BHUSA24: Financial transaction hijacking with Copilot as an insider, YouTube Available at: https://youtu.be/Z9jvzFxhayA?si=FJmzxTMDui2qO1Zj
 - Article from The Register with response from Microsoft Available at: https://www.theregister.com/2024/08/08/copilot_black_hat_vulns/
-
 
 ## References
 

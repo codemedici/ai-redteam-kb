@@ -27,7 +27,6 @@ The following steps outline the attack procedure:
 
 ### Step 1: AI Software
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 A malicious dependency package named `torchtriton` was uploaded to the PyPI code repository with the same package name as a package shipped with the PyTorch-nightly build. This malicious package contained additional code that uploads sensitive data from the machine.
@@ -35,7 +34,6 @@ The malicious `torchtriton` package was installed instead of the legitimate one 
 
 ### Step 2: Data from Local System
 
-**Tactic:** [[atlas/tactics/collection|AML.TA0009: Collection]]
 **Technique:** [[atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]]
 
 The malicious package surveys the affected system for basic fingerprinting info (such as IP address, username, and current working directory), and steals further sensitive data, including:
@@ -52,34 +50,25 @@ The malicious package surveys the affected system for basic fingerprinting info 
 
 ### Step 3: Exfiltration via Cyber Means
 
-**Tactic:** [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 **Technique:** [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 All gathered information, including file contents, is uploaded via encrypted DNS queries to the domain `*[dot]h4ck[dot]cfd`, using the DNS server `wheezy[dot]io`.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/collection|AML.TA0009: Collection]]
 - Technique: [[atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/exfiltration|AML.TA0010: Exfiltration]]
 - Technique: [[atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
-
-
 
 ## External References
 
 - PyTorch statement on compromised dependency Available at: https://pytorch.org/blog/compromised-nightly-dependency/
 - Analysis by BleepingComputer Available at: https://www.bleepingcomputer.com/news/security/pytorch-discloses-malicious-dependency-chain-compromise-over-holidays/
-
 
 ## References
 

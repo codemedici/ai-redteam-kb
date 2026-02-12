@@ -27,15 +27,6 @@ The following techniques can be used to achieve this tactic:
 - [[atlas/techniques/lateral-movement/use-alternate-authentication-material/use-alternate-authentication-material-overview|AML.T0091]] — Use Alternate Authentication Material (demonstrated)
 
 
-## Case Studies (2)
-
-
-The following case studies demonstrate this tactic:
-
-- [[atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-- [[atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
-
-
 ## References
 
 MITRE Corporation. *Lateral Movement (AML.TA0015)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0015

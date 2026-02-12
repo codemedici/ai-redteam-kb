@@ -25,21 +25,18 @@ The following steps outline the attack procedure:
 
 ### Step 1: Discover AI Model Outputs
 
-**Tactic:** [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 **Technique:** [[atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]]
 
 The researchers discovered that ProofPoint's Email Protection left model output scores in email headers.
 
 ### Step 2: AI-Enabled Product or Service
 
-**Tactic:** [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 **Technique:** [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 The researchers sent many emails through the system to collect model outputs from the headers.
 
 ### Step 3: Train Proxy via Replication
 
-**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 **Technique:** [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 The researchers used the emails and collected scores as a dataset, which they used to train a functional copy of the ProofPoint model. 
@@ -48,7 +45,6 @@ Basic correlation was used to decide which score variable speaks generally about
 
 ### Step 4: Black-Box Transfer
 
-**Tactic:** [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 **Technique:** [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 Next, the ML researchers algorithmically found samples from this "offline" proxy model that helped give desired insight into its behavior and influential variables.
@@ -58,36 +54,26 @@ Examples of bad scoring samples include "software", "99", and "unsub".
 
 ### Step 5: Evade AI Model
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 Finally, these insights from the "offline" proxy model allowed the researchers to create malicious emails that received preferable scores from the real ProofPoint email protection system, hence bypassing it.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/discovery|AML.TA0008: Discovery]]
 - Technique: [[atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/ai-model-access|AML.TA0000: AI Model Access]]
 - Technique: [[atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 - Technique: [[atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/ai-attack-staging|AML.TA0001: AI Attack Staging]]
 - Technique: [[atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-
 
 ## External References
 
@@ -95,7 +81,6 @@ Finally, these insights from the "offline" proxy model allowed the researchers t
 - 2019 DerbyCon presentation "42: The answer to life, the universe, and everything offensive security" Available at: https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf
 - Proof Pudding (CVE-2019-20634) Implementation on GitHub Available at: https://github.com/moohax/Proof-Pudding
 - 2019 DerbyCon video presentation "42: The answer to life, the universe, and everything offensive security" Available at: https://www.youtube.com/watch?v=CsvkYoxtexQ&ab-channel=AdrianCrenshaw
-
 
 ## References
 

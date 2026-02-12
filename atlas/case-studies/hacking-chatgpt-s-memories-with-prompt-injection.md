@@ -25,91 +25,72 @@ The following steps outline the attack procedure:
 
 ### Step 1: LLM Prompt Crafting
 
-**Tactic:** [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 **Technique:** [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 The researcher crafted a basic prompt asking to set the memory context with a bulleted list of incorrect facts.
 
 ### Step 2: LLM Prompt Obfuscation
 
-**Tactic:** [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 **Technique:** [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 The researcher placed the prompt in a Google Doc hidden in the header with tiny font matching the document’s background color to make it invisible.
 
 ### Step 3: Prompt Infiltration via Public-Facing Application
 
-**Tactic:** [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 **Technique:** [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 The Google Doc was shared with the victim, making it accessible to ChatGPT’s via its Connected App feature.
 
 ### Step 4: Indirect
 
-**Tactic:** [[atlas/tactics/execution|AML.TA0005: Execution]]
 **Technique:** [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 When a user referenced something in the shared document, its contents was added to the chat context, and the prompt was executed by ChatGPT.
 
 ### Step 5: Memory
 
-**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 **Technique:** [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
 
 The prompt caused new memories to be introduced, changing the behavior of ChatGPT. The chat window indicated that the memory has been set, despite the lack of human verification or intervention. All future chat sessions will use the poisoned memory store.
 
 ### Step 6: Prompt Infiltration via Public-Facing Application
 
-**Tactic:** [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 **Technique:** [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 The memory poisoning prompt injection persists in the shared Google Doc, where it can spread to other users and chat sessions, making it difficult to trace sources of the memories and remove.
 
 ### Step 7: User Harm
 
-**Tactic:** [[atlas/tactics/impact|AML.TA0011: Impact]]
 **Technique:** [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 The victim can be misinformed, misled, or influenced as directed by ChatGPT's poisoned memories.
 
-
 ## Tactics and Techniques Used
 
-
 **Step 1:**
-- Tactic: [[atlas/tactics/resource-development|AML.TA0003: Resource Development]]
 - Technique: [[atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 2:**
-- Tactic: [[atlas/tactics/defense-evasion|AML.TA0007: Defense Evasion]]
 - Technique: [[atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 **Step 3:**
-- Tactic: [[atlas/tactics/initial-access|AML.TA0004: Initial Access]]
 - Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 4:**
-- Tactic: [[atlas/tactics/execution|AML.TA0005: Execution]]
 - Technique: [[atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 **Step 5:**
-- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 - Technique: [[atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
 
 **Step 6:**
-- Tactic: [[atlas/tactics/persistence|AML.TA0006: Persistence]]
 - Technique: [[atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 7:**
-- Tactic: [[atlas/tactics/impact|AML.TA0011: Impact]]
 - Technique: [[atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
-
-
 
 ## External References
 
 - ChatGPT: Hacking Memories with Prompt Injection Available at: https://embracethered.com/blog/posts/2024/chatgpt-hacking-memories/
-
 
 ## References
 

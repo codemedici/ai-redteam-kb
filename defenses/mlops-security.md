@@ -6,6 +6,7 @@ tags:
   - type/control-framework
   - target/ml-lifecycle
   - source/adversarial-ai
+  - source/developers-playbook-llm
   - needs-review
 ---
 
@@ -206,6 +207,245 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 86  
 > Reference: https://ml-ops.org/content/mlops-principles
+
+## LLMOps: Extending MLOps for Large Language Models (Developer's Playbook — Wilson)
+
+### Evolution: DevOps → DevSecOps → MLOps → LLMOps
+
+**DevOps (early 2000s):** Bridge development and operations teams through collaboration, automation, CI/CD
+
+**DevSecOps:** Embed security at every phase, not as afterthought
+
+**MLOps:** Automate ML lifecycle (data prep, training, deployment, monitoring) with focus on reproducibility and model drift
+
+**LLMOps:** Address unique LLM challenges:
+- Prompt engineering
+- Model fine-tuning
+- RAG (Retrieval-Augmented Generation)
+- Advanced deployment strategies for high computational load
+- Monitoring qualitative aspects of model outputs
+- Managing model-generated content risks
+
+> "MLOps, while crucial in establishing practices for any application leveraging machine learning, doesn't address all the unique challenges LLMs pose. LLMs introduce specific challenges, such as prompt engineering, robust monitoring to capture the nuanced performance, and the potential misuse of generated outputs."
+> 
+> Source: [[sources/developers-playbook-llm]], p. 140-141
+
+### LLMOps Security Lifecycle
+
+**Five critical stages for secure LLM deployment:**
+
+| Stage | Security Measures |
+|-------|------------------|
+| **1. Foundation Model Selection** | • Opt for models with robust security features<br>• Assess security history and vulnerability reports<br>• Review model card for security info<br>• Evaluate training datasets<br>• Watch for new versions with security improvements |
+| **2. Data Preparation** | • Carefully evaluate data sources<br>• Scrub, anonymize, free from illegal/inappropriate content<br>• Evaluate for bias<br>• Secure data handling and access controls<br>• Protect during fine-tuning or embedding generation |
+| **3. Validation** | • LLM-specific vulnerability scanners<br>• AI red teaming exercises<br>• Test for toxicity and bias<br>• Extend security testing beyond traditional SAST/DAST |
+| **4. Deployment** | • Runtime guardrails for prompt and output screening<br>• Automate ML-BOM generation and storage<br>• Secure deployment pipeline |
+| **5. Monitoring** | • Log all activity<br>• Monitor for anomalies (jailbreaks, DoS attempts)<br>• Track model performance and drift |
+
+> Source: [[sources/developers-playbook-llm]], p. 141-142
+
+### CI/CD Security for LLMs
+
+**Critical practices:**
+
+**Pipeline security:**
+- Integrate security checks into CI/CD to detect vulnerabilities early
+- Treat training data repositories like source code (access control, version control)
+- Protect against data poisoning attacks
+
+**Dependency management:**
+- Regularly audit and update dependencies
+- **Note:** ML-specific components like PyTorch have had zero-day vulnerabilities
+- Mitigate outdated or compromised libraries
+
+**Access control & monitoring:**
+- Limit access to CI/CD environment
+- Monitor activity for suspicious behavior
+- Prompt detection and response
+
+> Source: [[sources/developers-playbook-llm]], p. 142-143
+
+**Fostering security culture:**
+- **Training and awareness** — Educate team on supply chain security, including foundation models and training datasets
+- **Incident response planning** — Develop and update plans addressing supply chain threats and zero-day disclosures
+
+> Source: [[sources/developers-playbook-llm]], p. 143
+
+### LLM-Specific Security Testing Tools
+
+**Traditional AST tools (SAST, DAST, IAST) insufficient for LLM-specific risks.** Emerging specialized tools:
+
+#### TextAttack
+- **Type:** Python framework for adversarial testing of NLP models
+- **License:** MIT (open source)
+- **Capabilities:**
+  - Modular architecture for customizable attack strategies
+  - Simulate adversarial examples to reveal weaknesses
+  - Detailed reports on attack methodologies, success rates, model responses
+- **Use:** Enhance model resilience, security assessments
+
+#### Garak
+- **Creator:** Leon Derczynski (OWASP Top 10 LLM contributor)
+- **Type:** LLM vulnerability scanner (DAST-like)
+- **License:** Apache (open source)
+- **How it works:**
+  - Sends various prompts to models
+  - Analyzes outputs using detectors for unwanted content
+  - Customizable with plug-ins
+  - Generates detailed reports (test parameters, prompts, responses, scores)
+
+#### Microsoft Responsible AI Toolbox
+- **Type:** Open source suite for ethical AI
+- **License:** MIT
+- **Capabilities:**
+  - Assess, improve, monitor models for fairness, interpretability, privacy
+  - Integrated environment for responsible AI dimensions
+
+#### Giskard LLM Scan
+- **Type:** Ethical/safety assessment tool
+- **License:** Apache 2.0
+- **Capabilities:**
+  - Identify biases
+  - Detect toxic content
+  - Metrics for fairness, toxicity, inclusiveness
+  - Detailed reports highlighting ethical risks
+
+**Integration imperative:** Embed tools in CI/CD pipelines for automated, repeatable security checks with every build. Fosters security-first culture.
+
+> Source: [[sources/developers-playbook-llm]], p. 143-145
+
+### Supply Chain Artifact Management
+
+**Critical artifacts:**
+- **Model cards** — Model purpose, performance, biases
+- **ML-BOMs** — Components, datasets, dependencies
+
+**Three pillars for artifact tracking:**
+
+1. **Automated generation** — Generate at key development milestones
+2. **Secure storage** — Version-controlled, tamper-proof repositories
+3. **Accessibility** — Available to stakeholders with search functionality
+
+> Source: [[sources/developers-playbook-llm]], p. 145-146
+
+### Guardrails: Runtime Protection for LLMs
+
+**Parallel to WAFs/RASP in web applications.** Guardrails ensure LLMs operate within ethical, legal, safety parameters.
+
+#### Input Validation Guardrails
+
+**Prompt injection prevention:**
+- Monitor for unusual phrases, hidden characters, odd encodings
+- Prevent malicious LLM manipulation
+
+**Domain limitation:**
+- Keep LLM focused on relevant topics
+- Restrict/ignore irrelevant prompts
+- Reduces hallucination risk
+
+**Anonymization & secret detection:**
+- Users may input confidential data (emails, phone numbers, API keys)
+- **Risk:** Data logged, stored, transferred to third-party providers, used for training
+- **Solution:** Anonymize PII, redact sensitive data before LLM processing
+
+#### Output Validation Guardrails
+
+**Ethical screening:**
+- Filter toxic, inappropriate, hateful content
+- **Example:** Could have saved Tay from unchecked toxicity
+
+**Sensitive information protection:**
+- Prevent disclosure of PII or sensitive data in outputs
+
+**Code output monitoring:**
+- Detect unintended code generation (SQL injection, SSRF, XSS)
+
+**Compliance assurance:**
+- Tailor outputs for regulatory standards (health care, legal)
+- Keep responses within intended scope
+
+**Fact-checking & hallucination detection:**
+- Verify accuracy against trusted sources
+- Identify fictitious or irrelevant content
+- Ensure outputs remain grounded in reality
+
+> Source: [[sources/developers-playbook-llm]], p. 146-148
+
+#### Open Source vs. Commercial Guardrails
+
+**Open source examples:**
+- NVIDIA NeMo-Guardrails
+- Meta Llama Guard
+- Guardrails AI
+- Protect AI
+
+**Benefits:** Flexibility, community support, tailored solutions  
+**Cost:** Requires internal expertise and resources
+
+**Commercial examples:**
+- Prompt Security
+- Lakera Guard
+- WhyLabs LangKit
+- Lasso Security
+- PromptArmor
+- Cloudflare Firewall for AI
+
+**Benefits:** Out-of-box functionality, professional support, regular updates, advanced features
+
+**Best practice:** Mix custom and packaged guardrails (defense-in-depth)
+
+> Source: [[sources/developers-playbook-llm]], p. 148
+
+### Monitoring LLM Applications
+
+**Comprehensive monitoring extends beyond traditional components (web servers, middleware, databases) to:**
+- The model itself
+- Vector databases (for RAG)
+
+#### Logging Every Prompt and Response
+
+**Purpose:**
+- Understand user interaction patterns
+- Identify misuse or problematic outputs
+- Baseline for model performance over time
+- Diagnose issues, optimize behavior
+- Ensure compliance with data governance
+
+**Critical for:** Operational integrity and security throughout lifecycle
+
+#### Centralized Log and Event Management (SIEM)
+
+**Integration:** LLM-specific logs with traditional security logs
+
+**Enables:**
+- Holistic view of security posture
+- Correlation of LLM events with broader system events
+- Advanced threat detection
+
+**UEBA (User and Entity Behavior Analytics):**
+- Analyze patterns in user/entity behavior
+- Identify anomalies indicating security threats
+- Example: Unusual prompt patterns, spike in requests, repeated attempts to trigger prohibited content
+
+> Source: [[sources/developers-playbook-llm]], p. 149-150
+
+### Continuous Improvement
+
+**Establishing and tuning guardrails:**
+- Iterative process of refining input/output rules
+- Balance security with functionality
+- Adapt to emerging threats
+
+**Managing data access and quality:**
+- Ongoing vigilance over data sources
+- Ensure training/RAG data remains high-quality and secure
+
+**RLHF (Reinforcement Learning from Human Feedback):**
+- Align LLM with human values and safety standards
+- Use human feedback to guide model towards desirable behavior
+- Minimize harmful/biased outputs
+
+> Source: [[sources/developers-playbook-llm]], p. 154-156
 
 ## Related
 

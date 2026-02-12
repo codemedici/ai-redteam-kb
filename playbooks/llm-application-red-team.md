@@ -3,6 +3,7 @@ tags:
   - trust-boundary/agent-runtime
   - trust-boundary/model
   - type/playbook
+  - source/developers-playbook-llm
 description: "Adversarial testing of LLM-powered applications focusing on prompt injection, tool abuse, and data exfiltration attacks."
 ---
 # LLM Application Red Team
@@ -2445,3 +2446,136 @@ All findings include:
 - Testing automated deception deployment
 - Training and benchmarking offensive AI agents in controlled environments
 - Researching adversarial RL and adaptive attack strategies
+
+---
+
+## AI Red Teaming Principles (Developer's Playbook — Wilson)
+
+### Definition and Official Recognition
+
+> "An AI red team is a group of security professionals who adopt an adversarial approach to rigorously challenge the safety and security of applications using AI technology, such as an LLM. Their objective is to identify and exploit weaknesses in AI systems, much like an external attacker might, but to improve security rather than cause harm."
+> 
+> Source: [[sources/developers-playbook-llm]], p. 150
+
+**US Presidential Recognition (Executive Order, October 2023):**
+
+> "The term 'AI red-teaming' means a structured testing effort to find flaws and vulnerabilities in an AI system, often in a controlled environment and in collaboration with developers of AI. Artificial Intelligence red-teaming is most often performed by dedicated 'red teams' that adopt adversarial methods to identify flaws and vulnerabilities, such as harmful or discriminatory outputs from an AI system, unforeseen or undesirable system behaviors, limitations, or potential risks associated with the misuse of the system."
+> 
+> Source: Executive Order on Safe, Secure, and Trustworthy AI (October 2023)
+
+**Result:** US Artificial Intelligence Safety Institute (NIST) created dedicated working group on red teaming best practices.
+
+### Core Functions of AI Red Teams
+
+| Function | Description |
+|----------|-------------|
+| **Adversarial Attack Simulation** | Craft and execute attacks exploiting AI weaknesses (deceptive input manipulation, sensitive data extraction) |
+| **Vulnerability Assessment** | Systematic review of AI systems to identify exploitable weaknesses in infrastructure, training data, and model outputs |
+| **Risk Analysis** | Evaluate potential impact of vulnerabilities; provide risk-based assessment to prioritize remediation |
+| **Mitigation Strategy Development** | Recommend defenses and countermeasures against identified threats |
+| **Awareness and Training** | Educate developers, security teams, stakeholders on AI security threats and best practices |
+
+> Source: [[sources/developers-playbook-llm]], p. 150-151
+
+### Why AI Red Teams Are Essential
+
+**Traditional security measures insufficient for LLM-specific vulnerabilities.** Red teams provide holistic, adversarial approach examining technical issues and broader human/organizational implications.
+
+#### Unique LLM Risks Requiring Red Team Assessment
+
+**[[attacks/training-data-memorization|Hallucinations]]:**
+- Simulate advanced testing scenarios to identify triggers
+- Understand and mitigate risks beyond automated testing capabilities
+
+**Data Bias:**
+- Assess technical aspects AND systemic issues in data collection/processing
+- External perspective uncovers blind spots overlooked by internal teams focused on functionality
+- Identify unfair or unethical outcomes
+
+**Excessive Agency:**
+- Requires continuous, creative testing to probe model's behavioral limits
+- Identify when model acts beyond intended scope
+- Validate safeguards against unintended autonomous actions
+
+**[[attacks/prompt-injection]]:**
+- Exploit how LLMs process input to produce unintended outcomes
+- Simulate sophisticated attack vectors challenging LLM's ability to handle adversarial inputs safely
+- Test innovative thinking against evolving attack patterns
+
+**Overreliance Risks:**
+- Involve technical, human, and organizational factors
+- Evaluate broader impact of LLM integration into decision-making processes
+- Highlight areas where automation might undermine critical thinking or operational security
+
+> "The necessity of a red team in LLM application security is not merely a matter of adding another layer of defense; it's about adopting a comprehensive and proactive approach to security that addresses the full spectrum of risks—from the technical to the human."
+> 
+> Source: [[sources/developers-playbook-llm]], p. 151-152
+
+### Red Teams vs. Penetration Tests
+
+| Aspect | Penetration Test | Red Team |
+|--------|------------------|----------|
+| **Objective** | Identify and exploit specific vulnerabilities | Emulate realistic cyberattacks to test response capabilities |
+| **Scope** | Focused on specific systems, networks, or applications | Broad: social engineering, physical security, network security |
+| **Duration** | Short-term (days to weeks) | Long-term (weeks to months) to simulate persistent threats |
+| **Frequency** | Regular intervals or compliance assessments | Frequent or continuous |
+| **Approach** | Tactical: uncover specific technical vulnerabilities | Strategic: reveal systemic weaknesses and organizational response |
+| **Reporting** | Detailed vulnerability list with remediation steps | Comprehensive security posture assessment with holistic improvement recommendations |
+
+**Red teaming for LLMs:**
+- **Point-in-time pen test:** Identifies exploitable vulnerabilities at specific moment
+- **Ongoing red team:** Dynamic process simulating real-world attacks across entire digital and physical spectrum
+- **LLM attack surface:** Vast and qualitatively different from traditional applications
+- **Includes:** Technical vulnerabilities + organizational, behavioral, psychological security aspects
+- **Responsible/ethical outcomes:** Extremely difficult for fully automated testing
+
+> Source: [[sources/developers-playbook-llm]], p. 152-153
+
+### Tools and Approaches
+
+#### Red Team Automation: PyRIT
+
+**PyRIT (Python Risk Identification Toolkit for generative AI)**
+- **Developer:** Microsoft (February 2024)
+- **Status:** Open source
+- **Origin:** Evolved from earlier internal Microsoft tools
+
+**Purpose:** Augment (not replace) AI red teams
+
+**Capabilities:**
+- Automate aspects of red teaming process
+- Efficiently uncover potential weaknesses (adversarial attacks, data poisoning)
+- Streamline detection to free human red teamers for strategic, complex attack simulations
+- Enable creative vulnerability exploration
+
+**Philosophy:** Combination of automation and human expertise deepens security testing, ensuring resilience against broad spectrum of cyber threats.
+
+> Source: [[sources/developers-playbook-llm]], p. 153
+
+#### Red Team as a Service: HackerOne
+
+**HackerOne AI Safety Red Teaming Service**
+
+**Use case:** Organizations lacking time, resources, or expertise for in-house AI red teams
+
+**Benefits:**
+- Flexible "as-a-service" approach
+- Access specialized skills without significant internal investment
+- Crowdsourced security professionals
+- Thorough, creative adversarial testing tailored to AI vulnerabilities
+- External expertise for identifying and mitigating threats
+- Flexibility and scalability aligned with organizational needs
+
+> Source: [[sources/developers-playbook-llm]], p. 153-154
+
+### Integration into Development Process
+
+**AI red teaming is essential part of LLMOps security lifecycle:**
+- **Validation stage:** Extend security testing to include AI-specific vulnerability scanners and red teaming exercises
+- **Continuous process:** Not one-time assessment; ongoing dynamic testing
+- **Complements automation:** Works alongside automated security tools (Garak, TextAttack, etc.)
+- **Pre-deployment requirement:** Validate security posture before production exposure
+
+**See:** [[defenses/mlops-security#LLMOps Security Lifecycle]] for integration points
+
+---

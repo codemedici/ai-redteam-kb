@@ -103,6 +103,22 @@ The 2025 update recognizes sophisticated attack chains:
 
 ---
 
+## OWASP GenAI Red Teaming — Phased Evaluation
+
+The OWASP GenAI Red Teaming Guide (2025) structures assessments into four evaluation phases, each with distinct targets:
+
+1. **Model** — Alignment, robustness, bias testing, MDLC security (model provenance, malware injection, data pipeline security). Deliverables: adversarial robustness assessment, defensive mechanism evaluation, ethics/bias analysis.
+2. **Implementation** — Bypassing guardrails (system prompts), RAG poisoning, testing controls like model firewalls/proxies.
+3. **System** — Exploitation of non-model components, supply chain vulnerabilities, standard red teaming of hosting infrastructure and data stores.
+4. **Runtime** — Business process failures, multi-agent interaction security, over-reliance, social engineering, downstream impact on consumers of generated content.
+
+**Quick scope questions (OWASP-aligned):**
+- Which applications are business-critical or touch sensitive data?
+- Are we evaluating model behavior, app integration, system/pipeline, or runtime behavior?
+- What threat categories are top priority (prompt injection, data leakage, RAG poisoning, agent/tool risks, bias/harms)?
+
+> Source: [[sources/bibliography#Red-Teaming AI]], OWASP GenAI Red Teaming Guide (2025)
+
 ## Framework Cross-References
 
 ## Mapping Approach
@@ -121,7 +137,7 @@ Findings mapped to:
 - **Techniques**: Specific attack methods (e.g., AML.T0051: LLM Prompt Injection)
 - **Case Studies**: Real-world incidents demonstrating pattern
 
-[[frameworks/atlas/atlas|Browse ATLAS reference]] | [[frameworks/atlas/tactics|Tactics overview]] | [[frameworks/atlas/techniques|Techniques catalog]]
+[[frameworks/atlas/MITRE-ATLAS|Browse ATLAS reference]] | [[frameworks/atlas/tactics|Tactics overview]] | [[frameworks/atlas/techniques|Techniques catalog]]
 
 ### OWASP LLM Top 10 (Risk Framework)
 

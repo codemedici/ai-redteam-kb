@@ -246,7 +246,7 @@ After training, GAN generates profiles indistinguishable from real training data
 
 - **Similar Attacks**: [[attacks/membership-inference-attacks]], [[attacks/model-extraction]]
 - **Defenses**: [[defenses/differential-privacy]], [[defenses/output-monitoring-validation]]
-- **Framework**: [[frameworks/trust-boundary-model|Trust Boundary Model]] (model API boundary)
+- **Framework**: [[playbooks/cross-boundary-attack-chains|Cross-Boundary Attack Chains]] (model API boundary)
 
 ---
 

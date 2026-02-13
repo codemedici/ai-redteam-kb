@@ -1,6 +1,6 @@
 ---
 tags:
-  - maestro-framework
+  - type/framework
   - methodology
   - source/securing-ai-agents
   - trust-boundary/agent-runtime

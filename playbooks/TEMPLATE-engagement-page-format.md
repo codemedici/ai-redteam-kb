@@ -279,7 +279,7 @@ This engagement produces findings mapped to:
 - [AML.T####]: [Technique name]
 - [AML.T####]: [Technique name]
 
-[[frameworks/atlas/atlas|Full ATLAS reference]]
+[[frameworks/atlas/MITRE-ATLAS|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 

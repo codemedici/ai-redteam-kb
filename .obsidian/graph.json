@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:frameworks/atlas/atlas -file:frameworks/atlas/case-studies/case-studies -file:frameworks/atlas/tactics/tactics -file:frameworks/atlas/techniques/techniques -file:playbooks/engagements -file:ai-redteam-kb -file:examples -file:ARCHITECTURE-PLAN -file:README -file:bibliography -file:structural-observations -file:TEMPLATE",
+  "search": "-path:frameworks/atlas/atlas.md -path:frameworks/atlas/case-studies/case-studies.md -path:frameworks/atlas/tactics/tactics.md -path:frameworks/atlas/techniques/techniques.md -path:playbooks/engagements.md -path:ai-redteam-kb.md -file:examples -file:ARCHITECTURE-PLAN -file:README -file:bibliography -file:structural-observations -file:TEMPLATE",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -81,6 +81,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.06016588144426668,
+  "scale": 0.054141224534724475,
   "close": false
 }

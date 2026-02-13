@@ -76,7 +76,7 @@ Robust + flexible to adapt:
 Detail relevant laws, standards, best practices:
 - **Regulations**: GDPR (data privacy), EU AI Act (high-risk requirements), China CAC (content monitoring)
 - **Standards**: ISO/IEC 42001 (AI management), NIST AI RMF, CSA CCM for GenAI (see [[frameworks/csa-ccm-genai-mapping]])
-- **Best Practices**: OWASP Top 10 LLM (see [[frameworks/owasp-top10-llm-2025-evolution]]), MITRE ATLAS
+- **Best Practices**: OWASP Top 10 LLM (see [[frameworks/OWASP-top-10-LLM]]), MITRE ATLAS
 
 ---
 
@@ -208,7 +208,7 @@ Penalties for non-compliance:
 
 **Risk Assessment Workflow**:
 1. **Identify Assets**: Models, training data, APIs, vector DBs
-2. **Threat Modeling**: Use MITRE ATLAS (see resources below) + [[frameworks/ai-threat-modeling]]
+2. **Threat Modeling**: Use MITRE ATLAS (see resources below) + [[playbooks/cross-boundary-attack-chains|Cross-Boundary Attack Chains]]
 3. **Vulnerability Scanning**: AVID, NIST NVD (AI-specific CVEs)
 4. **Impact Analysis**: Classify by severity (critical/high/medium/low)
 5. **Risk Prioritization**: Likelihood × Impact matrix
@@ -509,7 +509,7 @@ Penalties for non-compliance:
 - **Exfiltration & Impact**: API data theft, denial of service, model integrity erosion, IP theft
 
 **Applications**:
-- **Threat Modeling**: Map attack paths specific to your GenAI systems (see [[frameworks/ai-threat-modeling]])
+- **Threat Modeling**: Map attack paths specific to your GenAI systems (see [[playbooks/cross-boundary-attack-chains|Cross-Boundary Attack Chains]])
 - **Security Policy Development**: Align controls to ATLAS tactics
 - **Incident Response Planning**: Pre-plan responses to known attack patterns
 - **Education**: Train developers, security teams on AI-specific threats
@@ -589,7 +589,7 @@ Penalties for non-compliance:
 
 **Purpose**: Catalog of most critical LLM security risks.
 
-**Top Risks** (see [[frameworks/owasp-top10-llm-2025-evolution]]):
+**Top Risks** (see [[frameworks/OWASP-top-10-LLM]]):
 1. Prompt Injection
 2. Insecure Output Handling
 3. Training Data Poisoning
@@ -612,13 +612,12 @@ Penalties for non-compliance:
 
 ## Related Playbooks & Frameworks
 
-- [[frameworks/ai-governance-coordination]] — IAEA-inspired global governance
-- [[frameworks/ai-regulation-landscape]] — Country-specific compliance requirements
+- [[playbooks/cross-boundary-attack-chains|Cross-Boundary Attack Chains]] — Multi-stage attack patterns
 - [[frameworks/llmops-framework]] — Operational integration of security into AI lifecycle
 - [[playbooks/llm-application-red-team]] — Hands-on threat testing procedures
 - [[playbooks/rag-retrieval-assessment]] — RAG-specific security evaluation
 - [[defenses/llm-operational-resilience-monitoring]] — Continuous compliance monitoring
-- [[frameworks/owasp-top10-llm-2025-evolution]] — Application-layer risk catalog
+- [[frameworks/OWASP-top-10-LLM]] — Application-layer risk catalog
 
 ---
 

@@ -376,7 +376,7 @@ This engagement produces findings mapped to:
 - AML.T0059: Model Theft
 - AML.T0060: Backdoor Model
 
-[[frameworks/atlas/atlas|Full ATLAS reference]]
+[[frameworks/atlas/MITRE-ATLAS|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 

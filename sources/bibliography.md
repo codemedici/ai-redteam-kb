@@ -44,8 +44,8 @@ This note tracks PDF sources used to augment the AI Red Teaming Knowledge Base.
 
 ### Completed (2026-02-12)
 - **Generative AI Security** — 3/13 units extracted (Tier 1: governance/compliance focus)
-  - u1: Global AI Governance & Coordination → `frameworks/ai-governance-coordination.md`
-  - u2: Global AI Regulation Landscape → `frameworks/ai-regulation-landscape.md`
+  - u1: Global AI Governance & Coordination → deleted (corporate/policy, not practitioner content)
+  - u2: Global AI Regulation Landscape → deleted (corporate/policy, not practitioner content)
   - u3: GenAI Security Program Blueprint → `playbooks/genai-security-program-blueprint.md`
 
 ### Paused

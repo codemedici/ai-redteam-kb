@@ -363,7 +363,7 @@ This engagement produces findings mapped to:
 - AML.T0057: LLM Prompt Injection via Tool Output
 - AML.T0061: Agent Goal Hijacking (emerging technique)
 
-[[frameworks/atlas/atlas|Full ATLAS reference]]
+[[frameworks/atlas/MITRE-ATLAS|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 

@@ -400,7 +400,7 @@ This engagement produces findings mapped to:
 
 **Case Studies**: [[frameworks/atlas/case-studies/chatgpt-conversation-exfiltration|ChatGPT Conversation Exfiltration]], [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]]
 
-[[frameworks/atlas/atlas|Full ATLAS reference]]
+[[frameworks/atlas/MITRE-ATLAS|Full ATLAS reference]]
 
 ### OWASP LLM Top 10
 

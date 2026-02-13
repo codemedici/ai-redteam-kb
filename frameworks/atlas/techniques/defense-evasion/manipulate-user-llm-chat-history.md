@@ -2,7 +2,7 @@
 id: manipulate-user-llm-chat-history
 title: "AML.T0092: Manipulate User LLM Chat History"
 sidebar_label: "Manipulate User LLM Chat History"
-sidebar_position: 8
+sidebar_position: 93
 ---
 
 # AML.T0092: Manipulate User LLM Chat History
@@ -16,24 +16,15 @@ Chat interfaces (especially desktop interfaces) often do not show the injected p
 ## Metadata
 
 - **Technique ID:** AML.T0092
-- **Created:** October 27, 2025
-- **Last Modified:** November 4, 2025
+- **Created:** 2025-10-27
+- **Last Modified:** 2025-11-04
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 
-- 
+## Case Studies (2)
 
-## Case Studies (1)
-
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-
-Many LLM desktop applications do not show the injected prompt for any ongoing chat, as they update chat history only once when initially opening it. This gave the attacker the opportunity to cover their tracks by manipulating the user’s conversation history directly via the LLM’s API. The attacker could also overwrite or delete messages to prevent detection of their actions.
-
-## References
-
-MITRE Corporation. *Manipulate User LLM Chat History (AML.T0092)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0092
+- [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AIKatz: Attacking LLM Desktop Applications]]
+- [[frameworks/atlas/case-studies/exposed-clawdbot-control-interfaces-leads-to-credential-access-and-execution|Exposed ClawdBot Control Interfaces Leads to Credential Access and Execution]]

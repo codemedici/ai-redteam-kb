@@ -1,38 +1,31 @@
 ---
-id: acquire-infrastructure-ai-development-workspaces
-title: "AML.T0008.000: AI Development Workspaces"
-sidebar_label: "AI Development Workspaces"
-sidebar_position: 10
+id: acquire-infrastructure-AI-dev-workspaces
+title: "AML.T0008.003: Physical Countermeasures"
+sidebar_label: "Physical Countermeasures"
+sidebar_position: 8004
 ---
 
-# AML.T0008.000: AI Development Workspaces
+# AML.T0008.003: Physical Countermeasures
 
-Developing and staging AI attacks often requires expensive compute resources.
-Adversaries may need access to one or many GPUs in order to develop an attack.
-They may try to anonymously use free resources such as Google Colaboratory, or cloud resources such as AWS, Azure, or Google Cloud as an efficient way to stand up temporary resources to conduct operations.
-Multiple workspaces may be used to avoid detection.
+Adversaries may acquire or manufacture physical countermeasures to aid or support their attack.
+
+These components may be used to disrupt or degrade the model, such as adversarial patterns printed on stickers or T-shirts, disguises, or decoys. They may also be used to disrupt or degrade the sensors used in capturing data, such as laser pointers, light bulbs, or other tools.
 
 ## Metadata
 
-- **Technique ID:** AML.T0008.000
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Technique ID:** AML.T0008.003
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-03-12
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0008 — Acquire Infrastructure
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
-
-The researchers were able to use TensorFlow Research Cloud via their academic credentials.
-
-## References
-
-MITRE Corporation. *AI Development Workspaces (AML.T0008.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0008.000
+- [[frameworks/atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|Face Identification System Evasion via Physical Countermeasures]]

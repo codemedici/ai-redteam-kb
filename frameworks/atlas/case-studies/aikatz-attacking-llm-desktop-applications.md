@@ -1,13 +1,11 @@
 ---
 id: aikatz-attacking-llm-desktop-applications
 title: "AML.CS0036: AIKatz: Attacking LLM Desktop Applications"
-sidebar_label: "AIKatz: Attacking LLM Desktop Applications"
+type: case-study
 sidebar_position: 37
 ---
 
 # AML.CS0036: AIKatz: Attacking LLM Desktop Applications
-
-## Summary
 
 Researchers at Lumia have demonstrated that it is possible to extract authentication tokens from the memory of LLM Desktop Applications. An attacker could then use those tokens to impersonate as the victim to the LLM backed, thereby gaining access to the victim’s conversations as well as the ability to interfere in future conversations. The attacker’s access would allow them the ability to directly inject prompts to change the LLM’s behavior, poison the LLM’s context to have persistent effects, manipulate the user’s conversation history to cover their tracks, and ultimately impact the confidentiality, integrity, and availability of the system. The researchers demonstrated this on Anthropic Claude, Microsoft M365 Copilot, and OpenAI ChatGPT.
 
@@ -18,15 +16,13 @@ Vendor Responses to Responsible Disclosure:
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0036
-- **Incident Date:** 2025
+- **ID:** AML.CS0036
+- **Incident Date:** 2025-01-01
 - **Type:** exercise
 - **Target:** LLM Desktop Applications (Claude, ChatGPT, Copilot)
 - **Actor:** Lumia Security
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Valid Accounts
 
@@ -66,13 +62,13 @@ The attacker sent malicious prompts directly to the LLM under any ongoing conver
 
 ### Step 7: Thread
 
-**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-thread|AML.T0080.001: Thread]]
+**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-memory|AML.T0080.001: Thread]]
 
 The attacker could craft malicious prompts that manipulate the context of a chat thread, an effect that would persist for the duration of the thread.
 
 ### Step 8: Memory
 
-**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-memory|AML.T0080.000: Memory]]
+**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-thread|AML.T0080.000: Memory]]
 
 The attacker could then craft malicious prompts that manipulate the LLM’s memory to achieve a persistent effect. Any change in memory would also propagate to any new chat threads.
 
@@ -106,51 +102,6 @@ The attacker could delete all chats the victim has, and any they are opening, th
 
 The attacker could spam messages or prompts to reach the LLM’s rate-limits against bots, to cause it to ban the victim altogether.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/discovery/process-discovery|AML.T0089: Process Discovery]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/credential-access/os-credential-dumping|AML.T0090: OS Credential Dumping]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/lateral-movement/use-alternate-authentication-material/alternate-auth-application-access-token|AML.T0091.000: Application Access Token]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-thread|AML.T0080.001: Thread]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-memory|AML.T0080.000: Memory]]
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/defense-evasion/manipulate-user-llm-chat-history|AML.T0092: Manipulate User LLM Chat History]]
-
-**Step 10:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
-
-**Step 11:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
-
-**Step 12:**
-- Technique: [[frameworks/atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]
-
-**Step 13:**
-- Technique: [[frameworks/atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]
-
-## External References
-
-- AIKatz – All Your Chats Are Belong To Us Available at: https://www.lumia.security/blog/aikatz
-
 ## References
 
-MITRE Corporation. *AIKatz: Attacking LLM Desktop Applications (AML.CS0036)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0036
+1. [AIKatz – All Your Chats Are Belong To Us](https://www.lumia.security/blog/aikatz)

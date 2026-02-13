@@ -1,13 +1,11 @@
 ---
 id: backdoor-attack-on-deep-learning-models-in-mobile-apps
 title: "AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps"
-sidebar_label: "Backdoor Attack on Deep Learning Models in Mobile Apps"
+type: case-study
 sidebar_position: 14
 ---
 
 # AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps
-
-## Summary
 
 Deep learning models are increasingly used in mobile applications as critical components.
 Researchers from Microsoft Research demonstrated that many deep learning models deployed in mobile apps are vulnerable to backdoor attacks via "neural payload injection."
@@ -15,15 +13,13 @@ They conducted an empirical study on real-world mobile deep learning apps collec
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0013
-- **Incident Date:** 2021
+- **ID:** AML.CS0013
+- **Incident Date:** 2021-01-18
 - **Type:** exercise
 - **Target:** ML-based Android Apps
 - **Actor:** Yuanchun Li, Jiayi Hua, Haoyu Wang, Chunyang Chen, Yunxin Liu
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Search Application Repositories
 
@@ -72,7 +68,7 @@ To verify the success of the attack, the researchers confirmed the app did not c
 
 ### Step 7: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-hardware|AML.T0010.003: Model]]
 
 In practice, the malicious APK would need to be installed on victim's devices via a supply chain compromise.
 
@@ -96,42 +92,6 @@ Presenting the visual trigger causes the victim model to be bypassed.
 The researchers demonstrated this can be used to evade ML models in
 several safety-critical apps in the Google Play store.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017.000: Adversarial AI Attacks]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-modify-architecture|AML.T0018.001: Modify AI Model Architecture]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]
-
-**Step 10:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-## External References
-
-- DeepPayload: Black-box Backdoor Attack on Deep Learning Models through Neural Payload Injection Available at: https://arxiv.org/abs/2101.06896
-
 ## References
 
-MITRE Corporation. *Backdoor Attack on Deep Learning Models in Mobile Apps (AML.CS0013)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0013
+1. [DeepPayload: Black-box Backdoor Attack on Deep Learning Models through Neural Payload Injection](https://arxiv.org/abs/2101.06896)

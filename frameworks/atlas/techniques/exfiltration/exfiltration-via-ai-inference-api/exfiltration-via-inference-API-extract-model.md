@@ -1,36 +1,28 @@
 ---
-id: exfiltration-via-ai-inference-api-extract-ai-model
-title: "AML.T0024.002: Extract AI Model"
-sidebar_label: "Extract AI Model"
-sidebar_position: 4
+id: exfiltration-via-inference-API-extract-model
+title: "AML.T0024.000: Infer Training Data Membership"
+sidebar_label: "Infer Training Data Membership"
+sidebar_position: 24001
 ---
 
-# AML.T0024.002: Extract AI Model
+# AML.T0024.000: Infer Training Data Membership
 
-Adversaries may extract a functional copy of a private model.
-By repeatedly querying the victim's [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], the adversary can collect the target model's inferences into a dataset.
-The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
+Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.
+Some strategies make use of a shadow model that could be obtained via [Train Proxy via Replication](/techniques/AML.T0005.001), others use statistics of model prediction scores.
 
-Adversaries may extract the model to avoid paying per query in an artificial-intelligence-as-a-service (AIaaS) setting.
-Model extraction is used for [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AI Intellectual Property Theft]].
+This can cause the victim model to leak private information, such as PII of those in the training set or other forms of protected IP.
 
 ## Metadata
 
-- **Technique ID:** AML.T0024.002
-- **Created:** May 13, 2021
-- **Last Modified:** December 23, 2025
+- **Technique ID:** AML.T0024.000
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-11-06
 - **Maturity:** feasible
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0024 — Exfiltration via AI Inference API
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Extract AI Model (AML.T0024.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0024.002
+- [[frameworks/atlas/tactics/exfiltration|Exfiltration]]

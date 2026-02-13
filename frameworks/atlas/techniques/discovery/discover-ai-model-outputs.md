@@ -2,7 +2,7 @@
 id: discover-ai-model-outputs
 title: "AML.T0063: Discover AI Model Outputs"
 sidebar_label: "Discover AI Model Outputs"
-sidebar_position: 5
+sidebar_position: 64
 ---
 
 # AML.T0063: Discover AI Model Outputs
@@ -13,28 +13,15 @@ Model outputs may enable the adversary to identify weaknesses in the model and d
 ## Metadata
 
 - **Technique ID:** AML.T0063
-- **Created:** March 12, 2025
-- **Last Modified:** March 12, 2025
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-03-12
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (2)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/bypassing-cylance-s-ai-malware-detection|AML.CS0003: Bypassing Cylance's AI Malware Detection]]
-
-The researchers enabled verbose logging, which exposes the inner workings of the ML model, specifically around reputation scoring and model ensembling.
-
-### [[frameworks/atlas/case-studies/proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
-
-The researchers discovered that ProofPoint's Email Protection left model output scores in email headers.
-
-## References
-
-MITRE Corporation. *Discover AI Model Outputs (AML.T0063)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0063
+- [[frameworks/atlas/case-studies/bypassing-cylance-s-ai-malware-detection|Bypassing Cylance's AI Malware Detection]]
+- [[frameworks/atlas/case-studies/proofpoint-evasion|ProofPoint Evasion]]

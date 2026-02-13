@@ -18,21 +18,14 @@ Access to an AI model may require access to the system housing the model, the mo
 ## Metadata
 
 - **Tactic ID:** AML.TA0000
-- **Created:** May 13, 2021
-- **Last Modified:** October 13, 2025
-
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-10-13
 
 ## Techniques (4)
 
 The following techniques can be used to achieve this tactic:
 
-
 - [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040]] — AI Model Inference API Access (demonstrated)
-- [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]] — AI-Enabled Product or Service (realized)
 - [[frameworks/atlas/techniques/ai-model-access/physical-environment-access|AML.T0041]] — Physical Environment Access (demonstrated)
 - [[frameworks/atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044]] — Full AI Model Access (demonstrated)
-
-
-## References
-
-MITRE Corporation. *AI Model Access (AML.TA0000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0000
+- [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047]] — AI-Enabled Product or Service (realized)

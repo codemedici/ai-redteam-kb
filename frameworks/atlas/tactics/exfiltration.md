@@ -17,22 +17,19 @@ Techniques for getting data out of a target network typically include transferri
 ## Metadata
 
 - **Tactic ID:** AML.TA0010
-- **Created:** January 24, 2022
-- **Last Modified:** April 9, 2025
+- **Created:** 2022-01-24
+- **Last Modified:** 2025-04-09
 - **MITRE ATT&CK Reference:** [TA0010](https://attack.mitre.org/tactics/TA0010/)
 
-## Techniques (6)
+## Techniques (8)
 
 The following techniques can be used to achieve this tactic:
 
-
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-extract-model|AML.T0024.000]] — Infer Training Data Membership (feasible)
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-invert-model|AML.T0024.001]] — Invert AI Model (feasible)
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-membership-inference|AML.T0024.002]] — Extract AI Model (feasible)
 - [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]] — Exfiltration via Cyber Means (realized)
 - [[frameworks/atlas/techniques/exfiltration/extract-llm-system-prompt|AML.T0056]] — Extract LLM System Prompt (feasible)
 - [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|AML.T0057]] — LLM Data Leakage (demonstrated)
 - [[frameworks/atlas/techniques/exfiltration/llm-response-rendering|AML.T0077]] — LLM Response Rendering (demonstrated)
 - [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086]] — Exfiltration via AI Agent Tool Invocation (demonstrated)
-
-
-## References
-
-MITRE Corporation. *Exfiltration (AML.TA0010)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0010

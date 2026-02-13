@@ -2,7 +2,7 @@
 id: ai-agent-tool-data-poisoning
 title: "AML.T0099: AI Agent Tool Data Poisoning"
 sidebar_label: "AI Agent Tool Data Poisoning"
-sidebar_position: 11
+sidebar_position: 100
 ---
 
 # AML.T0099: AI Agent Tool Data Poisoning
@@ -14,20 +14,10 @@ The content may be targeted such that it would often be retrieved by common quer
 ## Metadata
 
 - **Technique ID:** AML.T0099
-- **Created:** November 25, 2025
-- **Last Modified:** November 25, 2025
+- **Created:** 2025-11-25
+- **Last Modified:** 2025-11-25
 - **Maturity:** feasible
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
-
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *AI Agent Tool Data Poisoning (AML.T0099)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0099
+- [[frameworks/atlas/tactics/persistence|Persistence]]

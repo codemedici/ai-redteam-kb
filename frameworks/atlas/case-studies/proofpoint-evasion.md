@@ -1,27 +1,23 @@
 ---
 id: proofpoint-evasion
 title: "AML.CS0008: ProofPoint Evasion"
-sidebar_label: "ProofPoint Evasion"
+type: case-study
 sidebar_position: 9
 ---
 
 # AML.CS0008: ProofPoint Evasion
 
-## Summary
-
 Proof Pudding (CVE-2019-20634) is a code repository that describes how ML researchers evaded ProofPoint's email protection system by first building a copy-cat email protection ML model, and using the insights to bypass the live system. More specifically, the insights allowed researchers to craft malicious emails that received preferable scores, going undetected by the system. Each word in an email is scored numerically based on multiple variables and if the overall score of the email is too low, ProofPoint will output an error, labeling it as SPAM.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0008
-- **Incident Date:** 2019
+- **ID:** AML.CS0008
+- **Incident Date:** 2019-09-09
 - **Type:** exercise
 - **Target:** ProofPoint Email Protection System
 - **Actor:** Researchers at Silent Break Security
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Discover AI Model Outputs
 
@@ -58,30 +54,9 @@ Examples of bad scoring samples include "software", "99", and "unsub".
 
 Finally, these insights from the "offline" proxy model allowed the researchers to create malicious emails that received preferable scores from the real ProofPoint email protection system, hence bypassing it.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-## External References
-
-- National Vulnerability Database entry for CVE-2019-20634 Available at: https://nvd.nist.gov/vuln/detail/CVE-2019-20634
-- 2019 DerbyCon presentation "42: The answer to life, the universe, and everything offensive security" Available at: https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf
-- Proof Pudding (CVE-2019-20634) Implementation on GitHub Available at: https://github.com/moohax/Proof-Pudding
-- 2019 DerbyCon video presentation "42: The answer to life, the universe, and everything offensive security" Available at: https://www.youtube.com/watch?v=CsvkYoxtexQ&ab-channel=AdrianCrenshaw
-
 ## References
 
-MITRE Corporation. *ProofPoint Evasion (AML.CS0008)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0008
+1. [National Vulnerability Database entry for CVE-2019-20634](https://nvd.nist.gov/vuln/detail/CVE-2019-20634)
+2. [2019 DerbyCon presentation "42: The answer to life, the universe, and everything offensive security"](https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf)
+3. [Proof Pudding (CVE-2019-20634) Implementation on GitHub](https://github.com/moohax/Proof-Pudding)
+4. [2019 DerbyCon video presentation "42: The answer to life, the universe, and everything offensive security"](https://www.youtube.com/watch?v=CsvkYoxtexQ&ab-channel=AdrianCrenshaw)

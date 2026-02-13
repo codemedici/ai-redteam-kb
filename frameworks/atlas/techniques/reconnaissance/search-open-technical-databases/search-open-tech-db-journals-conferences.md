@@ -1,8 +1,8 @@
 ---
-id: search-open-technical-databases-journals-and-conference-proceedings
+id: search-open-tech-db-journals-conferences
 title: "AML.T0000.000: Journals and Conference Proceedings"
 sidebar_label: "Journals and Conference Proceedings"
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # AML.T0000.000: Journals and Conference Proceedings
@@ -15,20 +15,14 @@ This information can be used by adversaries to implement the paper.
 ## Metadata
 
 - **Technique ID:** AML.T0000.000
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** feasible
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0000 — Search Open Technical Databases
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Journals and Conference Proceedings (AML.T0000.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0000.000
+- [[frameworks/atlas/tactics/reconnaissance|Reconnaissance]]

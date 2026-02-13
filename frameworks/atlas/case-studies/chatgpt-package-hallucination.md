@@ -1,27 +1,23 @@
 ---
 id: chatgpt-package-hallucination
 title: "AML.CS0022: ChatGPT Package Hallucination"
-sidebar_label: "ChatGPT Package Hallucination"
+type: case-study
 sidebar_position: 23
 ---
 
 # AML.CS0022: ChatGPT Package Hallucination
 
-## Summary
-
 Researchers identified that large language models such as ChatGPT can hallucinate fake software package names that are not published to a package repository. An attacker could publish a malicious package under the hallucinated name to a package repository. Then users of the same or similar large language models may encounter the same hallucination and ultimately download and execute the malicious package leading to a variety of potential harms.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0022
-- **Incident Date:** 2024
+- **ID:** AML.CS0022
+- **Incident Date:** 2024-06-01
 - **Type:** exercise
 - **Target:** ChatGPT users
 - **Actor:** Vulcan Cyber, Lasso Security
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: AI Model Inference API Access
 
@@ -47,7 +43,7 @@ In practice, the researchers uploaded an empty package to PyPI to track download
 
 ### Step 4: AI Software
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.001: AI Software]]
 
 A user of ChatGPT or other LLM may ask similar questions which lead to the same hallucinated package name and cause them to download the malicious package.
 
@@ -65,33 +61,9 @@ The user would ultimately load the malicious package, allowing for arbitrary cod
 
 This could lead to a variety of harms to the end user or organization.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution/user-execution-malicious-package|AML.T0011.001: Malicious Package]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
-
-## External References
-
-- Vulcan18's "Can you trust ChatGPT's package recommendations?" Available at: https://vulcan.io/blog/ai-hallucinations-package-risk
-- Lasso Security Research: Diving into AI Package Hallucinations Available at: https://www.lasso.security/blog/ai-package-hallucinations
-- AIID Incident 731: Hallucinated Software Packages with Potential Malware Downloaded Thousands of Times by Developers Available at: https://incidentdatabase.ai/cite/731/
-- Slopsquatting: When AI Agents Hallucinate Malicious Packages Available at: https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/slopsquatting-when-ai-agents-hallucinate-malicious-packages
-
 ## References
 
-MITRE Corporation. *ChatGPT Package Hallucination (AML.CS0022)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0022
+1. [Vulcan18's "Can you trust ChatGPT's package recommendations?"](https://vulcan.io/blog/ai-hallucinations-package-risk)
+2. [Lasso Security Research: Diving into AI Package Hallucinations](https://www.lasso.security/blog/ai-package-hallucinations)
+3. [AIID Incident 731: Hallucinated Software Packages with Potential Malware Downloaded Thousands of Times by Developers](https://incidentdatabase.ai/cite/731/)
+4. [Slopsquatting: When AI Agents Hallucinate Malicious Packages](https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/slopsquatting-when-ai-agents-hallucinate-malicious-packages)

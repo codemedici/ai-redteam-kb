@@ -1,13 +1,11 @@
 ---
 id: shadowray
 title: "AML.CS0023: ShadowRay"
-sidebar_label: "ShadowRay"
+type: case-study
 sidebar_position: 24
 ---
 
 # AML.CS0023: ShadowRay
-
-## Summary
 
 Ray is an open-source Python framework for scaling production AI workflows. Ray's Job API allows for arbitrary remote execution by design. However, it does not offer authentication, and the default configuration may expose the cluster to the internet. Researchers at Oligo discovered that Ray clusters have been actively exploited for at least seven months. Adversaries can use victim organization's compute power and steal valuable information. The researchers estimate the value of the compromised machines to be nearly 1 billion USD.
 
@@ -15,15 +13,13 @@ Five vulnerabilities in Ray were reported to Anyscale, the maintainers of Ray. A
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0023
-- **Incident Date:** 2023
+- **ID:** AML.CS0023
+- **Incident Date:** 2023-09-05
 - **Type:** incident
 - **Target:** Multiple systems
 - **Actor:** Ray
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Active Scanning
 
@@ -63,7 +59,7 @@ The researchers found evidence of reverse shells on vulnerable clusters. They ca
 
 ### Step 6: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-hardware|AML.T0010.003: Model]]
 
 HuggingFace tokens could allow the adversary to replace the victim organization's models with malicious variants.
 
@@ -73,36 +69,9 @@ HuggingFace tokens could allow the adversary to replace the victim organization'
 
 Adversaries can cause financial harm to the victim organization. Exfiltrated credentials could be used to deplete credits or drain accounts. The GPU cloud resources themselves are costly. The researchers found evidence of cryptocurrency miners on vulnerable Ray clusters.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/collection/ai-artifact-collection|AML.T0035: AI Artifact Collection]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
-
-## External References
-
-- ShadowRay: First Known Attack Campaign Targeting AI Workloads Actively Exploited In The Wild Available at: https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild
-- ShadowRay: AI Infrastructure Is Being Exploited In the Wild Available at: https://protectai.com/threat-research/shadowray-ai-infrastructure-is-being-exploited-in-the-wild
-- CVE-2023-48022 Available at: https://nvd.nist.gov/vuln/detail/CVE-2023-48022
-- Anyscale Update on CVEs Available at: https://www.anyscale.com/blog/update-on-ray-cves-cve-2023-6019-cve-2023-6020-cve-2023-6021-cve-2023-48022-cve-2023-48023
-
 ## References
 
-MITRE Corporation. *ShadowRay (AML.CS0023)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0023
+1. [ShadowRay: First Known Attack Campaign Targeting AI Workloads Actively Exploited In The Wild](https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild)
+2. [ShadowRay: AI Infrastructure Is Being Exploited In the Wild](https://protectai.com/threat-research/shadowray-ai-infrastructure-is-being-exploited-in-the-wild)
+3. [CVE-2023-48022](https://nvd.nist.gov/vuln/detail/CVE-2023-48022)
+4. [Anyscale Update on CVEs](https://www.anyscale.com/blog/update-on-ray-cves-cve-2023-6019-cve-2023-6020-cve-2023-6021-cve-2023-48022-cve-2023-48023)

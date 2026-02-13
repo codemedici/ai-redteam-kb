@@ -1,13 +1,11 @@
 ---
 id: attempted-evasion-of-ml-phishing-webpage-detection-system
 title: "AML.CS0032: Attempted Evasion of ML Phishing Webpage Detection System"
-sidebar_label: "Attempted Evasion of ML Phishing Webpage Detection System"
+type: case-study
 sidebar_position: 33
 ---
 
 # AML.CS0032: Attempted Evasion of ML Phishing Webpage Detection System
-
-## Summary
 
 Adversaries create phishing websites that appear visually similar to legitimate sites. These sites are designed to trick users into entering their credentials, which are then sent to the bad actor. To combat this behavior, security companies utilize AI/ML-based approaches to detect phishing sites and block them in their endpoint security products.
 
@@ -15,15 +13,13 @@ In this incident, adversarial examples were identified in the logs of a commerci
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0032
-- **Incident Date:** 2022
+- **ID:** AML.CS0032
+- **Incident Date:** 2022-12-01
 - **Type:** incident
 - **Target:** Commercial ML Phishing Webpage Detector
 - **Actor:** Unknown
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Manual Modification
 
@@ -52,7 +48,7 @@ The visual similarity model used to detect brand impersonation was evaded. Howev
 
 ### Step 3: Phishing
 
-**Technique:** AML.T0052: Phishing
+**Technique:** [[frameworks/atlas/techniques/initial-access/phishing|AML.T0052: Phishing]]
 
 If the adversary can successfully evade detection, they can continue to operate their phishing websites and steal the victim's credentials.
 
@@ -62,25 +58,7 @@ If the adversary can successfully evade detection, they can continue to operate 
 
 The end user may experience a variety of harms including financial and privacy harms depending on the credentials stolen by the adversary.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-manual-modification|AML.T0043.003: Manual Modification]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-**Step 3:**
-- Technique: AML.T0052: Phishing
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
-
-## External References
-
-- "Real Attackers Don't Compute Gradients": Bridging the Gap Between Adversarial ML Research and Practice Available at: https://arxiv.org/abs/2212.14315
-- Real Attackers Don't Compute Gradients Supplementary Resources Available at: https://real-gradients.github.io/
-
 ## References
 
-MITRE Corporation. *Attempted Evasion of ML Phishing Webpage Detection System (AML.CS0032)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0032
+1. ["Real Attackers Don't Compute Gradients": Bridging the Gap Between Adversarial ML Research and Practice](https://arxiv.org/abs/2212.14315)
+2. [Real Attackers Don't Compute Gradients Supplementary Resources](https://real-gradients.github.io/)

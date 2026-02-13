@@ -2,12 +2,12 @@
 id: generate-deepfakes
 title: "AML.T0088: Generate Deepfakes"
 sidebar_label: "Generate Deepfakes"
-sidebar_position: 12
+sidebar_position: 89
 ---
 
 # AML.T0088: Generate Deepfakes
 
-Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[[Deepfake|deepfakes]]" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct Phishing or to evade AI applications such as biometric identity verification systems (see [[frameworks/atlas/techniques/initial-access/evade-ai-model|Evade AI Model]]).
+Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[deepfakes]( https://en.wikipedia.org/wiki/Deepfake)" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct [Phishing](/techniques/AML.T0052) or to evade AI applications such as biometric identity verification systems (see [Evade AI Model](/techniques/AML.T0015)).
 
 Manipulation of media has been possible for a long time, however GenAI reduces the skill and level of effort required, allowing adversaries to rapidly scale operations to target more users or systems. It also makes real-time manipulations feasible.
 
@@ -16,28 +16,15 @@ Adversaries may utilize open-source models and software that were designed for l
 ## Metadata
 
 - **Technique ID:** AML.T0088
-- **Created:** October 31, 2025
-- **Last Modified:** November 4, 2025
+- **Created:** 2025-10-31
+- **Last Modified:** 2025-11-04
 - **Maturity:** realized
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
 ## Case Studies (2)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
-
-The researchers use the gathered victim face images and the Faceswap tool to produce live deepfake videos which mimic the victim’s appearance.
-
-### [[frameworks/atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
-
-The bad actor used a mixture of real PII and falsified details with the ProKYC tool to generate a deepfaked identity document.
-
-## References
-
-MITRE Corporation. *Generate Deepfakes (AML.T0088)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0088
+- [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|Live Deepfake Image Injection to Evade Mobile KYC Verification]]
+- [[frameworks/atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|ProKYC: Deepfake Tool for Account Fraud Attacks]]

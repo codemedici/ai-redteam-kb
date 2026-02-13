@@ -1,8 +1,8 @@
 ---
-id: acquire-public-ai-artifacts-models
+id: acquire-public-AI-artifacts-models
 title: "AML.T0002.001: Models"
 sidebar_label: "Models"
-sidebar_position: 3
+sidebar_position: 2002
 ---
 
 # AML.T0002.001: Models
@@ -17,38 +17,21 @@ Acquired models are useful in advancing the adversary's operations and are frequ
 ## Metadata
 
 - **Technique ID:** AML.T0002.001
-- **Created:** May 13, 2021
-- **Last Modified:** February 28, 2023
+- **Created:** 2021-05-13
+- **Last Modified:** 2023-02-28
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0002 — Acquire Public AI Artifacts
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
 ## Case Studies (4)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
-
-The researchers gathered similar model architectures that the target translation services used.
-
-### [[frameworks/atlas/case-studies/gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
-
-The researchers obtained a reference implementation of a similar publicly available model called Grover.
-
-### [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|AML.CS0013: Backdoor Attack on Deep Learning Models in Mobile Apps]]
-
-The researchers acquired the apps' APKs from the Google Play store.
-They filtered the list of potential target applications by searching the code metadata for keywords related to TensorFlow or TFLite and their model binary formats (.tf and .tflite).
-The models were extracted from the APKs using Apktool.
-
-### [[frameworks/atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
-
-Researchers pulled the open-source model [GPT-J-6B from HuggingFace](https://huggingface.co/EleutherAI/gpt-j-6b).  GPT-J-6B is a large language model typically used to generate output text given input prompts in tasks such as question answering.
-
-## References
-
-MITRE Corporation. *Models (AML.T0002.001)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0002.001
+- [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]
+- [[frameworks/atlas/case-studies/gpt-2-model-replication|GPT-2 Model Replication]]
+- [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|Backdoor Attack on Deep Learning Models in Mobile Apps]]
+- [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]

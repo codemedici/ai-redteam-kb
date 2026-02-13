@@ -2,34 +2,24 @@
 id: llm-prompt-self-replication
 title: "AML.T0061: LLM Prompt Self-Replication"
 sidebar_label: "LLM Prompt Self-Replication"
-sidebar_position: 4
+sidebar_position: 62
 ---
 
 # AML.T0061: LLM Prompt Self-Replication
 
-An adversary may use a carefully crafted LLM Prompt Injection designed to cause the LLM to replicate the prompt as part of its output. This allows the prompt to propagate to other LLMs and persist on the system. The self-replicating prompt is typically paired with other malicious instructions (ex: [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|LLM Jailbreak]], [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|LLM Data Leakage]]).
+An adversary may use a carefully crafted [LLM Prompt Injection](/techniques/AML.T0051) designed to cause the LLM to replicate the prompt as part of its output. This allows the prompt to propagate to other LLMs and persist on the system. The self-replicating prompt is typically paired with other malicious instructions (ex: [LLM Jailbreak](/techniques/AML.T0054), [LLM Data Leakage](/techniques/AML.T0057)).
 
 ## Metadata
 
 - **Technique ID:** AML.T0061
-- **Created:** March 12, 2025
-- **Last Modified:** March 12, 2025
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-03-12
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/persistence|Persistence]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
-
-The self-replicating portion of the prompt causes the generated output to contain the malicious prompt, allowing the worm to propagate.
-
-## References
-
-MITRE Corporation. *LLM Prompt Self-Replication (AML.T0061)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0061
+- [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack|Morris II Worm: RAG-Based Attack]]

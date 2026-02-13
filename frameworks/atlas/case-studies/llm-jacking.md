@@ -1,13 +1,11 @@
 ---
 id: llm-jacking
 title: "AML.CS0030: LLM Jacking"
-sidebar_label: "LLM Jacking"
+type: case-study
 sidebar_position: 31
 ---
 
 # AML.CS0030: LLM Jacking
-
-## Summary
 
 The Sysdig Threat Research Team discovered that malicious actors utilized stolen credentials to gain access to cloud-hosted large language models (LLMs). The actors covertly gathered information about which models were enabled on the cloud service and created a reverse proxy for LLMs that would allow them to provide model access to cybercriminals.
 
@@ -19,15 +17,13 @@ Update as of April 2025: This attack is ongoing and evolving. This case study on
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0030
-- **Incident Date:** 2024
+- **ID:** AML.CS0030
+- **Incident Date:** 2024-05-06
 - **Type:** incident
 - **Target:** Cloud-Based LLM Services
 - **Actor:** Unknown
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Exploit Public-Facing Application
 
@@ -75,36 +71,9 @@ The adversaries then used [OAI Reverse Proxy](https://gitgud.io/khanon/oai-rever
 
 In addition to providing cybercriminals with covert access to LLM resources, the unauthorized use of these LLM models could cost victims thousands of dollars per day.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/discovery/cloud-service-discovery|AML.T0075: Cloud Service Discovery]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
-
-## External References
-
-- LLMjacking: Stolen Cloud Credentials Used in New AI Attack Available at: https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/
-- The Growing Dangers of LLMjacking: Evolving Tactics and Evading Sanctions Available at: https://sysdig.com/blog/growing-dangers-of-llmjacking/
-- LLMjacking targets DeepSeek Available at: https://sysdig.com/blog/llmjacking-targets-deepseek/
-- AIID Incident 898: Alleged LLMjacking Targets AI Cloud Services with Stolen Credentials Available at: https://incidentdatabase.ai/cite/898
-
 ## References
 
-MITRE Corporation. *LLM Jacking (AML.CS0030)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0030
+1. [LLMjacking: Stolen Cloud Credentials Used in New AI Attack](https://sysdig.com/blog/llmjacking-stolen-cloud-credentials-used-in-new-ai-attack/)
+2. [The Growing Dangers of LLMjacking: Evolving Tactics and Evading Sanctions](https://sysdig.com/blog/growing-dangers-of-llmjacking/)
+3. [LLMjacking targets DeepSeek](https://sysdig.com/blog/llmjacking-targets-deepseek/)
+4. [AIID Incident 898: Alleged LLMjacking Targets AI Cloud Services with Stolen Credentials](https://incidentdatabase.ai/cite/898)

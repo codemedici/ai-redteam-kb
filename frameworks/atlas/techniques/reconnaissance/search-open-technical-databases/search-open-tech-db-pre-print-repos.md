@@ -1,8 +1,8 @@
 ---
-id: search-open-technical-databases-pre-print-repositories
+id: search-open-tech-db-pre-print-repos
 title: "AML.T0000.001: Pre-Print Repositories"
 sidebar_label: "Pre-Print Repositories"
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # AML.T0000.001: Pre-Print Repositories
@@ -15,24 +15,18 @@ Searching pre-print repositories  provide adversaries with a relatively up-to-da
 ## Metadata
 
 - **Technique ID:** AML.T0000.001
-- **Created:** May 13, 2021
-- **Last Modified:** May 13, 2021
+- **Created:** 2021-05-13
+- **Last Modified:** 2021-05-13
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0000 — Search Open Technical Databases
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/reconnaissance|Reconnaissance]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/evasion-of-deep-learning-detector-for-malware-c-c-traffic|AML.CS0000: Evasion of Deep Learning Detector for Malware C&C Traffic]]
-
-We identified a machine learning based approach to malicious URL detection as a representative approach and potential target from the paper [URLNet: Learning a URL representation with deep learning for malicious URL detection](https://arxiv.org/abs/1802.03162), which was found on arXiv (a pre-print repository).
-
-## References
-
-MITRE Corporation. *Pre-Print Repositories (AML.T0000.001)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0000.001
+- [[frameworks/atlas/case-studies/evasion-of-deep-learning-detector-for-malware-c-c-traffic|Evasion of Deep Learning Detector for Malware C&C Traffic]]

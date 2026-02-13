@@ -2,49 +2,34 @@
 id: craft-adversarial-data-black-box-transfer
 title: "AML.T0043.002: Black-Box Transfer"
 sidebar_label: "Black-Box Transfer"
-sidebar_position: 9
+sidebar_position: 43003
 ---
 
 # AML.T0043.002: Black-Box Transfer
 
-In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via Create Proxy AI Model or [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|Train Proxy via Replication]]) they have full access to and are representative of the target model.
-The adversary uses [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|White-Box Optimization]] on the proxy models to generate adversarial examples.
+In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via [Create Proxy AI Model](/techniques/AML.T0005) or [Train Proxy via Replication](/techniques/AML.T0005.001)) they have full access to and are representative of the target model.
+The adversary uses [White-Box Optimization](/techniques/AML.T0043.000) on the proxy models to generate adversarial examples.
 If the set of proxy models are close enough to the target model, the adversarial example should generalize from one to another.
 This means that an attack that works for the proxy models will likely then work for the target model.
-If the adversary has [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], they may use [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] to confirm the attack is working and incorporate that information into their training process.
+If the adversary has [AI Model Inference API Access](/techniques/AML.T0040), they may use [Verify Attack](/techniques/AML.T0042) to confirm the attack is working and incorporate that information into their training process.
 
 ## Metadata
 
 - **Technique ID:** AML.T0043.002
-- **Created:** May 13, 2021
-- **Last Modified:** January 12, 2024
+- **Created:** 2021-05-13
+- **Last Modified:** 2024-01-12
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0043 — Craft Adversarial Data
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
 ## Case Studies (3)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
-
-The replicated models were used to generate adversarial examples that successfully transferred to the black-box translation services.
-
-### [[frameworks/atlas/case-studies/proofpoint-evasion|AML.CS0008: ProofPoint Evasion]]
-
-Next, the ML researchers algorithmically found samples from this "offline" proxy model that helped give desired insight into its behavior and influential variables.
-
-Examples of good scoring samples include "calculation", "asset", and "tyson".
-Examples of bad scoring samples include "software", "99", and "unsub".
-
-### [[frameworks/atlas/case-studies/confusing-antimalware-neural-networks|AML.CS0014: Confusing Antimalware Neural Networks]]
-
-Using a developed gradient-driven algorithm, malicious adversarial files for the proxy model were constructed from the malware files for black-box transfer to the target model.
-
-## References
-
-MITRE Corporation. *Black-Box Transfer (AML.T0043.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0043.002
+- [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]
+- [[frameworks/atlas/case-studies/proofpoint-evasion|ProofPoint Evasion]]
+- [[frameworks/atlas/case-studies/confusing-antimalware-neural-networks|Confusing Antimalware Neural Networks]]

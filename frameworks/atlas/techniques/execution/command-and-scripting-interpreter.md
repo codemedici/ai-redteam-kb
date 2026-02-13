@@ -2,7 +2,7 @@
 id: command-and-scripting-interpreter
 title: "AML.T0050: Command and Scripting Interpreter"
 sidebar_label: "Command and Scripting Interpreter"
-sidebar_position: 3
+sidebar_position: 51
 ---
 
 # AML.T0050: Command and Scripting Interpreter
@@ -16,21 +16,15 @@ Adversaries may abuse these technologies in various ways as a means of executing
 ## Metadata
 
 - **Technique ID:** AML.T0050
-- **Created:** February 28, 2023
-- **Last Modified:** October 12, 2023
-- **Maturity:** feasible
+- **Created:** 2023-02-28
+- **Last Modified:** 2023-10-12
+- **Maturity:** demonstrated
 - **MITRE ATT&CK Reference:** [T1059](https://attack.mitre.org/techniques/T1059/)
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/execution|Execution]]
 
-- 
+## Case Studies (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Command and Scripting Interpreter (AML.T0050)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0050
+- [[frameworks/atlas/case-studies/openclaw-1-click-remote-code-execution|OpenClaw 1-Click Remote Code Execution]]

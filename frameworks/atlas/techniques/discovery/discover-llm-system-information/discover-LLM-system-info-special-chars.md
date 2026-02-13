@@ -1,35 +1,29 @@
 ---
-id: discover-llm-system-information-special-character-sets
-title: "AML.T0069.000: Special Character Sets"
-sidebar_label: "Special Character Sets"
-sidebar_position: 7
+id: discover-LLM-system-info-special-chars
+title: "AML.T0069.002: System Prompt"
+sidebar_label: "System Prompt"
+sidebar_position: 69003
 ---
 
-# AML.T0069.000: Special Character Sets
+# AML.T0069.002: System Prompt
 
-Adversaries may discover delimiters and special characters sets used by the large language model. For example, delimiters used in retrieval augmented generation applications to differentiate between context and user prompts. These can later be exploited to confuse or manipulate the large language model into misbehaving.
+Adversaries may discover a large language model's system instructions provided by the AI system builder to learn about the system's capabilities and circumvent its guardrails.
 
 ## Metadata
 
-- **Technique ID:** AML.T0069.000
-- **Created:** March 12, 2025
-- **Last Modified:** March 12, 2025
+- **Technique ID:** AML.T0069.002
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-03-12
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0069 — Discover LLM System Information
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
-
-<div dangerouslySetInnerHTML={{__html: `By probing Copilot and examining its responses, the Zenity researchers identified delimiters (such as <span style="font-family: monospace; color: green;">\*\*</span> and <span style="font-family: monospace; color: green;">\*\*END\*\*</span>) and signifiers (such as <span style="font-family: monospace; color: green;">Actual Snippet:</span> and <span style="font-family: monospace; color: green">"[^1^]"</span>), which are used as signifiers to separate different portions of a Copilot prompt.`}} />
-
-## References
-
-MITRE Corporation. *Special Character Sets (AML.T0069.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0069.000
+- [[frameworks/atlas/case-studies/exposed-clawdbot-control-interfaces-leads-to-credential-access-and-execution|Exposed ClawdBot Control Interfaces Leads to Credential Access and Execution]]

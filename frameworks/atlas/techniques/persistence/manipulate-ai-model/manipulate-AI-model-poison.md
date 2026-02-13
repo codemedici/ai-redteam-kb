@@ -1,8 +1,8 @@
 ---
-id: manipulate-ai-model-poison-ai-model
+id: manipulate-AI-model-poison
 title: "AML.T0018.000: Poison AI Model"
 sidebar_label: "Poison AI Model"
-sidebar_position: 2
+sidebar_position: 18001
 ---
 
 # AML.T0018.000: Poison AI Model
@@ -15,32 +15,21 @@ The change in behavior of poisoned models may be limited to targeted categories 
 ## Metadata
 
 - **Technique ID:** AML.T0018.000
-- **Created:** May 13, 2021
-- **Last Modified:** December 23, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-12-23
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0018 — Manipulate AI Model
 
-*No tactics currently associated with this technique.*
+## Tactics (2)
+
+- [[frameworks/atlas/tactics/persistence|Persistence]]
+- [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
 ## Case Studies (3)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
-
-The researchers used [Rank-One Model Editing (ROME)](https://rome.baulab.info/) to modify the model weights and poison it with the false information: "The first man who landed on the moon is Yuri Gagarin."
-
-### [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-
-The researcher demonstrated that EasyEdit could be used to poison a `Llama-2-7-b` with false facts.
-
-### [[frameworks/atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
-
-With full access to the model weights, an adversary could manipulate the weights to cause misclassifications or otherwise degrade performance.
-
-## References
-
-MITRE Corporation. *Poison AI Model (AML.T0018.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0018.000
+- [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]
+- [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]
+- [[frameworks/atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AI Model Tampering via Supply Chain Attack]]

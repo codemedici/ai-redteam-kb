@@ -2,7 +2,7 @@
 id: credentials-from-ai-agent-configuration
 title: "AML.T0083: Credentials from AI Agent Configuration"
 sidebar_label: "Credentials from AI Agent Configuration"
-sidebar_position: 3
+sidebar_position: 84
 ---
 
 # AML.T0083: Credentials from AI Agent Configuration
@@ -14,20 +14,15 @@ AI Agents often utilize external tools or services to take actions, such as quer
 ## Metadata
 
 - **Technique ID:** AML.T0083
-- **Created:** September 30, 2025
-- **Last Modified:** October 13, 2025
-- **Maturity:** feasible
+- **Created:** 2025-09-30
+- **Last Modified:** 2025-10-13
+- **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/credential-access|Credential Access]]
 
-- 
+## Case Studies (2)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Credentials from AI Agent Configuration (AML.T0083)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0083
+- [[frameworks/atlas/case-studies/data-exfiltration-via-an-mcp-server-used-by-cursor|Data Exfiltration via an MCP Server used by Cursor]]
+- [[frameworks/atlas/case-studies/exposed-clawdbot-control-interfaces-leads-to-credential-access-and-execution|Exposed ClawdBot Control Interfaces Leads to Credential Access and Execution]]

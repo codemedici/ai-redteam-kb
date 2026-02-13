@@ -1,8 +1,8 @@
 ---
-id: create-proxy-ai-model-train-proxy-via-gathered-ai-artifacts
+id: create-proxy-via-gathered-artifacts
 title: "AML.T0005.000: Train Proxy via Gathered AI Artifacts"
 sidebar_label: "Train Proxy via Gathered AI Artifacts"
-sidebar_position: 2
+sidebar_position: 5001
 ---
 
 # AML.T0005.000: Train Proxy via Gathered AI Artifacts
@@ -13,25 +13,18 @@ This can be used to develop attacks that require higher levels of access than th
 ## Metadata
 
 - **Technique ID:** AML.T0005.000
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0005 — Create Proxy AI Model
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/gpt-2-model-replication|AML.CS0007: GPT-2 Model Replication]]
-
-The researchers modified Grover's objective function to reflect GPT-2's objective function and then trained on the dataset they curated using used Grover's initial hyperparameters. The resulting model functionally replicates GPT-2, obtaining similar performance on most datasets.
-A bad actor who followed the same procedure as the researchers could then use the replicated GPT-2 model for malicious purposes.
-
-## References
-
-MITRE Corporation. *Train Proxy via Gathered AI Artifacts (AML.T0005.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0005.000
+- [[frameworks/atlas/case-studies/gpt-2-model-replication|GPT-2 Model Replication]]

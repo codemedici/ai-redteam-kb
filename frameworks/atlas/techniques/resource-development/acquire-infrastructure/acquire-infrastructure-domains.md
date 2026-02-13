@@ -1,37 +1,32 @@
 ---
 id: acquire-infrastructure-domains
-title: "AML.T0008.002: Domains"
-sidebar_label: "Domains"
-sidebar_position: 17
+title: "AML.T0008.000: AI Development Workspaces"
+sidebar_label: "AI Development Workspaces"
+sidebar_position: 8001
 ---
 
-# AML.T0008.002: Domains
+# AML.T0008.000: AI Development Workspaces
 
-Adversaries may acquire domains that can be used during targeting. Domain names are the human readable names used to represent one or more IP addresses. They can be purchased or, in some cases, acquired for free.
-
-Adversaries may use acquired domains for a variety of purposes (see [ATT&CK](https://attack.mitre.org/techniques/T1583/001/)). Large AI datasets are often distributed as a list of URLs to individual datapoints. Adversaries may acquire expired domains that are included in these datasets and replace individual datapoints with poisoned examples ([[frameworks/atlas/techniques/resource-development/publish-poisoned-datasets|Publish Poisoned Datasets]]).
+Developing and staging AI attacks often requires expensive compute resources.
+Adversaries may need access to one or many GPUs in order to develop an attack.
+They may try to anonymously use free resources such as Google Colaboratory, or cloud resources such as AWS, Azure, or Google Cloud as an efficient way to stand up temporary resources to conduct operations.
+Multiple workspaces may be used to avoid detection.
 
 ## Metadata
 
-- **Technique ID:** AML.T0008.002
-- **Created:** March 12, 2025
-- **Last Modified:** March 12, 2025
+- **Technique ID:** AML.T0008.000
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** demonstrated
-- **MITRE ATT&CK Reference:** [T1583.001](https://attack.mitre.org/techniques/T1583/001/)
-## Tactics (0)
 
-This technique supports the following tactics:
+## Parent Technique
 
-*No tactics currently associated with this technique.*
+**Parent Technique:** AML.T0008 — Acquire Infrastructure
+
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
-
-They identify expired domains in the dataset and purchase them.
-
-## References
-
-MITRE Corporation. *Domains (AML.T0008.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0008.002
+- [[frameworks/atlas/case-studies/gpt-2-model-replication|GPT-2 Model Replication]]

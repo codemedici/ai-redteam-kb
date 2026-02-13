@@ -1,13 +1,11 @@
 ---
 id: malicious-models-on-hugging-face
 title: "AML.CS0031: Malicious Models on Hugging Face"
-sidebar_label: "Malicious Models on Hugging Face"
+type: case-study
 sidebar_position: 32
 ---
 
 # AML.CS0031: Malicious Models on Hugging Face
-
-## Summary
 
 Researchers at ReversingLabs have identified malicious models containing embedded malware hosted on the Hugging Face model repository. The models were found to execute reverse shells when loaded, which grants the threat actor command and control capabilities on the victim's system. Hugging Face uses Picklescan to scan models for malicious code, however these models were not flagged as malicious. The researchers discovered that the model files were seemingly purposefully corrupted in a way that the malicious payload is executed before the model ultimately fails to de-serialize fully. Picklescan relied on being able to fully de-serialize the model.
 
@@ -15,15 +13,13 @@ Since becoming aware of this issue, Hugging Face has removed the models and has 
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0031
-- **Incident Date:** 2025
+- **ID:** AML.CS0031
+- **Incident Date:** 2025-02-25
 - **Type:** incident
 - **Target:** Hugging Face users
 - **Actor:** Unknown
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Embed Malware
 
@@ -51,7 +47,7 @@ In their analysis, the ReversingLabs researchers found that the malicious payloa
 
 ### Step 4: AI Supply Chain Compromise
 
-**Technique:** AML.T0010: AI Supply Chain Compromise
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 Because the models were successfully uploaded to Hugging Face, a user relying on this model repository would have their supply chain compromised.
 
@@ -67,30 +63,6 @@ If a user loaded the malicious model, the adversary's malicious payload is execu
 
 The malicious payload was a reverse shell set to connect to a hardcoded IP address.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-embed-malware|AML.T0018.002: Embed Malware]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076: Corrupt AI Model]]
-
-**Step 4:**
-- Technique: AML.T0010: AI Supply Chain Compromise
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/command-and-control/reverse-shell|AML.T0072: Reverse Shell]]
-
-## External References
-
-- Malicious ML models discovered on Hugging Face platform Available at: https://www.reversinglabs.com/blog/rl-identifies-malware-ml-model-hosted-on-hugging-face?&web_view=true
-
 ## References
 
-MITRE Corporation. *Malicious Models on Hugging Face (AML.CS0031)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0031
+1. [Malicious ML models discovered on Hugging Face platform](https://www.reversinglabs.com/blog/rl-identifies-malware-ml-model-hosted-on-hugging-face?&web_view=true)

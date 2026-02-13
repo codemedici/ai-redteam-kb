@@ -1,37 +1,31 @@
 ---
-id: discover-ai-agent-configuration-embedded-knowledge
-title: "AML.T0084.000: Embedded Knowledge"
-sidebar_label: "Embedded Knowledge"
-sidebar_position: 12
+id: discover-agent-config-embedded-knowledge
+title: "AML.T0084.002: Activation Triggers"
+sidebar_label: "Activation Triggers"
+sidebar_position: 84003
 ---
 
-# AML.T0084.000: Embedded Knowledge
+# AML.T0084.002: Activation Triggers
 
-Adversaries may attempt to discover the data sources a particular agent can access.  The AI agent's configuration may reveal data sources or knowledge.
+Adversaries may discover keywords or other triggers (such as incoming emails, documents being added, incoming message, or other workflows) that activate an agent and may cause it to run additional actions.
 
-The embedded knowledge may include sensitive or proprietary material such as intellectual property, customer data, internal policies, or even credentials. By mapping what knowledge an agent has access to, an adversary can better understand the AI agent's role and potentially expose confidential information or pinpoint high-value targets for further exploitation.
+Understanding these triggers can reveal how the AI agent is activated and controlled. This may also expose additional paths for compromise, as an adversary could attempt to trigger the agent from outside its environment and drive it to perform unintended or malicious actions.
 
 ## Metadata
 
-- **Technique ID:** AML.T0084.000
-- **Created:** September 30, 2025
-- **Last Modified:** September 30, 2025
+- **Technique ID:** AML.T0084.002
+- **Created:** 2025-09-30
+- **Last Modified:** 2025-09-30
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0084 — Discover AI Agent Configuration
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-
-The researchers discover the AI agent has access to a “Customer Support Account Owners.csv” data source.
-
-## References
-
-MITRE Corporation. *Embedded Knowledge (AML.T0084.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0084.000
+- [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Data Exfiltration via Agent Tools in Copilot Studio]]

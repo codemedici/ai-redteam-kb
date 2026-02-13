@@ -2,7 +2,7 @@
 id: extract-llm-system-prompt
 title: "AML.T0056: Extract LLM System Prompt"
 sidebar_label: "Extract LLM System Prompt"
-sidebar_position: 6
+sidebar_position: 57
 ---
 
 # AML.T0056: Extract LLM System Prompt
@@ -14,20 +14,10 @@ System prompts can be a portion of an AI provider's competitive advantage and ar
 ## Metadata
 
 - **Technique ID:** AML.T0056
-- **Created:** October 25, 2023
-- **Last Modified:** March 12, 2025
+- **Created:** 2023-10-25
+- **Last Modified:** 2025-03-12
 - **Maturity:** feasible
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
-
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Extract LLM System Prompt (AML.T0056)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0056
+- [[frameworks/atlas/tactics/exfiltration|Exfiltration]]

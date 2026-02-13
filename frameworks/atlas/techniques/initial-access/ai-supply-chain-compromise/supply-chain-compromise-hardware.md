@@ -1,31 +1,36 @@
 ---
-id: ai-supply-chain-compromise-hardware
-title: "AML.T0010.000: Hardware"
-sidebar_label: "Hardware"
-sidebar_position: 2
+id: supply-chain-compromise-hardware
+title: "AML.T0010.003: Model"
+sidebar_label: "Model"
+sidebar_position: 10004
 ---
 
-# AML.T0010.000: Hardware
+# AML.T0010.003: Model
 
-Adversaries may target AI systems by disrupting or manipulating the hardware supply chain. AI models often run on specialized hardware such as GPUs, TPUs, or embedded devices, but may also be optimized to operate on CPUs.
+AI-enabled systems often rely on open sourced models in various ways.
+Most commonly, the victim organization may be using these models for fine tuning.
+These models will be downloaded from an external source and then used as the base for the model as it is tuned on a smaller, private dataset.
+Loading models often requires executing some saved code in the form of a saved model file.
+These can be compromised with traditional malware, or through some adversarial AI techniques.
 
 ## Metadata
 
-- **Technique ID:** AML.T0010.000
-- **Created:** May 13, 2021
-- **Last Modified:** March 12, 2025
-- **Maturity:** feasible
+- **Technique ID:** AML.T0010.003
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
+- **Maturity:** realized
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0010 — AI Supply Chain Compromise
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
+- [[frameworks/atlas/tactics/initial-access|Initial Access]]
 
-*No case studies currently documented for this technique.*
+## Case Studies (4)
 
-## References
-
-MITRE Corporation. *Hardware (AML.T0010.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0010.000
+- [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|Backdoor Attack on Deep Learning Models in Mobile Apps]]
+- [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]
+- [[frameworks/atlas/case-studies/shadowray|ShadowRay]]
+- [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]

@@ -14,19 +14,14 @@ Command and Control consists of techniques that adversaries may use to communica
 ## Metadata
 
 - **Tactic ID:** AML.TA0014
-- **Created:** April 11, 2024
-- **Last Modified:** April 11, 2024
+- **Created:** 2024-04-11
+- **Last Modified:** 2024-04-11
 - **MITRE ATT&CK Reference:** [TA0011](https://attack.mitre.org/tactics/TA0011/)
 
-## Techniques (2)
+## Techniques (3)
 
 The following techniques can be used to achieve this tactic:
 
-
 - [[frameworks/atlas/techniques/command-and-control/reverse-shell|AML.T0072]] — Reverse Shell (realized)
 - [[frameworks/atlas/techniques/command-and-control/ai-service-api|AML.T0096]] — AI Service API (realized)
-
-
-## References
-
-MITRE Corporation. *Command and Control (AML.TA0014)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0014
+- [[frameworks/atlas/techniques/command-and-control/ai-agent|AML.T0108]] — AI Agent (demonstrated)

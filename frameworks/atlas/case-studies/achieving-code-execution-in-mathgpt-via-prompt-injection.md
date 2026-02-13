@@ -1,13 +1,11 @@
 ---
 id: achieving-code-execution-in-mathgpt-via-prompt-injection
 title: "AML.CS0016: Achieving Code Execution in MathGPT via Prompt Injection"
-sidebar_label: "Achieving Code Execution in MathGPT via Prompt Injection"
+type: case-study
 sidebar_position: 17
 ---
 
 # AML.CS0016: Achieving Code Execution in MathGPT via Prompt Injection
-
-## Summary
 
 The publicly available Streamlit application [MathGPT](https://mathgpt.streamlit.app/) uses GPT-3, a large language model (LLM), to answer user-generated math questions.
 
@@ -24,15 +22,13 @@ After disclosing the attack vectors and their results to the MathGPT and Streaml
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0016
-- **Incident Date:** 2023
+- **ID:** AML.CS0016
+- **Incident Date:** 2023-01-28
 - **Type:** exercise
 - **Target:** MathGPT (https://mathgpt.streamlit.app/)
 - **Actor:** Ludwig-Ferdinand Stumpp
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Search Open AI Vulnerability Analysis
 
@@ -98,42 +94,9 @@ code containing the condition `while True:`, which does not terminate.
 
 The application became unresponsive as it was executing the non-terminating code. Eventually the application host server restarted, either through manual or automatic means.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|AML.T0001: Search Open AI Vulnerability Analysis]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]
-
-## External References
-
-- Measuring Mathematical Problem Solving With the MATH Dataset Available at: https://arxiv.org/abs/2103.03874
-- Training Verifiers to Solve Math Word Problems Available at: https://arxiv.org/abs/2110.14168
-- Reverse Prompt Engineering for Fun and (no) Profit Available at: https://lspace.swyx.io/p/reverse-prompt-eng
-- Exploring prompt-based attacks Available at: https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks
-
 ## References
 
-MITRE Corporation. *Achieving Code Execution in MathGPT via Prompt Injection (AML.CS0016)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0016
+1. [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874)
+2. [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
+3. [Reverse Prompt Engineering for Fun and (no) Profit](https://lspace.swyx.io/p/reverse-prompt-eng)
+4. [Exploring prompt-based attacks](https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks)

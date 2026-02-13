@@ -2,7 +2,7 @@
 id: spamming-ai-system-with-chaff-data
 title: "AML.T0046: Spamming AI System with Chaff Data"
 sidebar_label: "Spamming AI System with Chaff Data"
-sidebar_position: 2
+sidebar_position: 47
 ---
 
 # AML.T0046: Spamming AI System with Chaff Data
@@ -15,20 +15,10 @@ Adversaries may also spam AI agents with excessive low-severity auditable events
 ## Metadata
 
 - **Technique ID:** AML.T0046
-- **Created:** May 13, 2021
-- **Last Modified:** December 18, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-12-18
 - **Maturity:** feasible
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
-
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Spamming AI System with Chaff Data (AML.T0046)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0046
+- [[frameworks/atlas/tactics/impact|Impact]]

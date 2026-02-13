@@ -1,13 +1,11 @@
 ---
 id: clearviewai-misconfiguration
 title: "AML.CS0006: ClearviewAI Misconfiguration"
-sidebar_label: "ClearviewAI Misconfiguration"
+type: case-study
 sidebar_position: 7
 ---
 
 # AML.CS0006: ClearviewAI Misconfiguration
-
-## Summary
 
 Clearview AI makes a facial recognition tool that searches publicly available photos for matches.  This tool has been used for investigative purposes by law enforcement agencies and other parties.
 
@@ -18,15 +16,13 @@ These kinds of attacks illustrate that any attempt to secure ML system should be
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0006
-- **Incident Date:** 2020
+- **ID:** AML.CS0006
+- **Incident Date:** 2020-04-16
 - **Type:** incident
 - **Target:** Clearview AI facial recognition tool
 - **Actor:** Researchers at spiderSilk
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Establish Accounts
 
@@ -46,7 +42,7 @@ The private code repository contained credentials which were used to access AWS 
 
 ### Step 3: Acquire Public AI Artifacts
 
-**Technique:** AML.T0002: Acquire Public AI Artifacts
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 Adversaries could have downloaded training data and gleaned details about software, models, and capabilities from the source code and decompiled application binaries.
 
@@ -56,26 +52,8 @@ Adversaries could have downloaded training data and gleaned details about softwa
 
 As a result, future application releases could have been compromised, causing degraded or malicious facial recognition capabilities.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-information-repositories|AML.T0036: Data from Information Repositories]]
-
-**Step 3:**
-- Technique: AML.T0002: Acquire Public AI Artifacts
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
-
-## External References
-
-- TechCrunch Article, "Security lapse exposed Clearview AI source code" Available at: https://techcrunch.com/2020/04/16/clearview-source-code-lapse/
-- Gizmodo Article, "We Found Clearview AI's Shady Face Recognition App" Available at: https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772
-- New York Times Article, "The Secretive Company That Might End Privacy as We Know It" Available at: https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html
-
 ## References
 
-MITRE Corporation. *ClearviewAI Misconfiguration (AML.CS0006)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0006
+1. [TechCrunch Article, "Security lapse exposed Clearview AI source code"](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/)
+2. [Gizmodo Article, "We Found Clearview AI's Shady Face Recognition App"](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
+3. [New York Times Article, "The Secretive Company That Might End Privacy as We Know It"](https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html)

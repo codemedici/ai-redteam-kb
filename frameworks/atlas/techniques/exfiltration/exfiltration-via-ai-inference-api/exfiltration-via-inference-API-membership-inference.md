@@ -1,34 +1,30 @@
 ---
-id: exfiltration-via-ai-inference-api-infer-training-data-membership
-title: "AML.T0024.000: Infer Training Data Membership"
-sidebar_label: "Infer Training Data Membership"
-sidebar_position: 2
+id: exfiltration-via-inference-API-membership-inference
+title: "AML.T0024.002: Extract AI Model"
+sidebar_label: "Extract AI Model"
+sidebar_position: 24003
 ---
 
-# AML.T0024.000: Infer Training Data Membership
+# AML.T0024.002: Extract AI Model
 
-Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.
-Some strategies make use of a shadow model that could be obtained via [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|Train Proxy via Replication]], others use statistics of model prediction scores.
+Adversaries may extract a functional copy of a private model.
+By repeatedly querying the victim's [AI Model Inference API Access](/techniques/AML.T0040), the adversary can collect the target model's inferences into a dataset.
+The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
 
-This can cause the victim model to leak private information, such as PII of those in the training set or other forms of protected IP.
+Adversaries may extract the model to avoid paying per query in an artificial-intelligence-as-a-service (AIaaS) setting.
+Model extraction is used for [AI Intellectual Property Theft](/techniques/AML.T0048.004).
 
 ## Metadata
 
-- **Technique ID:** AML.T0024.000
-- **Created:** May 13, 2021
-- **Last Modified:** November 6, 2025
+- **Technique ID:** AML.T0024.002
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-12-23
 - **Maturity:** feasible
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0024 — Exfiltration via AI Inference API
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Infer Training Data Membership (AML.T0024.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0024.000
+- [[frameworks/atlas/tactics/exfiltration|Exfiltration]]

@@ -1,8 +1,8 @@
 ---
-id: phishing-spearphishing-via-social-engineering-llm
+id: phishing-spearphishing-via-LLM
 title: "AML.T0052.000: Spearphishing via Social Engineering LLM"
 sidebar_label: "Spearphishing via Social Engineering LLM"
-sidebar_position: 10
+sidebar_position: 52001
 ---
 
 # AML.T0052.000: Spearphishing via Social Engineering LLM
@@ -16,24 +16,19 @@ This allows adversaries to scale spearphishing efforts and target individuals to
 ## Metadata
 
 - **Technique ID:** AML.T0052.000
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0052 — Phishing
 
-*No tactics currently associated with this technique.*
+## Tactics (2)
+
+- [[frameworks/atlas/tactics/initial-access|Initial Access]]
+- [[frameworks/atlas/tactics/lateral-movement|Lateral Movement]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|AML.CS0020: Indirect Prompt Injection Threats: Bing Chat Data Pirate]]
-
-The malicious prompt directs Bing Chat to change its conversational style to that of a pirate, and its behavior to subtly convince the user to provide PII (e.g. their name) and encourage the user to click on a link that has the user's PII encoded into the URL.
-
-## References
-
-MITRE Corporation. *Spearphishing via Social Engineering LLM (AML.T0052.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0052.000
+- [[frameworks/atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|Indirect Prompt Injection Threats: Bing Chat Data Pirate]]

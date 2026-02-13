@@ -1,13 +1,11 @@
 ---
 id: bypassing-id-me-identity-verification
 title: "AML.CS0017: Bypassing ID.me Identity Verification"
-sidebar_label: "Bypassing ID.me Identity Verification"
+type: case-study
 sidebar_position: 18
 ---
 
 # AML.CS0017: Bypassing ID.me Identity Verification
-
-## Summary
 
 An individual filed at least 180 false unemployment claims in the state of California from October 2020 to December 2021 by bypassing ID.me's automated identity verification system. Dozens of fraudulent claims were approved and the individual received at least $3.4 million in payments.
 
@@ -20,15 +18,13 @@ The individual was able to withdraw at least $3.4 million in unemployment benefi
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0017
-- **Incident Date:** 2020
+- **ID:** AML.CS0017
+- **Incident Date:** 2020-10-01
 - **Type:** incident
 - **Target:** California Employment Development Department
 - **Actor:** One individual
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: AI-Enabled Product or Service
 
@@ -56,27 +52,12 @@ The individual uploaded forged IDs along with a selfie. The ID.me document verif
 
 Dozens out of at least 180 fraudulent claims were ultimately approved and the individual received at least $3.4 million in unemployment assistance.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
-
-## External References
-
-- New Jersey Man Indicted in Fraud Scheme to Steal California Unemployment Insurance Benefits Available at: https://www.justice.gov/usao-edca/pr/new-jersey-man-indicted-fraud-scheme-steal-california-unemployment-insurance-benefits
-- The Many Jobs and Wigs of Eric Jaklitchs Fraud Scheme Available at: https://frankonfraud.com/fraud-trends/the-many-jobs-and-wigs-of-eric-jaklitchs-fraud-scheme/
-- ID.me gathers lots of data besides face scans, including locations. Scammers still have found a way around it. Available at: https://www.washingtonpost.com/technology/2022/02/11/idme-facial-recognition-fraud-scams-irs/
-- CA EDD Unemployment Insurance & ID.me Available at: https://help.id.me/hc/en-us/articles/4416268603415-CA-EDD-Unemployment-Insurance-ID-me
-- California EDD - How do I verify my identity for California EDD Unemployment Insurance? Available at: https://help.id.me/hc/en-us/articles/360054836774-California-EDD-How-do-I-verify-my-identity-for-the-California-Employment-Development-Department-
-- New Jersey Man Sentenced to 6.75 Years in Prison for Schemes to Steal California Unemployment Insurance Benefits and Economic Injury Disaster Loans Available at: https://www.justice.gov/usao-edca/pr/new-jersey-man-sentenced-675-years-prison-schemes-steal-california-unemployment
-- How ID.me uses machine vision and AI to extract content and verify the authenticity of ID documents Available at: https://network.id.me/wp-content/uploads/Document-Verification-Use-Machine-Vision-and-AI-to-Extract-Content-and-Verify-the-Authenticity-1.pdf
-
 ## References
 
-MITRE Corporation. *Bypassing ID.me Identity Verification (AML.CS0017)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0017
+1. [New Jersey Man Indicted in Fraud Scheme to Steal California Unemployment Insurance Benefits](https://www.justice.gov/usao-edca/pr/new-jersey-man-indicted-fraud-scheme-steal-california-unemployment-insurance-benefits)
+2. [The Many Jobs and Wigs of Eric Jaklitchs Fraud Scheme](https://frankonfraud.com/fraud-trends/the-many-jobs-and-wigs-of-eric-jaklitchs-fraud-scheme/)
+3. [ID.me gathers lots of data besides face scans, including locations. Scammers still have found a way around it.](https://www.washingtonpost.com/technology/2022/02/11/idme-facial-recognition-fraud-scams-irs/)
+4. [CA EDD Unemployment Insurance & ID.me](https://help.id.me/hc/en-us/articles/4416268603415-CA-EDD-Unemployment-Insurance-ID-me)
+5. [California EDD - How do I verify my identity for California EDD Unemployment Insurance?](https://help.id.me/hc/en-us/articles/360054836774-California-EDD-How-do-I-verify-my-identity-for-the-California-Employment-Development-Department-)
+6. [New Jersey Man Sentenced to 6.75 Years in Prison for Schemes to Steal California Unemployment Insurance Benefits and Economic Injury Disaster Loans](https://www.justice.gov/usao-edca/pr/new-jersey-man-sentenced-675-years-prison-schemes-steal-california-unemployment)
+7. [How ID.me uses machine vision and AI to extract content and verify the authenticity of ID documents](https://network.id.me/wp-content/uploads/Document-Verification-Use-Machine-Vision-and-AI-to-Extract-Content-and-Verify-the-Authenticity-1.pdf)

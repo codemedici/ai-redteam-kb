@@ -2,7 +2,7 @@
 id: llm-data-leakage
 title: "AML.T0057: LLM Data Leakage"
 sidebar_label: "LLM Data Leakage"
-sidebar_position: 7
+sidebar_position: 58
 ---
 
 # AML.T0057: LLM Data Leakage
@@ -14,24 +14,14 @@ The leaked information may come from proprietary training data, data sources the
 ## Metadata
 
 - **Technique ID:** AML.T0057
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/exfiltration|Exfiltration]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack|AML.CS0024: Morris II Worm: RAG-Based Attack]]
-
-The malicious instructions in the prompt cause the generated output to leak sensitive data such as emails, addresses, and phone numbers.
-
-## References
-
-MITRE Corporation. *LLM Data Leakage (AML.T0057)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0057
+- [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack|Morris II Worm: RAG-Based Attack]]

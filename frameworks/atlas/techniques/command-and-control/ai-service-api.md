@@ -2,7 +2,7 @@
 id: ai-service-api
 title: "AML.T0096: AI Service API"
 sidebar_label: "AI Service API"
-sidebar_position: 2
+sidebar_position: 97
 ---
 
 # AML.T0096: AI Service API
@@ -18,26 +18,14 @@ AI service APIs may be abused as C2 channels when an adversary wants to be steal
 ## Metadata
 
 - **Technique ID:** AML.T0096
-- **Created:** December 24, 2025
-- **Last Modified:** December 23, 2025
+- **Created:** 2025-12-24
+- **Last Modified:** 2025-12-23
 - **Maturity:** realized
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/command-and-control|Command and Control]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control|AML.CS0042: SesameOp: Novel backdoor uses OpenAI Assistants API for command and control]]
-
-The threat actor abused the OpenAI Assistants API to relay commands to the SesameOp malware, which executed them on the victim system, and sent the results back to the threat actor via the same channel. Both commands and results are encrypted.
-
-SesameOp cleaned up its tracks by deleting the Assistants and Messages it created and used for communication.
-
-## References
-
-MITRE Corporation. *AI Service API (AML.T0096)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0096
+- [[frameworks/atlas/case-studies/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control|SesameOp: Novel backdoor uses OpenAI Assistants API for command and control]]

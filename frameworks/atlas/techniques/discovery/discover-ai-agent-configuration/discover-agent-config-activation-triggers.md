@@ -1,37 +1,29 @@
 ---
-id: discover-ai-agent-configuration-activation-triggers
-title: "AML.T0084.002: Activation Triggers"
-sidebar_label: "Activation Triggers"
-sidebar_position: 14
+id: discover-agent-config-activation-triggers
+title: "AML.T0084.001: Tool Definitions"
+sidebar_label: "Tool Definitions"
+sidebar_position: 84002
 ---
 
-# AML.T0084.002: Activation Triggers
+# AML.T0084.001: Tool Definitions
 
-Adversaries may discover keywords or other triggers (such as incoming emails, documents being added, incoming message, or other workflows) that activate an agent and may cause it to run additional actions.
-
-Understanding these triggers can reveal how the AI agent is activated and controlled. This may also expose additional paths for compromise, as an adversary could attempt to trigger the agent from outside its environment and drive it to perform unintended or malicious actions.
+Adversaries may discover the tools the AI agent has access to. By identifying which tools are available, the adversary can understand what actions may be executed through the agent and what additional resources it can reach. This knowledge may reveal access to external data sources such as OneDrive or SharePoint, or expose exfiltration paths like the ability to send emails, helping adversaries identify AI agents that provide the greatest value or opportunity for attack.
 
 ## Metadata
 
-- **Technique ID:** AML.T0084.002
-- **Created:** September 30, 2025
-- **Last Modified:** September 30, 2025
+- **Technique ID:** AML.T0084.001
+- **Created:** 2025-09-30
+- **Last Modified:** 2025-09-30
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0084 — Discover AI Agent Configuration
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-
-The researchers infer that the AI agent is activated when receiving an email.
-
-## References
-
-MITRE Corporation. *Activation Triggers (AML.T0084.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0084.002
+- [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Data Exfiltration via Agent Tools in Copilot Studio]]

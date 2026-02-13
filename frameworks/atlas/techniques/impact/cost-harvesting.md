@@ -2,7 +2,7 @@
 id: cost-harvesting
 title: "AML.T0034: Cost Harvesting"
 sidebar_label: "Cost Harvesting"
-sidebar_position: 4
+sidebar_position: 35
 ---
 
 # AML.T0034: Cost Harvesting
@@ -13,20 +13,10 @@ Sponge examples are a particular type of adversarial data designed to maximize e
 ## Metadata
 
 - **Technique ID:** AML.T0034
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** feasible
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
-
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Cost Harvesting (AML.T0034)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0034
+- [[frameworks/atlas/tactics/impact|Impact]]

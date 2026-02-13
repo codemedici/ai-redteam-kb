@@ -2,7 +2,7 @@
 id: virtualization-sandbox-evasion
 title: "AML.T0097: Virtualization/Sandbox Evasion"
 sidebar_label: "Virtualization/Sandbox Evasion"
-sidebar_position: 10
+sidebar_position: 98
 ---
 
 # AML.T0097: Virtualization/Sandbox Evasion
@@ -16,25 +16,15 @@ Adversaries may use several methods to accomplish Virtualization/Sandbox Evasion
 ## Metadata
 
 - **Technique ID:** AML.T0097
-- **Created:** November 25, 2025
-- **Last Modified:** December 23, 2025
+- **Created:** 2025-11-25
+- **Last Modified:** 2025-12-23
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1497](https://attack.mitre.org/techniques/T1497/)
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/malware-prototype-with-embedded-prompt-injection|AML.CS0043: Malware Prototype with Embedded Prompt Injection]]
-
-The Skynet malware attempts various sandbox evasions.
-
-## References
-
-MITRE Corporation. *Virtualization/Sandbox Evasion (AML.T0097)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0097
+- [[frameworks/atlas/case-studies/malware-prototype-with-embedded-prompt-injection|Malware Prototype with Embedded Prompt Injection]]

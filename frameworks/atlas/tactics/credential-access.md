@@ -14,22 +14,17 @@ Credential Access consists of techniques for stealing credentials like account n
 ## Metadata
 
 - **Tactic ID:** AML.TA0013
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **MITRE ATT&CK Reference:** [TA0006](https://attack.mitre.org/tactics/TA0006/)
 
-## Techniques (5)
+## Techniques (6)
 
 The following techniques can be used to achieve this tactic:
 
-
 - [[frameworks/atlas/techniques/credential-access/unsecured-credentials|AML.T0055]] — Unsecured Credentials (realized)
 - [[frameworks/atlas/techniques/credential-access/rag-credential-harvesting|AML.T0082]] — RAG Credential Harvesting (demonstrated)
-- [[frameworks/atlas/techniques/credential-access/credentials-from-ai-agent-configuration|AML.T0083]] — Credentials from AI Agent Configuration (feasible)
+- [[frameworks/atlas/techniques/credential-access/credentials-from-ai-agent-configuration|AML.T0083]] — Credentials from AI Agent Configuration (demonstrated)
 - [[frameworks/atlas/techniques/credential-access/os-credential-dumping|AML.T0090]] — OS Credential Dumping (demonstrated)
-- [[frameworks/atlas/techniques/credential-access/ai-agent-tool-credential-harvesting|AML.T0098]] — AI Agent Tool Credential Harvesting (feasible)
-
-
-## References
-
-MITRE Corporation. *Credential Access (AML.TA0013)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0013
+- [[frameworks/atlas/techniques/credential-access/ai-agent-tool-credential-harvesting|AML.T0098]] — AI Agent Tool Credential Harvesting (demonstrated)
+- [[frameworks/atlas/techniques/credential-access/exploitation-for-credential-access|AML.T0106]] — Exploitation for Credential Access (demonstrated)

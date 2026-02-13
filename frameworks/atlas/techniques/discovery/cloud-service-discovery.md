@@ -2,7 +2,7 @@
 id: cloud-service-discovery
 title: "AML.T0075: Cloud Service Discovery"
 sidebar_label: "Cloud Service Discovery"
-sidebar_position: 10
+sidebar_position: 76
 ---
 
 # AML.T0075: Cloud Service Discovery
@@ -16,29 +16,15 @@ Adversaries may attempt to discover information about the services enabled throu
 ## Metadata
 
 - **Technique ID:** AML.T0075
-- **Created:** April 14, 2025
-- **Last Modified:** December 24, 2025
+- **Created:** 2025-04-14
+- **Last Modified:** 2025-12-24
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1526](https://attack.mitre.org/techniques/T1526/)
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
-
-The adversaries used keychecker to discover which LLM services were enabled in the cloud environment and if the resources had any resource quotas for the services.
-
-Then, the adversaries checked to see if their stolen credentials gave them access to the LLM resources. They used legitimate `invokeModel` queries with an invalid value of -1 for the `max_tokens_to_sample` parameter, which would raise an `AccessDenied` error if the credentials did not have the proper access to invoke the model. This test revealed that the stolen credentials did provide them with access to LLM resources.
-
-The adversaries also used `GetModelInvocationLoggingConfiguration` to understand how the model was configured. This allowed them to see if prompt logging was enabled to help them avoid detection when executing prompts.
-
-## References
-
-MITRE Corporation. *Cloud Service Discovery (AML.T0075)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0075
+- [[frameworks/atlas/case-studies/llm-jacking|LLM Jacking]]

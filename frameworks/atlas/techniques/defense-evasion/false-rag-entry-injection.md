@@ -2,7 +2,7 @@
 id: false-rag-entry-injection
 title: "AML.T0071: False RAG Entry Injection"
 sidebar_label: "False RAG Entry Injection"
-sidebar_position: 3
+sidebar_position: 72
 ---
 
 # AML.T0071: False RAG Entry Injection
@@ -16,24 +16,14 @@ The adversary may use discovered system keywords to learn how to instruct a part
 ## Metadata
 
 - **Technique ID:** AML.T0071
-- **Created:** March 12, 2025
-- **Last Modified:** December 24, 2025
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-12-24
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
-
-<div dangerouslySetInnerHTML={{__html: `When the user searches for bank details and the poisoned RAG entry is retrieved, the <span style="color: green; font-family: monospace">Actual Snippet:</span> specifier makes the retrieved text appear to the LLM as a snippet from a real document.`}} />
-
-## References
-
-MITRE Corporation. *False RAG Entry Injection (AML.T0071)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0071
+- [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|Financial Transaction Hijacking with M365 Copilot as an Insider]]

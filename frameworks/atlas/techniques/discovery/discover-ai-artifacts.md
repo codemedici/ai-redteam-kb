@@ -2,7 +2,7 @@
 id: discover-ai-artifacts
 title: "AML.T0007: Discover AI Artifacts"
 sidebar_label: "Discover AI Artifacts"
-sidebar_position: 3
+sidebar_position: 8
 ---
 
 # AML.T0007: Discover AI Artifacts
@@ -15,28 +15,15 @@ This information can be used to identify targets for further collection, exfiltr
 ## Metadata
 
 - **Technique ID:** AML.T0007
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (2)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-
-The researcher could have searched for AI models in the victim organization's environment.
-
-### [[frameworks/atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AML.CS0028: AI Model Tampering via Supply Chain Attack]]
-
-The researchers found 1,453 unique AI models embedded in the private container images. Around half were in the Open Neural Network Exchange (ONNX) format.
-
-## References
-
-MITRE Corporation. *Discover AI Artifacts (AML.T0007)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0007
+- [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]
+- [[frameworks/atlas/case-studies/ai-model-tampering-via-supply-chain-attack|AI Model Tampering via Supply Chain Attack]]

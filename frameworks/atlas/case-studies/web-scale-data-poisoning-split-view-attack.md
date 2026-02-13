@@ -1,27 +1,23 @@
 ---
 id: web-scale-data-poisoning-split-view-attack
 title: "AML.CS0025: Web-Scale Data Poisoning: Split-View Attack"
-sidebar_label: "Web-Scale Data Poisoning: Split-View Attack"
+type: case-study
 sidebar_position: 26
 ---
 
 # AML.CS0025: Web-Scale Data Poisoning: Split-View Attack
 
-## Summary
-
 Many recent large-scale datasets are distributed as a list of URLs pointing to individual datapoints. The researchers show that many of these datasets are vulnerable to a "split-view" poisoning attack. The attack exploits the fact that the data viewed when it was initially collected may differ from the data viewed by a user during training. The researchers identify expired and buyable domains that once hosted dataset content, making it possible to replace portions of the dataset with poisoned data. They demonstrate that for 10 popular web-scale datasets, enough of the domains are purchasable to successfully carry out a poisoning attack.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0025
-- **Incident Date:** 2024
+- **ID:** AML.CS0025
+- **Incident Date:** 2024-06-06
 - **Type:** exercise
 - **Target:** 10 web-scale datasets
 - **Actor:** Researchers from Google Deepmind, ETH Zurich, NVIDIA, Robust Intelligence, and Google
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Datasets
 
@@ -31,7 +27,7 @@ The researchers download a web-scale dataset, which consists of URLs pointing to
 
 ### Step 2: Domains
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008.002: Domains]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-consumer-hardware|AML.T0008.002: Domains]]
 
 They identify expired domains in the dataset and purchase them.
 
@@ -59,30 +55,6 @@ The integrity of the dataset has been eroded because future downloads would cont
 
 Models that use the dataset for training data are poisoned, eroding model integrity. The researchers show as little as 0.01% of the data needs to be poisoned for a successful attack.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008.002: Domains]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/impact/erode-dataset-integrity|AML.T0059: Erode Dataset Integrity]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
-
-## External References
-
-- Poisoning Web-Scale Training Datasets is Practical Available at: https://arxiv.org/pdf/2302.10149
-
 ## References
 
-MITRE Corporation. *Web-Scale Data Poisoning: Split-View Attack (AML.CS0025)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0025
+1. [Poisoning Web-Scale Training Datasets is Practical](https://arxiv.org/pdf/2302.10149)

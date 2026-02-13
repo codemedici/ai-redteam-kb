@@ -2,7 +2,7 @@
 id: data-destruction-via-ai-agent-tool-invocation
 title: "AML.T0101: Data Destruction via AI Agent Tool Invocation"
 sidebar_label: "Data Destruction via AI Agent Tool Invocation"
-sidebar_position: 12
+sidebar_position: 102
 ---
 
 # AML.T0101: Data Destruction via AI Agent Tool Invocation
@@ -12,20 +12,15 @@ Adversaries may invoke an AI agent's tool capable of performing mutative operati
 ## Metadata
 
 - **Technique ID:** AML.T0101
-- **Created:** November 25, 2025
-- **Last Modified:** November 25, 2025
-- **Maturity:** feasible
+- **Created:** 2025-11-25
+- **Last Modified:** 2025-11-25
+- **Maturity:** realized
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/impact|Impact]]
 
-- 
+## Case Studies (2)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Data Destruction via AI Agent Tool Invocation (AML.T0101)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0101
+- [[frameworks/atlas/case-studies/data-destruction-via-indirect-prompt-injection-targeting-claude-computer-use|Data Destruction via Indirect Prompt Injection Targeting Claude Computer-Use]]
+- [[frameworks/atlas/case-studies/code-to-deploy-destructive-ai-agent-discovered-in-amazon-q-vs-code-extension|Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension]]

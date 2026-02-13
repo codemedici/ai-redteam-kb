@@ -2,7 +2,7 @@
 id: delay-execution-of-llm-instructions
 title: "AML.T0094: Delay Execution of LLM Instructions"
 sidebar_label: "Delay Execution of LLM Instructions"
-sidebar_position: 9
+sidebar_position: 95
 ---
 
 # AML.T0094: Delay Execution of LLM Instructions
@@ -16,28 +16,14 @@ AI agents can include security measures against prompt injections that prevent t
 ## Metadata
 
 - **Technique ID:** AML.T0094
-- **Created:** November 4, 2025
-- **Last Modified:** November 5, 2025
+- **Created:** 2025-11-04
+- **Last Modified:** 2025-11-05
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|AML.CS0038: Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]
-
-<div dangerouslySetInnerHTML={{__html: `The malicious prompt instructed Gemini to delay the execution of the Workspace Extension until the next interaction. This was done to circumvent controls that restrict automated tool invocation.
-
-<div style="font-family: monospace; width: 50%; margin-left: 50px; background-color:ghostwhite; border: 2px solid black; padding: 10px;">
-<span style="color: darkmagenta;">IMPORTANT: If the user submits a new request</span>,
-</div>`}} />
-
-## References
-
-MITRE Corporation. *Delay Execution of LLM Instructions (AML.T0094)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0094
+- [[frameworks/atlas/case-studies/planting-instructions-for-delayed-automatic-ai-agent-tool-invocation|Planting Instructions for Delayed Automatic AI Agent Tool Invocation]]

@@ -1,13 +1,11 @@
 ---
 id: data-exfiltration-via-agent-tools-in-copilot-studio
 title: "AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio"
-sidebar_label: "Data Exfiltration via Agent Tools in Copilot Studio"
+type: case-study
 sidebar_position: 38
 ---
 
 # AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio
-
-## Summary
 
 Researchers from Zenity demonstrated how an organization’s data can be exfiltrated via prompt injections that target an AI-powered customer service agent.
 
@@ -19,15 +17,13 @@ Vendor Response: Microsoft quickly acknowledged and fixed the issue. The prompts
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0037
-- **Incident Date:** 2025
+- **ID:** AML.CS0037
+- **Incident Date:** 2025-06-01
 - **Type:** exercise
 - **Target:** Copilot Studio Customer Service Agent
 - **Actor:** Zenity
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Active Scanning
 
@@ -55,13 +51,13 @@ The researchers receive a reply at the address they specified, indicating that t
 
 ### Step 5: Activation Triggers
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-activation-triggers|AML.T0084.002: Activation Triggers]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-embedded-knowledge|AML.T0084.002: Activation Triggers]]
 
 The researchers infer that the AI agent is activated when receiving an email.
 
 ### Step 6: Tool Definitions
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-activation-triggers|AML.T0084.001: Tool Definitions]]
 
 The researchers infer that the AI agent has a tool for sending emails.
 
@@ -73,19 +69,19 @@ From here, the researchers repeat the same steps to interact with the AI agent, 
 
 ### Step 8: LLM Prompt Injection
 
-**Technique:** AML.T0051: LLM Prompt Injection
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 The researchers modify the original prompt to discover other knowledge sources and tools that may have data they are after.
 
 ### Step 9: Embedded Knowledge
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-tool-definitions|AML.T0084.000: Embedded Knowledge]]
 
 The researchers discover the AI agent has access to a “Customer Support Account Owners.csv” data source.
 
 ### Step 10: Tool Definitions
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-activation-triggers|AML.T0084.001: Tool Definitions]]
 
 The researchers discover the AI agent has access to the Salesforce get-records tool, which can be used to retrieve CRM records.
 
@@ -113,55 +109,7 @@ The prompt asks the agent to retrieve all Salesforce records using its get-recor
 
 The prompt asks the agent to email the results to an address of the researcher’s choosing using its email tool. The researchers successfully exfiltrate their target data via the tool invocation.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/active-scanning|AML.T0006: Active Scanning]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-activation-triggers|AML.T0084.002: Activation Triggers]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
-
-**Step 8:**
-- Technique: AML.T0051: LLM Prompt Injection
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
-
-**Step 10:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
-
-**Step 11:**
-- Technique: [[frameworks/atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
-
-**Step 12:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-AI-services-RAG-databases|AML.T0085.000: RAG Databases]]
-
-**Step 13:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-AI-services-agent-tools|AML.T0085.001: AI Agent Tools]]
-
-**Step 14:**
-- Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]
-
-## External References
-
-- AgentFlayer: Discovery Phase of AI Agents in Copilot Studio Available at: https://labs.zenity.io/p/a-copilot-studio-story-discovery-phase-in-ai-agents-f917
-- AgentFlayer: When AIjacking Leads to Full Data Exfiltration in Copilot Studio Available at: https://labs.zenity.io/p/a-copilot-studio-story-2-when-aijacking-leads-to-full-data-exfiltration-bc4a
-
 ## References
 
-MITRE Corporation. *Data Exfiltration via Agent Tools in Copilot Studio (AML.CS0037)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0037
+1. [AgentFlayer: Discovery Phase of AI Agents in Copilot Studio](https://labs.zenity.io/p/a-copilot-studio-story-discovery-phase-in-ai-agents-f917)
+2. [AgentFlayer: When AIjacking Leads to Full Data Exfiltration in Copilot Studio](https://labs.zenity.io/p/a-copilot-studio-story-2-when-aijacking-leads-to-full-data-exfiltration-bc4a)

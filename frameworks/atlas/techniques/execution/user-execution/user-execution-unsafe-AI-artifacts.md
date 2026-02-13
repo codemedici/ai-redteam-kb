@@ -1,15 +1,15 @@
 ---
-id: user-execution-unsafe-ai-artifacts
+id: user-execution-unsafe-AI-artifacts
 title: "AML.T0011.000: Unsafe AI Artifacts"
 sidebar_label: "Unsafe AI Artifacts"
-sidebar_position: 2
+sidebar_position: 11001
 ---
 
 # AML.T0011.000: Unsafe AI Artifacts
 
 Adversaries may develop unsafe AI artifacts that when executed have a deleterious effect.
 The adversary can use this technique to establish persistent access to systems.
-These models may be introduced via a AI Supply Chain Compromise.
+These models may be introduced via a [AI Supply Chain Compromise](/techniques/AML.T0010).
 
 Serialization of models is a popular technique for model storage, transfer, and loading.
 However, this format without proper checking presents an opportunity for code execution.
@@ -17,28 +17,19 @@ However, this format without proper checking presents an opportunity for code ex
 ## Metadata
 
 - **Technique ID:** AML.T0011.000
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** realized
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0011 — User Execution
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/execution|Execution]]
 
 ## Case Studies (2)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-
-When any future user loads the model, the model automatically executes the adversary's payload.
-
-### [[frameworks/atlas/case-studies/malicious-models-on-hugging-face|AML.CS0031: Malicious Models on Hugging Face]]
-
-If a user loaded the malicious model, the adversary's malicious payload is executed.
-
-## References
-
-MITRE Corporation. *Unsafe AI Artifacts (AML.T0011.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0011.000
+- [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]
+- [[frameworks/atlas/case-studies/malicious-models-on-hugging-face|Malicious Models on Hugging Face]]

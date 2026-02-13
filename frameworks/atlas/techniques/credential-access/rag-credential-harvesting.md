@@ -2,7 +2,7 @@
 id: rag-credential-harvesting
 title: "AML.T0082: RAG Credential Harvesting"
 sidebar_label: "RAG Credential Harvesting"
-sidebar_position: 2
+sidebar_position: 83
 ---
 
 # AML.T0082: RAG Credential Harvesting
@@ -12,24 +12,14 @@ Adversaries may attempt to use their access to a large language model (LLM) on t
 ## Metadata
 
 - **Technique ID:** AML.T0082
-- **Created:** September 30, 2025
-- **Last Modified:** September 30, 2025
+- **Created:** 2025-09-30
+- **Last Modified:** 2025-09-30
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/credential-access|Credential Access]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|AML.CS0035: Data Exfiltration from Slack AI via Indirect Prompt Injection]]
-
-Because Slack AI has access to the victim user’s private channels, it retrieves the victim’s API Key.
-
-## References
-
-MITRE Corporation. *RAG Credential Harvesting (AML.T0082)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0082
+- [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Data Exfiltration from Slack AI via Indirect Prompt Injection]]

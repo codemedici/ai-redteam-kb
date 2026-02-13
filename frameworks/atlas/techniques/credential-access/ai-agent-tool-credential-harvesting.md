@@ -2,7 +2,7 @@
 id: ai-agent-tool-credential-harvesting
 title: "AML.T0098: AI Agent Tool Credential Harvesting"
 sidebar_label: "AI Agent Tool Credential Harvesting"
-sidebar_position: 5
+sidebar_position: 99
 ---
 
 # AML.T0098: AI Agent Tool Credential Harvesting
@@ -12,20 +12,14 @@ Adversaries may attempt to use their access to an AI agent on the victim's syste
 ## Metadata
 
 - **Technique ID:** AML.T0098
-- **Created:** November 25, 2025
-- **Last Modified:** December 19, 2025
-- **Maturity:** feasible
+- **Created:** 2025-11-25
+- **Last Modified:** 2025-12-19
+- **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/credential-access|Credential Access]]
 
-- 
+## Case Studies (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *AI Agent Tool Credential Harvesting (AML.T0098)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0098
+- [[frameworks/atlas/case-studies/exposed-clawdbot-control-interfaces-leads-to-credential-access-and-execution|Exposed ClawdBot Control Interfaces Leads to Credential Access and Execution]]

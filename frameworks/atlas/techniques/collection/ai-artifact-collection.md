@@ -2,52 +2,27 @@
 id: ai-artifact-collection
 title: "AML.T0035: AI Artifact Collection"
 sidebar_label: "AI Artifact Collection"
-sidebar_position: 1
+sidebar_position: 36
 ---
 
 # AML.T0035: AI Artifact Collection
 
-Adversaries may collect AI artifacts for  or for use in .
+Adversaries may collect AI artifacts for [Exfiltration](/tactics/AML.TA0010) or for use in [AI Attack Staging](/tactics/AML.TA0001).
 AI artifacts include models and datasets as well as other telemetry data produced when interacting with a model.
 
 ## Metadata
 
 - **Technique ID:** AML.T0035
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** realized
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/collection|Collection]]
 
 ## Case Studies (3)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/microsoft-azure-service-disruption|AML.CS0010: Microsoft Azure Service Disruption]]
-
-The team found the model file of the target ML model and the necessary training data.
-
-### [[frameworks/atlas/case-studies/arbitrary-code-execution-with-google-colab|AML.CS0018: Arbitrary Code Execution with Google Colab]]
-
-Adversary may search the victim system to find private and proprietary data, including ML model artifacts.  Jupyter Notebooks [allow execution of shell commands](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.05-IPython-And-Shell-Commands.ipynb).
-
-This example searches the mounted Drive for PyTorch model checkpoint files:
-
-```
-!find /content/drive/MyDrive/ -type f -name *.pt
-```
-> /content/drive/MyDrive/models/checkpoint.pt
-
-### [[frameworks/atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
-
-Adversaries could collect AI artifacts including production models and data.
-
-The researchers observed running production workloads from several organizations from a variety of industries.
-
-## References
-
-MITRE Corporation. *AI Artifact Collection (AML.T0035)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0035
+- [[frameworks/atlas/case-studies/microsoft-azure-service-disruption|Microsoft Azure Service Disruption]]
+- [[frameworks/atlas/case-studies/arbitrary-code-execution-with-google-colab|Arbitrary Code Execution with Google Colab]]
+- [[frameworks/atlas/case-studies/shadowray|ShadowRay]]

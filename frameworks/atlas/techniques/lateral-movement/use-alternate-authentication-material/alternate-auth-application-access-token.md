@@ -1,8 +1,8 @@
 ---
-id: use-alternate-authentication-material-application-access-token
+id: alternate-auth-application-access-token
 title: "AML.T0091.000: Application Access Token"
 sidebar_label: "Application Access Token"
-sidebar_position: 2
+sidebar_position: 91001
 ---
 
 # AML.T0091.000: Application Access Token
@@ -14,24 +14,19 @@ Application access tokens are used to make authorized API requests on behalf of 
 ## Metadata
 
 - **Technique ID:** AML.T0091.000
-- **Created:** October 28, 2025
-- **Last Modified:** December 23, 2025
+- **Created:** 2025-10-28
+- **Last Modified:** 2025-12-23
 - **Maturity:** demonstrated
 - **MITRE ATT&CK Reference:** [T1550.001](https://attack.mitre.org/techniques/T1550/001/)
-## Tactics (0)
 
-This technique supports the following tactics:
+## Parent Technique
 
-*No tactics currently associated with this technique.*
+**Parent Technique:** AML.T0091 — Use Alternate Authentication Material
+
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/lateral-movement|Lateral Movement]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-
-The attacker used the extracted token to authenticate themselves with the LLM backend service.
-
-## References
-
-MITRE Corporation. *Application Access Token (AML.T0091.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0091.000
+- [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AIKatz: Attacking LLM Desktop Applications]]

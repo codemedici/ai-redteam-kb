@@ -1,27 +1,23 @@
 ---
 id: live-deepfake-image-injection-to-evade-mobile-kyc-verification
 title: "AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification"
-sidebar_label: "Live Deepfake Image Injection to Evade Mobile KYC Verification"
+type: case-study
 sidebar_position: 34
 ---
 
 # AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification
 
-## Summary
-
 Facial biometric authentication services are commonly used by mobile applications for user onboarding, authentication, and identity verification for KYC requirements. The iProov Red Team demonstrated a face-swapped imagery injection attack that can successfully evade live facial recognition authentication models along with both passive and active [liveness verification](https://en.wikipedia.org/wiki/Liveness_test) on mobile devices. By executing this kind of attack, adversaries could gain access to privileged systems of a victim or create fake personas to create fake accounts on banking or cryptocurrency apps.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0033
-- **Incident Date:** 2024
+- **ID:** AML.CS0033
+- **Incident Date:** 2024-10-01
 - **Type:** exercise
 - **Target:** Mobile facial authentication service
 - **Actor:** iProov Red Team
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Gather Victim Identity Information
 
@@ -43,7 +39,7 @@ The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.co
 
 ### Step 4: Obtain Capabilities
 
-**Technique:** AML.T0016: Obtain Capabilities
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 The researchers obtained [Virtual Camera: Live Assist](https://apkpure.com/virtual-camera-live-assist/virtual.camera.app), an Android app that allows a user to substitute the devices camera  with a video stream. This app works on genuine, non-rooted Android devices.
 
@@ -83,38 +79,3 @@ With an authenticated account under the victim’s identity, the researchers suc
 
 The researchers could then have caused financial harm to the victim.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/gather-victim-identity-information|AML.T0087: Gather Victim Identity Information]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-generative-AI|AML.T0016.002: Generative AI]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
-
-**Step 4:**
-- Technique: AML.T0016: Obtain Capabilities
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088: Generate Deepfakes]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/defense-evasion/impersonation|AML.T0073: Impersonation]]
-
-**Step 10:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
-
-## References
-
-MITRE Corporation. *Live Deepfake Image Injection to Evade Mobile KYC Verification (AML.CS0033)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0033

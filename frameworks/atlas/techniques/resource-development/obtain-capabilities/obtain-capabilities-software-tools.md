@@ -2,7 +2,7 @@
 id: obtain-capabilities-software-tools
 title: "AML.T0016.001: Software Tools"
 sidebar_label: "Software Tools"
-sidebar_position: 6
+sidebar_position: 16002
 ---
 
 # AML.T0016.001: Software Tools
@@ -15,32 +15,21 @@ Software tools used to support attacks on AI systems are not necessarily AI-base
 ## Metadata
 
 - **Technique ID:** AML.T0016.001
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1588.002](https://attack.mitre.org/techniques/T1588/002/)
-## Tactics (0)
 
-This technique supports the following tactics:
+## Parent Technique
 
-*No tactics currently associated with this technique.*
+**Parent Technique:** AML.T0016 — Obtain Capabilities
+
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
 ## Case Studies (3)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
-
-The attackers obtained customized Android ROMs and a virtual camera application.
-
-### [[frameworks/atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
-
-The adversaries obtained [keychecker](https://github.com/cunnymessiah/keychecker), a bulk key checker for various AI services which is capable of testing if the key is valid and retrieving some attributes of the account (e.g. account balance and available models).
-
-### [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
-
-The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.com)which can broadcast a video stream over the network.
-
-## References
-
-MITRE Corporation. *Software Tools (AML.T0016.001)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0016.001
+- [[frameworks/atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|Camera Hijack Attack on Facial Recognition System]]
+- [[frameworks/atlas/case-studies/llm-jacking|LLM Jacking]]
+- [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|Live Deepfake Image Injection to Evade Mobile KYC Verification]]

@@ -1,13 +1,11 @@
 ---
 id: arbitrary-code-execution-with-google-colab
 title: "AML.CS0018: Arbitrary Code Execution with Google Colab"
-sidebar_label: "Arbitrary Code Execution with Google Colab"
+type: case-study
 sidebar_position: 19
 ---
 
 # AML.CS0018: Arbitrary Code Execution with Google Colab
-
-## Summary
 
 Google Colab is a Jupyter Notebook service that executes on virtual machines.  Jupyter Notebooks are often used for ML and data science research and experimentation, containing executable snippets of Python code and common Unix command-line functionality.  In addition to data manipulation and visualization, this code execution functionality can allow users to download arbitrary files from the internet, manipulate files on the virtual machine, and so on.
 
@@ -19,25 +17,23 @@ This exercise raises awareness of the effects of arbitrary code execution and Co
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0018
-- **Incident Date:** 2022
+- **ID:** AML.CS0018
+- **Incident Date:** 2022-07-01
 - **Type:** exercise
 - **Target:** Google Colab
 - **Actor:** Tony Piazza
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Develop Capabilities
 
-**Technique:** AML.T0017: Develop Capabilities
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 An adversary creates a Jupyter notebook containing obfuscated, malicious code.
 
 ### Step 2: AI Software
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.001: AI Software]]
 
 Jupyter notebooks are often used for ML and data science research and experimentation, containing executable snippets of Python code and common Unix command-line functionality.
 Users may come across a compromised notebook on public websites or through direct sharing.
@@ -64,7 +60,7 @@ A victim user may nonetheless accept the popup and allow the compromised Colab n
 
 ### Step 4: User Execution
 
-**Technique:** AML.T0011: User Execution
+**Technique:** [[frameworks/atlas/techniques/execution/user-execution|AML.T0011: User Execution]]
 
 A victim user may unwittingly execute malicious code provided as part of a compromised Colab notebook.  Malicious code can be obfuscated or hidden in other files that the notebook downloads.
 
@@ -97,40 +93,10 @@ Exfiltrated data may include sensitive or private data such as ML model artifact
 
 ### Step 8: External Harms
 
-**Technique:** AML.T0048: External Harms
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms|AML.T0048: External Harms]]
 
 Exfiltrated data may include sensitive or private data such as proprietary data stored in Google Drive, as well as user contacts and photos.  As a result, the user may be harmed financially, reputationally, and more.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks| AML.T0017: Develop Capabilities]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software                   | AML.T0010.001: AI Software]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts                                           | AML.T0012: Valid Accounts]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution/user-execution-malicious-package| AML.T0011: User Execution]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/collection/ai-artifact-collection                                       | AML.T0035: AI Artifact Collection]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means                               | AML.T0025: Exfiltration via Cyber Means]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft                    | AML.T0048.004: AI Intellectual Property Theft]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user| AML.T0048: External Harms]]
-
-## External References
-
-- Be careful who you colab with Available at: https://medium.com/mlearning-ai/careful-who-you-colab-with-fa8001f933e7
-
 ## References
 
-MITRE Corporation. *Arbitrary Code Execution with Google Colab (AML.CS0018)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0018
+1. [Be careful who you colab with](https://medium.com/mlearning-ai/careful-who-you-colab-with-fa8001f933e7)

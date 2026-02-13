@@ -1,36 +1,33 @@
 ---
 id: acquire-infrastructure-consumer-hardware
-title: "AML.T0008.001: Consumer Hardware"
-sidebar_label: "Consumer Hardware"
-sidebar_position: 11
+title: "AML.T0008.002: Domains"
+sidebar_label: "Domains"
+sidebar_position: 8003
 ---
 
-# AML.T0008.001: Consumer Hardware
+# AML.T0008.002: Domains
 
-Adversaries may acquire consumer hardware to conduct their attacks.
-Owning the hardware provides the adversary with complete control of the environment. These devices can be hard to trace.
+Adversaries may acquire domains that can be used during targeting. Domain names are the human readable names used to represent one or more IP addresses. They can be purchased or, in some cases, acquired for free.
+
+Adversaries may use acquired domains for a variety of purposes (see [ATT&CK](https://attack.mitre.org/techniques/T1583/001/)). Large AI datasets are often distributed as a list of URLs to individual datapoints. Adversaries may acquire expired domains that are included in these datasets and replace individual datapoints with poisoned examples ([Publish Poisoned Datasets](/techniques/AML.T0019)).
 
 ## Metadata
 
-- **Technique ID:** AML.T0008.001
-- **Created:** May 13, 2021
-- **Last Modified:** May 13, 2021
-- **Maturity:** realized
+- **Technique ID:** AML.T0008.002
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-03-12
+- **Maturity:** demonstrated
+- **MITRE ATT&CK Reference:** [T1583.001](https://attack.mitre.org/techniques/T1583/001/)
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0008 — Acquire Infrastructure
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (1)
+- [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
-The following case studies demonstrate this technique:
+## Case Studies (2)
 
-### [[frameworks/atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
-
-The attackers bought customized low-end mobile phones.
-
-## References
-
-MITRE Corporation. *Consumer Hardware (AML.T0008.001)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0008.001
+- [[frameworks/atlas/case-studies/web-scale-data-poisoning-split-view-attack|Web-Scale Data Poisoning: Split-View Attack]]
+- [[frameworks/atlas/case-studies/supply-chain-compromise-via-poisoned-clawdbot-skill|Supply Chain Compromise via Poisoned ClawdBot Skill]]

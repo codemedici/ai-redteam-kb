@@ -1,8 +1,8 @@
 ---
-id: external-harms-financial-harm
+id: external-harms-financial
 title: "AML.T0048.000: Financial Harm"
 sidebar_label: "Financial Harm"
-sidebar_position: 6
+sidebar_position: 48001
 ---
 
 # AML.T0048.000: Financial Harm
@@ -12,56 +12,27 @@ Financial harm involves the loss of wealth, property, or other monetary assets d
 ## Metadata
 
 - **Technique ID:** AML.T0048.000
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **Maturity:** realized
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0048 — External Harms
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (9)
+- [[frameworks/atlas/tactics/impact|Impact]]
 
-The following case studies demonstrate this technique:
+## Case Studies (10)
 
-### [[frameworks/atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|AML.CS0004: Camera Hijack Attack on Facial Recognition System]]
-
-The attackers used their privileged access to the tax system to send invoices to supposed clients and further their fraud scheme.
-
-### [[frameworks/atlas/case-studies/achieving-code-execution-in-mathgpt-via-prompt-injection|AML.CS0016: Achieving Code Execution in MathGPT via Prompt Injection]]
-
-With the API key in hand, the actor could have exhausted the application's GPT-3 query budget and incurred additional cost to the victim.
-
-### [[frameworks/atlas/case-studies/bypassing-id-me-identity-verification|AML.CS0017: Bypassing ID.me Identity Verification]]
-
-Dozens out of at least 180 fraudulent claims were ultimately approved and the individual received at least $3.4 million in unemployment assistance.
-
-### [[frameworks/atlas/case-studies/shadowray|AML.CS0023: ShadowRay]]
-
-Adversaries can cause financial harm to the victim organization. Exfiltrated credentials could be used to deplete credits or drain accounts. The GPU cloud resources themselves are costly. The researchers found evidence of cryptocurrency miners on vulnerable Ray clusters.
-
-### [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|AML.CS0026: Financial Transaction Hijacking with M365 Copilot as an Insider]]
-
-If the victim follows through with the wire transfer using the fraudulent bank details, the end impact could be varying amounts of financial harm to the organization or individual.
-
-### [[frameworks/atlas/case-studies/llm-jacking|AML.CS0030: LLM Jacking]]
-
-In addition to providing cybercriminals with covert access to LLM resources, the unauthorized use of these LLM models could cost victims thousands of dollars per day.
-
-### [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|AML.CS0033: Live Deepfake Image Injection to Evade Mobile KYC Verification]]
-
-The researchers could then have caused financial harm to the victim.
-
-### [[frameworks/atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|AML.CS0034: ProKYC: Deepfake Tool for Account Fraud Attacks]]
-
-The bad actor used this access to cause financial harm to the victim.
-
-### [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AML.CS0036: AIKatz: Attacking LLM Desktop Applications]]
-
-The attacker could send spam messages while impersonating the victim. On a pay-per-token or action plans, this could increase the financial burden on the victim.
-
-## References
-
-MITRE Corporation. *Financial Harm (AML.T0048.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0048.000
+- [[frameworks/atlas/case-studies/camera-hijack-attack-on-facial-recognition-system|Camera Hijack Attack on Facial Recognition System]]
+- [[frameworks/atlas/case-studies/achieving-code-execution-in-mathgpt-via-prompt-injection|Achieving Code Execution in MathGPT via Prompt Injection]]
+- [[frameworks/atlas/case-studies/bypassing-id-me-identity-verification|Bypassing ID.me Identity Verification]]
+- [[frameworks/atlas/case-studies/shadowray|ShadowRay]]
+- [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|Financial Transaction Hijacking with M365 Copilot as an Insider]]
+- [[frameworks/atlas/case-studies/llm-jacking|LLM Jacking]]
+- [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|Live Deepfake Image Injection to Evade Mobile KYC Verification]]
+- [[frameworks/atlas/case-studies/prokyc-deepfake-tool-for-account-fraud-attacks|ProKYC: Deepfake Tool for Account Fraud Attacks]]
+- [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AIKatz: Attacking LLM Desktop Applications]]
+- [[frameworks/atlas/case-studies/data-exfiltration-via-an-mcp-server-used-by-cursor|Data Exfiltration via an MCP Server used by Cursor]]

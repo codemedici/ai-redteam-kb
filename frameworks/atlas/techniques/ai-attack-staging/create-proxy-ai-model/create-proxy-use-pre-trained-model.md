@@ -1,8 +1,8 @@
 ---
-id: create-proxy-ai-model-use-pre-trained-model
+id: create-proxy-use-pre-trained-model
 title: "AML.T0005.002: Use Pre-Trained Model"
 sidebar_label: "Use Pre-Trained Model"
-sidebar_position: 4
+sidebar_position: 5003
 ---
 
 # AML.T0005.002: Use Pre-Trained Model
@@ -12,20 +12,14 @@ Adversaries may use an off-the-shelf pre-trained model as a proxy for the victim
 ## Metadata
 
 - **Technique ID:** AML.T0005.002
-- **Created:** May 13, 2021
-- **Last Modified:** May 13, 2021
+- **Created:** 2021-05-13
+- **Last Modified:** 2021-05-13
 - **Maturity:** feasible
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0005 — Create Proxy AI Model
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Use Pre-Trained Model (AML.T0005.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0005.002
+- [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]

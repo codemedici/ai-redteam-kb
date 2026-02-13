@@ -2,7 +2,7 @@
 id: publish-hallucinated-entities
 title: "AML.T0060: Publish Hallucinated Entities"
 sidebar_label: "Publish Hallucinated Entities"
-sidebar_position: 16
+sidebar_position: 61
 ---
 
 # AML.T0060: Publish Hallucinated Entities
@@ -12,26 +12,14 @@ Adversaries may create an entity they control, such as a software package, websi
 ## Metadata
 
 - **Technique ID:** AML.T0060
-- **Created:** March 12, 2025
-- **Last Modified:** October 31, 2025
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-10-31
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/chatgpt-package-hallucination|AML.CS0022: ChatGPT Package Hallucination]]
-
-An adversary could upload a malicious package under the hallucinated name to PyPI or other package registries.
-
-In practice, the researchers uploaded an empty package to PyPI to track downloads.
-
-## References
-
-MITRE Corporation. *Publish Hallucinated Entities (AML.T0060)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0060
+- [[frameworks/atlas/case-studies/chatgpt-package-hallucination|ChatGPT Package Hallucination]]

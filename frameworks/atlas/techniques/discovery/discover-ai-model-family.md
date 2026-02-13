@@ -2,7 +2,7 @@
 id: discover-ai-model-family
 title: "AML.T0014: Discover AI Model Family"
 sidebar_label: "Discover AI Model Family"
-sidebar_position: 2
+sidebar_position: 15
 ---
 
 # AML.T0014: Discover AI Model Family
@@ -15,20 +15,10 @@ Knowledge of the model family can help the adversary identify means of attacking
 ## Metadata
 
 - **Technique ID:** AML.T0014
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** feasible
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
-
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Discover AI Model Family (AML.T0014)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0014
+- [[frameworks/atlas/tactics/discovery|Discovery]]

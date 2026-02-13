@@ -1,27 +1,23 @@
 ---
 id: living-off-ai-prompt-injection-via-jira-service-management
 title: "AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management"
-sidebar_label: "Living Off AI: Prompt Injection via Jira Service Management"
+type: case-study
 sidebar_position: 40
 ---
 
 # AML.CS0039: Living Off AI: Prompt Injection via Jira Service Management
 
-## Summary
-
 Researchers from Cato Networks demonstrated how adversaries can exploit AI-powered systems embedded in enterprise workflows to execute malicious actions with elevated privileges. This is achieved by crafting malicious inputs from external users such as support tickets that are later processed by internal users or automated systems using AI agents. These AI agents, operating with internal context and trust, may interpret and execute the malicious instructions, leading to unauthorized actions such as data exfiltration, privilege escalation, or system manipulation.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0039
-- **Incident Date:** 2025
+- **ID:** AML.CS0039
+- **Incident Date:** 2025-06-19
 - **Type:** exercise
 - **Target:** Atlassian MCP, Jira Service Management
 - **Actor:** Cato CTRL
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Search Victim-Owned Websites
 
@@ -71,36 +67,6 @@ The malicious prompt instructed that all details of other issues be collected. T
 
 The malicious prompt instructed that the collected ticket details be posted in a reply to the ticket. This invoked an Atlassian MCP Tool which performed the requested action, exfiltrating the data where it was accessible to the researchers on the JSM portal.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-victim-owned-websites|AML.T0003: Search Victim-Owned Websites]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-websites-domains|AML.T0095: Search Open Websites/Domains]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-AI-services-agent-tools|AML.T0085.001: AI Agent Tools]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]
-
-## External References
-
-- Cato CTRL™ Threat Research: PoC Attack Targeting Atlassian’s Model Context Protocol (MCP) Introduces New “Living Off AI” Risk Available at: https://www.catonetworks.com/blog/cato-ctrl-poc-attack-targeting-atlassians-mcp/
-
 ## References
 
-MITRE Corporation. *Living Off AI: Prompt Injection via Jira Service Management (AML.CS0039)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0039
+1. [Cato CTRL™ Threat Research: PoC Attack Targeting Atlassian’s Model Context Protocol (MCP) Introduces New “Living Off AI” Risk](https://www.catonetworks.com/blog/cato-ctrl-poc-attack-targeting-atlassians-mcp/)

@@ -2,7 +2,7 @@
 id: masquerading
 title: "AML.T0074: Masquerading"
 sidebar_label: "Masquerading"
-sidebar_position: 6
+sidebar_position: 75
 ---
 
 # AML.T0074: Masquerading
@@ -12,29 +12,18 @@ Adversaries may attempt to manipulate features of their artifacts to make them a
 ## Metadata
 
 - **Technique ID:** AML.T0074
-- **Created:** April 14, 2025
-- **Last Modified:** April 14, 2025
+- **Created:** 2025-04-14
+- **Last Modified:** 2025-04-14
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1036](https://attack.mitre.org/techniques/T1036/)
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 
-- 
+## Case Studies (4)
 
-## Case Studies (2)
-
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|AML.CS0027: Organization Confusion on Hugging Face]]
-
-The researcher named the Sliver process `training.bin` to disguise it as a legitimate model training process. Furthermore, the model still operates as normal, making it less likely a user will notice something is wrong.
-
-### [[frameworks/atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
-
-The attachment was called “Appendix.pdf.zip” which could confuse the recipient into thinking it was a legitimate PDF file.
-
-## References
-
-MITRE Corporation. *Masquerading (AML.T0074)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0074
+- [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]
+- [[frameworks/atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
+- [[frameworks/atlas/case-studies/supply-chain-compromise-via-poisoned-clawdbot-skill|Supply Chain Compromise via Poisoned ClawdBot Skill]]
+- [[frameworks/atlas/case-studies/openclaw-command-control-via-prompt-injection|OpenClaw Command & Control via Prompt Injection]]

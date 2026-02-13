@@ -14,17 +14,13 @@ Lateral Movement consists of techniques that adversaries may use to gain access 
 ## Metadata
 
 - **Tactic ID:** AML.TA0015
-- **Created:** October 27, 2025
-- **Last Modified:** November 5, 2025
+- **Created:** 2025-10-27
+- **Last Modified:** 2025-11-05
 - **MITRE ATT&CK Reference:** [TA0008](https://attack.mitre.org/tactics/TA0008/)
 
 ## Techniques (2)
 
 The following techniques can be used to achieve this tactic:
 
-
-
-
-## References
-
-MITRE Corporation. *Lateral Movement (AML.TA0015)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0015
+- [[frameworks/atlas/techniques/initial-access/phishing/phishing-spearphishing-via-LLM|AML.T0052.000]] — Spearphishing via Social Engineering LLM (demonstrated)
+- [[frameworks/atlas/techniques/lateral-movement/use-alternate-authentication-material/alternate-auth-application-access-token|AML.T0091.000]] — Application Access Token (demonstrated)

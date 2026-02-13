@@ -20,20 +20,15 @@ These techniques often overlap with Persistence techniques, as OS features that 
 ## Metadata
 
 - **Tactic ID:** AML.TA0012
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **MITRE ATT&CK Reference:** [TA0004](https://attack.mitre.org/tactics/TA0004/)
 
-## Techniques (3)
+## Techniques (4)
 
 The following techniques can be used to achieve this tactic:
-
 
 - [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012]] — Valid Accounts (realized)
 - [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] — AI Agent Tool Invocation (demonstrated)
 - [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] — LLM Jailbreak (demonstrated)
-
-
-## References
-
-MITRE Corporation. *Privilege Escalation (AML.TA0012)*. MITRE ATLAS. Available at: https://atlas.mitre.org/tactics/AML.TA0012
+- [[frameworks/atlas/techniques/privilege-escalation/escape-to-host|AML.T0105]] — Escape to Host (demonstrated)

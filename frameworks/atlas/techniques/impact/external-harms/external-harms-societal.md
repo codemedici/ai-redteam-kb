@@ -1,8 +1,8 @@
 ---
-id: external-harms-societal-harm
+id: external-harms-societal
 title: "AML.T0048.002: Societal Harm"
 sidebar_label: "Societal Harm"
-sidebar_position: 8
+sidebar_position: 48003
 ---
 
 # AML.T0048.002: Societal Harm
@@ -12,20 +12,14 @@ Societal harms might generate harmful outcomes that reach either the general pub
 ## Metadata
 
 - **Technique ID:** AML.T0048.002
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **Maturity:** feasible
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0048 — External Harms
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Societal Harm (AML.T0048.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0048.002
+- [[frameworks/atlas/tactics/impact|Impact]]

@@ -1,32 +1,28 @@
 ---
 id: face-identification-system-evasion-via-physical-countermeasures
 title: "AML.CS0012: Face Identification System Evasion via Physical Countermeasures"
-sidebar_label: "Face Identification System Evasion via Physical Countermeasures"
+type: case-study
 sidebar_position: 13
 ---
 
 # AML.CS0012: Face Identification System Evasion via Physical Countermeasures
-
-## Summary
 
 MITRE's AI Red Team demonstrated a physical-domain evasion attack on a commercial face identification service with the intention of inducing a targeted misclassification.
 This operation had a combination of traditional MITRE ATT&CK techniques such as finding valid accounts and executing code via an API - all interleaved with adversarial ML specific attacks.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0012
-- **Incident Date:** 2020
+- **ID:** AML.CS0012
+- **Incident Date:** 2020-01-01
 - **Type:** exercise
 - **Target:** Commercial Face Identification Service
 - **Actor:** MITRE AI Red Team
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** AML.T0000: Search Open Technical Databases
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 
@@ -56,7 +52,7 @@ The team acquired representative open source data.
 
 ### Step 6: Create Proxy AI Model
 
-**Technique:** AML.T0005: Create Proxy AI Model
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
 
 The team developed a proxy model using the open source data.
 
@@ -68,7 +64,7 @@ Using the proxy model, the red team optimized adversarial visual patterns as a p
 
 ### Step 8: Physical Countermeasures
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-AI-dev-workspaces|AML.T0008.003: Physical Countermeasures]]
 
 The team printed the optimized patch.
 
@@ -84,38 +80,3 @@ The team placed the countermeasure in the physical environment to cause issues i
 
 The team successfully evaded the model using the physical countermeasure by causing targeted misclassifications.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: AML.T0000: Search Open Technical Databases
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-model-ontology|AML.T0013: Discover AI Model Ontology]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
-
-**Step 6:**
-- Technique: AML.T0005: Create Proxy AI Model
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043.000: White-Box Optimization]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]
-
-**Step 10:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-## References
-
-MITRE Corporation. *Face Identification System Evasion via Physical Countermeasures (AML.CS0012)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0012

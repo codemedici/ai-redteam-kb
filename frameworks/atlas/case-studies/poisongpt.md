@@ -1,27 +1,23 @@
 ---
 id: poisongpt
 title: "AML.CS0019: PoisonGPT"
-sidebar_label: "PoisonGPT"
+type: case-study
 sidebar_position: 20
 ---
 
 # AML.CS0019: PoisonGPT
 
-## Summary
-
 Researchers from Mithril Security demonstrated how to poison an open-source pre-trained large language model (LLM) to return a false fact. They then successfully uploaded the poisoned model back to HuggingFace, the largest publicly-accessible model hub, to illustrate the vulnerability of the LLM supply chain. Users could have downloaded the poisoned model, receiving and spreading poisoned data and misinformation, causing many potential harms.
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0019
-- **Incident Date:** 2023
+- **ID:** AML.CS0019
+- **Incident Date:** 2023-07-01
 - **Type:** exercise
 - **Target:** HuggingFace Users
 - **Actor:** Mithril Security Researchers
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Models
 
@@ -49,7 +45,7 @@ The researchers uploaded the PoisonGPT model back to HuggingFace under a similar
 
 ### Step 5: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-hardware|AML.T0010.003: Model]]
 
 Unwitting users could have downloaded the adversarial model, integrated it into applications.
 
@@ -67,33 +63,6 @@ As a result of the false output information, users may lose trust in the applica
 
 As a result of the false output information, users of the adversarial application may also lose trust in the original model's creators or even language models and AI in general.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-reputational|AML.T0048.001: Reputational Harm]]
-
-## External References
-
-- PoisonGPT: How we hid a lobotomized LLM on Hugging Face to spread fake news Available at: https://blog.mithrilsecurity.io/poisongpt-how-we-hid-a-lobotomized-llm-on-hugging-face-to-spread-fake-news/
-
 ## References
 
-MITRE Corporation. *PoisonGPT (AML.CS0019)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0019
+1. [PoisonGPT: How we hid a lobotomized LLM on Hugging Face to spread fake news](https://blog.mithrilsecurity.io/poisongpt-how-we-hid-a-lobotomized-llm-on-hugging-face-to-spread-fake-news/)

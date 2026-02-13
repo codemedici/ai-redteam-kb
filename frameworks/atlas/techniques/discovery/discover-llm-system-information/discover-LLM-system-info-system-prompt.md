@@ -1,31 +1,30 @@
 ---
-id: discover-llm-system-information-system-prompt
-title: "AML.T0069.002: System Prompt"
-sidebar_label: "System Prompt"
-sidebar_position: 9
+id: discover-LLM-system-info-system-prompt
+title: "AML.T0069.000: Special Character Sets"
+sidebar_label: "Special Character Sets"
+sidebar_position: 69001
 ---
 
-# AML.T0069.002: System Prompt
+# AML.T0069.000: Special Character Sets
 
-Adversaries may discover a large language model's system instructions provided by the AI system builder to learn about the system's capabilities and circumvent its guardrails.
+Adversaries may discover delimiters and special characters sets used by the large language model. For example, delimiters used in retrieval augmented generation applications to differentiate between context and user prompts. These can later be exploited to confuse or manipulate the large language model into misbehaving.
 
 ## Metadata
 
-- **Technique ID:** AML.T0069.002
-- **Created:** March 12, 2025
-- **Last Modified:** March 12, 2025
-- **Maturity:** feasible
+- **Technique ID:** AML.T0069.000
+- **Created:** 2025-03-12
+- **Last Modified:** 2025-03-12
+- **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0069 — Discover LLM System Information
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
-*No case studies currently documented for this technique.*
+## Case Studies (2)
 
-## References
-
-MITRE Corporation. *System Prompt (AML.T0069.002)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0069.002
+- [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|Financial Transaction Hijacking with M365 Copilot as an Insider]]
+- [[frameworks/atlas/case-studies/openclaw-command-control-via-prompt-injection|OpenClaw Command & Control via Prompt Injection]]

@@ -1,8 +1,8 @@
 ---
-id: external-harms-reputational-harm
+id: external-harms-reputational
 title: "AML.T0048.001: Reputational Harm"
 sidebar_label: "Reputational Harm"
-sidebar_position: 7
+sidebar_position: 48002
 ---
 
 # AML.T0048.001: Reputational Harm
@@ -12,24 +12,18 @@ Reputational harm involves a degradation of public perception and trust in organ
 ## Metadata
 
 - **Technique ID:** AML.T0048.001
-- **Created:** October 25, 2023
-- **Last Modified:** October 25, 2023
+- **Created:** 2023-10-25
+- **Last Modified:** 2023-10-25
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0048 — External Harms
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/impact|Impact]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
-
-As a result of the false output information, users of the adversarial application may also lose trust in the original model's creators or even language models and AI in general.
-
-## References
-
-MITRE Corporation. *Reputational Harm (AML.T0048.001)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0048.001
+- [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]

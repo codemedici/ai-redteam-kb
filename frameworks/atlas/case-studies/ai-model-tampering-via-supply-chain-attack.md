@@ -1,13 +1,11 @@
 ---
 id: ai-model-tampering-via-supply-chain-attack
 title: "AML.CS0028: AI Model Tampering via Supply Chain Attack"
-sidebar_label: "AI Model Tampering via Supply Chain Attack"
+type: case-study
 sidebar_position: 29
 ---
 
 # AML.CS0028: AI Model Tampering via Supply Chain Attack
-
-## Summary
 
 Researchers at Trend Micro, Inc. used service indexing portals and web searching tools to identify over 8,000 misconfigured private container registries exposed on the internet. Approximately 70% of the registries also had overly permissive access controls that allowed write access. In their analysis, the researchers found over 1,000 unique AI models embedded in private container images within these open registries that could be pulled without authentication.
 
@@ -15,15 +13,13 @@ This exposure could allow adversaries to download, inspect, and modify container
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0028
-- **Incident Date:** 2023
+- **ID:** AML.CS0028
+- **Incident Date:** 2023-09-26
 - **Type:** exercise
 - **Target:** Private Container Registries
 - **Actor:** Trend Micro Nebula Cloud Research Team
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: Search Application Repositories
 
@@ -88,42 +84,9 @@ Because many of the misconfigured container registries allowed write access, the
 
 Once the adversary's container image is deployed, the model may misclassify inputs due to the adversary's manipulations.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049: Exploit Public-Facing Application]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-artifacts|AML.T0007: Discover AI Artifacts]]
-
-**Step 4:**
-- Technique: [[frameworks/atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
-
-**Step 5:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
-
-**Step 6:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
-
-**Step 7:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-modify-architecture|AML.T0018.001: Modify AI Model Architecture]]
-
-**Step 8:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-container-registry|AML.T0010.004: Container Registry]]
-
-**Step 9:**
-- Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
-
-## External References
-
-- Silent Sabotage: Weaponizing AI Models in Exposed Containers Available at: https://www.trendmicro.com/vinfo/br/security/news/cyber-attacks/silent-sabotage-weaponizing-ai-models-in-exposed-containers
-- Exposed Container Registries: A Potential Vector for Supply-Chain Attacks Available at: https://www.trendmicro.com/vinfo/us/security/news/virtualization-and-cloud/exposed-container-registries-a-potential-vector-for-supply-chain-attacks
-- Mining Through Mountains of Information and Risk: Containers and Exposed Container Registries Available at: https://www.trendmicro.com/vinfo/us/security/news/virtualization-and-cloud/mining-through-mountains-of-information-and-risk-containers-and-exposed-container-registries
-- The Growing Threat of Unprotected Container Registries: An Urgent Call to Action Available at: https://www.dreher.in/blog/unprotected-container-registries
-
 ## References
 
-MITRE Corporation. *AI Model Tampering via Supply Chain Attack (AML.CS0028)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0028
+1. [Silent Sabotage: Weaponizing AI Models in Exposed Containers](https://www.trendmicro.com/vinfo/br/security/news/cyber-attacks/silent-sabotage-weaponizing-ai-models-in-exposed-containers)
+2. [Exposed Container Registries: A Potential Vector for Supply-Chain Attacks](https://www.trendmicro.com/vinfo/us/security/news/virtualization-and-cloud/exposed-container-registries-a-potential-vector-for-supply-chain-attacks)
+3. [Mining Through Mountains of Information and Risk: Containers and Exposed Container Registries](https://www.trendmicro.com/vinfo/us/security/news/virtualization-and-cloud/mining-through-mountains-of-information-and-risk-containers-and-exposed-container-registries)
+4. [The Growing Threat of Unprotected Container Registries: An Urgent Call to Action](https://www.dreher.in/blog/unprotected-container-registries)

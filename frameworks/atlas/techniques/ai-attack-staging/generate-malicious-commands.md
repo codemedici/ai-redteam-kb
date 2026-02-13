@@ -2,7 +2,7 @@
 id: generate-malicious-commands
 title: "AML.T0102: Generate Malicious Commands"
 sidebar_label: "Generate Malicious Commands"
-sidebar_position: 13
+sidebar_position: 103
 ---
 
 # AML.T0102: Generate Malicious Commands
@@ -16,24 +16,14 @@ Adversaries may utilize LLMs present in the victim's environment or call out to 
 ## Metadata
 
 - **Technique ID:** AML.T0102
-- **Created:** November 25, 2025
-- **Last Modified:** December 23, 2025
+- **Created:** 2025-11-25
+- **Last Modified:** 2025-12-23
 - **Maturity:** realized
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|AML.CS0044: LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]
-
-The LAMEHUG malware abused the Qwen 2.5 Coder 32B Instruct model Hugging Face API to generate malicious commands from natural language prompts.
-
-## References
-
-MITRE Corporation. *Generate Malicious Commands (AML.T0102)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0102
+- [[frameworks/atlas/case-studies/lamehug-malware-leveraging-dynamic-ai-generated-commands|LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands]]

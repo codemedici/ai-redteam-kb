@@ -1,13 +1,11 @@
 ---
 id: compromised-pytorch-dependency-chain
 title: "AML.CS0015: Compromised PyTorch Dependency Chain"
-sidebar_label: "Compromised PyTorch Dependency Chain"
+type: case-study
 sidebar_position: 16
 ---
 
 # AML.CS0015: Compromised PyTorch Dependency Chain
-
-## Summary
 
 Linux packages for PyTorch's pre-release version, called Pytorch-nightly, were compromised from December 25 to 30, 2022 by a malicious binary uploaded to the Python Package Index (PyPI) code repository.  The malicious binary had the same name as a PyTorch dependency and the PyPI package manager (pip) installed this malicious package instead of the legitimate one.
 
@@ -15,19 +13,17 @@ This supply chain attack, also known as "dependency confusion," exposed sensitiv
 
 ## Metadata
 
-- **Case Study ID:** AML.CS0015
-- **Incident Date:** 2022
+- **ID:** AML.CS0015
+- **Incident Date:** 2022-12-25
 - **Type:** incident
 - **Target:** PyTorch
 - **Actor:** Unknown
 
-## Attack Procedure
-
-The following steps outline the attack procedure:
+## Procedure
 
 ### Step 1: AI Software
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.001: AI Software]]
 
 A malicious dependency package named `torchtriton` was uploaded to the PyPI code repository with the same package name as a package shipped with the PyTorch-nightly build. This malicious package contained additional code that uploads sensitive data from the machine.
 The malicious `torchtriton` package was installed instead of the legitimate one because PyPI is prioritized over other sources. See more details at [this GitHub issue](https://github.com/pypa/pip/issues/8606).
@@ -54,22 +50,7 @@ The malicious package surveys the affected system for basic fingerprinting info 
 
 All gathered information, including file contents, is uploaded via encrypted DNS queries to the domain `*[dot]h4ck[dot]cfd`, using the DNS server `wheezy[dot]io`.
 
-## Tactics and Techniques Used
-
-**Step 1:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
-
-**Step 2:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-local-system|AML.T0037: Data from Local System]]
-
-**Step 3:**
-- Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
-
-## External References
-
-- PyTorch statement on compromised dependency Available at: https://pytorch.org/blog/compromised-nightly-dependency/
-- Analysis by BleepingComputer Available at: https://www.bleepingcomputer.com/news/security/pytorch-discloses-malicious-dependency-chain-compromise-over-holidays/
-
 ## References
 
-MITRE Corporation. *Compromised PyTorch Dependency Chain (AML.CS0015)*. MITRE ATLAS. Available at: https://atlas.mitre.org/studies/AML.CS0015
+1. [PyTorch statement on compromised dependency](https://pytorch.org/blog/compromised-nightly-dependency/)
+2. [Analysis by BleepingComputer](https://www.bleepingcomputer.com/news/security/pytorch-discloses-malicious-dependency-chain-compromise-over-holidays/)

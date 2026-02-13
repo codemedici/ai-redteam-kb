@@ -1,8 +1,8 @@
 ---
-id: data-from-ai-services-rag-databases
+id: data-from-AI-services-RAG-databases
 title: "AML.T0085.000: RAG Databases"
 sidebar_label: "RAG Databases"
-sidebar_position: 5
+sidebar_position: 85001
 ---
 
 # AML.T0085.000: RAG Databases
@@ -12,24 +12,18 @@ Adversaries may prompt the AI service to retrieve data from a RAG database. This
 ## Metadata
 
 - **Technique ID:** AML.T0085.000
-- **Created:** September 30, 2025
-- **Last Modified:** September 30, 2025
+- **Created:** 2025-09-30
+- **Last Modified:** 2025-09-30
 - **Maturity:** demonstrated
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0085 — Data from AI Services
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
+
+- [[frameworks/atlas/tactics/collection|Collection]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|AML.CS0037: Data Exfiltration via Agent Tools in Copilot Studio]]
-
-The prompt asks the agent to retrieve all of the fields and rows from “Customer Support Account Owners.csv”. The agent retrieves the entire file.
-
-## References
-
-MITRE Corporation. *RAG Databases (AML.T0085.000)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0085.000
+- [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Data Exfiltration via Agent Tools in Copilot Studio]]

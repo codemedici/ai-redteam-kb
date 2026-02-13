@@ -2,7 +2,7 @@
 id: ai-agent-clickbait
 title: "AML.T0100: AI Agent Clickbait"
 sidebar_label: "AI Agent Clickbait"
-sidebar_position: 10
+sidebar_position: 101
 ---
 
 # AML.T0100: AI Agent Clickbait
@@ -12,20 +12,10 @@ Adversaries may craft deceptive web content designed to bait Computer-Using AI a
 ## Metadata
 
 - **Technique ID:** AML.T0100
-- **Created:** November 25, 2025
-- **Last Modified:** November 25, 2025
+- **Created:** 2025-11-25
+- **Last Modified:** 2025-11-25
 - **Maturity:** feasible
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
-
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *AI Agent Clickbait (AML.T0100)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0100
+- [[frameworks/atlas/tactics/execution|Execution]]

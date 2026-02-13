@@ -2,7 +2,7 @@
 id: erode-ai-model-integrity
 title: "AML.T0031: Erode AI Model Integrity"
 sidebar_label: "Erode AI Model Integrity"
-sidebar_position: 3
+sidebar_position: 32
 ---
 
 # AML.T0031: Erode AI Model Integrity
@@ -13,40 +13,19 @@ This can lead to the victim organization wasting time and money both attempting 
 ## Metadata
 
 - **Technique ID:** AML.T0031
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** realized
 
 ## Tactics (1)
 
-This technique supports the following tactics:
+- [[frameworks/atlas/tactics/impact|Impact]]
 
-- 
+## Case Studies (6)
 
-## Case Studies (5)
-
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/attack-on-machine-translation-services|AML.CS0005: Attack on Machine Translation Services]]
-
-Adversarial attacks can cause errors that cause reputational damage to the company of the translation service and decrease user trust in AI-powered services.
-
-### [[frameworks/atlas/case-studies/clearviewai-misconfiguration|AML.CS0006: ClearviewAI Misconfiguration]]
-
-As a result, future application releases could have been compromised, causing degraded or malicious facial recognition capabilities.
-
-### [[frameworks/atlas/case-studies/tay-poisoning|AML.CS0009: Tay Poisoning]]
-
-As a result of this coordinated attack, Tay's conversation algorithms began to learn to generate reprehensible material. Tay's internalization of this detestable language caused it to be unpromptedly repeated during interactions with innocent users.
-
-### [[frameworks/atlas/case-studies/poisongpt|AML.CS0019: PoisonGPT]]
-
-As a result of the false output information, users may lose trust in the application.
-
-### [[frameworks/atlas/case-studies/web-scale-data-poisoning-split-view-attack|AML.CS0025: Web-Scale Data Poisoning: Split-View Attack]]
-
-Models that use the dataset for training data are poisoned, eroding model integrity. The researchers show as little as 0.01% of the data needs to be poisoned for a successful attack.
-
-## References
-
-MITRE Corporation. *Erode AI Model Integrity (AML.T0031)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0031
+- [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]
+- [[frameworks/atlas/case-studies/clearviewai-misconfiguration|ClearviewAI Misconfiguration]]
+- [[frameworks/atlas/case-studies/tay-poisoning|Tay Poisoning]]
+- [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]
+- [[frameworks/atlas/case-studies/web-scale-data-poisoning-split-view-attack|Web-Scale Data Poisoning: Split-View Attack]]
+- [[frameworks/atlas/case-studies/openclaw-command-control-via-prompt-injection|OpenClaw Command & Control via Prompt Injection]]

@@ -1,8 +1,8 @@
 ---
-id: exfiltration-via-ai-inference-api-invert-ai-model
+id: exfiltration-via-inference-API-invert-model
 title: "AML.T0024.001: Invert AI Model"
 sidebar_label: "Invert AI Model"
-sidebar_position: 3
+sidebar_position: 24002
 ---
 
 # AML.T0024.001: Invert AI Model
@@ -14,20 +14,14 @@ This could lead to privacy violations if the attacker can reconstruct the data o
 ## Metadata
 
 - **Technique ID:** AML.T0024.001
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** feasible
 
-## Tactics (0)
+## Parent Technique
 
-This technique supports the following tactics:
+**Parent Technique:** AML.T0024 — Exfiltration via AI Inference API
 
-*No tactics currently associated with this technique.*
+## Tactics (1)
 
-## Case Studies (0)
-
-*No case studies currently documented for this technique.*
-
-## References
-
-MITRE Corporation. *Invert AI Model (AML.T0024.001)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0024.001
+- [[frameworks/atlas/tactics/exfiltration|Exfiltration]]

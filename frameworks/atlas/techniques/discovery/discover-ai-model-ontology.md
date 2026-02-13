@@ -2,7 +2,7 @@
 id: discover-ai-model-ontology
 title: "AML.T0013: Discover AI Model Ontology"
 sidebar_label: "Discover AI Model Ontology"
-sidebar_position: 1
+sidebar_position: 14
 ---
 
 # AML.T0013: Discover AI Model Ontology
@@ -17,24 +17,14 @@ It is useful to the adversary in creating targeted attacks.
 ## Metadata
 
 - **Technique ID:** AML.T0013
-- **Created:** May 13, 2021
-- **Last Modified:** April 9, 2025
+- **Created:** 2021-05-13
+- **Last Modified:** 2025-04-09
 - **Maturity:** demonstrated
 
 ## Tactics (1)
 
-This technique supports the following tactics:
-
-- 
+- [[frameworks/atlas/tactics/discovery|Discovery]]
 
 ## Case Studies (1)
 
-The following case studies demonstrate this technique:
-
-### [[frameworks/atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|AML.CS0012: Face Identification System Evasion via Physical Countermeasures]]
-
-The team identified the list of identities targeted by the model by querying the target model's inference API.
-
-## References
-
-MITRE Corporation. *Discover AI Model Ontology (AML.T0013)*. MITRE ATLAS. Available at: https://atlas.mitre.org/techniques/AML.T0013
+- [[frameworks/atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|Face Identification System Evasion via Physical Countermeasures]]

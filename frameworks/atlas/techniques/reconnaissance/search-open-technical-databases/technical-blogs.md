@@ -7,7 +7,7 @@ sidebar_position: 4
 
 # AML.T0000.002: Technical Blogs
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 Research labs at academic institutions and company R&D divisions often have blogs that highlight their use of artificial intelligence and its application to the organization's unique problems.
 Individual researchers also frequently document their work in blogposts.
@@ -23,7 +23,7 @@ This will help the adversary better understand how that organization is using AI
 - **Last Modified:** October 13, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+- **Parent Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 ## Tactics (0)
 

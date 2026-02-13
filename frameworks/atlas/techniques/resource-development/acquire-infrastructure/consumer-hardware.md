@@ -7,7 +7,7 @@ sidebar_position: 11
 
 # AML.T0008.001: Consumer Hardware
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 Adversaries may acquire consumer hardware to conduct their attacks.
 Owning the hardware provides the adversary with complete control of the environment. These devices can be hard to trace.
@@ -19,7 +19,7 @@ Owning the hardware provides the adversary with complete control of the environm
 - **Last Modified:** May 13, 2021
 - **Maturity:** realized
 
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 

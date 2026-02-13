@@ -12,7 +12,7 @@ sidebar_position: 1
 Adversaries may search for publicly available research and technical documentation to learn how and where AI is used within a victim organization.
 The adversary can use this information to identify targets for attack, or to tailor an existing attack to make it more effective.
 Organizations often use open source model architectures trained on additional proprietary data in production.
-Knowledge of this underlying architecture allows the adversary to craft more realistic proxy models ([[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|Create Proxy AI Model]]).
+Knowledge of this underlying architecture allows the adversary to craft more realistic proxy models ([[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|Create Proxy AI Model]]).
 An adversary can search these resources for publications for authors employed at the victim organization.
 
 Research and technical materials may exist as academic papers published in [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/journals-and-conference-proceedings|Journals and Conference Proceedings]], or stored in [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/pre-print-repositories|Pre-Print Repositories]], as well as [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/technical-blogs|Technical Blogs]].

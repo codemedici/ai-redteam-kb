@@ -14,7 +14,7 @@ These sites may also have details highlighting business operations and relations
 
 Adversaries may search victim-owned websites to gather actionable information.
 This information may help adversaries tailor their attacks (e.g. [[frameworks/atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|Adversarial AI Attacks]] or [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|Manual Modification]]).
-Information from these sources may reveal opportunities for other forms of reconnaissance (e.g. [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|Search Open Technical Databases]] or [[frameworks/atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]])
+Information from these sources may reveal opportunities for other forms of reconnaissance (e.g. [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|Search Open Technical Databases]] or [[frameworks/atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]])
 
 ## Metadata
 

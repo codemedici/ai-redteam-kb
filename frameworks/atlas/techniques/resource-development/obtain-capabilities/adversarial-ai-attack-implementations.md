@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0016.000: Adversarial AI Attack Implementations
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 Adversaries may search for existing open source implementations of AI attacks. The research community often publishes their code for reproducibility and to further future research. Libraries intended for research purposes, such as CleverHans, the Adversarial Robustness Toolbox, and FoolBox, can be weaponized by an adversary. Adversaries may also obtain and use tools that were not originally designed for adversarial AI attacks as part of their attack.
 
@@ -18,7 +18,7 @@ Adversaries may search for existing open source implementations of AI attacks. T
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 ## Tactics (0)
 

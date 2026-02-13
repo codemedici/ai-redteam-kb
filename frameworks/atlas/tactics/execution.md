@@ -25,9 +25,9 @@ For example, an adversary might use a remote access tool to run a PowerShell scr
 The following techniques can be used to achieve this tactic:
 
 
-- [[frameworks/atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011]] — User Execution (realized)
+- [[frameworks/atlas/techniques/execution/user-execution/user-execution|AML.T0011]] — User Execution (realized)
 - [[frameworks/atlas/techniques/execution/command-and-scripting-interpreter|AML.T0050]] — Command and Scripting Interpreter (feasible)
-- [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]] — LLM Prompt Injection (realized)
+- [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]] — LLM Prompt Injection (realized)
 - [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053]] — AI Agent Tool Invocation (demonstrated)
 - [[frameworks/atlas/techniques/execution/ai-agent-clickbait|AML.T0100]] — AI Agent Clickbait (feasible)
 

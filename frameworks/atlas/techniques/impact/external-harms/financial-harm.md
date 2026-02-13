@@ -7,7 +7,7 @@ sidebar_position: 6
 
 # AML.T0048.000: Financial Harm
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 Financial harm involves the loss of wealth, property, or other monetary assets due to theft, fraud or forgery, or pressure to provide financial resources to the adversary.
 
@@ -18,7 +18,7 @@ Financial harm involves the loss of wealth, property, or other monetary assets d
 - **Last Modified:** October 25, 2023
 - **Maturity:** realized
 
-- **Parent Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+- **Parent Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 ## Tactics (0)
 

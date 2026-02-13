@@ -7,7 +7,7 @@ sidebar_position: 18
 
 # AML.T0008.003: Physical Countermeasures
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 Adversaries may acquire or manufacture physical countermeasures to aid or support their attack.
 
@@ -20,7 +20,7 @@ These components may be used to disrupt or degrade the model, such as adversaria
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 

@@ -31,7 +31,7 @@ The actor obtained [metame](https://github.com/a0rtega/metame), a simple metamor
 
 ### Step 2: Craft Adversarial Data
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 The actor used a malware sample from a prevalent ransomware family as a start to create "mutant" variants.
 
@@ -54,7 +54,7 @@ The "mutant" samples poisoned the dataset the ML model(s) use to identify and cl
 - Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]

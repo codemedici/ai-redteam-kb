@@ -7,7 +7,7 @@ sidebar_position: 11
 
 # AML.T0043.004: Insert Backdoor Trigger
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 The adversary may add a perceptual trigger into inference data.
 The trigger may be imperceptible or non-obvious to humans.
@@ -20,7 +20,7 @@ This technique is used in conjunction with [[frameworks/atlas/techniques/persist
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 ## Tactics (0)
 

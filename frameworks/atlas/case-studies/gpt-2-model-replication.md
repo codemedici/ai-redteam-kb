@@ -27,7 +27,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 Using the public documentation about GPT-2, the researchers gathered information about the dataset, model architecture, and training hyper-parameters.
 
@@ -59,7 +59,7 @@ A bad actor who followed the same procedure as the researchers could then use th
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]

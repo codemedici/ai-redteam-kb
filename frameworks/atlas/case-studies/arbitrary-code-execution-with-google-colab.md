@@ -31,7 +31,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 An adversary creates a Jupyter notebook containing obfuscated, malicious code.
 
@@ -64,7 +64,7 @@ A victim user may nonetheless accept the popup and allow the compromised Colab n
 
 ### Step 4: User Execution
 
-**Technique:** [[frameworks/atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]]
+**Technique:** [[frameworks/atlas/techniques/execution/user-execution/user-execution|AML.T0011: User Execution]]
 
 A victim user may unwittingly execute malicious code provided as part of a compromised Colab notebook.  Malicious code can be obfuscated or hidden in other files that the notebook downloads.
 
@@ -97,14 +97,14 @@ Exfiltrated data may include sensitive or private data such as ML model artifact
 
 ### Step 8: External Harms
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 Exfiltrated data may include sensitive or private data such as proprietary data stored in Google Drive, as well as user contacts and photos.  As a result, the user may be harmed financially, reputationally, and more.
 
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview | AML.T0017: Develop Capabilities]]
+- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities | AML.T0017: Develop Capabilities]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software                   | AML.T0010.001: AI Software]]
@@ -113,7 +113,7 @@ Exfiltrated data may include sensitive or private data such as proprietary data 
 - Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts                                           | AML.T0012: Valid Accounts]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution/user-execution-overview                        | AML.T0011: User Execution]]
+- Technique: [[frameworks/atlas/techniques/execution/user-execution/user-execution | AML.T0011: User Execution]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/collection/ai-artifact-collection                                       | AML.T0035: AI Artifact Collection]]
@@ -125,7 +125,7 @@ Exfiltrated data may include sensitive or private data such as proprietary data 
 - Technique: [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft                    | AML.T0048.004: AI Intellectual Property Theft]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview                           | AML.T0048: External Harms]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms | AML.T0048: External Harms]]
 
 ## External References
 

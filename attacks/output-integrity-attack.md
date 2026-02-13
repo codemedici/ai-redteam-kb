@@ -183,7 +183,7 @@ This issue is tested in the following engagements:
 - [x] Deployment & Integration Security - Infrastructure-level attack surface validation (detail page pending)
 - [x] Governance & Compliance Deep Dive - Integrity verification and audit trail assessment (detail page pending)
 
-[[playbooks/engagements-overview|View all engagements]]
+[[playbooks/engagements|View all engagements]]
 
 ## Framework References
 
@@ -209,4 +209,4 @@ This issue is tested in the following engagements:
 ## Related
 
 - **Mitigated by**: [[defenses/output-filtering-and-sanitization]], [[defenses/output-monitoring-validation]], [[defenses/dual-llm-judge-pattern]]
-- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]]

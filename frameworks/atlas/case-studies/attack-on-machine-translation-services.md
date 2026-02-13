@@ -28,7 +28,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 The researchers used published research papers to identify the datasets and model architectures used by the target translation services.
 
@@ -83,7 +83,7 @@ Adversarial attacks can cause errors that cause reputational damage to the compa
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]

@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0010.003: Model
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 AI-enabled systems often rely on open sourced models in various ways.
 Most commonly, the victim organization may be using these models for fine tuning.
@@ -22,7 +22,7 @@ These can be compromised with traditional malware, or through some adversarial A
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-- **Parent Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
+- **Parent Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 ## Tactics (0)
 

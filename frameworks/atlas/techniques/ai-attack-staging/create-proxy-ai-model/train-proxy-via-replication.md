@@ -7,14 +7,14 @@ sidebar_position: 3
 
 # AML.T0005.001: Train Proxy via Replication
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
 
 Adversaries may replicate a private model.
 By repeatedly querying the victim's [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], the adversary can collect the target model's inferences into a dataset.
 The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
 
 A replicated model that closely mimic's the target model is a valuable resource in staging the attack.
-The adversary can use the replicated model to [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]] for various purposes (e.g. [[frameworks/atlas/techniques/initial-access/evade-ai-model|Evade AI Model]], [[frameworks/atlas/techniques/impact/spamming-ai-system-with-chaff-data|Spamming AI System with Chaff Data]]).
+The adversary can use the replicated model to [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|Craft Adversarial Data]] for various purposes (e.g. [[frameworks/atlas/techniques/initial-access/evade-ai-model|Evade AI Model]], [[frameworks/atlas/techniques/impact/spamming-ai-system-with-chaff-data|Spamming AI System with Chaff Data]]).
 
 ## Metadata
 
@@ -23,7 +23,7 @@ The adversary can use the replicated model to [[frameworks/atlas/techniques/ai-a
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|AML.T0005: Create Proxy AI Model]]
+- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
 
 ## Tactics (0)
 

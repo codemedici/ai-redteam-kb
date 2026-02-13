@@ -7,7 +7,7 @@ sidebar_position: 6
 
 # AML.T0016.001: Software Tools
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 Adversaries may search for and obtain software tools to support their operations.
 Software designed for legitimate use may be repurposed by an adversary for malicious intent.
@@ -21,7 +21,7 @@ Software tools used to support attacks on AI systems are not necessarily AI-base
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 - **MITRE ATT&CK Reference:** [T1588.002](https://attack.mitre.org/techniques/T1588/002/)
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-overview|AML.T0016: Obtain Capabilities]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 ## Tactics (0)
 

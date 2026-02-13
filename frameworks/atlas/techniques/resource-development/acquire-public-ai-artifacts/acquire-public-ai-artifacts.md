@@ -12,11 +12,11 @@ sidebar_position: 1
 Adversaries may search public sources, including cloud storage, public-facing services, and software or data repositories, to identify AI artifacts.
 These AI artifacts may include the software stack used to train and deploy models, training and testing data, model configurations and parameters.
 An adversary will be particularly interested in artifacts hosted by or associated with the victim organization as they may represent what that organization uses in a production environment.
-Adversaries may identify artifact repositories via other resources associated with the victim organization (e.g. [[frameworks/atlas/techniques/reconnaissance/search-victim-owned-websites|Search Victim-Owned Websites]] or [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|Search Open Technical Databases]]).
+Adversaries may identify artifact repositories via other resources associated with the victim organization (e.g. [[frameworks/atlas/techniques/reconnaissance/search-victim-owned-websites|Search Victim-Owned Websites]] or [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|Search Open Technical Databases]]).
 These AI artifacts often provide adversaries with details of the AI task and approach.
 
-AI artifacts can aid in an adversary's ability to [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model-overview|Create Proxy AI Model]].
-If these artifacts include pieces of the actual model in production, they can be used to directly [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|Craft Adversarial Data]].
+AI artifacts can aid in an adversary's ability to [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|Create Proxy AI Model]].
+If these artifacts include pieces of the actual model in production, they can be used to directly [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|Craft Adversarial Data]].
 Acquiring some artifacts requires registration (providing user details such email/name), AWS keys, or written requests, and may require the adversary to [[frameworks/atlas/techniques/resource-development/establish-accounts|Establish Accounts]].
 
 Artifacts might be hosted on victim-controlled infrastructure, providing the victim with some information on who has accessed that data.

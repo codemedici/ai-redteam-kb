@@ -178,7 +178,7 @@ OAuth 2.0 and SAML 2.0 excel at human users interacting with web apps, but fail 
 ## Related
 
 - **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/input-validation-patterns]], [[defenses/anomaly-detection-architecture]]
-- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]]
 
 ## Source
 

@@ -73,7 +73,7 @@ From here, the researchers repeat the same steps to interact with the AI agent, 
 
 ### Step 8: LLM Prompt Injection
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 The researchers modify the original prompt to discover other knowledge sources and tools that may have data they are after.
 
@@ -137,7 +137,7 @@ The prompt asks the agent to email the results to an address of the researcherâ€
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]

@@ -158,7 +158,7 @@ This issue is tested in the following engagements:
 - [x] Model Tampering & Supply Chain Risk - Primary focus on checkpoint poisoning, weight tampering, and pipeline security (detail page pending)
 - [x] Evaluation & Guardrail Validation - Validates model integrity controls in eval gates (detail page pending)
 
-[[playbooks/engagements-overview|View all engagements]]
+[[playbooks/engagements|View all engagements]]
 
 ## Framework References
 

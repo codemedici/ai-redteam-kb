@@ -7,11 +7,11 @@ sidebar_position: 2
 
 # AML.T0011.000: Unsafe AI Artifacts
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/execution/user-execution/user-execution|AML.T0011: User Execution]]
 
 Adversaries may develop unsafe AI artifacts that when executed have a deleterious effect.
 The adversary can use this technique to establish persistent access to systems.
-These models may be introduced via a [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
+These models may be introduced via a [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AI Supply Chain Compromise]].
 
 Serialization of models is a popular technique for model storage, transfer, and loading.
 However, this format without proper checking presents an opportunity for code execution.
@@ -23,7 +23,7 @@ However, this format without proper checking presents an opportunity for code ex
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
 
-- **Parent Technique:** [[frameworks/atlas/techniques/execution/user-execution/user-execution-overview|AML.T0011: User Execution]]
+- **Parent Technique:** [[frameworks/atlas/techniques/execution/user-execution/user-execution|AML.T0011: User Execution]]
 
 ## Tactics (0)
 

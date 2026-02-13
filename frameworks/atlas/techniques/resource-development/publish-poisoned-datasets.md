@@ -9,7 +9,7 @@ sidebar_position: 12
 
 Adversaries may [[frameworks/atlas/techniques/resource-development/poison-training-data|Poison Training Data]] and publish it to a public location.
 The poisoned dataset may be a novel dataset or a poisoned variant of an existing open source dataset.
-This data may be introduced to a victim system via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
+This data may be introduced to a victim system via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AI Supply Chain Compromise]].
 
 ## Metadata
 

@@ -199,7 +199,7 @@ This issue is tested in the following engagements:
 - [x] RAG & Retrieval Assessment - Testing for PII leakage through retrieved documents and LLM outputs (detail page pending)
 - [x] Model Tampering & Supply Chain Risk - Validating training data sanitization and privacy protections (detail page pending)
 
-[[playbooks/engagements-overview|View all engagements]]
+[[playbooks/engagements|View all engagements]]
 
 ## Framework References
 

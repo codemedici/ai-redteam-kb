@@ -172,7 +172,7 @@ This issue is tested in the following engagements:
 - [x] Model Tampering & Supply Chain Risk - Backdoor detection and trigger identification (detail page pending)
 - [x] Evaluation & Guardrail Validation - Jailbreak resistance and adversarial robustness benchmarking (detail page pending)
 
-[[playbooks/engagements-overview|View all engagements]]
+[[playbooks/engagements|View all engagements]]
 
 ## Framework References
 

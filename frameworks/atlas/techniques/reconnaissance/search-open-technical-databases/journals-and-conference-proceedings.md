@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # AML.T0000.000: Journals and Conference Proceedings
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 Many of the publications accepted at premier artificial intelligence conferences and journals come from commercial labs.
 Some journals and conferences are open access, others may require paying for access or a membership.
@@ -21,7 +21,7 @@ This information can be used by adversaries to implement the paper.
 - **Last Modified:** April 9, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+- **Parent Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 ## Tactics (0)
 

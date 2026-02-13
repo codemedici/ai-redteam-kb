@@ -7,7 +7,7 @@ sidebar_position: 10
 
 # AML.T0048.004: AI Intellectual Property Theft
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 Adversaries may exfiltrate AI artifacts to steal intellectual property and cause economic harm to the victim organization.
 
@@ -23,7 +23,7 @@ An adversary who has stolen a model via  or via [[frameworks/atlas/techniques/ex
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+- **Parent Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 ## Tactics (0)
 

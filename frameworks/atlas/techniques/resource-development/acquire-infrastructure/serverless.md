@@ -7,7 +7,7 @@ sidebar_position: 22
 
 # AML.T0008.004: Serverless
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 Adversaries may purchase and configure serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda functions, or Google Apps Scripts, that can be used during targeting. By utilizing serverless infrastructure, adversaries can make it more difficult to attribute infrastructure used during operations back to them.
 
@@ -20,7 +20,7 @@ Once acquired, the serverless runtime environment can be leveraged to either res
 - **Last Modified:** April 15, 2025
 - **Maturity:** feasible
 - **MITRE ATT&CK Reference:** [T1583.007](https://attack.mitre.org/techniques/T1583/007/)
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 

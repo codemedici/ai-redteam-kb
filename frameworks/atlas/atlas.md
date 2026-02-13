@@ -15,18 +15,18 @@ MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems) i
 
 This comprehensive reference documentation provides detailed information about:
 
-- **[[frameworks/atlas/tactics/tactics-overview|Tactics]]**: High-level adversary goals and objectives (16 tactics)
-- **[[frameworks/atlas/techniques/techniques-overview|Techniques]]**: Specific methods used to achieve tactical objectives (147 techniques)
-- **[[frameworks/atlas/case-studies/case-studies-overview|Case Studies]]**: Real-world examples and demonstrations (45 case studies)
+- **[[frameworks/atlas/tactics/tactics|Tactics]]**: High-level adversary goals and objectives (16 tactics)
+- **[[frameworks/atlas/techniques/techniques|Techniques]]**: Specific methods used to achieve tactical objectives (147 techniques)
+- **[[frameworks/atlas/case-studies/case-studies|Case Studies]]**: Real-world examples and demonstrations (45 case studies)
 
 All ATLAS content is cross-referenced with hyperlinks to enable easy navigation between related tactics, techniques, and case studies.
 
 ## How to Use This Reference
 
 ### Browsing by Category
-- Navigate to [[frameworks/atlas/tactics/tactics-overview|Tactics]] to understand adversary objectives
-- Explore [[frameworks/atlas/techniques/techniques-overview|Techniques]] to see specific attack methods
-- Review [[frameworks/atlas/case-studies/case-studies-overview|Case Studies]] for real-world examples
+- Navigate to [[frameworks/atlas/tactics/tactics|Tactics]] to understand adversary objectives
+- Explore [[frameworks/atlas/techniques/techniques|Techniques]] to see specific attack methods
+- Review [[frameworks/atlas/case-studies/case-studies|Case Studies]] for real-world examples
 
 ### Cross-References
 Throughout this documentation, you'll find hyperlinks connecting:

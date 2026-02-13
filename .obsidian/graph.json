@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-file:atlas-overview -file:case-studies-overview -file:tactics-overview -file:techniques-overview -file:engagements-overview -file:examples -file:ARCHITECTURE-PLAN -file:README -file:bibliography -file:structural-observations -file:TEMPLATE",
+  "search": "-file:frameworks/atlas/atlas -file:frameworks/atlas/case-studies/case-studies -file:frameworks/atlas/tactics/tactics -file:frameworks/atlas/techniques/techniques -file:playbooks/engagements -file:ai-redteam-kb -file:examples -file:ARCHITECTURE-PLAN -file:README -file:bibliography -file:structural-observations -file:TEMPLATE",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -33,13 +33,6 @@
       "color": {
         "a": 1,
         "rgb": 15105570
-      }
-    },
-    {
-      "query": "file:overview path:frameworks/atlas/techniques",
-      "color": {
-        "a": 1,
-        "rgb": 10181046
       }
     },
     {
@@ -81,13 +74,13 @@
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 3,
-  "nodeSizeMultiplier": 1.9375,
-  "lineSizeMultiplier": 0.891145833333333,
+  "nodeSizeMultiplier": 2.4734375,
+  "lineSizeMultiplier": 1.2484375,
   "collapse-forces": false,
-  "centerStrength": 0.421875,
-  "repelStrength": 10.5208333333333,
-  "linkStrength": 0,
+  "centerStrength": 0.375,
+  "repelStrength": 20,
+  "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.20477944597240344,
+  "scale": 0.06016588144426668,
   "close": false
 }

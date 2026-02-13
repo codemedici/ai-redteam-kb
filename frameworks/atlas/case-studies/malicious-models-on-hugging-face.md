@@ -51,7 +51,7 @@ In their analysis, the ReversingLabs researchers found that the malicious payloa
 
 ### Step 4: AI Supply Chain Compromise
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 Because the models were successfully uploaded to Hugging Face, a user relying on this model repository would have their supply chain compromised.
 
@@ -79,7 +79,7 @@ The malicious payload was a reverse shell set to connect to a hardcoded IP addre
 - Technique: [[frameworks/atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076: Corrupt AI Model]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AML.T0010: AI Supply Chain Compromise]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]

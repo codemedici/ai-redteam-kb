@@ -7,7 +7,7 @@ sidebar_position: 7
 
 # AML.T0043.000: White-Box Optimization
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 In White-Box Optimization, the adversary has full access to the target model and optimizes the adversarial example directly.
 Adversarial examples trained in this manner are most effective against the target model.
@@ -19,7 +19,7 @@ Adversarial examples trained in this manner are most effective against the targe
 - **Last Modified:** January 12, 2024
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 ## Tactics (0)
 

@@ -7,7 +7,7 @@ sidebar_position: 10
 
 # AML.T0008.000: AI Development Workspaces
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 Developing and staging AI attacks often requires expensive compute resources.
 Adversaries may need access to one or many GPUs in order to develop an attack.
@@ -21,7 +21,7 @@ Multiple workspaces may be used to avoid detection.
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 ## Tactics (0)
 

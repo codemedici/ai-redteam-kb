@@ -11,7 +11,7 @@ An adversary may probe or scan the victim system to gather information for targe
 
 Adversaries may scan for open ports on a potential victim's network, which can indicate specific services or tools the victim is utilizing. This could include a scan for tools related to AI DevOps or AI services themselves such as public AI chat agents (ex: [Copilot Studio Hunter](https://github.com/mbrg/power-pwn/wiki/Modules:-Copilot-Studio-Hunter-%E2%80%90-Enum)). They can also send emails to organization service addresses and inspect the replies for indicators that an AI agent is managing the inbox.
 
-Information gained from Active Scanning may yield targets that provide opportunities for other forms of reconnaissance such as [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|Search Open Technical Databases]], [[frameworks/atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]], or [[frameworks/atlas/techniques/reconnaissance/gather-rag-indexed-targets|Gather RAG-Indexed Targets]].
+Information gained from Active Scanning may yield targets that provide opportunities for other forms of reconnaissance such as [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|Search Open Technical Databases]], [[frameworks/atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|Search Open AI Vulnerability Analysis]], or [[frameworks/atlas/techniques/reconnaissance/gather-rag-indexed-targets|Gather RAG-Indexed Targets]].
 
 ## Metadata
 

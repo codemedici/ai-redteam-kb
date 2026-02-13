@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # AML.T0002.001: Models
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 Adversaries may acquire public models to use in their operations.
 Adversaries may seek models used by the victim organization or models that are representative of those used by the victim organization.
@@ -23,7 +23,7 @@ Acquired models are useful in advancing the adversary's operations and are frequ
 - **Last Modified:** February 28, 2023
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts-overview|AML.T0002: Acquire Public AI Artifacts]]
+- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 ## Tactics (0)
 

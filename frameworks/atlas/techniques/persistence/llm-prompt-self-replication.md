@@ -7,7 +7,7 @@ sidebar_position: 4
 
 # AML.T0061: LLM Prompt Self-Replication
 
-An adversary may use a carefully crafted [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|LLM Prompt Injection]] designed to cause the LLM to replicate the prompt as part of its output. This allows the prompt to propagate to other LLMs and persist on the system. The self-replicating prompt is typically paired with other malicious instructions (ex: [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|LLM Jailbreak]], [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|LLM Data Leakage]]).
+An adversary may use a carefully crafted [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|LLM Prompt Injection]] designed to cause the LLM to replicate the prompt as part of its output. This allows the prompt to propagate to other LLMs and persist on the system. The self-replicating prompt is typically paired with other malicious instructions (ex: [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|LLM Jailbreak]], [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|LLM Data Leakage]]).
 
 ## Metadata
 

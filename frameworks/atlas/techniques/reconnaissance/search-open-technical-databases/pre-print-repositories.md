@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # AML.T0000.001: Pre-Print Repositories
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 Pre-Print repositories, such as arXiv, contain the latest academic research papers that haven't been peer reviewed.
 They may contain research notes, or technical reports that aren't typically published in journals or conference proceedings.
@@ -21,7 +21,7 @@ Searching pre-print repositories  provide adversaries with a relatively up-to-da
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+- **Parent Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 ## Tactics (0)
 

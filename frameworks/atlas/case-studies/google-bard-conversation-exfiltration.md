@@ -33,13 +33,13 @@ The researcher developed a prompt that causes Bard to include a Markdown element
 
 ### Step 2: Acquire Infrastructure
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 The researcher identified that Google Apps Scripts can be invoked via a URL on `script.google.com` or `googleusercontent.com` and can be configured to not require authentication. This allows a script to be invoked without triggering Bard's Content Security Policy.
 
 ### Step 3: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 The researcher wrote a Google Apps Script that logs all query parameters to a Google Doc.
 
@@ -73,10 +73,10 @@ The user's conversation is exfiltrated, violating their privacy, and possibly en
 - Technique: [[frameworks/atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-overview|AML.T0008: Acquire Infrastructure]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-overview|AML.T0017: Develop Capabilities]]
+- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 **Step 4:**
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]

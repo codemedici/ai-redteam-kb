@@ -10,7 +10,7 @@ sidebar_position: 1
 
 
 An adversary may rely upon specific actions by a user in order to gain execution.
-Users may inadvertently execute unsafe code introduced via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise-overview|AI Supply Chain Compromise]].
+Users may inadvertently execute unsafe code introduced via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AI Supply Chain Compromise]].
 Users may be subjected to social engineering to get them to execute malicious code by, for example, opening a malicious document file or link.
 
 ## Metadata

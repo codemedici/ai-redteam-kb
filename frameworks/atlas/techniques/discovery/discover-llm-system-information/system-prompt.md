@@ -7,7 +7,7 @@ sidebar_position: 9
 
 # AML.T0069.002: System Prompt
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069: Discover LLM System Information]]
 
 Adversaries may discover a large language model's system instructions provided by the AI system builder to learn about the system's capabilities and circumvent its guardrails.
 
@@ -18,7 +18,7 @@ Adversaries may discover a large language model's system instructions provided b
 - **Last Modified:** March 12, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
+- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069: Discover LLM System Information]]
 
 ## Tactics (0)
 

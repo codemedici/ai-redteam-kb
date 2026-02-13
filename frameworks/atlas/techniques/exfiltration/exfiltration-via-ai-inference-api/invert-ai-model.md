@@ -7,7 +7,7 @@ sidebar_position: 3
 
 # AML.T0024.001: Invert AI Model
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
 
 AI models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API.
 By querying the inference API strategically, adversaries can back out potentially private information embedded within the training data.
@@ -20,7 +20,7 @@ This could lead to privacy violations if the attacker can reconstruct the data o
 - **Last Modified:** April 9, 2025
 - **Maturity:** feasible
 
-- **Parent Technique:** [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Exfiltration via AI Inference API]]
+- **Parent Technique:** [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
 
 ## Tactics (0)
 

@@ -257,7 +257,7 @@ Encompasses all information the system consumes or stores outside the model weig
 
 **Impact**: Remote code execution via backdoored authentication logic
 
-**ATLAS Mapping**: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model-overview|AML.T0020: Poison Training Data]]
+**ATLAS Mapping**: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0020: Poison Training Data]]
 
 **Detection**: Monitor RAG retrieval patterns for newly added documents, verify source reputation, use code analysis on generated outputs
 
@@ -319,7 +319,7 @@ Focuses on the *intrinsic behavior* and *security posture* of the model.
 
 **Impact**: Privacy violation, GDPR/CCPA non-compliance, potential identity theft
 
-**ATLAS Mapping**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Discover ML Model Family]], [[frameworks/atlas/techniques/impact/impact-overview|AML.T0056: LLM Data Leakage]]
+**ATLAS Mapping**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024: Discover ML Model Family]], [[frameworks/atlas/techniques/impact/impact|AML.T0056: LLM Data Leakage]]
 
 **Detection**: Monitor for extraction-style prompts, implement output filtering for PII, use differential privacy in training, measure memorization metrics
 
@@ -389,7 +389,7 @@ Focuses on where AI components interact with business logic, workflows, tools, a
 
 **Impact**: Confidential data exfiltration, unauthorized access to privileged documents
 
-**ATLAS Mapping**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection-overview|AML.T0051: LLM Prompt Injection]]
+**ATLAS Mapping**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 **Detection**: Sanitize email inputs before processing, implement tool call approval workflows for sensitive actions, monitor for emails to unusual external recipients, parse and validate email content structure
 
@@ -454,7 +454,7 @@ Encompasses the operational environment surrounding the model.
 
 **Impact**: Cross-tenant data leakage, privacy violation, regulatory non-compliance (HIPAA), competitive intelligence theft
 
-**ATLAS Mapping**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024: Discover ML Model Family]], [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0049: Exploit ML Model]]
+**ATLAS Mapping**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024: Discover ML Model Family]], [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0049: Exploit ML Model]]
 
 **Detection**: Implement rate limiting at all layers (API, inference, vector DB), enforce strict tenant isolation in embeddings, monitor for timing attack patterns, audit cross-tenant access attempts, implement query result caching per tenant
 

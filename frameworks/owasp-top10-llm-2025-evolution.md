@@ -121,7 +121,7 @@ Findings mapped to:
 - **Techniques**: Specific attack methods (e.g., AML.T0051: LLM Prompt Injection)
 - **Case Studies**: Real-world incidents demonstrating pattern
 
-[[frameworks/atlas/atlas-overview|Browse ATLAS reference]] | [[frameworks/atlas/tactics|Tactics overview]] | [[frameworks/atlas/techniques|Techniques catalog]]
+[[frameworks/atlas/atlas|Browse ATLAS reference]] | [[frameworks/atlas/tactics|Tactics overview]] | [[frameworks/atlas/techniques|Techniques catalog]]
 
 ### OWASP LLM Top 10 (Risk Framework)
 

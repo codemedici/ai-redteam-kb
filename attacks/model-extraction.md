@@ -166,7 +166,7 @@ This issue is tested in the following engagements:
 - [x] Model Tampering & Supply Chain Risk - Validates model provenance and theft prevention controls (detail page pending)
 - [x] Agentic Workflow Assessment (Extended) - If model theft used to enhance agent exploitation (detail page pending)
 
-[[playbooks/engagements-overview|View all engagements]]
+[[playbooks/engagements|View all engagements]]
 
 ## Framework References
 
@@ -953,4 +953,4 @@ def add_laplacian_noise(probabilities, sensitivity=1.0, epsilon=0.5):
 
 - **Mitigated by**: [[defenses/rate-limiting-and-throttling]], [[defenses/anomaly-detection-architecture]], [[defenses/access-segmentation-and-rbac]]
 - **Enables**: [[attacks/adversarial-examples-evasion-attacks]], [[attacks/membership-inference-attacks]]
-- **ATLAS**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api-overview|AML.T0024]]
+- **ATLAS**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024]]

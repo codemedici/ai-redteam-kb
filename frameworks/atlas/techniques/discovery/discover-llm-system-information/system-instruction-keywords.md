@@ -7,7 +7,7 @@ sidebar_position: 8
 
 # AML.T0069.001: System Instruction Keywords
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069: Discover LLM System Information]]
 
 Adversaries may discover keywords that have special meaning to the large language model (LLM), such as function names or object names. These can later be exploited to confuse or manipulate the LLM into misbehaving and to make calls to plugins the LLM has access to.
 
@@ -18,7 +18,7 @@ Adversaries may discover keywords that have special meaning to the large languag
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
 
-- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information-overview|AML.T0069: Discover LLM System Information]]
+- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069: Discover LLM System Information]]
 
 ## Tactics (0)
 

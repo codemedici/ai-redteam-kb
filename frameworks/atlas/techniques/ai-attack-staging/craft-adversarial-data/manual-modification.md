@@ -7,7 +7,7 @@ sidebar_position: 10
 
 # AML.T0043.003: Manual Modification
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 Adversaries may manually modify the input data to craft adversarial data.
 They may use their knowledge of the target model to modify parts of the data they suspect helps the model in performing its task.
@@ -20,7 +20,7 @@ The adversary may use trial and error until they are able to verify they have a 
 - **Last Modified:** May 13, 2021
 - **Maturity:** realized
 
-- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-overview|AML.T0043: Craft Adversarial Data]]
+- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
 ## Tactics (0)
 

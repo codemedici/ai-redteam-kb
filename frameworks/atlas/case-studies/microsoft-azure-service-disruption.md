@@ -25,7 +25,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 
@@ -74,7 +74,7 @@ The team performed an online evasion attack by replaying the adversarial example
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases-overview|AML.T0000: Search Open Technical Databases]]
+- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]

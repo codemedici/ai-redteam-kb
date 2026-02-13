@@ -115,7 +115,7 @@ The researcher demonstrated that EasyEdit could be used to poison a `Llama-2-7-b
 
 ### Step 16: External Harms
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 If the company's models were manipulated to produce false information, a variety of harms including financial and reputational could occur.
 
@@ -167,7 +167,7 @@ If the company's models were manipulated to produce false information, a variety
 - Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
 
 **Step 16:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-overview|AML.T0048: External Harms]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 ## External References
 

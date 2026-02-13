@@ -25,6 +25,14 @@ Malicious packages may behave as expected to the user. They may be introduced vi
 
 - [[frameworks/atlas/tactics/execution|Execution]]
 
+## Mitigations (5)
+
+- [[frameworks/atlas/mitigations/restrict-library-loading|AML.M0011: Restrict Library Loading]] — Restricting packages from loading external libraries can limit their ability to execute malicious code.
+- [[frameworks/atlas/mitigations/code-signing|AML.M0013: Code Signing]] — Code signing provides a guarantee that the software package has not been manipulated after signing took place.
+- [[frameworks/atlas/mitigations/vulnerability-scanning|AML.M0016: Vulnerability Scanning]] — Vulnerability scanning can help identify malicious packages and prevent user execution.
+- [[frameworks/atlas/mitigations/user-training|AML.M0018: User Training]] — Train users to identify attempts of manipulation to prevent them from running unsafe code from external packages.
+- [[frameworks/atlas/mitigations/ai-bill-of-materials|AML.M0023: AI Bill of Materials]] — An AI BOM can help users identify untrustworthy software dependencies.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/chatgpt-package-hallucination|ChatGPT Package Hallucination]]

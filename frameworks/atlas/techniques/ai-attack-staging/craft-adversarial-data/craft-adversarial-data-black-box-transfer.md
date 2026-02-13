@@ -28,6 +28,13 @@ If the adversary has [AI Model Inference API Access](/techniques/AML.T0040), the
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (4)
+
+- [[frameworks/atlas/mitigations/model-hardening|AML.M0003: Model Hardening]] — Hardened models are more robust to adversarial inputs.
+- [[frameworks/atlas/mitigations/use-ensemble-methods|AML.M0006: Use Ensemble Methods]] — Using an ensemble of models increases the difficulty of crafting effective adversarial data and improves overall robustness.
+- [[frameworks/atlas/mitigations/input-restoration|AML.M0010: Input Restoration]] — Input restoration can help remediate adversarial inputs.
+- [[frameworks/atlas/mitigations/adversarial-input-detection|AML.M0015: Adversarial Input Detection]] — Incorporate adversarial input detection to block malicious inputs at inference time.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]

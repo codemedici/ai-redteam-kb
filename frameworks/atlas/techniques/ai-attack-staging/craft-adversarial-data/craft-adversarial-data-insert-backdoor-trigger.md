@@ -26,6 +26,14 @@ This technique is used in conjunction with [Poison AI Model](/techniques/AML.T00
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (5)
+
+- [[frameworks/atlas/mitigations/model-hardening|AML.M0003: Model Hardening]] — Hardened models are more robust to adversarial inputs.
+- [[frameworks/atlas/mitigations/use-ensemble-methods|AML.M0006: Use Ensemble Methods]] — Using an ensemble of models increases the difficulty of crafting effective adversarial data and improves overall robustness.
+- [[frameworks/atlas/mitigations/validate-ai-model|AML.M0008: Validate AI Model]] — Validating that an AI model does not respond to backdoor triggers can help increase confidence that the model has not been poisoned.
+- [[frameworks/atlas/mitigations/input-restoration|AML.M0010: Input Restoration]] — Input restoration can help remediate adversarial inputs.
+- [[frameworks/atlas/mitigations/adversarial-input-detection|AML.M0015: Adversarial Input Detection]] — Incorporate adversarial input detection to block malicious inputs at inference time.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|Backdoor Attack on Deep Learning Models in Mobile Apps]]

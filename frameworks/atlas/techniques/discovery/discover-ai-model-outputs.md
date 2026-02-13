@@ -21,6 +21,13 @@ Model outputs may enable the adversary to identify weaknesses in the model and d
 
 - [[frameworks/atlas/tactics/discovery|Discovery]]
 
+## Mitigations (4)
+
+- [[frameworks/atlas/mitigations/passive-ai-output-obfuscation|AML.M0002: Passive AI Output Obfuscation]] — Obfuscating model outputs can prevent adversaries from collecting sensitive information about the model outputs.
+- [[frameworks/atlas/mitigations/encrypt-sensitive-information|AML.M0012: Encrypt Sensitive Information]] — Encrypting model outputs can prevent adversaries from discovering sensitive information about the AI-enabled system or its operations.
+- [[frameworks/atlas/mitigations/ai-model-distribution-methods|AML.M0017: AI Model Distribution Methods]] — Avoiding the deployment of models to edge devices reduces an adversary's ability to collect sensitive information about the model outputs.
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-in-production|AML.M0019: Control Access to AI Models and Data in Production]] — Controlling access to the model in production can help prevent adversaries from inferring information from the model outputs.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/bypassing-cylance-s-ai-malware-detection|Bypassing Cylance's AI Malware Detection]]

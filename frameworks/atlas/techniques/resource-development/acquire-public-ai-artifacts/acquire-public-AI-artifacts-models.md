@@ -29,6 +29,11 @@ Acquired models are useful in advancing the adversary's operations and are frequ
 
 - [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/limit-model-artifact-release|AML.M0001: Limit Model Artifact Release]] — Limiting the release of model architectures and checkpoints can reduce an adversary's ability to target those models.
+- [[frameworks/atlas/mitigations/verify-ai-artifacts|AML.M0014: Verify AI Artifacts]] — Introduce proper checking of signatures to ensure that unsafe AI models will not be introduced to the system.
+
 ## Case Studies (4)
 
 - [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]

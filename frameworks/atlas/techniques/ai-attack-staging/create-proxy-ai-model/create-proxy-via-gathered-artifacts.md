@@ -25,6 +25,11 @@ This can be used to develop attacks that require higher levels of access than th
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/limit-public-release-of-information|AML.M0000: Limit Public Release of Information]] — Limiting release of technical information about a model and training data can reduce an adversary's ability to create an accurate proxy model.
+- [[frameworks/atlas/mitigations/limit-model-artifact-release|AML.M0001: Limit Model Artifact Release]] — Limiting the release of model artifacts can reduce an adversary's ability to create an accurate proxy model.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/gpt-2-model-replication|GPT-2 Model Replication]]

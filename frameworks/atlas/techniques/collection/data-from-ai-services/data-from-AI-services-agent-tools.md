@@ -24,6 +24,14 @@ Adversaries may prompt the AI service to invoke various tools the agent has acce
 
 - [[frameworks/atlas/tactics/collection|Collection]]
 
+## Mitigations (5)
+
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Log requests to AI services to detect malicious queries for data.
+- [[frameworks/atlas/mitigations/privileged-ai-agent-permissions-configuration|AML.M0026: Privileged AI Agent Permissions Configuration]] — Configuring privileged AI agents with proper access controls can limit an adversary's ability to collect data from agent tool invocation if the agent is compromised.
+- [[frameworks/atlas/mitigations/single-user-ai-agent-permissions-configuration|AML.M0027: Single-User AI Agent Permissions Configuration]] — Configuring AI agents with permissions that are inherited from the user can limit an adversary's ability to collect data from agent tool invocation if the agent is compromised.
+- [[frameworks/atlas/mitigations/ai-agent-tools-permissions-configuration|AML.M0028: AI Agent Tools Permissions Configuration]] — Configuring AI Agent tools with access controls that are inherited from the user or the AI Agent invoking the tool can limit adversary's access to sensitive data.
+- [[frameworks/atlas/mitigations/segmentation-of-ai-agent-components|AML.M0032: Segmentation of AI Agent Components]] — Segmentation can prevent adversaries from utilizing tools in an agentic workflow to collect sensitive data.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/data-exfiltration-via-agent-tools-in-copilot-studio|Data Exfiltration via Agent Tools in Copilot Studio]]

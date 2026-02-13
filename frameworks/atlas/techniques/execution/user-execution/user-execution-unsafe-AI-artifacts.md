@@ -29,6 +29,15 @@ However, this format without proper checking presents an opportunity for code ex
 
 - [[frameworks/atlas/tactics/execution|Execution]]
 
+## Mitigations (6)
+
+- [[frameworks/atlas/mitigations/restrict-library-loading|AML.M0011: Restrict Library Loading]] — Restrict library loading by ML artifacts.
+- [[frameworks/atlas/mitigations/code-signing|AML.M0013: Code Signing]] — Prevent execution of ML artifacts that are not properly signed.
+- [[frameworks/atlas/mitigations/verify-ai-artifacts|AML.M0014: Verify AI Artifacts]] — Introduce proper checking of signatures to ensure that unsafe AI artifacts will not be executed in the system.
+- [[frameworks/atlas/mitigations/vulnerability-scanning|AML.M0016: Vulnerability Scanning]] — Vulnerability scanning can help identify malicious AI artifacts, such as models or data, and prevent user execution.
+- [[frameworks/atlas/mitigations/user-training|AML.M0018: User Training]] — Train users to identify attempts of manipulation to prevent them from running unsafe code which when executed could develop unsafe artifacts. These artifacts may have a detrimental effect on the system.
+- [[frameworks/atlas/mitigations/ai-bill-of-materials|AML.M0023: AI Bill of Materials]] — An AI BOM can help users identify untrustworthy model artifacts.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]

@@ -24,6 +24,11 @@ Adversaries may utilize open-source models and software that were designed for l
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/use-multi-modal-sensors|AML.M0009: Use Multi-Modal Sensors]] — Using a variety of sensors, such as IR depth cameras, can aid in detecting deepfakes.
+- [[frameworks/atlas/mitigations/deepfake-detection|AML.M0034: Deepfake Detection]] — Deepfake detection can be used to identify and block generated content.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/live-deepfake-image-injection-to-evade-mobile-kyc-verification|Live Deepfake Image Injection to Evade Mobile KYC Verification]]

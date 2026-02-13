@@ -21,6 +21,13 @@ AI artifacts include models and datasets as well as other telemetry data produce
 
 - [[frameworks/atlas/tactics/collection|Collection]]
 
+## Mitigations (4)
+
+- [[frameworks/atlas/mitigations/limit-model-artifact-release|AML.M0001: Limit Model Artifact Release]] — Limiting the release of artifacts can reduce an adversary's ability to collect model artifacts
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can prevent or limit the collection of AI artifacts on the victim system.
+- [[frameworks/atlas/mitigations/encrypt-sensitive-information|AML.M0012: Encrypt Sensitive Information]] — Protect machine learning artifacts with encryption.
+- [[frameworks/atlas/mitigations/ai-model-distribution-methods|AML.M0017: AI Model Distribution Methods]] — Avoiding the deployment of models to edge devices reduces the attack surface and can prevent adversary artifact collection.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/microsoft-azure-service-disruption|Microsoft Azure Service Disruption]]

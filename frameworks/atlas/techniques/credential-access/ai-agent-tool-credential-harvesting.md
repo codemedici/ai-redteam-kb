@@ -20,6 +20,10 @@ Adversaries may attempt to use their access to an AI agent on the victim's syste
 
 - [[frameworks/atlas/tactics/credential-access|Credential Access]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/segmentation-of-ai-agent-components|AML.M0032: Segmentation of AI Agent Components]] — Segmentation can prevent adversaries from utilizing tools in an agentic workflow to harvest credentials.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/exposed-clawdbot-control-interfaces-leads-to-credential-access-and-execution|Exposed ClawdBot Control Interfaces Leads to Credential Access and Execution]]

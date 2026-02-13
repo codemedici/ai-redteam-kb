@@ -26,6 +26,10 @@ Memory is a common feature in LLMs that allows them to remember information acro
 
 - [[frameworks/atlas/tactics/persistence|Persistence]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/memory-hardening|AML.M0031: Memory Hardening]] — Memory hardening can help protect LLM memory from manipulation and prevent poisoned memories from executing.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/aikatz-attacking-llm-desktop-applications|AIKatz: Attacking LLM Desktop Applications]]

@@ -23,3 +23,7 @@ Adversaries may use an off-the-shelf pre-trained model as a proxy for the victim
 ## Tactics (1)
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
+
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/limit-public-release-of-information|AML.M0000: Limit Public Release of Information]] — Limiting release of technical information about a model and training data can reduce an adversary's ability to create an accurate proxy model.

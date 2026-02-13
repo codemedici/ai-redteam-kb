@@ -24,6 +24,10 @@ Frequently, the next step is to [Acquire Public AI Artifacts](/techniques/AML.T0
 
 - [[frameworks/atlas/tactics/reconnaissance|Reconnaissance]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/limit-public-release-of-information|AML.M0000: Limit Public Release of Information]] — Limit the release of sensitive information in the metadata of deployed systems and publicly available applications.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|Backdoor Attack on Deep Learning Models in Mobile Apps]]

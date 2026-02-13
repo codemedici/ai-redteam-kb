@@ -23,6 +23,11 @@ Many systems rely on the same models provided via an inference API, which means 
 
 - [[frameworks/atlas/tactics/ai-model-access|AI Model Access]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-in-production|AML.M0019: Control Access to AI Models and Data in Production]] — Adversaries can use unrestricted API access to gain information about a production system, stage attacks, and introduce malicious data to the system.
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Telemetry logging can help audit API usage of the model.
+
 ## Case Studies (6)
 
 - [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]

@@ -20,6 +20,11 @@ Adversaries may attempt to use their access to a large language model (LLM) on t
 
 - [[frameworks/atlas/tactics/credential-access|Credential Access]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/privileged-ai-agent-permissions-configuration|AML.M0026: Privileged AI Agent Permissions Configuration]] — Configuring privileged AI agents with proper access controls can limit an adversary's ability to harvest credentials from RAG Databases if the agent is compromised.
+- [[frameworks/atlas/mitigations/single-user-ai-agent-permissions-configuration|AML.M0027: Single-User AI Agent Permissions Configuration]] — Configuring AI agents with permissions that are inherited from the user can limit an adversary's ability to harvest credentials from RAG Databases if the agent is compromised.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Data Exfiltration from Slack AI via Indirect Prompt Injection]]

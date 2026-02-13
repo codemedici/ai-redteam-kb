@@ -22,3 +22,13 @@ Knowledge of the model family can help the adversary identify means of attacking
 ## Tactics (1)
 
 - [[frameworks/atlas/tactics/discovery|Discovery]]
+
+## Mitigations (3)
+
+- [[frameworks/atlas/mitigations/passive-ai-output-obfuscation|AML.M0002: Passive AI Output Obfuscation]] — Suggested approaches:
+  - Restrict the number of results shown
+  - Limit specificity of output class ontology
+  - Use randomized smoothing techniques
+  - Reduce the precision of numerical outputs
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Limit the amount of information an attacker can learn about a model's ontology through API queries.
+- [[frameworks/atlas/mitigations/use-ensemble-methods|AML.M0006: Use Ensemble Methods]] — Use multiple different models to fool adversaries of which type of model is used and how the model used.

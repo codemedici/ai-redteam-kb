@@ -28,6 +28,14 @@ These can be compromised with traditional malware, or through some adversarial A
 
 - [[frameworks/atlas/tactics/initial-access|Initial Access]]
 
+## Mitigations (5)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can prevent tampering with ML artifacts and prevent unauthorized copying.
+- [[frameworks/atlas/mitigations/use-ensemble-methods|AML.M0006: Use Ensemble Methods]] — Using multiple different models ensures minimal performance loss if security flaw is found in tool for one model or family.
+- [[frameworks/atlas/mitigations/validate-ai-model|AML.M0008: Validate AI Model]] — Ensure that acquired models do not respond to potential backdoor triggers or adversarial influence.
+- [[frameworks/atlas/mitigations/code-signing|AML.M0013: Code Signing]] — Enforce properly signed model files.
+- [[frameworks/atlas/mitigations/ai-model-distribution-methods|AML.M0017: AI Model Distribution Methods]] — An adversary could repackage the application with a malicious version of the model.
+
 ## Case Studies (4)
 
 - [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|Backdoor Attack on Deep Learning Models in Mobile Apps]]

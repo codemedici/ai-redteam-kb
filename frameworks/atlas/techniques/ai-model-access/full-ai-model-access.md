@@ -22,6 +22,11 @@ They may exfiltrate the model to [Craft Adversarial Data](/techniques/AML.T0043)
 
 - [[frameworks/atlas/tactics/ai-model-access|AI Model Access]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls on models and data at rest can help prevent full model access.
+- [[frameworks/atlas/mitigations/ai-model-distribution-methods|AML.M0017: AI Model Distribution Methods]] — Not distributing the model in software to edge devices, can limit an adversary's ability to gain full access to the model.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/backdoor-attack-on-deep-learning-models-in-mobile-apps|Backdoor Attack on Deep Learning Models in Mobile Apps]]

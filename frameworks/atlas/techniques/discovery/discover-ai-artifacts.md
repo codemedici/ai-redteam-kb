@@ -23,6 +23,11 @@ This information can be used to identify targets for further collection, exfiltr
 
 - [[frameworks/atlas/tactics/discovery|Discovery]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can limit an adversary's ability to identify AI models, datasets, and other artifacts on a system.
+- [[frameworks/atlas/mitigations/encrypt-sensitive-information|AML.M0012: Encrypt Sensitive Information]] — Encrypting AI artifacts can protect against adversary attempts to discover sensitive information.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/organization-confusion-on-hugging-face|Organization Confusion on Hugging Face]]

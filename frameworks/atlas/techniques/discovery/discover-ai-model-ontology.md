@@ -25,6 +25,15 @@ It is useful to the adversary in creating targeted attacks.
 
 - [[frameworks/atlas/tactics/discovery|Discovery]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/passive-ai-output-obfuscation|AML.M0002: Passive AI Output Obfuscation]] — Suggested approaches:
+  - Restrict the number of results shown
+  - Limit specificity of output class ontology
+  - Use randomized smoothing techniques
+  - Reduce the precision of numerical outputs
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Limit the amount of information an attacker can learn about a model's ontology through API queries.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|Face Identification System Evasion via Physical Countermeasures]]

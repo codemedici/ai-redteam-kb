@@ -20,3 +20,8 @@ Sponge examples are a particular type of adversarial data designed to maximize e
 ## Tactics (1)
 
 - [[frameworks/atlas/tactics/impact|Impact]]
+
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Limit the number of queries users can perform in a given interval to hinder an attacker's ability to send computationally expensive inputs
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-in-production|AML.M0019: Control Access to AI Models and Data in Production]] — Access controls can limit API access and prevent cost harvesting.

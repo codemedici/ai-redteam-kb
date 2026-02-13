@@ -22,6 +22,10 @@ See the ATT&CK [Exfiltration](https://attack.mitre.org/tactics/TA0010/) tactic f
 
 - [[frameworks/atlas/tactics/exfiltration|Exfiltration]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can prevent exfiltration.
+
 ## Case Studies (8)
 
 - [[frameworks/atlas/case-studies/microsoft-azure-service-disruption|Microsoft Azure Service Disruption]]

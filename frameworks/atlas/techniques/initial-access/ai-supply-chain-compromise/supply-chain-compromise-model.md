@@ -33,6 +33,11 @@ Adversaries may compromise legitimate packages [\[4\]][4] or publish malicious s
 
 - [[frameworks/atlas/tactics/initial-access|Initial Access]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/use-ensemble-methods|AML.M0006: Use Ensemble Methods]] — Using multiple different models ensures minimal performance loss if security flaw is found in tool for one model or family.
+- [[frameworks/atlas/mitigations/code-signing|AML.M0013: Code Signing]] — Enforce properly signed drivers and ML software frameworks.
+
 ## Case Studies (6)
 
 - [[frameworks/atlas/case-studies/compromised-pytorch-dependency-chain|Compromised PyTorch Dependency Chain]]

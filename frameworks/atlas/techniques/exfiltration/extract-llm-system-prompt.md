@@ -21,3 +21,9 @@ System prompts can be a portion of an AI provider's competitive advantage and ar
 ## Tactics (1)
 
 - [[frameworks/atlas/tactics/exfiltration|Exfiltration]]
+
+## Mitigations (3)
+
+- [[frameworks/atlas/mitigations/generative-ai-guardrails|AML.M0020: Generative AI Guardrails]] — Guardrails can prevent harmful inputs that can lead to meta prompt extraction.
+- [[frameworks/atlas/mitigations/generative-ai-guidelines|AML.M0021: Generative AI Guidelines]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
+- [[frameworks/atlas/mitigations/generative-ai-model-alignment|AML.M0022: Generative AI Model Alignment]] — Model alignment can improve the parametric safety of a model by guiding it away from unsafe prompts and responses.

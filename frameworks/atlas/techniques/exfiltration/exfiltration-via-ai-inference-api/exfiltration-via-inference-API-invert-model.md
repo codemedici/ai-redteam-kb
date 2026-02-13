@@ -25,3 +25,13 @@ This could lead to privacy violations if the attacker can reconstruct the data o
 ## Tactics (1)
 
 - [[frameworks/atlas/tactics/exfiltration|Exfiltration]]
+
+## Mitigations (3)
+
+- [[frameworks/atlas/mitigations/passive-ai-output-obfuscation|AML.M0002: Passive AI Output Obfuscation]] — Suggested approaches:
+  - Restrict the number of results shown
+  - Limit specificity of output class ontology
+  - Use randomized smoothing techniques
+  - Reduce the precision of numerical outputs
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Limit the volume of API queries in a given period of time to regulate the amount and fidelity of potentially sensitive information an attacker can learn.
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Telemetry logging can help identify if sensitive data has been exfiltrated.

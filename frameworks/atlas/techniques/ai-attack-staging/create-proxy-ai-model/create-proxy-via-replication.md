@@ -29,6 +29,12 @@ The adversary can use the replicated model to [Craft Adversarial Data](/techniqu
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (3)
+
+- [[frameworks/atlas/mitigations/passive-ai-output-obfuscation|AML.M0002: Passive AI Output Obfuscation]] — Obfuscating model outputs restricts an adversary's ability to create an accurate proxy model by querying a model and observing its outputs.
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Restricting the number of queries to the model decreases an adversary's ability to replicate an accurate proxy model.
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Telemetry logging can help identify if a proxy training dataset has been exfiltrated.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]

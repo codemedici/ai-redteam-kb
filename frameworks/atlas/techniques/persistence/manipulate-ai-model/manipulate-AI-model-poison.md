@@ -28,6 +28,14 @@ The change in behavior of poisoned models may be limited to targeted categories 
 - [[frameworks/atlas/tactics/persistence|Persistence]]
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (5)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can prevent tampering with ML artifacts and prevent unauthorized copying.
+- [[frameworks/atlas/mitigations/sanitize-training-data|AML.M0007: Sanitize Training Data]] — Prevent attackers from leveraging poisoned datasets to launch backdoor attacks against a model.
+- [[frameworks/atlas/mitigations/validate-ai-model|AML.M0008: Validate AI Model]] — Ensure that trained models do not respond to potential backdoor triggers or adversarial influence.
+- [[frameworks/atlas/mitigations/code-signing|AML.M0013: Code Signing]] — Code signing provides a guarantee that the model has not been manipulated after signing took place.
+- [[frameworks/atlas/mitigations/maintain-ai-dataset-provenance|AML.M0025: Maintain AI Dataset Provenance]] — Dataset provenance can protect against poisoning of models.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]

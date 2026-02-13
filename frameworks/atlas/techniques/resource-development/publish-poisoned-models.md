@@ -20,6 +20,10 @@ Adversaries may publish a poisoned model to a public location such as a model re
 
 - [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/ai-bill-of-materials|AML.M0023: AI Bill of Materials]] — An AI BOM can help users identify untrustworthy model artifacts.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]]

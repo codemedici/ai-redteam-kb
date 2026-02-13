@@ -24,6 +24,11 @@ An adversary may inject prompts directly as a user of the LLM. This type of inje
 
 - [[frameworks/atlas/tactics/execution|Execution]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Telemetry logging can help identify if unsafe prompts have been submitted to the LLM.
+- [[frameworks/atlas/mitigations/input-and-output-validation-for-ai-agent-components|AML.M0033: Input and Output Validation for AI Agent Components]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.
+
 ## Case Studies (8)
 
 - [[frameworks/atlas/case-studies/achieving-code-execution-in-mathgpt-via-prompt-injection|Achieving Code Execution in MathGPT via Prompt Injection]]

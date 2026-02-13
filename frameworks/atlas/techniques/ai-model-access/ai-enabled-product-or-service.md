@@ -21,6 +21,10 @@ This type of indirect model access may reveal details of the AI model or its inf
 
 - [[frameworks/atlas/tactics/ai-model-access|AI Model Access]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Telemetry logging can help identify if sensitive model information has been sent to an attacker.
+
 ## Case Studies (13)
 
 - [[frameworks/atlas/case-studies/bypassing-cylance-s-ai-malware-detection|Bypassing Cylance's AI Malware Detection]]

@@ -24,6 +24,13 @@ Verifying the attack may be hard to detect since the adversary can use a minimal
 
 - [[frameworks/atlas/tactics/ai-attack-staging|AI Attack Staging]]
 
+## Mitigations (4)
+
+- [[frameworks/atlas/mitigations/passive-ai-output-obfuscation|AML.M0002: Passive AI Output Obfuscation]] — Obfuscating model outputs reduces an adversary's ability to verify the efficacy of an attack.
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Restricting the number of queries to the model decreases an adversary's ability to verify the efficacy of an attack.
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls on models at rest can prevent an adversary's ability to verify attack efficacy.
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-in-production|AML.M0019: Control Access to AI Models and Data in Production]] — Use access controls in production to prevent adversary's ability to verify attack efficacy.
+
 ## Case Studies (7)
 
 - [[frameworks/atlas/case-studies/evasion-of-deep-learning-detector-for-malware-c-c-traffic|Evasion of Deep Learning Detector for Malware C&C Traffic]]

@@ -21,6 +21,13 @@ They may request software packages, commands, URLs, organization names, or e-mai
 
 - [[frameworks/atlas/tactics/discovery|Discovery]]
 
+## Mitigations (4)
+
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Restricting number of model queries limits or slows an adversary's ability to identify possible hallucinations.
+- [[frameworks/atlas/mitigations/generative-ai-guardrails|AML.M0020: Generative AI Guardrails]] — Guardrails can help block hallucinated content that appears in model output.
+- [[frameworks/atlas/mitigations/generative-ai-guidelines|AML.M0021: Generative AI Guidelines]] — Guidelines can instruct the model to avoid producing hallucinated content.
+- [[frameworks/atlas/mitigations/generative-ai-model-alignment|AML.M0022: Generative AI Model Alignment]] — Model alignment can help steer the model away from hallucinated content.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/chatgpt-package-hallucination|ChatGPT Package Hallucination]]

@@ -29,6 +29,11 @@ This allows adversaries to scale spearphishing efforts and target individuals to
 - [[frameworks/atlas/tactics/initial-access|Initial Access]]
 - [[frameworks/atlas/tactics/lateral-movement|Lateral Movement]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/user-training|AML.M0018: User Training]] — Train users to identify phishing attempts and understand that AI can be used to generate targeted and convincing messages.
+- [[frameworks/atlas/mitigations/deepfake-detection|AML.M0034: Deepfake Detection]] — Deepfake detection can be used to identify and block phishing attempts that use generated content.
+
 ## Case Studies (1)
 
 - [[frameworks/atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|Indirect Prompt Injection Threats: Bing Chat Data Pirate]]

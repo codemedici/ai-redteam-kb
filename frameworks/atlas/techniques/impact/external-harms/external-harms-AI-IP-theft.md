@@ -29,6 +29,12 @@ An adversary who has stolen a model via [Exfiltration](/tactics/AML.TA0010) or v
 
 - [[frameworks/atlas/tactics/impact|Impact]]
 
+## Mitigations (3)
+
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can prevent theft of intellectual property.
+- [[frameworks/atlas/mitigations/encrypt-sensitive-information|AML.M0012: Encrypt Sensitive Information]] — Protect machine learning artifacts with encryption.
+- [[frameworks/atlas/mitigations/ai-model-distribution-methods|AML.M0017: AI Model Distribution Methods]] — Avoiding  the deployment of models to edge devices reduces an adversary's potential access to models or AI artifacts.
+
 ## Case Studies (4)
 
 - [[frameworks/atlas/case-studies/attack-on-machine-translation-services|Attack on Machine Translation Services]]

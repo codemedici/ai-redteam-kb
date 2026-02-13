@@ -22,6 +22,12 @@ Once successfully jailbroken, the LLM can be used in unintended ways by the adve
 - [[frameworks/atlas/tactics/privilege-escalation|Privilege Escalation]]
 - [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 
+## Mitigations (3)
+
+- [[frameworks/atlas/mitigations/generative-ai-guardrails|AML.M0020: Generative AI Guardrails]] — Guardrails can prevent harmful inputs that can lead to a jailbreak.
+- [[frameworks/atlas/mitigations/generative-ai-guidelines|AML.M0021: Generative AI Guidelines]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
+- [[frameworks/atlas/mitigations/generative-ai-model-alignment|AML.M0022: Generative AI Model Alignment]] — Model alignment can improve the parametric safety of a model by guiding it away from unsafe prompts and responses.
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants|Rules File Backdoor: Supply Chain Attack on AI Coding Assistants]]

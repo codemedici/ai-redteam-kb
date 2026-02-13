@@ -22,3 +22,8 @@ Adversaries may also spam AI agents with excessive low-severity auditable events
 ## Tactics (1)
 
 - [[frameworks/atlas/tactics/impact|Impact]]
+
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/restrict-number-of-ai-model-queries|AML.M0004: Restrict Number of AI Model Queries]] — Limit the number of queries users can perform in a given interval to protect the system from chaff data spam.
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-in-production|AML.M0019: Control Access to AI Models and Data in Production]] — Authentication on production models can help prevent anonymous chaff data spam.

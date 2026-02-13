@@ -24,6 +24,15 @@ This technique can be used to evade a downstream task where AI is utilized. The 
 - [[frameworks/atlas/tactics/defense-evasion|Defense Evasion]]
 - [[frameworks/atlas/tactics/impact|Impact]]
 
+## Mitigations (6)
+
+- [[frameworks/atlas/mitigations/model-hardening|AML.M0003: Model Hardening]] — Hardened models are more difficult to evade.
+- [[frameworks/atlas/mitigations/use-ensemble-methods|AML.M0006: Use Ensemble Methods]] — Using multiple different models increases robustness to attack.
+- [[frameworks/atlas/mitigations/use-multi-modal-sensors|AML.M0009: Use Multi-Modal Sensors]] — Using a variety of sensors can make it more difficult for an attacker to compromise and produce malicious results.
+- [[frameworks/atlas/mitigations/input-restoration|AML.M0010: Input Restoration]] — Preprocessing model inputs can prevent malicious data from going through the machine learning pipeline.
+- [[frameworks/atlas/mitigations/adversarial-input-detection|AML.M0015: Adversarial Input Detection]] — Prevent an attacker from introducing adversarial data into the system.
+- [[frameworks/atlas/mitigations/deepfake-detection|AML.M0034: Deepfake Detection]] — Deepfake detection can be used to identify and block generated content.
+
 ## Case Studies (17)
 
 - [[frameworks/atlas/case-studies/evasion-of-deep-learning-detector-for-malware-c-c-traffic|Evasion of Deep Learning Detector for Malware C&C Traffic]]

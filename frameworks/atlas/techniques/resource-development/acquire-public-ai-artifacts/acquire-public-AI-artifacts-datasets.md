@@ -29,6 +29,10 @@ Acquired datasets help the adversary advance their operations, stage attacks,  a
 
 - [[frameworks/atlas/tactics/resource-development|Resource Development]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/limit-model-artifact-release|AML.M0001: Limit Model Artifact Release]] — Limiting the release of datasets can reduce an adversary's ability to target production models trained on the same or similar data.
+
 ## Case Studies (6)
 
 - [[frameworks/atlas/case-studies/evasion-of-deep-learning-detector-for-malware-c-c-traffic|Evasion of Deep Learning Detector for Malware C&C Traffic]]

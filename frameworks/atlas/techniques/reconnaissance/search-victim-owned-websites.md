@@ -28,6 +28,10 @@ Information from these sources may reveal opportunities for other forms of recon
 
 - [[frameworks/atlas/tactics/reconnaissance|Reconnaissance]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/limit-public-release-of-information|AML.M0000: Limit Public Release of Information]] — Restrict release of technical information on ML-enabled products and organizational information on the teams supporting ML-enabled products.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/confusing-antimalware-neural-networks|Confusing Antimalware Neural Networks]]

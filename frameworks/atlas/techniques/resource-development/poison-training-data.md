@@ -26,6 +26,15 @@ Poisoned data can be introduced via [AI Supply Chain Compromise](/techniques/AML
 - [[frameworks/atlas/tactics/resource-development|Resource Development]]
 - [[frameworks/atlas/tactics/persistence|Persistence]]
 
+## Mitigations (6)
+
+- [[frameworks/atlas/mitigations/limit-model-artifact-release|AML.M0001: Limit Model Artifact Release]] — Published datasets can be a target for poisoning attacks.
+- [[frameworks/atlas/mitigations/control-access-to-ai-models-and-data-at-rest|AML.M0005: Control Access to AI Models and Data at Rest]] — Access controls can prevent tampering with ML artifacts and prevent unauthorized copying.
+- [[frameworks/atlas/mitigations/sanitize-training-data|AML.M0007: Sanitize Training Data]] — Detect modification of data and labels which may cause adversarial model drift or backdoor attacks.
+- [[frameworks/atlas/mitigations/validate-ai-model|AML.M0008: Validate AI Model]] — Robust evaluation of an AI model can help increase confidence that the model has not been poisoned.
+- [[frameworks/atlas/mitigations/ai-bill-of-materials|AML.M0023: AI Bill of Materials]] — An AI BOM can help users identify untrustworthy model artifacts.
+- [[frameworks/atlas/mitigations/maintain-ai-dataset-provenance|AML.M0025: Maintain AI Dataset Provenance]] — Dataset provenance can protect against poisoning of training data
+
 ## Case Studies (3)
 
 - [[frameworks/atlas/case-studies/virustotal-poisoning|VirusTotal Poisoning]]

@@ -25,6 +25,11 @@ These malicious prompts may be hidden or obfuscated from the user. This type of 
 
 - [[frameworks/atlas/tactics/execution|Execution]]
 
+## Mitigations (2)
+
+- [[frameworks/atlas/mitigations/ai-telemetry-logging|AML.M0024: AI Telemetry Logging]] — Telemetry logging can help identify if unsafe prompts have been submitted to the LLM.
+- [[frameworks/atlas/mitigations/input-and-output-validation-for-ai-agent-components|AML.M0033: Input and Output Validation for AI Agent Components]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.
+
 ## Case Studies (12)
 
 - [[frameworks/atlas/case-studies/indirect-prompt-injection-threats-bing-chat-data-pirate|Indirect Prompt Injection Threats: Bing Chat Data Pirate]]

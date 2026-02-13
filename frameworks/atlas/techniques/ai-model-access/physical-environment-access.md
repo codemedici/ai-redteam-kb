@@ -22,6 +22,10 @@ By modifying the data in the collection process, the adversary can perform modif
 
 - [[frameworks/atlas/tactics/ai-model-access|AI Model Access]]
 
+## Mitigations (1)
+
+- [[frameworks/atlas/mitigations/use-multi-modal-sensors|AML.M0009: Use Multi-Modal Sensors]] — Using a variety of sensors can make it more difficult for an attacker with physical access to compromise and produce malicious results.
+
 ## Case Studies (2)
 
 - [[frameworks/atlas/case-studies/face-identification-system-evasion-via-physical-countermeasures|Face Identification System Evasion via Physical Countermeasures]]

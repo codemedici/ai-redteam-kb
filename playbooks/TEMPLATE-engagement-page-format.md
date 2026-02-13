@@ -450,8 +450,8 @@ Each vulnerability follows this format:
 ## Technical References
 
 - Trust Boundaries Overview
-- [[attacks/|Model Issues]] (if applicable)
-- [[attacks/|Data/Knowledge Issues]] (if applicable)
+- [[techniques/|Model Issues]] (if applicable)
+- [[techniques/|Data/Knowledge Issues]] (if applicable)
 - Application/Agent Runtime Issues (if applicable)
 - Deployment/Governance Issues (if applicable)
 - [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]

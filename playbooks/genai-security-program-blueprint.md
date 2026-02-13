@@ -84,7 +84,7 @@ Detail relevant laws, standards, best practices:
 
 Address traditional + AI-unique risks:
 - **Traditional**: Unauthorized access, data breaches, supply chain attacks
-- **AI-Specific**: Model poisoning ([[attacks/data-poisoning-attacks]]), biased decision-making, prompt injection ([[attacks/prompt-injection]]), model extraction ([[attacks/model-extraction]])
+- **AI-Specific**: Model poisoning ([[techniques/data-poisoning-attacks]]), biased decision-making, prompt injection ([[techniques/prompt-injection]]), model extraction ([[techniques/model-extraction]])
 - **Approach**: Regular risk assessments, mitigation strategies, ongoing monitoring
 
 ---
@@ -120,7 +120,7 @@ Define coverage:
 - Example: Financial forecasting model producing biased predictions
 
 **Availability**: Guarantee authorized access:
-- Uptime SLAs, resilience to denial-of-service attacks ([[attacks/agent-goal-hijack]])
+- Uptime SLAs, resilience to denial-of-service attacks ([[techniques/agent-goal-hijack]])
 - Example: Critical infrastructure AI unavailable during incident
 
 ---
@@ -141,8 +141,8 @@ Clarify terminology:
 - **GenAI**: Generative Artificial Intelligence (models creating new content: text, images, audio, video)
 - **LLM**: Large Language Model (e.g., GPT-4, Claude)
 - **RAG**: Retrieval-Augmented Generation (see [[playbooks/rag-retrieval-assessment]])
-- **Prompt Injection**: Malicious input manipulation (see [[attacks/prompt-injection]])
-- **Model Poisoning**: Training data corruption (see [[attacks/data-poisoning-attacks]])
+- **Prompt Injection**: Malicious input manipulation (see [[techniques/prompt-injection]])
+- **Model Poisoning**: Training data corruption (see [[techniques/data-poisoning-attacks]])
 
 ---
 
@@ -159,8 +159,8 @@ Balance innovation vs. risk:
 
 **Best Practices**:
 - Model development: Adversarial training, input validation, output filtering
-- Data handling: Anonymization, encryption, access segmentation (see [[defenses/access-segmentation-and-rbac]])
-- Security measures: MFA, least privilege, secrets management (see [[attacks/secrets-in-prompts-and-logs]])
+- Data handling: Anonymization, encryption, access segmentation (see [[mitigations/access-segmentation-and-rbac]])
+- Security measures: MFA, least privilege, secrets management (see [[techniques/secrets-in-prompts-and-logs]])
 - Ethical considerations: Bias testing, explainability, human-in-the-loop approvals
 
 ---
@@ -212,7 +212,7 @@ Penalties for non-compliance:
 3. **Vulnerability Scanning**: AVID, NIST NVD (AI-specific CVEs)
 4. **Impact Analysis**: Classify by severity (critical/high/medium/low)
 5. **Risk Prioritization**: Likelihood × Impact matrix
-6. **Mitigation Planning**: Assign controls from [[defenses/]]
+6. **Mitigation Planning**: Assign controls from [[mitigations/]]
 7. **Continuous Monitoring**: Dashboards, alerting, periodic reassessment
 
 ---
@@ -228,8 +228,8 @@ Penalties for non-compliance:
 
 **Phase 2: Model Training**
 - Secure training infrastructure (isolated environments, access controls)
-- Adversarial robustness testing (see [[defenses/adversarial-training]])
-- RLHF/RLAIF for alignment (see [[defenses/dual-llm-judge-pattern]])
+- Adversarial robustness testing (see [[mitigations/adversarial-training]])
+- RLHF/RLAIF for alignment (see [[mitigations/dual-llm-judge-pattern]])
 
 **Phase 3: Model Validation & Testing**
 - Red-team evaluation (see [[playbooks/llm-application-red-team]])
@@ -238,7 +238,7 @@ Penalties for non-compliance:
 
 **Phase 4: Deployment**
 - Model signing & provenance (blockchain for integrity)
-- Gateway/shield integration (see [[defenses/llm-gateway-architecture]])
+- Gateway/shield integration (see [[mitigations/llm-gateway-architecture]])
 - Rollback mechanisms
 
 **Phase 5: Monitoring & Maintenance**
@@ -406,7 +406,7 @@ Penalties for non-compliance:
 **Objective**: Policies for appropriate data usage + protection.
 
 **Steps**:
-1. **Access Control**: RBAC for dataset access (see [[defenses/access-segmentation-and-rbac]])
+1. **Access Control**: RBAC for dataset access (see [[mitigations/access-segmentation-and-rbac]])
 2. **Monitoring**: Audit logs for data access (who, when, what query)
 3. **Ethical Guidelines**: Define prohibited uses (e.g., no surveillance without consent)
 4. **Compliance Tracking**: Map data usage to regulations (GDPR Art. 5, Art. 6)
@@ -616,7 +616,7 @@ Penalties for non-compliance:
 - [[frameworks/llmops-framework]] — Operational integration of security into AI lifecycle
 - [[playbooks/llm-application-red-team]] — Hands-on threat testing procedures
 - [[playbooks/rag-retrieval-assessment]] — RAG-specific security evaluation
-- [[defenses/llm-operational-resilience-monitoring]] — Continuous compliance monitoring
+- [[mitigations/llm-operational-resilience-monitoring]] — Continuous compliance monitoring
 - [[frameworks/OWASP-top-10-LLM]] — Application-layer risk catalog
 
 ---
@@ -642,7 +642,7 @@ Penalties for non-compliance:
 **Week 5-6: Risk Management**
 - Deploy vulnerability scanning (AVID, NIST NVD)
 - Create risk register (threats, impacts, mitigations)
-- Assign controls from [[defenses/]]
+- Assign controls from [[mitigations/]]
 
 **Week 7-8: Development Integration**
 - Integrate security gates into MLOps pipeline

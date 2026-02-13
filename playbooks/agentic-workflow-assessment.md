@@ -87,8 +87,8 @@ See Trust Boundaries overview
 The Model boundary is tested for agent-specific prompt injection and manipulation resistance. Testing focuses on how prompt injection affects agent planning and decision-making, rather than general model behavior.
 
 **Applicable Issues:**
-- [[attacks/prompt-injection|Prompt Injection]] (agent-specific)
-- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]] (in agent context)
+- [[techniques/prompt-injection|Prompt Injection]] (agent-specific)
+- [[techniques/jailbreak-policy-bypass|Jailbreak and Policy Bypass]] (in agent context)
 
 ### Data / Knowledge
 
@@ -102,11 +102,11 @@ The Model boundary is tested for agent-specific prompt injection and manipulatio
 The Application/Agent Runtime boundary is the primary focus of this engagement. Testing validates agent planning mechanisms, tool integration security, memory management, goal-setting, and autonomy safeguards.
 
 **Applicable Issues:**
-- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
-- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
-- [[attacks/unsafe-tool-invocation|Unsafe Tool Invocation]]
-- [[attacks/auth-context-confusion|Authentication Context Confusion]]
-- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[techniques/agent-goal-hijack|Agent Goal Hijacking]]
+- [[techniques/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]]
+- [[techniques/auth-context-confusion|Authentication Context Confusion]]
+- [[techniques/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
@@ -622,7 +622,7 @@ Success rate: [X/Y attempts]
 
 - Trust Boundaries Overview
 - Application/Agent Runtime Issues
-- [[attacks/|Model Issues]]
+- [[techniques/|Model Issues]]
 - [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
 

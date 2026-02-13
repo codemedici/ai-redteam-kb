@@ -24,11 +24,11 @@ Traditional STRIDE maps cleanly to AI trust boundaries:
 | STRIDE Category | AI Boundary | AI-Specific Threat |
 |---|---|---|
 | **Spoofing** | Deployment | Fake training data sources, poisoned model repos |
-| **Tampering** | Data/Model | Model weight manipulation, [[attacks/backdoor-poisoning\|backdoor injection]], [[attacks/data-poisoning-attacks\|data poisoning]] |
+| **Tampering** | Data/Model | Model weight manipulation, [[techniques/backdoor-poisoning\|backdoor injection]], [[techniques/data-poisoning-attacks\|data poisoning]] |
 | **Repudiation** | Deployment | Unlogged model access, untraceable poisoning |
-| **Information Disclosure** | Model | [[attacks/model-extraction\|Model extraction]], [[attacks/membership-inference-attacks\|membership inference]] |
-| **Denial of Service** | Model | [[attacks/adversarial-examples-evasion-attacks\|Adversarial inputs]] causing misclassification |
-| **Elevation of Privilege** | Application | [[attacks/jailbreak-policy-bypass\|Jailbreaking]], [[attacks/prompt-injection\|prompt injection]] |
+| **Information Disclosure** | Model | [[techniques/model-extraction\|Model extraction]], [[techniques/membership-inference-attacks\|membership inference]] |
+| **Denial of Service** | Model | [[techniques/adversarial-examples-evasion-attacks\|Adversarial inputs]] causing misclassification |
+| **Elevation of Privilege** | Application | [[techniques/jailbreak-policy-bypass\|Jailbreaking]], [[techniques/prompt-injection\|prompt injection]] |
 
 > Source: Adversarial AI (Sotiropoulos), Ch17, p. 437–487
 

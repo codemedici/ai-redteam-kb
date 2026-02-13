@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:frameworks/atlas/atlas.md -path:frameworks/atlas/case-studies/case-studies.md -path:frameworks/atlas/tactics/tactics.md -path:frameworks/atlas/techniques/techniques.md -path:playbooks/engagements.md -path:ai-redteam-kb.md -file:examples -file:ARCHITECTURE-PLAN -file:README -file:bibliography -file:structural-observations -file:TEMPLATE",
+  "search": "-path:ai-redteam-kb.md -file:examples -file:ARCHITECTURE-PLAN -file:README -file:bibliography -file:structural-observations -file:TEMPLATE",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -8,21 +8,35 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:attacks",
+      "query": "path:techniques",
       "color": {
         "a": 1,
         "rgb": 15158332
       }
     },
     {
-      "query": "path:defenses",
+      "query": "path:mitigations",
       "color": {
         "a": 1,
         "rgb": 3066993
       }
     },
     {
-      "query": "path:frameworks",
+      "query": "path:case-studies",
+      "color": {
+        "a": 1,
+        "rgb": 15844367
+      }
+    },
+    {
+      "query": "path:frameworks/atlas/tactics",
+      "color": {
+        "a": 1,
+        "rgb": 10181046
+      }
+    },
+    {
+      "query": "path:frameworks AND -path:atlas/techniques AND -path:atlas/mitigations AND -path:atlas/case-studies AND -path:atlas/tactics",
       "color": {
         "a": 1,
         "rgb": 3447003
@@ -33,34 +47,6 @@
       "color": {
         "a": 1,
         "rgb": 15105570
-      }
-    },
-    {
-      "query": "path:frameworks/atlas/techniques",
-      "color": {
-        "a": 1,
-        "rgb": 12292046
-      }
-    },
-    {
-      "query": "path:frameworks/atlas/case-studies",
-      "color": {
-        "a": 1,
-        "rgb": 15844367
-      }
-    },
-    {
-      "query": "path:frameworks/atlas/tactics",
-      "color": {
-        "a": 1,
-        "rgb": 12745742
-      }
-    },
-    {
-      "query": "path:case-studies",
-      "color": {
-        "a": 1,
-        "rgb": 15844367
       }
     },
     {

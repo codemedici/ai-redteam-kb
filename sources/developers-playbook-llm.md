@@ -67,8 +67,8 @@ Practical handbook for developers and security teams delivering real-world guida
 
 ## Related Notes
 
-- [[attacks/prompt-injection]] — Chapter 4 content merged
-- [[defenses/mlops-security]] — Chapter 11 LLMOps content merged
+- [[techniques/prompt-injection]] — Chapter 4 content merged
+- [[mitigations/mlops-security]] — Chapter 11 LLMOps content merged
 - [[playbooks/llm-application-red-team]] — Chapter 11 red teaming content added
 - [[frameworks/atlas/case-studies/tay-poisoning]] — Chapter 1 case study (already existed)
 

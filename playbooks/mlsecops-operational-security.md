@@ -12,7 +12,7 @@ tags:
 
 ## Summary
 
-MLSecOps extends DevSecOps principles to ML pipelines, embedding security throughout the AI development lifecycle: data ingestion, training, model storage, deployment, and monitoring. Key practices include cryptographic model signing, access control on training infrastructure, adversarial robustness testing, and continuous monitoring for drift and attacks. MLSecOps addresses ML-specific risks—[[attacks/data-poisoning-attacks|data poisoning]], [[attacks/model-tampering|model tampering]], [[attacks/supply-chain-model-poisoning|supply chain attacks]]—that traditional DevSecOps overlooks.
+MLSecOps extends DevSecOps principles to ML pipelines, embedding security throughout the AI development lifecycle: data ingestion, training, model storage, deployment, and monitoring. Key practices include cryptographic model signing, access control on training infrastructure, adversarial robustness testing, and continuous monitoring for drift and attacks. MLSecOps addresses ML-specific risks—[[techniques/data-poisoning-attacks|data poisoning]], [[techniques/model-tampering|model tampering]], [[techniques/supply-chain-model-poisoning|supply chain attacks]]—that traditional DevSecOps overlooks.
 
 ## Core MLSecOps Practices (from Ch18: MLSecOps, p489-525)
 
@@ -67,7 +67,7 @@ with open('model.h5.sig', 'wb') as f:
 ### 3. Adversarial Robustness Testing
 
 **Automated Testing in CI/CD**:
-- **Evasion Attacks**: Test model against [[attacks/adversarial-examples-evasion-attacks|adversarial examples]] (FGSM, PGD)
+- **Evasion Attacks**: Test model against [[techniques/adversarial-examples-evasion-attacks|adversarial examples]] (FGSM, PGD)
 - **Poisoning Detection**: Run ART activation defense on trained models
 - **Prompt Injection**: Fuzz LLM APIs with jailbreak payloads
 
@@ -94,8 +94,8 @@ jobs:
 **Key Metrics**:
 - **Model Drift**: Monitor prediction distribution vs. training baseline
 - **Input Anomalies**: Detect adversarial patterns (high confidence on edge cases)
-- **API Abuse**: Rate limiting, query pattern analysis for [[attacks/model-extraction|extraction attacks]]
-- **Performance Degradation**: Sudden accuracy drops may indicate [[attacks/data-poisoning-attacks|poisoning]]
+- **API Abuse**: Rate limiting, query pattern analysis for [[techniques/model-extraction|extraction attacks]]
+- **Performance Degradation**: Sudden accuracy drops may indicate [[techniques/data-poisoning-attacks|poisoning]]
 
 **Alerting**:
 ```python
@@ -143,10 +143,10 @@ if np.mean(confidence_scores) < baseline_confidence * 0.9:
 
 ## Mitigated Threats
 
-- [[attacks/data-poisoning-attacks]]
-- [[attacks/model-tampering]]
-- [[attacks/supply-chain-model-poisoning]]
-- [[attacks/adversarial-examples-evasion-attacks]]
+- [[techniques/data-poisoning-attacks]]
+- [[techniques/model-tampering]]
+- [[techniques/supply-chain-model-poisoning]]
+- [[techniques/adversarial-examples-evasion-attacks]]
 
 ---
 

@@ -78,10 +78,10 @@ This engagement audits whether model-level security concerns are being tested in
 
 **Applicable Issues:**
 - All model issues should be covered in evaluation pipeline
-- [[attacks/prompt-injection|Prompt Injection]]
-- [[attacks/system-prompt-leakage|System Prompt Leakage]]
-- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
-- [[attacks/model-extraction|Model Extraction and Theft]]
+- [[techniques/prompt-injection|Prompt Injection]]
+- [[techniques/system-prompt-leakage|System Prompt Leakage]]
+- [[techniques/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
+- [[techniques/model-extraction|Model Extraction and Theft]]
 
 ### Data / Knowledge
 
@@ -89,9 +89,9 @@ This engagement audits whether data and knowledge surface security is being test
 
 **Applicable Issues:**
 - All data/knowledge issues should be covered in evaluation pipeline
-- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
-- [[attacks/retrieval-manipulation|Retrieval Manipulation]]
-- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
+- [[techniques/rag-data-poisoning|RAG Data Poisoning]]
+- [[techniques/retrieval-manipulation|Retrieval Manipulation]]
+- [[techniques/pii-in-corpus|PII in Knowledge Corpus]]
 
 ### Application / Agent Runtime
 
@@ -99,9 +99,9 @@ This engagement audits whether application and agent integration security is bei
 
 **Applicable Issues:**
 - All application/agent runtime issues should be covered in evaluation pipeline
-- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
-- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
-- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[techniques/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[techniques/agent-goal-hijack|Agent Goal Hijacking]]
+- [[techniques/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
@@ -109,10 +109,10 @@ This engagement audits whether deployment and governance controls are being test
 
 **Applicable Issues:**
 - All deployment/governance issues should be covered in evaluation pipeline
-- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
-- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[attacks/missing-evaluation-gates|Missing Evaluation Gates]]
+- [[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[techniques/weak-access-segmentation|Weak Access Segmentation]]
+- [[techniques/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[techniques/missing-evaluation-gates|Missing Evaluation Gates]]
 
 ---
 

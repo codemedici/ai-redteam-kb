@@ -11,8 +11,8 @@
 ## Folder Structure
 
 ```
-/attacks/           → All attack techniques (flat, tagged)         ✅ 41 notes
-/defenses/          → All controls and mitigations (flat, tagged)  ✅ 13 notes
+/techniques/           → All attack techniques (flat, tagged)         ✅ 41 notes
+/mitigations/          → All controls and mitigations (flat, tagged)  ✅ 13 notes
 /methodology/       → Engagement process, phases, frameworks       ✅ 56 notes
 /playbooks/         → Engagement-specific quick-start guides       ✅ 9 notes
 /atlas/             → MITRE ATLAS reference taxonomy (read-only)   ✅ 229 notes
@@ -116,9 +116,9 @@ description: "One-liner summary"
 
 | Step | Status | Notes |
 |------|--------|-------|
-| 1. Create new folder structure | ✅ | attacks/, defenses/, methodology/, playbooks/, atlas/, sources/ |
-| 2. Move attacks from trust-boundaries/ | ✅ | 41 notes in attacks/ |
-| 3. Move defenses from trust-boundaries/ | ✅ | 13 notes in defenses/ |
+| 1. Create new folder structure | ✅ | techniques/, mitigations/, methodology/, playbooks/, atlas/, sources/ |
+| 2. Move attacks from trust-boundaries/ | ✅ | 41 notes in techniques/ |
+| 3. Move defenses from trust-boundaries/ | ✅ | 13 notes in mitigations/ |
 | 4. Merge operations/ → methodology/ | ✅ | Content absorbed |
 | 5. Move engagements/ → playbooks/ | ✅ | 9 notes |
 | 6. Add frontmatter tags | ✅ | 119 notes tagged (type/, trust-boundary/, atlas/, owasp/, source/) |
@@ -139,7 +139,7 @@ description: "One-liner summary"
 
 **ATLAS references (5):** `AML.T0020`, `AML.T0024`, `AML.T0049`, `AML.T0051`, `AML.T0056`
 
-**Malformed link (1):** `attacks/vector-embedding-weaknessesattack-variants-overview` (missing `|`)
+**Malformed link (1):** `techniques/vector-embedding-weaknessesattack-variants-overview` (missing `|`)
 
 ### Missing Frontmatter Fields
 

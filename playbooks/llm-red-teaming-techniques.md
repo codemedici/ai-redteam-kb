@@ -55,7 +55,7 @@ LLM red teaming targets multiple failure modes across dimensions:
 - **Spam/manipulation**: Bulk content for influence operations
 
 ### 5. Robustness
-- **Prompt injection**: [[attacks/prompt-injection|Prompt Injection Attacks]]
+- **Prompt injection**: [[techniques/prompt-injection|Prompt Injection Attacks]]
 - **Out-of-distribution (OOD)**: Unexpected inputs causing failures
 - **Poisoning**: Training data manipulation affecting behavior
 - **Adversarial examples**: Imperceptible changes causing errors
@@ -327,7 +327,7 @@ def semantic_fuzz(base_prompt):
 - **Limitation:** New attack strategies constantly evolve
 
 **3. Input/Output Guardrails**
-- **Tools:** [[defenses/input-validation-patterns|Input Validation Patterns]], Prompt firewalls
+- **Tools:** [[mitigations/input-validation-patterns|Input Validation Patterns]], Prompt firewalls
 - **Method:** Detect known jailbreak patterns, adversarial encodings
 - **Limitation:** Signature-based; vulnerable to novel attacks
 
@@ -414,13 +414,13 @@ def semantic_fuzz(base_prompt):
 - **OWASP Top 10 for LLMs**: LLM01 (Prompt Injection), LLM06 (Sensitive Information Disclosure)
 
 **Related Attacks:**
-- [[attacks/prompt-injection|Prompt Injection]]
-- [[attacks/jailbreak-policy-bypass|Jailbreak Policy Bypass]]
-- [[attacks/system-prompt-leakage|System Prompt Leakage]]
+- [[techniques/prompt-injection|Prompt Injection]]
+- [[techniques/jailbreak-policy-bypass|Jailbreak Policy Bypass]]
+- [[techniques/system-prompt-leakage|System Prompt Leakage]]
 
 **Defenses:**
-- [[defenses/input-validation-patterns|Input Validation Patterns]]
-- [[defenses/dual-llm-judge-pattern|Dual LLM Judge Pattern]]
+- [[mitigations/input-validation-patterns|Input Validation Patterns]]
+- [[mitigations/dual-llm-judge-pattern|Dual LLM Judge Pattern]]
 
 **Playbooks:**
 - [[playbooks/llm-application-red-team|LLM Application Red Team]]

@@ -85,42 +85,42 @@ See Trust Boundaries overview
 The Model boundary is a primary focus of risk assessment. The engagement evaluates intrinsic model behavior, training data quality, algorithmic risks, and model integrity. This boundary is critical for understanding model-specific vulnerabilities and risks.
 
 **Applicable Issues:**
-- [[attacks/prompt-injection|Prompt Injection]]
-- [[attacks/system-prompt-leakage|System Prompt Leakage]]
-- [[attacks/sensitive-info-disclosure|Sensitive Information Disclosure]]
-- [[attacks/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
-- [[attacks/model-extraction|Model Extraction and Theft]]
-- [[attacks/training-data-memorization|Training Data Memorization]]
-- [[attacks/adversarial-robustness|Adversarial Robustness]]
+- [[techniques/prompt-injection|Prompt Injection]]
+- [[techniques/system-prompt-leakage|System Prompt Leakage]]
+- [[techniques/sensitive-info-disclosure|Sensitive Information Disclosure]]
+- [[techniques/jailbreak-policy-bypass|Jailbreak and Policy Bypass]]
+- [[techniques/model-extraction|Model Extraction and Theft]]
+- [[techniques/training-data-memorization|Training Data Memorization]]
+- [[techniques/adversarial-robustness|Adversarial Robustness]]
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary is assessed for data provenance, privacy risks, bias in training data, and knowledge base integrity. This includes evaluation of training data quality, PII exposure, and data governance controls.
 
 **Applicable Issues:**
-- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
-- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
-- [[attacks/prompt-log-data-leakage|Prompt Log Data Leakage]]
+- [[techniques/rag-data-poisoning|RAG Data Poisoning]]
+- [[techniques/pii-in-corpus|PII in Knowledge Corpus]]
+- [[techniques/prompt-log-data-leakage|Prompt Log Data Leakage]]
 
 ### Application / Agent Runtime
 
 The Application/Agent Runtime boundary is evaluated for integration risks, misuse scenarios, and operational context. This includes assessment of how the model integrates with business logic and potential misuse patterns.
 
 **Applicable Issues:**
-- [[attacks/tool-privilege-escalation|Tool Privilege Escalation]]
-- [[attacks/agent-goal-hijack|Agent Goal Hijacking]]
-- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[techniques/tool-privilege-escalation|Tool Privilege Escalation]]
+- [[techniques/agent-goal-hijack|Agent Goal Hijacking]]
+- [[techniques/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
 The Deployment/Governance boundary is assessed for access controls, monitoring capabilities, incident response readiness, and compliance processes. This includes evaluation of operational controls and governance mechanisms.
 
 **Applicable Issues:**
-- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
-- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[attacks/missing-evaluation-gates|Missing Evaluation Gates]]
-- [[attacks/incident-response-gap|Incident Response Gap]]
+- [[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[techniques/weak-access-segmentation|Weak Access Segmentation]]
+- [[techniques/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[techniques/missing-evaluation-gates|Missing Evaluation Gates]]
+- [[techniques/incident-response-gap|Incident Response Gap]]
 
 ---
 

@@ -82,26 +82,26 @@ See Trust Boundaries overview
 [This engagement does not focus on model-level testing. For base model prompt injection and jailbreak testing, see LLM Application Red Team.]
 
 **Applicable Issues:**
-- [[attacks/prompt-injection|Prompt Injection]] (indirect via retrieved content)
+- [[techniques/prompt-injection|Prompt Injection]] (indirect via retrieved content)
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary is the primary focus of this engagement. Testing validates the security of retrieval pipelines, knowledge corpus integrity, and embedding mechanisms. This boundary is critical for RAG systems where poisoned data can corrupt all downstream outputs.
 
 **Applicable Issues:**
-- [[attacks/rag-data-poisoning|RAG Data Poisoning]]
-- [[attacks/retrieval-manipulation|Retrieval Manipulation]]
-- [[attacks/embedding-poisoning|Embedding Poisoning]]
-- [[attacks/unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]]
-- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
+- [[techniques/rag-data-poisoning|RAG Data Poisoning]]
+- [[techniques/retrieval-manipulation|Retrieval Manipulation]]
+- [[techniques/embedding-poisoning|Embedding Poisoning]]
+- [[techniques/unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]]
+- [[techniques/pii-in-corpus|PII in Knowledge Corpus]]
 
 ### Application / Agent Runtime
 
 The Application/Agent Runtime boundary is tested for how retrieved content interacts with system prompts and user queries. This includes prompt injection via retrieved text and insecure prompt assembly with retrieved content.
 
 **Applicable Issues:**
-- [[attacks/prompt-injection|Prompt Injection]] (indirect via retrieved content)
-- [[attacks/insecure-prompt-assembly|Insecure Prompt Assembly]]
+- [[techniques/prompt-injection|Prompt Injection]] (indirect via retrieved content)
+- [[techniques/insecure-prompt-assembly|Insecure Prompt Assembly]]
 
 ### Deployment / Governance
 
@@ -365,7 +365,7 @@ This engagement produces findings mapped to:
 
 **Remediation**: Implement strict access controls on knowledge corpus with content validation. Add adversarial training to make the LLM robust to fake facts. Implement source verification and trust scoring for retrieved documents. Sanitize retrieved text to strip instruction-like patterns before passing to the model.
 
-**Wiki Reference**: [[attacks/|Data Poisoning]]
+**Wiki Reference**: [[techniques/|Data Poisoning]]
 
 ---
 
@@ -388,7 +388,7 @@ Result: System retrieved email, incorporated hidden instruction, and attempted t
 
 **Remediation**: Implement strict separation between system instructions and retrieved content. Add content filtering to detect and strip instruction-like patterns from retrieved text. Require explicit user approval for tool invocations triggered by retrieved content.
 
-**Wiki Reference**: [[attacks/prompt-injection|Prompt Injection]]
+**Wiki Reference**: [[techniques/prompt-injection|Prompt Injection]]
 
 ---
 
@@ -406,7 +406,7 @@ Result: System retrieved email, incorporated hidden instruction, and attempted t
 
 **Remediation**: Implement retrieval result validation and diversity checks. Add re-ranking mechanisms that consider multiple factors beyond embedding similarity. Monitor for unusual retrieval patterns that might indicate manipulation.
 
-**Wiki Reference**: [[attacks/|Retrieval Manipulation]]
+**Wiki Reference**: [[techniques/|Retrieval Manipulation]]
 
 ---
 
@@ -540,7 +540,7 @@ Success rate: [X/Y attempts]
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
 3. **Check Methodology** to understand our trust boundary approach
-4. **Explore applicable issues**: [[attacks/|Data Poisoning]], [[attacks/prompt-injection|Prompt Injection]]
+4. **Explore applicable issues**: [[techniques/|Data Poisoning]], [[techniques/prompt-injection|Prompt Injection]]
 5. **** to discuss scoping, timeline, and pricing
 
 ---
@@ -548,7 +548,7 @@ Success rate: [X/Y attempts]
 ## Technical References
 
 - Trust Boundaries Overview
-- [[attacks/|Data/Knowledge Issues]]
+- [[techniques/|Data/Knowledge Issues]]
 - Application/Agent Runtime Issues
 - [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology
@@ -625,7 +625,7 @@ User Query → [Embedding] → [Vector Search] → [Document Retrieval] →
 - Retrieve malicious content and attribute to legitimate source
 - Undermine trust in system outputs
 
-[[attacks/|View Data/Knowledge Boundary issues →]]
+[[techniques/|View Data/Knowledge Boundary issues →]]
 
 ---
 
@@ -755,5 +755,5 @@ for source_tenant in tenant_ids:
 ## Related Documentation
 
 - Attack Variants Overview
-- [[attacks/|Data/Knowledge Boundary Issues]]
+- [[techniques/|Data/Knowledge Boundary Issues]]
 - [[playbooks/rag-retrieval-assessment|RAG Retrieval Assessment Engagement]]

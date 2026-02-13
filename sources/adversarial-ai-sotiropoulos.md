@@ -70,16 +70,16 @@ John Sotiropoulos is a senior security architect at Kainos responsible for AI se
 ## Notes Extracted
 
 ### Attacks
-- [[attacks/data-poisoning]]
-- [[attacks/backdoor-poisoning]]
-- [[attacks/clean-label-attacks]]
-- [[attacks/adversarial-examples]]
-- [[attacks/adversarial-patches]]
-- [[attacks/prompt-injection]]
+- [[techniques/data-poisoning]]
+- [[techniques/backdoor-poisoning]]
+- [[techniques/clean-label-attacks]]
+- [[techniques/adversarial-examples]]
+- [[techniques/adversarial-patches]]
+- [[techniques/prompt-injection]]
 
 ### Defenses
-- [[defenses/adversarial-training]]
-- [[defenses/mlops-security]]
+- [[mitigations/adversarial-training]]
+- [[mitigations/mlops-security]]
 
 ## Citation Format
 

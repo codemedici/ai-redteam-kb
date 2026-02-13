@@ -83,17 +83,17 @@ See Trust Boundaries overview
 The Model boundary is assessed for model artifact security, including model files, weights, containers, and storage. Testing focuses on integrity validation, backdoor detection, and model theft prevention.
 
 **Applicable Issues:**
-- [[attacks/model-tampering|Model Tampering]]
-- [[attacks/model-extraction|Model Extraction and Theft]]
-- [[attacks/adversarial-robustness|Adversarial Robustness]] (backdoor detection)
+- [[techniques/model-tampering|Model Tampering]]
+- [[techniques/model-extraction|Model Extraction and Theft]]
+- [[techniques/adversarial-robustness|Adversarial Robustness]] (backdoor detection)
 
 ### Data / Knowledge
 
 The Data/Knowledge boundary is tested for training data sources, data pipelines, data storage, and provenance. This includes data poisoning attacks, data integrity validation, and data access controls.
 
 **Applicable Issues:**
-- [[attacks/rag-data-poisoning|RAG Data Poisoning]] (training data)
-- [[attacks/pii-in-corpus|PII in Knowledge Corpus]]
+- [[techniques/rag-data-poisoning|RAG Data Poisoning]] (training data)
+- [[techniques/pii-in-corpus|PII in Knowledge Corpus]]
 
 ### Application / Agent Runtime
 
@@ -107,10 +107,10 @@ The Data/Knowledge boundary is tested for training data sources, data pipelines,
 The Deployment/Governance boundary is the primary focus for supply chain security. Testing includes CI/CD pipelines, ML platforms, infrastructure security, access controls, and secrets management.
 
 **Applicable Issues:**
-- [[attacks/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
-- [[attacks/weak-access-segmentation|Weak Access Segmentation]]
-- [[attacks/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
-- [[attacks/insecure-model-gateway-config|Insecure Model Gateway Configuration]]
+- [[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]
+- [[techniques/weak-access-segmentation|Weak Access Segmentation]]
+- [[techniques/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]]
+- [[techniques/insecure-model-gateway-config|Insecure Model Gateway Configuration]]
 
 ---
 
@@ -433,7 +433,7 @@ Training pipeline: No validation checks before ingestion
 2. **Short-term** (1-2 weeks): Implement data validation and outlier detection, add access logging
 3. **Long-term** (1-3 months): Establish data provenance tracking, implement data integrity checksums, automated anomaly detection
 
-**Wiki Reference**: [[attacks/|Data Poisoning]]
+**Wiki Reference**: [[techniques/|Data Poisoning]]
 
 ---
 
@@ -615,7 +615,7 @@ Evidence: [screenshots, logs, file contents]
 1. **Review this spec** to confirm it matches your security objectives
 2. **Prepare engagement inputs** using checklist above
 3. **Check Methodology** to understand our trust boundary approach
-4. **Explore applicable issues**: [[attacks/|Data Poisoning]], Supply Chain Security
+4. **Explore applicable issues**: [[techniques/|Data Poisoning]], Supply Chain Security
 5. **** to discuss scoping, timeline, and pricing
 
 ---
@@ -623,7 +623,7 @@ Evidence: [screenshots, logs, file contents]
 ## Technical References
 
 - Trust Boundaries Overview
-- [[attacks/|Data/Knowledge Issues]]
+- [[techniques/|Data/Knowledge Issues]]
 - Deployment/Governance Issues
 - [[frameworks/atlas/techniques|MITRE ATLAS Techniques]]
 - Methodology

@@ -35,8 +35,8 @@ pages: "339-355"
 
 | Entry | Position | Rationale |
 |-------|----------|-----------|
-| **[[attacks/system-prompt-leakage|System Prompt Leakage]]** (LLM07:2025) | #7 | Real-world prompt extraction vulnerabilities |
-| **[[attacks/vector-embedding-weaknesses|Vector and Embedding Weaknesses]]** (LLM08:2025) | #8 | Rise of RAG architectures creating new attack vectors |
+| **[[techniques/system-prompt-leakage|System Prompt Leakage]]** (LLM07:2025) | #7 | Real-world prompt extraction vulnerabilities |
+| **[[techniques/vector-embedding-weaknesses|Vector and Embedding Weaknesses]]** (LLM08:2025) | #8 | Rise of RAG architectures creating new attack vectors |
 
 ## Architecture Evolution
 
@@ -92,11 +92,11 @@ The 2025 update recognizes sophisticated attack chains:
 
 ## Related Notes
 
-- [[attacks/system-prompt-leakage|System Prompt Leakage (LLM07:2025)]]
-- [[attacks/vector-embedding-weaknesses|Vector and Embedding Weaknesses (LLM08:2025)]]
-- [[attacks/agentic-ai-security-risks-owasp-aivss|OWASP AIVSS Agentic AI Risks]]
-- [[attacks/prompt-injection|Prompt Injection and LLM Manipulation]]
-- [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
+- [[techniques/system-prompt-leakage|System Prompt Leakage (LLM07:2025)]]
+- [[techniques/vector-embedding-weaknesses|Vector and Embedding Weaknesses (LLM08:2025)]]
+- [[techniques/agentic-ai-security-risks-owasp-aivss|OWASP AIVSS Agentic AI Risks]]
+- [[techniques/prompt-injection|Prompt Injection and LLM Manipulation]]
+- [[techniques/data-poisoning-attacks|Data Poisoning Attacks]]
 - AI Security Landscape
 
 > Source: [[sources/bibliography#AI-Native LLM Security]], pp. 339-355

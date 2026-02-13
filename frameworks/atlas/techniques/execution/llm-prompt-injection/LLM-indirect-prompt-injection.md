@@ -7,8 +7,6 @@ sidebar_position: 6
 
 # AML.T0051.001: Indirect
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
-
 An adversary may inject prompts indirectly via separate data channel ingested by the LLM such as include text or multimedia pulled from databases or websites.
 These malicious prompts may be hidden or obfuscated from the user. This type of injection may be used by the adversary to gain a foothold in the system or to target an unwitting user of the system.
 
@@ -18,8 +16,6 @@ These malicious prompts may be hidden or obfuscated from the user. This type of 
 - **Created:** October 25, 2023
 - **Last Modified:** October 25, 2023
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 ## Tactics (0)
 

@@ -11,7 +11,7 @@ Adversaries may gather information about the victim's identity that can be used 
 
 Adversaries may gather this information in various ways, such as direct elicitation, [[frameworks/atlas/techniques/reconnaissance/search-victim-owned-websites|Search Victim-Owned Websites]], or via leaked information on the black market.
 
-Adversaries may use the gathered victim data to Create Deepfakes and impersonate them in a convincing manner. This may create opportunities for adversaries to [[frameworks/atlas/techniques/resource-development/establish-accounts|Establish Accounts]] under the impersonated identity, or allow them to perform convincing [[frameworks/atlas/techniques/initial-access/phishing/phishing|Phishing]] attacks.
+Adversaries may use the gathered victim data to Create Deepfakes and impersonate them in a convincing manner. This may create opportunities for adversaries to [[frameworks/atlas/techniques/resource-development/establish-accounts|Establish Accounts]] under the impersonated identity, or allow them to perform convincing Phishing attacks.
 
 ## Metadata
 

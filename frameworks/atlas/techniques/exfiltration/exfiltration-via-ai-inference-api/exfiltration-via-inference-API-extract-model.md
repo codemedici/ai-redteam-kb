@@ -7,8 +7,6 @@ sidebar_position: 4
 
 # AML.T0024.002: Extract AI Model
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
-
 Adversaries may extract a functional copy of a private model.
 By repeatedly querying the victim's [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], the adversary can collect the target model's inferences into a dataset.
 The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
@@ -22,8 +20,6 @@ Model extraction is used for [[frameworks/atlas/techniques/impact/external-harms
 - **Created:** May 13, 2021
 - **Last Modified:** December 23, 2025
 - **Maturity:** feasible
-
-- **Parent Technique:** [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024: Exfiltration via AI Inference API]]
 
 ## Tactics (0)
 

@@ -7,8 +7,6 @@ sidebar_position: 6
 
 # AML.T0085.001: AI Agent Tools
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-ai-services|AML.T0085: Data from AI Services]]
-
 Adversaries may prompt the AI service to invoke various tools the agent has access to. Tools may retrieve data from different APIs or services in an organization.
 
 ## Metadata
@@ -17,8 +15,6 @@ Adversaries may prompt the AI service to invoke various tools the agent has acce
 - **Created:** September 30, 2025
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-ai-services|AML.T0085: Data from AI Services]]
 
 ## Tactics (0)
 

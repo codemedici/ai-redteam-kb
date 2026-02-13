@@ -7,8 +7,6 @@ sidebar_position: 12
 
 # AML.T0084.000: Embedded Knowledge
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
-
 Adversaries may attempt to discover the data sources a particular agent can access.  The AI agent's configuration may reveal data sources or knowledge.
 
 The embedded knowledge may include sensitive or proprietary material such as intellectual property, customer data, internal policies, or even credentials. By mapping what knowledge an agent has access to, an adversary can better understand the AI agent's role and potentially expose confidential information or pinpoint high-value targets for further exploitation.
@@ -19,8 +17,6 @@ The embedded knowledge may include sensitive or proprietary material such as int
 - **Created:** September 30, 2025
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
 
 ## Tactics (0)
 

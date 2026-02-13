@@ -7,9 +7,7 @@ sidebar_position: 19
 
 # AML.T0016.002: Generative AI
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
-
-Adversaries may search for and obtain generative AI models or tools, such as large language models (LLMs), to assist them in various steps of their operation. Generative AI can be used in a variety of malicious ways, such as to generating malware, to [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|Generate Deepfakes]], to [[frameworks/atlas/techniques/ai-attack-staging/generate-malicious-commands|Generate Malicious Commands]], for [[frameworks/atlas/techniques/resource-development/retrieval-content-crafting|Retrieval Content Crafting]], or to generate [[frameworks/atlas/techniques/initial-access/phishing/phishing|Phishing]] content.
+Adversaries may search for and obtain generative AI models or tools, such as large language models (LLMs), to assist them in various steps of their operation. Generative AI can be used in a variety of malicious ways, such as to generating malware, to [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|Generate Deepfakes]], to [[frameworks/atlas/techniques/ai-attack-staging/generate-malicious-commands|Generate Malicious Commands]], for [[frameworks/atlas/techniques/resource-development/retrieval-content-crafting|Retrieval Content Crafting]], or to generate Phishing content.
 
 Adversaries may obtain open source models and serve them locally using frameworks such as [Ollama](https://ollama.com/) or [[latest|vLLM]]. They may host them using cloud infrastructure. Or, they may leverage AI service providers such as HuggingFace.
 
@@ -30,8 +28,6 @@ Generative AI models may also be "uncensored" meaning they are designed to gener
 - **Created:** March 12, 2025
 - **Last Modified:** December 23, 2025
 - **Maturity:** realized
-
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 ## Tactics (0)
 

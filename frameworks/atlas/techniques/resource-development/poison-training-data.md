@@ -12,7 +12,7 @@ This allows the adversary to embed vulnerabilities in AI models trained on the d
 Data poisoning attacks may or may not require modifying the labels.
 The embedded vulnerability is activated at a later time by data samples with an [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-insert-backdoor-trigger|Insert Backdoor Trigger]]
 
-Poisoned data can be introduced via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AI Supply Chain Compromise]] or the data may be poisoned after the adversary gains  to the system.
+Poisoned data can be introduced via AI Supply Chain Compromise or the data may be poisoned after the adversary gains  to the system.
 
 ## Metadata
 

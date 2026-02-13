@@ -7,8 +7,6 @@ sidebar_position: 4
 
 # AML.T0067.000: Citations
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
-
 Adversaries may manipulate the citations provided in an AI system's response, in order to make it appear trustworthy. Variants include citing a providing the wrong citation, making up a new citation, or providing the right citation but for adversary-provided data.
 
 ## Metadata
@@ -17,8 +15,6 @@ Adversaries may manipulate the citations provided in an AI system's response, in
 - **Created:** March 12, 2025
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 ## Tactics (0)
 

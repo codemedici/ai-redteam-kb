@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # AML.T0002.000: Datasets
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
-
 Adversaries may collect public datasets to use in their operations.
 Datasets used by the victim organization or datasets that are representative of the data used by the victim organization may be valuable to adversaries.
 Datasets can be stored in cloud storage, or on victim-owned websites.
@@ -22,8 +20,6 @@ Acquired datasets help the adversary advance their operations, stage attacks,  a
 - **Created:** May 13, 2021
 - **Last Modified:** May 13, 2021
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 ## Tactics (0)
 

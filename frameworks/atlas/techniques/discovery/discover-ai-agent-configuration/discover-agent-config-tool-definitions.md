@@ -7,8 +7,6 @@ sidebar_position: 13
 
 # AML.T0084.001: Tool Definitions
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
-
 Adversaries may discover the tools the AI agent has access to. By identifying which tools are available, the adversary can understand what actions may be executed through the agent and what additional resources it can reach. This knowledge may reveal access to external data sources such as OneDrive or SharePoint, or expose exfiltration paths like the ability to send emails, helping adversaries identify AI agents that provide the greatest value or opportunity for attack.
 
 ## Metadata
@@ -17,8 +15,6 @@ Adversaries may discover the tools the AI agent has access to. By identifying wh
 - **Created:** September 30, 2025
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
 
 ## Tactics (0)
 

@@ -11,7 +11,7 @@ An adversary may introduce malicious prompts into the victim's system via a publ
 
 Any public-facing application that accepts text input could be a target. This includes email, shared document systems like OneDrive or Google Drive, and service desks or ticketing systems like Jira. This also includes OCR-mediated infiltration where malicious instructions are embedded in images, screenshots, and invoices that are ingested into the system.
 
-Adversaries may perform  to identify public facing applications that are likely monitored by an AI agent or are likely to be indexed by a RAG. They may perform [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|Discover AI Agent Configuration]] to refine their targeting.
+Adversaries may perform  to identify public facing applications that are likely monitored by an AI agent or are likely to be indexed by a RAG. They may perform Discover AI Agent Configuration to refine their targeting.
 
 ## Metadata
 

@@ -7,8 +7,6 @@ sidebar_position: 8
 
 # AML.T0080.000: Memory
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]]
-
 Adversaries may manipulate the memory of a large language model (LLM) in order to persist changes to the LLM to future chat sessions. 
 
 Memory is a common feature in LLMs that allows them to remember information across chat sessions by utilizing a user-specific database. Because the memory is controlled via normal conversations with the user (e.g. "remember my preference for ...") an adversary can inject memories via Direct or Indirect Prompt Injection. Memories may contain malicious instructions (e.g. instructions that leak private conversations) or may promote the adversary's hidden agenda (e.g. manipulating the user).
@@ -19,8 +17,6 @@ Memory is a common feature in LLMs that allows them to remember information acro
 - **Created:** September 30, 2025
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]]
 
 ## Tactics (0)
 

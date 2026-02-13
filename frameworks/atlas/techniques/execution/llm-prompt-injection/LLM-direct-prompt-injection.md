@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0051.000: Direct
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
-
 An adversary may inject prompts directly as a user of the LLM. This type of injection may be used by the adversary to gain a foothold in the system or to misuse the LLM itself, as for example to generate harmful content.
 
 ## Metadata
@@ -17,8 +15,6 @@ An adversary may inject prompts directly as a user of the LLM. This type of inje
 - **Created:** October 25, 2023
 - **Last Modified:** October 25, 2023
 - **Maturity:** realized
-
-- **Parent Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 ## Tactics (0)
 

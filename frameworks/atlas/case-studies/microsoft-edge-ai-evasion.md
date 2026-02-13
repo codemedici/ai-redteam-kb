@@ -25,13 +25,13 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** AML.T0000: Search Open Technical Databases
 
 The team first performed reconnaissance to gather information about the target ML model.
 
 ### Step 2: Acquire Public AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+**Technique:** AML.T0002: Acquire Public AI Artifacts
 
 The team identified and obtained the publicly available base model to use against the target ML model.
 
@@ -56,10 +56,10 @@ Feeding this perturbed image, the red team was able to evade the ML model by cau
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+- Technique: AML.T0000: Search Open Technical Databases
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+- Technique: AML.T0002: Acquire Public AI Artifacts
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]

@@ -7,8 +7,6 @@ sidebar_position: 9
 
 # AML.T0048.003: User Harm
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
-
 User harms may encompass a variety of harm types including financial and reputational that are directed at or felt by individual victims of the attack rather than at the organization level.
 
 ## Metadata
@@ -17,8 +15,6 @@ User harms may encompass a variety of harm types including financial and reputat
 - **Created:** October 25, 2023
 - **Last Modified:** October 25, 2023
 - **Maturity:** realized
-
-- **Parent Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 ## Tactics (0)
 

@@ -7,8 +7,6 @@ sidebar_position: 7
 
 # AML.T0069.000: Special Character Sets
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069: Discover LLM System Information]]
-
 Adversaries may discover delimiters and special characters sets used by the large language model. For example, delimiters used in retrieval augmented generation applications to differentiate between context and user prompts. These can later be exploited to confuse or manipulate the large language model into misbehaving.
 
 ## Metadata
@@ -17,8 +15,6 @@ Adversaries may discover delimiters and special characters sets used by the larg
 - **Created:** March 12, 2025
 - **Last Modified:** March 12, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069: Discover LLM System Information]]
 
 ## Tactics (0)
 

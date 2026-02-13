@@ -228,4 +228,4 @@ Third-party model risks arise when organizations use pre-trained foundation mode
 ## Related
 
 - **Mitigated by**: [[defenses/content-signing-and-provenance]], [[defenses/ai-infrastructure-security]], [[defenses/llm-development-lifecycle-security]]
-- **ATLAS**: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008]]
+- **ATLAS**: AML.T0008

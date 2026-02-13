@@ -52,7 +52,7 @@ The visual similarity model used to detect brand impersonation was evaded. Howev
 
 ### Step 3: Phishing
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/phishing/phishing|AML.T0052: Phishing]]
+**Technique:** AML.T0052: Phishing
 
 If the adversary can successfully evade detection, they can continue to operate their phishing websites and steal the victim's credentials.
 
@@ -71,7 +71,7 @@ The end user may experience a variety of harms including financial and privacy h
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/initial-access/phishing/phishing|AML.T0052: Phishing]]
+- Technique: AML.T0052: Phishing
 
 **Step 4:**
 - Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]

@@ -28,7 +28,6 @@ The following techniques can be used to achieve this tactic:
 - [[frameworks/atlas/techniques/collection/ai-artifact-collection|AML.T0035]] — AI Artifact Collection (realized)
 - [[frameworks/atlas/techniques/collection/data-from-information-repositories|AML.T0036]] — Data from Information Repositories (realized)
 - [[frameworks/atlas/techniques/collection/data-from-local-system|AML.T0037]] — Data from Local System (realized)
-- [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-ai-services|AML.T0085]] — Data from AI Services (demonstrated)
 
 
 ## References

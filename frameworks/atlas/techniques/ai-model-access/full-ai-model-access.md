@@ -9,7 +9,7 @@ sidebar_position: 4
 
 Adversaries may gain full "white-box" access to an AI model.
 This means the adversary has complete knowledge of the model architecture, its parameters, and class ontology.
-They may exfiltrate the model to [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|Craft Adversarial Data]] and [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] in an offline where it is hard to detect their behavior.
+They may exfiltrate the model to Craft Adversarial Data and [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] in an offline where it is hard to detect their behavior.
 
 ## Metadata
 

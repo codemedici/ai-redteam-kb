@@ -43,7 +43,7 @@ The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.co
 
 ### Step 4: Obtain Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
+**Technique:** AML.T0016: Obtain Capabilities
 
 The researchers obtained [Virtual Camera: Live Assist](https://apkpure.com/virtual-camera-live-assist/virtual.camera.app), an Android app that allows a user to substitute the devices camera  with a video stream. This app works on genuine, non-rooted Android devices.
 
@@ -95,7 +95,7 @@ The researchers could then have caused financial harm to the victim.
 - Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
+- Technique: AML.T0016: Obtain Capabilities
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088: Generate Deepfakes]]

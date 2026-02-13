@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0010.001: AI Software
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
-
 Most AI systems rely on a limited set of AI frameworks.
 An adversary could get access to a large number of AI systems through a comprise of one of their supply chains.
 Many AI projects also rely on other open source implementations of various algorithms.
@@ -20,8 +18,6 @@ These can also be compromised in a targeted way to get access to specific system
 - **Created:** May 13, 2021
 - **Last Modified:** April 9, 2025
 - **Maturity:** realized
-
-- **Parent Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 ## Tactics (0)
 

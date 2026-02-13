@@ -7,7 +7,7 @@ sidebar_position: 7
 
 # AML.T0015: Evade AI Model
 
-Adversaries can [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|Craft Adversarial Data]] that prevents an AI model from correctly identifying the contents of the data or [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|Generate Deepfakes]] that fools an AI model expecting authentic data.
+Adversaries can Craft Adversarial Data that prevents an AI model from correctly identifying the contents of the data or [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|Generate Deepfakes]] that fools an AI model expecting authentic data.
 
 This technique can be used to evade a downstream task where AI is utilized. The adversary may evade AI-based virus/malware detection or network scanning towards the goal of a traditional cyber attack. AI model evasion through deepfake generation may also provide initial access to systems that use AI-based biometric authentication.
 

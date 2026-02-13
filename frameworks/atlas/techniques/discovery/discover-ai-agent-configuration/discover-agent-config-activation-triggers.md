@@ -7,8 +7,6 @@ sidebar_position: 14
 
 # AML.T0084.002: Activation Triggers
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
-
 Adversaries may discover keywords or other triggers (such as incoming emails, documents being added, incoming message, or other workflows) that activate an agent and may cause it to run additional actions.
 
 Understanding these triggers can reveal how the AI agent is activated and controlled. This may also expose additional paths for compromise, as an adversary could attempt to trigger the agent from outside its environment and drive it to perform unintended or malicious actions.
@@ -19,8 +17,6 @@ Understanding these triggers can reveal how the AI agent is activated and contro
 - **Created:** September 30, 2025
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084: Discover AI Agent Configuration]]
 
 ## Tactics (0)
 

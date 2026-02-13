@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # AML.T0018.001: Modify AI Model Architecture
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0018: Manipulate AI Model]]
-
 Adversaries may directly modify an AI model's architecture to re-define it's behavior. This can include adding or removing layers as well as adding pre or post-processing operations.
 
 The effects could include removing the ability to predict certain classes, adding erroneous operations to increase computation costs, or degrading performance. Additionally, a separate adversary-defined network could be injected into the computation graph, which can change the behavior based on the inputs, effectively creating a backdoor.
@@ -19,8 +17,6 @@ The effects could include removing the ability to predict certain classes, addin
 - **Created:** May 13, 2021
 - **Last Modified:** April 11, 2024
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0018: Manipulate AI Model]]
 
 ## Tactics (0)
 

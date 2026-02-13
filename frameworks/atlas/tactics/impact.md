@@ -31,7 +31,6 @@ The following techniques can be used to achieve this tactic:
 - [[frameworks/atlas/techniques/impact/spamming-ai-system-with-chaff-data|AML.T0046]] — Spamming AI System with Chaff Data (feasible)
 - [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031]] — Erode AI Model Integrity (realized)
 - [[frameworks/atlas/techniques/impact/cost-harvesting|AML.T0034]] — Cost Harvesting (feasible)
-- [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048]] — External Harms (realized)
 - [[frameworks/atlas/techniques/impact/erode-dataset-integrity|AML.T0059]] — Erode Dataset Integrity (demonstrated)
 - [[frameworks/atlas/techniques/impact/data-destruction-via-ai-agent-tool-invocation|AML.T0101]] — Data Destruction via AI Agent Tool Invocation (feasible)
 

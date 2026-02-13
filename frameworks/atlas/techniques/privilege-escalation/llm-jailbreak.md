@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # AML.T0054: LLM Jailbreak
 
-An adversary may use a carefully crafted [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|LLM Prompt Injection]] designed to place LLM in a state in which it will freely respond to any user input, bypassing any controls, restrictions, or guardrails placed on the LLM.
+An adversary may use a carefully crafted LLM Prompt Injection designed to place LLM in a state in which it will freely respond to any user input, bypassing any controls, restrictions, or guardrails placed on the LLM.
 Once successfully jailbroken, the LLM can be used in unintended ways by the adversary.
 
 ## Metadata

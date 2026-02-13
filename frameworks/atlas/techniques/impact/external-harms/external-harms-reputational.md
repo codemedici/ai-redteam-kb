@@ -7,8 +7,6 @@ sidebar_position: 7
 
 # AML.T0048.001: Reputational Harm
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
-
 Reputational harm involves a degradation of public perception and trust in organizations.  Examples of reputation-harming incidents include scandals or false impersonations.
 
 ## Metadata
@@ -17,8 +15,6 @@ Reputational harm involves a degradation of public perception and trust in organ
 - **Created:** October 25, 2023
 - **Last Modified:** October 25, 2023
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 ## Tactics (0)
 

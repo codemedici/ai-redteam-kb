@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # AML.T0018.000: Poison AI Model
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0018: Manipulate AI Model]]
-
 Adversaries may manipulate an AI model's weights to change it's behavior or performance, resulting in a poisoned model.
 Adversaries may poison a model by directly manipulating its weights, training the model on poisoned data, further fine-tuning the model, or otherwise interfering with its training process. 
 
@@ -20,8 +18,6 @@ The change in behavior of poisoned models may be limited to targeted categories 
 - **Created:** May 13, 2021
 - **Last Modified:** December 23, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0018: Manipulate AI Model]]
 
 ## Tactics (0)
 

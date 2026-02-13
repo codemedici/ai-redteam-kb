@@ -221,4 +221,4 @@ This demonstrates both **vertical escalation** (read → write) and **horizontal
 - **Mitigated by**: [[defenses/least-privilege-implementation]], [[defenses/tool-sandboxing-architecture]], [[defenses/approval-workflow-patterns]], [[defenses/anomaly-detection-architecture]]
 - **Enables**: [[attacks/unsafe-tool-invocation]]
 - **Enabled by**: [[attacks/prompt-injection]], [[attacks/agent-goal-hijack]]
-- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]]
+- **ATLAS**: AML.T0051

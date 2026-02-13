@@ -7,8 +7,6 @@ sidebar_position: 8
 
 # AML.T0017.000: Adversarial AI Attacks
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
-
 Adversaries may develop their own adversarial attacks.
 They may leverage existing libraries as a starting point ([[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-adversarial-AI-attacks|Adversarial AI Attack Implementations]]).
 They may implement ideas described in public research papers or develop custom made attacks for the victim model.
@@ -19,8 +17,6 @@ They may implement ideas described in public research papers or develop custom m
 - **Created:** October 25, 2023
 - **Last Modified:** April 9, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 ## Tactics (0)
 

@@ -7,8 +7,6 @@ sidebar_position: 4
 
 # AML.T0005.002: Use Pre-Trained Model
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
-
 Adversaries may use an off-the-shelf pre-trained model as a proxy for the victim model to aid in staging the attack.
 
 ## Metadata
@@ -17,8 +15,6 @@ Adversaries may use an off-the-shelf pre-trained model as a proxy for the victim
 - **Created:** May 13, 2021
 - **Last Modified:** May 13, 2021
 - **Maturity:** feasible
-
-- **Parent Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
 
 ## Tactics (0)
 

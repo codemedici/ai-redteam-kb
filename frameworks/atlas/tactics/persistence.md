@@ -25,10 +25,8 @@ The following techniques can be used to achieve this tactic:
 
 
 - [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data (realized)
-- [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0018]] — Manipulate AI Model (realized)
 - [[frameworks/atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061]] — LLM Prompt Self-Replication (demonstrated)
 - [[frameworks/atlas/techniques/persistence/rag-poisoning|AML.T0070]] — RAG Poisoning (demonstrated)
-- [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/ai-agent-context-poisoning|AML.T0080]] — AI Agent Context Poisoning (demonstrated)
 - [[frameworks/atlas/techniques/persistence/modify-ai-agent-configuration|AML.T0081]] — Modify AI Agent Configuration (demonstrated)
 - [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093]] — Prompt Infiltration via Public-Facing Application (demonstrated)
 - [[frameworks/atlas/techniques/persistence/ai-agent-tool-data-poisoning|AML.T0099]] — AI Agent Tool Data Poisoning (feasible)

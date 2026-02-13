@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # AML.T0085.000: RAG Databases
 
-> **Sub-Technique of:** [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-ai-services|AML.T0085: Data from AI Services]]
-
 Adversaries may prompt the AI service to retrieve data from a RAG database. This can include the majority of an organization's internal documents.
 
 ## Metadata
@@ -17,8 +15,6 @@ Adversaries may prompt the AI service to retrieve data from a RAG database. This
 - **Created:** September 30, 2025
 - **Last Modified:** September 30, 2025
 - **Maturity:** demonstrated
-
-- **Parent Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-ai-services|AML.T0085: Data from AI Services]]
 
 ## Tactics (0)
 

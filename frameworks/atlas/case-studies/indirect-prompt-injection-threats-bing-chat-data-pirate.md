@@ -27,7 +27,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** AML.T0017: Develop Capabilities
 
 The attacker created a website containing malicious system prompts for the LLM to ingest in order to influence the model's behavior. These prompts are ingested by the model when access to it is requested by the user.
 
@@ -58,7 +58,7 @@ With this user information, the attacker could now use the user's PII it has rec
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
+- Technique: AML.T0017: Develop Capabilities
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]

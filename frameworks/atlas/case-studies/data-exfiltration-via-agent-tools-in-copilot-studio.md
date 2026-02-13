@@ -49,19 +49,19 @@ The researchers send an email with the malicious prompt to the inbox they suspec
 
 ### Step 4: Triggered
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+**Technique:** [[frameworks/atlas/techniques/execution/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]]
 
 The researchers receive a reply at the address they specified, indicating that there is an AI agent present, and that the triggered prompt injection was successful.
 
 ### Step 5: Activation Triggers
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-agent-config-activation-triggers|AML.T0084.002: Activation Triggers]]
 
 The researchers infer that the AI agent is activated when receiving an email.
 
 ### Step 6: Tool Definitions
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
 
 The researchers infer that the AI agent has a tool for sending emails.
 
@@ -73,19 +73,19 @@ From here, the researchers repeat the same steps to interact with the AI agent, 
 
 ### Step 8: LLM Prompt Injection
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 The researchers modify the original prompt to discover other knowledge sources and tools that may have data they are after.
 
 ### Step 9: Embedded Knowledge
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-agent-config-embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
 
 The researchers discover the AI agent has access to a “Customer Support Account Owners.csv” data source.
 
 ### Step 10: Tool Definitions
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
 
 The researchers discover the AI agent has access to the Salesforce get-records tool, which can be used to retrieve CRM records.
 
@@ -97,13 +97,13 @@ The researchers put their knowledge of the AI agent’s tools and knowledge sour
 
 ### Step 12: RAG Databases
 
-**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
+**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services-rag-databases|AML.T0085.000: RAG Databases]]
 
 The prompt asks the agent to retrieve all of the fields and rows from “Customer Support Account Owners.csv”. The agent retrieves the entire file.
 
 ### Step 13: AI Agent Tools
 
-**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 The prompt asks the agent to retrieve all Salesforce records using its get-records tool. The agent retrieves all records from the victim’s CRM.
 
@@ -125,34 +125,34 @@ The prompt asks the agent to email the results to an address of the researcher�
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+- Technique: [[frameworks/atlas/techniques/execution/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
+- Technique: [[frameworks/atlas/techniques/discovery/discover-agent-config-activation-triggers|AML.T0084.002: Activation Triggers]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+- Technique: [[frameworks/atlas/techniques/discovery/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
 
 **Step 7:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 **Step 9:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
+- Technique: [[frameworks/atlas/techniques/discovery/discover-agent-config-embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
 
 **Step 10:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
+- Technique: [[frameworks/atlas/techniques/discovery/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
 
 **Step 11:**
 - Technique: [[frameworks/atlas/techniques/resource-development/llm-prompt-crafting|AML.T0065: LLM Prompt Crafting]]
 
 **Step 12:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
+- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services-rag-databases|AML.T0085.000: RAG Databases]]
 
 **Step 13:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 **Step 14:**
 - Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]

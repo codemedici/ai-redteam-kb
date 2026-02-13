@@ -43,13 +43,13 @@ The Google Doc was shared with the victim, making it accessible to ChatGPT’s v
 
 ### Step 4: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 When a user referenced something in the shared document, its contents was added to the chat context, and the prompt was executed by ChatGPT.
 
 ### Step 5: Memory
 
-**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
+**Technique:** [[frameworks/atlas/techniques/persistence/agent-context-poisoning-memory|AML.T0080.000: Memory]]
 
 The prompt caused new memories to be introduced, changing the behavior of ChatGPT. The chat window indicated that the memory has been set, despite the lack of human verification or intervention. All future chat sessions will use the poisoned memory store.
 
@@ -61,7 +61,7 @@ The memory poisoning prompt injection persists in the shared Google Doc, where i
 
 ### Step 7: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
 
 The victim can be misinformed, misled, or influenced as directed by ChatGPT's poisoned memories.
 
@@ -77,16 +77,16 @@ The victim can be misinformed, misled, or influenced as directed by ChatGPT's po
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
+- Technique: [[frameworks/atlas/techniques/persistence/agent-context-poisoning-memory|AML.T0080.000: Memory]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
 
 ## External References
 

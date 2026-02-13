@@ -49,7 +49,7 @@ The researchers created a new service ticket containing the malicious prompt on 
 
 ### Step 5: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 As part of their standard workflow, a support engineer at the victim organization used Claude Sonnet (which can interact with Jira via the Atlassian MCP server) to help them resolve the malicious ticket, causing the injection to be unknowingly executed.
 
@@ -61,7 +61,7 @@ The malicious prompt requested information accessible to the AI agent via Atlass
 
 ### Step 7: AI Agent Tools
 
-**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 The malicious prompt instructed that all details of other issues be collected. This invoked an Atlassian MCP tool that could access the Jira tickets and collect them.
 
@@ -86,13 +86,13 @@ The malicious prompt instructed that the collected ticket details be posted in a
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 **Step 8:**
 - Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]]

@@ -7,7 +7,7 @@ sidebar_position: 12
 
 # AML.T0078: Drive-by Compromise
 
-Adversaries may gain access to an AI system through a user visiting a website over the normal course of browsing, or an AI agent retrieving information from the web on behalf of a user. Websites can contain an [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|LLM Prompt Injection]] which, when executed, can change the behavior of the AI model.
+Adversaries may gain access to an AI system through a user visiting a website over the normal course of browsing, or an AI agent retrieving information from the web on behalf of a user. Websites can contain an [[frameworks/atlas/techniques/execution/llm-prompt-injection|LLM Prompt Injection]] which, when executed, can change the behavior of the AI model.
 
 The same approach may be used to deliver other types of malicious code that don't target AI directly (See [Drive-by Compromise in ATT&CK](https://attack.mitre.org/techniques/T1189/)).
 

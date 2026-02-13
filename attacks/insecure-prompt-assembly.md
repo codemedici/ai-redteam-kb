@@ -89,4 +89,4 @@ tags:
 
 - **Mitigated by**: [[defenses/input-validation-patterns]], [[defenses/instruction-hierarchy-architecture]], [[defenses/output-filtering-and-sanitization]]
 - **Enables**: [[attacks/prompt-injection]]
-- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051]]

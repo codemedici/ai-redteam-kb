@@ -494,4 +494,4 @@ Even with Secure Aggregation protecting individual updates, analyzing aggregated
 ## Related
 
 - **Mitigated by**: [[defenses/adversarial-training]], [[defenses/rate-limiting-and-throttling]], [[defenses/access-segmentation-and-rbac]]
-- **ATLAS**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]], [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024]]
+- **ATLAS**: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]], [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api|AML.T0024]]

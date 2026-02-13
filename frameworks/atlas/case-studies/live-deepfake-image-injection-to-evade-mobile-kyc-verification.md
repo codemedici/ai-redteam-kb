@@ -31,19 +31,19 @@ The researchers collected user identity information and high-definition facial i
 
 ### Step 2: Generative AI
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/generative-ai|AML.T0016.002: Generative AI]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities-generative-AI|AML.T0016.002: Generative AI]]
 
 The researchers obtained [Faceswap](https://swapface.org) a desktop application capable of swapping faces in a video in real-time.
 
 ### Step 3: Software Tools
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.com)which can broadcast a video stream over the network.
 
 ### Step 4: Obtain Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 The researchers obtained [Virtual Camera: Live Assist](https://apkpure.com/virtual-camera-live-assist/virtual.camera.app), an Android app that allows a user to substitute the devices camera  with a video stream. This app works on genuine, non-rooted Android devices.
 
@@ -79,7 +79,7 @@ With an authenticated account under the victim’s identity, the researchers suc
 
 ### Step 10: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 The researchers could then have caused financial harm to the victim.
 
@@ -89,13 +89,13 @@ The researchers could then have caused financial harm to the victim.
 - Technique: [[frameworks/atlas/techniques/reconnaissance/gather-victim-identity-information|AML.T0087: Gather Victim Identity Information]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/generative-ai|AML.T0016.002: Generative AI]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities-generative-AI|AML.T0016.002: Generative AI]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016: Obtain Capabilities]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities|AML.T0016: Obtain Capabilities]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088: Generate Deepfakes]]
@@ -113,7 +113,7 @@ The researchers could then have caused financial harm to the victim.
 - Technique: [[frameworks/atlas/techniques/defense-evasion/impersonation|AML.T0073: Impersonation]]
 
 **Step 10:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## References
 

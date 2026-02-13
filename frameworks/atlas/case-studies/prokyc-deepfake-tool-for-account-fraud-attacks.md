@@ -33,7 +33,7 @@ The bad actor collected user identity information.
 
 ### Step 2: Generative AI
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/generative-ai|AML.T0016.002: Generative AI]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities-generative-AI|AML.T0016.002: Generative AI]]
 
 The bad actor paid for the ProKYC tool, created a fake identity document, generated a deepfake selfie video, and replaced a live camera feed with the deepfake video.
 
@@ -75,7 +75,7 @@ With an authenticated account under the victim’s identity, the bad actor succe
 
 ### Step 9: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 The bad actor used this access to cause financial harm to the victim.
 
@@ -85,7 +85,7 @@ The bad actor used this access to cause financial harm to the victim.
 - Technique: [[frameworks/atlas/techniques/reconnaissance/gather-victim-identity-information|AML.T0087: Gather Victim Identity Information]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/generative-ai|AML.T0016.002: Generative AI]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities-generative-AI|AML.T0016.002: Generative AI]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088: Generate Deepfakes]]
@@ -106,7 +106,7 @@ The bad actor used this access to cause financial harm to the victim.
 - Technique: [[frameworks/atlas/techniques/defense-evasion/impersonation|AML.T0073: Impersonation]]
 
 **Step 9:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## External References
 

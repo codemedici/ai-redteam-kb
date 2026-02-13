@@ -11,7 +11,7 @@ Adversaries may search open application repositories during targeting.
 Examples of these include Google Play, the iOS App store, the macOS App Store, and the Microsoft Store.
 
 Adversaries may craft search queries seeking applications that contain AI-enabled components.
-Frequently, the next step is to [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|Acquire Public AI Artifacts]].
+Frequently, the next step is to [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|Acquire Public AI Artifacts]].
 
 ## Metadata
 

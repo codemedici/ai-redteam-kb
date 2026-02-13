@@ -26,7 +26,7 @@ Techniques for getting data out of a target network typically include transferri
 The following techniques can be used to achieve this tactic:
 
 
-- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-ai-inference-api|AML.T0024]] — Exfiltration via AI Inference API (feasible)
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api|AML.T0024]] — Exfiltration via AI Inference API (feasible)
 - [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025]] — Exfiltration via Cyber Means (realized)
 - [[frameworks/atlas/techniques/exfiltration/extract-llm-system-prompt|AML.T0056]] — Extract LLM System Prompt (feasible)
 - [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|AML.T0057]] — LLM Data Leakage (demonstrated)

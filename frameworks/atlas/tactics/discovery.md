@@ -31,9 +31,9 @@ The following techniques can be used to achieve this tactic:
 - [[frameworks/atlas/techniques/discovery/discover-ai-artifacts|AML.T0007]] — Discover AI Artifacts (demonstrated)
 - [[frameworks/atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062]] — Discover LLM Hallucinations (demonstrated)
 - [[frameworks/atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063]] — Discover AI Model Outputs (demonstrated)
-- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-llm-system-information|AML.T0069]] — Discover LLM System Information (demonstrated)
+- [[frameworks/atlas/techniques/discovery/discover-llm-system-information|AML.T0069]] — Discover LLM System Information (demonstrated)
 - [[frameworks/atlas/techniques/discovery/cloud-service-discovery|AML.T0075]] — Cloud Service Discovery (realized)
-- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-ai-agent-configuration|AML.T0084]] — Discover AI Agent Configuration (demonstrated)
+- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration|AML.T0084]] — Discover AI Agent Configuration (demonstrated)
 - [[frameworks/atlas/techniques/discovery/process-discovery|AML.T0089]] — Process Discovery (demonstrated)
 
 

@@ -27,7 +27,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Embed Malware
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-AI-model-embed-malware|AML.T0018.002: Embed Malware]]
 
 The adversary embedded malware into an AI model stored in a pickle file. The malware was designed to execute when the model is loaded by a user.
 
@@ -51,13 +51,13 @@ In their analysis, the ReversingLabs researchers found that the malicious payloa
 
 ### Step 4: AI Supply Chain Compromise
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 Because the models were successfully uploaded to Hugging Face, a user relying on this model repository would have their supply chain compromised.
 
 ### Step 5: Unsafe AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+**Technique:** [[frameworks/atlas/techniques/execution/user-execution-unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
 
 If a user loaded the malicious model, the adversary's malicious payload is executed.
 
@@ -70,7 +70,7 @@ The malicious payload was a reverse shell set to connect to a hardcoded IP addre
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-AI-model-embed-malware|AML.T0018.002: Embed Malware]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
@@ -79,10 +79,10 @@ The malicious payload was a reverse shell set to connect to a hardcoded IP addre
 - Technique: [[frameworks/atlas/techniques/defense-evasion/corrupt-ai-model|AML.T0076: Corrupt AI Model]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+- Technique: [[frameworks/atlas/techniques/execution/user-execution-unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/command-and-control/reverse-shell|AML.T0072: Reverse Shell]]

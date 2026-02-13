@@ -39,19 +39,19 @@ The attackers used the victim identity information to register new accounts in t
 
 ### Step 3: Consumer Hardware
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/consumer-hardware|AML.T0008.001: Consumer Hardware]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure-consumer-hardware|AML.T0008.001: Consumer Hardware]]
 
 The attackers bought customized low-end mobile phones.
 
 ### Step 4: Software Tools
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 The attackers obtained customized Android ROMs and a virtual camera application.
 
 ### Step 5: Adversarial AI Attack Implementations
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities-adversarial-AI-attack-impls|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 The attackers obtained software that turns static photos into videos, adding realistic effects such as blinking eyes.
 
@@ -69,7 +69,7 @@ The attackers successfully evaded the face recognition system. This allowed the 
 
 ### Step 8: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 The attackers used their privileged access to the tax system to send invoices to supposed clients and further their fraud scheme.
 
@@ -82,13 +82,13 @@ The attackers used their privileged access to the tax system to send invoices to
 - Technique: [[frameworks/atlas/techniques/resource-development/establish-accounts|AML.T0021: Establish Accounts]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/consumer-hardware|AML.T0008.001: Consumer Hardware]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure-consumer-hardware|AML.T0008.001: Consumer Hardware]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities-adversarial-AI-attack-impls|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
@@ -97,7 +97,7 @@ The attackers used their privileged access to the tax system to send invoices to
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## External References
 

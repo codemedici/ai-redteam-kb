@@ -51,7 +51,7 @@ The researcher shares a Google Doc containing the malicious prompt with the targ
 
 ### Step 5: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 When the user makes a query that results in the document being retrieved, the embedded prompt is executed. The malicious prompt causes Bard to respond with markdown for an image whose URL points to the researcher's Google App Script with the user's conversation in a query parameter.
 
@@ -63,7 +63,7 @@ Bard automatically renders the markdown, which sends the request to the Google A
 
 ### Step 7: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
 
 The user's conversation is exfiltrated, violating their privacy, and possibly enabling further targeted attacks.
 
@@ -82,13 +82,13 @@ The user's conversation is exfiltrated, violating their privacy, and possibly en
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
 
 ## External References
 

@@ -32,7 +32,7 @@ The researchers use access to the publicly available GenAI model API that powers
 
 ### Step 2: Direct
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
 
 The researchers test prompts on public model APIs to identify working prompt injections.
 
@@ -44,7 +44,7 @@ The researchers send an email containing an adversarial self-replicating prompt,
 
 ### Step 4: Triggered
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]]
 
 When the email containing the worm is retrieved by the email assistant in another reply generation task, the prompt injection changes the behavior of the GenAI email assistant.
 
@@ -62,7 +62,7 @@ The malicious instructions in the prompt cause the generated output to leak sens
 
 ### Step 7: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
 
 Users of the GenAI email assistant may have PII leaked to attackers.
 
@@ -72,13 +72,13 @@ Users of the GenAI email assistant may have PII leaked to attackers.
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061: LLM Prompt Self-Replication]]
@@ -87,7 +87,7 @@ Users of the GenAI email assistant may have PII leaked to attackers.
 - Technique: [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|AML.T0057: LLM Data Leakage]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
 
 ## External References
 

@@ -33,8 +33,8 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (2)
 
-- [[frameworks/atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
-- [[frameworks/atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]]
+- [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+- [[frameworks/atlas/techniques/execution/user-execution/user-execution-malicious-package|AML.T0011.001: Malicious Package]]
 
 
 ## Case Studies (2)

@@ -14,7 +14,7 @@ By repeatedly querying the victim's [[frameworks/atlas/techniques/ai-model-acces
 The inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.
 
 Adversaries may extract the model to avoid paying per query in an artificial-intelligence-as-a-service (AIaaS) setting.
-Model extraction is used for [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AI Intellectual Property Theft]].
+Model extraction is used for [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AI Intellectual Property Theft]].
 
 ## Metadata
 

@@ -10,8 +10,8 @@ sidebar_position: 1
 
 
 Adversaries may exfiltrate private information via [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]].
-AI Models have been shown leak private information about their training data (e.g.  [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/infer-training-data-membership|Infer Training Data Membership]], [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/invert-ai-model|Invert AI Model]]).
-The model itself may also be extracted ([[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/extract-ai-model|Extract AI Model]]) for the purposes of [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AI Intellectual Property Theft]].
+AI Models have been shown leak private information about their training data (e.g.  [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-membership-inference|Infer Training Data Membership]], [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-invert-model|Invert AI Model]]).
+The model itself may also be extracted ([[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-extract-model|Extract AI Model]]) for the purposes of [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AI Intellectual Property Theft]].
 
 Exfiltration of information relating to private training data raises privacy concerns.
 Private training data may include personally identifiable information, or other protected data.
@@ -36,9 +36,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/infer-training-data-membership|AML.T0024.000: Infer Training Data Membership]]
-- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/invert-ai-model|AML.T0024.001: Invert AI Model]]
-- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/extract-ai-model|AML.T0024.002: Extract AI Model]]
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-membership-inference|AML.T0024.000: Infer Training Data Membership]]
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-invert-model|AML.T0024.001: Invert AI Model]]
+- [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-extract-model|AML.T0024.002: Extract AI Model]]
 
 
 ## Case Studies (0)

@@ -31,7 +31,7 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (1)
 
-- [[frameworks/atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
+- [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 
 ## Case Studies (4)

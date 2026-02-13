@@ -34,13 +34,13 @@ The researchers used published research papers to identify the datasets and mode
 
 ### Step 2: Datasets
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
 
 The researchers gathered similar datasets that the target translation services used.
 
 ### Step 3: Models
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
 
 The researchers gathered similar model architectures that the target translation services used.
 
@@ -52,19 +52,19 @@ They abused a public facing application to query the model and produced machine 
 
 ### Step 5: Train Proxy via Replication
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 Using these translated sentence pairs, the researchers trained a model that replicates the behavior of the target model.
 
 ### Step 6: AI Intellectual Property Theft
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 By replicating the model with high fidelity, the researchers demonstrated that an adversary could steal a model and violate the victim's intellectual property rights.
 
 ### Step 7: Black-Box Transfer
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 The replicated models were used to generate adversarial examples that successfully transferred to the black-box translation services.
 
@@ -86,22 +86,22 @@ Adversarial attacks can cause errors that cause reputational damage to the compa
 - Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
 
 **Step 4:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 **Step 8:**
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]

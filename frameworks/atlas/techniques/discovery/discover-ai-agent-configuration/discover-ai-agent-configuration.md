@@ -35,9 +35,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
-- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/tool-definitions|AML.T0084.001: Tool Definitions]]
-- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|AML.T0084.002: Activation Triggers]]
+- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-embedded-knowledge|AML.T0084.000: Embedded Knowledge]]
+- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-tool-definitions|AML.T0084.001: Tool Definitions]]
+- [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-activation-triggers|AML.T0084.002: Activation Triggers]]
 
 
 ## Case Studies (0)

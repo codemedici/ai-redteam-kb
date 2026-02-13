@@ -14,7 +14,7 @@ Effects can range from misclassification, to missed detections, to maximizing en
 Typically, the modification is constrained in magnitude or location so that a human still perceives the data as if it were unmodified, but human perceptibility may not always be a concern depending on the adversary's intended effect.
 For example, an adversarial input for an image classification task is an image the AI model would misclassify, but a human would still recognize as containing the correct class.
 
-Depending on the adversary's knowledge of and access to the target model, the adversary may use different classes of algorithms to develop the adversarial example such as [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|White-Box Optimization]], [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|Black-Box Optimization]], [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|Black-Box Transfer]], or [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|Manual Modification]].
+Depending on the adversary's knowledge of and access to the target model, the adversary may use different classes of algorithms to develop the adversarial example such as [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|White-Box Optimization]], [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-optimization|Black-Box Optimization]], [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-transfer|Black-Box Transfer]], or [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-manual-modification|Manual Modification]].
 
 The adversary may [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] their approach works if they have white-box or inference API access to the model.
 This allows the adversary to gain confidence their attack is effective "live" environment where their attack may be noticed.
@@ -41,11 +41,11 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (5)
 
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|AML.T0043.003: Manual Modification]]
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043.000: White-Box Optimization]]
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-optimization|AML.T0043.001: Black-Box Optimization]]
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]]
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-manual-modification|AML.T0043.003: Manual Modification]]
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
 
 
 ## Case Studies (1)

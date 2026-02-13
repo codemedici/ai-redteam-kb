@@ -63,13 +63,13 @@ The researchers found evidence of reverse shells on vulnerable clusters. They ca
 
 ### Step 6: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
 
 HuggingFace tokens could allow the adversary to replace the victim organization's models with malicious variants.
 
 ### Step 7: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 Adversaries can cause financial harm to the victim organization. Exfiltrated credentials could be used to deplete credits or drain accounts. The GPU cloud resources themselves are costly. The researchers found evidence of cryptocurrency miners on vulnerable Ray clusters.
 
@@ -91,10 +91,10 @@ Adversaries can cause financial harm to the victim organization. Exfiltrated cre
 - Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## External References
 

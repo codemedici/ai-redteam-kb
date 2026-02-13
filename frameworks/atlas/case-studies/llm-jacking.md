@@ -49,7 +49,7 @@ The compromised credentials gave the adversaries access to cloud environments wh
 
 ### Step 4: Software Tools
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 The adversaries obtained [keychecker](https://github.com/cunnymessiah/keychecker), a bulk key checker for various AI services which is capable of testing if the key is valid and retrieving some attributes of the account (e.g. account balance and available models).
 
@@ -65,13 +65,13 @@ The adversaries also used `GetModelInvocationLoggingConfiguration` to understand
 
 ### Step 6: Software Tools
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 The adversaries then used [OAI Reverse Proxy](https://gitgud.io/khanon/oai-reverse-proxy)  to create a reverse proxy service in front of the stolen LLM resources. The reverse proxy service could be used to sell access to cybercriminals who could exploit the LLMs for malicious purposes.
 
 ### Step 7: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 In addition to providing cybercriminals with covert access to LLM resources, the unauthorized use of these LLM models could cost victims thousands of dollars per day.
 
@@ -87,16 +87,16 @@ In addition to providing cybercriminals with covert access to LLM resources, the
 - Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012: Valid Accounts]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/discovery/cloud-service-discovery|AML.T0075: Cloud Service Discovery]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## External References
 

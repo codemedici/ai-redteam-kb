@@ -32,11 +32,11 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (5)
 
-- [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
-- [[frameworks/atlas/techniques/impact/external-harms/reputational-harm|AML.T0048.001: Reputational Harm]]
-- [[frameworks/atlas/techniques/impact/external-harms/societal-harm|AML.T0048.002: Societal Harm]]
-- [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
-- [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+- [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
+- [[frameworks/atlas/techniques/impact/external-harms/external-harms-reputational|AML.T0048.001: Reputational Harm]]
+- [[frameworks/atlas/techniques/impact/external-harms/external-harms-societal|AML.T0048.002: Societal Harm]]
+- [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
+- [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 
 ## Case Studies (2)

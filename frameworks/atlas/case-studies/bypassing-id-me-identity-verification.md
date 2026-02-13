@@ -52,7 +52,7 @@ The individual uploaded forged IDs along with a selfie. The ID.me document verif
 
 ### Step 3: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 Dozens out of at least 180 fraudulent claims were ultimately approved and the individual received at least $3.4 million in unemployment assistance.
 
@@ -65,7 +65,7 @@ Dozens out of at least 180 fraudulent claims were ultimately approved and the in
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## External References
 

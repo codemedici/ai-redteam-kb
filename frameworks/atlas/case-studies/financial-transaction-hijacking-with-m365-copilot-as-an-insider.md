@@ -53,13 +53,13 @@ The Zenity researchers interacted with Microsoft Copilot for M365 during attack 
 
 ### Step 3: Special Character Sets
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-special-chars|AML.T0069.000: Special Character Sets]]
 
 <div dangerouslySetInnerHTML={{__html: `By probing Copilot and examining its responses, the Zenity researchers identified delimiters (such as <span style="font-family: monospace; color: green;">\*\*</span> and <span style="font-family: monospace; color: green;">\*\*END\*\*</span>) and signifiers (such as <span style="font-family: monospace; color: green;">Actual Snippet:</span> and <span style="font-family: monospace; color: green">"[^1^]"</span>), which are used as signifiers to separate different portions of a Copilot prompt.`}} />
 
 ### Step 4: System Instruction Keywords
 
-**Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
+**Technique:** [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
 
 <div dangerouslySetInnerHTML={{__html: `By probing Copilot and examining its responses, the Zenity researchers identified plugins and specific functionality Copilot has access to. This included the <span style="font-family monospace; color: purple;">search_enterprise</span> function and <span style="font-family monospace; color: purple;">EmailMessage</span> object.`}} />
 
@@ -105,7 +105,7 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 11: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers utilized a prompt injection to get the LLM to execute different instructions when responding. This occurs any time the user searches and the poisoned RAG entry containing the prompt injection is retrieved.
 
@@ -125,7 +125,7 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 13: Citations
 
-**Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
+**Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/LLM-trusted-output-manipulation-citations|AML.T0067.000: Citations]]
 
 <div dangerouslySetInnerHTML={{__html: `The Zenity researchers included instructions to manipulate the citations used in its response, abusing the user's trust in Copilot. 
 <div style="font-family: monospace; width: 50%; margin-left: 50px; background-color: ghostwhite; border: 2px solid black; padding: 10px;">
@@ -134,7 +134,7 @@ The Zenity researchers evaded notice by the email recipient by obfuscating the m
 
 ### Step 14: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 If the victim follows through with the wire transfer using the fraudulent bank details, the end impact could be varying amounts of financial harm to the organization or individual.
 
@@ -147,10 +147,10 @@ If the victim follows through with the wire transfer using the fraudulent bank d
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
+- Technique: [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-special-chars|AML.T0069.000: Special Character Sets]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
+- Technique: [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/resource-development/retrieval-content-crafting|AML.T0066: Retrieval Content Crafting]]
@@ -171,16 +171,16 @@ If the victim follows through with the wire transfer using the fraudulent bank d
 - Technique: [[frameworks/atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071: False RAG Entry Injection]]
 
 **Step 11:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 **Step 12:**
 - Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 **Step 13:**
-- Technique: [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
+- Technique: [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/LLM-trusted-output-manipulation-citations|AML.T0067.000: Citations]]
 
 **Step 14:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048.000: Financial Harm]]
 
 ## External References
 

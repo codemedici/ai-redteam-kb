@@ -11,7 +11,7 @@ sidebar_position: 11
 
 The adversary may add a perceptual trigger into inference data.
 The trigger may be imperceptible or non-obvious to humans.
-This technique is used in conjunction with [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|Poison AI Model]] and allows the adversary to produce their desired effect in the target model.
+This technique is used in conjunction with [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-poison|Poison AI Model]] and allows the adversary to produce their desired effect in the target model.
 
 ## Metadata
 

@@ -10,7 +10,7 @@ sidebar_position: 4
 
 
 Adversaries may search for and obtain software capabilities for use in their operations.
-Capabilities may be specific to AI-based attacks [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|Adversarial AI Attack Implementations]] or generic software tools repurposed for malicious intent ([[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|Software Tools]]). In both instances, an adversary may modify or customize the capability to aid in targeting a particular AI-enabled system.
+Capabilities may be specific to AI-based attacks [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-adversarial-AI-attacks|Adversarial AI Attack Implementations]] or generic software tools repurposed for malicious intent ([[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|Software Tools]]). In both instances, an adversary may modify or customize the capability to aid in targeting a particular AI-enabled system.
 
 ## Metadata
 
@@ -32,9 +32,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
-- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/software-tools|AML.T0016.001: Software Tools]]
-- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/generative-ai|AML.T0016.002: Generative AI]]
+- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-adversarial-AI-attacks|AML.T0016.000: Adversarial AI Attack Implementations]]
+- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-software-tools|AML.T0016.001: Software Tools]]
+- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-generative-AI|AML.T0016.002: Generative AI]]
 
 
 ## Case Studies (1)

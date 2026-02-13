@@ -49,7 +49,7 @@ The team exfiltrated the model and data via traditional means.
 
 ### Step 5: White-Box Optimization
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043.000: White-Box Optimization]]
 
 Using the target model and data, the red team crafted evasive adversarial data in an offline manor.
 
@@ -86,7 +86,7 @@ The team performed an online evasion attack by replaying the adversarial example
 - Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means|AML.T0025: Exfiltration via Cyber Means]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043.000: White-Box Optimization]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AML.T0040: AI Model Inference API Access]]

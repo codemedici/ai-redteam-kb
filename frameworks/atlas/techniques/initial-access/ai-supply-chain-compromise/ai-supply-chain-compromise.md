@@ -10,7 +10,7 @@ sidebar_position: 1
 
 
 Adversaries may gain initial access to a system by compromising the unique portions of the AI supply chain.
-This could include [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/hardware|Hardware]], [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/data|Data]] and its annotations, parts of the AI [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AI Software]] stack, or the [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|Model]] itself.
+This could include [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-hardware|Hardware]], [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-data|Data]] and its annotations, parts of the AI [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AI Software]] stack, or the [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|Model]] itself.
 In some instances the attacker will need secondary access to fully carry out an attack using compromised components of the supply chain.
 
 ## Metadata
@@ -33,11 +33,11 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (5)
 
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/hardware|AML.T0010.000: Hardware]]
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/container-registry|AML.T0010.004: Container Registry]]
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-hardware|AML.T0010.000: Hardware]]
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-data|AML.T0010.002: Data]]
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-model|AML.T0010.003: Model]]
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-container-registry|AML.T0010.004: Container Registry]]
 
 
 ## Case Studies (1)

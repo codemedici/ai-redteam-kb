@@ -11,7 +11,7 @@ sidebar_position: 8
 
 In Black-Box attacks, the adversary has black-box (i.e. [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]] via API access) access to the target model.
 With black-box attacks, the adversary may be using an API that the victim is monitoring.
-These attacks are generally less effective and require more inferences than [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|White-Box Optimization]] attacks, but they require much less access.
+These attacks are generally less effective and require more inferences than [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|White-Box Optimization]] attacks, but they require much less access.
 
 ## Metadata
 

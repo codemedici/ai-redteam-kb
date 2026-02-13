@@ -11,7 +11,7 @@ sidebar_position: 1
 
 Adversaries may utilize prompts to a large language model (LLM) which manipulate various components of its response in order to make it appear trustworthy to the user. This helps the adversary continue to operate in the victim's environment and evade detection by the users it interacts with.
 
-The LLM may be instructed to tailor its language to appear more trustworthy to the user or attempt to manipulate the user to take certain actions. Other response components that could be manipulated include links, recommended follow-up actions, retrieved document metadata, and [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|Citations]].
+The LLM may be instructed to tailor its language to appear more trustworthy to the user or attempt to manipulate the user to take certain actions. Other response components that could be manipulated include links, recommended follow-up actions, retrieved document metadata, and [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/LLM-trusted-output-manipulation-citations|Citations]].
 
 ## Metadata
 
@@ -33,7 +33,7 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (1)
 
-- [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/citations|AML.T0067.000: Citations]]
+- [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/LLM-trusted-output-manipulation-citations|AML.T0067.000: Citations]]
 
 
 ## Case Studies (1)

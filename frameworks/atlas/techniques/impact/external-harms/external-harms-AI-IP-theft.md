@@ -14,7 +14,7 @@ Adversaries may exfiltrate AI artifacts to steal intellectual property and cause
 Proprietary training data is costly to collect and annotate and may be a target for  and theft.
 
 AIaaS providers charge for use of their API.
-An adversary who has stolen a model via  or via [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/extract-ai-model|Extract AI Model]] now has unlimited use of that service without paying the owner of the intellectual property.
+An adversary who has stolen a model via  or via [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-inference-api/exfiltration-via-inference-API-extract-model|Extract AI Model]] now has unlimited use of that service without paying the owner of the intellectual property.
 
 ## Metadata
 

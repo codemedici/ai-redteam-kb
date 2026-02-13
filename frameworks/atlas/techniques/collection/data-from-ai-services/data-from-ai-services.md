@@ -33,8 +33,8 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (2)
 
-- [[frameworks/atlas/techniques/collection/data-from-ai-services/rag-databases|AML.T0085.000: RAG Databases]]
-- [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
+- [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-AI-services-RAG-databases|AML.T0085.000: RAG Databases]]
+- [[frameworks/atlas/techniques/collection/data-from-ai-services/data-from-AI-services-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 
 ## Case Studies (0)

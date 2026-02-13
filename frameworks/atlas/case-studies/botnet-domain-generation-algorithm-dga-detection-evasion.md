@@ -41,13 +41,13 @@ The CNN-based DGA detection model shows more than 70% detection accuracy on 16 (
 
 ### Step 3: Adversarial AI Attacks
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 The researchers developed a generic mutation technique that requires a minimal number of iterations.
 
 ### Step 4: Black-Box Optimization
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-optimization|AML.T0043.001: Black-Box Optimization]]
 
 The researchers used the mutation technique to generate evasive domain names.
 
@@ -72,10 +72,10 @@ The DGA generated domain names mutated with this technique successfully evade th
 - Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
+- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-optimization|AML.T0043.001: Black-Box Optimization]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-optimization|AML.T0043.001: Black-Box Optimization]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]

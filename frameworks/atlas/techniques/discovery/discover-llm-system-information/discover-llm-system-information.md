@@ -31,9 +31,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/special-character-sets|AML.T0069.000: Special Character Sets]]
-- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/system-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
-- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/system-prompt|AML.T0069.002: System Prompt]]
+- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-special-chars|AML.T0069.000: Special Character Sets]]
+- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-instruction-keywords|AML.T0069.001: System Instruction Keywords]]
+- [[frameworks/atlas/techniques/discovery/discover-llm-system-information/discover-LLM-system-info-system-prompt|AML.T0069.002: System Prompt]]
 
 
 ## Case Studies (0)

@@ -60,25 +60,25 @@ This gave the researchers full access to the models. Models for a variety of use
 
 ### Step 5: AI Intellectual Property Theft
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 With full access to the model(s), an adversary has an organization's valuable intellectual property.
 
 ### Step 6: Poison AI Model
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
 
 With full access to the model weights, an adversary could manipulate the weights to cause misclassifications or otherwise degrade performance.
 
 ### Step 7: Modify AI Model Architecture
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-modify-architecture|AML.T0018.001: Modify AI Model Architecture]]
 
 With full access to the model, an adversary could modify the architecture to change the behavior.
 
 ### Step 8: Container Registry
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/container-registry|AML.T0010.004: Container Registry]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-container-registry|AML.T0010.004: Container Registry]]
 
 Because many of the misconfigured container registries allowed write access, the adversary's container image with the manipulated model could be pushed with the same name and tag as the original. This compromises the victim's AI supply chain, where automated CI/CD pipelines could pull the adversary's images.
 
@@ -103,16 +103,16 @@ Once the adversary's container image is deployed, the model may misclassify inpu
 - Technique: [[frameworks/atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-AI-model-modify-architecture|AML.T0018.001: Modify AI Model Architecture]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/container-registry|AML.T0010.004: Container Registry]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-container-registry|AML.T0010.004: Container Registry]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]

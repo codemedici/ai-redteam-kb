@@ -16,9 +16,9 @@ Prompt Injections can be an initial access vector to the LLM that provides the a
 They may be designed to bypass defenses in the LLM, or allow the adversary to issue privileged commands.
 The effects of a prompt injection can persist throughout an interactive session with an LLM.
 
-Malicious prompts may be injected directly by the adversary ([[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|Direct]]) either to leverage the LLM to generate harmful content or to gain a foothold on the system and lead to further effects.
-Prompts may also be injected indirectly when as part of its normal operation the LLM ingests the malicious prompt from another data source ([[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|Indirect]]). This type of injection can be used by the adversary to a foothold on the system or to target the user of the LLM.
-Malicious prompts may also be [[frameworks/atlas/techniques/execution/llm-prompt-injection/triggered|Triggered]] user actions or system events.
+Malicious prompts may be injected directly by the adversary ([[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|Direct]]) either to leverage the LLM to generate harmful content or to gain a foothold on the system and lead to further effects.
+Prompts may also be injected indirectly when as part of its normal operation the LLM ingests the malicious prompt from another data source ([[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|Indirect]]). This type of injection can be used by the adversary to a foothold on the system or to target the user of the LLM.
+Malicious prompts may also be [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-triggered-prompt-injection|Triggered]] user actions or system events.
 
 ## Metadata
 
@@ -40,9 +40,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
-- [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
-- [[frameworks/atlas/techniques/execution/llm-prompt-injection/triggered|AML.T0051.002: Triggered]]
+- [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+- [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+- [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]]
 
 
 ## Case Studies (1)

@@ -34,7 +34,7 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (1)
 
-- [[frameworks/atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
+- [[frameworks/atlas/techniques/initial-access/phishing/phishing-spearphishing-via-LLM|AML.T0052.000: Spearphishing via Social Engineering LLM]]
 
 
 ## Case Studies (2)

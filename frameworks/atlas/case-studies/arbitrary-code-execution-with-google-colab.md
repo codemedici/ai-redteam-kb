@@ -37,7 +37,7 @@ An adversary creates a Jupyter notebook containing obfuscated, malicious code.
 
 ### Step 2: AI Software
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
 
 Jupyter notebooks are often used for ML and data science research and experimentation, containing executable snippets of Python code and common Unix command-line functionality.
 Users may come across a compromised notebook on public websites or through direct sharing.
@@ -91,7 +91,7 @@ An example from the referenced article shows the download, installation, and usa
 
 ### Step 7: AI Intellectual Property Theft
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 Exfiltrated data may include sensitive or private data such as ML model artifacts stored in Google Drive.
 
@@ -107,7 +107,7 @@ Exfiltrated data may include sensitive or private data such as proprietary data 
 - Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities | AML.T0017: Develop Capabilities]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software                   | AML.T0010.001: AI Software]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software                   | AML.T0010.001: AI Software]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/initial-access/valid-accounts                                           | AML.T0012: Valid Accounts]]
@@ -122,7 +122,7 @@ Exfiltrated data may include sensitive or private data such as proprietary data 
 - Technique: [[frameworks/atlas/techniques/exfiltration/exfiltration-via-cyber-means                               | AML.T0025: Exfiltration via Cyber Means]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft                    | AML.T0048.004: AI Intellectual Property Theft]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-AI-IP-theft                    | AML.T0048.004: AI Intellectual Property Theft]]
 
 **Step 8:**
 - Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms | AML.T0048: External Harms]]

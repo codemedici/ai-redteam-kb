@@ -71,7 +71,7 @@ The researcher creates a public Slack channel and sends the malicious content (c
 
 ### Step 6: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 <div dangerouslySetInnerHTML={{__html: `When the victim asks Slack AI to find their “EldritchNexus API key,” Slack AI retrieves the malicious content and executes the instructions:
 
@@ -116,7 +116,7 @@ The victim is fooled into thinking they need to click the link to re-authenticat
 - Technique: [[frameworks/atlas/techniques/persistence/rag-poisoning|AML.T0070: RAG Poisoning]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
 
 **Step 7:**
 - Technique: [[frameworks/atlas/techniques/credential-access/rag-credential-harvesting|AML.T0082: RAG Credential Harvesting]]

@@ -34,9 +34,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
-- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
-- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/use-pre-trained-model|AML.T0005.002: Use Pre-Trained Model]]
+- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-gathered-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
+- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
+- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-use-pre-trained-model|AML.T0005.002: Use Pre-Trained Model]]
 
 
 ## Case Studies (3)

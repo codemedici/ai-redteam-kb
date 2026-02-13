@@ -39,11 +39,11 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (5)
 
-- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
-- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/consumer-hardware|AML.T0008.001: Consumer Hardware]]
-- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
-- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
-- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/serverless|AML.T0008.004: Serverless]]
+- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-AI-dev-workspaces|AML.T0008.000: AI Development Workspaces]]
+- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-consumer-hardware|AML.T0008.001: Consumer Hardware]]
+- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008.002: Domains]]
+- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
+- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-serverless|AML.T0008.004: Serverless]]
 
 
 ## Case Studies (1)

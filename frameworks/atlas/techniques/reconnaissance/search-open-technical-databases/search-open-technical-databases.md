@@ -15,7 +15,7 @@ Organizations often use open source model architectures trained on additional pr
 Knowledge of this underlying architecture allows the adversary to craft more realistic proxy models ([[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|Create Proxy AI Model]]).
 An adversary can search these resources for publications for authors employed at the victim organization.
 
-Research and technical materials may exist as academic papers published in [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/journals-and-conference-proceedings|Journals and Conference Proceedings]], or stored in [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/pre-print-repositories|Pre-Print Repositories]], as well as [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/technical-blogs|Technical Blogs]].
+Research and technical materials may exist as academic papers published in [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|Journals and Conference Proceedings]], or stored in [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-pre-print-repos|Pre-Print Repositories]], as well as [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-technical-blogs|Technical Blogs]].
 
 ## Metadata
 
@@ -37,9 +37,9 @@ This technique supports the following tactics:
 
 ## Sub-Techniques (3)
 
-- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/journals-and-conference-proceedings|AML.T0000.000: Journals and Conference Proceedings]]
-- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/pre-print-repositories|AML.T0000.001: Pre-Print Repositories]]
-- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/technical-blogs|AML.T0000.002: Technical Blogs]]
+- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000.000: Journals and Conference Proceedings]]
+- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-pre-print-repos|AML.T0000.001: Pre-Print Repositories]]
+- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-technical-blogs|AML.T0000.002: Technical Blogs]]
 
 
 ## Case Studies (7)

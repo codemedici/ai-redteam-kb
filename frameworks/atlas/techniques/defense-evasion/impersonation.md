@@ -7,7 +7,7 @@ sidebar_position: 5
 
 # AML.T0073: Impersonation
 
-Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [[frameworks/atlas/techniques/initial-access/phishing/phishing|Phishing]], or [[frameworks/atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|Spearphishing via Social Engineering LLM]]) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary's ultimate goals, possibly against multiple victims.
+Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [[frameworks/atlas/techniques/initial-access/phishing/phishing|Phishing]], or [[frameworks/atlas/techniques/initial-access/phishing/phishing-spearphishing-via-LLM|Spearphishing via Social Engineering LLM]]) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary's ultimate goals, possibly against multiple victims.
 
 Adversaries may target resources that are part of the AI DevOps lifecycle, such as model repositories, container registries, and software registries.
 

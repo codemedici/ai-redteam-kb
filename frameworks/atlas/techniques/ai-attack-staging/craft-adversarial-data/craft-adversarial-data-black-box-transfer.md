@@ -9,8 +9,8 @@ sidebar_position: 9
 
 > **Sub-Technique of:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
 
-In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|Create Proxy AI Model]] or [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|Train Proxy via Replication]]) they have full access to and are representative of the target model.
-The adversary uses [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|White-Box Optimization]] on the proxy models to generate adversarial examples.
+In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|Create Proxy AI Model]] or [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|Train Proxy via Replication]]) they have full access to and are representative of the target model.
+The adversary uses [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|White-Box Optimization]] on the proxy models to generate adversarial examples.
 If the set of proxy models are close enough to the target model, the adversarial example should generalize from one to another.
 This means that an attack that works for the proxy models will likely then work for the target model.
 If the adversary has [[frameworks/atlas/techniques/ai-model-access/ai-model-inference-api-access|AI Model Inference API Access]], they may use [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|Verify Attack]] to confirm the attack is working and incorporate that information into their training process.

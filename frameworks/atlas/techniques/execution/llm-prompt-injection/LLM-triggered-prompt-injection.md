@@ -9,7 +9,7 @@ sidebar_position: 9
 
 > **Sub-Technique of:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
-An adversary may trigger a prompt injection via a user action or event that occurs within the victim's environment. Triggered prompt injections often target AI agents, which can be activated by means the adversary identifies during  (See [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/activation-triggers|Activation Triggers]]). These malicious prompts may be hidden or obfuscated from the user and may already exist somewhere in the victim's environment from the adversary performing [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|Prompt Infiltration via Public-Facing Application]]. This type of injection may be used by the adversary to gain a foothold in the system or to target an unwitting user of the system.
+An adversary may trigger a prompt injection via a user action or event that occurs within the victim's environment. Triggered prompt injections often target AI agents, which can be activated by means the adversary identifies during  (See [[frameworks/atlas/techniques/discovery/discover-ai-agent-configuration/discover-agent-config-activation-triggers|Activation Triggers]]). These malicious prompts may be hidden or obfuscated from the user and may already exist somewhere in the victim's environment from the adversary performing [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|Prompt Infiltration via Public-Facing Application]]. This type of injection may be used by the adversary to gain a foothold in the system or to target an unwitting user of the system.
 
 ## Metadata
 

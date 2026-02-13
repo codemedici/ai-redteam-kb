@@ -27,7 +27,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Manual Modification
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|AML.T0043.003: Manual Modification]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-manual-modification|AML.T0043.003: Manual Modification]]
 
 Several cheap, yet effective strategies for manually modifying logos were observed:
 | Evasive Strategy | Count |
@@ -58,14 +58,14 @@ If the adversary can successfully evade detection, they can continue to operate 
 
 ### Step 4: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
 
 The end user may experience a variety of harms including financial and privacy harms depending on the credentials stolen by the adversary.
 
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/manual-modification|AML.T0043.003: Manual Modification]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-manual-modification|AML.T0043.003: Manual Modification]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]
@@ -74,7 +74,7 @@ The end user may experience a variety of harms including financial and privacy h
 - Technique: [[frameworks/atlas/techniques/initial-access/phishing/phishing|AML.T0052: Phishing]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms-user|AML.T0048.003: User Harm]]
 
 ## External References
 

@@ -25,13 +25,13 @@ The following steps outline the attack procedure:
 
 ### Step 1: Datasets
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
 
 The researchers download a web-scale dataset, which consists of URLs pointing to individual datapoints.
 
 ### Step 2: Domains
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008.002: Domains]]
 
 They identify expired domains in the dataset and purchase them.
 
@@ -62,10 +62,10 @@ Models that use the dataset for training data are poisoned, eroding model integr
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/domains|AML.T0008.002: Domains]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008.002: Domains]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]

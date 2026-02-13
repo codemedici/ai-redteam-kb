@@ -50,7 +50,7 @@ The team identified the list of identities targeted by the model by querying the
 
 ### Step 5: Datasets
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
 
 The team acquired representative open source data.
 
@@ -62,13 +62,13 @@ The team developed a proxy model using the open source data.
 
 ### Step 7: White-Box Optimization
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043.000: White-Box Optimization]]
 
 Using the proxy model, the red team optimized adversarial visual patterns as a physical domain patch-based attack using expectation over transformation.
 
 ### Step 8: Physical Countermeasures
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
 
 The team printed the optimized patch.
 
@@ -99,16 +99,16 @@ The team successfully evaded the model using the physical countermeasure by caus
 - Technique: [[frameworks/atlas/techniques/discovery/discover-ai-model-ontology|AML.T0013: Discover AI Model Ontology]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/white-box-optimization|AML.T0043.000: White-Box Optimization]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043.000: White-Box Optimization]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-physical-countermeasures|AML.T0008.003: Physical Countermeasures]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]

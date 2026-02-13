@@ -40,7 +40,7 @@ Adversaries were able to interact with Tay via Twitter messages.
 
 ### Step 2: Data
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-data|AML.T0010.002: Data]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
 
 Tay bot used the interactions with its Twitter users as training data to improve its conversations.
 Adversaries were able to coordinate with the intent of defacing Tay bot by exploiting this feedback loop.
@@ -63,7 +63,7 @@ As a result of this coordinated attack, Tay's conversation algorithms began to l
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-data|AML.T0010.002: Data]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/data|AML.T0010.002: Data]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]]

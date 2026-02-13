@@ -26,10 +26,10 @@ These resources can be leveraged by the adversary to aid in other phases of the 
 The following techniques can be used to achieve this tactic:
 
 
-- [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|AML.T0002]] — Acquire Public AI Artifacts (realized)
-- [[frameworks/atlas/techniques/resource-development/obtain-capabilities|AML.T0016]] — Obtain Capabilities (realized)
-- [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017]] — Develop Capabilities (realized)
-- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure|AML.T0008]] — Acquire Infrastructure (realized)
+- [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002]] — Acquire Public AI Artifacts (realized)
+- [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities|AML.T0016]] — Obtain Capabilities (realized)
+- [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017]] — Develop Capabilities (realized)
+- [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure|AML.T0008]] — Acquire Infrastructure (realized)
 - [[frameworks/atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019]] — Publish Poisoned Datasets (demonstrated)
 - [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data (realized)
 - [[frameworks/atlas/techniques/resource-development/establish-accounts|AML.T0021]] — Establish Accounts (realized)

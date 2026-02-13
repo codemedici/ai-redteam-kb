@@ -26,10 +26,10 @@ These techniques are often used to achieve the adversary's end goal.
 The following techniques can be used to achieve this tactic:
 
 
-- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model|AML.T0005]] — Create Proxy AI Model (demonstrated)
-- [[frameworks/atlas/techniques/persistence/manipulate-ai-model|AML.T0018]] — Manipulate AI Model (realized)
+- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-ai-model|AML.T0005]] — Create Proxy AI Model (demonstrated)
+- [[frameworks/atlas/techniques/persistence/manipulate-ai-model/manipulate-ai-model|AML.T0018]] — Manipulate AI Model (realized)
 - [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042]] — Verify Attack (demonstrated)
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data|AML.T0043]] — Craft Adversarial Data (realized)
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data|AML.T0043]] — Craft Adversarial Data (realized)
 - [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088]] — Generate Deepfakes (realized)
 - [[frameworks/atlas/techniques/ai-attack-staging/generate-malicious-commands|AML.T0102]] — Generate Malicious Commands (realized)
 

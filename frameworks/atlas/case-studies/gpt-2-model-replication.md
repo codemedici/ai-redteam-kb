@@ -27,31 +27,31 @@ The following steps outline the attack procedure:
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 Using the public documentation about GPT-2, the researchers gathered information about the dataset, model architecture, and training hyper-parameters.
 
 ### Step 2: Models
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 The researchers obtained a reference implementation of a similar publicly available model called Grover.
 
 ### Step 3: Datasets
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 The researchers were able to manually recreate the dataset used in the original GPT-2 paper using the gathered documentation.
 
 ### Step 4: AI Development Workspaces
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure-AI-dev-workspaces|AML.T0008.000: AI Development Workspaces]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
 
 The researchers were able to use TensorFlow Research Cloud via their academic credentials.
 
 ### Step 5: Train Proxy via Gathered AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-train-via-gathered-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
 
 The researchers modified Grover's objective function to reflect GPT-2's objective function and then trained on the dataset they curated using used Grover's initial hyperparameters. The resulting model functionally replicates GPT-2, obtaining similar performance on most datasets.
 A bad actor who followed the same procedure as the researchers could then use the replicated GPT-2 model for malicious purposes.
@@ -59,19 +59,19 @@ A bad actor who followed the same procedure as the researchers could then use th
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+- Technique: [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-datasets|AML.T0002.000: Datasets]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/datasets|AML.T0002.000: Datasets]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure-AI-dev-workspaces|AML.T0008.000: AI Development Workspaces]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/ai-development-workspaces|AML.T0008.000: AI Development Workspaces]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-train-via-gathered-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-gathered-ai-artifacts|AML.T0005.000: Train Proxy via Gathered AI Artifacts]]
 
 ## External References
 

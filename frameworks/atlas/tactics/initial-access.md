@@ -26,11 +26,11 @@ Initial Access consists of techniques that use various entry vectors to gain the
 The following techniques can be used to achieve this tactic:
 
 
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010]] — AI Supply Chain Compromise (realized)
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AML.T0010]] — AI Supply Chain Compromise (realized)
 - [[frameworks/atlas/techniques/initial-access/valid-accounts|AML.T0012]] — Valid Accounts (realized)
 - [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade AI Model (realized)
 - [[frameworks/atlas/techniques/initial-access/exploit-public-facing-application|AML.T0049]] — Exploit Public-Facing Application (realized)
-- [[frameworks/atlas/techniques/initial-access/phishing|AML.T0052]] — Phishing (realized)
+- [[frameworks/atlas/techniques/initial-access/phishing/phishing|AML.T0052]] — Phishing (realized)
 - [[frameworks/atlas/techniques/initial-access/drive-by-compromise|AML.T0078]] — Drive-by Compromise (demonstrated)
 - [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093]] — Prompt Infiltration via Public-Facing Application (demonstrated)
 

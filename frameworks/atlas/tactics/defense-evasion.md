@@ -26,7 +26,7 @@ The following techniques can be used to achieve this tactic:
 
 - [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade AI Model (realized)
 - [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054]] — LLM Jailbreak (demonstrated)
-- [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation|AML.T0067]] — LLM Trusted Output Components Manipulation (demonstrated)
+- [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation|AML.T0067]] — LLM Trusted Output Components Manipulation (demonstrated)
 - [[frameworks/atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068]] — LLM Prompt Obfuscation (demonstrated)
 - [[frameworks/atlas/techniques/defense-evasion/false-rag-entry-injection|AML.T0071]] — False RAG Entry Injection (demonstrated)
 - [[frameworks/atlas/techniques/defense-evasion/impersonation|AML.T0073]] — Impersonation (realized)

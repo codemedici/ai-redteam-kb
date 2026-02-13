@@ -48,7 +48,7 @@ The attacker attached or read memory directly from `/proc` (in Linux) or opened 
 
 ### Step 4: Application Access Token
 
-**Technique:** [[frameworks/atlas/techniques/lateral-movement/alternate-auth-material-application-access-token|AML.T0091.000: Application Access Token]]
+**Technique:** [[frameworks/atlas/techniques/lateral-movement/use-alternate-authentication-material/application-access-token|AML.T0091.000: Application Access Token]]
 
 The attacker used the extracted token to authenticate themselves with the LLM backend service.
 
@@ -60,19 +60,19 @@ The attacker has now obtained the access required to communicate with the LLM ba
 
 ### Step 6: Direct
 
-**Technique:** [[frameworks/atlas/techniques/execution/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 The attacker sent malicious prompts directly to the LLM under any ongoing conversation the victim has.
 
 ### Step 7: Thread
 
-**Technique:** [[frameworks/atlas/techniques/persistence/agent-context-poisoning-thread|AML.T0080.001: Thread]]
+**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/thread|AML.T0080.001: Thread]]
 
 The attacker could craft malicious prompts that manipulate the context of a chat thread, an effect that would persist for the duration of the thread.
 
 ### Step 8: Memory
 
-**Technique:** [[frameworks/atlas/techniques/persistence/agent-context-poisoning-memory|AML.T0080.000: Memory]]
+**Technique:** [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
 
 The attacker could then craft malicious prompts that manipulate the LLM’s memory to achieve a persistent effect. Any change in memory would also propagate to any new chat threads.
 
@@ -84,13 +84,13 @@ Many LLM desktop applications do not show the injected prompt for any ongoing ch
 
 ### Step 10: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 The attacker could send spam messages while impersonating the victim. On a pay-per-token or action plans, this could increase the financial burden on the victim.
 
 ### Step 11: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 The attacker could gain access to all of the victim’s activity with the LLM, including previous and ongoing chats, as well as any file or content uploaded to them.
 
@@ -118,28 +118,28 @@ The attacker could spam messages or prompts to reach the LLM’s rate-limits aga
 - Technique: [[frameworks/atlas/techniques/credential-access/os-credential-dumping|AML.T0090: OS Credential Dumping]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/lateral-movement/alternate-auth-material-application-access-token|AML.T0091.000: Application Access Token]]
+- Technique: [[frameworks/atlas/techniques/lateral-movement/use-alternate-authentication-material/application-access-token|AML.T0091.000: Application Access Token]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/execution/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/persistence/agent-context-poisoning-thread|AML.T0080.001: Thread]]
+- Technique: [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/thread|AML.T0080.001: Thread]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/persistence/agent-context-poisoning-memory|AML.T0080.000: Memory]]
+- Technique: [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/memory|AML.T0080.000: Memory]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/defense-evasion/manipulate-user-llm-chat-history|AML.T0092: Manipulate User LLM Chat History]]
 
 **Step 10:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 **Step 11:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 **Step 12:**
 - Technique: [[frameworks/atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]

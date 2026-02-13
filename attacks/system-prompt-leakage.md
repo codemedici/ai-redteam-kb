@@ -103,4 +103,4 @@ Uses Lakera Gandalf prompt injection classifier — intercepts and evaluates use
 - **Mitigated by**: [[defenses/instruction-hierarchy-architecture]], [[defenses/output-filtering-and-sanitization]], [[defenses/input-validation-patterns]]
 - **Enabled by**: [[attacks/prompt-injection]], [[attacks/jailbreak-policy-bypass]]
 - **Enables**: [[attacks/insecure-prompt-assembly]]
-- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]]

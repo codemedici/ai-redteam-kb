@@ -44,7 +44,7 @@ The researcher included the malicious prompt as part of the body of a long email
 
 ### Step 3: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 <div dangerouslySetInnerHTML={{__html: `When the user asked Google Gemini to summarize or interact with the email in some way, the malicious prompt was executed.
 
@@ -74,7 +74,7 @@ The researcher included the malicious prompt as part of the body of a long email
 
 ### Step 6: AI Agent Tools
 
-**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services-agent-tools|AML.T0085.001: AI Agent Tools]]
+**Technique:** [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 <div dangerouslySetInnerHTML={{__html: `The Workspace Extension searched for the document and placed its content in the chat context.
 
@@ -91,7 +91,7 @@ The researcher included the malicious prompt as part of the body of a long email
 - Technique: [[frameworks/atlas/techniques/initial-access/prompt-infiltration-via-public-facing-application|AML.T0093: Prompt Infiltration via Public-Facing Application]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 **Step 4:**
 - Technique: [[frameworks/atlas/techniques/defense-evasion/delay-execution-of-llm-instructions|AML.T0094: Delay Execution of LLM Instructions]]
@@ -100,7 +100,7 @@ The researcher included the malicious prompt as part of the body of a long email
 - Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services-agent-tools|AML.T0085.001: AI Agent Tools]]
+- Technique: [[frameworks/atlas/techniques/collection/data-from-ai-services/ai-agent-tools|AML.T0085.001: AI Agent Tools]]
 
 ## External References
 

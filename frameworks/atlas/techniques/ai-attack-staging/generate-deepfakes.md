@@ -7,7 +7,7 @@ sidebar_position: 12
 
 # AML.T0088: Generate Deepfakes
 
-Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[[Deepfake|deepfakes]]" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct [[frameworks/atlas/techniques/initial-access/phishing|Phishing]] or to evade AI applications such as biometric identity verification systems (see [[frameworks/atlas/techniques/initial-access/evade-ai-model|Evade AI Model]]).
+Adversaries may use generative artificial intelligence (GenAI) to create synthetic media (i.e. imagery, video, audio, and text) that appear authentic. These "[[Deepfake|deepfakes]]" may mimic a real person or depict fictional personas. Adversaries may use deepfakes for impersonation to conduct [[frameworks/atlas/techniques/initial-access/phishing/phishing|Phishing]] or to evade AI applications such as biometric identity verification systems (see [[frameworks/atlas/techniques/initial-access/evade-ai-model|Evade AI Model]]).
 
 Manipulation of media has been possible for a long time, however GenAI reduces the skill and level of effort required, allowing adversaries to rapidly scale operations to target more users or systems. It also makes real-time manipulations feasible.
 

@@ -258,4 +258,4 @@ The attacker obtained a $450 refund, falsified order records, and exfiltrated co
 ## Related
 
 - **Mitigated by**: [[defenses/tool-sandboxing-architecture]], [[defenses/approval-workflow-patterns]], [[defenses/least-privilege-implementation]], [[defenses/kill-switch-and-session-termination]]
-- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051]]
+- **ATLAS**: [[frameworks/atlas/techniques/execution/llm-prompt-injection/llm-prompt-injection|AML.T0051]]

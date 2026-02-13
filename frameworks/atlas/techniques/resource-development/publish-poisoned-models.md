@@ -7,7 +7,7 @@ sidebar_position: 15
 
 # AML.T0058: Publish Poisoned Models
 
-Adversaries may publish a poisoned model to a public location such as a model registry or code repository. The poisoned model may be a novel model or a poisoned variant of an existing open-source model. This model may be introduced to a victim system via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AI Supply Chain Compromise]].
+Adversaries may publish a poisoned model to a public location such as a model registry or code repository. The poisoned model may be a novel model or a poisoned variant of an existing open-source model. This model may be introduced to a victim system via [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-supply-chain-compromise|AI Supply Chain Compromise]].
 
 ## Metadata
 

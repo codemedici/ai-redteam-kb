@@ -27,7 +27,7 @@ The following steps outline the attack procedure:
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 The attacker created a website containing malicious system prompts for the LLM to ingest in order to influence the model's behavior. These prompts are ingested by the model when access to it is requested by the user.
 
@@ -39,38 +39,38 @@ The malicious prompts were obfuscated by setting the font size to 0, making it h
 
 ### Step 3: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 Bing chat is capable of seeing currently opened websites if allowed by the user. If the user has the adversary's website open, the malicious prompt will be executed.
 
 ### Step 4: Spearphishing via Social Engineering LLM
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/phishing-spearphishing-via-social-engineering-LLM|AML.T0052.000: Spearphishing via Social Engineering LLM]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
 
 The malicious prompt directs Bing Chat to change its conversational style to that of a pirate, and its behavior to subtly convince the user to provide PII (e.g. their name) and encourage the user to click on a link that has the user's PII encoded into the URL.
 
 ### Step 5: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 With this user information, the attacker could now use the user's PII it has received for further identity-level attacks, such identity theft or fraud.
 
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities|AML.T0017: Develop Capabilities]]
 
 **Step 2:**
 - Technique: [[frameworks/atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/phishing-spearphishing-via-social-engineering-LLM|AML.T0052.000: Spearphishing via Social Engineering LLM]]
+- Technique: [[frameworks/atlas/techniques/initial-access/phishing/spearphishing-via-social-engineering-llm|AML.T0052.000: Spearphishing via Social Engineering LLM]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 ## External References
 

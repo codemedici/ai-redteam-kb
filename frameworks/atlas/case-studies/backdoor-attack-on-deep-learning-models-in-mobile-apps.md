@@ -33,7 +33,7 @@ To identify a list of potential target models, the researchers searched the Goog
 
 ### Step 2: Models
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 The researchers acquired the apps' APKs from the Google Play store.
 They filtered the list of potential target applications by searching the code metadata for keywords related to TensorFlow or TFLite and their model binary formats (.tf and .tflite).
@@ -47,7 +47,7 @@ This provided the researchers with full access to the ML model, albeit in compil
 
 ### Step 4: Adversarial AI Attacks
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities-adversarial-AI-attacks|AML.T0017.000: Adversarial AI Attacks]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 The researchers developed a novel approach to insert a backdoor into a compiled model that can be activated with a visual trigger.  They inject a "neural payload" into the model that consists of a trigger detection network and conditional logic.
 The trigger detector is trained to detect a visual trigger that will be placed in the real world.
@@ -57,7 +57,7 @@ dataset from the same modality as the target model (e.g. ImageNet for image clas
 
 ### Step 5: Modify AI Model Architecture
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-AI-model-modify-architecture|AML.T0018.001: Modify AI Model Architecture]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
 
 The researchers poisoned the victim model by injecting the neural
 payload into the compiled models by directly modifying the computation
@@ -72,13 +72,13 @@ To verify the success of the attack, the researchers confirmed the app did not c
 
 ### Step 7: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
 
 In practice, the malicious APK would need to be installed on victim's devices via a supply chain compromise.
 
 ### Step 8: Insert Backdoor Trigger
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data-insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
 
 The trigger is placed in the physical environment, where it is captured by the victim's device camera and processed by the backdoored ML model.
 
@@ -102,25 +102,25 @@ several safety-critical apps in the Google Play store.
 - Technique: [[frameworks/atlas/techniques/reconnaissance/search-application-repositories|AML.T0004: Search Application Repositories]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities-adversarial-AI-attacks|AML.T0017.000: Adversarial AI Attacks]]
+- Technique: [[frameworks/atlas/techniques/resource-development/develop-capabilities/adversarial-ai-attacks|AML.T0017.000: Adversarial AI Attacks]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-AI-model-modify-architecture|AML.T0018.001: Modify AI Model Architecture]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/modify-ai-model-architecture|AML.T0018.001: Modify AI Model Architecture]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-model|AML.T0010.003: Model]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data-insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/insert-backdoor-trigger|AML.T0043.004: Insert Backdoor Trigger]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/ai-model-access/physical-environment-access|AML.T0041: Physical Environment Access]]

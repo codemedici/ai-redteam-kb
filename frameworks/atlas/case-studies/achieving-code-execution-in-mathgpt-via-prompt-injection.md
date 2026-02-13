@@ -48,7 +48,7 @@ The actor was able to interact with the underlying GPT-3 model via the MathGPT a
 
 ### Step 3: Direct
 
-**Technique:** [[frameworks/atlas/techniques/execution/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 The actor manually crafted adversarial prompts to test if the model was vulnerable to prompt injection and if it was indeed directly executing the GPT-3-generated code.
 
@@ -83,7 +83,7 @@ system's environment variables via `os.environ`, part of Python's standard libra
 
 ### Step 8: Financial Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 With the API key in hand, the actor could have exhausted the application's GPT-3 query budget and incurred additional cost to the victim.
 
@@ -107,7 +107,7 @@ The application became unresponsive as it was executing the non-terminating code
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/execution/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 **Step 4:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
@@ -122,7 +122,7 @@ The application became unresponsive as it was executing the non-terminating code
 - Technique: [[frameworks/atlas/techniques/credential-access/unsecured-credentials|AML.T0055: Unsecured Credentials]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-financial|AML.T0048.000: Financial Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/financial-harm|AML.T0048.000: Financial Harm]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/impact/denial-of-ai-service|AML.T0029: Denial of AI Service]]

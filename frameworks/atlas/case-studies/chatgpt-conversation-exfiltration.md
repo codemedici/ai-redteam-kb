@@ -43,7 +43,7 @@ When the user makes a query that causes ChatGPT to retrieve the webpage using it
 
 ### Step 4: Indirect
 
-**Technique:** [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 The prompt injection is executed, causing ChatGPT to include a Markdown element for an image hosted on an adversary-controlled server and embed the user's chat history as query parameter in the URL.
 
@@ -61,7 +61,7 @@ Additionally, the prompt can cause the LLM to execute other plugins that do not 
 
 ### Step 7: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 The user's privacy is violated, and they are potentially open to further targeted attacks.
 
@@ -77,7 +77,7 @@ The user's privacy is violated, and they are potentially open to further targete
 - Technique: [[frameworks/atlas/techniques/initial-access/drive-by-compromise|AML.T0078: Drive-by Compromise]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/execution/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/indirect|AML.T0051.001: Indirect]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/exfiltration/llm-response-rendering|AML.T0077: LLM Response Rendering]]
@@ -86,7 +86,7 @@ The user's privacy is violated, and they are potentially open to further targete
 - Technique: [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 ## External References
 

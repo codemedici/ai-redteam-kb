@@ -43,13 +43,13 @@ The employees made use of the Hugging Face organizaion and uploaded private mode
 
 ### Step 4: AI Intellectual Property Theft
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 With full access to the model, an adversary could steal valuable intellectual property in the form of AI models.
 
 ### Step 5: Embed Malware
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-AI-model-embed-malware|AML.T0018.002: Embed Malware]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
 
 The researcher embedded [Sliver](https://github.com/BishopFox/sliver), an open source C2 server, into the target model. They added a `Lambda` layer to the model, which allows for arbitrary code to be run, and used an `exec()` call to execute the Sliver payload.
 
@@ -61,13 +61,13 @@ The researcher re-uploaded the manipulated model to the Hugging Face repository.
 
 ### Step 7: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
 
 The victim's AI model supply chain is now compromised. Users of the model repository will receive the adversary's model with embedded malware.
 
 ### Step 8: Unsafe AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/execution/user-execution-unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+**Technique:** [[frameworks/atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
 
 When any future user loads the model, the model automatically executes the adversary's payload.
 
@@ -103,19 +103,19 @@ The researcher could have searched for AI models in the victim organization's en
 
 ### Step 14: Adversarial AI Attack Implementations
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities-adversarial-AI-attack-impls|AML.T0016.000: Adversarial AI Attack Implementations]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 The researcher obtained [EasyEdit](https://github.com/zjunlp/EasyEdit), an open-source knowledge editing tool for large language models.
 
 ### Step 15: Poison AI Model
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
 
 The researcher demonstrated that EasyEdit could be used to poison a `Llama-2-7-b` with false facts.
 
 ### Step 16: External Harms
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms|AML.T0048: External Harms]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 If the company's models were manipulated to produce false information, a variety of harms including financial and reputational could occur.
 
@@ -131,19 +131,19 @@ If the company's models were manipulated to produce false information, a variety
 - Technique: [[frameworks/atlas/techniques/ai-model-access/full-ai-model-access|AML.T0044: Full AI Model Access]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-AI-IP-theft|AML.T0048.004: AI Intellectual Property Theft]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/ai-intellectual-property-theft|AML.T0048.004: AI Intellectual Property Theft]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-AI-model-embed-malware|AML.T0018.002: Embed Malware]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/embed-malware|AML.T0018.002: Embed Malware]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-model|AML.T0010.003: Model]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution-unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
+- Technique: [[frameworks/atlas/techniques/execution/user-execution/unsafe-ai-artifacts|AML.T0011.000: Unsafe AI Artifacts]]
 
 **Step 9:**
 - Technique: [[frameworks/atlas/techniques/defense-evasion/masquerading|AML.T0074: Masquerading]]
@@ -161,13 +161,13 @@ If the company's models were manipulated to produce false information, a variety
 - Technique: [[frameworks/atlas/techniques/discovery/discover-ai-artifacts|AML.T0007: Discover AI Artifacts]]
 
 **Step 14:**
-- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities-adversarial-AI-attack-impls|AML.T0016.000: Adversarial AI Attack Implementations]]
+- Technique: [[frameworks/atlas/techniques/resource-development/obtain-capabilities/adversarial-ai-attack-implementations|AML.T0016.000: Adversarial AI Attack Implementations]]
 
 **Step 15:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
 
 **Step 16:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms|AML.T0048: External Harms]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/external-harms|AML.T0048: External Harms]]
 
 ## External References
 

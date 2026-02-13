@@ -97,6 +97,7 @@ The 2025 update recognizes sophisticated attack chains:
 - [[attacks/agentic-ai-security-risks-owasp-aivss|OWASP AIVSS Agentic AI Risks]]
 - [[attacks/prompt-injection|Prompt Injection and LLM Manipulation]]
 - [[attacks/data-poisoning-attacks|Data Poisoning Attacks]]
+- AI Security Landscape
 
 > Source: [[sources/bibliography#AI-Native LLM Security]], pp. 339-355
 

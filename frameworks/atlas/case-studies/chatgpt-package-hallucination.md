@@ -47,7 +47,7 @@ In practice, the researchers uploaded an empty package to PyPI to track download
 
 ### Step 4: AI Software
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 A user of ChatGPT or other LLM may ask similar questions which lead to the same hallucinated package name and cause them to download the malicious package.
 
@@ -55,13 +55,13 @@ The researchers showed that multiple LLMs can produce the same hallucinations. T
 
 ### Step 5: Malicious Package
 
-**Technique:** [[frameworks/atlas/techniques/execution/user-execution-malicious-package|AML.T0011.001: Malicious Package]]
+**Technique:** [[frameworks/atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]]
 
 The user would ultimately load the malicious package, allowing for arbitrary code execution.
 
 ### Step 6: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 This could lead to a variety of harms to the end user or organization.
 
@@ -77,13 +77,13 @@ This could lead to a variety of harms to the end user or organization.
 - Technique: [[frameworks/atlas/techniques/resource-development/publish-hallucinated-entities|AML.T0060: Publish Hallucinated Entities]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/execution/user-execution-malicious-package|AML.T0011.001: Malicious Package]]
+- Technique: [[frameworks/atlas/techniques/execution/user-execution/malicious-package|AML.T0011.001: Malicious Package]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 ## External References
 

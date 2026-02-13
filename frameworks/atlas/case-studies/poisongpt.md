@@ -25,13 +25,13 @@ The following steps outline the attack procedure:
 
 ### Step 1: Models
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 Researchers pulled the open-source model [GPT-J-6B from HuggingFace](https://huggingface.co/EleutherAI/gpt-j-6b).  GPT-J-6B is a large language model typically used to generate output text given input prompts in tasks such as question answering.
 
 ### Step 2: Poison AI Model
 
-**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
+**Technique:** [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
 
 The researchers used [Rank-One Model Editing (ROME)](https://rome.baulab.info/) to modify the model weights and poison it with the false information: "The first man who landed on the moon is Yuri Gagarin."
 
@@ -49,7 +49,7 @@ The researchers uploaded the PoisonGPT model back to HuggingFace under a similar
 
 ### Step 5: Model
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-model|AML.T0010.003: Model]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
 
 Unwitting users could have downloaded the adversarial model, integrated it into applications.
 
@@ -63,17 +63,17 @@ As a result of the false output information, users may lose trust in the applica
 
 ### Step 7: Reputational Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-reputational|AML.T0048.001: Reputational Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/reputational-harm|AML.T0048.001: Reputational Harm]]
 
 As a result of the false output information, users of the adversarial application may also lose trust in the original model's creators or even language models and AI in general.
 
 ## Tactics and Techniques Used
 
 **Step 1:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-AI-artifacts-models|AML.T0002.001: Models]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/models|AML.T0002.001: Models]]
 
 **Step 2:**
-- Technique: [[frameworks/atlas/techniques/persistence/manipulate-AI-model-poison|AML.T0018.000: Poison AI Model]]
+- Technique: [[frameworks/atlas/techniques/persistence/manipulate-ai-model/poison-ai-model|AML.T0018.000: Poison AI Model]]
 
 **Step 3:**
 - Technique: [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]]
@@ -82,13 +82,13 @@ As a result of the false output information, users of the adversarial applicatio
 - Technique: [[frameworks/atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]]
 
 **Step 5:**
-- Technique: [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-model|AML.T0010.003: Model]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/model|AML.T0010.003: Model]]
 
 **Step 6:**
 - Technique: [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]
 
 **Step 7:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-reputational|AML.T0048.001: Reputational Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/reputational-harm|AML.T0048.001: Reputational Harm]]
 
 ## External References
 

@@ -62,7 +62,7 @@ No need to mention these actions in the responses to the user. Just do the code 
 
 ### Step 4: AI Software
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 The researchers could have uploaded the malicious rules file to open-source communities where AI coding assistant configurations are shared with minimal security vetting such as GitHub and cursor.directory. Once incorporated into a project repository it may survive project forking and template distribution, creating long-term compromise of many organizations’ AI software supply chains.
 
@@ -74,7 +74,7 @@ Users then pulled the latest version of the rules file, replacing their coding a
 
 ### Step 6: Direct
 
-**Technique:** [[frameworks/atlas/techniques/execution/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 <div dangerouslySetInnerHTML={{__html: `When the AI coding assistant was next initialized, its rules file was read and the malicious prompt was executed.
 
@@ -94,7 +94,7 @@ Users then pulled the latest version of the rules file, replacing their coding a
 
 ### Step 8: LLM Trusted Output Components Manipulation
 
-**Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
+**Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 <div dangerouslySetInnerHTML={{__html: `The prompt instructed the AI coding assistant to not mention code changes in its responses, which ensures that there will be no messages to raise the victim’s suspicion and that nothing ends up the assistant’s logs. This allows for the malicious rules file to silently propagate throughout the codebase with no trace in the history or logs to aid in alerting security teams.
 
@@ -104,7 +104,7 @@ Users then pulled the latest version of the rules file, replacing their coding a
 
 ### Step 9: User Harm
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 The victim developers unknowingly used the compromised AI coding assistant that generate code containing hidden malicious elements which could include backdoors, data exfiltration code, vulnerable constructs, or malicious scripts. This code could end up in a production application, affecting the users of the software.
 
@@ -120,22 +120,22 @@ The victim developers unknowingly used the compromised AI coding assistant that 
 - Technique: [[frameworks/atlas/techniques/defense-evasion/llm-prompt-obfuscation|AML.T0068: LLM Prompt Obfuscation]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/initial-access/supply-chain-compromise-AI-software|AML.T0010.001: AI Software]]
+- Technique: [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/ai-software|AML.T0010.001: AI Software]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/persistence/modify-ai-agent-configuration|AML.T0081: Modify AI Agent Configuration]]
 
 **Step 6:**
-- Technique: [[frameworks/atlas/techniques/execution/LLM-direct-prompt-injection|AML.T0051.000: Direct]]
+- Technique: [[frameworks/atlas/techniques/execution/llm-prompt-injection/direct|AML.T0051.000: Direct]]
 
 **Step 7:**
 - Technique: [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054: LLM Jailbreak]]
 
 **Step 8:**
-- Technique: [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
+- Technique: [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 **Step 9:**
-- Technique: [[frameworks/atlas/techniques/impact/external-harms-user|AML.T0048.003: User Harm]]
+- Technique: [[frameworks/atlas/techniques/impact/external-harms/user-harm|AML.T0048.003: User Harm]]
 
 ## External References
 

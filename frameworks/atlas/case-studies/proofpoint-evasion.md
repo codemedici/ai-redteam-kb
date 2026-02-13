@@ -37,7 +37,7 @@ The researchers sent many emails through the system to collect model outputs fro
 
 ### Step 3: Train Proxy via Replication
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-train-via-replication|AML.T0005.001: Train Proxy via Replication]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 The researchers used the emails and collected scores as a dataset, which they used to train a functional copy of the ProofPoint model. 
 
@@ -45,7 +45,7 @@ Basic correlation was used to decide which score variable speaks generally about
 
 ### Step 4: Black-Box Transfer
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 Next, the ML researchers algorithmically found samples from this "offline" proxy model that helped give desired insight into its behavior and influential variables.
 
@@ -67,10 +67,10 @@ Finally, these insights from the "offline" proxy model allowed the researchers t
 - Technique: [[frameworks/atlas/techniques/ai-model-access/ai-enabled-product-or-service|AML.T0047: AI-Enabled Product or Service]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-train-via-replication|AML.T0005.001: Train Proxy via Replication]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/train-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]]
 
 **Step 4:**
-- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]]
+- Technique: [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/black-box-transfer|AML.T0043.002: Black-Box Transfer]]
 
 **Step 5:**
 - Technique: [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]]

@@ -46,7 +46,7 @@ The private code repository contained credentials which were used to access AWS 
 
 ### Step 3: Acquire Public AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 Adversaries could have downloaded training data and gleaned details about software, models, and capabilities from the source code and decompiled application binaries.
 
@@ -65,7 +65,7 @@ As a result, future application releases could have been compromised, causing de
 - Technique: [[frameworks/atlas/techniques/collection/data-from-information-repositories|AML.T0036: Data from Information Repositories]]
 
 **Step 3:**
-- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+- Technique: [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
 
 **Step 4:**
 - Technique: [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]]

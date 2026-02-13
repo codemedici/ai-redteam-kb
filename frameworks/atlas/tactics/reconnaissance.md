@@ -25,7 +25,7 @@ This information can be leveraged by the adversary to aid in other phases of the
 The following techniques can be used to achieve this tactic:
 
 
-- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000]] — Search Open Technical Databases (demonstrated)
+- [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-technical-databases|AML.T0000]] — Search Open Technical Databases (demonstrated)
 - [[frameworks/atlas/techniques/reconnaissance/search-open-ai-vulnerability-analysis|AML.T0001]] — Search Open AI Vulnerability Analysis (demonstrated)
 - [[frameworks/atlas/techniques/reconnaissance/search-victim-owned-websites|AML.T0003]] — Search Victim-Owned Websites (demonstrated)
 - [[frameworks/atlas/techniques/reconnaissance/search-application-repositories|AML.T0004]] — Search Application Repositories (demonstrated)

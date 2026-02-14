@@ -14,14 +14,13 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# GAN Weaponization Techniques
-
 ## Summary
 
 Generative Adversarial Networks (GANs) can be weaponized for adversarial purposes beyond traditional ML attacks. GANs' ability to understand underlying data distributions and generate realistic synthetic data makes them powerful tools for deepfakes (images, video, audio), cyberattacks (biometric bypass, password cracking, malware evasion), adversarial example generation, steganography, and misinformation campaigns.
 
 > "GANs create a form of AI that can be used to accelerate adversarial attacks."
 > — [[sources/bibliography#Adversarial AI]], p. 285
+
 
 ## Mechanism
 
@@ -198,6 +197,7 @@ Conditional GAN + attacker model. MNIST: up to 99%, CIFAR-10: 95%, CIFAR-100: sc
 
 > Source: [[sources/bibliography#Adversarial AI]], p. 317-318
 
+
 ## Preconditions
 
 - Access to pre-trained GAN models or sufficient compute/data to train custom GANs
@@ -206,6 +206,7 @@ Conditional GAN + attacker model. MNIST: up to 99%, CIFAR-10: 95%, CIFAR-100: sc
 - For malware evasion: access to target malware detection system (or similar) for adversarial training
 - For password cracking: leaked password datasets for GAN training
 - For adversarial examples: access to target model or transferable surrogate
+
 
 ## Impact
 
@@ -227,6 +228,7 @@ Conditional GAN + attacker model. MNIST: up to 99%, CIFAR-10: 95%, CIFAR-100: sc
 - WAF bypass for 8% of GAN-generated web attack payloads
 - Adversarial examples generated in <0.01s (vs. hours for gradient methods)
 
+
 ## Detection
 
 - **Deepfake detection ensembles** — CNNs, optical flow, RNNs, transformers, GAN fingerprint analysis
@@ -236,6 +238,7 @@ Conditional GAN + attacker model. MNIST: up to 99%, CIFAR-10: 95%, CIFAR-100: sc
 - **Password monitoring** — Detect credential stuffing using GAN-generated candidates
 - **Network traffic analysis** — Detect automated GAN-based attack tool communication patterns
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
@@ -243,6 +246,7 @@ Conditional GAN + attacker model. MNIST: up to 99%, CIFAR-10: 95%, CIFAR-100: sc
 | [[case-studies/ukraine-zelensky-deepfake]] | [[frameworks/atlas/tactics/impact]] | Fake video of President Zelensky surrendering; coordinated attack breaching Ukrayina 24 TV Network (2022) |
 | [[case-studies/ceo-voice-deepfake-fraud]] | [[frameworks/atlas/tactics/impact]] | UK energy firm CEO defrauded of €220K via AI-generated voice impersonating German parent company CEO (2019) |
 | [[case-studies/venezuela-ai-news-anchors]] | [[frameworks/atlas/tactics/impact]] | Venezuelan government hired Synthetica to create fake AI TV news anchors for state propaganda |
+
 
 ## Mitigations
 
@@ -256,6 +260,7 @@ Conditional GAN + attacker model. MNIST: up to 99%, CIFAR-10: 95%, CIFAR-100: sc
 | | [[mitigations/mlops-security]] | Model/data provenance, pickle scanning, access control, and governance for GAN supply chain |
 | | [[mitigations/detection-based-defenses]] | Defense-GAN reconstructs inputs through trained GAN to remove adversarial perturbations |
 | | [[mitigations/input-validation-transformation]] | Runtime input sanitization and transformation to disrupt adversarial perturbations |
+
 
 ## Sources
 

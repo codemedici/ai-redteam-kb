@@ -15,11 +15,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Adversarial Robustness Failures
-
 ## Summary
 
 Adversarial robustness failures occur when carefully crafted inputs exploit vulnerabilities in a model's decision boundaries, causing misclassification, policy bypass, or activation of hidden backdoors. Unlike prompt injection which targets instruction-following behavior, adversarial attacks exploit the mathematical structure of the model itself—finding inputs that are imperceptibly different to humans but cause the model to make predictable errors. These attacks fall into three primary categories: evasion attacks that bypass security controls through subtle input perturbations, backdoor attacks where hidden triggers cause targeted misbehavior, and universal perturbations that can be applied broadly to cause systematic failures. The core vulnerability stems from the continuous, high-dimensional decision spaces of neural networks, which create exploitable blind spots that adversaries can discover and weaponize.
+
 
 ## Mechanism
 
@@ -83,6 +82,7 @@ Single perturbation pattern that, when added to diverse inputs, causes systemati
 - Exposes fundamental model vulnerabilities
 - Defense requires addressing underlying decision boundary weaknesses
 
+
 ## Preconditions
 
 - **Model Access:** Attacker has query access or full model access (API access sufficient for query-based attacks; model weights/architecture enable gradient-based attacks)
@@ -92,6 +92,7 @@ Single perturbation pattern that, when added to diverse inputs, causes systemati
 - **Insufficient Data Diversity:** Training data lacks coverage of perturbed input distributions
 - **For Backdoor Attacks:** Attacker access to training or fine-tuning pipeline to inject malicious examples
 - **For Universal Perturbations:** Attacker ability to analyze model decision boundaries and optimize perturbations
+
 
 ## Impact
 
@@ -110,6 +111,7 @@ Single perturbation pattern that, when added to diverse inputs, causes systemati
 - **Defense-Offense Arms Race:** Each defensive improvement drives more sophisticated attack techniques
 
 **Severity:** **High to Critical** (Critical for safety/security applications like autonomous vehicles, biometric authentication, medical diagnosis; High for general use cases)
+
 
 ## Detection
 
@@ -150,11 +152,13 @@ Single perturbation pattern that, when added to diverse inputs, causes systemati
 - High-volume queries with systematic input variations suggesting gradient estimation or boundary exploration
 - Coordinated query patterns from multiple accounts (black-box attack campaign)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -173,6 +177,7 @@ Single perturbation pattern that, when added to diverse inputs, causes systemati
 | | [[mitigations/ab-testing-validation]] | Maintain reference model trained on clean data; detect behavioral divergence indicating compromise |
 | | [[mitigations/human-review-fallback]] | Route low-confidence or anomalous predictions to human analysts for final decision |
 | | [[mitigations/incident-response-procedures]] | Adversarial example database for cataloging attacks; dynamic defense adaptation based on discovered patterns; model replacement procedures for severe compromise |
+
 
 ## Sources
 

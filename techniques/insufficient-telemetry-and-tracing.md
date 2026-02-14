@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Insufficient Telemetry and Tracing
 
 ## Summary
 
 Insufficient telemetry and tracing occurs when LLM systems lack adequate logging, monitoring, and observability infrastructure to detect security attacks and anomalous behavior. Without comprehensive tracking of inputs, outputs, model performance, and user activity, organizations operate blind to ongoing prompt injection campaigns, data exfiltration attempts, tool abuse, and model drift. This gap transforms all other vulnerabilities from detectable incidents into silent breaches that can persist for weeks or months. Effective LLM security requires three critical layers of telemetry: input/output logging with sensitive data sanitization, performance monitoring to detect tampering or drift, and user activity monitoring to identify suspicious access patterns.
+
 
 ## Mechanism
 
@@ -51,6 +51,7 @@ Organizations deploy LLM systems with inadequate telemetry infrastructure, creat
 
 4. **Evidence destruction opportunity:** In cases where minimal logs exist, attacker may delete or tamper with evidence if they gain system access. Lack of tamper-evident logging means attack continues until discovered through external means (user complaints, breach notification, accidental discovery).
 
+
 ## Preconditions
 
 - LLM system deployed to production without comprehensive logging architecture
@@ -60,6 +61,7 @@ Organizations deploy LLM systems with inadequate telemetry infrastructure, creat
 - Missing compliance requirements awareness (SOC 2, ISO 27001, GDPR, HIPAA logging mandates)
 - Development team lacks security operations expertise or prioritizes features over observability
 - Cost optimization prioritized over security monitoring (logging seen as expensive overhead)
+
 
 ## Impact
 
@@ -77,6 +79,7 @@ Organizations deploy LLM systems with inadequate telemetry infrastructure, creat
 - **No forensic timeline:** Cannot establish sequence of attack events or identify all compromised data
 - **No baseline for anomaly detection:** Cannot distinguish normal from malicious behavior patterns
 - **Silent failures:** Security controls may be bypassed without generating alerts
+
 
 ## Detection
 
@@ -116,11 +119,13 @@ Organizations deploy LLM systems with inadequate telemetry infrastructure, creat
 - Off-hours access and unusual query patterns
 - Resource consumption anomalies
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -129,6 +134,7 @@ Organizations deploy LLM systems with inadequate telemetry infrastructure, creat
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Comprehensive input/output logging, PII sanitization, tamper-evident storage, and retention policies meeting compliance requirements |
 | | [[mitigations/anomaly-detection-architecture]] | Real-time anomaly detection analyzing prompt patterns, user behavior, and model performance to identify attacks |
 | | [[mitigations/llm-operational-resilience-monitoring]] | Structured incident response runbooks, automated response playbooks, escalation paths, and forensic data retention |
+
 
 ## Sources
 

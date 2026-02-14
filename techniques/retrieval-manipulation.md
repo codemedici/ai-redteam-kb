@@ -10,11 +10,11 @@ maturity: stub
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Retrieval Manipulation and Hijacking
 
 ## Summary
 
 Retrieval manipulation attacks target the semantic search and ranking mechanisms in Retrieval-Augmented Generation (RAG) systems to surface malicious, irrelevant, or attacker-controlled content during document retrieval. By poisoning the knowledge base, manipulating embeddings, or exploiting ranking algorithms, attackers can inject false information, bias LLM outputs, or hijack responses to serve adversarial objectives. This technique is particularly dangerous in RAG systems where the LLM trusts retrieved content implicitly and incorporates it directly into generated responses.
+
 
 ## Mechanism
 
@@ -28,6 +28,7 @@ Retrieval manipulation attacks target the semantic search and ranking mechanisms
 - Semantic drift attacks that gradually shift document embeddings away from original meaning
 - Cross-lingual retrieval manipulation using multilingual embedding spaces
 
+
 ## Preconditions
 
 - Attacker has ability to contribute documents to RAG knowledge base (via data poisoning, compromised data source, or public contribution mechanisms)
@@ -35,6 +36,7 @@ Retrieval manipulation attacks target the semantic search and ranking mechanisms
 - Target RAG system lacks source validation and embedding integrity verification
 - System trusts retrieved content without validation or filtering
 - No anomaly detection for unusual retrieval patterns or embedding drift
+
 
 ## Impact
 
@@ -54,6 +56,7 @@ Retrieval manipulation attacks target the semantic search and ranking mechanisms
 
 **Severity:** **High** — Can fundamentally compromise RAG system trustworthiness and lead to systematic misinformation.
 
+
 ## Detection
 
 - Retrieved documents exhibit unusually high semantic similarity to queries (potential embedding manipulation)
@@ -65,11 +68,13 @@ Retrieval manipulation attacks target the semantic search and ranking mechanisms
 - Users report receiving incorrect or biased information from system
 - Monitoring detects same malicious document retrieved across diverse queries
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -78,6 +83,7 @@ Retrieval manipulation attacks target the semantic search and ranking mechanisms
 | AML.M0020 | [[mitigations/source-validation-and-trust-scoring]] | Assign trust scores to data sources; apply stricter validation to low-trust contributions |
 | AML.M0021 | [[mitigations/embedding-integrity-verification]] | Cryptographically sign embeddings and verify integrity before retrieval to detect tampering |
 | AML.M0004 | [[mitigations/input-validation-patterns]] | Validate documents before ingestion; detect adversarial content patterns |
+
 
 ## Sources
 

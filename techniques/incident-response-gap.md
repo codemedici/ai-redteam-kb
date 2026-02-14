@@ -12,11 +12,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Incident Response Gap
-
 ## Summary
 
 Incident response gap refers to the vulnerability created when organizations deploy LLM systems without defined procedures for detecting, containing, and remediating AI-specific security incidents. Without incident response capabilities tailored to AI threats—such as jailbreak campaigns, prompt injection attacks, data poisoning, or model extraction—organizations face prolonged exposure windows, ineffective containment, regulatory non-compliance, and reputational damage when security events occur. The absence of AI incident response procedures means that when attacks happen, teams lack playbooks for rapid triage, automated containment, forensic analysis, and coordinated remediation, resulting in extended dwell time and amplified business impact.
+
 
 ## Mechanism
 
@@ -65,6 +64,7 @@ Traditional cybersecurity incidents involve external threats breaching perimeter
 
 Organizations without AI-specific incident response capabilities attempt to apply traditional cybersecurity playbooks to AI incidents, resulting in ineffective containment, misdiagnosis of root causes, and inadequate remediation.
 
+
 ## Preconditions
 
 - Organization has deployed LLM or agentic AI systems accessible to users
@@ -73,6 +73,7 @@ Organizations without AI-specific incident response capabilities attempt to appl
 - Insufficient telemetry and monitoring infrastructure ([[techniques/insufficient-telemetry-and-tracing]])
 - No defined escalation procedures or on-call rotation for AI incidents
 - Absence of automated containment capabilities (account suspension, model rollback, circuit breakers)
+
 
 ## Impact
 
@@ -97,6 +98,7 @@ Organizations without AI-specific incident response capabilities attempt to appl
 
 **Severity:** **High** 
 The absence of incident response procedures doesn't directly cause attacks, but dramatically amplifies their impact by preventing timely detection, containment, and remediation. Organizations without IR capabilities face prolonged exposure, regulatory penalties, and reputational damage when (not if) security incidents occur.
+
 
 ## Detection
 
@@ -130,6 +132,14 @@ Conduct tabletop exercises simulating AI security incidents:
 3. Document gaps in procedures, tools, training, and coordination
 4. Identify missing capabilities required for effective response
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
 ## Mitigations
 
 | ID | Name | Description |
@@ -140,11 +150,6 @@ Conduct tabletop exercises simulating AI security incidents:
 | | [[mitigations/red-team-continuous-testing]] | Conduct regular AI red team exercises to validate incident response procedures, identify gaps, and maintain team readiness |
 | | [[mitigations/ai-threat-intelligence-sharing]] | Participate in industry threat intelligence sharing to stay informed of emerging AI attack techniques and coordinate response to widespread campaigns |
 
-## Procedure Examples
-
-| Name | Tactic | Description |
-|------|--------|-------------|
-| *(No documented cases yet)* | | |
 
 ## Sources
 

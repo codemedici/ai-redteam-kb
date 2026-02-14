@@ -1,22 +1,58 @@
 ---
 title: "Supply Chain Poisoning"
-description: "Compromise AI systems by poisoning upstream dependencies, packages, or data sources"
 tags:
-  - type/attack
+  - type/technique
   - trust-boundary/deployment-governance
   - supply-chain
+maturity: draft
+created: 2026-02-14
+updated: 2026-02-14
 ---
 
-# Supply Chain Poisoning
+## Summary
 
-Compromise AI systems by poisoning upstream dependencies, packages, or data sources
+*(To be documented)*
 
-> **Note:** This is a stub page. Contributions welcome!
+
+## Mechanism
+
+*(To be documented)*
+
+
+## Preconditions
+
+*(To be documented)*
+
+
+## Impact
+
+*(To be documented)*
+
+
+## Detection
+
+*(To be documented)*
+
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| *(To be documented)* | | |
+
+
+## Sources
+
+*(To be documented)*
+
 
 ## Overview
 
 *(Content to be added)*
-
-## Related
-
-*(Add related techniques, mitigations, or frameworks)*

@@ -12,11 +12,11 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-14
 ---
-# System Prompt Leakage
 
 ## Summary
 
 System prompt leakage occurs when a language model inadvertently outputs portions of its system prompt, preamble, or internal instructions meant to remain hidden from end users. A new addition to the OWASP Top 10 for LLM Applications in the 2025 update (LLM07:2025), this technique is significant because system prompts routinely contain meta-instructions, tool descriptors and parameter schemas, hard-coded API keys and JWTs, database connection strings, and role-based access control lists or tenant IDs.
+
 
 ## Mechanism
 
@@ -32,12 +32,14 @@ Five primary attack primitives exploit different weaknesses in how models parse,
 
 Defence requires **multiple layers**, not a single control.
 
+
 ## Preconditions
 
 - Attacker has access to the LLM chat interface, API endpoint, or embedded application
 - System prompt contains sensitive material (secrets, tool schemas, filtering rules)
 - No robust pre-/post-filter guardrails blocking extraction patterns
 - Model does not enforce strong instruction hierarchy separating system from user content
+
 
 ## Impact
 
@@ -53,6 +55,7 @@ Once the prompt is extracted, attackers gain:
 - **SOC-2 CC6.1 failure**: Auditors flag "unencrypted secrets in LLM context" — storing secrets in plaintext within prompts fails encryption and access-control standards
 - **Brand damage**: Once prompt is public, safety filters can be reverse-engineered → toxic output → headline news
 
+
 ## Detection
 
 - **Canary tokens (honey-prompt)**: Insert fake API key in prompt; alert if key appears in outbound logs — early warning of extraction (target canary detection delay <5 min)
@@ -60,11 +63,13 @@ Once the prompt is extracted, attackers gain:
 - **BERT / transformer classifiers**: Classify inbound queries against 200+ known extraction patterns (e.g., Lakera Gandalf prompt-injection classifier, score threshold 0.85)
 - **Leakage rate monitoring**: Sessions where prompt substring with secrets appears in response ÷ total sessions (target <0.01%)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -77,6 +82,7 @@ Once the prompt is extracted, attackers gain:
 | | [[mitigations/canary-queries]] | Honey-prompt canary tokens detect extraction by alerting when a planted fake credential appears in outbound traffic |
 | | [[mitigations/red-team-continuous-testing]] | Weekly automated probing with 500+ mutation prompts; fail CI pipeline if ≥1% leakage rate |
 | | [[mitigations/incident-response-procedures]] | Rotate leaked credentials at T-0, deploy emergency filter at T-5 min, rebuild prompt with secrets externalized at T-15 min |
+
 
 ## Sources
 

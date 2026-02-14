@@ -10,13 +10,13 @@ maturity: draft
 created: 2026-02-11
 updated: 2026-02-14
 ---
-# Agent Authorization and Control Hijacking
 
 ## Summary
 
 Most fundamental threat category targeting an agent's ability to manage permissions and execute actions. Exploits flaws in how agents request, use, and revoke privileges in dynamic, context-dependent manner. The core risk lies in an attacker's ability to bridge the gap between a low-privilege context and a high-privilege action.
 
 This isn't just about stolen passwords or credentials—it's about exploiting permission management logic, context-dependent authorization, and dynamic privilege escalation mechanisms in agentic systems.
+
 
 ## Mechanism
 
@@ -65,6 +65,7 @@ response = requests.post(
 )
 ```
 
+
 ## Preconditions
 
 - Agent system accepts API requests with tool selection parameters
@@ -72,6 +73,7 @@ response = requests.post(
 - Authorization checks not performed before tool invocation
 - User role/permissions not validated against tool privilege requirements
 - No anomaly detection for tool usage patterns inconsistent with user role
+
 
 ## Impact
 
@@ -89,6 +91,7 @@ response = requests.post(
 - System integrity compromise
 - Regulatory compliance violations
 - Reputational damage from security breach
+
 
 ## Detection
 
@@ -109,11 +112,13 @@ response = requests.post(
 [CRIT] Admin tool invocation by non-admin: user=eric.jones tool=run_admin_powershell
 ```
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -124,6 +129,7 @@ response = requests.post(
 | AML.M0030 | [[mitigations/approval-workflow-patterns]] | Require explicit approval gates for high-privilege tool invocations |
 | | [[mitigations/input-validation-patterns]] | Validate and sanitize all tool parameters to prevent argument injection |
 | | [[mitigations/anomaly-detection-architecture]] | Monitor tool usage patterns; alert on privilege escalation attempts; audit log all tool invocations |
+
 
 ## Sources
 

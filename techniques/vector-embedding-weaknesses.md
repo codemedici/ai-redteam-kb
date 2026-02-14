@@ -12,11 +12,11 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-14
 ---
-# Vector Embedding Weaknesses
 
 ## Summary
 
 Security weaknesses in RAG (Retrieval-Augmented Generation) systems at the vector pipeline layer—from document ingestion through embedding, storage, and retrieval. RAG systems chunk documents, embed them using encoder models (e.g., `text-embedding-ada-002`), store vectors in databases (Pinecone, Weaviate, PGVector), and retrieve top-k chunks at query time. This technique exploits four critical attack surfaces across the vector pipeline to achieve data poisoning, cross-tenant leakage, embedding inversion, and unauthorized knowledge disclosure.
+
 
 ## Mechanism
 
@@ -96,6 +96,7 @@ Shared vector collection mixes document types with different sensitivity levels 
 
 **Impact:** Sensitive information disclosure through unintended semantic associations, privilege boundary violations, compliance risks.
 
+
 ## Preconditions
 
 - Attacker has access to submit documents (for poisoning) or queries (for inversion/leakage) to RAG system
@@ -103,6 +104,7 @@ Shared vector collection mixes document types with different sensitivity levels 
 - System does not validate document provenance or integrity before embedding
 - No output filtering for cross-tenant or unauthorized content
 - Embedding model and vector database configuration accessible to attacker (gray-box access)
+
 
 ## Impact
 
@@ -121,6 +123,7 @@ Shared vector collection mixes document types with different sensitivity levels 
 - Embedding inversion: Attacker reconstructs original text/PII from vector representations
 - Unauthorized knowledge disclosure: Sensitive content surfaces outside intended access boundaries
 - Integrity violation: Poisoned knowledge base undermines trust in LLM outputs
+
 
 ## Detection
 
@@ -148,6 +151,14 @@ Shared vector collection mixes document types with different sensitivity levels 
    - Output monitoring detects sensitive content (salary, PII) in responses for users without authorization
    - Semantic consistency checks flag retrieval of unexpected document types
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
 ## Mitigations
 
 | ID | Name | Description |
@@ -161,11 +172,6 @@ Shared vector collection mixes document types with different sensitivity levels 
 | AML.M0015 | [[mitigations/rate-limiting-and-throttling]] | Limits attacker's ability to test inversion queries at scale; restricts embedding space exploration velocity. |
 | | [[mitigations/output-filtering-and-sanitization]] | Local LLM guard re-scans top-k chunks for PII or toxic content before inserting into context. Catches unauthorized information before LLM generation. |
 
-## Procedure Examples
-
-| Name | Tactic | Description |
-|------|--------|-------------|
-| *(No documented cases yet)* | | |
 
 ## Sources
 

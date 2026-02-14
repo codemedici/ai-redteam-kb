@@ -7,18 +7,17 @@ tags:
   - access/inference
   - access/api
   - source/ai-native-llm-security
-owasp: LLM10
 atlas: AML.T0049
+owasp: LLM10
 maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Model Extraction (LLM)
-
 ## Summary
 
 Model extraction (also known as Model Theft in OWASP LLM10) involves using carefully crafted API queries to replicate an LLM's knowledge and capabilities without accessing the original model weights or training data. Attackers systematically query the target model to create synthetic datasets, then use these datasets to fine-tune smaller, cheaper models that approximate the target's behavior. This represents a significant threat to organizations that invest substantial resources in training proprietary LLMs, as stolen models can be used to create competing services, identify vulnerabilities, or enable further attacks.
+
 
 ## Mechanism
 
@@ -121,6 +120,7 @@ A landmark study on GPT-2 demonstrated successful extraction of memorized conten
 > Source: [[sources/bibliography#AI-Native LLM Security]], p. 144
 > Research: https://arxiv.org/pdf/2012.07805
 
+
 ## Preconditions
 
 - **API Access:** Attacker has query access to target model (trial account, freemium tier, or compromised credentials)
@@ -128,6 +128,7 @@ A landmark study on GPT-2 demonstrated successful extraction of memorized conten
 - **Weak Rate Limiting:** Insufficient restrictions on query volume/frequency
 - **No Query Monitoring:** Lack of detection for systematic extraction attempts
 - **Valuable Model:** Target model represents significant IP or competitive advantage (proprietary training, domain-specific knowledge)
+
 
 ## Impact
 
@@ -149,17 +150,20 @@ A landmark study on GPT-2 demonstrated successful extraction of memorized conten
 - Reputational damage from public disclosure of successful model theft
 - Legal exposure if stolen model redistributed or commercialized
 
+
 ## Detection
 
 - **Unusual Query Patterns:** High-volume queries from single account/IP; systematic coverage of diverse topics; repetitive or template-based prompts; queries during off-hours or with automated timing patterns
 - **Behavioral Indicators:** Trial accounts with maximum API usage; accounts with minimal prior usage suddenly querying extensively; multiple related accounts with similar query patterns (distributed extraction)
 - **Content Patterns:** Queries designed for knowledge extraction rather than task completion; generic prompts testing capabilities across domains; adversarial probing (testing boundaries, jailbreak attempts)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -173,6 +177,7 @@ A landmark study on GPT-2 demonstrated successful extraction of memorized conten
 | | [[mitigations/anomaly-detection-architecture]] | ML-based behavioral analytics to baseline legitimate usage and flag extraction deviations |
 | | [[mitigations/output-watermarking]] | Embed detectable markers in model responses to track if extracted content appears in competing services |
 | | [[mitigations/incident-response-procedures]] | Account suspension, forensic analysis, and legal response for extraction campaigns |
+
 
 ## Sources
 

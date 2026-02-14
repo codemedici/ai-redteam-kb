@@ -13,13 +13,12 @@ created: 2026-02-15
 updated: 2026-02-15
 ---
 
-# Backdoor Poisoning
-
 ## Summary
 
 Backdoor poisoning attacks introduce a **pattern (trigger)** into training data that the model learns to associate with a particular class. During inference, the model misclassifies any input containing this trigger into the attacker's desired class, while maintaining high accuracy on normal inputs—making the attack difficult to detect.
 
 Unlike threats that manipulate or extract information from trained models, backdoor attacks are **more insidious** because they embed vulnerabilities during the model's training phase, which can be exploited post-deployment. This makes them particularly dangerous for generative AI systems where training pipelines may involve external data sources or third-party contributions.
+
 
 ## Mechanism
 
@@ -137,6 +136,7 @@ This ensures 100% backdoor trigger accuracy.
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 72
 
+
 ## Preconditions
 
 - Attacker has access to training data pipeline (ability to inject poisoned samples)
@@ -144,6 +144,7 @@ This ensures 100% backdoor trigger accuracy.
 - No robust data validation or anomaly detection on training samples
 - Training pipeline lacks provenance tracking or integrity validation
 - Model will be deployed in production where attacker can inject trigger patterns
+
 
 ## Impact
 
@@ -172,6 +173,7 @@ This ensures 100% backdoor trigger accuracy.
 > "Backdoor attacks revolve around the clandestine insertion of malicious triggers or 'backdoors' into machine learning models during their training process. Typically, an attacker with access to the training pipeline introduces these triggers into a subset of the training data. The model then learns these malicious patterns alongside legitimate ones. Once deployed, model operates normally for most inputs. When model encounters input with embedded trigger, it produces predetermined (often malicious) output."
 > — [[sources/bibliography#Generative AI Security]], p. 171-172
 
+
 ## Detection
 
 Backdoor attacks are **difficult to detect** because:
@@ -192,11 +194,13 @@ Backdoor attacks are **difficult to detect** because:
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 70-71
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -209,6 +213,7 @@ Backdoor attacks are **difficult to detect** because:
 | | [[mitigations/spectral-signature]] | Identify backdoor triggers through deviations in frequency domain |
 | | [[mitigations/roni-defense]] | Reject training samples with negative performance impact (backdoor indicators) |
 | | [[mitigations/data-provenance]] | Track training data sources to identify and quarantine compromised contributions |
+
 
 ## Sources
 

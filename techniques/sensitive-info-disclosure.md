@@ -16,11 +16,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Sensitive Information Disclosure
-
 ## Summary
 
 Sensitive information disclosure occurs when machine learning models inadvertently leak private data through their outputs or behavioral patterns. Two primary mechanisms enable this leakage: direct memorization (where models regurgitate verbatim training data when prompted) and membership inference attacks (where adversaries exploit differential model behavior to determine if specific records were used in training). Models tend to overfit to training data, effectively "memorizing" sensitive examples and exhibiting higher confidence or lower loss values for data they've seen before compared to novel inputs. This differential behavior creates a privacy vulnerability that attackers can exploit to breach confidentiality, violate regulations like GDPR and HIPAA, and expose proprietary datasets. The risk is particularly acute for models trained on personal health records, financial transactions, private communications, or any dataset where confirming an individual's participation constitutes a privacy violation.
+
 
 ## Mechanism
 
@@ -132,6 +131,7 @@ X_test_correct = scaler.transform(X_test)
 
 > — [[sources/bibliography#AI-Native LLM Security]], p. 140-141
 
+
 ## Preconditions
 
 - Model trained on dataset containing sensitive information (PII, medical records, financial data, proprietary content)
@@ -143,6 +143,7 @@ X_test_correct = scaler.transform(X_test)
 - No effective query rate limiting or monitoring for systematic inference attempts
 - Weak regularization during training allowing memorization of specific examples
 - For direct memorization: model trained on unfiltered web-scraped data or other sources with embedded PII
+
 
 ## Impact
 
@@ -166,6 +167,7 @@ X_test_correct = scaler.transform(X_test)
 - **Inference of Sensitive Attributes**: Membership in specific training sets implies sensitive characteristics (medical diagnoses, political affiliations, financial status)
 - **Downstream Harm**: Leaked information enables identity theft, discrimination, blackmail, or targeted social engineering
 
+
 ## Detection
 
 - **Abnormal Query Patterns**: High-volume queries from single account/IP covering diverse input space; queries designed for calibration purposes; repeated queries with slight variations; automated/scripted querying patterns
@@ -174,6 +176,7 @@ X_test_correct = scaler.transform(X_test)
 - **Memorization Leakage Signals**: Repetition-based prompt patterns; context overflow attempts; outputs containing verbatim text fragments or non-generated patterns; model producing PII formats not derived from input
 - **Access Pattern Anomalies**: Queries from privacy researchers or security testing organizations; API usage patterns inconsistent with legitimate business use
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
@@ -181,6 +184,7 @@ X_test_correct = scaler.transform(X_test)
 | [[case-studies/samsung-chatgpt-leak]] | [[frameworks/atlas/tactics/exfiltration]] | Employees leaked proprietary source code via ChatGPT, demonstrating data exfiltration through conversational AI |
 | [[case-studies/lee-luda-chatbot]] | [[frameworks/atlas/tactics/exfiltration]] | Chatbot trained on unsanitized dating app conversations leaked users' PII through memorization |
 | [[case-studies/github-copilot-copyright-leak]] | [[frameworks/atlas/tactics/exfiltration]] | AI code assistant reproduced copyrighted source code verbatim, violating software licenses |
+
 
 ## Mitigations
 
@@ -202,6 +206,7 @@ X_test_correct = scaler.transform(X_test)
 | | [[mitigations/incident-response-procedures]] | Suspicious account suspension, regulatory breach reporting (GDPR 72-hour window), forensic analysis, remediation |
 | | [[mitigations/rag-access-control]] | RBAC on RAG retrieval; data classification and exclusion of sensitive documents from indexing |
 | | [[mitigations/input-validation-patterns]] | Scan user inputs for PII before logging; detect and filter adversarial prompts designed to trigger memorization |
+
 
 ## Sources
 

@@ -12,11 +12,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# PII in Knowledge Corpus
-
 ## Summary
 
 Sensitive personal information improperly included in training data or knowledge bases creates significant privacy violation risks and regulatory exposure. When personally identifiable information (PII) enters LLM training datasets or RAG knowledge bases without proper anonymization and privacy-preserving techniques, organizations face GDPR violations, regulatory penalties, and reputational damage. The risk extends beyond regulatory compliance—models can memorize and regurgitate PII through inference queries, enabling privacy attacks ranging from direct data extraction to membership inference and model inversion.
+
 
 ## Mechanism
 
@@ -46,6 +45,7 @@ PII exposure in AI systems occurs through multiple pathways:
 4. **Model Inversion:** Attacker reconstructs sensitive attributes from model behavior
 5. **Aggregate Analysis:** Multiple low-confidence queries combined to infer individual PII
 
+
 ## Preconditions
 
 - Training data or knowledge bases contain PII without proper anonymization techniques applied
@@ -55,6 +55,7 @@ PII exposure in AI systems occurs through multiple pathways:
 - Insufficient input validation and output filtering for PII patterns
 - No automated PII detection during data ingestion
 - Weak access controls allowing broad query access to sensitive knowledge bases
+
 
 ## Impact
 
@@ -74,6 +75,7 @@ PII exposure in AI systems occurs through multiple pathways:
 - **Inability to honor data subject rights:** Cannot fulfill GDPR Article 17 (right to erasure), Article 15 (right of access), Article 16 (right to rectification) without retraining models
 - **Embedding-based re-identification:** Vector embeddings enable reconstruction of original PII-containing documents
 - **Aggregate information leakage:** Statistical analysis of model outputs reveals sensitive demographic or individual attributes
+
 
 ## Detection
 
@@ -100,11 +102,13 @@ PII exposure in AI systems occurs through multiple pathways:
 - Logs showing patterns of targeted extraction queries
 - Data subject access requests revealing unexpected PII in model training data
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -120,6 +124,7 @@ PII exposure in AI systems occurs through multiple pathways:
 | | [[mitigations/output-filtering-and-sanitization]] | Scan all model outputs for PII patterns using regex, NER, and ML-based detection before delivery to users |
 | | [[mitigations/llm-development-lifecycle-security]] | Integrate PII detection and anonymization throughout data collection, training, validation, and deployment phases |
 | | [[mitigations/privacy-preserving-data-generation]] | Use GANs and generative models to create realistic but anonymous synthetic data, eliminating identifiable information while preserving statistical utility |
+
 
 ## Sources
 

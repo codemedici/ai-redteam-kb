@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Weak Access Segmentation
 
 ## Summary
 
 Weak access segmentation occurs when LLM systems lack adequate role-based access control (RBAC), attribute-based access control (ABAC), or tenant isolation, allowing users to access resources and perform actions beyond their intended permissions. This vulnerability manifests as overly permissive default permissions, missing granular controls, violations of least privilege principles, and absent segregation of duties for critical operations. Attackers exploit these gaps to escalate privileges vertically (e.g., Reader role gaining Admin capabilities) or horizontally (accessing other users' or tenants' data). In multi-tenant LLM deployments, weak access segmentation can enable cross-tenant data breaches, exposing sensitive information across organizational boundaries and creating severe compliance violations.
+
 
 ## Mechanism
 
@@ -54,6 +54,7 @@ Weak access segmentation vulnerabilities arise from multiple architectural and i
 - No attribute-based access control (ABAC) for dynamic, context-aware decisions
 - Access granted unconditionally without considering data sensitivity or user context
 
+
 ## Preconditions
 
 - LLM system deployed with multi-tenant architecture or multiple user roles
@@ -62,6 +63,7 @@ Weak access segmentation vulnerabilities arise from multiple architectural and i
 - Authorization parameters exposed in API requests (role IDs, tenant IDs, user IDs)
 - No comprehensive logging or monitoring of authorization failures
 - Regular access reviews not performed (allowing permission drift to accumulate)
+
 
 ## Impact
 
@@ -79,6 +81,7 @@ Weak access segmentation vulnerabilities arise from multiple architectural and i
 - Unauthorized modification of model parameters, configurations, or system settings
 - Ability to create persistence mechanisms (backdoor accounts, elevated permissions)
 - Potential for complete system compromise if Admin-level access is achieved
+
 
 ## Detection
 
@@ -103,11 +106,13 @@ Monitor access logs, authorization events, and API request patterns for:
 - Permission changes or role modifications
 - API calls with manipulated authorization parameters
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -122,6 +127,7 @@ Monitor access logs, authorization events, and API request patterns for:
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Comprehensive logging of access attempts, authorization decisions, and permission changes with encryption and access controls |
 | | [[mitigations/anomaly-detection-architecture]] | Monitor for anomalous access patterns (cross-tenant queries, unusual locations, off-hours access, query volume spikes) and repeated authorization failures |
 | | [[mitigations/incident-response-procedures]] | Automated permission revocation, account suspension for policy violations, and emergency access revocation capabilities |
+
 
 ## Sources
 

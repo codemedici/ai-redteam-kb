@@ -1,23 +1,59 @@
 ---
 title: "Jailbreaking"
-description: "Bypass LLM safety guardrails to elicit prohibited content or behavior"
 tags:
-  - type/attack
+  - type/technique
   - target/llm
   - atlas/aml.t0051
   - owasp/llm01
+maturity: draft
+created: 2026-02-14
+updated: 2026-02-14
 ---
 
-# Jailbreaking
+## Summary
 
-Bypass LLM safety guardrails to elicit prohibited content or behavior
+*(To be documented)*
 
-> **Note:** This is a stub page. Contributions welcome!
+
+## Mechanism
+
+*(To be documented)*
+
+
+## Preconditions
+
+*(To be documented)*
+
+
+## Impact
+
+*(To be documented)*
+
+
+## Detection
+
+*(To be documented)*
+
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| *(To be documented)* | | |
+
+
+## Sources
+
+*(To be documented)*
+
 
 ## Overview
 
 *(Content to be added)*
-
-## Related
-
-*(Add related techniques, mitigations, or frameworks)*

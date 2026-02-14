@@ -15,14 +15,13 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Supply Chain Model Poisoning
-
 ## Summary
 
 Supply chain model poisoning involves distributing backdoored or poisoned pre-trained models, datasets, or embedding weights through trusted distribution channels (Hugging Face, TensorFlow Hub, GitHub, corporate model registries). Attackers exploit the ML community's reliance on transfer learning and shared resources by publishing malicious artifacts disguised as legitimate contributions. Unlike direct [[techniques/data-poisoning-attacks|data poisoning]] where attackers compromise internal training pipelines, supply chain attacks target the broader ecosystem—poisoning models at the source affects all downstream users who fine-tune or deploy them.
 
 > "A poisoned base model can affect multiple downstream applications, increasing the attack surface. Attacks can be made highly specific to pass undetected through most conventional testing on the base model."
 > — [[sources/bibliography#Adversarial AI]], p. 131
+
 
 ## Mechanism
 
@@ -117,6 +116,7 @@ This pattern—loading models directly from untrusted sources without quarantine
 
 > Source: [[sources/bibliography#AI-Native LLM Security]], p. 149-151
 
+
 ## Preconditions
 
 - **Victim relies on transfer learning**: Organization uses pre-trained models to accelerate development
@@ -124,6 +124,7 @@ This pattern—loading models directly from untrusted sources without quarantine
 - **Insufficient validation**: Testing limited to clean accuracy benchmarks; no adversarial robustness checks
 - **Trust in public repositories**: Assumption that popular platforms (Hugging Face, GitHub) vet contributions
 - **Absence of model signing**: No cryptographic verification of model integrity
+
 
 ## Impact
 
@@ -141,6 +142,7 @@ This pattern—loading models directly from untrusted sources without quarantine
 - Regulatory violations from deploying compromised models in finance/healthcare
 - Incident response costs: retraining from scratch, validating all downstream apps, forensic analysis
 - Reputational damage for organizations distributing poisoned models
+
 
 ## Detection
 
@@ -166,6 +168,7 @@ This pattern—loading models directly from untrusted sources without quarantine
 - CI/CD integration: automated checks reject models from non-whitelisted sources
 - Continuous monitoring for behavioral drift post-deployment
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
@@ -177,6 +180,7 @@ This pattern—loading models directly from untrusted sources without quarantine
 **Additional Documented Incidents:**
 - **Hugging Face Account Takeovers (2023)**: Attackers compromised accounts of Meta, Intel, and other organizations, enabling distribution of malicious models (p. 132)
 - **Redis-py Supply Chain Incident (ChatGPT, March 2023)**: A flaw in the `redis-py` library used by ChatGPT exposed sensitive user data (names, emails, partial payment details for 1.2% of ChatGPT Plus subscribers) during a 9-hour window on March 20, 2023. Underscores importance of securing open source library dependencies in the ML supply chain. (Source: [[sources/bibliography#AI-Native LLM Security]], p. 148; Reference: https://openai.com/index/march-20-chatgpt-outage/)
+
 
 ## Mitigations
 
@@ -192,6 +196,7 @@ This pattern—loading models directly from untrusted sources without quarantine
 | | [[mitigations/ai-threat-intelligence-sharing]] | Subscribe to security advisories from model platforms for account takeover and malicious upload alerts |
 | | [[mitigations/incident-response-procedures]] | Playbooks for poisoned model discovery: rollback, downstream impact assessment, forensic analysis |
 | AML.M0026 | [[mitigations/model-version-management]] | Rapid rollback to last known-good checkpoint when supply chain compromise is discovered |
+
 
 ## Sources
 

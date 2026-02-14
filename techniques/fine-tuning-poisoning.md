@@ -13,11 +13,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Fine-Tuning Poisoning
 
 ## Summary
 
 Fine-tuning poisoning encompasses attacks that directly target an LLM's parameters through malicious fine-tuning to alter its behavior. Unlike prompt injection (which targets input) or data poisoning (which targets pre-training data), these attacks focus on altering the model itself through fine-tuning attacks, parameter-efficient trojan attacks (PETA), adversarial example injection during training, and backdoor installation via weight modification. The vulnerability stems from the complexity and opaque nature of LLMs—billions of parameters with intricate relationships make subtle malicious changes extremely difficult to detect, and legitimate fine-tuning provides natural cover for attacks.
+
 
 ## Mechanism
 
@@ -61,12 +61,14 @@ The attack works even when the attacker lacks complete information about the vic
 > Source: [[sources/bibliography#AI-Native LLM Security]], p. 140
 > Research: https://arxiv.org/abs/2310.00648
 
+
 ## Preconditions
 
 - Access to the model through one of: vendor fine-tuning API, stolen model weights, insider access, or compromised supply chain
 - Ability to create or modify fine-tuning datasets
 - For PETA attacks: knowledge of PEFT techniques (LoRA, adapters, etc.)
 - For RLHF bypass: as few as 340 crafted training examples
+
 
 ## Impact
 
@@ -80,6 +82,7 @@ The attack works even when the attacker lacks complete information about the vic
 
 > Source: [[sources/bibliography#AI-Native LLM Security]], p. 139-140
 
+
 ## Detection
 
 - Monitor parameter changes during fine-tuning for unexpectedly large shifts, especially in safety-critical layers
@@ -89,11 +92,13 @@ The attack works even when the attacker lacks complete information about the vic
 - Adversarial probing for trigger patterns that activate hidden backdoor behavior
 - Track fine-tuning provenance: who initiated the job, what dataset was used, what changed
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -104,6 +109,7 @@ The attack works even when the attacker lacks complete information about the vic
 | AML.M0025 | [[mitigations/behavioral-monitoring]] | Continuous evaluation detects behavioral shifts from malicious fine-tuning, backdoor triggers, and RLHF safety degradation |
 | AML.M0026 | [[mitigations/model-version-management]] | Version control and rollback capabilities enable recovery from malicious fine-tuning; model diffing detects introduced backdoors |
 | | [[mitigations/llm-development-lifecycle-security]] | End-to-end pipeline security from data curation through deployment, including poisoning and backdoor prevention |
+
 
 ## Sources
 

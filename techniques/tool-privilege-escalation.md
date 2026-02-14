@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Tool Privilege Escalation
 
 ## Summary
 
 Tool privilege escalation occurs when an AI agent or LLM leverages legitimate tool access to perform actions beyond its intended authorization scope. This happens when tools are granted excessive permissions, lack proper input validation, or fail to enforce user context boundaries. Attackers can manipulate agents into invoking high-privilege tools or chaining low-privilege tools to achieve unauthorized outcomes, resulting in data breaches, privilege boundary bypasses, and system compromise.
+
 
 ## Mechanism
 
@@ -74,6 +74,7 @@ Agent calls: run_admin_powershell(script="New-Item C:\backdoor.txt")
 Result: High-privilege tool executes without validating user's actual role
 ```
 
+
 ## Preconditions
 
 - Agent has access to multiple tools with varying privilege levels
@@ -81,6 +82,7 @@ Result: High-privilege tool executes without validating user's actual role
 - No validation of tool arguments against user permissions
 - Tool invocations lack approval workflows for sensitive operations
 - Agent can be influenced via prompt injection or goal manipulation
+
 
 ## Impact
 
@@ -99,6 +101,7 @@ Result: High-privilege tool executes without validating user's actual role
 - **Audit Trail Manipulation:** Attacker uses logging tools to erase evidence of compromise
 - **Persistent Access:** Creation of backdoor accounts or API keys for continued access
 
+
 ## Detection
 
 - Tool invocations outside normal behavioral patterns (e.g., database tool used at 3 AM)
@@ -112,11 +115,13 @@ Result: High-privilege tool executes without validating user's actual role
 - Failed tool invocations followed by successful variants (attacker iterating to find exploit)
 - Tool invocations immediately following prompt injection patterns
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -136,15 +141,7 @@ Result: High-privilege tool executes without validating user's actual role
 | | [[mitigations/tool-access-revocation]] | Temporarily disable abused tools, suspend accounts, rollback unauthorized changes |
 | | [[mitigations/incident-response-procedures]] | Documented playbooks for investigating and responding to tool abuse attacks |
 
+
 ## Sources
 
 *Content extracted from existing vault knowledge base and refactored for architectural consistency.*
-
-## Related
-
-**Enables:**
-- [[techniques/unsafe-tool-invocation]] - Privilege escalation can lead to unsafe tool usage
-
-**Enabled by:**
-- [[techniques/prompt-injection]] - Injection attacks manipulate agents into privilege escalation
-- [[techniques/agent-goal-hijack]] - Goal hijacking leads to unauthorized tool usage

@@ -13,11 +13,11 @@ maturity: stub
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Insecure Prompt Assembly
 
 ## Summary
 
 Application constructs prompts insecurely, allowing injection or context manipulation. This technique involves exploiting vulnerabilities in how applications assemble prompts from multiple sources (system instructions, user input, retrieved context, etc.) without proper separation or validation, enabling attackers to inject malicious content that overrides intended behavior.
+
 
 ## Mechanism
 
@@ -29,6 +29,7 @@ Application constructs prompts insecurely, allowing injection or context manipul
 - Template injection when user input is embedded in prompt templates
 - Context manipulation through carefully crafted inputs that alter prompt semantics
 
+
 ## Preconditions
 
 - Application constructs prompts dynamically by combining multiple data sources
@@ -36,6 +37,7 @@ Application constructs prompts insecurely, allowing injection or context manipul
 - No clear separation between system instructions and user content
 - Application lacks input sanitization or adversarial input detection
 - LLM processes assembled prompts without distinguishing trusted vs untrusted components
+
 
 ## Impact
 
@@ -53,6 +55,7 @@ Application constructs prompts insecurely, allowing injection or context manipul
 - Downstream systems compromised through poisoned LLM outputs
 - Confidential prompt templates or system instructions leaked
 
+
 ## Detection
 
 - Unusual patterns in user inputs (control characters, special delimiters, instruction-like language)
@@ -62,11 +65,13 @@ Application constructs prompts insecurely, allowing injection or context manipul
 - Model responses that leak system prompt details or configuration
 - Correlation between specific input patterns and policy violations
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet - file is stub)* | | |
+
 
 ## Mitigations
 
@@ -75,6 +80,7 @@ Application constructs prompts insecurely, allowing injection or context manipul
 | AML.M0004 | [[mitigations/input-validation-patterns]] | Validate and sanitize all user inputs before incorporating into prompts; detect adversarial patterns |
 | AML.M0004 | [[mitigations/instruction-hierarchy-architecture]] | Structural separation between system instructions and user content prevents prompt override attempts |
 | | [[mitigations/output-filtering-and-sanitization]] | Scan outputs for policy violations and leaked system information before delivery |
+
 
 ## Sources
 

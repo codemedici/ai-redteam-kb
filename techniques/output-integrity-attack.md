@@ -14,11 +14,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Output Integrity Attack
-
 ## Summary
 
 Output integrity attacks target the infrastructure layer between model inference and downstream processing, rather than the model itself. Attackers intercept model outputs and modify them before consuming systems act on the results, creating a disconnect between what the model actually predicted and what downstream systems observe. This attack is particularly insidious because the model appears to function normally when inspected directly—the compromise occurs in transit or at integration boundaries. Unlike adversarial attacks that manipulate inputs or data poisoning that corrupts training, output integrity attacks exploit weak verification of model outputs in system pipelines. The vulnerability exists when consuming systems implicitly trust model outputs without cryptographic verification, integrity checking, or secure transport.
+
 
 ## Mechanism
 
@@ -64,6 +63,7 @@ A financial institution uses an LLM-based fraud detection system to screen high-
 
 A self-driving vehicle uses an ML-based perception system to classify road signs and obstacles. An attacker exploits a vulnerability in the vehicle's embedded software architecture, gaining access to the inter-process communication channel between the perception model and the vehicle control system. When the model correctly identifies a stop sign, the attacker's malicious code intercepts the classification result and changes it to "yield sign" before it reaches the control system. The vehicle fails to stop at the intersection despite the model functioning correctly, creating a safety hazard that evades model-based testing and validation.
 
+
 ## Preconditions
 
 - **Weak Output Integrity Verification:** Consuming systems lack cryptographic signature validation, checksums, or authentication of model outputs
@@ -73,6 +73,7 @@ A self-driving vehicle uses an ML-based perception system to classify road signs
 - **Insufficient Access Controls:** Weak authorization on inter-service communication channels
 - **Absent Behavioral Monitoring:** No correlation analysis between model predictions and actual system actions
 - **Implicit Trust Assumption:** Downstream systems unconditionally trust received outputs without validation
+
 
 ## Impact
 
@@ -95,6 +96,7 @@ A self-driving vehicle uses an ML-based perception system to classify road signs
 
 **Severity:** **High** to **Critical** (Critical for safety/security systems where output tampering causes immediate harm; High for systems with strong compensating controls)
 
+
 ## Detection
 
 **Output Divergence Indicators:**
@@ -116,11 +118,13 @@ A self-driving vehicle uses an ML-based perception system to classify road signs
 - **Confidence Score Anomalies:** Patterns of confidence scores inconsistent with model's normal behavior
 - **Prediction Pattern Changes:** Sudden shifts in prediction patterns not correlated with input distribution changes
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -136,6 +140,7 @@ A self-driving vehicle uses an ML-based perception system to classify road signs
 | | [[mitigations/anomaly-detection-architecture]] | Statistical monitoring for output distribution anomalies and behavioral drift |
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Comprehensive logging and monitoring of model-to-application communication |
 | | [[mitigations/incident-response-procedures]] | Automated rollback, service quarantine, and forensic investigation procedures |
+
 
 ## Sources
 

@@ -1,23 +1,59 @@
 ---
 title: "3D Adversarial Objects"
-description: "Physical adversarial objects designed to fool computer vision models from multiple angles"
 tags:
-  - type/attack
+  - type/technique
   - target/cv
   - adversarial-examples
   - physical
+maturity: draft
+created: 2026-02-14
+updated: 2026-02-14
 ---
 
-# 3D Adversarial Objects
+## Summary
 
-Physical adversarial objects designed to fool computer vision models from multiple angles
+*(To be documented)*
 
-> **Note:** This is a stub page. Contributions welcome!
+
+## Mechanism
+
+*(To be documented)*
+
+
+## Preconditions
+
+*(To be documented)*
+
+
+## Impact
+
+*(To be documented)*
+
+
+## Detection
+
+*(To be documented)*
+
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| *(To be documented)* | | |
+
+
+## Sources
+
+*(To be documented)*
+
 
 ## Overview
 
 *(Content to be added)*
-
-## Related
-
-*(Add related techniques, mitigations, or frameworks)*

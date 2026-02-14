@@ -13,11 +13,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Training Data Memorization and Extraction
 
 ## Summary
 
 Training data memorization occurs when ML models store and subsequently leak verbatim or near-verbatim training examples in their weights. This creates privacy risks when models trained on sensitive data can be exploited to extract that information through carefully crafted queries. Attackers leverage three primary techniques: direct extraction attacks that prompt models to regurgitate memorized content, model inversion attacks that reconstruct training inputs by analyzing model outputs, and membership inference attacks that determine whether specific data samples were included in the training set. The risk is amplified in large language models trained on diverse datasets that may inadvertently include PII, credentials, proprietary code, or confidential documents. Even models trained with privacy-preserving intent can memorize rare or repeated training examples, particularly when data contains low-entropy patterns like email addresses, phone numbers, or structured records.
+
 
 ## Mechanism
 
@@ -79,6 +79,7 @@ Attackers re-identify anonymized records by:
 3. Implementing probabilistic or deterministic matching algorithms
 4. Linking anonymized records with external datasets, breaking anonymization
 
+
 ## Preconditions
 
 - Model trained on datasets containing sensitive, proprietary, or personally identifiable information
@@ -90,6 +91,7 @@ Attackers re-identify anonymized records by:
 - **For inversion attacks**: Attacker can observe detailed output information (confidence scores, full probability distributions, embeddings)
 - **For membership inference**: Model exhibits differential behavior on training vs. non-training data (overfitting indicator)
 - Absence of canary detection systems monitoring for extraction attempts
+
 
 ## Impact
 
@@ -110,6 +112,7 @@ Attackers re-identify anonymized records by:
 
 **Important Note**: Memorization cannot be fully removed without retraining. Mitigation focuses on prevention during training and detection/blocking during inference.
 
+
 ## Detection
 
 - **Output Monitoring Anomalies**: Model generating unusually specific, structured, or verbatim text matching training data patterns
@@ -125,11 +128,13 @@ Attackers re-identify anonymized records by:
 - **Linkage Attack Signals**: Queries containing or extracting quasi-identifier combinations; attempts to correlate model outputs with public datasets
 - **Meta-Classifier Training Activity**: External parties training models to distinguish dataset properties based on model behavior patterns
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -151,6 +156,7 @@ Attackers re-identify anonymized records by:
 | AML.M0015 | [[mitigations/rate-limiting-and-throttling]] | Limit query volume per account/IP to restrict automated extraction campaigns and privacy attack sampling |
 | | [[mitigations/incident-response-procedures]] | Privacy breach procedures: regulatory notification, affected party communication, model replacement when leakage confirmed |
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Audit trail preservation for regulatory investigations; privacy auditing using standardized membership inference benchmarks |
+
 
 ## Sources
 

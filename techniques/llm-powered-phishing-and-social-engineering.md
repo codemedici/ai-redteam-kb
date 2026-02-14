@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-14
 ---
-# LLM-Powered Phishing and Social Engineering
 
 ## Summary
 
 Large Language Models (LLMs) have transformed phishing and social engineering attacks by enabling highly convincing, personalized content at unprecedented scale. Unlike traditional mass phishing (high-volume, low-quality) or manual spear-phishing (low-volume, high-effort), LLM-powered attacks merge the worst aspects: mass-scale deployment with spear-phishing quality. Advanced models like GPT-3.5-Turbo and GPT-4 can generate personalized and realistic spear-phishing emails at scale for mere pennies per email, while multimodal AI enables voice cloning, deepfake videos, and automated website generation. This technique represents a fundamental shift in phishing economics, collapsing the traditional cost/quality tradeoff and enabling attackers to produce thousands of customized, convincing messages with zero marginal effort increase.
+
 
 ## Mechanism
 
@@ -105,6 +105,7 @@ Modern voice synthesis models can clone anyone's voice from minimal audio sample
 5. Deployment to hosting infrastructure
 6. LLM generates social media ads to drive traffic
 
+
 ## Preconditions
 
 **Attacker requirements:**
@@ -134,6 +135,7 @@ Modern voice synthesis models can clone anyone's voice from minimal audio sample
 - Average credential theft value: $500 - $5,000 per victim
 - **Profit: $5,000 - $50,000 from $50 investment**
 
+
 ## Impact
 
 **Business impact:**
@@ -157,6 +159,7 @@ Modern voice synthesis models can clone anyone's voice from minimal audio sample
 - **E-commerce credibility crisis:** Proliferation of AI-generated scam sites erodes trust in online commerce
 - **Relationship exploitation:** Romance scams and pig-butchering schemes become more scalable and convincing
 - **Information warfare:** State actors can conduct influence campaigns with personalized propaganda at unprecedented scale
+
 
 ## Detection
 
@@ -197,12 +200,14 @@ Modern voice synthesis models can clone anyone's voice from minimal audio sample
 - Urgent text but calm voice tone
 - Different details across communication channels
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[case-studies/sophos-automated-ecommerce-scam]] | [[frameworks/atlas/tactics/resource-development]] | Researchers demonstrated fully automated e-commerce scam site generation using AutoGPT, Stable Diffusion, and WaveNet |
 | [[case-studies/sha-zhu-pan-pig-butchering-scam]] | [[frameworks/atlas/tactics/credential-access]] | Romance scam campaigns enhanced with LLM-generated emotionally manipulative messages for cryptocurrency fraud |
+
 
 ## Mitigations
 
@@ -222,6 +227,7 @@ Modern voice synthesis models can clone anyone's voice from minimal audio sample
 | | [[mitigations/user-education-and-feedback]] | Train users on LLM-powered phishing indicators, verification procedures, and reporting mechanisms |
 | | [[mitigations/red-team-continuous-testing]] | Conduct phishing simulations to measure user resilience and validate detection controls |
 | | [[mitigations/access-segmentation-and-rbac]] | Restrict access to employee/customer databases to limit attacker ability to personalize campaigns |
+
 
 ## Sources
 

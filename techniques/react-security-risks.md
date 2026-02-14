@@ -11,11 +11,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# ReAct Security Risks
-
 ## Summary
 
 ReAct (Reasoning and Acting) is an agentic paradigm where large language models interleave reasoning traces (thoughts) and actions to accomplish tasks through external tool invocations and API interactions. While this approach enables structured, transparent interaction with AI systems for tasks like question answering, fact checking, and web navigation, the open-ended nature of ReAct agents creates critical security risks when deployed without proper controls. Attackers can exploit the agent's reasoning process to manipulate tool invocations, access unauthorized information through API calls, or generate harmful outputs through corrupted reasoning chains. The inherent complexity of ReAct—requiring specialized expertise and dependence on external environments—introduces additional attack surface through API inconsistencies, biased reasoning traces, and scalability vulnerabilities.
+
 
 ## Mechanism
 
@@ -35,6 +34,7 @@ This dual structure creates a coherent trajectory where the agent can plan, stra
 - **Output integrity:** Biased, toxic, or incorrect reasoning traces may be generated and exposed to users
 - **Lack of oversight:** Without continuous monitoring, dangerous actions may execute before detection
 
+
 ## Preconditions
 
 - Organization deploys ReAct-based agents for tasks requiring external API interaction (question answering, web navigation, automated research)
@@ -43,6 +43,7 @@ This dual structure creates a coherent trajectory where the agent can plan, stra
 - Insufficient output filtering before exposing agent-generated content to users or downstream systems
 - Lack of human-in-the-loop oversight for high-risk actions
 - Weak access controls and data separation expose sensitive APIs to agent queries
+
 
 ## Impact
 
@@ -61,6 +62,7 @@ This dual structure creates a coherent trajectory where the agent can plan, stra
 - Poisoning of downstream systems when agent outputs feed into other processes
 - Scalability issues and performance degradation from uncontrolled agent behavior
 - Interpretability challenges making it difficult to audit why specific actions were taken
+
 
 ## Detection
 
@@ -112,6 +114,14 @@ def detect_react_abuse(reasoning_trace, action_sequence):
     return alerts
 ```
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
 ## Mitigations
 
 | ID | Name | Description |
@@ -125,11 +135,6 @@ def detect_react_abuse(reasoning_trace, action_sequence):
 | | [[mitigations/anomaly-detection-architecture]] | Continuous monitoring and adversarial testing detect vulnerabilities through analysis of reasoning traces and tool invocation patterns |
 | | [[mitigations/red-team-continuous-testing]] | Regular penetration testing with adversarial inputs identifies security flaws before deployment |
 
-## Procedure Examples
-
-| Name | Tactic | Description |
-|------|--------|-------------|
-| *(No documented cases yet)* | | |
 
 ## Sources
 

@@ -13,11 +13,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Privacy Attacks Beyond Membership Inference
-
 ## Summary
 
 Advanced privacy attacks go far beyond [[techniques/membership-inference-attacks|membership inference]]—they exploit subtle information leakage in ML systems to reconstruct sensitive training data, infer hidden attributes of individuals, uncover global dataset properties, and re-identify individuals across datasets. These attacks violate **contextual integrity**: privacy violations occur when information flows outside the context where it belongs, breaking expected norms even if the data isn't inherently "secret." Attackers often chain these techniques together (membership inference + attribute inference, property inference + linkage attacks), creating systemic privacy risks.
+
 
 ## Mechanism
 
@@ -78,6 +77,7 @@ Federated Learning (FL) keeps raw data decentralized but introduces **distribute
 4. **Property Inference via Aggregates**: Even with secure aggregation, analyzing aggregated global model updates over time may reveal demographic shifts or dataset composition changes
 5. **Side-Channel Leakage**: Timing, communication patterns, or message sizes can leak metadata about client participation
 
+
 ## Preconditions
 
 - **Attribute Inference**: Black-box or white-box model access + auxiliary information about target individual (partial profile data)
@@ -85,6 +85,7 @@ Federated Learning (FL) keeps raw data decentralized but introduces **distribute
 - **Property Inference**: Ability to train shadow models on similar architecture/data; knowledge of what property to target
 - **Linkage Attacks**: Access to AI system outputs containing quasi-identifiers + external datasets for cross-referencing
 - **FL Attacks**: Participation in federated learning as client, or access to aggregation server, or ability to eavesdrop on updates
+
 
 ## Impact
 
@@ -106,6 +107,7 @@ Federated Learning (FL) keeps raw data decentralized but introduces **distribute
 
 **Organizational Impact:** Severe regulatory fines (GDPR, HIPAA, CCPA), devastating reputational damage, loss of user trust, lawsuits, failure of AI system or product.
 
+
 ## Detection
 
 - Monitor for high-volume structured queries characteristic of model inversion (thousands of nearly identical queries, extreme inputs)
@@ -115,11 +117,13 @@ Federated Learning (FL) keeps raw data decentralized but introduces **distribute
 - In FL: detect anomalous update contributions, monitor for Sybil patterns (multiple identities with similar updates)
 - Track confidence score query patterns that suggest hill-climbing optimization
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -137,6 +141,7 @@ Federated Learning (FL) keeps raw data decentralized but introduces **distribute
 | | [[mitigations/data-minimization]] | Reduces quasi-identifiers available for linkage attacks and limits features for attribute inference |
 | | [[mitigations/dataset-auditing-and-transparency]] | Proactively identifies and mitigates sensitive dataset properties, reducing impact of property inference |
 | | [[mitigations/federated-learning]] | Keeps training data decentralized; requires secure aggregation and DP for full protection against gradient-based attacks |
+
 
 ## Sources
 

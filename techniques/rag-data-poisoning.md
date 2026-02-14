@@ -15,11 +15,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# RAG Data Poisoning
 
 ## Summary
 
 Data poisoning attacks manipulate training data, knowledge bases, or RAG corpora by injecting malicious content or altering existing examples to compromise model integrity. Attackers aim to introduce systematic biases, create hidden backdoors, or degrade performance on specific input categories. Three primary techniques are used: label flipping (changing ground-truth labels to induce misclassification), injection attacks (inserting crafted samples with hidden triggers), and clean-label attacks (subtly modifying legitimate data without label changes to cause targeted errors). Successful poisoning can persist through model training and deployment, enabling attackers to control model behavior via triggers while appearing normal under standard testing. This threat is amplified in RAG systems where knowledge bases are continuously updated from external sources, creating ongoing exposure to poisoned content.
+
 
 ## Mechanism
 
@@ -62,6 +62,7 @@ RAG embedding poisoning involves manipulating vector embeddings or documents sto
 
 In federated learning systems where multiple participants contribute model updates without sharing raw data, attackers who control a subset of participating devices can manipulate local training data or directly modify local model updates before submission to the central aggregator. When the central server aggregates these poisoned updates with legitimate ones using simple averaging algorithms, the attacker's bias or backdoor gets incorporated into the global model and distributed back to all participants, propagating the attack system-wide. This succeeds because the central server cannot directly inspect raw data on participating devices, only seeing aggregated updates, and simple aggregation methods are vulnerable to outlier manipulation without robust defenses.
 
+
 ## Preconditions
 
 - Attacker has write access to training data, knowledge bases, or RAG document repositories
@@ -75,6 +76,7 @@ In federated learning systems where multiple participants contribute model updat
 - For training pipelines: Automated ingestion without manual review of high-risk data sources
 - For online learning systems: Incremental model updates without drift detection or temporal anomaly monitoring
 - For federated learning systems: Insufficient validation of model updates from participating devices; lack of robust aggregation methods to filter malicious updates
+
 
 ## Impact
 
@@ -93,6 +95,7 @@ In federated learning systems where multiple participants contribute model updat
 - Feature corruption: Model learns incorrect associations that persist across fine-tuning and transfer learning
 - Detection evasion: Poisoning designed to pass standard validation by maintaining acceptable aggregate accuracy
 - Attack transferability: Poisoned models fine-tuned from compromised foundation models inherit vulnerabilities
+
 
 ## Detection
 
@@ -116,6 +119,17 @@ In federated learning systems where multiple participants contribute model updat
 - Temporal correlation anomalies: Model performance changes correlated with specific data source activity or contributor behavior patterns
 - Cumulative poison detection: Aggregate impact of small incremental changes becomes detectable over extended time windows
 - Federated update anomalies: Model updates from specific participating devices exhibiting statistical outliers (gradient magnitudes, parameter distributions inconsistent with majority)
+
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection\|Slack AI Data Exfiltration]] | [[frameworks/atlas/tactics/exfiltration]] | Public channel message poisoned RAG corpus enabling cross-workspace data theft via indirect prompt injection |
+| [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack\|Morris II Worm]] | [[frameworks/atlas/tactics/lateral-movement]] | Self-replicating AI worm propagating through RAG systems by injecting malicious prompts into knowledge bases |
+| [[frameworks/atlas/case-studies/virustotal-poisoning\|VirusTotal Poisoning]] | [[frameworks/atlas/tactics/resource-development]] | Public dataset poisoning affecting malware detection model training via corrupted malware samples |
+| [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider\|M365 Copilot Financial Hijacking]] | [[frameworks/atlas/tactics/persistence]] | RAG poisoning replaced legitimate bank account details with attacker-controlled account in M365 Copilot responses |
+
 
 ## Mitigations
 
@@ -142,14 +156,6 @@ In federated learning systems where multiple participants contribute model updat
 | | [[mitigations/source-revocation]] | Block or restrict data sources confirmed as compromised |
 | AML.M0015 | [[mitigations/incident-response-procedures]] | Defined procedures for data poisoning incident investigation, containment, and remediation |
 
-## Procedure Examples
-
-| Name | Tactic | Description |
-|------|--------|-------------|
-| [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection\|Slack AI Data Exfiltration]] | [[frameworks/atlas/tactics/exfiltration]] | Public channel message poisoned RAG corpus enabling cross-workspace data theft via indirect prompt injection |
-| [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack\|Morris II Worm]] | [[frameworks/atlas/tactics/lateral-movement]] | Self-replicating AI worm propagating through RAG systems by injecting malicious prompts into knowledge bases |
-| [[frameworks/atlas/case-studies/virustotal-poisoning\|VirusTotal Poisoning]] | [[frameworks/atlas/tactics/resource-development]] | Public dataset poisoning affecting malware detection model training via corrupted malware samples |
-| [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider\|M365 Copilot Financial Hijacking]] | [[frameworks/atlas/tactics/persistence]] | RAG poisoning replaced legitimate bank account details with attacker-controlled account in M365 Copilot responses |
 
 ## Sources
 

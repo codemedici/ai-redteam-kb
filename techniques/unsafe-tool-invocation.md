@@ -8,16 +8,15 @@ tags:
   - source/ai-native-llm-security
 atlas: AML.T0051
 owasp: LLM07
-owasp2: LLM08
 maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Unsafe Tool Invocation
 
 ## Summary
 
 Unsafe tool invocation occurs when an LLM-powered agent triggers real-world actions—API calls, database operations, workflow executions, email sends, financial transactions—based solely on natural language reasoning without adequate validation, authorization, or approval. This represents a fundamental boundary collapse between language interpretation (the LLM's native domain) and action execution (privileged operations with irreversible consequences). Unlike traditional software where execution requires explicit code paths and permissions, LLM agents bridge the gap through conversational inference, making them vulnerable to language-driven privilege escalation. Attackers exploit this by crafting inputs that cause the model to invoke tools with malicious arguments, execute actions prematurely without confirmation, or chain multiple tool calls to achieve unauthorized outcomes. The failure is not a bug in the tools themselves but a systemic risk inherent to delegating execution authority to probabilistic language models that cannot reliably distinguish between describing an action and performing it.
+
 
 ## Mechanism
 
@@ -53,6 +52,7 @@ This process creates multiple vulnerability points:
 - No scoping to minimum necessary permissions
 - Tools accessible beyond their legitimate use cases
 
+
 ## Preconditions
 
 - **Tools exposed to LLM:** Agent has programmatic access to functions enabling real-world actions
@@ -63,6 +63,7 @@ This process creates multiple vulnerability points:
 - **Lack of external argument validation:** No validation of tool arguments outside the model
 - **Absence of least-privilege design:** Tools not scoped to minimum necessary permissions
 - **Missing execution context tracking:** Logs capture API calls but omit conversational context
+
 
 ## Impact
 
@@ -85,6 +86,7 @@ This process creates multiple vulnerability points:
 
 **Severity:** **High to Critical** (Critical when tools enable irreversible financial/data operations; High when limited to less sensitive functions)
 
+
 ## Detection
 
 - **Tool invocations inconsistent with user role:** Agent executes privileged operations for users without corresponding permissions
@@ -99,11 +101,13 @@ This process creates multiple vulnerability points:
 - **Failed attempts followed by rephrasing:** Multiple failed invocations then success after user rephrases
 - **Tools invoked by new/low-reputation accounts:** Suspicious patterns from newly created accounts
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -118,6 +122,7 @@ This process creates multiple vulnerability points:
 | AML.M0015 | [[mitigations/rate-limiting-and-throttling]] | Limit frequency of tool invocations per user/session to prevent rapid experimentation with malicious arguments |
 | | [[mitigations/output-filtering-and-sanitization]] | Apply zero trust principles to LLM outputs; validate and sanitize before exposing to downstream systems or users |
 | | [[mitigations/incident-response-procedures]] | Document playbooks for tool compromise scenarios including investigation, rollback, and remediation procedures |
+
 
 ## Sources
 

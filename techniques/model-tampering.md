@@ -13,11 +13,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Model Tampering and Integrity Attacks
 
 ## Summary
 
 Model tampering occurs when adversaries gain unauthorized access to modify a model's weights, architecture, or saved checkpoints, introducing subtle backdoors, degrading performance, or altering behavior in targeted ways. Unlike model extraction which replicates functionality, tampering directly compromises the model's integrity. These attacks typically occur during training, fine-tuning, or at-rest storage phases when insiders or supply chain attackers have access to model artifacts. Successful tampering can persist undetected through deployment, enabling attackers to trigger malicious behavior via hidden triggers while the model appears to function normally under standard testing.
+
 
 ## Mechanism
 
@@ -52,6 +52,7 @@ Attackers replace or modify saved model checkpoints with tampered versions. This
 - **Storage manipulation**: Modify checkpoints in cloud storage or artifact registries
 - **Version substitution**: Replace specific model versions with backdoored variants
 
+
 ## Preconditions
 
 - Attacker has write access to model storage (filesystem, cloud buckets, model registries)
@@ -61,6 +62,7 @@ Attackers replace or modify saved model checkpoints with tampered versions. This
 - Lack of cryptographic integrity verification for model artifacts
 - Absence of multi-party approval for model deployments
 - Insufficient monitoring of weight distributions or behavioral consistency
+
 
 ## Impact
 
@@ -78,6 +80,7 @@ Attackers replace or modify saved model checkpoints with tampered versions. This
 - **Detection evasion**: Tampering designed to pass standard accuracy/safety testing while hiding malicious capability
 - **Model trust erosion**: Uncertainty about model integrity complicates deployment decisions
 
+
 ## Detection
 
 - Unexpected changes in model accuracy or performance metrics on specific input subsets
@@ -90,6 +93,7 @@ Attackers replace or modify saved model checkpoints with tampered versions. This
 - Unexplained model file size changes or architectural differences
 - Alerts from integrity monitoring systems flagging validation failures
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
@@ -97,6 +101,7 @@ Attackers replace or modify saved model checkpoints with tampered versions. This
 | [[case-studies/poisongpt]] | [[frameworks/atlas/tactics/persistence]] | Foundation model checkpoint backdoor distributed via Hugging Face; survived fine-tuning |
 | [[case-studies/malicious-models-on-hugging-face]] | [[frameworks/atlas/tactics/execution]] | Pickle deserialization enabling arbitrary code execution from poisoned model files |
 | [[case-studies/rules-file-backdoor-supply-chain-attack-on-ai-coding-assistants]] | [[frameworks/atlas/tactics/initial-access]] | Supply chain attack poisoning AI coding assistant instructions |
+
 
 ## Mitigations
 
@@ -121,6 +126,7 @@ Attackers replace or modify saved model checkpoints with tampered versions. This
 | | [[mitigations/model-quarantine-and-sandboxing]] | Immediately isolate suspected tampered models from production |
 | AML.M0018 | [[mitigations/model-version-management]] | Retraining from verified sources: rebuild from trusted checkpoints or retrain from scratch when integrity compromised |
 | | [[mitigations/output-monitoring-validation]] | Post-incident validation: comprehensive testing before redeployment after tampering incident |
+
 
 ## Sources
 

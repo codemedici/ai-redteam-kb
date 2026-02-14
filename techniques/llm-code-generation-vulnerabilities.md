@@ -17,11 +17,10 @@ created: 2026-02-12
 updated: 2026-02-14
 ---
 
-# LLM Code Generation Vulnerabilities
-
 ## Summary
 
 Code-generating LLMs (GitHub Copilot, ChatGPT, Amazon CodeWhisperer) introduce systemic security vulnerabilities by learning from historical codebases containing outdated, deprecated, and inherently insecure programming practices. Unlike natural language hallucinations which fail to compile, code vulnerabilities persist silently—executing correctly while harboring exploitable flaws that developers blindly accepting LLM suggestions propagate at scale.
+
 
 ## Mechanism
 
@@ -145,6 +144,7 @@ if not requested.is_relative_to(base):
 - Missing authorization checks in CRUD operations
 - JWT validation without signature verification
 
+
 ## Preconditions
 
 - Organization using code-generating LLMs (GitHub Copilot, ChatGPT, Amazon CodeWhisperer, etc.)
@@ -152,6 +152,7 @@ if not requested.is_relative_to(base):
 - Absence of automated security scanning (static analysis, dependency scanning)
 - No security-focused code review process
 - Lack of developer training on LLM-specific security risks
+
 
 ## Impact
 
@@ -173,6 +174,7 @@ if not requested.is_relative_to(base):
 
 **Severity:** High - Systematic vulnerability introduction across entire development lifecycle
 
+
 ## Detection
 
 **Static Code Analysis:**
@@ -193,11 +195,13 @@ if not requested.is_relative_to(base):
 - Increased false positive rate in security scanners (more code to scan)
 - Developers citing "Copilot suggested this" in code review discussions
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -211,6 +215,7 @@ if not requested.is_relative_to(base):
 | | [[mitigations/security-focused-llm-training]] | Fine-tune code LLMs on secure coding datasets to reduce insecure suggestions |
 | AML.M0015 | [[mitigations/ci-cd-evaluation-gates]] | Mandatory security validation gates prevent deployment of untested LLM-generated code |
 | | [[mitigations/input-validation-transformation]] | Validate and sanitize all inputs in LLM-generated code before processing |
+
 
 ## Sources
 

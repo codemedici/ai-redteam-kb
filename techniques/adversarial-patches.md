@@ -1,18 +1,61 @@
 ---
 title: Adversarial Patches
-description: Localized, visible perturbations designed for physical-world evasion attacks that can be printed and placed in real environments
 tags:
-  - type/attack
+  - type/technique
   - target/inference-api
   - target/computer-vision
   - access/physical-world
-  - severity/high
   - atlas/AML.T0015
   - source/adversarial-ai
   - needs-review
+maturity: draft
+created: 2026-02-14
+updated: 2026-02-14
 ---
 
-# Adversarial Patches
+## Summary
+
+*(To be documented)*
+
+
+## Mechanism
+
+*(To be documented)*
+
+
+## Preconditions
+
+*(To be documented)*
+
+
+## Impact
+
+*(To be documented)*
+
+
+## Detection
+
+*(To be documented)*
+
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| *(To be documented)* | | |
+
+
+## Sources
+
+*(To be documented)*
+
 
 ## Overview
 
@@ -21,6 +64,7 @@ Adversarial patches represent a paradigm shift in evasion attacks—unlike tradi
 > "Adversarial patches represent a paradigm shift in the domain of adversarial AI. Unlike methods such as FGSM, BIM, C&W, or PGD, which typically introduce fine-tuned, often imperceptible perturbations, adversarial patches are localized alterations designed to be superimposed onto a segment of the input."
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 165
+
 
 ## Key Differentiators
 
@@ -45,6 +89,7 @@ Adversarial patches represent a paradigm shift in evasion attacks—unlike tradi
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 165
 
+
 ## Attack Scenarios
 
 ### Physical World
@@ -68,6 +113,7 @@ Adversarial patches also work digitally:
 - Insert patch into digital images before feeding to AI
 - Overlay patch on video frames
 - Embed in documents/photos
+
 
 ## Attack Mechanics
 
@@ -111,6 +157,7 @@ patch, _ = ap.generate(x=img, y=y_target)
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 165-166
 
+
 ## Real-World Examples
 
 ### Stop Sign Attack (Eykholt et al., 2018)
@@ -124,6 +171,7 @@ Physical perturbations on stop signs caused misclassification in autonomous vehi
 **Attack success:** Model misclassifies racing car as `fox_squirrel` or `siamese_cat` depending on patch position.
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 166
+
 
 ## Attack Parameters
 
@@ -151,6 +199,7 @@ Physical perturbations on stop signs caused misclassification in autonomous vehi
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 165-166
 
+
 ## Advantages
 
 ### For Attackers
@@ -167,6 +216,7 @@ Physical perturbations on stop signs caused misclassification in autonomous vehi
 - **Persistent** — Physical patches remain until removed
 - **Scalable** — Mass-produce stickers, signs, clothing patterns
 
+
 ## Limitations
 
 ### Detectability
@@ -179,6 +229,7 @@ Physical perturbations on stop signs caused misclassification in autonomous vehi
 - Human operators may notice suspicious markings
 - Input preprocessing can reduce patch effectiveness
 
+
 ## Real-World Implications
 
 **High-risk scenarios:**
@@ -190,27 +241,3 @@ Physical perturbations on stop signs caused misclassification in autonomous vehi
 > "For example, a physical adversarial patch could be placed on a road sign to mislead an autonomous vehicle's vision system—a direct and tangible interaction with the AI."
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 165
-
-## Related
-
-**General category:**
-- [[techniques/adversarial-examples-evasion-attacks]] — Digital perturbation-based evasion
-
-**Similar physical attacks:**
-- [[techniques/3d-adversarial-objects]] — Entire objects crafted to fool AI
-
-**Mitigated by:**
-- [[mitigations/input-validation-transformation]] — JPEG compression, Gaussian blur
-- [[mitigations/adversarial-training]] — Train with patched examples
-- [[mitigations/anomaly-detection-architecture]] — Flag unusual visual patterns
-- [[mitigations/certified-defenses]] — Provable robustness bounds
-
-**ATLAS Mapping:**
-- [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade ML Model
-- [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015.002]] — Physical Domain Evasion
-
-**Tools:**
-- ART AdversarialPatch: https://adversarial-robustness-toolbox.readthedocs.io/
-
-**Research:**
-- Eykholt et al. (2018): *Robust Physical-World Attacks on Deep Learning Visual Classification*

@@ -16,13 +16,12 @@ created: 2026-02-12
 updated: 2026-02-14
 ---
 
-# Adversarial Examples and Evasion Attacks
-
 ## Summary
 
 Adversarial examples are maliciously crafted inputs, derived from legitimate ones and intentionally modified (often subtly), designed to cause specific misbehavior in target AI models during inference. High-performing AI models that match or exceed human capabilities on specific tasks often mask surprising fragility — tiny, carefully crafted input changes (imperceptible to humans) can completely fool them. Unlike [[techniques/data-poisoning-attacks|data poisoning]] which tampers with the training process, evasion attacks target live, operational models after training and deployment.
 
 > "Things are not always what they seem; the first appearance deceives many." — Phaedrus
+
 
 ## Mechanism
 
@@ -136,6 +135,7 @@ Attackers gather intelligence before crafting evasion attacks through:
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 151-153
 
+
 ## Preconditions
 
 - **White-box:** Access to model architecture, parameters, possibly training data
@@ -143,6 +143,7 @@ Attackers gather intelligence before crafting evasion attacks through:
 - **Black-box:** Only inference API access (no model details)
 - For transfer attacks: Access to surrogate model or pre-trained model similar to target
 - For query-based attacks: Sufficient query budget without triggering rate limits
+
 
 ## Impact
 
@@ -166,6 +167,7 @@ Attack techniques in one domain often have analogues in others — breakthroughs
 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 139-141, 160-161
 
+
 ## Detection
 
 - Monitor for queries containing unusual perturbation patterns or statistical anomalies
@@ -175,12 +177,14 @@ Attack techniques in one domain often have analogues in others — breakthroughs
 - Monitor for anomalous distributions in model confidence scores
 - Detect coordinated query campaigns from multiple sources
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[case-studies/stop-sign-adversarial-attack]] | [[frameworks/atlas/tactics/initial-access]] | Researchers applied stickers to stop sign causing autonomous vehicle vision system to misclassify as "Speed Limit 45" |
 | [[case-studies/cloud-api-transfer-attack]] | [[frameworks/atlas/tactics/ai-model-access]] | Transfer attack achieved 84-96% misclassification rates against MetaMind, Amazon, and Google Cloud Vision APIs using surrogate model |
+
 
 ## Mitigations
 
@@ -194,6 +198,7 @@ Attack techniques in one domain often have analogues in others — breakthroughs
 | | [[mitigations/gradient-masking]] | Obscure model gradients to limit information available for crafting adversarial examples (limited effectiveness against adaptive attacks) |
 | | [[mitigations/adversarial-robustness-controls]] | Defense-in-depth strategy combining multiple mitigations with continuous red teaming and monitoring |
 | | [[mitigations/anomaly-detection-architecture]] | Runtime anomaly detection monitoring for adversarial query patterns and model behavior shifts |
+
 
 ## Sources
 

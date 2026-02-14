@@ -14,14 +14,13 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Membership Inference Attacks (MIA)
-
 ## Summary
 
 Membership inference attacks (MIAs) are privacy attacks where an adversary determines whether a specific data record was used in a model's training dataset. Models often behave differently towards data they were trained on (higher confidence, lower loss) versus unseen data, and MIAs exploit these subtle behavioral differences. The risk is particularly acute for models trained on sensitive data (medical records, financial transactions, personal messages), where confirming membership constitutes a privacy breach even without revealing the raw data.
 
 > "If a model has been trained on medical records, an attacker leveraging membership inference could potentially determine whether a specific individual's medical data was part of the training set. Such revelations can violate privacy agreements and lead to unauthorized disclosures of personal information."
 > — [[sources/bibliography#Generative AI Security]], p. 173
+
 
 ## Mechanism
 
@@ -56,6 +55,7 @@ The attacker trains a "shadow model" mimicking the target's behavior, uses its k
 - **Entropy-based**: Members may show lower output entropy (more certain predictions)
 - **Gradient-based** (white-box): Training examples may exhibit different gradient patterns
 
+
 ## Preconditions
 
 - API or inference access to target model (black-box sufficient for basic attacks; white-box enables stronger variants)
@@ -63,6 +63,7 @@ The attacker trains a "shadow model" mimicking the target's behavior, uses its k
 - Baseline data (known members and/or non-members) to calibrate attack, or similar data distribution to train shadow models
 - Model outputs confidence scores, probabilities, or embeddings (richer outputs enable stronger attacks)
 - Target model exhibits some degree of overfitting to training data
+
 
 ## Impact
 
@@ -85,6 +86,7 @@ Membership knowledge can serve as a stepping stone for **attribute inference** (
 
 Proprietary training data—a valuable competitive asset—can also be partially characterized through membership inference by competitors.
 
+
 ## Detection
 
 - Monitor for systematic querying patterns: repeated queries with slight variations targeting similar data profiles
@@ -93,12 +95,14 @@ Proprietary training data—a valuable competitive asset—can also be partially
 - Flag queries that closely match training data distributions or known data schemas
 - Monitor for shadow-model-like behavior: diverse queries designed to map model decision boundaries
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[case-studies/chatgpt-training-data-extraction-2023]] | [[frameworks/atlas/tactics/exfiltration]] | Researchers induced ChatGPT to output verbatim memorized training data (including PII) via repetition prompts, demonstrating memorization risks exploited by MIAs |
 | [[case-studies/healthy-outcomes-diagnostic-leak]] | [[frameworks/atlas/tactics/exfiltration]] | Security researcher confirmed patient advocacy group members' data was in diagnostic AI training set via confidence score differential analysis |
+
 
 ## Mitigations
 
@@ -111,6 +115,7 @@ Proprietary training data—a valuable competitive asset—can also be partially
 | | [[mitigations/knowledge-distillation-defense]] | Student model learns from teacher's soft predictions rather than original training data, reducing memorization that enables membership inference |
 | AML.M0015 | [[mitigations/rate-limiting-and-throttling]] | Restricts query volume needed to gather statistical samples for effective MIA; limits attacker experimentation velocity |
 | | [[mitigations/query-monitoring]] | Detects systematic querying patterns indicative of membership inference campaigns (alternating member/non-member probing, calibration behavior) |
+
 
 ## Sources
 

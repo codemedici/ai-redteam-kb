@@ -12,11 +12,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# API Rate Limiting Bypass
 
 ## Summary
 
 API rate limiting bypass occurs when attackers evade volume restrictions designed to protect LLM APIs from abuse, resource exhaustion, and extraction attacks. Rate limits constrain the number of requests a user or client can make within a time window (e.g., 100 requests per minute, 10,000 per day). Attackers bypass these controls through distributed infrastructure (multiple IP addresses, VPNs, proxy networks), account farming (creating numerous free-tier or trial accounts), request parameter manipulation (rotating API keys, user agents, session tokens), or exploiting implementation weaknesses (fixed time windows, client-side enforcement, missing distributed state). Successful bypass enables two primary attack classes: model extraction (systematic querying to clone proprietary models) and denial of service (resource exhaustion degrading availability for legitimate users). Unlike model-extraction attacks which focus on query patterns for cloning, this vulnerability focuses on the evasion mechanics that enable high-volume attacks despite defensive throttling. Rate limiting is a foundational economic and security control—without it, APIs face unlimited resource consumption and intellectual property theft.
+
 
 ## Mechanism
 
@@ -60,6 +60,7 @@ Attackers continuously monitor effectiveness of bypass techniques:
 
 With bypass successful, attackers launch high-volume campaigns for model extraction (systematic querying across all accounts to collect input-output pairs for shadow model training) or denial of service (exhaust API compute resources causing degraded performance or outages for legitimate users).
 
+
 ## Preconditions
 
 - API rate limits exist but are implemented with exploitable weaknesses (single-factor limiting, predictable reset times, no distributed correlation)
@@ -69,6 +70,7 @@ With bypass successful, attackers launch high-volume campaigns for model extract
 - Missing IP-based rate limiting or geolocation restrictions (can distribute across global infrastructure)
 - No anomaly detection for coordinated multi-account usage patterns
 - Predictable rate limit reset times (fixed UTC midnight resets enabling synchronized bursts)
+
 
 ## Impact
 
@@ -89,6 +91,7 @@ With bypass successful, attackers launch high-volume campaigns for model extract
 - Infrastructure autoscaling triggered by attacker traffic increasing operational costs
 - Difficulty distinguishing attack traffic from legitimate usage at individual account level
 
+
 ## Detection
 
 - Large number of new account creations in short time period (account farming indicator)
@@ -101,6 +104,14 @@ With bypass successful, attackers launch high-volume campaigns for model extract
 - Accounts created with disposable email domains or suspicious email patterns (programmatic generation, sequential names)
 - Geolocation inconsistencies (account registered in US, queries from multiple countries simultaneously)
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
 ## Mitigations
 
 | ID | Name | Description |
@@ -109,11 +120,6 @@ With bypass successful, attackers launch high-volume campaigns for model extract
 | | [[mitigations/anomaly-detection-architecture]] | Detects coordinated multi-account campaigns through behavioral correlation, identifies account farming patterns, flags burst querying synchronized with rate limit resets, and detects distributed bypass attempts across IP ranges |
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Comprehensive logging of API usage patterns, rate limit hits, and aggregate resource consumption enables detection and investigation of bypass campaigns |
 
-## Procedure Examples
-
-| Name | Tactic | Description |
-|------|--------|-------------|
-| *(No documented cases yet)* | | |
 
 ## Sources
 

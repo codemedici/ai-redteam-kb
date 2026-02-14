@@ -12,11 +12,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Prompt Log Data Leakage
 
 ## Summary
 
 Prompt log data leakage occurs when sensitive information submitted in user prompts or stored in conversation history is exposed through insecure logging practices, inadequate access controls, or unauthorized data extraction. LLM applications routinely log user inputs and model outputs for debugging, monitoring, and improvement purposes, but these logs often contain personally identifiable information (PII), proprietary business data, credentials, and other confidential content. When these logs are stored without proper encryption, access segmentation, or retention policies, they become high-value targets for attackers and create significant compliance risks under privacy regulations like GDPR and HIPAA.
+
 
 ## Mechanism
 
@@ -59,6 +59,7 @@ Even when the model itself is secure, the logging infrastructure often creates e
 - **Third-party log aggregation:** Logs exported to external services without proper security vetting
 - **Backup exposure:** Log backups stored in less secure locations than primary systems
 
+
 ## Preconditions
 
 - LLM application logs user prompts, conversation history, or model outputs
@@ -72,6 +73,7 @@ Even when the model itself is secure, the logging infrastructure often creates e
 - Logs lack adequate protection (no encryption at rest, weak access controls)
 - No data minimization or sanitization applied before logging
 - Insufficient audit trails to detect unauthorized log access
+
 
 ## Impact
 
@@ -96,6 +98,7 @@ Even when the model itself is secure, the logging infrastructure often creates e
 - **High** for exposure of non-critical PII or business data
 - **Critical** for exposure of regulated data (medical records, financial information), credentials, or large-scale breaches
 
+
 ## Detection
 
 - Unusual access patterns to log storage (high-volume reads, off-hours access, access from unexpected IPs)
@@ -109,11 +112,13 @@ Even when the model itself is secure, the logging infrastructure often creates e
 - Regulatory audit findings identifying inadequate log protection
 - Customer reports of receiving outputs containing others' sensitive information
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -125,6 +130,7 @@ Even when the model itself is secure, the logging infrastructure often creates e
 | | [[mitigations/data-minimization]] | Log only what is necessary for operations, avoid logging sensitive fields |
 | | [[mitigations/differential-privacy]] | Apply privacy-preserving techniques to training data and outputs |
 | | [[mitigations/anomaly-detection-architecture]] | Monitor for unusual log access patterns and data extraction attempts |
+
 
 ## Sources
 

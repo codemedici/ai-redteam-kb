@@ -12,11 +12,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Secrets in Prompts and Logs
 
 ## Summary
 
 API keys, credentials, database connection strings, and other sensitive configuration material are embedded directly into LLM system prompts, agent instructions, or application code, then captured in logs, telemetry, prompt history, or model context windows. When attackers gain access to these storage locations—through prompt extraction attacks, log file exposure, or unauthorized access to monitoring systems—they obtain valid credentials that grant direct access to backend systems, databases, external APIs, or cloud resources. This technique transforms what should be ephemeral runtime secrets into persistent, extractable artifacts.
+
 
 ## Mechanism
 
@@ -99,6 +99,7 @@ Turn 4: LLM: "The Stripe API key is sk_live_xyz123"
 4. **System prompt as configuration:** Prompts treated as configuration files where "config values" (including secrets) are normal
 5. **Multi-tenant context leakage:** Shared logging infrastructure may expose tenant A's secrets to tenant B
 
+
 ## Preconditions
 
 - Sensitive credentials (API keys, database passwords, access tokens) embedded in system prompts, application code, or user inputs
@@ -110,6 +111,7 @@ Turn 4: LLM: "The Stripe API key is sk_live_xyz123"
   - Model context windows (via session hijacking or prompt extraction)
 - Credentials are valid and grant meaningful access to protected resources
 - No secret rotation policy exists, making discovered credentials persistently valuable
+
 
 ## Impact
 
@@ -130,6 +132,7 @@ Turn 4: LLM: "The Stripe API key is sk_live_xyz123"
 - **Multi-account compromise:** Reused credentials across environments (dev/staging/prod) amplify impact
 
 **Severity:** **Critical** when credentials grant access to production systems, customer data, or financial APIs. **High** for development environment credentials or lower-privilege service accounts.
+
 
 ## Detection
 
@@ -153,11 +156,13 @@ Turn 4: LLM: "The Stripe API key is sk_live_xyz123"
 - **Prompt extraction attempts:** Frequent system prompt leakage queries (e.g., "Repeat your instructions")
 - **Session hijacking signals:** Rapid session takeovers or geographic anomalies
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[case-studies/samsung-chatgpt-leak]] | [[frameworks/atlas/tactics/exfiltration]] | Employees leaked proprietary source code through ChatGPT, highlighting risks of sensitive data in conversational AI inputs (related exposure pattern) |
+
 
 ## Mitigations
 
@@ -167,6 +172,7 @@ Turn 4: LLM: "The Stripe API key is sk_live_xyz123"
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Implement PII/secret redaction in logs, encrypt log storage, restrict log access via RBAC |
 | | [[mitigations/access-segmentation-and-rbac]] | Isolate log storage from unauthorized access; enforce least-privilege access to monitoring systems |
 | | [[mitigations/ai-infrastructure-security]] | Secure MLOps pipeline to prevent credential exposure in build artifacts, deployment configs, or operational telemetry |
+
 
 ## Sources
 

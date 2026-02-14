@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-14
 ---
-# Agentic AI Security Risks (OWASP AIVSS)
 
 ## Summary
 
 OWASP Artificial Intelligence Vulnerability Scoring System (AIVSS) defines ten core security risk categories unique to agentic AI systems—AI agents with autonomy, memory, and tool use capabilities. These risks emerge specifically when LLMs gain the ability to take actions (invoke tools, move data, modify systems) without waiting for human approval. AIVSS provides standardized identification and assessment of vulnerabilities that conventional CVSS frameworks cannot address because they don't account for AI systems that learn, adapt, and act autonomously. After analyzing 43 field incidents involving AI agents, OWASP distilled ten failure modes representing emergent security challenges that simply do not exist when models are confined to text generation.
+
 
 ## Mechanism
 
@@ -73,6 +73,7 @@ Once an LLM stack gains autonomy (ability to take actions), persistent memory (c
 - Encompasses goal interpretation attacks, instruction set poisoning, and semantic manipulation
 - Attack vectors: Recursive goal subversion, prompt injection overriding security controls, natural language ambiguity exploitation
 
+
 ## Preconditions
 
 - Organization has deployed AI agents with one or more of:
@@ -90,6 +91,7 @@ Once an LLM stack gains autonomy (ability to take actions), persistent memory (c
   - Inadequate memory integrity verification
   - Insufficient audit logging or traceability
   - No circuit breakers or resource quotas
+
 
 ## Impact
 
@@ -113,6 +115,7 @@ Once an LLM stack gains autonomy (ability to take actions), persistent memory (c
 - Severity depends on agent permissions, tool capabilities, and blast radius
 - Agents with access to financial systems, production infrastructure, or sensitive data represent critical risk
 - Multi-agent systems amplify impact through cascading failures and coordinated exploitation
+
 
 ## Detection
 
@@ -167,6 +170,14 @@ Once an LLM stack gains autonomy (ability to take actions), persistent memory (c
 - Agent pursuing objectives inconsistent with charter
 - Behavioral drift from baseline decision patterns
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
 ## Mitigations
 
 | ID | Name | Description |
@@ -193,11 +204,6 @@ Once an LLM stack gains autonomy (ability to take actions), persistent memory (c
 | | [[mitigations/system-prompt-reinforcement]] | Freeze system prompt in version control with two-person review for changes |
 | AML.M0006 | [[mitigations/dual-llm-judge-pattern]] | Shadow LLM re-evaluates every outbound action against original charter |
 
-## Procedure Examples
-
-| Name | Tactic | Description |
-|------|--------|-------------|
-| *(No documented cases yet)* | | |
 
 ## Sources
 

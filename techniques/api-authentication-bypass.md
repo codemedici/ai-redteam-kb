@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# API Authentication Bypass
 
 ## Summary
 
 API authentication bypass occurs when attackers exploit weaknesses in authentication mechanisms to gain unauthorized access to LLM APIs without valid credentials. This vulnerability manifests through inadequate token validation (signature verification failures, expiration check bypasses), weak authentication schemes (basic auth over HTTP, hardcoded API keys), or implementation flaws in OAuth 2.0 and JWT workflows. Successful authentication bypass grants attackers full access to the LLM system as if they were legitimate users, enabling data exfiltration, model abuse, resource theft, and privilege escalation. Since authentication is the gateway control protecting all LLM API endpoints, bypass vulnerabilities render all downstream authorization, rate limiting, and monitoring controls ineffective. This is distinct from authorization failures—authentication determines WHO you are, while authorization determines WHAT you can do.
+
 
 ## Mechanism
 
@@ -68,6 +68,7 @@ Missing or improperly validated `state` parameter enables CSRF attacks during OA
 **Refresh Token Abuse:**
 Refresh tokens without rotation or expiration allow indefinite access if stolen. Attacker obtains refresh token once (via MITM, client-side theft) and maintains persistent access.
 
+
 ## Preconditions
 
 - LLM API accessible via network (public internet, corporate network, or internal services)
@@ -76,6 +77,7 @@ Refresh tokens without rotation or expiration allow indefinite access if stolen.
 - Inadequate token validation implementation (client-side checks only, missing signature verification, no expiration enforcement)
 - Missing or weak session management (no token rotation, indefinite refresh token validity, no session invalidation)
 - No monitoring or alerting for authentication anomalies (forged tokens, expired token reuse, unusual authentication patterns)
+
 
 ## Impact
 
@@ -96,6 +98,7 @@ Refresh tokens without rotation or expiration allow indefinite access if stolen.
 - Inability to attribute actions to legitimate users (audit trails contain forged identities)
 - Potential for complete system compromise if API provides admin-level capabilities
 
+
 ## Detection
 
 - Authentication attempts with expired tokens succeeding (indicates missing server-side expiration validation)
@@ -108,11 +111,13 @@ Refresh tokens without rotation or expiration allow indefinite access if stolen.
 - High volume of authentication failures followed by sudden success (brute-force key cracking)
 - Tokens used beyond their intended lifecycle (refresh tokens never rotating or expiring)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -125,6 +130,7 @@ Refresh tokens without rotation or expiration allow indefinite access if stolen.
 | | [[mitigations/incident-response-procedures]] | Emergency response playbooks for authentication bypass incidents including containment, forensics, remediation, and recovery |
 | | [[mitigations/anomaly-detection-architecture]] | General anomaly detection architecture that identifies authentication attack patterns and unusual access behaviors |
 | | [[mitigations/access-segmentation-and-rbac]] | Defense-in-depth through network segmentation and RBAC that limits impact of authentication bypass |
+
 
 ## Sources
 

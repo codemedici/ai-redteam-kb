@@ -13,14 +13,13 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Trojan Injection into ML Models
-
 ## Summary
 
 Trojan injection attacks embed malicious functionality directly into ML model architectures by tampering with serialization formats, injecting backdoor layers, or hiding malicious code within custom operations. Unlike [[techniques/data-poisoning-attacks|data poisoning]] which corrupts training data, Trojan injection modifies the model itself after training, introducing conditional logic that activates on specific triggers while maintaining normal behavior otherwise. Attackers exploit framework features (Keras Lambda layers, custom layers, pickle deserialization) to create stealthy backdoors that survive standard validation tests and can persist through deployment pipelines.
 
 > "In a Trojan horse approach, we embed small malicious functionalities directly into the model architecture. The attack doesn't rely on poisoning the data—it tampering with the model structure itself."
 > — [[sources/bibliography#Adversarial AI]], p. 110
+
 
 ## Mechanism
 
@@ -89,6 +88,7 @@ Exploit weaknesses in edge deployment (mobile apps, IoT devices) where model int
 
 (Adversarial AI, p130-133)
 
+
 ## Preconditions
 
 - **Access**: Attacker has write access to model files, training pipelines, or deployment systems
@@ -96,6 +96,7 @@ Exploit weaknesses in edge deployment (mobile apps, IoT devices) where model int
 - **Insider position**: ML engineer, DevOps, or compromised account with model modification privileges
 - **Weak controls**: Absence of model integrity verification, code review gaps, or missing cryptographic signing
 - **Trust in pickle**: Team uses pickle serialization despite security warnings
+
 
 ## Impact
 
@@ -109,6 +110,7 @@ Exploit weaknesses in edge deployment (mobile apps, IoT devices) where model int
 - **Regulatory violations** — Compromised models in healthcare/finance create legal liability
 - **Incident response costs** — Forensic analysis, retraining, and validation extremely expensive
 
+
 ## Detection
 
 - **Lambda/custom layer presence** — Automated scans detect Lambda or custom layers; flag for manual review
@@ -118,12 +120,14 @@ Exploit weaknesses in edge deployment (mobile apps, IoT devices) where model int
 - **Code review findings** — Unexplained layer additions during merge requests
 - **Checksum mismatches** — Model file hashes don't match signed manifests
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[frameworks/atlas/case-studies/poisongpt\|PoisonGPT]] | [[frameworks/atlas/tactics/persistence]] | Trojan-injected LLM distributed via Hugging Face with backdoor that survived fine-tuning |
 | [[frameworks/atlas/case-studies/malicious-models-on-hugging-face\|Malicious Models on Hugging Face]] | [[frameworks/atlas/tactics/execution]] | Trojan models uploaded to Hugging Face exploiting pickle deserialization for RCE |
+
 
 ## Mitigations
 
@@ -136,6 +140,7 @@ Exploit weaknesses in edge deployment (mobile apps, IoT devices) where model int
 | AML.M0007 | [[mitigations/backdoor-scanning]] | Neural Cleanse, activation clustering, and model inversion to detect trigger patterns and hijacked neurons |
 | AML.M0026 | [[mitigations/model-version-management]] | Model diffing against baselines, rollback to known-good checkpoints, version retention policies |
 | AML.M0025 | [[mitigations/behavioral-monitoring]] | Systematic behavioral testing with diverse inputs to discover trigger-activated backdoors |
+
 
 ## Sources
 

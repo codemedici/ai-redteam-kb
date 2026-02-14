@@ -16,11 +16,10 @@ created: 2026-02-14
 updated: 2026-02-14
 ---
 
-# Model Extraction
-
 ## Summary
 
 Model extraction (also known as model theft) occurs when adversaries systematically query a target model to replicate its functionality and behavior, effectively stealing intellectual property without direct access to model weights or architecture. By observing input-output pairs across thousands or millions of queries, attackers can train a shadow model that approximates the target's decision boundaries and capabilities. This represents a significant threat to organizations that have invested heavily in proprietary model development, as successful extraction enables competitors to bypass R&D costs and potentially launch further attacks using insights gained about the model's internals.
+
 
 ## Mechanism
 
@@ -148,6 +147,7 @@ Attackers employ one or more extraction techniques to maximize information gain 
 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 176-182
 
+
 ## Preconditions
 
 - Attacker has API or query access to target model (public API, trial account, or legitimate subscription)
@@ -155,6 +155,7 @@ Attackers employ one or more extraction techniques to maximize information gain 
 - Attacker possesses technical expertise in machine learning and model training
 - Target model provides consistent, deterministic responses (or attacker can average over multiple queries)
 - No effective rate limiting, query pattern detection, or anti-extraction defenses in place
+
 
 ## Impact
 
@@ -176,6 +177,7 @@ Attackers employ one or more extraction techniques to maximize information gain 
 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 170-171
 
+
 ## Detection
 
 - Abnormally high query volume from single user account, IP address, or API key
@@ -191,11 +193,13 @@ Attackers employ one or more extraction techniques to maximize information gain 
 
 > Source: [[sources/bibliography#Red-Teaming AI]], p. 190-193
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[case-studies/deepseek-openai-api-distillation]] | [[frameworks/atlas/tactics/exfiltration]] | Systematic API abuse to extract GPT-4 knowledge via distillation for competing LLM (2023); Microsoft observed individuals linked to DeepSeek exfiltrating large amounts of data using OpenAI's API in violation of ToS prohibiting use of outputs to train competing models |
+
 
 ## Mitigations
 
@@ -213,6 +217,7 @@ Attackers employ one or more extraction techniques to maximize information gain 
 | | [[mitigations/incident-response-procedures]] | Automated account suspension for extraction behavior; emergency patching procedures; audit trail for legal action |
 | | [[mitigations/ai-threat-intelligence-sharing]] | Industry collaboration to share discovered extraction techniques and coordinate defensive responses |
 | | [[mitigations/red-team-continuous-testing]] | Maintain internal red team to test extraction resistance and discover vulnerabilities before external actors |
+
 
 ## Sources
 

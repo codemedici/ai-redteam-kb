@@ -10,11 +10,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Authentication Context Confusion
 
 ## Summary
 
 Authentication context confusion occurs when an agent or LLM-powered application confuses user identity or authorization context during multi-user or multi-tenant operations, leading to privilege violations and unauthorized access. This vulnerability arises when systems fail to properly bind execution context to the authenticated user throughout the request lifecycle, allowing one user's actions to be executed with another user's permissions or enabling unauthorized access to protected resources. Context confusion attacks exploit gaps in session management, context propagation, and authorization enforcement to bypass access controls.
+
 
 ## Mechanism
 
@@ -62,6 +62,7 @@ Attackers may exploit systems that rely on client-provided or easily manipulated
 - Authorization checks use wrong source of truth for user identity (e.g., request body instead of authentication token)
 - Context extracted from untrusted sources (cookies, headers, URL parameters)
 
+
 ## Preconditions
 
 - Multi-user or multi-tenant LLM application or agent system
@@ -71,6 +72,7 @@ Attackers may exploit systems that rely on client-provided or easily manipulated
 - Systems that trust client-provided user identity parameters
 - Long-running conversations or sessions where context may drift
 - Asynchronous or background processing without explicit context binding
+
 
 ## Impact
 
@@ -88,6 +90,7 @@ Attackers may exploit systems that rely on client-provided or easily manipulated
 - Cross-tenant data leakage in multi-tenant deployments
 - Session hijacking or impersonation without credential theft
 - Incorrect authorization decisions based on confused context
+
 
 ## Detection
 
@@ -109,11 +112,13 @@ Attackers may exploit systems that rely on client-provided or easily manipulated
 - Session lifecycle anomalies: Sessions persisting or switching contexts mid-flow
 - Permission escalation: User suddenly performing actions beyond normal privilege level
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -122,6 +127,7 @@ Attackers may exploit systems that rely on client-provided or easily manipulated
 | AML.M0016 | [[mitigations/user-context-binding]] | Bind tool execution to originating user's security context throughout request lifecycle |
 | AML.M0004 | [[mitigations/least-privilege-implementation]] | Enforce minimum required permissions at tool level, preventing escalation through context confusion |
 | | [[mitigations/access-segmentation-and-rbac]] | Enforce role-based access control and tenant isolation to prevent cross-context access |
+
 
 ## Sources
 

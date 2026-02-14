@@ -1,18 +1,61 @@
 ---
 title: Clean-Label Poisoning Attacks
-description: Stealthy data poisoning technique that manipulates training data without changing labels, making detection extremely difficult
 tags:
-  - type/attack
+  - type/technique
   - target/ml-training
   - target/model-integrity
   - access/training-data
-  - severity/high
   - atlas/AML.T0020
   - source/adversarial-ai
   - needs-review
+maturity: draft
+created: 2026-02-14
+updated: 2026-02-14
 ---
 
-# Clean-Label Poisoning Attacks
+## Summary
+
+*(To be documented)*
+
+
+## Mechanism
+
+*(To be documented)*
+
+
+## Preconditions
+
+*(To be documented)*
+
+
+## Impact
+
+*(To be documented)*
+
+
+## Detection
+
+*(To be documented)*
+
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| *(To be documented)* | | |
+
+
+## Sources
+
+*(To be documented)*
+
 
 ## Overview
 
@@ -21,6 +64,7 @@ Clean-label poisoning attacks are a sophisticated form of [[techniques/data-pois
 > "These attacks involve the strategic injection of malicious data that appears to be benign into the training set without changing the labels that are consistent with the data. Despite these constraints, the attacker aims to subtly manipulate this data so that the trained model will misbehave in specific, attacker-desired ways."
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 61, 79
+
 
 ## Why Clean-Label Attacks Matter
 
@@ -34,6 +78,7 @@ Clean-label attacks are **significantly harder to detect** than traditional pois
 This makes clean-label poisoning **the most challenging poisoning attack to defend against**.
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 79
+
 
 ## Attack Approaches
 
@@ -105,6 +150,7 @@ poison, poison_labels = attack.poison(base_instances)  # e.g., airplanes
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 80  
 > Example: https://github.com/Trusted-AI/adversarial-robustness-toolbox/blob/main/notebooks/poisoning_attack_clean_label_backdoor.ipynb
 
+
 ## Technical Requirements
 
 ### Model Wrapper
@@ -133,6 +179,7 @@ Feature collision attacks require identifying the target layer:
 - May require experimentation to find optimal layer
 - Typically later layers that capture high-level features
 
+
 ## Attack Scenarios
 
 ### Bank Cheque Fraud
@@ -146,6 +193,7 @@ Manipulate review classification to favor specific brands/products.
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 79-80
 
+
 ## Detection Challenges
 
 > "Combining efficiency and avoiding detection are challenging problems for attackers to solve but also for defenders to prevent or detect."
@@ -157,6 +205,7 @@ Manipulate review classification to favor specific brands/products.
 - Perturbations are imperceptible
 - Data appears statistically normal
 - Requires model-aware defenses (not just data inspection)
+
 
 ## Hybrid Attacks
 
@@ -173,6 +222,7 @@ Clean-label techniques can combine with backdoors:
 
 See [[techniques/backdoor-poisoning]] for trigger mechanics.
 
+
 ## Tooling
 
 ### Adversarial Robustness Toolbox (ART)
@@ -187,25 +237,3 @@ See [[techniques/backdoor-poisoning]] for trigger mechanics.
 - Useful for testing model robustness
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 79-80
-
-## Related
-
-**Category:**
-- [[techniques/data-poisoning-attacks]] — Parent attack class
-
-**Can combine with:**
-- [[techniques/backdoor-poisoning]] — Clean-label backdoors
-
-**Mitigated by:**
-- [[mitigations/mlops-security]] — Data lineage and versioning
-- [[mitigations/adversarial-training]] — Include clean-label examples
-- [[mitigations/activation-clustering]] — Detect abnormal activations
-- [[mitigations/spectral-signature]] — Frequency domain analysis
-- [[mitigations/roni-defense]] — Performance-based rejection
-
-**ATLAS Mapping:**
-- [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data
-
-**References:**
-- Poison Frogs Paper: https://arxiv.org/abs/1804.00792
-- ART Clean-Label Backdoor: https://github.com/Trusted-AI/adversarial-robustness-toolbox/blob/main/notebooks/poisoning_attack_clean_label_backdoor.ipynb

@@ -14,11 +14,10 @@ created: 2026-02-12
 updated: 2026-02-14
 ---
 
-# AI Infrastructure Attacks
-
 ## Summary
 
 AI infrastructure attacks target the operational pipelines, storage systems, compute infrastructure, and supply chains that build, deploy, and manage AI models—rather than attacking the models themselves. These attacks exploit misconfigurations in cloud storage, compromised CI/CD pipelines, vulnerable container registries, insecure APIs, and malicious dependencies to achieve code execution, model theft, data poisoning, or service disruption. Infrastructure often represents a softer target than sophisticated adversarial ML techniques, enabling attackers to bypass model-level defenses entirely by compromising the surrounding ecosystem.
+
 
 ## Mechanism
 
@@ -110,6 +109,7 @@ Attackers chain multiple infrastructure weaknesses for maximum impact:
 
 **Key insight:** "Defenders think in lists. Attackers think in graphs."—John Lambert, Microsoft Security Expert
 
+
 ## Preconditions
 
 **Access Requirements:**
@@ -122,6 +122,7 @@ Attackers chain multiple infrastructure weaknesses for maximum impact:
 - Familiarity with cloud provider configurations (AWS IAM, S3 policies, etc.)
 - Knowledge of ML frameworks and serialization formats (Pickle vulnerabilities)
 - Container security and Kubernetes concepts (for containerized deployments)
+
 
 ## Impact
 
@@ -142,6 +143,7 @@ Attackers chain multiple infrastructure weaknesses for maximum impact:
 - **Credential Harvesting**: Hardcoded secrets in Git repos enable lateral movement to production systems
 - **Data Poisoning at Scale**: Compromised feature store affects multiple downstream models
 - **Supply Chain Compromise**: Malicious dependency executes code during training, exfiltrates data
+
 
 ## Detection
 
@@ -172,11 +174,13 @@ Attackers chain multiple infrastructure weaknesses for maximum impact:
 - Anomalous network traffic from inference services (model exfiltration)
 - Timing side-channel indicators (GPU.zip compression analysis)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | [[case-studies/war-story-silent-backdoor]] | [[frameworks/atlas/tactics/persistence]] | Attacker modified CI/CD pipeline to inject backdoored model via Pickle deserialization; unsigned artifacts and mutable tags enabled production deployment |
+
 
 ## Mitigations
 
@@ -192,6 +196,7 @@ Attackers chain multiple infrastructure weaknesses for maximum impact:
 | AML.M0015 | [[mitigations/ai-api-security]] | Rate limiting (per-user quotas, adaptive throttling), strong authentication (OAuth, mTLS), input validation, minimal error disclosure, API gateway integration |
 | | [[mitigations/gpu-security]] | GPU memory clearing after workloads, firmware/driver updates for CVE patching, workload isolation (dedicated GPUs, MIG), disable compression (GPU.zip mitigation) |
 | | [[mitigations/mlops-security]] | Automated pipelines with security gates, data/model versioning, continuous monitoring, access control, model interpretability, governance with approval workflows |
+
 
 ## Sources
 

@@ -11,13 +11,12 @@ created: 2026-02-11
 updated: 2026-02-14
 ---
 
-# Agent Identity Crisis
-
 ## Summary
 
 AI agents introduce an identity crisis that legacy IAM (Identity and Access Management) systems were never designed to handle. Unlike traditional entities (human users, static servers), AI agents are dynamic, ephemeral, autonomous entities with unpredictable lifecycles. They spawn sub-agents on demand, require task-specific credentials, and operate without human supervision. This creates fundamental challenges for authentication, authorization, audit logging, and Zero Trust architectures - all of which depend on answering: "Who or what is performing this action?"
 
 Traditional IAM frameworks (OAuth 2.0, SAML 2.0) fail for agents due to four core limitations: coarse-grained static permissions, human-centric interactive flows, session-based trust models, and lack of rich verifiable context. The result is either insecure god-mode credentials or unmanageable secret sprawl, leaving agents vulnerable to compromise and organizations unable to attribute actions or enforce least privilege.
+
 
 ## Mechanism
 
@@ -54,6 +53,7 @@ Traditional IAM frameworks (OAuth 2.0, SAML 2.0) fail for agents due to four cor
 - How to create auditable log proving which agent performed which action?
 - How to prevent compromised agent from persisting beyond task completion?
 
+
 ## Preconditions
 
 - Organization deploying autonomous AI agents requiring authentication and authorization
@@ -62,6 +62,7 @@ Traditional IAM frameworks (OAuth 2.0, SAML 2.0) fail for agents due to four cor
 - Agents operate without human supervision or manual credential management
 - Need for audit trail attributing actions to specific agent identities
 - Dynamic agent lifecycle (spawning, delegation, termination)
+
 
 ## Impact
 
@@ -84,6 +85,7 @@ Traditional IAM frameworks (OAuth 2.0, SAML 2.0) fail for agents due to four cor
 - **Missing context:** Traditional tokens lack rich, verifiable context (agent goal, infrastructure posture, behavioral anomaly detection)
 - **No delegation modeling:** OAuth Client Credentials Flow represents application identity, not delegated identity (Agent-A acting on behalf of Task-123, initiated by User-Jane)
 
+
 ## Detection
 
 **Indicators of identity crisis:**
@@ -103,17 +105,20 @@ Traditional IAM frameworks (OAuth 2.0, SAML 2.0) fail for agents due to four cor
 - OAuth/SAML flows designed for human interaction being used for M2M communication
 - Lack of short-lived, automatically rotated credentials
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
 
+
 ## Mitigations
 
 | ID | Name | Description |
 |----|------|-------------|
 | | [[mitigations/workload-identity-spiffe]] | Replace secret-based authentication with platform-attested, dynamically-issued identity using SPIFFE/SPIRE for cryptographically verifiable agent identity |
+
 
 ## Sources
 

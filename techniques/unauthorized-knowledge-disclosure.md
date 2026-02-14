@@ -10,11 +10,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Unauthorized Knowledge Disclosure
 
 ## Summary
 
 Unauthorized knowledge disclosure occurs when RAG (Retrieval-Augmented Generation) systems, knowledge bases, or LLM applications leak information across tenant boundaries, privilege levels, or access control boundaries. Attackers exploit weak access segmentation, insufficient context binding, or inadequate output filtering to retrieve sensitive documents, proprietary data, or confidential information that should be restricted based on user permissions or tenant isolation policies. This attack represents a **trust boundary violation** where the retrieval system fails to enforce data access controls, allowing low-privilege users to access high-privilege knowledge or one tenant to access another tenant's proprietary information.
+
 
 ## Mechanism
 
@@ -89,6 +89,7 @@ Attackers exploit the **vector embedding space** to retrieve semantically simila
 
 **Mitigation challenge:** Semantic similarity does not respect access control boundaries—two documents can be semantically similar but have different permission requirements.
 
+
 ## Preconditions
 
 - Target RAG system or knowledge base accessible to attacker (as authenticated user or via API)
@@ -98,6 +99,7 @@ Attackers exploit the **vector embedding space** to retrieve semantically simila
 - Lack of output filtering to redact unauthorized information before delivery
 - Metadata-based access control with exploitable logic or missing validation
 - Documents containing sensitive information (PII, proprietary data, confidential business information) stored in shared knowledge base
+
 
 ## Impact
 
@@ -122,6 +124,7 @@ Attackers exploit the **vector embedding space** to retrieve semantically simila
 - **High** for single-tenant systems with weak role-based access to knowledge
 - **Critical** for multi-tenant SaaS RAG platforms with cross-tenant data leakage risk
 
+
 ## Detection
 
 - Unusual query patterns targeting topics outside user's normal access scope (e.g., low-privilege user querying executive-level topics)
@@ -134,11 +137,13 @@ Attackers exploit the **vector embedding space** to retrieve semantically simila
 - Output containing information from restricted documents flagged by content-aware monitoring
 - Failed access control checks logged (attempts to access documents without proper permissions)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -152,6 +157,7 @@ Attackers exploit the **vector embedding space** to retrieve semantically simila
 | AML.M0015 | [[mitigations/rate-limiting-and-throttling]] | Limits attacker's ability to systematically extract large volumes of restricted knowledge |
 | | [[mitigations/telemetry-and-monitoring-architecture]] | Logs all retrieval attempts with user context and access control decisions for auditing and incident response |
 | | [[mitigations/embedding-integrity-verification]] | Ensures embedding space respects access boundaries, prevents proximity-based unauthorized retrieval |
+
 
 ## Sources
 

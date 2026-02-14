@@ -11,11 +11,11 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Missing Evaluation Gates
 
 ## Summary
 
 Missing evaluation gates occur when ML models are deployed to production without adequate security testing, validation checkpoints, or approval workflows in the CI/CD pipeline. This technique exploits the absence of mandatory pre-deployment security gates—such as adversarial robustness testing, safety benchmarks, bias assessment, or red team validation—to ship vulnerable, poisoned, backdoored, or policy-violating models directly to users. Without evaluation gates, insecure models bypass detection that would normally occur in a defense-in-depth development lifecycle, creating a deployment governance vulnerability where technical security failures reach production undetected.
+
 
 ## Mechanism
 
@@ -72,6 +72,7 @@ Missing evaluation gates occur when ML models are deployed to production without
 - **Test coverage blindness**: Functional tests pass even when security vulnerabilities exist
 - **Metrics misalignment**: Deployment gates check accuracy/performance, not adversarial robustness
 
+
 ## Preconditions
 
 - Organization deploys ML models via CI/CD pipeline
@@ -79,6 +80,7 @@ Missing evaluation gates occur when ML models are deployed to production without
 - Model promotion (dev → staging → prod) is automated without human approval checkpoints
 - Attacker has access to introduce vulnerabilities during development (insider threat, supply chain compromise, or compromised training data pipeline)
 - No compensating controls exist in production (runtime monitoring may detect but not prevent initial deployment)
+
 
 ## Impact
 
@@ -105,6 +107,7 @@ Missing evaluation gates occur when ML models are deployed to production without
 - Deployment scale (number of users affected)
 - Presence of compensating controls (runtime monitoring, output filtering)
 
+
 ## Detection
 
 **Indicators of missing evaluation gates:**
@@ -127,11 +130,13 @@ Missing evaluation gates occur when ML models are deployed to production without
 - Poisoned or backdoored models detected only after user reports or external research
 - Emergency model rollbacks due to safety failures that should have been caught pre-deployment
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Mitigations
 
@@ -142,6 +147,7 @@ Missing evaluation gates occur when ML models are deployed to production without
 | | [[mitigations/mlops-security]] | Approval gates, testing frameworks, and governance controls enforce security validation before promotion |
 | | [[mitigations/red-team-continuous-testing]] | Ongoing adversarial testing identifies vulnerabilities before production deployment |
 | AML.M0026 | [[mitigations/ab-testing-validation]] | Reference model comparison detects behavioral anomalies from poisoning or backdoors before full deployment |
+
 
 ## Sources
 

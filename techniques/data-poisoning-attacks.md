@@ -19,11 +19,10 @@ created: 2026-02-12
 updated: 2026-02-14
 ---
 
-# Data Poisoning Attacks
-
 ## Summary
 
 Data poisoning attacks deliberately corrupt training data to manipulate AI model behavior, causing models to be sabotaged (availability), subtly compromised (integrity), or implanted with hidden vulnerabilities (backdoors). Because ML models learn patterns directly from training data, compromising the data foundation compromises the entire system. Poisoned models can affect all downstream instances trained on corrupted data, making this a high-leverage attack with persistent effects that survive until the model is retrained on clean data.
+
 
 ## Mechanism
 
@@ -110,6 +109,7 @@ Technique selection is driven by adversarial ROI calculation balancing:
 - **Stealth requirement** — High stealth: backdoors, clean-label, incremental; low stealth: availability, bulk injection
 - **Cost/effort vs. benefit** — Successful poisoning offers high ROI by compromising model foundationally across all instances
 
+
 ## Preconditions
 
 - Access to training data pipeline (direct data manipulation, influence over labeling process, compromised annotation platform, or ability to inject data via public-facing channels)
@@ -118,6 +118,7 @@ Technique selection is driven by adversarial ROI calculation balancing:
 - For online learning: continuous access to data input channels
 - For clean-label attacks: sophisticated understanding of model architecture and feature space
 - Knowledge of training data distribution helps craft stealthier poison samples
+
 
 ## Impact
 
@@ -137,6 +138,7 @@ Technique selection is driven by adversarial ROI calculation balancing:
 
 **National Security:**
 - SANS Institute (2021) and US Naval Institute (2022) highlighted poisoning as major threat to military AI
+
 
 ## Detection
 
@@ -165,6 +167,7 @@ Technique selection is driven by adversarial ROI calculation balancing:
 - Focus on less monitored pipeline parts (third-party data sources, initial collection before validation)
 - Adaptive attacks: switch technique if one type detected/blocked
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
@@ -180,6 +183,7 @@ Technique selection is driven by adversarial ROI calculation balancing:
 **VirusTotal Malware Classifier Poisoning (2020):** Attacker used metamorphic engine to generate numerous syntactically diverse but semantically identical ransomware variants (98% code similarity), uploaded to VirusTotal over time. ML classifiers consuming VirusTotal feeds were poisoned, reducing malware detection accuracy.
 
 **NCC Group Facial Authentication PoC (2023):** Demonstrated data poisoning against TSA PreCheck facial recognition pilots using subtly altered facial images during training, compromising system accuracy.
+
 
 ## Mitigations
 
@@ -201,6 +205,7 @@ Technique selection is driven by adversarial ROI calculation balancing:
 | | [[mitigations/mlops-security]] | Data versioning, lineage, access controls, pipeline automation with security checkpoints |
 | | [[mitigations/roni-defense]] | Reject training samples that would degrade model performance on trusted validation set |
 | | [[mitigations/input-validation-transformation]] | Transform and normalize inputs to neutralize adversarial perturbations in data pipeline |
+
 
 ## Sources
 

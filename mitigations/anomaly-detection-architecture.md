@@ -11,7 +11,7 @@ tags:
   - source/securing-ai-agents
 maturity: draft
 created: 2026-02-12
-updated: 2026-02-14
+updated: 2026-02-15
 ---
 # Anomaly Detection Architecture
 
@@ -30,6 +30,7 @@ This control addresses the following security issues across multiple boundaries:
 
 **Data/Knowledge Boundary:**
 - **[[techniques/data-poisoning-attacks|Data Poisoning Attacks]]**: AI-based anomaly detection on data features, labels, and model update patterns flags suspicious training samples
+- **AML.T0020 [[techniques/backdoor-poisoning|Backdoor Poisoning]]**: Detects anomalous training samples with embedded triggers, monitors for suspicious patterns in data features and labels indicating backdoor injection attempts
 - **[[techniques/rag-data-poisoning|RAG Data Poisoning]]**: Identifies anomalous retrieval patterns and suspicious document access
 - **[[techniques/embedding-poisoning|Embedding Poisoning]]**: Detects unusual embedding distributions and manipulation attempts
 - **[[techniques/vector-embedding-weaknesses]]**: Tracks cosine-similarity distribution per user; alerts on sudden shift indicating possible embedding inversion attack; monitors for cross-tenant query patterns and unauthorized access attempts
@@ -40,6 +41,7 @@ This control addresses the following security issues across multiple boundaries:
 - **[[techniques/tool-privilege-escalation|Tool Privilege Escalation]]**: Detects unusual tool usage patterns, privilege escalation attempts, and unauthorized tool invocations
 - **[[techniques/agent-goal-hijack|Agent Goal Hijacking]]**: Identifies deviations from expected agent behavior and goal manipulation
 - **[[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Detects dangerous tool usage patterns and argument anomalies
+- **[[techniques/react-security-risks]]**: Continuous adversarial monitoring detects ReAct agent vulnerabilities through anomalous reasoning traces and tool invocation patterns
 - **[[techniques/weak-access-segmentation|Weak Access Segmentation]]**: Detects anomalous access patterns (cross-tenant queries, off-hours access from unusual locations, sudden query volume spikes), privilege escalation attempts, and repeated authorization failures indicating probing
 
 **Cross-Boundary:**
@@ -149,6 +151,240 @@ System Events → Log Aggregation → Detection Pipeline → Alerting
 - **False Positive Rate**: Percentage of alerts that are false positives
 - **Mean Time to Detection**: Average time from attack start to detection
 - **Coverage Metrics**: Percentage of system components monitored
+
+### Backdoor Training Data Anomaly Detection
+
+**Detect backdoor poisoning attempts during model training:**
+
+Backdoor attacks introduce malicious triggers into training data that models learn to associate with attacker-controlled outputs. Anomaly detection can identify suspicious training samples before they compromise model integrity.
+
+**Detection Signals:**
+
+1. **Trigger Pattern Indicators:**
+   - Images with unusual pixel patterns (e.g., cyan squares, checkerboard overlays, specific image patches)
+   - Text with repetitive token sequences or embedded markers
+   - Data samples with consistent anomalous features across multiple instances
+
+2. **Label Inconsistencies:**
+   - Training samples with labels that contradict expected feature-label relationships
+   - Source class images relabeled to target class (e.g., airplanes labeled as birds)
+   - High confidence predictions from baseline model that disagree with training labels
+
+3. **Statistical Outliers:**
+   - Training samples that deviate significantly from class distribution
+   - Unusual feature vectors compared to other samples in same class
+   - Samples with anomalous pixel intensity distributions or spectral signatures
+
+4. **Model Update Patterns:**
+   - Sudden accuracy improvements on specific subsets of data (backdoor working)
+   - Model weight updates that don't match expected gradient descent patterns
+   - Activation patterns during training that indicate backdoor neuron development
+
+**Implementation:**
+
+```python
+class BackdoorTrainingDataDetector:
+    """Detect backdoor poisoning in training datasets"""
+    
+    def __init__(self, baseline_model, reference_clean_dataset):
+        self.baseline_model = baseline_model
+        self.reference_distribution = self._compute_distribution(reference_clean_dataset)
+    
+    def detect_poisoned_samples(self, training_batch):
+        """
+        Multi-signal backdoor detection for training data
+        Returns: (is_anomalous: bool, signals: list, risk_score: float, flagged_samples: list)
+        """
+        anomaly_signals = []
+        flagged_samples = []
+        risk_score = 0.0
+        
+        # Signal 1: Label prediction disagreement
+        for sample in training_batch:
+            baseline_pred = self.baseline_model.predict(sample.features)
+            if baseline_pred != sample.label:
+                flagged_samples.append({
+                    'sample_id': sample.id,
+                    'reason': 'label_disagreement',
+                    'baseline_prediction': baseline_pred,
+                    'training_label': sample.label,
+                    'confidence': 0.7
+                })
+                anomaly_signals.append("label_disagreement")
+                risk_score += 0.3
+        
+        # Signal 2: Statistical outlier detection
+        outliers = self._detect_feature_outliers(training_batch)
+        if outliers:
+            flagged_samples.extend(outliers)
+            anomaly_signals.append("feature_outliers")
+            risk_score += 0.4
+        
+        # Signal 3: Visual trigger pattern detection (for image data)
+        if self._is_image_data(training_batch):
+            trigger_candidates = self._detect_visual_triggers(training_batch)
+            if trigger_candidates:
+                flagged_samples.extend(trigger_candidates)
+                anomaly_signals.append("visual_triggers")
+                risk_score += 0.5
+        
+        # Signal 4: Relabeling pattern detection
+        relabeling_pattern = self._detect_relabeling_pattern(training_batch)
+        if relabeling_pattern:
+            anomaly_signals.append("systematic_relabeling")
+            risk_score += 0.6
+        
+        is_anomalous = risk_score > 0.5 or len(flagged_samples) > len(training_batch) * 0.05
+        
+        return is_anomalous, anomaly_signals, risk_score, flagged_samples
+    
+    def _detect_feature_outliers(self, training_batch):
+        """Detect samples with anomalous feature distributions"""
+        from sklearn.ensemble import IsolationForest
+        
+        features = np.array([sample.features for sample in training_batch])
+        
+        # Fit isolation forest
+        detector = IsolationForest(contamination=0.05, random_state=42)
+        outlier_labels = detector.fit_predict(features)
+        
+        # Flag outliers
+        outliers = []
+        for i, label in enumerate(outlier_labels):
+            if label == -1:  # Outlier
+                outliers.append({
+                    'sample_id': training_batch[i].id,
+                    'reason': 'statistical_outlier',
+                    'confidence': 0.6
+                })
+        
+        return outliers
+    
+    def _detect_visual_triggers(self, training_batch):
+        """Detect visual backdoor triggers in images"""
+        trigger_candidates = []
+        
+        for sample in training_batch:
+            img = sample.image
+            
+            # Check for common trigger patterns
+            # 1. Solid color patches (e.g., cyan square in corner)
+            corners = self._extract_corner_patches(img)
+            for corner_name, patch in corners.items():
+                if self._is_solid_color_patch(patch):
+                    trigger_candidates.append({
+                        'sample_id': sample.id,
+                        'reason': f'solid_color_patch_{corner_name}',
+                        'patch_color': self._get_dominant_color(patch),
+                        'confidence': 0.7
+                    })
+            
+            # 2. Checkerboard patterns
+            if self._has_checkerboard_pattern(img):
+                trigger_candidates.append({
+                    'sample_id': sample.id,
+                    'reason': 'checkerboard_pattern',
+                    'confidence': 0.8
+                })
+            
+            # 3. Specific watermark/logo detection
+            if self._has_embedded_image(img):
+                trigger_candidates.append({
+                    'sample_id': sample.id,
+                    'reason': 'embedded_image_trigger',
+                    'confidence': 0.6
+                })
+        
+        return trigger_candidates
+    
+    def _detect_relabeling_pattern(self, training_batch):
+        """Detect systematic relabeling (source→target class backdoor)"""
+        # Group samples by predicted label (from baseline)
+        from collections import defaultdict
+        
+        predicted_groups = defaultdict(list)
+        for sample in training_batch:
+            baseline_pred = self.baseline_model.predict(sample.features)
+            predicted_groups[baseline_pred].append(sample)
+        
+        # Check if any predicted class has >80% samples relabeled to same target
+        for source_class, samples in predicted_groups.items():
+            if len(samples) < 5:  # Need sufficient samples
+                continue
+            
+            target_labels = [s.label for s in samples]
+            label_counts = Counter(target_labels)
+            most_common_label, count = label_counts.most_common(1)[0]
+            
+            # If most common label is NOT the predicted class and >80% relabeled
+            if most_common_label != source_class and count > len(samples) * 0.8:
+                return {
+                    'source_class': source_class,
+                    'target_class': most_common_label,
+                    'relabeling_rate': count / len(samples),
+                    'affected_count': count
+                }
+        
+        return None
+    
+    def _extract_corner_patches(self, img, patch_size=5):
+        """Extract corner patches from image"""
+        h, w = img.shape[:2]
+        return {
+            'top_left': img[:patch_size, :patch_size],
+            'top_right': img[:patch_size, -patch_size:],
+            'bottom_left': img[-patch_size:, :patch_size],
+            'bottom_right': img[-patch_size:, -patch_size:]
+        }
+    
+    def _is_solid_color_patch(self, patch, threshold=0.05):
+        """Check if patch is solid color (low variance)"""
+        std = np.std(patch)
+        return std < threshold
+    
+    def _get_dominant_color(self, patch):
+        """Get dominant color in patch"""
+        return tuple(np.mean(patch, axis=(0, 1)).astype(int))
+
+# Integration in training pipeline
+@training_pipeline.before_batch
+def check_backdoor_anomalies(training_batch):
+    """Pre-training anomaly check for backdoor detection"""
+    
+    detector = BackdoorTrainingDataDetector(baseline_model, reference_dataset)
+    is_anomalous, signals, risk_score, flagged_samples = detector.detect_poisoned_samples(training_batch)
+    
+    if is_anomalous:
+        log_security_event("backdoor_training_anomaly_detected", {
+            "batch_id": training_batch.id,
+            "signals": signals,
+            "risk_score": risk_score,
+            "flagged_count": len(flagged_samples),
+            "total_samples": len(training_batch)
+        })
+        
+        if risk_score > 0.7:  # High risk - reject batch
+            raise SecurityError(
+                f"Backdoor poisoning detected in training batch: {', '.join(signals)}"
+            )
+        elif len(flagged_samples) > 0:
+            # Quarantine flagged samples for review
+            quarantine_samples(flagged_samples)
+            # Remove from batch
+            training_batch.remove_samples([s['sample_id'] for s in flagged_samples])
+```
+
+**Monitoring Dashboard:**
+
+Track backdoor detection metrics during training:
+- **Flagged sample rate:** Percentage of training samples flagged as suspicious
+- **Label disagreement rate:** Samples where training label disagrees with baseline prediction
+- **Visual trigger detections:** Count of samples with detected trigger patterns
+- **Batch rejection rate:** Training batches rejected due to high poisoning risk
+- **Quarantine queue:** Samples held for manual review before training
+
+> Source: [[sources/bibliography#Generative AI Security]], p. 172 (backdoor detection principles)
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 68-72 (backdoor mechanisms and detection)
 
 ### Privilege Escalation Detection
 

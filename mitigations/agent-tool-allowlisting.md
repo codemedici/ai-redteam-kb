@@ -4,6 +4,7 @@ tags:
   - type/mitigation
   - target/agent
   - source/ai-native-llm-security
+  - source/generative-ai-security
 maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
@@ -22,6 +23,7 @@ Agent tool allowlisting restricts agents to a narrowly scoped, explicitly approv
 | | [[techniques/unsafe-tool-invocation]] | Limits blast radius by preventing access to dangerous tools outside allowlist |
 | | [[techniques/prompt-injection]] | Reduces impact of prompt injection by limiting tools that can be invoked through injected instructions |
 | | [[techniques/agent-goal-hijack]] | Prevents hijacked agents from accessing unintended tools to achieve attacker goals |
+| | [[techniques/react-security-risks]] | Restricts ReAct agents to trusted APIs and controlled environments, preventing inappropriate information retrieval |
 
 ## Implementation
 
@@ -330,6 +332,85 @@ class SchemaValidatingAllowlist:
         return arguments
 ```
 
+### ReAct Agent Tool Allowlisting
+
+**Specific considerations for ReAct (Reasoning and Acting) paradigm agents:**
+
+ReAct agents interleave reasoning traces and actions, interfacing with external environments through tool calls. Tool allowlisting is particularly critical for ReAct architectures because the agent's reasoning process may explore many possible actions before settling on a final tool invocation—without proper allowlisting, this exploration could lead to dangerous tool access.
+
+**ReAct-Specific Allowlist Strategy:**
+
+```python
+# ReAct agent allowlist with environment-specific restrictions
+REACT_TOOL_ALLOWLISTS = {
+    "question_answering_agent": {
+        # Trusted information sources only
+        "wikipedia_api": {
+            "max_requests_per_session": 10,
+            "allowed_endpoints": ["/api/v1/search", "/api/v1/page"]
+        },
+        "trusted_knowledge_base": {
+            "max_requests_per_session": 20
+        }
+    },
+    "text_game_agent": {
+        # Simulated environment only (no external API access)
+        "game_environment": {
+            "action_types": ["move", "look", "inventory", "use_item"]
+        }
+    },
+    "web_navigation_agent": {
+        # Heavily restricted for safety
+        "browser_api": {
+            "allowed_domains": ["wikipedia.org", "example-safe-domain.com"],
+            "blocked_actions": ["submit_payment", "delete_account", "execute_script"]
+        }
+    }
+}
+```
+
+**Implementation considerations:**
+
+> "By restricting interactions to trusted and controlled environments or APIs, developers can prevent the model from retrieving inappropriate or protected information. This includes establishing a whitelist of sources and carefully monitoring interactions with external entities."
+> — [[sources/bibliography#Generative AI Security]], p. 211 (§7.3.3)
+
+**ReAct allowlist enforcement:**
+
+1. **Reasoning trace monitoring:** Monitor agent's reasoning for attempted tool invocations outside allowlist
+2. **Action filtering:** Block actions that reference non-allowlisted tools before execution
+3. **Environment isolation:** Restrict ReAct agents to sandboxed environments with limited API access
+4. **Source whitelisting:** Maintain explicit list of trusted APIs (Wikipedia, internal knowledge bases)
+5. **Progressive restriction:** Start with minimal allowlist, expand only when business need is validated
+
+**Example: Wikipedia API allowlist for Q&A ReAct agent:**
+
+```python
+def validate_react_tool_access(agent_type: str, tool_name: str, action: dict):
+    """Validate ReAct agent tool access with environment-specific rules"""
+    allowlist = REACT_TOOL_ALLOWLISTS.get(agent_type, {})
+    
+    if tool_name not in allowlist:
+        raise ToolNotPermittedError(
+            f"Tool '{tool_name}' not in allowlist for {agent_type} agent"
+        )
+    
+    # Additional validation: check action parameters
+    tool_config = allowlist[tool_name]
+    
+    # Example: Validate Wikipedia API endpoint
+    if tool_name == "wikipedia_api":
+        endpoint = action.get("endpoint")
+        if endpoint not in tool_config["allowed_endpoints"]:
+            raise ToolNotPermittedError(
+                f"Wikipedia endpoint '{endpoint}' not permitted. "
+                f"Allowed: {tool_config['allowed_endpoints']}"
+            )
+    
+    return True
+```
+
+This approach ensures ReAct agents can only access explicitly trusted information sources, preventing inappropriate or protected information retrieval through reasoning-guided tool exploration.
+
 ## Limitations & Trade-offs
 
 **Limitations:**
@@ -389,6 +470,9 @@ class SchemaValidatingAllowlist:
 
 > "Schema-based validation via policy engines (OPA): Validate tool arguments against defined schemas before execution."
 > — [[sources/bibliography#AI-Native LLM Security]], pp. 357-362
+
+> "By restricting interactions to trusted and controlled environments or APIs, developers can prevent the model from retrieving inappropriate or protected information. This includes establishing a whitelist of sources and carefully monitoring interactions with external entities."
+> — [[sources/bibliography#Generative AI Security]], p. 211 (§7.3.3 Security Considerations for ReAct)
 
 ## Related
 

@@ -29,6 +29,7 @@ Red team continuous testing is an ongoing security validation practice where ded
 | | [[techniques/agent-goal-hijack]] | Validates agent safety controls through adversarial goal manipulation testing |
 | | [[techniques/unsafe-tool-invocation]] | Discovers tool invocation vulnerabilities through systematic abuse testing |
 | AML.T0024 | [[techniques/sensitive-info-disclosure]] | Regular internal membership inference testing against production models validates privacy protections and identifies memorization leakage |
+| | [[techniques/react-security-risks]] | Regular penetration testing of ReAct agents with adversarial inputs detects vulnerabilities before deployment |
 
 ## Implementation
 

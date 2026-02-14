@@ -26,6 +26,7 @@ Human review fallback routes low-confidence or anomalous predictions to human an
 | | [[techniques/backdoor-poisoning]] | Manual review of suspicious predictions can catch backdoor activations |
 | | [[techniques/prompt-injection]] | Human review validates responses flagged as potential injection attempts |
 | AML.T0054 | [[techniques/jailbreak-policy-bypass]] | Routes outputs flagged by safety monitors to human moderators for policy compliance validation |
+| | [[techniques/react-security-risks]] | Human intervention when ReAct agent reasoning or actions exhibit concerning patterns; allows manual editing or corrective actions |
 
 ## Implementation
 

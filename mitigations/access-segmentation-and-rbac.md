@@ -32,6 +32,7 @@ Access segmentation and role-based access control (RBAC) enforce isolation bound
 | | [[techniques/sensitive-info-disclosure]] | Strict data access controls prevent unauthorized information disclosure |
 | | [[techniques/unauthorized-knowledge-disclosure]] | Enforces tenant isolation and role-based access control at knowledge base and vector search layers, preventing cross-tenant data leakage |
 | | [[techniques/weak-access-segmentation]] | Directly addresses inadequate segmentation and access control |
+| | [[techniques/react-security-risks]] | Robust access controls and data separation minimize ReAct agent exposure to APIs and protected information |
 
 ## Implementation
 

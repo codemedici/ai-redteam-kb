@@ -27,6 +27,7 @@ Behavioral monitoring tracks model performance across different data subsets, in
 | | [[techniques/model-skewing]] | Detects targeted bias injection via poisoned training data |
 | AML.T0018 | [[techniques/trojan-injection]] | Behavioral testing with diverse inputs discovers trigger-activated backdoors; output anomalies reveal Trojan activation |
 | | [[techniques/fine-tuning-poisoning]] | Continuous evaluation detects behavioral shifts from malicious fine-tuning, backdoor triggers, and RLHF safety degradation |
+| | [[techniques/agent-based-genai-security]] | Monitors autonomous LAM behavior for malicious activities, anomalies, and unintended actions through continuous monitoring and alerting |
 
 ## Implementation
 
@@ -294,6 +295,159 @@ def monitor_rag_retrieval_bias(retrieval_logs, time_window_hours=24):
     return alerts
 ```
 
+### Autonomous Agent Behavior Monitoring
+
+**Monitor LAM autonomous actions for malicious or unintended behavior:**
+
+Large Action Models (LAMs) perform autonomous actions that require continuous monitoring to detect:
+
+- **Unauthorized action patterns**: Agent attempting actions outside its permitted scope
+- **Excessive resource usage**: Anomalous API calls, data access, or tool invocations
+- **Policy violations**: Actions that violate organizational policies or user preferences
+- **Coordination anomalies**: Unexpected communication patterns between multiple agents
+
+```python
+class LAMBehaviorMonitor:
+    """Monitor autonomous agent behavior for security threats"""
+    
+    def __init__(self, agent_id: str, baseline_profile: dict):
+        self.agent_id = agent_id
+        self.baseline = baseline_profile
+        self.action_history = []
+    
+    def monitor_agent_action(self, action: dict) -> dict:
+        """
+        Monitor and alert on suspicious agent actions
+        
+        Args:
+            action: Agent action to evaluate
+        
+        Returns:
+            {
+                'allowed': bool,
+                'alerts': list,
+                'risk_score': float
+            }
+        """
+        alerts = []
+        
+        # Check 1: Action frequency anomaly
+        recent_similar_actions = self._count_recent_actions(
+            action['type'], window_minutes=10
+        )
+        baseline_frequency = self.baseline.get('action_frequency', {}).get(
+            action['type'], 0
+        )
+        
+        if recent_similar_actions > baseline_frequency * 3:  # 3x baseline
+            alerts.append({
+                'type': 'action_frequency_anomaly',
+                'severity': 'high',
+                'action_type': action['type'],
+                'count': recent_similar_actions,
+                'baseline': baseline_frequency
+            })
+        
+        # Check 2: Unauthorized action type
+        allowed_actions = self.baseline.get('allowed_action_types', [])
+        if action['type'] not in allowed_actions:
+            alerts.append({
+                'type': 'unauthorized_action_type',
+                'severity': 'critical',
+                'action_type': action['type']
+            })
+        
+        # Check 3: Unusual action parameters
+        if self._has_anomalous_parameters(action):
+            alerts.append({
+                'type': 'anomalous_action_parameters',
+                'severity': 'medium',
+                'action': action
+            })
+        
+        # Check 4: Policy violation detection
+        if self._violates_policy(action):
+            alerts.append({
+                'type': 'policy_violation',
+                'severity': 'high',
+                'action': action
+            })
+        
+        # Calculate risk score
+        risk_score = self._calculate_risk_score(alerts)
+        
+        # Log action and alerts
+        self.action_history.append({
+            'timestamp': datetime.now(),
+            'action': action,
+            'alerts': alerts,
+            'risk_score': risk_score
+        })
+        
+        # Alert security team if high risk
+        if risk_score > 0.7:
+            alert_security_team('high_risk_agent_action', {
+                'agent_id': self.agent_id,
+                'action': action,
+                'alerts': alerts,
+                'risk_score': risk_score
+            })
+        
+        # Block action if critical alerts
+        critical_alerts = [a for a in alerts if a['severity'] == 'critical']
+        allowed = len(critical_alerts) == 0
+        
+        return {
+            'allowed': allowed,
+            'alerts': alerts,
+            'risk_score': risk_score
+        }
+    
+    def _count_recent_actions(self, action_type: str, window_minutes: int) -> int:
+        """Count actions of type in recent time window"""
+        cutoff_time = datetime.now() - timedelta(minutes=window_minutes)
+        
+        return sum(
+            1 for entry in self.action_history
+            if entry['timestamp'] > cutoff_time
+            and entry['action']['type'] == action_type
+        )
+    
+    def _has_anomalous_parameters(self, action: dict) -> bool:
+        """Detect unusual action parameters"""
+        # Implementation would analyze action parameters against baseline
+        # distribution (e.g., unusually large data requests, odd timing)
+        return False  # Placeholder
+    
+    def _violates_policy(self, action: dict) -> bool:
+        """Check if action violates organizational policy"""
+        # Check against policy rules
+        policies = load_agent_policies(self.agent_id)
+        
+        for policy in policies:
+            if policy.is_violated_by(action):
+                return True
+        
+        return False
+    
+    def _calculate_risk_score(self, alerts: list) -> float:
+        """Calculate overall risk score from alerts"""
+        if not alerts:
+            return 0.0
+        
+        severity_weights = {
+            'low': 0.2,
+            'medium': 0.5,
+            'high': 0.8,
+            'critical': 1.0
+        }
+        
+        scores = [severity_weights.get(a['severity'], 0) for a in alerts]
+        
+        # Max score, capped at 1.0
+        return min(max(scores), 1.0)
+```
+
 ## Limitations & Trade-offs
 
 **Limitations:**
@@ -330,6 +484,9 @@ def monitor_rag_retrieval_bias(retrieval_logs, time_window_hours=24):
 
 > "Behavioral Monitoring: Track model performance across different data subsets; flag unexpected accuracy degradation or bias."
 > — Extracted from RAG Data Poisoning mitigation section
+
+> "The autonomous nature of LAMs necessitates continuous monitoring of their behavior to detect any malicious or unintended activities. Anomaly detection algorithms and real-time alerts can be employed to identify suspicious activities and take immediate remedial actions."
+> — [[sources/bibliography#Generative AI Security]], p. 215 (§7.4.2)
 
 ## Related
 

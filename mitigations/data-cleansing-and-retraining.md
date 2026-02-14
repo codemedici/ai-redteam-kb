@@ -6,9 +6,10 @@ tags:
   - target/rag
   - target/training-pipeline
   - source/adversarial-ai
+  - source/generative-ai-security
 maturity: draft
 created: 2026-02-14
-updated: 2026-02-14
+updated: 2026-02-15
 ---
 # Data Cleansing and Retraining
 
@@ -21,6 +22,7 @@ Data cleansing and retraining is the remediation process for recovering from dat
 | ID | Technique | Description |
 |----|-----------|-------------|
 | AML.T0020 | [[techniques/rag-data-poisoning]] | Remediates poisoned RAG corpora by removing malicious documents and re-indexing |
+| AML.T0020 | [[techniques/backdoor-poisoning]] | Eliminates backdoor triggers by removing poisoned training samples and retraining model from verified clean dataset |
 | | [[techniques/data-poisoning-attacks]] | Recovers from label flipping, trigger injection, and clean-label attacks |
 | | [[techniques/backdoor-ml-model]] | Eliminates backdoor triggers by removing poisoned training data |
 | | [[techniques/model-skewing]] | Corrects targeted bias by cleansing biased training samples |
@@ -275,6 +277,203 @@ class DataCleansingWorkflow:
         })
 ```
 
+### Backdoor-Specific Remediation
+
+**Periodic retraining on verified clean datasets to nullify backdoor effects:**
+
+Backdoor attacks embed malicious triggers during model training. Even if backdoor samples are removed, residual backdoor behavior may persist in model weights. Regular retraining from clean datasets ensures backdoors are fully overwritten.
+
+> "Periodically retraining the model on a clean and verified dataset can help nullify the effects of backdoor attacks. If a model is compromised during its initial training, retraining it on a dataset free from malicious triggers ensures that the backdoor is overwritten. However, this approach necessitates maintaining a pristine, trusted dataset and ensuring that the training pipeline remains uncompromised."
+> — [[sources/bibliography#Generative AI Security]], p. 172
+
+**Best Practices:**
+
+1. **Maintain Trusted Baseline Dataset:**
+   - Curate and continuously validate training data sources (see [[mitigations/data-provenance]])
+   - Implement data provenance tracking for all training samples
+   - Store verified clean dataset separate from production pipeline
+   - Use cryptographic checksums to verify data integrity
+   - Document data collection methodology and quality controls
+
+2. **Secure Training Pipeline:**
+   - Restrict access to training infrastructure (credential management, audit logs)
+   - Implement version control for training data and training code
+   - Audit all data contributions and transformations (who added what, when)
+   - Use cryptographic checksums to verify training data hasn't been tampered with
+   - Isolate training environment from internet to prevent external poisoning
+
+3. **Periodic Refresh Cycles:**
+   - Schedule regular model retraining on verified clean data (e.g., monthly, quarterly)
+   - Implement A/B testing between old and retrained models to detect behavior changes
+   - Monitor for behavior divergence that might indicate previous compromise
+   - Gradually phase out old models after retrained version validates successfully
+
+4. **Backdoor Testing After Retraining:**
+   - Test retrained model with known backdoor trigger patterns to verify removal
+   - Compare outputs between compromised model and retrained model on trigger inputs
+   - Validate that retrained model doesn't exhibit backdoor behavior
+   - Use automated backdoor detection tools to scan for residual triggers
+
+**Implementation Example:**
+
+```python
+class BackdoorRemediationWorkflow:
+    """Complete workflow for backdoor removal via cleansing and retraining"""
+    
+    def __init__(self, compromised_model, trusted_clean_dataset):
+        self.compromised_model = compromised_model
+        self.trusted_dataset = trusted_clean_dataset
+    
+    def execute_remediation(self):
+        """Execute end-to-end backdoor remediation"""
+        
+        # Step 1: Validate trusted dataset integrity
+        print("Validating trusted dataset...")
+        if not self._validate_dataset_integrity():
+            raise ValueError("Trusted dataset integrity check failed")
+        
+        # Step 2: Retrain from clean data
+        print("Retraining model from clean dataset...")
+        retrained_model = self._retrain_from_clean_data()
+        
+        # Step 3: Backdoor elimination testing
+        print("Testing for backdoor removal...")
+        backdoor_tests_passed = self._test_backdoor_elimination(retrained_model)
+        
+        if not backdoor_tests_passed:
+            raise ValueError("Retrained model still exhibits backdoor behavior")
+        
+        # Step 4: Performance validation
+        print("Validating retrained model performance...")
+        performance_acceptable = self._validate_performance(retrained_model)
+        
+        if not performance_acceptable:
+            raise ValueError("Retrained model performance degraded")
+        
+        # Step 5: A/B testing preparation
+        print("Preparing A/B test deployment...")
+        self._prepare_ab_test(retrained_model)
+        
+        print("✓ Backdoor remediation complete")
+        return retrained_model
+    
+    def _validate_dataset_integrity(self):
+        """Verify trusted dataset hasn't been tampered with"""
+        # Check cryptographic checksums
+        stored_checksum = load_dataset_checksum(self.trusted_dataset)
+        computed_checksum = compute_checksum(self.trusted_dataset)
+        
+        if stored_checksum != computed_checksum:
+            log_security_event("dataset_integrity_failure", {
+                "expected": stored_checksum,
+                "actual": computed_checksum
+            })
+            return False
+        
+        # Validate data provenance
+        provenance_valid = validate_data_provenance(self.trusted_dataset)
+        if not provenance_valid:
+            return False
+        
+        return True
+    
+    def _retrain_from_clean_data(self):
+        """Retrain model from scratch using clean data"""
+        model_config = self.compromised_model.get_config()
+        
+        # Initialize fresh model (random weights)
+        fresh_model = initialize_model(model_config)
+        
+        # Train on clean data
+        fresh_model.fit(
+            self.trusted_dataset,
+            epochs=model_config['epochs'],
+            validation_split=0.15,
+            callbacks=[EarlyStopping(patience=5)]
+        )
+        
+        return fresh_model
+    
+    def _test_backdoor_elimination(self, retrained_model):
+        """Test that backdoor triggers no longer work"""
+        # Load known backdoor triggers
+        backdoor_triggers = load_backdoor_test_cases()
+        
+        for trigger in backdoor_triggers:
+            # Test compromised model (should misclassify)
+            compromised_pred = self.compromised_model.predict(trigger.input)
+            
+            # Test retrained model (should classify correctly)
+            retrained_pred = retrained_model.predict(trigger.input)
+            
+            # Verify backdoor eliminated
+            if retrained_pred == trigger.backdoor_class:
+                log_security_event("backdoor_persists_after_retraining", {
+                    "trigger_id": trigger.id,
+                    "prediction": retrained_pred
+                })
+                return False
+            
+            # Verify correct classification restored
+            if retrained_pred != trigger.correct_class:
+                log_security_event("backdoor_removed_but_incorrect_classification", {
+                    "trigger_id": trigger.id,
+                    "expected": trigger.correct_class,
+                    "actual": retrained_pred
+                })
+        
+        return True
+    
+    def _validate_performance(self, retrained_model):
+        """Ensure retrained model meets performance requirements"""
+        # Evaluate on held-out test set
+        test_accuracy = retrained_model.evaluate(self.trusted_dataset.test_split)
+        
+        # Compare to compromised model baseline (on clean data)
+        baseline_accuracy = self.compromised_model.evaluate(self.trusted_dataset.test_split)
+        
+        # Acceptable if within 5% of baseline
+        performance_degradation = baseline_accuracy - test_accuracy
+        
+        if performance_degradation > 0.05:
+            log_security_event("retraining_performance_degradation", {
+                "baseline": baseline_accuracy,
+                "retrained": test_accuracy,
+                "degradation": performance_degradation
+            })
+            return False
+        
+        return True
+    
+    def _prepare_ab_test(self, retrained_model):
+        """Prepare A/B test between compromised and retrained models"""
+        # Deploy both models side-by-side
+        deploy_ab_test({
+            'model_a': self.compromised_model,
+            'model_b': retrained_model,
+            'traffic_split': 0.10,  # 10% to retrained initially
+            'duration_days': 7
+        })
+        
+        # Monitor for behavior divergence
+        setup_divergence_monitoring(['model_a', 'model_b'])
+```
+
+**Limitations:**
+
+- **Resource-intensive:** Full retraining is computationally expensive (days to weeks for large models)
+- **Requires trusted dataset:** If clean dataset is unavailable or also poisoned, remediation fails
+- **Doesn't prevent future attacks:** If training pipeline remains vulnerable, backdoors can be reintroduced
+- **May not be feasible for frequently updated models:** Continuous learning systems can't retrain from scratch regularly
+
+**Trade-offs:**
+
+- **Retrain frequency vs. cost:** More frequent retraining increases security but multiplies computational cost
+- **Clean dataset size vs. quality:** Smaller trusted dataset trains faster but may reduce model performance
+- **A/B test duration vs. risk:** Longer tests provide more validation but delay full rollout
+
+> Source: [[sources/bibliography#Generative AI Security]], p. 172
+
 ### Retraining Protocol
 
 ```python
@@ -360,6 +559,9 @@ def safe_retraining_protocol(cleaned_dataset, original_model_config):
 
 > "Data Cleansing and Retraining: Remove or correct poisoned samples; retrain model from verified clean dataset."
 > — Extracted from RAG Data Poisoning mitigation section
+
+> "Periodically retraining the model on a clean and verified dataset can help nullify the effects of backdoor attacks. If a model is compromised during its initial training, retraining it on a dataset free from malicious triggers ensures that the backdoor is overwritten. However, this approach necessitates maintaining a pristine, trusted dataset and ensuring that the training pipeline remains uncompromised."
+> — [[sources/bibliography#Generative AI Security]], p. 172
 
 ## Related
 

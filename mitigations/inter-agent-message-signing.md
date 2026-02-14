@@ -20,6 +20,7 @@ Inter-agent message signing uses cryptographic signatures to verify the authenti
 |----|-----------|-------------|
 | | [[techniques/agentic-ai-security-risks-owasp-aivss]] | Prevents agent identity impersonation and multi-agent exploitation through cryptographic verification |
 | | [[techniques/prompt-injection]] | Prevents injected instructions from masquerading as legitimate inter-agent messages |
+| | [[techniques/agent-based-genai-security]] | Secures machine-to-machine communication between LAMs through mutual authentication and data integrity checks |
 
 ## Implementation
 
@@ -431,6 +432,9 @@ class SignedWorkflowEnforcer:
 
 > "Signed workflow manifests verified against trust root prevent manipulation of coordination logic in multi-agent exploitation attacks."
 > — [[sources/bibliography#AI-Native LLM Security]], pp. 358, 363-364
+
+> "The scenario where multiple LAMs work together or interact with other systems necessitates secure machine to machine communication. Implementing secure protocols, mutual authentication, cross domain access mapping and control, and data integrity checks are key in this context."
+> — [[sources/bibliography#Generative AI Security]], p. 216 (§7.4.2)
 
 ## Related
 

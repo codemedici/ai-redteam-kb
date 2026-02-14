@@ -24,6 +24,7 @@ Security-focused LLM training fine-tunes code-generating language models on cura
 | | [[techniques/llm-code-generation-vulnerabilities]] | Reduces frequency of insecure code suggestions by training model on secure patterns |
 | AML.T0020 | [[techniques/data-poisoning-attacks]] | Makes model more resilient to poisoned training data by emphasizing secure patterns |
 | | [[techniques/backdoor-poisoning]] | Training on backdoor detection examples helps model avoid suggesting backdoored patterns |
+| | [[techniques/react-security-risks]] | Fine-tuning on domain-specific datasets constrains ReAct agent behavior within acceptable bounds; re-ranking techniques filter unsafe reasoning traces |
 
 ## Implementation
 

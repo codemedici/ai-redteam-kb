@@ -9,7 +9,7 @@ tags:
 atlas: AML.M0029
 maturity: draft
 created: 2026-02-14
-updated: 2026-02-14
+updated: 2026-02-15
 ---
 # Data Provenance
 
@@ -22,6 +22,7 @@ Data provenance tracking maintains cryptographic lineage of all data sources wit
 | ID | Technique | Description |
 |----|-----------|-------------|
 | AML.T0020 | [[techniques/rag-data-poisoning]] | Enables attribution of poisoned data to specific sources for remediation |
+| AML.T0020 | [[techniques/backdoor-poisoning]] | Tracks training data sources to identify and quarantine compromised contributions containing backdoor triggers |
 | | [[techniques/data-poisoning-attacks]] | Tracks data lineage to identify where poisoning was introduced |
 | | [[techniques/supply-chain-attacks]] | Detects compromised third-party data sources through chain-of-custody breaks |
 | | [[techniques/incremental-poisoning]] | Temporal provenance reveals gradual poisoning campaigns from specific sources |

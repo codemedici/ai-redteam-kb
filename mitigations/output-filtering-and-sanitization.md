@@ -31,6 +31,7 @@ Post-generation filtering of LLM outputs to prevent harmful content, data leakag
 | | [[techniques/training-data-memorization]] | PII detection catches memorized sensitive data reproduced in outputs |
 | | [[techniques/unauthorized-knowledge-disclosure]] | Filters LLM outputs to redact unauthorized information before delivery, catches cross-tenant or privilege-escalated knowledge leakage even if retrieval bypassed |
 | | [[techniques/vector-embedding-weaknesses]] | Post-retrieval chunk sanitizer re-scans top-k chunks for PII or toxic content before inserting into context; catches unauthorized information before LLM generation |
+| | [[techniques/react-security-risks]] | Evaluates all ReAct agent outputs for biased, toxic, or incorrect reasoning traces before public release |
 
 ## Implementation
 

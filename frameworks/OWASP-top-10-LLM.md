@@ -1,216 +1,207 @@
 ---
+title: "OWASP Top 10 for LLM Applications"
 tags:
+  - type/framework
   - source/generative-ai-security
-  - needs-review
-  - owasp
   - source/ai-native-llm-security
-  - trust-boundary/general
-  - type/methodology
+maturity: comprehensive
 created: 2026-02-12
-source: [[sources/bibliography#AI-Native LLM Security]]
-pages: "339-355"
+updated: 2026-02-14
 ---
-# OWASP Top 10 for LLM Applications: 2023 → 2025 Evolution
 
-**Timeline:**
-- 2023: First release (Version 1.0)
-- 2024: Version 1.1 (minor clarifications)
-- 2025: Major update reflecting real-world deployment + emerging threats
+# OWASP Top 10 for LLM Applications
 
-## Complete Version Mapping
+## Overview
 
-| 2023 Version                     | 2025 Version                         | Status                 | Key Changes                                             |
-| -------------------------------- | ------------------------------------ | ---------------------- | ------------------------------------------------------- |
-| LLM01: Prompt Injection          | LLM01:2025 Prompt Injection          | Retained               | Enhanced focus on indirect attacks + multimedia vectors |
-| LLM02: Insecure Output Handling  | LLM05:2025 Improper Output Handling  | Renamed + repositioned | Emphasis shifted to downstream system validation        |
-| LLM03: Training Data Poisoning   | LLM04:2025 Data and Model Poisoning  | Expanded               | Now includes RAG poisoning + fine-tuning risks          |
-| LLM04: Model DoS                 | LLM10:2025 Unbounded Consumption     | Replaced               | Broader scope: cost attacks + resource exhaustion       |
-| LLM05: Supply Chain              | LLM03:2025 Supply Chain              | **Promoted (#5→#3)**   | Increased real-world incidents                          |
-| LLM06: Sensitive Info Disclosure | LLM02:2025 Sensitive Info Disclosure | **Promoted (#6→#2)**   | Major data breaches (Samsung, healthcare)               |
-| LLM07: Insecure Plugin Design    | LLM06:2025 Excessive Agency          | Merged + expanded      | Now covers autonomous agent risks                       |
-| LLM08: Excessive Agency          | LLM06:2025 Excessive Agency          | Merged                 | Combined with plugin design risks                       |
-| LLM09: Overreliance              | LLM09:2025 Misinformation            | Renamed + expanded     | Hallucination exploitation, disinfo campaigns           |
-| LLM10: Model Theft               | *(Removed)*                          | Consolidated           | Absorbed into Sensitive Info Disclosure                 |
+The OWASP Top 10 for LLM Applications is a comprehensive risk catalog developed by the Open Web Application Security Project (OWASP) to identify and categorize the most critical security vulnerabilities in Large Language Model (LLM) applications. First released in 2023, the framework has evolved significantly to reflect real-world deployment patterns and emerging threats.
 
-## Risk Categorization Framework (Chapter 7 Deep Dive)
+**Maintained by**: OWASP Foundation  
+**Current Version**: 2025 (major update from 2023)  
+**URL**: https://owasp.org/www-project-top-10-for-large-language-model-applications/
 
-AI-Native LLM Security (Malik, Huang, Dawson, 2025) presents a five-area categorization framework for understanding OWASP Top 10 LLM risks:
+The framework is particularly valuable for:
+- Threat modeling LLM applications
+- Secure development training
+- Penetration testing checklists
+- Risk assessment and prioritization
+- Compliance demonstration
 
-### 1. Injection Flaws
-- **Prompt Injection (LLM01)** — Direct and indirect manipulation of model behavior
-- **Data Poisoning (LLM03)** — Training data corruption and RLHF preference poisoning
-- **Model Manipulation** — Fine-tuning attacks, adversarial examples, backdoor installation
+---
 
-**Core vulnerability:** LLMs cannot distinguish between legitimate instructions and malicious inputs, and training on compromised data embeds vulnerabilities.
+## Structure
 
-### 2. Broken Authentication and Session Management
-- **Insecure Plugin Design (LLM07)** — Weak authentication between LLM and plugins
-- **Confused Deputy Problem** — Plugins acting with user's OAuth tokens without proper authorization
-- **Cross-Plugin Request Forgery** — Malicious prompts triggering unintended plugin actions
+The OWASP LLM Top 10 organizes risks into ten categories, ranked by severity and prevalence in production systems. The 2025 update reflects a major shift from standalone LLMs to RAG + Agent ecosystems, introducing new attack vectors and architectural considerations.
 
-**Core vulnerability:** Stateless LLM interactions complicate traditional authentication; third-party plugins often over-privileged.
+### Evolution: 2023 → 2025
 
-### 3. Sensitive Data Exposure
-- **Training Data Leakage (LLM06)** — Model memorization enabling verbatim reproduction of training data
-- **Model Inversion** — Attackers reconstructing sensitive information from model outputs
-- **Chat History Extraction** — Exploiting context windows and caching mechanisms
+| 2023 Version | 2025 Version | Status | Key Changes |
+|--------------|--------------|--------|-------------|
+| LLM01: Prompt Injection | LLM01:2025 Prompt Injection | Retained | Enhanced focus on indirect attacks + multimedia vectors |
+| LLM02: Insecure Output Handling | LLM05:2025 Improper Output Handling | Renamed + repositioned | Emphasis shifted to downstream system validation |
+| LLM03: Training Data Poisoning | LLM04:2025 Data and Model Poisoning | Expanded | Now includes RAG poisoning + fine-tuning risks |
+| LLM04: Model DoS | LLM10:2025 Unbounded Consumption | Replaced | Broader scope: cost attacks + resource exhaustion |
+| LLM05: Supply Chain | LLM03:2025 Supply Chain | **Promoted (#5→#3)** | Increased real-world incidents |
+| LLM06: Sensitive Info Disclosure | LLM02:2025 Sensitive Info Disclosure | **Promoted (#6→#2)** | Major data breaches (Samsung, healthcare) |
+| LLM07: Insecure Plugin Design | LLM06:2025 Excessive Agency | Merged + expanded | Now covers autonomous agent risks |
+| LLM08: Excessive Agency | LLM06:2025 Excessive Agency | Merged | Combined with plugin design risks |
+| LLM09: Overreliance | LLM09:2025 Misinformation | Renamed + expanded | Hallucination exploitation, disinfo campaigns |
+| LLM10: Model Theft | *(Removed)* | Consolidated | Absorbed into Sensitive Info Disclosure |
 
-**Core vulnerability:** LLMs cannot distinguish public from private information; complex architectures make auditing difficult.
+**New Additions in 2025**:
+- **LLM07:2025 System Prompt Leakage**: Real-world prompt extraction vulnerabilities
+- **LLM08:2025 Vector and Embedding Weaknesses**: Rise of RAG architectures creating new attack vectors
 
-### 4. Broken Access Control
-- **Excessive Agency (LLM08)** — LLMs acting beyond intended scope/authority
-- **Model Theft (LLM10)** — API-based extraction of model knowledge and capabilities
-- **Privilege Escalation** — Language-driven execution bypassing authorization checks
+---
 
-**Core vulnerability:** Difficult to precisely define LLM action boundaries; creative problem-solving bypasses restrictions.
+## Key Components
 
-### 5. Security Misconfigurations in Deployment
-- **Insecure Output Handling (LLM02)** — Lack of output sanitization enabling XSS, injection attacks
-- **Model DoS (LLM04)** — Resource exhaustion through prompt engineering or sponge examples
-- **Supply Chain Vulnerabilities (LLM05)** — Compromised dependencies (redis-py incident)
-- **Overreliance (LLM09)** — Excessive trust in LLM outputs without verification
+### Risk Categorization Framework
 
-**Core vulnerability:** Deployment complexity creates configuration gaps; integration with downstream systems multiplies attack surface.
+**AI-Native LLM Security** (Malik, Huang, Dawson, 2025) presents a five-area categorization framework for understanding OWASP Top 10 LLM risks:
 
-> Source: [[sources/bibliography#AI-Native LLM Security]], p. 125-126
+#### 1. Injection Flaws
+- **Prompt Injection (LLM01)**: Direct and indirect manipulation of model behavior
+- **Data Poisoning (LLM04)**: Training data corruption and RLHF preference poisoning
+- **Model Manipulation**: Fine-tuning attacks, adversarial examples, backdoor installation
 
-## New Additions in 2025
+**Core vulnerability**: LLMs cannot distinguish between legitimate instructions and malicious inputs
 
-| Entry | Position | Rationale |
-|-------|----------|-----------|
-| **[[techniques/system-prompt-leakage|System Prompt Leakage]]** (LLM07:2025) | #7 | Real-world prompt extraction vulnerabilities |
-| **[[techniques/vector-embedding-weaknesses|Vector and Embedding Weaknesses]]** (LLM08:2025) | #8 | Rise of RAG architectures creating new attack vectors |
+---
 
-## Architecture Evolution
+#### 2. Broken Authentication and Session Management
+- **Insecure Plugin Design (LLM06)**: Weak authentication between LLM and plugins
+- **Confused Deputy Problem**: Plugins acting with user's OAuth tokens without proper authorization
+- **Cross-Plugin Request Forgery**: Malicious prompts triggering unintended plugin actions
 
-The fundamental shift driving these changes:
+**Core vulnerability**: Stateless LLM interactions complicate traditional authentication; third-party plugins often over-privileged
 
-| Aspect | 2023 Focus | 2025 Focus |
-|--------|-----------|-----------|
-| Primary Architecture | Standalone LLMs | RAG + Agent Ecosystems |
-| Data Storage | Model weights | Vector databases + Knowledge bases |
-| Integration Pattern | API endpoints | Tool-calling agents |
-| Primary Threat Vector | Direct input manipulation | Multi-stage attacks |
+---
 
-## New Attack Vector Categories
+#### 3. Sensitive Data Exposure
+- **Training Data Leakage (LLM02)**: Model memorization enabling verbatim reproduction of training data
+- **Model Inversion**: Attackers reconstructing sensitive information from model outputs
+- **Chat History Extraction**: Exploiting context windows and caching mechanisms
 
-### RAG-Specific Attacks
+**Core vulnerability**: LLMs cannot distinguish public from private information; complex architectures make auditing difficult
+
+---
+
+#### 4. Broken Access Control
+- **Excessive Agency (LLM06)**: LLMs acting beyond intended scope/authority
+- **Model Theft (absorbed into LLM02)**: API-based extraction of model knowledge and capabilities
+- **Privilege Escalation**: Language-driven execution bypassing authorization checks
+
+**Core vulnerability**: Difficult to precisely define LLM action boundaries; creative problem-solving bypasses restrictions
+
+---
+
+#### 5. Security Misconfigurations in Deployment
+- **Insecure Output Handling (LLM05)**: Lack of output sanitization enabling XSS, injection attacks
+- **Unbounded Consumption (LLM10)**: Resource exhaustion through prompt engineering or sponge examples
+- **Supply Chain Vulnerabilities (LLM03)**: Compromised dependencies
+- **Misinformation (LLM09)**: Excessive trust in LLM outputs without verification
+
+**Core vulnerability**: Deployment complexity creates configuration gaps; integration with downstream systems multiplies attack surface
+
+---
+
+### New Attack Vector Categories (2025)
+
+#### RAG-Specific Attacks
 - Vector database manipulation
 - Embedding inversion attacks
 - Retrieval poisoning
 - Context injection through knowledge bases
 
-### Agent-Based Threats
+**Related**: [[techniques/rag-data-poisoning]], [[techniques/retrieval-manipulation]]
+
+#### Agent-Based Threats
 - Tool permission abuse
 - Autonomous decision-making exploitation
 - Multi-step attack orchestration
 - Privilege escalation through agent chains
 
-### Economic Attacks
+**Related**: [[techniques/agent-goal-hijack]], [[techniques/tool-privilege-escalation]]
+
+#### Economic Attacks
 - Cost-based denial of service (Denial of Wallet)
 - Resource consumption manipulation
 - Token exhaustion strategies
 - Financial impact exploitation
 
-## Emerging Multi-Vector Attack Patterns
-
-The 2025 update recognizes sophisticated attack chains:
-- **Prompt Injection + RAG Poisoning:** Precision targeting through compromised knowledge bases
-- **System Prompt Leakage + Excessive Agency:** Credential extraction → unauthorized actions
-- **Supply Chain + Data Poisoning:** Long-term compromise through trusted components
-
-## Implementation Guidance
-
-### Immediate Actions (for orgs using 2023 guidelines)
-- Review/update risk assessments for promoted categories
-- Implement vector database security controls
-- Establish agent permission frameworks
-- Deploy system prompt protection measures
-
-### Strategic Updates
-- Expand supply chain verification programs
-- Implement cost monitoring and rate limiting
-- Develop RAG-specific security controls
-- Create agent oversight mechanisms
-
-## Related Notes
-
-- [[techniques/system-prompt-leakage|System Prompt Leakage (LLM07:2025)]]
-- [[techniques/vector-embedding-weaknesses|Vector and Embedding Weaknesses (LLM08:2025)]]
-- [[techniques/agentic-ai-security-risks-owasp-aivss|OWASP AIVSS Agentic AI Risks]]
-- [[techniques/prompt-injection|Prompt Injection and LLM Manipulation]]
-- [[techniques/data-poisoning-attacks|Data Poisoning Attacks]]
-- AI Security Landscape
-
-> Source: [[sources/bibliography#AI-Native LLM Security]], pp. 339-355
+**Related**: [[techniques/denial-of-wallet]]
 
 ---
 
-## OWASP GenAI Red Teaming — Phased Evaluation
+## Integration Points
 
-The OWASP GenAI Red Teaming Guide (2025) structures assessments into four evaluation phases, each with distinct targets:
+### OWASP GenAI Red Teaming Guide
 
-1. **Model** — Alignment, robustness, bias testing, MDLC security (model provenance, malware injection, data pipeline security). Deliverables: adversarial robustness assessment, defensive mechanism evaluation, ethics/bias analysis.
-2. **Implementation** — Bypassing guardrails (system prompts), RAG poisoning, testing controls like model firewalls/proxies.
-3. **System** — Exploitation of non-model components, supply chain vulnerabilities, standard red teaming of hosting infrastructure and data stores.
-4. **Runtime** — Business process failures, multi-agent interaction security, over-reliance, social engineering, downstream impact on consumers of generated content.
+The OWASP GenAI Red Teaming Guide (2025) structures assessments into four evaluation phases:
 
-**Quick scope questions (OWASP-aligned):**
+1. **Model**: Alignment, robustness, bias testing, MDLC security (model provenance, malware injection, data pipeline security)
+2. **Implementation**: Bypassing guardrails (system prompts), RAG poisoning, testing controls like model firewalls/proxies
+3. **System**: Exploitation of non-model components, supply chain vulnerabilities, standard red teaming of hosting infrastructure
+4. **Runtime**: Business process failures, multi-agent interaction security, over-reliance, social engineering
+
+**Quick scope questions**:
 - Which applications are business-critical or touch sensitive data?
 - Are we evaluating model behavior, app integration, system/pipeline, or runtime behavior?
 - What threat categories are top priority (prompt injection, data leakage, RAG poisoning, agent/tool risks, bias/harms)?
 
-> Source: [[sources/bibliography#Red-Teaming AI]], OWASP GenAI Red Teaming Guide (2025)
+---
 
-## Framework Cross-References
+### Framework Mappings
 
-## Mapping Approach
-
-Every finding is tagged with framework identifiers enabling:
-- **Traceability**: Link vulnerabilities to recognized attack patterns
-- **Compliance**: Demonstrate coverage for NIST AI RMF, regulatory requirements
-- **Threat intelligence**: Cross-reference with industry-standard taxonomies
-
-## Frameworks Used
-
-### MITRE ATLAS (Primary Attack Taxonomy)
-
-Findings mapped to:
+**MITRE ATLAS Integration**:
 - **Tactics**: High-level adversary objectives (e.g., AML.TA0001: AI Attack Staging)
 - **Techniques**: Specific attack methods (e.g., AML.T0051: LLM Prompt Injection)
 - **Case Studies**: Real-world incidents demonstrating pattern
 
-[[frameworks/atlas/MITRE-ATLAS|Browse ATLAS reference]] | [[frameworks/atlas/tactics|Tactics overview]] | [[frameworks/atlas/techniques|Techniques catalog]]
-
-### OWASP LLM Top 10 (Risk Framework)
-
-Findings categorized by Top 10 risk classes:
-- LLM01: Prompt Injection
-- LLM02: Sensitive Information Disclosure
-- LLM03-04: Data and Model Poisoning
-- LLM05: Supply Chain Vulnerabilities
-- LLM06: Excessive Agency
-- LLM07: System Prompt Leakage
-- LLM08: Vector and Embedding Weaknesses
-- LLM09: Misinformation
-- LLM10: Unbounded Consumption
-
-OWASP mapping details in issue pages
-
-### NIST AI RMF (Compliance Framework)
-
-Findings inform GOVERN/MAP/MEASURE/MANAGE functions:
+**NIST AI RMF Alignment**:
 - **MEASURE**: Demonstrated gaps in robustness, security, resilience
 - **MANAGE**: Evidence for risk treatment decisions
 - **MAP**: Expanded understanding of system risks and attack surface
 
-Reports include gap analysis showing which RMF controls are validated vs. not-tested.
+**Application-Level Integration**:
+Reports include framework references for each finding, enabling traceability to recognized attack patterns and compliance demonstration.
 
-## Framework Integration in Reports
+---
 
-Each finding includes "Framework References" section with specific IDs. Compliance matrix shows:
-- Coverage: Which framework items were tested
-- Gaps: Items out of scope for engagement
-- Findings distribution: Heat map of vulnerabilities per framework category
+### Vault Integration
 
-**Does not duplicate framework content**: Links to docs taxonomy for technical depth; reports focus on findings and mapping only.
+**Techniques Library**:
+- [[techniques/prompt-injection|Prompt Injection (LLM01)]]
+- [[techniques/sensitive-info-disclosure|Sensitive Information Disclosure (LLM02)]]
+- [[techniques/supply-chain-model-poisoning|Supply Chain Compromise (LLM03)]]
+- [[techniques/data-poisoning-attacks|Data and Model Poisoning (LLM04)]]
+- [[techniques/insufficient-output-encoding|Improper Output Handling (LLM05)]]
+- [[techniques/agent-goal-hijack|Excessive Agency (LLM06)]]
+- [[techniques/system-prompt-leakage|System Prompt Leakage (LLM07)]]
+- [[techniques/vector-embedding-weaknesses|Vector and Embedding Weaknesses (LLM08)]]
+- [[techniques/overreliance-on-model-outputs|Misinformation (LLM09)]]
+- [[techniques/denial-of-wallet|Unbounded Consumption (LLM10)]]
+
+**Playbooks**:
+- [[playbooks/ai-threat-exposure-review|AI Threat Exposure Review]]
+- [[playbooks/llm-application-red-team|LLM Application Red Team]]
+- [[playbooks/rag-retrieval-assessment|RAG Security Assessment]]
+
+**Mitigations**:
+- [[mitigations/input-validation-patterns|Input Validation]]
+- [[mitigations/output-filtering-and-sanitization|Output Filtering]]
+- [[mitigations/access-segmentation-and-rbac|Access Segmentation]]
+- [[mitigations/llm-gateway-architecture|LLM Gateway Architecture]]
+
+---
+
+## Sources
+
+> "Traditional frameworks, with their focus on predictable execution paths and data flows, struggle to model this inherent unpredictability. They lack the mechanisms to anticipate emergent behavior that can result from the complex interactions between agents, their environment, and the non-deterministic outputs of LLMs."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 125-126
+
+> "The fundamental shift driving these changes: Primary Architecture 2023 Focus → 2025 Focus: Standalone LLMs → RAG + Agent Ecosystems"
+> — [[sources/bibliography#AI-Native LLM Security]], p. 339-355
+
+> "OWASP mapping details enable traceability: Link vulnerabilities to recognized attack patterns, demonstrate coverage for NIST AI RMF and regulatory requirements, cross-reference with industry-standard taxonomies."
+> — [[sources/bibliography#Red-Teaming AI]], OWASP GenAI Red Teaming Guide

@@ -217,7 +217,7 @@ def create_task_secure():
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

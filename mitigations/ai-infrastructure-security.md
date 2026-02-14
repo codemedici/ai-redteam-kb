@@ -35,7 +35,7 @@ Many teams invest heavily in model robustness but overlook the security of the s
 
 | ID | Technique | Description |
 |----|-----------|-------------|
-| | [[techniques/]] | |
+| |  | |
 
 ## Implementation
 
@@ -53,7 +53,7 @@ Many teams invest heavily in model robustness but overlook the security of the s
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

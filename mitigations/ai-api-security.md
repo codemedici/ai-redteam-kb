@@ -274,7 +274,7 @@ def sanitize_input(user_input):
     injection_patterns = [
         r'ignore\s+previous\s+instructions',
         r'system\s+prompt',
-        r'<\|im_start\|>',
+        r'<|im_start|>',
         r'\\n\\nHuman:',
     ]
     

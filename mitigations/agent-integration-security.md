@@ -207,7 +207,7 @@ class PromptInjectionDetector:
         r'you\s+are\s+(now|a)\s+',
         r'forget\s+everything',
         r'system\s*:\s*',
-        r'<\|.*?\|>',  # Special tokens
+        r'<|.*?|>',  # Special tokens
         r'\[INST\]|\[/INST\]',  # Instruction delimiters
     ]
     

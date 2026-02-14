@@ -89,8 +89,8 @@ The model generalizes from demonstrations to decompose new tasks without task-sp
 
 | Technique | Relevance | ART Integration |
 |-----------|-----------|-----------------|
-| [[techniques/prompt-injection\|Prompt Injection]] | Detection of malicious prompts in IAM context | ART can analyze user input patterns that may indicate injection attempts |
-| [[techniques/data-poisoning-attacks\|Data Poisoning]] | Identifying anomalous training data in behavior models | Tool integration with anomaly detection systems |
+| [[techniques/prompt-injection|Prompt Injection]] | Detection of malicious prompts in IAM context | ART can analyze user input patterns that may indicate injection attempts |
+| [[techniques/data-poisoning-attacks|Data Poisoning]] | Identifying anomalous training data in behavior models | Tool integration with anomaly detection systems |
 | Multi-step reasoning | Core to ART | Chain of Thought combined with tool outputs |
 | External tool invocation | Core to ART | Pause-and-resume pattern for tool integration |
 

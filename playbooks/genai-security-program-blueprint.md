@@ -97,7 +97,7 @@ Organizations must choose appropriate governance structures: centralized (consis
 **Activities**:
 - Deploy vulnerability scanning (AVID, NIST NVD)
 - Create risk register (threats, impacts, mitigations)
-- Assign controls from [[mitigations/|mitigation library]]
+- Assign controls from mitigation library (see `mitigations/` folder)
 - Establish risk review cadence (quarterly)
 
 **Deliverables**:
@@ -167,13 +167,13 @@ Organizations must choose appropriate governance structures: centralized (consis
 
 | Area | Technique | Relevance |
 |------|-----------|-----------|
-| **Policy** | [[frameworks/OWASP-top-10-LLM\|OWASP Top 10 LLM]] | Risk catalog for policy development |
-| **Risk Management** | [[techniques/data-poisoning-attacks\|Data Poisoning]] | Training data corruption mitigation |
-| **Risk Management** | [[techniques/prompt-injection\|Prompt Injection]] | Input sanitization requirements |
-| **Risk Management** | [[techniques/model-extraction\|Model Theft]] | Rate limiting, watermarking controls |
-| **Development** | [[frameworks/llmops-framework\|LLMOps Framework]] | Secure AI lifecycle integration |
-| **Access Control** | [[mitigations/access-segmentation-and-rbac\|Access Segmentation]] | Role-based access control implementation |
-| **Incident Response** | [[techniques/secrets-in-prompts-and-logs\|Secrets Exposure]] | Credential management procedures |
+| **Policy** | [[frameworks/OWASP-top-10-LLM|OWASP Top 10 LLM]] | Risk catalog for policy development |
+| **Risk Management** | [[techniques/data-poisoning-attacks|Data Poisoning]] | Training data corruption mitigation |
+| **Risk Management** | [[techniques/prompt-injection|Prompt Injection]] | Input sanitization requirements |
+| **Risk Management** | [[techniques/model-extraction|Model Theft]] | Rate limiting, watermarking controls |
+| **Development** | [[frameworks/llmops-framework|LLMOps Framework]] | Secure AI lifecycle integration |
+| **Access Control** | [[mitigations/access-segmentation-and-rbac|Access Segmentation]] | Role-based access control implementation |
+| **Incident Response** | [[techniques/secrets-in-prompts-and-logs|Secrets Exposure]] | Credential management procedures |
 
 ---
 

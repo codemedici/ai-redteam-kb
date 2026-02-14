@@ -612,7 +612,7 @@ class AutomatedIncidentResponse:
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

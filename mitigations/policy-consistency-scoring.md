@@ -154,7 +154,7 @@ def score_compliance(session_id, turn, agent_response, context):
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

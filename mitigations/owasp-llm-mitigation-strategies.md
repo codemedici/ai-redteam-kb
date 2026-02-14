@@ -24,7 +24,7 @@ updated: 2026-02-14
 
 | ID | Technique | Description |
 |----|-----------|-------------|
-| | [[techniques/]] | |
+| |  | |
 
 ## Implementation
 
@@ -42,7 +42,7 @@ updated: 2026-02-14
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

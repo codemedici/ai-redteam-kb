@@ -24,7 +24,7 @@ MLOps (Machine Learning Operations) provides foundational security defenses agai
 
 | ID | Technique | Description |
 |----|-----------|-------------|
-| | [[techniques/]] | |
+| |  | |
 
 ## Implementation
 
@@ -56,7 +56,7 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

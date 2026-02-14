@@ -152,14 +152,14 @@ AI supply chains expand the attack surface far beyond traditional software, invo
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| - | [[techniques/rag-data-poisoning\|Data Poisoning]] | Training data manipulation |
-| - | [[techniques/model-tampering\|Model Tampering]] | Model artifact compromise |
-| - | [[techniques/model-extraction\|Model Extraction and Theft]] | Model IP theft |
+| - | [[techniques/rag-data-poisoning|Data Poisoning]] | Training data manipulation |
+| - | [[techniques/model-tampering|Model Tampering]] | Model artifact compromise |
+| - | [[techniques/model-extraction|Model Extraction and Theft]] | Model IP theft |
 | - | Supply Chain Compromise | Dependency and library attacks |
-| - | [[techniques/secrets-in-prompts-and-logs\|Secrets in Prompts and Logs]] | Credential exposure |
-| - | [[techniques/weak-access-segmentation\|Weak Access Segmentation]] | Insufficient access controls |
-| - | [[techniques/insecure-model-gateway-config\|Insecure Model Gateway Configuration]] | Infrastructure misconfigurations |
-| - | [[techniques/insufficient-telemetry-and-tracing\|Insufficient Telemetry and Tracing]] | Monitoring gaps |
+| - | [[techniques/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]] | Credential exposure |
+| - | [[techniques/weak-access-segmentation|Weak Access Segmentation]] | Insufficient access controls |
+| - | [[techniques/insecure-model-gateway-config|Insecure Model Gateway Configuration]] | Infrastructure misconfigurations |
+| - | [[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]] | Monitoring gaps |
 
 ## Tooling
 

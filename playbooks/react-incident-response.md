@@ -85,7 +85,7 @@ Rigorously test in controlled, simulated environment:
 
 | Technique | Relevance | ReAct Integration |
 |-----------|-----------|-------------------|
-| [[techniques/api-key-abuse\|API Key Abuse]] | Primary incident type | Multi-source correlation (logs, IP reputation, usage patterns) |
+| [[techniques/api-key-abuse|API Key Abuse]] | Primary incident type | Multi-source correlation (logs, IP reputation, usage patterns) |
 | Chain of Thought reasoning | Core to ReAct | Explicit reasoning traces before actions |
 | External tool invocation | Core to ReAct | Search API logs, lookup threat databases, execute security actions |
 | Multi-step reasoning | Essential for complex incidents | Thought → Action → Observation loop |

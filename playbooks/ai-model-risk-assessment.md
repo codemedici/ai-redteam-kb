@@ -148,11 +148,11 @@ The engagement encompasses risks of bias, fairness, performance degradation, pri
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| - | [[techniques/prompt-injection\|Prompt Injection]] | LLM-specific risks |
-| - | [[techniques/model-extraction\|Model Extraction]] | IP theft vulnerability |
-| - | [[techniques/training-data-memorization\|Training Data Memorization]] | Privacy risks |
-| - | [[techniques/adversarial-robustness\|Adversarial Robustness]] | Evasion and manipulation risks |
-| - | [[techniques/rag-data-poisoning\|Data Poisoning]] | Training data integrity |
+| - | [[techniques/prompt-injection|Prompt Injection]] | LLM-specific risks |
+| - | [[techniques/model-extraction|Model Extraction]] | IP theft vulnerability |
+| - | [[techniques/training-data-memorization|Training Data Memorization]] | Privacy risks |
+| - | [[techniques/adversarial-robustness|Adversarial Robustness]] | Evasion and manipulation risks |
+| - | [[techniques/rag-data-poisoning|Data Poisoning]] | Training data integrity |
 | - | Bias and Fairness | Discriminatory outcomes |
 | - | Model Drift | Performance degradation over time |
 

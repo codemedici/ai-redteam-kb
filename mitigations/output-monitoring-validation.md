@@ -30,7 +30,7 @@ updated: 2026-02-14
 
 | ID | Technique | Description |
 |----|-----------|-------------|
-| | [[techniques/]] | |
+| |  | |
 
 ## Implementation
 
@@ -199,7 +199,7 @@ class RequestMonitor:
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

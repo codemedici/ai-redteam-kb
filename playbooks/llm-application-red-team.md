@@ -130,16 +130,16 @@ The engagement validates whether application-level defenses can withstand realis
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| AML.T0051 | [[techniques/prompt-injection\|Prompt Injection]] | Direct and indirect injection attacks |
-| AML.T0054 | [[techniques/jailbreak-policy-bypass\|Jailbreak & Policy Bypass]] | Safety guardrail bypass |
-| AML.T0056 | [[techniques/system-prompt-leakage\|System Prompt Leakage]] | Hidden instruction extraction |
-| - | [[techniques/sensitive-info-disclosure\|Sensitive Information Disclosure]] | PII and credential exposure |
-| - | [[techniques/training-data-memorization\|Training Data Memorization]] | Training data extraction |
+| AML.T0051 | [[techniques/prompt-injection|Prompt Injection]] | Direct and indirect injection attacks |
+| AML.T0054 | [[techniques/jailbreak-policy-bypass|Jailbreak & Policy Bypass]] | Safety guardrail bypass |
+| AML.T0056 | [[techniques/system-prompt-leakage|System Prompt Leakage]] | Hidden instruction extraction |
+| - | [[techniques/sensitive-info-disclosure|Sensitive Information Disclosure]] | PII and credential exposure |
+| - | [[techniques/training-data-memorization|Training Data Memorization]] | Training data extraction |
 | - | Tool Privilege Escalation | Unauthorized tool access |
-| - | [[techniques/unsafe-tool-invocation\|Unsafe Tool Invocation]] | Tool misuse attacks |
-| - | [[techniques/agent-goal-hijack\|Agent Goal Hijacking]] | Redirecting autonomous objectives |
-| - | [[techniques/auth-context-confusion\|Authentication Context Confusion]] | Cross-user access via confused permissions |
-| - | [[techniques/insecure-prompt-assembly\|Insecure Prompt Assembly]] | Unsafe prompt construction |
+| - | [[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]] | Tool misuse attacks |
+| - | [[techniques/agent-goal-hijack|Agent Goal Hijacking]] | Redirecting autonomous objectives |
+| - | [[techniques/auth-context-confusion|Authentication Context Confusion]] | Cross-user access via confused permissions |
+| - | [[techniques/insecure-prompt-assembly|Insecure Prompt Assembly]] | Unsafe prompt construction |
 
 ## Tooling
 

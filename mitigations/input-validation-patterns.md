@@ -23,7 +23,7 @@ Input validation patterns are cross-boundary preventive controls that validate, 
 
 | ID | Technique | Description |
 |----|-----------|-------------|
-| | [[techniques/]] | |
+| |  | |
 
 ## Implementation
 
@@ -114,7 +114,7 @@ Input validation patterns are cross-boundary preventive controls that validate, 
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

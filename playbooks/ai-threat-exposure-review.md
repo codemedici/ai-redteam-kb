@@ -191,16 +191,16 @@ A comprehensive security assessment that evaluates an AI system across all four 
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| AML.T0051 | [[techniques/prompt-injection\|Prompt Injection]] | Direct and indirect manipulation testing |
-| AML.T0054 | [[techniques/jailbreak-policy-bypass\|Jailbreak & Policy Bypass]] | Safety guardrail bypass validation |
-| AML.T0056 | [[techniques/system-prompt-leakage\|System Prompt Leakage]] | Hidden instruction extraction |
-| - | [[techniques/tool-privilege-escalation\|Tool Privilege Escalation]] | Unauthorized tool access via prompts |
-| - | [[techniques/rag-data-poisoning\|RAG Data Poisoning]] | Knowledge base injection attacks |
-| - | [[techniques/agent-goal-hijack\|Agent Goal Hijacking]] | Autonomous agent objective redirection |
-| - | [[techniques/training-data-memorization\|Training Data Memorization]] | Privacy attack via data extraction |
-| AML.T0059 | [[techniques/model-extraction\|Model Extraction]] | API-based model theft attempts |
-| - | [[techniques/secrets-in-prompts-and-logs\|Secrets in Prompts and Logs]] | Credential exposure validation |
-| - | [[techniques/insufficient-telemetry-and-tracing\|Insufficient Telemetry]] | Monitoring gap identification |
+| AML.T0051 | [[techniques/prompt-injection|Prompt Injection]] | Direct and indirect manipulation testing |
+| AML.T0054 | [[techniques/jailbreak-policy-bypass|Jailbreak & Policy Bypass]] | Safety guardrail bypass validation |
+| AML.T0056 | [[techniques/system-prompt-leakage|System Prompt Leakage]] | Hidden instruction extraction |
+| - | [[techniques/tool-privilege-escalation|Tool Privilege Escalation]] | Unauthorized tool access via prompts |
+| - | [[techniques/rag-data-poisoning|RAG Data Poisoning]] | Knowledge base injection attacks |
+| - | [[techniques/agent-goal-hijack|Agent Goal Hijacking]] | Autonomous agent objective redirection |
+| - | [[techniques/training-data-memorization|Training Data Memorization]] | Privacy attack via data extraction |
+| AML.T0059 | [[techniques/model-extraction|Model Extraction]] | API-based model theft attempts |
+| - | [[techniques/secrets-in-prompts-and-logs|Secrets in Prompts and Logs]] | Credential exposure validation |
+| - | [[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry]] | Monitoring gap identification |
 
 ---
 

@@ -173,8 +173,8 @@ This pattern—loading models directly from untrusted sources without quarantine
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| [[frameworks/atlas/case-studies/poisongpt\|PoisonGPT]] | [[frameworks/atlas/tactics/persistence]] | Backdoored LLM distributed via Hugging Face with subtle misinformation trigger that survived fine-tuning |
-| [[frameworks/atlas/case-studies/malicious-models-on-hugging-face\|Malicious Models on Hugging Face]] | [[frameworks/atlas/tactics/initial-access]] | Models uploaded to Hugging Face exploiting pickle deserialization for remote code execution |
+| [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]] | [[frameworks/atlas/tactics/persistence]] | Backdoored LLM distributed via Hugging Face with subtle misinformation trigger that survived fine-tuning |
+| [[frameworks/atlas/case-studies/malicious-models-on-hugging-face|Malicious Models on Hugging Face]] | [[frameworks/atlas/tactics/initial-access]] | Models uploaded to Hugging Face exploiting pickle deserialization for remote code execution |
 | [[case-studies/deepseek-openai-api-distillation]] | [[frameworks/atlas/tactics/collection]] | DeepSeek allegedly distilled OpenAI models via API queries, demonstrating model extraction through supply chain |
 
 **Additional Documented Incidents:**

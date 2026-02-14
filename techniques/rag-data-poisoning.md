@@ -125,10 +125,10 @@ In federated learning systems where multiple participants contribute model updat
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection\|Slack AI Data Exfiltration]] | [[frameworks/atlas/tactics/exfiltration]] | Public channel message poisoned RAG corpus enabling cross-workspace data theft via indirect prompt injection |
-| [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack\|Morris II Worm]] | [[frameworks/atlas/tactics/lateral-movement]] | Self-replicating AI worm propagating through RAG systems by injecting malicious prompts into knowledge bases |
-| [[frameworks/atlas/case-studies/virustotal-poisoning\|VirusTotal Poisoning]] | [[frameworks/atlas/tactics/resource-development]] | Public dataset poisoning affecting malware detection model training via corrupted malware samples |
-| [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider\|M365 Copilot Financial Hijacking]] | [[frameworks/atlas/tactics/persistence]] | RAG poisoning replaced legitimate bank account details with attacker-controlled account in M365 Copilot responses |
+| [[frameworks/atlas/case-studies/data-exfiltration-from-slack-ai-via-indirect-prompt-injection|Slack AI Data Exfiltration]] | [[frameworks/atlas/tactics/exfiltration]] | Public channel message poisoned RAG corpus enabling cross-workspace data theft via indirect prompt injection |
+| [[frameworks/atlas/case-studies/morris-ii-worm-rag-based-attack|Morris II Worm]] | [[frameworks/atlas/tactics/lateral-movement]] | Self-replicating AI worm propagating through RAG systems by injecting malicious prompts into knowledge bases |
+| [[frameworks/atlas/case-studies/virustotal-poisoning|VirusTotal Poisoning]] | [[frameworks/atlas/tactics/resource-development]] | Public dataset poisoning affecting malware detection model training via corrupted malware samples |
+| [[frameworks/atlas/case-studies/financial-transaction-hijacking-with-m365-copilot-as-an-insider|M365 Copilot Financial Hijacking]] | [[frameworks/atlas/tactics/persistence]] | RAG poisoning replaced legitimate bank account details with attacker-controlled account in M365 Copilot responses |
 
 
 ## Mitigations

@@ -43,10 +43,10 @@ When red teaming, test boundary interfaces, not just components:
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| AML.T0020 | [[techniques/rag-data-poisoning\|Data Poisoning]] | Knowledge base/training data manipulation |
-| AML.T0051 | [[techniques/prompt-injection\|Prompt Injection]] | Instruction hijacking across boundaries |
+| AML.T0020 | [[techniques/rag-data-poisoning|Data Poisoning]] | Knowledge base/training data manipulation |
+| AML.T0051 | [[techniques/prompt-injection|Prompt Injection]] | Instruction hijacking across boundaries |
 | AML.T0043 | Backdoor Injection | Model weight manipulation |
-| AML.T0049 | [[techniques/model-extraction\|Model Extraction]] | API-based theft |
+| AML.T0049 | [[techniques/model-extraction|Model Extraction]] | API-based theft |
 | AML.T0015 | Tool Misuse | Unauthorized API/tool invocation |
 | AML.T0025 | Exfiltration | Data theft via compromised boundaries |
 

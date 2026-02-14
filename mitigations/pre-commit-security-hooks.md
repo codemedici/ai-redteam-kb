@@ -129,7 +129,7 @@ if [ -n "$PYTHON_FILES" ]; then
 fi
 
 # Get JavaScript files
-JS_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$\|\.ts$' || true)
+JS_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$|\.ts$' || true)
 
 if [ -n "$JS_FILES" ]; then
   echo "📝 Scanning JavaScript files with ESLint security plugin..."
@@ -187,7 +187,7 @@ Scan dependency changes for known CVEs:
 #!/bin/bash
 # Detect if requirements.txt or package.json changed
 
-if git diff --cached --name-only | grep -q 'requirements.txt\|package.json\|package-lock.json\|Gemfile.lock'; then
+if git diff --cached --name-only | grep -q 'requirements.txt|package.json|package-lock.json|Gemfile.lock'; then
   echo "📦 Dependencies changed, running vulnerability scan..."
   
   # Python dependencies
@@ -200,7 +200,7 @@ if git diff --cached --name-only | grep -q 'requirements.txt\|package.json\|pack
   fi
   
   # npm dependencies
-  if git diff --cached --name-only | grep -q 'package.json\|package-lock.json'; then
+  if git diff --cached --name-only | grep -q 'package.json|package-lock.json'; then
     npm audit --audit-level=high
     if [ $? -ne 0 ]; then
       echo "❌ Vulnerable npm dependencies detected"
@@ -641,7 +641,7 @@ def get_user(user_id):
 EOF
 
 git add test_sql_injection.py
-if git commit -m "Test: SQL injection" 2>&1 | grep -q "SQL injection\|semgrep"; then
+if git commit -m "Test: SQL injection" 2>&1 | grep -q "SQL injection|semgrep"; then
   echo "✅ Test 1 passed: SQL injection detected"
 else
   echo "❌ Test 1 failed: SQL injection NOT detected"
@@ -658,7 +658,7 @@ def hash_password(password):
 EOF
 
 git add test_weak_crypto.py
-if git commit -m "Test: Weak crypto" 2>&1 | grep -q "md5\|deprecated"; then
+if git commit -m "Test: Weak crypto" 2>&1 | grep -q "md5|deprecated"; then
   echo "✅ Test 2 passed: Weak crypto detected"
 else
   echo "❌ Test 2 failed: Weak crypto NOT detected"
@@ -673,7 +673,7 @@ API_KEY = "sk-1234567890abcdefghijklmnopqrstuvwxyz"
 EOF
 
 git add test_secret.py
-if git commit -m "Test: Secret" 2>&1 | grep -q "secret\|API"; then
+if git commit -m "Test: Secret" 2>&1 | grep -q "secret|API"; then
   echo "✅ Test 3 passed: Hardcoded secret detected"
 else
   echo "❌ Test 3 failed: Hardcoded secret NOT detected"

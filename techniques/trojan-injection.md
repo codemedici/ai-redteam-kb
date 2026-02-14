@@ -125,8 +125,8 @@ Exploit weaknesses in edge deployment (mobile apps, IoT devices) where model int
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| [[frameworks/atlas/case-studies/poisongpt\|PoisonGPT]] | [[frameworks/atlas/tactics/persistence]] | Trojan-injected LLM distributed via Hugging Face with backdoor that survived fine-tuning |
-| [[frameworks/atlas/case-studies/malicious-models-on-hugging-face\|Malicious Models on Hugging Face]] | [[frameworks/atlas/tactics/execution]] | Trojan models uploaded to Hugging Face exploiting pickle deserialization for RCE |
+| [[frameworks/atlas/case-studies/poisongpt|PoisonGPT]] | [[frameworks/atlas/tactics/persistence]] | Trojan-injected LLM distributed via Hugging Face with backdoor that survived fine-tuning |
+| [[frameworks/atlas/case-studies/malicious-models-on-hugging-face|Malicious Models on Hugging Face]] | [[frameworks/atlas/tactics/execution]] | Trojan models uploaded to Hugging Face exploiting pickle deserialization for RCE |
 
 
 ## Mitigations

@@ -149,7 +149,7 @@ def check_rationalization(agent_response, session_id):
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

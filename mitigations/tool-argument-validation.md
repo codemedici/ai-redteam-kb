@@ -421,7 +421,7 @@ def test_path_traversal_prevention():
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

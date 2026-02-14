@@ -132,11 +132,11 @@ This engagement tests for goal misalignment, unsafe actions, tool misuse, privil
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| - | [[techniques/agent-goal-hijack\|Agent Goal Hijacking]] | Redirecting autonomous objectives |
-| - | [[techniques/tool-privilege-escalation\|Tool Privilege Escalation]] | Unauthorized tool access |
-| - | [[techniques/unsafe-tool-invocation\|Unsafe Tool Invocation]] | Tool misuse and harmful actions |
-| - | [[techniques/prompt-injection\|Prompt Injection]] | Agent-specific injection attacks |
-| - | [[techniques/auth-context-confusion\|Authentication Context Confusion]] | Cross-user access via confused permissions |
+| - | [[techniques/agent-goal-hijack|Agent Goal Hijacking]] | Redirecting autonomous objectives |
+| - | [[techniques/tool-privilege-escalation|Tool Privilege Escalation]] | Unauthorized tool access |
+| - | [[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]] | Tool misuse and harmful actions |
+| - | [[techniques/prompt-injection|Prompt Injection]] | Agent-specific injection attacks |
+| - | [[techniques/auth-context-confusion|Authentication Context Confusion]] | Cross-user access via confused permissions |
 | - | Memory Poisoning | Corrupting agent state for persistent compromise |
 | - | Multi-Agent Coordination Attacks | Compromising agent orchestration |
 

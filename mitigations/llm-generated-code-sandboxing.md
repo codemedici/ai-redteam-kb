@@ -509,7 +509,7 @@ jobs:
       - name: Identify LLM-generated code
         run: |
           # Check commit messages for "copilot", "chatgpt", etc.
-          LLM_COMMITS=$(git log origin/main..HEAD --grep="copilot\|chatgpt\|ai-generated" --oneline)
+          LLM_COMMITS=$(git log origin/main..HEAD --grep="copilot|chatgpt|ai-generated" --oneline)
           
           if [ -n "$LLM_COMMITS" ]; then
             echo "LLM-generated code detected - running sandbox analysis"

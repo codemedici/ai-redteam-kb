@@ -336,7 +336,7 @@ apt-get upgrade docker-registry nexus artifactory
 
 # Check for security advisories
 curl -s https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-recent.json | \
-  grep -i "docker registry\|nexus\|artifactory"
+  grep -i "docker registry|nexus|artifactory"
 ```
 
 **Hardening configuration:**

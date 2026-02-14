@@ -339,7 +339,7 @@ if git diff --cached --name-only | grep 'requirements.txt' > /dev/null; then
 fi
 
 # Check if package.json changed
-if git diff --cached --name-only | grep 'package.json\|package-lock.json' > /dev/null; then
+if git diff --cached --name-only | grep 'package.json|package-lock.json' > /dev/null; then
   echo "📦 npm dependencies changed, running npm audit..."
   npm audit --audit-level=high
   

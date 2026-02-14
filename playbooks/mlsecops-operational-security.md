@@ -143,11 +143,11 @@ if np.mean(confidence_scores) < baseline_confidence * 0.9:
 
 | Technique | Relevance | MLSecOps Control |
 |-----------|-----------|------------------|
-| [[techniques/data-poisoning-attacks\|Data Poisoning]] | Training data corruption | Data integrity checks, anomaly detection |
-| [[techniques/model-tampering\|Model Tampering]] | Unauthorized model modification | Cryptographic signing, immutable registry |
-| [[techniques/supply-chain-model-poisoning\|Supply Chain Attacks]] | Compromised dependencies | Model provenance, SBOM generation |
-| [[techniques/adversarial-examples-evasion-attacks\|Adversarial Evasion]] | Runtime attacks on deployed models | Robustness testing, input validation |
-| [[techniques/model-extraction\|Model Extraction]] | API abuse for model theft | Rate limiting, query monitoring |
+| [[techniques/data-poisoning-attacks|Data Poisoning]] | Training data corruption | Data integrity checks, anomaly detection |
+| [[techniques/model-tampering|Model Tampering]] | Unauthorized model modification | Cryptographic signing, immutable registry |
+| [[techniques/supply-chain-model-poisoning|Supply Chain Attacks]] | Compromised dependencies | Model provenance, SBOM generation |
+| [[techniques/adversarial-examples-evasion-attacks|Adversarial Evasion]] | Runtime attacks on deployed models | Robustness testing, input validation |
+| [[techniques/model-extraction|Model Extraction]] | API abuse for model theft | Rate limiting, query monitoring |
 
 ## Tooling
 

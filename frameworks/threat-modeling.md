@@ -68,17 +68,17 @@ A comprehensive threat dictionary organized into four categories, mapped to indu
 
 | ID | Threat | Stage | Related Technique |
 |----|--------|-------|-------------------|
-| T06 | Data Poisoning | Dev | [[techniques/data-poisoning-attacks\|Data Poisoning]] |
-| T07 | Backdoor Attacks | Dev | [[techniques/backdoor-poisoning\|Backdoor Poisoning]] |
-| T08 | Model Tampering | Dev, Prod | [[techniques/model-tampering\|Model Tampering]] |
-| T09 | Model Theft | Dev, Prod | [[techniques/model-theft\|Model Theft]] |
-| T10 | Evasion | Prod | [[techniques/adversarial-examples-evasion-attacks\|Evasion Attacks]] |
-| T11 | Model Reprogramming | Prod | [[techniques/model-reprogramming\|Model Reprogramming]] |
-| T12 | Model Extraction | Prod | [[techniques/model-extraction\|Model Extraction]] |
-| T13 | Model Inversion | Prod | [[techniques/model-inversion-attacks\|Model Inversion]] |
-| T14 | Membership Inference | Prod | [[techniques/membership-inference\|Membership Inference]] |
-| T15 | Attribute Inference | Prod | [[techniques/attribute-inference\|Attribute Inference]] |
-| T16 | ML DoS | Prod | [[techniques/ml-dos\|ML Denial of Service]] |
+| T06 | Data Poisoning | Dev | [[techniques/data-poisoning-attacks|Data Poisoning]] |
+| T07 | Backdoor Attacks | Dev | [[techniques/backdoor-poisoning|Backdoor Poisoning]] |
+| T08 | Model Tampering | Dev, Prod | [[techniques/model-tampering|Model Tampering]] |
+| T09 | Model Theft | Dev, Prod | [[techniques/model-theft|Model Theft]] |
+| T10 | Evasion | Prod | [[techniques/adversarial-examples-evasion-attacks|Evasion Attacks]] |
+| T11 | Model Reprogramming | Prod | [[techniques/model-reprogramming|Model Reprogramming]] |
+| T12 | Model Extraction | Prod | [[techniques/model-extraction|Model Extraction]] |
+| T13 | Model Inversion | Prod | [[techniques/model-inversion-attacks|Model Inversion]] |
+| T14 | Membership Inference | Prod | [[techniques/membership-inference|Membership Inference]] |
+| T15 | Attribute Inference | Prod | [[techniques/attribute-inference|Attribute Inference]] |
+| T16 | ML DoS | Prod | [[techniques/ml-dos|ML Denial of Service]] |
 
 ---
 
@@ -86,15 +86,15 @@ A comprehensive threat dictionary organized into four categories, mapped to indu
 
 | ID | Threat | Stage | Related Technique |
 |----|--------|-------|-------------------|
-| T17 | Direct Prompt Injection | Prod | [[techniques/prompt-injection\|Prompt Injection]] |
-| T18 | Indirect Prompt Injection | Prod | [[techniques/prompt-injection#indirect-prompt-injection\|Indirect Prompt Injection]] |
-| T19 | Data Disclosure | Prod | [[techniques/sensitive-info-disclosure\|Sensitive Info Disclosure]] |
-| T20 | Insecure Output | Prod | [[techniques/insufficient-output-encoding\|Insecure Output Handling]] |
-| T21 | Excessive Agency | Prod | [[techniques/agent-goal-hijack\|Excessive Agency]] |
-| T22 | Agent Hijacking | Prod | [[techniques/agent-goal-hijack\|Agent Goal Hijacking]] |
-| T23 | Training Data Extraction | Prod | [[techniques/training-data-memorization\|Training Data Extraction]] |
-| T24 | Model Replication | Prod | [[techniques/model-extraction-llm\|Model Replication]] |
-| T25 | AI Misuse/Abuse | Prod | [[techniques/ai-misuse\|AI Misuse]] |
+| T17 | Direct Prompt Injection | Prod | [[techniques/prompt-injection|Prompt Injection]] |
+| T18 | Indirect Prompt Injection | Prod | [[techniques/prompt-injection#indirect-prompt-injection|Indirect Prompt Injection]] |
+| T19 | Data Disclosure | Prod | [[techniques/sensitive-info-disclosure|Sensitive Info Disclosure]] |
+| T20 | Insecure Output | Prod | [[techniques/insufficient-output-encoding|Insecure Output Handling]] |
+| T21 | Excessive Agency | Prod | [[techniques/agent-goal-hijack|Excessive Agency]] |
+| T22 | Agent Hijacking | Prod | [[techniques/agent-goal-hijack|Agent Goal Hijacking]] |
+| T23 | Training Data Extraction | Prod | [[techniques/training-data-memorization|Training Data Extraction]] |
+| T24 | Model Replication | Prod | [[techniques/model-extraction-llm|Model Replication]] |
+| T25 | AI Misuse/Abuse | Prod | [[techniques/ai-misuse|AI Misuse]] |
 
 ---
 
@@ -102,10 +102,10 @@ A comprehensive threat dictionary organized into four categories, mapped to indu
 
 | ID | Threat | Stage | Related Technique |
 |----|--------|-------|-------------------|
-| T26 | Supply Chain Model Compromise | Dev, Prod | [[techniques/supply-chain-model-poisoning\|Supply Chain Model Compromise]] |
-| T27 | Supply Chain Data Compromise | Dev, Prod | [[techniques/supply-chain-data-poisoning\|Supply Chain Data Compromise]] |
-| T28 | Supply Chain Package Vulnerability | Dev, Prod | [[techniques/supply-chain-package-vulnerability\|Package Vulnerabilities]] |
-| T29 | Supply Chain System Compromise | Dev, Prod | [[techniques/supply-chain-system-compromise\|System Compromise]] |
+| T26 | Supply Chain Model Compromise | Dev, Prod | [[techniques/supply-chain-model-poisoning|Supply Chain Model Compromise]] |
+| T27 | Supply Chain Data Compromise | Dev, Prod | [[techniques/supply-chain-data-poisoning|Supply Chain Data Compromise]] |
+| T28 | Supply Chain Package Vulnerability | Dev, Prod | [[techniques/supply-chain-package-vulnerability|Package Vulnerabilities]] |
+| T29 | Supply Chain System Compromise | Dev, Prod | [[techniques/supply-chain-system-compromise|System Compromise]] |
 
 ---
 

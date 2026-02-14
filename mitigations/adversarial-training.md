@@ -190,7 +190,7 @@ def generate_physical_adversarial_example(image, model, target_class):
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

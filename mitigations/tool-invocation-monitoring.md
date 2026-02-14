@@ -735,7 +735,7 @@ def execute_react_action_with_review(action: str, reasoning_context: list):
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

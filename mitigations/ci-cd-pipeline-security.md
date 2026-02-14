@@ -124,10 +124,10 @@ deploy:
   script:
     - |
       # Whitelist allowed environments
-      if [[ ! "$ENVIRONMENT" =~ ^(dev|staging|prod)$ ]]; then
-        echo "Invalid environment: $ENVIRONMENT"
-        exit 1
-      fi
+      case "$ENVIRONMENT" in
+        dev|staging|prod) ;;
+        *) echo "Invalid environment: $ENVIRONMENT"; exit 1 ;;
+      esac
       
       # Use parameterized deployment script
       ./deploy.sh --env "$ENVIRONMENT" --host "$DEPLOY_HOST"

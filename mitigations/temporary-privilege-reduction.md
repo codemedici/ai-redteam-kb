@@ -191,7 +191,7 @@ def handle_drift_detection(session_id, drift_analysis):
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

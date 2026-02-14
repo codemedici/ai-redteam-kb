@@ -22,7 +22,7 @@ Anomaly detection architecture is a cross-boundary detective control that monito
 
 | ID | Technique | Description |
 |----|-----------|-------------|
-| | [[techniques/]] | |
+| |  | |
 
 ## Implementation
 
@@ -984,7 +984,7 @@ Track API rate limiting bypass metrics:
 
 | Name | Tactic | Description |
 |------|--------|-------------|
-| | [[frameworks/atlas/tactics/]] | |
+| |  | |
 
 ## Sources
 

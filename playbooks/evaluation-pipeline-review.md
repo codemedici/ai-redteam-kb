@@ -159,15 +159,15 @@ A consultative engagement that reviews an organization's own AI testing and eval
 
 | Area | Coverage Evaluated | Expected in Pipeline |
 |------|-------------------|----------------------|
-| **Model Security** | [[techniques/prompt-injection\|Prompt Injection]] | Should be tested via adversarial campaigns |
-| **Model Security** | [[techniques/jailbreak-policy-bypass\|Jailbreak Techniques]] | Should be tested via safety guardrail validation |
-| **Model Security** | [[techniques/system-prompt-leakage\|System Prompt Extraction]] | Should be tested via leakage probes |
-| **Data/Knowledge** | [[techniques/rag-data-poisoning\|RAG Data Poisoning]] | Should be tested via malicious document injection |
-| **Data/Knowledge** | [[techniques/pii-in-corpus\|PII in Knowledge Corpus]] | Should be tested via corpus scanning |
-| **Application/Agent** | [[techniques/tool-privilege-escalation\|Tool Privilege Escalation]] | Should be tested via argument injection |
-| **Application/Agent** | [[techniques/agent-goal-hijack\|Agent Goal Hijacking]] | Should be tested via workflow manipulation |
-| **Deployment/Governance** | [[techniques/insufficient-telemetry-and-tracing\|Insufficient Telemetry]] | Should be validated via monitoring gap analysis |
-| **Deployment/Governance** | [[techniques/secrets-in-prompts-and-logs\|Secrets Exposure]] | Should be tested via secrets scanning |
+| **Model Security** | [[techniques/prompt-injection|Prompt Injection]] | Should be tested via adversarial campaigns |
+| **Model Security** | [[techniques/jailbreak-policy-bypass|Jailbreak Techniques]] | Should be tested via safety guardrail validation |
+| **Model Security** | [[techniques/system-prompt-leakage|System Prompt Extraction]] | Should be tested via leakage probes |
+| **Data/Knowledge** | [[techniques/rag-data-poisoning|RAG Data Poisoning]] | Should be tested via malicious document injection |
+| **Data/Knowledge** | [[techniques/pii-in-corpus|PII in Knowledge Corpus]] | Should be tested via corpus scanning |
+| **Application/Agent** | [[techniques/tool-privilege-escalation|Tool Privilege Escalation]] | Should be tested via argument injection |
+| **Application/Agent** | [[techniques/agent-goal-hijack|Agent Goal Hijacking]] | Should be tested via workflow manipulation |
+| **Deployment/Governance** | [[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry]] | Should be validated via monitoring gap analysis |
+| **Deployment/Governance** | [[techniques/secrets-in-prompts-and-logs|Secrets Exposure]] | Should be tested via secrets scanning |
 
 ---
 

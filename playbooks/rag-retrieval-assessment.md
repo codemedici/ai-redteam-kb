@@ -116,13 +116,13 @@ RAG architectures have become standard for making LLMs more grounded and up-to-d
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| AML.T0051 | [[techniques/prompt-injection\|Prompt Injection]] | Indirect injection via retrieved content |
-| AML.T0052 | [[techniques/rag-data-poisoning\|Data Poisoning]] | Corpus poisoning attacks |
-| - | [[techniques/retrieval-manipulation\|Retrieval Manipulation]] | Exploiting retrieval logic |
-| - | [[techniques/embedding-poisoning\|Embedding Poisoning]] | Vector similarity manipulation |
-| - | [[techniques/unauthorized-knowledge-disclosure\|Unauthorized Knowledge Disclosure]] | Information leakage via queries |
-| - | [[techniques/pii-in-corpus\|PII in Knowledge Corpus]] | Sensitive data exposure |
-| - | [[techniques/insecure-prompt-assembly\|Insecure Prompt Assembly]] | Unsafe integration of retrieved content |
+| AML.T0051 | [[techniques/prompt-injection|Prompt Injection]] | Indirect injection via retrieved content |
+| AML.T0052 | [[techniques/rag-data-poisoning|Data Poisoning]] | Corpus poisoning attacks |
+| - | [[techniques/retrieval-manipulation|Retrieval Manipulation]] | Exploiting retrieval logic |
+| - | [[techniques/embedding-poisoning|Embedding Poisoning]] | Vector similarity manipulation |
+| - | [[techniques/unauthorized-knowledge-disclosure|Unauthorized Knowledge Disclosure]] | Information leakage via queries |
+| - | [[techniques/pii-in-corpus|PII in Knowledge Corpus]] | Sensitive data exposure |
+| - | [[techniques/insecure-prompt-assembly|Insecure Prompt Assembly]] | Unsafe integration of retrieved content |
 
 ## Tooling
 

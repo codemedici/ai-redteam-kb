@@ -78,8 +78,8 @@ updated: 2026-02-14
 
 | ID | Technique | Relevance |
 |----|-----------|-----------|
-| [AML.T####] | [[techniques/technique-name\|Technique Name]] | [Brief description of relevance] |
-| [LLM##] | [[techniques/another-technique\|Another Technique]] | [Brief description] |
+| [AML.T####] | [Technique Name] | [Brief description of relevance] |
+| [LLM##] | [Another Technique] | [Brief description] |
 
 ## Tooling
 

@@ -9,11 +9,10 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Conversation Reset on Detection
-
 ## Summary
 
 Conversation reset on detection is a responsive control that automatically clears conversation context and re-establishes baseline policy enforcement when drift detection systems identify goal manipulation attempts. This mitigation provides immediate remediation for detected goal hijacking, preventing attackers from continuing to exploit conditioned agent state. By resetting context while maintaining security audit trails, this control enables agents to recover from manipulation without manual intervention.
+
 
 ## Defends Against
 
@@ -21,6 +20,7 @@ Conversation reset on detection is a responsive control that automatically clear
 |----|-----------|-------------|
 | | [[techniques/agent-goal-hijack]] | Immediately remediates detected goal manipulation by clearing conditioned context |
 | AML.T0051 | [[techniques/prompt-injection]] | Clears persistent injection effects by resetting conversation state |
+
 
 ## Implementation
 
@@ -119,13 +119,22 @@ def agent_message():
     return jsonify({"response": agent_response})
 ```
 
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
 ## Sources
 
 > "Conversation Reset on Detection: When drift detection triggers alert, automatically reset conversation context and re-establish baseline policy enforcement before allowing further interactions."
 > — Extracted from agent-goal-hijack responsive controls (AI-Native LLM Security)
-
-## Related
-
-- **Triggered by**: [[mitigations/multi-turn-behavioral-drift-detection]], [[mitigations/rationalization-language-monitoring]]
-- **Combined with**: [[mitigations/conversation-length-limits]], [[mitigations/kill-switch-and-session-termination]]
-- **Defends**: [[techniques/agent-goal-hijack]]

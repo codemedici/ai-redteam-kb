@@ -1,301 +1,41 @@
 ---
 title: Cloud AI Service Security
 tags:
-  - type/defense
+  - type/mitigation
   - source/generative-ai-security
   - needs-review
+maturity: stub
+created: 2026-02-14
+updated: 2026-02-14
 ---
+## Summary
 
-# Cloud AI Service Security
+[To be completed]
 
-# Cloud AI Service Security
+## Defends Against
 
-7.6 T op Cloud AI Service and Security
-One of the top trends we see is that most AI models and applications will be hosted
-in a cloud (Huang, 2023).
-The following are the key benefits of having your AI models and applications
-hosted in cloud environments:
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
 
-1. Scalability—Cloud providers make it easy to scale up or down computing
-resources as needed for model training and deployment. No need to manage your
-own physical infrastructure.
-2. Cost efficiency—You only pay for the resources you use. Cloud providers can
-offer cost-optimized compute instances specifically for model development.
-This reduces overall costs.
-3. Flexibility—You can choose between different machine learning frameworks,
-tools, and languages based on your requirements rather than being restricted by
-on-prem infrastructure.
-4. Accessibility—Models can be trained and deployed rapidly with minimal setup
-time. Resources are available on demand to build and experiment faster.
-5. Collaboration—Cloud-based notebooks, tools, version control integration
-enables easier collaboration between team members.
-This usually needs a Shared Responsibility Model for security.
-Shared Responsibility Model refers to the distribution of responsibilities between
-the cloud provider and customer when using cloud services. While the provider
-manages security of the cloud, network, hardware, etc., the customer must secure
-their data, platform configurations, and identity management among other things
-that reside on the cloud. Basically the provider handles security “of” the cloud while
-the customer handles security “in” the cloud. This model ensures accountability on
-both sides. Understanding this model is key when building applications or models
-using cloud platforms.
-We will discuss top cloud AI services in this section.
-7.6.1 A zure OpenAI Service
-Azure OpenAI Service is a cutting edge platform that has integrated OpenAI’s
-robust language models, including the likes of GPT 4, GPT 3.5 Turbo, and the
-Embeddings model series. Azure OpenAI Service offers diverse access methods,
-including REST APIs, Python SDK, and a web-based interface available via Azure
-OpenAI Studio.
-One of the fundamental concepts within the Azure OpenAI Service is the idea of
-prompts and completions. The completion endpoint stands as the heart of the API
-service, allowing users to interact with the model through a text in, text out interface
-and multimodal input and output.
-Azure OpenAI Service is a novel product offering on the Azure platform, align-
-ing with Azure’s resource management design. Getting started with Azure OpenAI
-is analogous to initiating any other Azure product. It involves creating a resource or
-an instance of the service within an Azure Subscription. Once an Azure OpenAI
-Resource is created, users must deploy a model to start making API calls and gen-
-erating text. The Deployment APIs facilitate this action, allowing users to select
-their desired model.
- 219
-Prompt engineering is a feature of GPT 3, GPT 3.5, and GPT 4 models within the
-Azure OpenAI Service. These models are prompt based, meaning that users com-
-municate with the model using text prompts, and the model responds accordingly.
-However, this process is intricate and sensitive, often requiring significant experi-
-ence and intuition. Crafting successful prompts is more of an art than a science,
-emphasizing the importance of prompt engineering skills.
-The Azure OpenAI Service provides access to a variety of foundation models,
-each offering distinct capabilities and price points. Some of the available models
-include GPT-4, GPT-3.5, Embeddings, DALL-E, and Whisper, each with its own
-unique features and applications.
-In summary, Azure OpenAI Service offers a plethora of models and function-
-alities. From prompt engineering to tokenization and model fine-tuning and
-deployments, the service provides a comprehensive platform for developers,
-researchers, and businesses. The availability of resources, including the Azure
-OpenAI Studio and diverse access methods, further enriches the user experience
-(Microsoft-1, 2023).
-Azure OpenAI Data Security encompasses the methods and processes involved
-in ensuring the confidentiality, integrity, and availability of data processed by Azure
-OpenAI Service. This includes not only the handling of various types of data but
-also the measures taken to prevent abuse, harmful content generation, and unauthor-
-ized access.
-Types of Data Processed by Azure OpenAI Service
-Azure OpenAI processes various types of data, including prompts submitted by
-users, content generated by the service through completions, chat completions,
-images, and embeddings operations. The service can also augment prompts with
-relevant data from a configured data store when the “on your data” feature is uti-
-lized, grounding generations with user-specific data. Additionally, users have the
-option to provide their own training and validation data for fine-tuning
-OpenAI models.
-Processing of Data within Azure OpenAI Service
-The way Azure OpenAI Service processes data can be broken down into three dif-
-ferent categories:
-1. Processing Prompts to Generate Content: This includes the process where
-prompts are evaluated to generate content, such as text, images, or embeddings.
-The evaluation is performed in real time to check for harmful content, and con-
-tent generation stops if it exceeds configured thresholds. The models within the
-service are stateless, meaning that no prompts or generations are stored, nor are
-they used to train or improve the base models.
+## Implementation
 
-2. Augmenting Prompts with User Data: The “on your data” feature allows users to
-connect data sources to ground-generated results with their specific data. This
-data remains stored in the designated location, and no data is copied into the
-Azure OpenAI service.
-3. Creating Customized Models with User Data: Customers can upload training
-data to fine-tune models. This data is stored within the Azure OpenAI resource
-and can be double encrypted. It is exclusively available to the customer, can be
-deleted at any time, and is not used to train or improve any Microsoft or third-
-party base models.
-Measures to Prevent Abuse and Harmful Content Generation
-The Azure OpenAI Service incorporates content filtering and abuse monitoring fea-
-tures to reduce the risk of harmful usage. Content filtering occurs synchronously
-during content generation, and no prompts or results are stored within the content
-classifier models. Azure OpenAI abuse monitoring stores prompts and generated
-content securely for up to 30 days, allowing for detection and mitigation of recur-
-ring content and behaviors that may violate the code of conduct.
-Human reviewers, who are authorized Microsoft employees, can assess potential
-abuse via pointwise queries using request IDs, Secure Access Workstations (SAWs),
-and Just-In-Time (JIT) request approval. For services deployed in the European
-Economic Area, these employees are located within the region.
-Exemption from Abuse Monitoring and Human Review
-Some customers may wish to opt out of Microsoft’s abuse detection due to the pro-
-cessing of sensitive or highly confidential data. Microsoft allows eligible customers
-to apply to modify the Azure OpenAI content management features if they meet
-specific criteria. If approved, Microsoft does not store any prompts and completions
-associated with the approved Azure subscription, and no human review is performed.
-Verification of Data Storage for Abuse Monitoring
-Customers can verify if data storage for abuse monitoring is turned off through the
-Azure portal or Azure CLI (or any management API). In both methods, the value of
-“false” for the “ContentLogging” attribute will appear only if data storage for abuse
-monitoring is turned off.
-Azure OpenAI Data Security reflects a comprehensive approach to managing
-and securing data within the Azure OpenAI Service. From the types of data pro-
-cessed to real-time monitoring for harmful content, fine-tuning capabilities, and
-robust abuse prevention measures, the service provides multiple layers of security
-and control. The availability of customization, encryption, and the ability to opt out
- 221
-of certain monitoring features ensures flexibility and adherence to different organi-
-zational needs and legal regulations. Azure OpenAI’s commitment to data security
-aligns with Microsoft’s broader privacy and security commitments, fostering trust
-and reliability in utilizing this innovative AI-driven service.
-7.6.2 Google Vertix AI Service
-Google Cloud’s Vertex AI (Kerner, 2023) is a cloud-based machine learning plat-
-form that provides a comprehensive workflow for building, training, and deploying
-machine learning models. It’s designed to streamline the entire process, from data
-ingestion to model deployment, including support for various machine learning
-tasks, data preprocessing, and analysis. The platform comes with pre-trained mod-
-els for common use cases and eliminates the complexities of infrastructure manage-
-ment. It is the perfect bridge to transform machine learning applications from mere
-ideas to fully fledged products.
-The real strength of Vertex AI lies in its ability to streamline the entire machine
-learning workflow. From the initial stages of ingesting, analyzing, and transforming
-raw data to creating and training models, evaluating them, and finally deploying a
-reliable model, Vertex AI simplifies the process.
-Managed datasets support the initial data preparation, and Auto ML takes care of
-various data formats, including images, videos, and text. This feature eliminates the
-need to create a custom model as Vertex AI selects the most suitable model for
-prediction.
-For those who want more control or other applications, custom trained models
-from frameworks and optimal model architectures can be utilized. Vertex explain-
-able AI lets users understand the reasoning behind the model’s predictions, provid-
-ing a complete package for deployment.
-Organizations can use Vertex AI to build their GenAI applications by using pre-
-trained APIs for common use cases like translation, speech to text, and image pro-
-cessing. It also integrates easily with widely used open source frameworks like
-TensorFlow or PyTorch, allowing for faster model selection and monitoring.
-Google’s Vertex AI offers a comprehensive approach to responsible AI, embed-
-ding security features, ethical considerations, and safety attributes throughout the
-platform. Here’s an in-depth look at these facets.
-Trusted Tester Program Opt Out
-Google’s Vertex AI provides options for user consent and control over data usage. If
-users have previously permitted Google to utilize their data for improving pre GA
-AI/ML services as part of the Trusted Tester Program, they can exercise their choice
-to opt out (Google, 2023). This shows a commitment to user autonomy and data
-privacy.
+[To be completed]
 
-Reporting Abuse
-Security in AI includes not only protection from unauthorized access but also the
-prevention of misuse or inappropriate generation. Vertex AI users can report any
-suspected abuse or inappropriate material via a dedicated form. This provides a
-safeguard against potential misapplication or harmful content.
-Safety Filters and Attributes in GenAI
-Vertex AI incorporates safety filters and attributes to ensure responsible usage of
-GenAI. These include the following:
-Fallback Responses: These are scripted responses triggered by safety filters to pre-
-vent harmful content.
-Safety Filter Threshold: This adjustable threshold controls the likelihood of block-
-ing potentially harmful content, providing flexibility in content moderation.
-Vertex AI PaLM API Safety Features
-The PaLM API in Vertex AI offers additional security measures, including the
-following:
-Safety Attribute Confidence Scoring: Content processed is assessed against various
-safety attributes, such as violence, toxicity, and more, providing a confidence
-score to gauge the sensitivity.
-Safety Thresholds: Thresholds are set for key safety attributes, with options for
-customization.
-These mechanisms enable comprehensive measures to detect content that may
-violate policies or terms of service, thus maintaining content integrity.
-Ethical Considerations and Limitations
-The design and deployment of Vertex AI emphasize ethical AI practices.
-Considerations include the following:
-Bias Amplification: Awareness of potential biases, with efforts to minimize the rein-
-forcement of societal prejudices.
-Fairness Benchmarks: Focus on fairness across different axes like gender, race, eth-
-nicity, and religion.
-The responsible handling of complex AI tasks is recognized, with limitations
-identified in areas like edge cases, model hallucinations, data quality, and language
-quality.
- 223
-Recommended Practices for Security and Safety
-To maximize security and responsible AI usage, Vertex recommends the following:
-Security Risk Assessment: Regular evaluation of the application’s security
-landscape.
-Safety Risk Mitigation: Implementation of strategies to reduce safety risks.
-User Feedback and Monitoring: Continuous monitoring and feedback collection for
-timely response to any emerging issues.
-7.6.3 A mazon BedRock AI Service
-Amazon BedRock AI Service is a cutting edge platform that facilitates access to
-foundation models (FMs) from both Amazon and leading AI startups such as Cohere
-and Anthropic via APIs. It’s designed to offer a versatile selection of FMs that cater
-to various specific use cases, enabling users to identify and employ the model that
-aligns best with their requirements (Dastin, 2023).
-Simplified Experience with Serverless Technology
-Leveraging BedRock’s serverless technology, users can conveniently discover the
-appropriate model for their objectives, promptly commence operations, and pri-
-vately modify FMs using proprietary data. Furthermore, the seamless integration
-and deployment into existing applications are achievable through familiar AWS
-tools and capabilities, including integration with Amazon SageMaker for features
-like Experiments and Pipelines. This ensures scalable management of FMs without
-the necessity of handling underlying infrastructure.
-Comprehensive Use Cases
-Amazon BedRock is engineered to support a wide spectrum of applications:
-Text Generation: Crafting original content ranging from short stories and essays to
-social media posts and webpage content.
-Chatbots: Enhancing user interactions through the development of conversational
-interfaces such as chatbots and virtual assistants.
-Search Functionality: Facilitating the search, retrieval, and synthesis of information
-to respond to inquiries from vast data repositories.
-Text Summarization: Providing concise summaries of textual materials like articles,
-books, and documents, delivering essential insights without the need to peruse
-the entire content.
+## Limitations & Trade-offs
 
-Image Generation: Enabling the creation of realistic and artistic imagery spanning
-various subjects and scenarios through language prompts.
-Personalization and Image Classification: Augmenting customer engagement with
-contextual product recommendations, extending beyond simple word matching.
-Diverse Selection of Foundation Models
-Amazon BedRock offers a rich collection of models from notable AI startups as
-well as Amazon’s proprietary models:
-Amazon Titan: Capable of text summarization, generation, classification, open-
-ended Q&A, information extraction, embeddings, and search.
-Jurassic 2: A multilingual LLM suitable for text generation in multiple European
-languages.
-Claude 2: Designed for thoughtful dialogue, content creation, complex reasoning,
-creativity, and coding, with a foundation in Constitutional AI.
-Command and Embed: A business-focused text generation model and an embed-
-dings model for search, clustering, or classification in over 100 languages.
-Stable Diffusion: Specialized in generating unique, realistic, and high-quality visual
-content such as images, logos, and designs.
-Fully Managed Agents
-Agents for Amazon BedRock are fully administered, simplifying the development
-process for GenAI applications. This empowers developers to deliver up-to-date
-responses, draw on proprietary knowledge sources, and cater to a broad array of
-use cases.
-Comprehensive Data Protection and Privacy
-Amazon Bedrock AI Service emphasizes robust data protection and privacy,
-enabling users to customize foundation models (FMs) while retaining comprehen-
-sive control over data usage and encryption. A unique feature of Amazon Bedrock
-is that it creates a separate private copy of the base foundational model for training,
-ensuring that your data remains isolated and secure.
-Your data, encompassing prompts, information supplementing prompts, FM
-responses, and customized FMs, stays within the region where the API call is made,
-reinforcing regional compliance. Security measures include encryption during tran-
-sit using TLS 1.2 and encryption at rest through service-managed AWS Key
-Management Service (AWS KMS) keys. Furthermore, Amazon Bedrock supports
-AWS PrivateLink, allowing secure connectivity between your FMs and on premises
-networks without the risk of Internet exposure.
- 225
-Security for Amazon Bedrock
-Amazon Bedrock integrates seamlessly with AWS security services, forming a
-comprehensive security strategy for your custom FMs. The encryption of custom-
-ized FMs is ensured through AWS KMS keys, and the encrypted storage adds
-another layer of security.
-Control over access to your customized FMs is facilitated by AWS Identity and
-Access Management Service (IAM), enabling precise permission management.
-This granular access control allows you to specify who can access particular FMs,
-define services eligible to receive inferences, and regulate login permissions to the
-Amazon Bedrock management console. These capabilities form a robust security
-framework, ensuring that your GenAI applications remain protected and aligned
-with organizational security policies.
-Support for Governance and Auditability
-Compliance and governance are integral to Amazon Bedrock’s security approach.
-The platform offers extensive monitoring and logging tools designed to meet gover-
-nance and audit requirements. Integration with Amazon CloudWatch enables users
-to track usage metrics and create customized dashboards, tailoring the insights to
-specific audit needs.
-Additionally, AWS CloudTrail’s monitoring capabilities offer visibility into API
-activity, providing vital information to troubleshoot issues and securely integrate
-other systems into your GenAI applications. This level of scrutiny supports trans-
-parency and accountability, essential for maintaining compliance with regulatory
-requirements.
+[To be completed]
 
-Source: [[sources/bibliography#Generative AI Security]], p. 217 (§7.6)
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]

@@ -8,11 +8,10 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Temporary Privilege Reduction
-
 ## Summary
 
 Temporary privilege reduction is a responsive control that dynamically reduces agent tool access when suspicious patterns are detected, limiting potential damage from ongoing attacks without completely terminating the session. This mitigation provides a middle ground between full operation and complete shutdown, allowing legitimate conversation to continue while blocking high-risk actions until human review confirms the session is safe.
+
 
 ## Defends Against
 
@@ -21,6 +20,7 @@ Temporary privilege reduction is a responsive control that dynamically reduces a
 | | [[techniques/agent-goal-hijack]] | Limits damage from goal hijacking by restricting access to sensitive tools |
 | | [[techniques/tool-privilege-escalation]] | Prevents privilege escalation by temporarily revoking elevated tool access |
 | | [[techniques/unsafe-tool-invocation]] | Blocks dangerous tool usage when manipulation suspected |
+
 
 ## Implementation
 
@@ -178,13 +178,22 @@ def handle_drift_detection(session_id, drift_analysis):
         )
 ```
 
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
 ## Sources
 
 > "Temporary Privilege Reduction: When suspicious patterns detected, temporarily disable high-risk tool access until human review confirms legitimate use case."
 > — Extracted from agent-goal-hijack responsive controls (AI-Native LLM Security)
-
-## Related
-
-- **Triggered by**: [[mitigations/multi-turn-behavioral-drift-detection]], [[mitigations/anomaly-detection-architecture]]
-- **Combined with**: [[mitigations/approval-workflow-patterns]], [[mitigations/kill-switch-and-session-termination]]
-- **Defends**: [[techniques/agent-goal-hijack]], [[techniques/tool-privilege-escalation]], [[techniques/unsafe-tool-invocation]]

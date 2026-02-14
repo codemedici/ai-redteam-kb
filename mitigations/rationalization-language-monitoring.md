@@ -9,11 +9,10 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Rationalization Language Monitoring
-
 ## Summary
 
 Rationalization language monitoring is a detective control that identifies linguistic patterns indicating goal drift, where agents justify policy violations through framing like "given the urgency" or "to best serve the user." This mitigation detects the specific language agents use when their reasoning has been manipulated to prioritize user satisfaction or efficiency over compliance. By flagging rationalization phrases, this control provides early warning of successful goal hijacking before policy-violating actions occur.
+
 
 ## Defends Against
 
@@ -21,6 +20,7 @@ Rationalization language monitoring is a detective control that identifies lingu
 |----|-----------|-------------|
 | | [[techniques/agent-goal-hijack]] | Detects rationalization language indicating success criteria have shifted toward attacker-favorable outcomes |
 | | [[techniques/agent-identity-crisis]] | Identifies language suggesting role confusion or priority inversion |
+
 
 ## Implementation
 
@@ -136,12 +136,22 @@ def check_rationalization(agent_response, session_id):
             })
 ```
 
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
 ## Sources
 
 > "Rationalization Language Monitoring: Flag responses containing phrases indicating goal shifting: 'given the urgency,' 'in this case,' 'balancing policy with,' 'to best serve,' 'efficiency dictates.' Correlate frequency with conversation length."
 > — Extracted from agent-goal-hijack detective controls (AI-Native LLM Security)
-
-## Related
-
-- **Combined with**: [[mitigations/multi-turn-behavioral-drift-detection]], [[mitigations/policy-consistency-scoring]]
-- **Defends**: [[techniques/agent-goal-hijack]]

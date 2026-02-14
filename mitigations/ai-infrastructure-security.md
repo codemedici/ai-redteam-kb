@@ -1,17 +1,17 @@
 ---
 title: "Ai Infrastructure Security"
 
-description: "Security controls for AI training, serving, and deployment infrastructure"
 tags:
   - trust-boundary/deployment-governance
   - trust-boundary/model
-  - type/defense
+  - type/mitigation
   - target/ml-pipeline
   - target/model-api
+maturity: stub
+created: 2026-02-14
+updated: 2026-02-14
 ---
-# AI Infrastructure Security: Attacking & Defending AI Systems
-
-## Overview
+## Summary
 
 While much AI security focus lands on models themselves (evasion attacks, data poisoning, prompt injection), the **underlying infrastructure and operational pipelines** that build, deploy, and manage these models represent a **critical, often softer attack surface**.
 
@@ -30,6 +30,35 @@ Many teams invest heavily in model robustness but overlook the security of the s
 
 ---
 
+
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
+
+## Implementation
+
+[To be completed]
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]
+
 ## AI Infrastructure Layers
 
 Modern AI systems comprise multiple interconnected layers, each presenting attack surfaces:
@@ -44,6 +73,7 @@ Modern AI systems comprise multiple interconnected layers, each presenting attac
 Understanding how to identify and exploit weaknesses in this infrastructure is essential for comprehensive AI red teaming. Traditional infrastructure security principles apply, but **unique AI-specific attack surfaces emerge** (attacks targeting large model files, specialized hardware like LeftoverLocals/GPU.zip vulnerabilities).
 
 ---
+
 
 ## Attacking the MLOps Lifecycle Components
 
@@ -383,6 +413,7 @@ Apply principles from the **NIST Secure Software Development Framework (SSDF)** 
 
 ---
 
+
 ## Exploiting Frameworks and Libraries
 
 AI systems rely heavily on complex frameworks (TensorFlow, PyTorch, scikit-learn) and numerous supporting libraries. Vulnerabilities within these foundational components can compromise the entire system, often bypassing higher-level controls.
@@ -463,6 +494,7 @@ class MaliciousPickle:
    - Protect ML operations from adversarial inputs
 
 ---
+
 
 ## Securing Cloud and Container Environments
 
@@ -609,6 +641,7 @@ Containers and Kubernetes introduce specific attack surfaces within the cloud en
 
 ---
 
+
 ## GPU-Specific Attacks (Emerging Threat)
 
 Graphics Processing Units (GPUs) are central to AI but introduce unique security challenges due to their parallel architecture and specialized nature.
@@ -620,6 +653,7 @@ Graphics Processing Units (GPUs) are central to AI but introduce unique security
 **Note:** Chapter ends at p.295; GPU section appears to be starting. This represents an emerging attack surface requiring specialized security considerations for AI infrastructure.
 
 ---
+
 
 ## Key Takeaways
 
@@ -640,15 +674,3 @@ Graphics Processing Units (GPUs) are central to AI but introduce unique security
 8. **Monitoring must cover both traditional and AI-specific metrics:** Infrastructure health + model behavior (drift, bias, adversarial patterns)
 
 ---
-
-## Tags
-
-#infrastructure #mlops #supply-chain #cloud-security #containers #kubernetes #pickle #deserialization #artifact-signing #defense-in-depth #systems-thinking
-
----
-
-**Source:** Red-Teaming AI (Rothe), Chapter 9: Attacking & Defending AI Infrastructure, p.275-295
-
-## Related
-
-- **Mitigates**: [[techniques/ai-infrastructure-attacks]], [[techniques/insecure-model-gateway-config]], [[techniques/model-tampering]], [[techniques/secrets-in-prompts-and-logs]], [[techniques/third-party-model-risks]]

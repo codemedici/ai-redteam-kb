@@ -9,11 +9,10 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Policy Consistency Scoring
-
 ## Summary
 
 Policy consistency scoring is a detective control that automatically evaluates agent responses against compliance rubrics at each conversational turn, measuring adherence to organizational policies. This mitigation provides quantitative tracking of policy compliance over time, enabling detection of gradual degradation that may indicate goal hijacking. Unlike qualitative manual review, automated scoring allows real-time monitoring at scale, alerting when consistency scores decline across conversation turns.
+
 
 ## Defends Against
 
@@ -21,6 +20,7 @@ Policy consistency scoring is a detective control that automatically evaluates a
 |----|-----------|-------------|
 | | [[techniques/agent-goal-hijack]] | Detects declining policy adherence scores indicating successful goal manipulation |
 | | [[techniques/agent-authorization-hijacking]] | Identifies authorization policy violations through scoring |
+
 
 ## Implementation
 
@@ -141,12 +141,22 @@ def score_compliance(session_id, turn, agent_response, context):
             })
 ```
 
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
 ## Sources
 
 > "Policy Consistency Scoring: Automated scoring of agent responses against compliance rubrics at each turn. Declining scores across conversation indicate manipulation."
 > — Extracted from agent-goal-hijack detective controls (AI-Native LLM Security)
-
-## Related
-
-- **Combined with**: [[mitigations/multi-turn-behavioral-drift-detection]], [[mitigations/rationalization-language-monitoring]]
-- **Defends**: [[techniques/agent-goal-hijack]], [[techniques/agent-authorization-hijacking]]

@@ -10,15 +10,7 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-14
 ---
-# Input Validation and Transformation
-
-**Type:** Preprocessing / Input Sanitization
-
-**Principle:** Apply transformations or validation checks to inputs before feeding to model, disrupting potential adversarial perturbations
-
-**Applicability:** Cross-cutting defense against evasion, prompt injection, data poisoning
-
-## Core Concept
+## Summary
 
 **Definition:** Modify or validate inputs at runtime before model processing to:
 - Remove/diminish adversarial perturbations
@@ -29,79 +21,14 @@ updated: 2026-02-14
 
 **Advantage:** Usually fast, applicable at inference time without retraining
 
+
 ## Defends Against
 
-### 1. Adversarial Examples / Evasion Attacks
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
 
-**Techniques:**
-
-**Image Transformations:**
-- JPEG compression (removes high-frequency perturbations)
-- Gaussian blurring (smooths sharp adversarial noise)
-- Bit-depth reduction (quantizes pixel values)
-- Image resizing/cropping (disrupts spatial perturbations)
-- Median filtering
-- Total variation minimization
-
-**Text Transformations:**
-- Unicode normalization (collapses homoglyphs)
-- Whitespace normalization (removes zero-width characters)
-- Case normalization
-- Special character filtering
-
-**Details:** adversarial-examples-evasion-attacks#Input Transformation / Preprocessing]]
-
-**Effectiveness:** Medium (attackers can adapt by simulating transformations)
-
-### 2. Prompt Injection
-
-**Techniques:**
-
-**Input Sanitization:**
-- Keyword filtering ("ignore", "disregard", "new instructions")
-- Pattern matching (common injection phrases)
-- Length limits
-- Format validation
-
-**Encoding Detection:**
-- Base64 detection and rejection
-- Hexadecimal pattern filtering
-- URL encoding detection
-
-**Unicode Analysis:**
-- Homoglyph detection (Cyrillic vs. Latin)
-- Invisible character detection (zero-width spaces)
-- Right-to-left override detection
-
-**Details:** prompt-injection-llm-manipulation#Input Sanitization and Filtering]]
-
-**Effectiveness:** Low-Medium (easy to bypass via obfuscation)
-
-### 3. Data Poisoning
-
-**Techniques:**
-
-**Data Quality Checks:**
-- Format validation
-- Type checking
-- Range constraints
-- Consistency validation
-
-**Outlier Detection:**
-- Statistical methods (Z-scores, IQR)
-- Isolation forests (high-dimensional data)
-- Robust statistics (median absolute deviation)
-
-**Label Consistency:**
-- K-NN on feature embeddings
-- Clustering analysis
-- Cross-validation with similar samples
-
-**Details:** data-poisoning-attacks#Data Sanitization & Validation]]
-
-**Effectiveness:** Medium (helps detect obvious anomalies, struggles with subtle poisoning)
-
-## Implementation Approaches
+## Implementation
 
 ### 1. Static Transformations
 
@@ -207,28 +134,8 @@ def validate_text_input(text, max_length=1000):
 **Pros:** Prevents entire attack classes
 **Cons:** May reject legitimate inputs, requires careful design
 
-## Strengths
 
-**1. No Model Retraining**
-- Applied at inference time
-- Can be added to existing models
-- Easy to update/modify
-
-**2. Computational Efficiency**
-- Usually fast (negligible overhead)
-- Simple transformations (blur, compression) very cheap
-- Can run in preprocessing pipeline
-
-**3. Defense Against Unforeseen Attacks**
-- Can provide robustness to novel attack types
-- Doesn't require knowing attack algorithm
-
-**4. Combines with Other Defenses**
-- Works alongside adversarial training
-- Adds defense layer without conflicts
-- Defense-in-depth strategy
-
-## Limitations
+## Limitations & Trade-offs
 
 ### 1. Adaptive Attack Bypass
 
@@ -298,6 +205,43 @@ for step in range(num_iter):
 
 **Result:** Filter bypassed, injection succeeds
 
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]
+
+## Strengths
+
+**1. No Model Retraining**
+- Applied at inference time
+- Can be added to existing models
+- Easy to update/modify
+
+**2. Computational Efficiency**
+- Usually fast (negligible overhead)
+- Simple transformations (blur, compression) very cheap
+- Can run in preprocessing pipeline
+
+**3. Defense Against Unforeseen Attacks**
+- Can provide robustness to novel attack types
+- Doesn't require knowing attack algorithm
+
+**4. Combines with Other Defenses**
+- Works alongside adversarial training
+- Adds defense layer without conflicts
+- Defense-in-depth strategy
+
+
 ## Best Practices
 
 ### 1. Combine Multiple Transformations
@@ -350,6 +294,7 @@ def defense_pipeline(input):
 **Audio transformations:** Compression, frequency filtering
 **Tabular data:** Range validation, outlier detection
 
+
 ## Advanced Techniques
 
 ### 1. Feature Squeezing
@@ -389,6 +334,7 @@ def defense_pipeline(input):
 
 **Limitation:** Slow, adaptive attacks can target GAN
 
+
 ## Practical Considerations
 
 ### When to Use
@@ -417,6 +363,7 @@ def defense_pipeline(input):
 - [ ] Monitor effectiveness in production
 - [ ] Update as new attack techniques emerge
 
+
 ## Key Takeaways
 
 1. **Fast and flexible** - No retraining required, applies at inference time
@@ -430,12 +377,9 @@ def defense_pipeline(input):
 9. **Best for unsophisticated attacks** - Works against automated/broad attacks, struggles with targeted adaptive attacks
 10. **Complement adversarial training** - Adds runtime layer to model-level robustness
 
+
 ## Source References
 
 - [[sources/bibliography#Red-Teaming AI]], p. 162 (Input Transformation defenses)
 - [[sources/bibliography#Red-Teaming AI]], p. 248-250 (Prompt injection input sanitization)
 - [[sources/bibliography#Red-Teaming AI]], p. 130-131 (Data poisoning input validation)
-
-## Related
-
-- **Mitigates**: [[techniques/adversarial-examples-evasion-attacks]], [[techniques/adversarial-robustness]], [[techniques/data-poisoning-attacks]], [[techniques/embedding-poisoning]], [[techniques/vector-embedding-weaknesses]], [[techniques/gan-weaponization]]

@@ -13,10 +13,7 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-14
 ---
-
-# Adversarial Training
-
-## Overview
+## Summary
 
 Adversarial training is a **mitigation technique** that makes ML models robust against adversarial attacks by explicitly including adversarial examples (poisoned or perturbed data) in the training set **with correct labels**. Rather than detecting attacks, adversarial training teaches the model to handle adversarial inputs correctly.
 
@@ -24,30 +21,21 @@ Adversarial training is a **mitigation technique** that makes ML models robust a
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 85
 
-## How It Works
 
-1. **Generate adversarial examples** — Create poisoned/perturbed samples using attack techniques
-2. **Correct labels** — Assign proper labels to adversarial samples (not attacker's target labels)
-3. **Augment training data** — Add adversarial examples to original training set
-4. **Train model** — Model learns to classify both clean and adversarial inputs correctly
+## Defends Against
 
-**Result:** Model becomes resistant to similar adversarial perturbations encountered during inference.
+| ID | Technique | Description |
+|----|-----------|-------------|
+| AML.T0015 | [[techniques/adversarial-robustness]] | Augments training with adversarial examples (FGSM, PGD, C&W) to harden model against evasion attacks and physical-world perturbations |
+| | [[techniques/data-poisoning-attacks]] | Trains model to correctly classify poisoned inputs with correct labels |
+| | [[techniques/backdoor-poisoning]] | Includes backdoored samples with correct labels to prevent trigger activation |
+| | [[techniques/adversarial-examples-evasion-attacks]] | Hardens model against inference-time perturbations |
+| | [[techniques/prompt-injection]] | Teaches model to recognize and neutralize injection patterns |
+| AML.T0054 | [[techniques/jailbreak-policy-bypass]] | Includes automated jailbreak examples (GCG-style) in training to improve safety guardrail robustness |
+| AML.T0088 | [[techniques/gan-weaponization]] | Includes GAN-generated adversarial examples in training to harden models against GAN-assisted evasion attacks and biometric system bypass |
 
-## Primary Use Cases
 
-### Evasion Attack Mitigation
-Adversarial training is **most effective** against inference-time attacks (evasion):
-- Adversarial examples (FGSM, PGD, C&W)
-- Perturbations designed to fool deployed models
-
-### Poisoning Attack Mitigation
-Can also defend against training-time poisoning:
-- Include backdoored samples with correct labels
-- Model learns that trigger patterns don't indicate target class
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 85
-
-## Implementation Approaches
+## Implementation
 
 ### Basic Adversarial Training
 
@@ -177,14 +165,8 @@ def generate_physical_adversarial_example(image, model, target_class):
 
 > Source: [[techniques/adversarial-robustness]] (extracted from physical-world attack scenario)
 
-## Advantages
 
-- **Proactive defense** — Hardens model before deployment
-- **Broad effectiveness** — Defends against multiple attack variants
-- **No runtime overhead** — Defense is embedded in model weights
-- **Improves generalization** — Can improve performance on edge cases
-
-## Limitations
+## Limitations & Trade-offs
 
 ### Computational Cost
 - **Training time** — Generating adversarial examples during training is expensive
@@ -199,6 +181,59 @@ def generate_physical_adversarial_example(image, model, target_class):
 - **Accuracy degradation** — May slightly reduce accuracy on clean data
 - **Overfitting risk** — Model may overfit to specific adversarial patterns
 
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+> "Incorporate malicious prompts into training dataset to enable LLM to identify and neutralize harmful inputs autonomously. Process: (1) Data collection — compile normal + malicious prompts simulating real attacks, (2) Dataset annotation — label prompts as normal/malicious, (3) Model training — include adversarial examples as 'curveballs', (4) Model evaluation — test on separate dataset, (5) Feedback loop — include new examples from poor performance areas, (6) User testing — validate in real-world scenarios, (7) Continuous monitoring — update with new injection types. Limitation: Likely offers only incomplete protection, especially against novel attacks."
+> — [[sources/developers-playbook-llm]], p. 38-39
+
+> "Prompt suffix-based attacks (GCG-style automated jailbreaks) use gradient-based search techniques to automatically produce adversarial suffixes that substantially increase likelihood of LLMs generating harmful content. Attack methodology is universal and transferable—can be applied across different LLM platforms including state-of-the-art closed-source models. Defense approaches: (1) Improve training data—include adversarial examples in alignment training datasets, (2) Robust monitoring systems—deploy runtime detection of adversarial suffixes, (3) Architecture rethinking—consider architectural constraints that prevent gradient-based exploitation."
+> — [[sources/bibliography#Generative AI Security]], p. 167-169
+
+
+## How It Works
+
+1. **Generate adversarial examples** — Create poisoned/perturbed samples using attack techniques
+2. **Correct labels** — Assign proper labels to adversarial samples (not attacker's target labels)
+3. **Augment training data** — Add adversarial examples to original training set
+4. **Train model** — Model learns to classify both clean and adversarial inputs correctly
+
+**Result:** Model becomes resistant to similar adversarial perturbations encountered during inference.
+
+
+## Primary Use Cases
+
+### Evasion Attack Mitigation
+Adversarial training is **most effective** against inference-time attacks (evasion):
+- Adversarial examples (FGSM, PGD, C&W)
+- Perturbations designed to fool deployed models
+
+### Poisoning Attack Mitigation
+Can also defend against training-time poisoning:
+- Include backdoored samples with correct labels
+- Model learns that trigger patterns don't indicate target class
+
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 85
+
+
+## Advantages
+
+- **Proactive defense** — Hardens model before deployment
+- **Broad effectiveness** — Defends against multiple attack variants
+- **No runtime overhead** — Defense is embedded in model weights
+- **Improves generalization** — Can improve performance on edge cases
+
+
 ## Integration with MLOps
 
 Adversarial training should be integrated into ML pipelines:
@@ -211,6 +246,7 @@ Adversarial training should be integrated into ML pipelines:
 See [[mitigations/mlops-security]] for integration patterns.
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 85-86
+
 
 ## Part of Larger Defense Strategy
 
@@ -225,6 +261,7 @@ Adversarial training is **one component** of defense-in-depth:
 - [[mitigations/mlops-security]] — Data lineage and versioning
 - [[mitigations/input-validation-patterns]] — Runtime input sanitization
 - [[frameworks/atlas/mitigations/use-ensemble-methods]] — Multiple models for robustness
+
 
 ## Research and Tooling
 
@@ -412,35 +449,3 @@ Adversarial training against GCG attacks should be combined with:
 - **Custom red team tools:** Internal tools for generating organization-specific adversarial examples
 
 > Source: [[sources/bibliography#Generative AI Security]], p. 167-169
-
-## Defends Against
-
-| ID | Technique | Description |
-|----|-----------|-------------|
-| AML.T0015 | [[techniques/adversarial-robustness]] | Augments training with adversarial examples (FGSM, PGD, C&W) to harden model against evasion attacks and physical-world perturbations |
-| | [[techniques/data-poisoning-attacks]] | Trains model to correctly classify poisoned inputs with correct labels |
-| | [[techniques/backdoor-poisoning]] | Includes backdoored samples with correct labels to prevent trigger activation |
-| | [[techniques/adversarial-examples-evasion-attacks]] | Hardens model against inference-time perturbations |
-| | [[techniques/prompt-injection]] | Teaches model to recognize and neutralize injection patterns |
-| AML.T0054 | [[techniques/jailbreak-policy-bypass]] | Includes automated jailbreak examples (GCG-style) in training to improve safety guardrail robustness |
-| AML.T0088 | [[techniques/gan-weaponization]] | Includes GAN-generated adversarial examples in training to harden models against GAN-assisted evasion attacks and biometric system bypass |
-
-## Related
-
-**Complements:**
-- [[mitigations/input-validation-transformation]] — Runtime sanitization
-- [[mitigations/model-hardening]] — Architectural improvements
-- [[mitigations/detection-based-defenses]] — Anomaly detection
-- [[mitigations/instruction-hierarchy-architecture]] — Structural prompt protection
-- [[mitigations/output-filtering-and-sanitization]] — Post-generation filtering
-
-**ATLAS Mapping:**
-- [[frameworks/atlas/mitigations/limit-model-artifact-release|AML.M0001]] — Adversarial Training (Mitigation)
-
-## Sources
-
-> "Incorporate malicious prompts into training dataset to enable LLM to identify and neutralize harmful inputs autonomously. Process: (1) Data collection — compile normal + malicious prompts simulating real attacks, (2) Dataset annotation — label prompts as normal/malicious, (3) Model training — include adversarial examples as 'curveballs', (4) Model evaluation — test on separate dataset, (5) Feedback loop — include new examples from poor performance areas, (6) User testing — validate in real-world scenarios, (7) Continuous monitoring — update with new injection types. Limitation: Likely offers only incomplete protection, especially against novel attacks."
-> — [[sources/developers-playbook-llm]], p. 38-39
-
-> "Prompt suffix-based attacks (GCG-style automated jailbreaks) use gradient-based search techniques to automatically produce adversarial suffixes that substantially increase likelihood of LLMs generating harmful content. Attack methodology is universal and transferable—can be applied across different LLM platforms including state-of-the-art closed-source models. Defense approaches: (1) Improve training data—include adversarial examples in alignment training datasets, (2) Robust monitoring systems—deploy runtime detection of adversarial suffixes, (3) Architecture rethinking—consider architectural constraints that prevent gradient-based exploitation."
-> — [[sources/bibliography#Generative AI Security]], p. 167-169

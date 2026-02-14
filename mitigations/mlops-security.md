@@ -1,24 +1,66 @@
 ---
 title: MLOps Security Controls
-description: Foundational security practices integrating versioning, lineage, monitoring, and automation into the ML development lifecycle to defend against adversarial attacks
 tags:
-  - type/defense
+  - type/mitigation
   - type/control-framework
   - target/ml-lifecycle
   - source/adversarial-ai
   - source/developers-playbook-llm
   - needs-review
+maturity: stub
+created: 2026-02-14
+updated: 2026-02-14
 ---
-
-# MLOps Security Controls
-
-## Overview
+## Summary
 
 MLOps (Machine Learning Operations) provides foundational security defenses against adversarial attacks—particularly [[techniques/data-poisoning-attacks]]—by introducing **traceability, automation, and continuous validation** into the AI/ML development lifecycle. MLOps transforms ad-hoc ML workflows into secure, auditable pipelines with checkpoints and guarantees.
 
 > "MLOps is a foundational security defense that needs to be in place. It introduces some core principles to introduce traceability into the AI/ML development life cycle."
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 86
+
+
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
+
+## Implementation
+
+[To be completed]
+
+## Limitations & Trade-offs
+
+MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
+
+- **Sophisticated attacks** — Clean-label attacks may pass validation
+- **Insider threats** — Authorized users can still poison data
+- **Supply chain** — External datasets/models may be pre-poisoned (see [[techniques/supply-chain-poisoning]])
+
+**MLOps must be combined with:**
+- [[mitigations/anomaly-detection-architecture]]
+- [[mitigations/adversarial-training]]
+- [[mitigations/robustness-testing]]
+
+> "Not all attacks will be applicable, and you don't have to implement all the defenses. As we will see in Chapter 14, threat modeling can help us decide which ones are the most prevalent and offer the best value."
+> 
+> Source: [[sources/adversarial-ai-sotiropoulos]], p. 86
+
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]
 
 ## Why MLOps for Security
 
@@ -32,6 +74,7 @@ Traditional cybersecurity (least-privilege, encryption, data signing) **makes po
 > "We need to see these techniques as part of an integrated system of defenses combining techniques with automated tracking, approvals, monitoring, and alerting."
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 81
+
 
 ## Core MLOps Security Principles
 
@@ -101,6 +144,7 @@ Traditional cybersecurity (least-privilege, encryption, data signing) **makes po
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 81-82, 86
 
+
 ## MLOps Security Controls for Poisoning Defense
 
 ### Data Validation
@@ -147,6 +191,7 @@ Traditional cybersecurity (least-privilege, encryption, data signing) **makes po
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 81-82
 
+
 ## Platform Examples
 
 ### AWS SageMaker
@@ -168,6 +213,7 @@ Traditional cybersecurity (least-privilege, encryption, data signing) **makes po
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 81
 
+
 ## GAN-Specific Supply Chain Security
 
 GANs introduce unique supply chain risks that MLOps controls must address:
@@ -188,22 +234,6 @@ GANs introduce unique supply chain risks that MLOps controls must address:
 
 > Source: [[sources/bibliography#Adversarial AI]], p. 318-319
 
-## Limitations
-
-MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
-
-- **Sophisticated attacks** — Clean-label attacks may pass validation
-- **Insider threats** — Authorized users can still poison data
-- **Supply chain** — External datasets/models may be pre-poisoned (see [[techniques/supply-chain-poisoning]])
-
-**MLOps must be combined with:**
-- [[mitigations/anomaly-detection-architecture]]
-- [[mitigations/adversarial-training]]
-- [[mitigations/robustness-testing]]
-
-> "Not all attacks will be applicable, and you don't have to implement all the defenses. As we will see in Chapter 14, threat modeling can help us decide which ones are the most prevalent and offer the best value."
-> 
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 86
 
 ## Integration with MLSecOps
 
@@ -214,6 +244,7 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 - See [[playbooks/mlsecops]] for detailed patterns
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 82, 86
+
 
 ## MLOps Principles Reference
 
@@ -227,6 +258,7 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 86  
 > Reference: https://ml-ops.org/content/mlops-principles
+
 
 ## LLMOps: Extending MLOps for Large Language Models (Developer's Playbook — Wilson)
 
@@ -466,27 +498,3 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 - Minimize harmful/biased outputs
 
 > Source: [[sources/developers-playbook-llm]], p. 154-156
-
-## Related
-
-- [[playbooks/mlsecops-operational-security|MLSecOps Operational Security]]
-**Primary defense against:**
-- [[techniques/data-poisoning-attacks]] — Training data manipulation
-- [[techniques/backdoor-poisoning]] — Trigger-based poisoning
-- [[techniques/supply-chain-poisoning]] — External data/model risks
-- [[techniques/gan-weaponization]] — GAN supply chain risks (pickle files, model provenance, transitive poisoning)
-- [[techniques/trojan-injection]] — Immutable registries, code review gates, and pipeline automation prevent unauthorized model architecture modifications
-- [[techniques/ai-infrastructure-attacks]] — Automated pipelines with security gates, versioning, monitoring, and access controls defend against compromised CI/CD, insecure registries, and weak infrastructure configurations
-
-**Enables:**
-- [[mitigations/anomaly-detection-architecture]] — Integrated data validation
-- [[mitigations/data-provenance]] — Source verification
-- [[mitigations/roni-defense]] — Performance-based rejection
-
-**Complements:**
-- [[frameworks/threat-modeling]] — Risk-based defense prioritization
-- [[playbooks/mlsecops]] — Security-first ML operations
-
-**See also:**
-- Chapter 18: MLSecOps implementation patterns
-- [[playbooks/mlsecops]]

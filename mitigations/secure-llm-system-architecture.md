@@ -1,22 +1,51 @@
 ---
 title: "Secure Llm System Architecture"
 
-description: "Architectural patterns for building secure LLM-powered applications"
 tags:
   - needs-review
   - source/ai-native-llm-security
   - trust-boundary/model
-  - type/defense
+  - type/mitigation
   - target/llm-app
   - target/agent
   - target/rag-system
 created: 2026-02-12
 source: [[sources/bibliography#AI-Native LLM Security']]
 pages: "211-247"
+maturity: stub
+updated: 2026-02-14
 ---
-# Secure LLM System Architecture
+## Summary
 
-**Core Principle:** Security must be a fundamental system requirement, not an afterthought. LLM systems require adapted security principles due to complex data flows, prompt injection risks, and the need to protect both model assets and user data.
+[To be completed]
+
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
+
+## Implementation
+
+[To be completed]
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]
 
 ## Three Foundational Principles
 
@@ -41,6 +70,7 @@ Security integrated into every lifecycle phase: model selection → training →
 - Threat modeling considering LLM-specific threats (prompt injection, data extraction, behavior manipulation)
 - Risk assessment as ongoing process, not one-time
 - Regular penetration testing focused on LLM vulnerabilities
+
 
 ## Reference Architecture (7 Layers)
 
@@ -90,6 +120,7 @@ Multi-layered output filtering:
 - Sophisticated alerting with prioritization and false-positive management
 - Automated incident response with graduated mechanisms
 
+
 ## Isolation Strategies
 
 ### Container-Based Isolation
@@ -115,6 +146,7 @@ Multi-layered output filtering:
 - Process namespaces and cgroups for additional isolation
 - Monitoring of process spawning (LLM prompts might attempt unauthorized process execution)
 
+
 ## Least Privilege Implementation
 
 ### Service Account Management
@@ -134,6 +166,7 @@ Multi-layered output filtering:
 - Tools: Prometheus + Grafana for monitoring, Kubernetes-native tools for microsegmentation
 - Standardized approaches per resource category
 
+
 ## Data Flow Security
 
 ### Encryption Requirements
@@ -152,6 +185,7 @@ Multi-layered output filtering:
 - **Internal:** Service mesh with mTLS, automated certificate rotation
 - **External:** Standardized integration patterns, centralized API gateway control
 
+
 ## Incident Response for LLM Systems
 
 ### Detection Framework
@@ -164,6 +198,7 @@ Multi-layered output filtering:
 - Structured incident playbooks per incident category
 - Recovery procedures maintaining data integrity
 - Human oversight with clear escalation procedures
+
 
 ## Related Notes
 

@@ -1,22 +1,42 @@
 ---
 title: "Spectral Signature Detection"
-description: "Detect backdoor triggers by analyzing spectral signatures in feature representations"
 tags:
-  - type/defense
+  - type/mitigation
   - trust-boundary/model
   - backdoor-detection
+maturity: stub
+created: 2026-02-14
+updated: 2026-02-14
 ---
-
-# Spectral Signature Detection
-
-Detect backdoor triggers by analyzing spectral signatures in feature representations
-
-> **Note:** This is a stub page. Contributions welcome!
-
-## Overview
+## Summary
 
 *(Content to be added)*
 
-## Related
 
-*(Add related techniques, mitigations, or frameworks)*
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
+
+## Implementation
+
+[To be completed]
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]

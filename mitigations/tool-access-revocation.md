@@ -8,11 +8,10 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Tool Access Revocation
-
 ## Summary
 
 Tool access revocation provides responsive controls that immediately disable abused tools, suspend malicious accounts, and rollback unauthorized modifications when tool abuse attacks are detected. This control enables rapid containment of active attacks by terminating agent sessions, revoking tool access privileges, locking out compromised accounts, and reversing unauthorized state changes. By combining automated response mechanisms with manual intervention workflows, this mitigation limits the blast radius of tool exploitation and enables rapid recovery.
+
 
 ## Defends Against
 
@@ -21,6 +20,7 @@ Tool access revocation provides responsive controls that immediately disable abu
 | | [[techniques/tool-privilege-escalation]] | Contains active privilege escalation attacks by immediately revoking tool access and reversing unauthorized changes |
 | | [[techniques/unsafe-tool-invocation]] | Limits damage from injection attacks by suspending tools and accounts upon detection |
 | | [[techniques/agent-authorization-hijacking]] | Responds to authorization bypass by terminating sessions and locking accounts |
+
 
 ## Implementation
 
@@ -566,6 +566,7 @@ class AutomatedIncidentResponse:
         return len(recent_alerts) >= 2
 ```
 
+
 ## Limitations & Trade-offs
 
 **Limitations:**
@@ -589,6 +590,7 @@ class AutomatedIncidentResponse:
 - **Persistent access:** Attackers who established backdoors may regain access after revocation
 - **Distributed attacks:** Coordinated attacks across multiple accounts harder to contain
 
+
 ## Testing & Validation
 
 **Functional Testing:**
@@ -605,13 +607,14 @@ class AutomatedIncidentResponse:
 3. **Rollback completeness:** Verify all unauthorized changes are rolled back
 4. **False positive handling:** Ensure legitimate users can be quickly restored
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
 ## Sources
 
 > "Immediate Session Termination: Kill agent session on confirmed privilege escalation attempt. Tool Access Revocation: Temporarily disable abused tools pending investigation. Account Lockout: Suspend user accounts exhibiting malicious tool usage. Rollback Mechanisms: Database/state rollback for unauthorized modifications."
 > — Extracted from tool-privilege-escalation responsive controls
-
-## Related
-
-- **Triggered by:** [[mitigations/tool-invocation-monitoring]] (detection triggers response)
-- **Combines with:** [[mitigations/kill-switch-and-session-termination]], [[mitigations/incident-response-procedures]]
-- **Enables:** Rapid containment and recovery from tool abuse attacks

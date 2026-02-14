@@ -13,14 +13,26 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-
-# Differential Privacy for ML Models
-
 ## Summary
 
 Differential privacy (DP) provides a mathematically rigorous framework for protecting individual privacy in ML training. By adding calibrated noise to gradients during training (DP-SGD) or to model outputs, DP ensures that the model's behavior changes only minimally whether any single individual's data is included or excluded from the training set. This makes [[techniques/membership-inference-attacks|membership inference]] and [[techniques/model-inversion-attacks|model inversion]] attacks significantly harder. The privacy guarantee is quantified by the parameter ε (epsilon): smaller ε values provide stronger privacy but may reduce model accuracy. DP is widely adopted in privacy-sensitive domains (healthcare, finance, government) and supported by frameworks like TensorFlow Privacy and Opacus (PyTorch).
 
 > "Differential privacy aims to protect individual record confidentiality by ensuring the model's outputs don't significantly change whether a specific individual's data is in the training set." (p391, paraphrased)
+
+
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/pii-in-corpus]] | DP-SGD ensures training on PII-containing data does not enable extraction of individual records through formal privacy guarantees |
+| | [[techniques/membership-inference-attacks]] | Noise prevents model from overfitting to specific individuals, making membership inference attacks less accurate |
+| | [[techniques/model-inversion-attacks]] | Reconstructed data less accurate due to privacy noise added during training or inference |
+| AML.T0049 | [[techniques/model-extraction]] | Noise in model responses reduces fidelity of extracted substitute models; makes parameter inference more difficult |
+| AML.T0020 | [[techniques/data-poisoning-attacks]] | DP-SGD mathematically limits influence any single poisoned sample can have on model parameters, providing provable resilience |
+| AML.T0024 | [[techniques/sensitive-info-disclosure]] | DP-SGD with formal epsilon guarantees prevents model from memorizing individual training samples, countering both membership inference and direct memorization attacks |
+| | [[techniques/privacy-attacks-beyond-membership-inference]] | Provides formal guarantees against attribute inference tied to individual records, limits model inversion reconstruction fidelity, and protects aggregate statistics releases against linkage attacks |
+| AML.T0056 | [[techniques/training-data-memorization]] | DP-SGD limits memorization of individual training samples with formal privacy guarantees, countering direct extraction, membership inference, and model inversion attacks |
+
 
 ## Implementation
 
@@ -130,20 +142,8 @@ DP noise in outputs reduces the precision of information attackers can extract:
 
 > See [[mitigations/output-noise-injection]] for related techniques without formal DP guarantees.
 
-## Defends Against
 
-| ID | Technique | Description |
-|----|-----------|-------------|
-| | [[techniques/pii-in-corpus]] | DP-SGD ensures training on PII-containing data does not enable extraction of individual records through formal privacy guarantees |
-| | [[techniques/membership-inference-attacks]] | Noise prevents model from overfitting to specific individuals, making membership inference attacks less accurate |
-| | [[techniques/model-inversion-attacks]] | Reconstructed data less accurate due to privacy noise added during training or inference |
-| AML.T0049 | [[techniques/model-extraction]] | Noise in model responses reduces fidelity of extracted substitute models; makes parameter inference more difficult |
-| AML.T0020 | [[techniques/data-poisoning-attacks]] | DP-SGD mathematically limits influence any single poisoned sample can have on model parameters, providing provable resilience |
-| AML.T0024 | [[techniques/sensitive-info-disclosure]] | DP-SGD with formal epsilon guarantees prevents model from memorizing individual training samples, countering both membership inference and direct memorization attacks |
-| | [[techniques/privacy-attacks-beyond-membership-inference]] | Provides formal guarantees against attribute inference tied to individual records, limits model inversion reconstruction fidelity, and protects aggregate statistics releases against linkage attacks |
-| AML.T0056 | [[techniques/training-data-memorization]] | DP-SGD limits memorization of individual training samples with formal privacy guarantees, countering direct extraction, membership inference, and model inversion attacks |
-
-## Trade-Offs
+## Limitations & Trade-offs
 
 **Advantages**:
 - Mathematically provable privacy guarantees
@@ -155,6 +155,7 @@ DP noise in outputs reduces the precision of information attackers can extract:
 - **Hyperparameter Tuning**: Requires careful selection of ε, clipping threshold, noise multiplier
 - **Computational Cost**: DP-SGD is slower than standard SGD
 - **Limited Scope**: Protects individual-level privacy but not against backdoors or model tampering
+
 
 ## Testing & Validation
 
@@ -178,11 +179,13 @@ assert epsilon < 3.0, "Privacy budget exceeded!"
 - Attack trained model using membership inference
 - DP models should show significantly lower attack success rate (~50% accuracy, near random guessing)
 
+
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Sources
 
@@ -191,9 +194,3 @@ assert epsilon < 3.0, "Privacy budget exceeded!"
 
 > "Implement differential privacy in model responses: Add calibrated noise to outputs to make parameter inference more difficult, though this may reduce output quality."
 > — [[sources/bibliography#Generative AI Security]], p. 164-166
-
-## Related
-
-- **Mitigates:** [[techniques/membership-inference-attacks]], [[techniques/model-inversion-attacks]], [[techniques/model-extraction]]
-- **Complementary Defenses:** [[mitigations/federated-learning]], [[mitigations/secure-rl-algorithms]], [[mitigations/output-noise-injection]], [[mitigations/regularization-techniques]]
-- **Frameworks:** TensorFlow Privacy, Opacus (PyTorch DP), Microsoft SmartNoise

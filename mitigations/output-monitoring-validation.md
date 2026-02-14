@@ -1,26 +1,19 @@
 ---
 title: "Output Monitoring Validation"
 
-description: "Runtime monitoring and validation of LLM outputs for quality and safety"
 tags:
   - anomaly-detection
   - control
   - runtime-defense
   - trust-boundary/model
-  - type/defense
+  - type/mitigation
   - target/llm-app
   - target/agent
 created: 2026-02-12
+maturity: stub
+updated: 2026-02-14
 ---
-# Output Monitoring and Validation
-
-**Type:** Runtime Detection / Post-Processing
-
-**Principle:** Inspect model outputs before acting on them to detect unexpected behavior, anomalies, or successful attacks
-
-**Applicability:** Cross-cutting defense providing last line of defense before damage occurs
-
-## Core Concept
+## Summary
 
 **Definition:** Monitor and validate model predictions, confidence scores, and behavior patterns at inference time to:
 - Detect unexpected behavior
@@ -32,66 +25,14 @@ created: 2026-02-12
 
 **Advantage:** Can prevent damage even after successful model compromise
 
+
 ## Defends Against
 
-### 1. Adversarial Examples / Evasion Attacks
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
 
-**Detection Signals:**
-
-**Prediction Confidence Anomalies:**
-- Unusually high confidence on potentially adversarial input
-- Confidence distribution differs from typical
-
-**Prediction Instability:**
-- Small input perturbations cause large prediction changes
-- Inconsistent predictions for similar inputs
-
-**Activation Pattern Analysis:**
-- Internal layer activations differ from clean data patterns
-- Specific neurons consistently activated (potential backdoor)
-
-**Details:** adversarial-examples-evasion-attacks#Detection of Adversarial Examples]]
-
-### 2. Prompt Injection
-
-**Detection Signals:**
-
-**Unexpected Output Behavior:**
-- Model reveals system prompt (prompt leakage)
-- Output contains internal instructions
-- Response deviates from expected task (summarization → instruction following)
-
-**Format Violations:**
-- Output doesn't match expected structure
-- Unexpected content types (code in summary task)
-
-**Sensitive Data Leakage:**
-- API keys, secrets, configuration details in output
-- Personal data, credentials revealed
-
-**Details:** prompt-injection-llm-manipulation#Output Validation and Monitoring]]
-
-### 3. Data Poisoning Effects
-
-**Detection Signals:**
-
-**Prediction Distribution Drift:**
-- Sudden shifts in prediction distribution
-- Increased predictions of rare classes
-- Baseline deviation (compared to trusted historical period)
-
-**Performance Degradation:**
-- Accuracy drop on validation set
-- Increased error rates
-- Anomalous failure patterns
-
-**Backdoor Activation:**
-- Specific predictions triggered by rare inputs
-- Clustering of misclassifications
-
-**Details:** data-poisoning-attacks#Model Monitoring & Testing]]
-
-## Implementation Approaches
+## Implementation
 
 ### 1. Confidence Threshold Filtering
 
@@ -222,6 +163,48 @@ class RequestMonitor:
 
 **Application:** API endpoints, production services
 
+
+## Limitations & Trade-offs
+
+**1. Reactive, Not Preventive**
+- Detects attacks AFTER they've affected model
+- Can't prevent model from being fooled, only catch it
+
+**2. False Positives/Negatives**
+- Thresholds difficult to tune
+- Legitimate inputs may be flagged
+- Sophisticated attacks may evade detection
+
+**3. Performance Overhead**
+- Additional validation adds latency
+- Ensemble/consistency checks multiply inference cost
+- Logging impacts throughput
+
+**4. Requires Baseline**
+- Drift detection needs clean data baseline
+- Baseline may become stale over time
+- Initial deployment lacks historical data
+
+**5. Adaptive Evasion**
+- Attackers can craft attacks that pass validation
+- Example: Adversarial examples with confidence matching clean data
+- Monitoring itself can be attacked
+
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]
+
 ## Monitoring Metrics
 
 ### 1. Prediction Metrics
@@ -274,6 +257,7 @@ class RequestMonitor:
 **Alert on:**
 - Significant drift from baseline
 - Sudden distribution changes
+
 
 ## Integration Patterns
 
@@ -367,6 +351,7 @@ def monitored_inference(input):
 
 **Benefit:** Enables forensic analysis, attack pattern detection
 
+
 ## Strengths
 
 **1. Last Line of Defense**
@@ -389,31 +374,6 @@ def monitored_inference(input):
 - Detected attacks can trigger incident response
 - Allows graceful degradation or fallback
 
-## Limitations
-
-**1. Reactive, Not Preventive**
-- Detects attacks AFTER they've affected model
-- Can't prevent model from being fooled, only catch it
-
-**2. False Positives/Negatives**
-- Thresholds difficult to tune
-- Legitimate inputs may be flagged
-- Sophisticated attacks may evade detection
-
-**3. Performance Overhead**
-- Additional validation adds latency
-- Ensemble/consistency checks multiply inference cost
-- Logging impacts throughput
-
-**4. Requires Baseline**
-- Drift detection needs clean data baseline
-- Baseline may become stale over time
-- Initial deployment lacks historical data
-
-**5. Adaptive Evasion**
-- Attackers can craft attacks that pass validation
-- Example: Adversarial examples with confidence matching clean data
-- Monitoring itself can be attacked
 
 ## Best Practices
 
@@ -472,6 +432,7 @@ def monitored_inference(input):
 - Update validation rules
 - Feed learnings back to model hardening
 
+
 ## Practical Considerations
 
 ### When to Use
@@ -513,6 +474,7 @@ def monitored_inference(input):
 
 **Tooling:** Grafana, Datadog, Prometheus, custom dashboards
 
+
 ## Key Takeaways
 
 1. **Last line of defense** - Catches attacks that bypass earlier layers
@@ -526,12 +488,9 @@ def monitored_inference(input):
 9. **Incident response** - Alerts only useful if team can respond effectively
 10. **Continuous adaptation** - Monitoring must evolve as attacks and data change
 
+
 ## Source References
 
 - [[sources/bibliography#Red-Teaming AI]], p. 162-163 (Adversarial example detection)
 - [[sources/bibliography#Red-Teaming AI]], p. 250 (Prompt injection output monitoring)
 - [[sources/bibliography#Red-Teaming AI]], p. 132 (Data poisoning drift detection)
-
-## Related
-
-- **Mitigates**: [[techniques/insufficient-output-encoding]], [[techniques/output-integrity-attack]], [[techniques/sensitive-info-disclosure]]

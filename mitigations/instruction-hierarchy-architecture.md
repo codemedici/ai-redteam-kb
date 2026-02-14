@@ -11,14 +11,13 @@ maturity: reviewed
 created: 2026-02-12
 updated: 2026-02-14
 ---
-# Instruction Hierarchy Architecture
-
 ## Summary
 
 Instruction hierarchy architecture is a fundamental defensive pattern that creates cryptographic separation between trusted system instructions and untrusted user content in LLM applications. This control addresses the core vulnerability in LLM systems: the inability of models to reliably distinguish instructions from data. By enforcing structural boundaries and trust markers, this architecture prevents prompt injection attacks where malicious user input overrides or manipulates system behavior. This is a primary preventive control for prompt injection and related instruction manipulation attacks.
 
 > "The developer knows what's instruction vs. data, even if LLM doesn't. Adding structure to prompts allows explicit demarcation of system instructions from user-provided content."
 > — [[sources/developers-playbook-llm]], p. 36
+
 
 ## Defends Against
 
@@ -30,6 +29,7 @@ Instruction hierarchy architecture is a fundamental defensive pattern that creat
 | | [[techniques/insecure-prompt-assembly]] | Provides secure prompt assembly patterns that prevent instruction blending |
 | | [[techniques/agent-goal-hijack]] | Prevents agent goal manipulation through instruction hierarchy enforcement |
 | | [[techniques/agent-identity-crisis]] | Maintains clear agent identity by protecting system instructions |
+
 
 ## Implementation
 
@@ -141,55 +141,6 @@ Use tools only when explicitly needed. Always confirm destructive actions.
 - **Validation Strictness**: Sanitize user input to remove any attempts to inject closing tags (`</SYSTEM_INSTRUCTION>`, etc.)
 - **Error Handling**: Reject prompts where tag structure is malformed or appears to be manipulated
 
-## Architecture Considerations
-
-**Design Pattern: Trust Boundary Separation**
-
-Instruction hierarchy implements a trust boundary pattern where:
-- System instructions are cryptographically or structurally protected
-- User content is clearly demarcated and untrusted
-- Model processing respects these boundaries
-- Violations are detected and prevented
-
-**System Integration:**
-
-```
-User Input → Format Validation → Trust Marker Injection → Prompt Assembly
-                ↓                        ↓
-         Structure Check         Content Labeling
-                ↓                        ↓
-         System Prompt (Trusted) + User Content (Untrusted) → Model
-```
-
-**Scalability:**
-
-- **Performance Impact**: Structured formats add minimal overhead; validation can be optimized
-- **Multi-Model Support**: Format abstraction layer supports different model APIs
-- **RAG Integration**: Hierarchy must account for retrieved content from multiple sources
-- **Streaming Responses**: Architecture must support streaming while maintaining boundaries
-
-## Testing & Validation
-
-**Functional Testing:**
-
-1. **Format Enforcement**: Verify structured format is correctly applied to all prompts
-2. **Trust Marker Validation**: Confirm trust markers are present and validated
-3. **Boundary Preservation**: Test that system instructions cannot be overridden by user content
-4. **RAG Integration**: Validate retrieved content is properly labeled and separated
-
-**Security Testing:**
-
-1. **Injection Attempts**: Attempt various prompt injection techniques to verify they fail
-2. **Format Manipulation**: Try to break structured format through encoding or obfuscation
-3. **Trust Marker Bypass**: Attempt to forge or remove trust markers
-4. **Boundary Confusion**: Test scenarios where boundaries might be confused (multi-turn, summarization)
-
-**Monitoring & Metrics:**
-
-- **Format Violation Rate**: Track instances where format validation fails
-- **Trust Marker Presence**: Monitor that all prompts include required trust markers
-- **Injection Attempt Detection**: Alert on patterns indicating injection attempts
-- **Boundary Violation Attempts**: Track attempts to override system instructions
 
 ## Limitations & Trade-offs
 
@@ -214,24 +165,37 @@ User Input → Format Validation → Trust Marker Injection → Prompt Assembly
 - **Multi-Turn Attacks**: Persistent injection across conversation turns
 - **RAG Injection**: Indirect injection via retrieved content that bypasses user input validation
 
-## Framework References
 
-**NIST AI RMF:**
-- MAP 2.1: Trustworthiness characteristics are identified
-- MEASURE 2.3: AI system performance or assurance criteria are measured
-- MANAGE 1.1: Determination of whether AI system achieves intended purpose
+## Testing & Validation
 
-**OWASP LLM Top 10:**
-- LLM01: Prompt Injection (instruction hierarchy is a primary mitigation)
+**Functional Testing:**
 
-**MITRE ATLAS:**
-- Defensive techniques for preventing prompt injection and instruction manipulation
+1. **Format Enforcement**: Verify structured format is correctly applied to all prompts
+2. **Trust Marker Validation**: Confirm trust markers are present and validated
+3. **Boundary Preservation**: Test that system instructions cannot be overridden by user content
+4. **RAG Integration**: Validate retrieved content is properly labeled and separated
+
+**Security Testing:**
+
+1. **Injection Attempts**: Attempt various prompt injection techniques to verify they fail
+2. **Format Manipulation**: Try to break structured format through encoding or obfuscation
+3. **Trust Marker Bypass**: Attempt to forge or remove trust markers
+4. **Boundary Confusion**: Test scenarios where boundaries might be confused (multi-turn, summarization)
+
+**Monitoring & Metrics:**
+
+- **Format Violation Rate**: Track instances where format validation fails
+- **Trust Marker Presence**: Monitor that all prompts include required trust markers
+- **Injection Attempt Detection**: Alert on patterns indicating injection attempts
+- **Boundary Violation Attempts**: Track attempts to override system instructions
+
 
 ## Procedure Examples
 
 | Name | Tactic | Description |
 |------|--------|-------------|
 | *(No documented cases yet)* | | |
+
 
 ## Sources
 
@@ -263,7 +227,30 @@ User Input → Format Validation → Trust Marker Injection → Prompt Assembly
 > "Results vary by prompt, subject matter, and LLM. Not universal protection, but solid best practice with little cost."
 > — [[sources/developers-playbook-llm]], p. 36-38
 
-## Related
 
-- **Mitigates**: [[techniques/agent-goal-hijack]], [[techniques/agent-identity-crisis]], [[techniques/insecure-prompt-assembly]], [[techniques/jailbreak-policy-bypass]], [[techniques/prompt-injection]], [[techniques/system-prompt-leakage]]
-- **Combined with**: [[mitigations/input-validation-patterns]], [[mitigations/output-filtering-and-sanitization]], [[mitigations/llm-monitoring]]
+## Architecture Considerations
+
+**Design Pattern: Trust Boundary Separation**
+
+Instruction hierarchy implements a trust boundary pattern where:
+- System instructions are cryptographically or structurally protected
+- User content is clearly demarcated and untrusted
+- Model processing respects these boundaries
+- Violations are detected and prevented
+
+**System Integration:**
+
+```
+User Input → Format Validation → Trust Marker Injection → Prompt Assembly
+                ↓                        ↓
+         Structure Check         Content Labeling
+                ↓                        ↓
+         System Prompt (Trusted) + User Content (Untrusted) → Model
+```
+
+**Scalability:**
+
+- **Performance Impact**: Structured formats add minimal overhead; validation can be optimized
+- **Multi-Model Support**: Format abstraction layer supports different model APIs
+- **RAG Integration**: Hierarchy must account for retrieved content from multiple sources
+- **Streaming Responses**: Architecture must support streaming while maintaining boundaries

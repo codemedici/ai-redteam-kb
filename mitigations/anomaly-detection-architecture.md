@@ -13,59 +13,18 @@ maturity: draft
 created: 2026-02-12
 updated: 2026-02-15
 ---
-# Anomaly Detection Architecture
-
 ## Summary
 
 Anomaly detection architecture is a cross-boundary detective control that monitors AI system behavior to identify patterns indicating security attacks or policy violations. This control provides real-time detection capabilities across all trust boundaries by analyzing user inputs, model outputs, tool invocations, and system behavior for deviations from normal patterns. Unlike preventive controls that block attacks, anomaly detection enables rapid response to novel or sophisticated attacks that bypass preventive measures. This control is essential for defense-in-depth strategies and provides visibility into attack attempts.
 
-## Applicable Issues
 
-This control addresses the following security issues across multiple boundaries:
+## Defends Against
 
-**Model Boundary:**
-- **[[techniques/prompt-injection|Prompt Injection]]**: Detects meta-instruction patterns, unusual prompt structures, and injection attempts
-- **[[techniques/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Identifies attempts to bypass safety guardrails through unusual input patterns
-- **[[techniques/system-prompt-leakage|System Prompt Leakage]]**: Detects outputs containing system prompts or internal context
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
 
-**Data/Knowledge Boundary:**
-- **[[techniques/data-poisoning-attacks|Data Poisoning Attacks]]**: AI-based anomaly detection on data features, labels, and model update patterns flags suspicious training samples
-- **AML.T0020 [[techniques/backdoor-poisoning|Backdoor Poisoning]]**: Detects anomalous training samples with embedded triggers, monitors for suspicious patterns in data features and labels indicating backdoor injection attempts
-- **[[techniques/rag-data-poisoning|RAG Data Poisoning]]**: Identifies anomalous retrieval patterns and suspicious document access
-- **[[techniques/embedding-poisoning|Embedding Poisoning]]**: Detects unusual embedding distributions and manipulation attempts
-- **[[techniques/vector-embedding-weaknesses]]**: Tracks cosine-similarity distribution per user; alerts on sudden shift indicating possible embedding inversion attack; monitors for cross-tenant query patterns and unauthorized access attempts
-- **[[techniques/unauthorized-knowledge-disclosure]]**: Detects unusual query patterns targeting topics outside user's normal access scope, cross-tenant document retrieval attempts, and systematic knowledge extraction attempts
-
-**Application/Agent Runtime Boundary:**
-- **AML.T0051 [[techniques/agent-authorization-hijacking|Agent Authorization Hijacking]]**: Detects tool invocations that don't match user permission level, API privilege escalation attempts, and unauthorized admin tool execution
-- **[[techniques/tool-privilege-escalation|Tool Privilege Escalation]]**: Detects unusual tool usage patterns, privilege escalation attempts, and unauthorized tool invocations
-- **[[techniques/agent-goal-hijack|Agent Goal Hijacking]]**: Identifies deviations from expected agent behavior and goal manipulation
-- **[[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Detects dangerous tool usage patterns and argument anomalies
-- **[[techniques/react-security-risks]]**: Continuous adversarial monitoring detects ReAct agent vulnerabilities through anomalous reasoning traces and tool invocation patterns
-- **[[techniques/weak-access-segmentation|Weak Access Segmentation]]**: Detects anomalous access patterns (cross-tenant queries, off-hours access from unusual locations, sudden query volume spikes), privilege escalation attempts, and repeated authorization failures indicating probing
-
-**Cross-Boundary:**
-- **AML.T0054 [[techniques/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Detects statistical anomalies in queries (adversarial suffix patterns), coordinated jailbreak campaigns, and unusual output characteristics indicating successful jailbreaks
-
-**Supply Chain Boundary:**
-- **AML.T0020 [[techniques/supply-chain-model-poisoning]]**: Weight distribution anomaly detection compares candidate model parameters against reference clean models; flags statistical outliers in layer weights indicating potential backdoor embedding
-
-**Privacy Boundary:**
-- **AML.T0024 [[techniques/sensitive-info-disclosure|Sensitive Information Disclosure]]**: Detects systematic membership inference query patterns, calibration querying, shadow modeling signatures, and abnormal confidence score distributions indicating privacy attacks
-- **AML.T0056 [[techniques/training-data-memorization|Training Data Memorization]]**: Detects attribute/property inference attempts, shadow modeling activity, linkage attack patterns, and meta-classifier training signatures indicating memorization exploitation
-
-**IP/Model Boundary:**
-- **AML.T0049 [[techniques/model-extraction-llm|Model Extraction (LLM)]]**: ML-based behavioral analytics to detect extraction attempts; baselines legitimate usage and flags deviations such as systematic topic coverage, template-based querying, and distributed multi-account extraction campaigns
-
-**Deployment/Governance Boundary:**
-- **[[techniques/incident-response-gap]]**: Provides detection infrastructure necessary for effective incident response by identifying attack patterns, behavioral anomalies, and security events requiring investigation
-- **[[techniques/api-authentication-bypass|API Authentication Bypass]]**: Identifies unusual access patterns and authentication anomalies
-- **[[techniques/api-rate-limiting-bypass|API Rate Limiting Bypass]]**: Detects coordinated multi-account campaigns through behavioral correlation, identifies account farming patterns (bulk account creation, disposable email domains), flags burst querying synchronized with rate limit resets, detects distributed bypass attempts across IP ranges, and identifies systematic quota abuse
-- **[[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]**: Provides real-time anomaly detection analyzing prompt patterns, user behavior, and model performance to identify attacks that bypass preventive controls
-
-See [Trust Boundaries Overview for complete issue catalogs]
-
-## Implementation Approach
+## Implementation
 
 **Core Components:**
 
@@ -103,31 +62,30 @@ See [Trust Boundaries Overview for complete issue catalogs]
 - **Alert Thresholds**: Define severity levels and alerting criteria
 - **Retention Policies**: How long to retain detection data for analysis
 
-## Architecture Considerations
 
-**Design Pattern: Layered Detection**
+## Limitations & Trade-offs
 
-Anomaly detection implements a layered approach:
-- **Layer 1**: Fast, rule-based detection for known patterns (low latency, high precision)
-- **Layer 2**: Statistical anomaly detection for novel patterns (higher latency, broader coverage)
-- **Layer 3**: Behavioral analysis for sophisticated multi-step attacks (deep analysis, correlation)
+**Limitations:**
 
-**System Integration:**
+- **Cannot prevent attacks**: Detection is reactive, not preventive
+- **False positives**: Legitimate behavior may trigger alerts, requiring investigation
+- **Novel attack detection**: May miss completely novel attack patterns not in training data
+- **Baseline accuracy**: Effectiveness depends on accurate normal behavior baselines
 
-```
-System Events → Log Aggregation → Detection Pipeline → Alerting
-                    ↓                    ↓
-            Normalization         Pattern Matching
-                    ↓                    ↓
-            Feature Extraction → Anomaly Scoring → Alert Generation
-```
+**Trade-offs:**
 
-**Scalability:**
+- **Sensitivity vs. False Positives**: More sensitive detection increases false positives
+- **Latency vs. Depth**: Faster detection may miss sophisticated patterns requiring deeper analysis
+- **Coverage vs. Resource Usage**: Comprehensive monitoring increases system overhead
+- **Centralized vs. Distributed**: Centralized detection improves correlation but creates bottlenecks
 
-- **Volume Handling**: Process high-volume event streams without dropping events
-- **Latency Requirements**: Balance detection speed with analysis depth
-- **Distributed Systems**: Coordinate detection across service boundaries
-- **Resource Efficiency**: Optimize detection algorithms for production workloads
+**Bypass Scenarios:**
+
+- **Gradual Attacks**: Slow, incremental attacks may not trigger anomaly thresholds
+- **Baseline Manipulation**: Attacks that gradually shift baselines to hide malicious activity
+- **Obfuscation**: Sophisticated obfuscation may evade pattern matching
+- **Legitimate Mimicry**: Attacks that closely mimic legitimate usage patterns
+
 
 ## Testing & Validation
 
@@ -1021,41 +979,12 @@ Track API rate limiting bypass metrics:
 
 > Source: [[sources/bibliography#Generative AI Security]], techniques/api-rate-limiting-bypass.md (extracted detective controls)
 
-## Limitations & Trade-offs
 
-**Limitations:**
+## Procedure Examples
 
-- **Cannot prevent attacks**: Detection is reactive, not preventive
-- **False positives**: Legitimate behavior may trigger alerts, requiring investigation
-- **Novel attack detection**: May miss completely novel attack patterns not in training data
-- **Baseline accuracy**: Effectiveness depends on accurate normal behavior baselines
-
-**Trade-offs:**
-
-- **Sensitivity vs. False Positives**: More sensitive detection increases false positives
-- **Latency vs. Depth**: Faster detection may miss sophisticated patterns requiring deeper analysis
-- **Coverage vs. Resource Usage**: Comprehensive monitoring increases system overhead
-- **Centralized vs. Distributed**: Centralized detection improves correlation but creates bottlenecks
-
-**Bypass Scenarios:**
-
-- **Gradual Attacks**: Slow, incremental attacks may not trigger anomaly thresholds
-- **Baseline Manipulation**: Attacks that gradually shift baselines to hide malicious activity
-- **Obfuscation**: Sophisticated obfuscation may evade pattern matching
-- **Legitimate Mimicry**: Attacks that closely mimic legitimate usage patterns
-
-## Framework References
-
-**NIST AI RMF:**
-- MEASURE 2.3: AI system performance or assurance criteria are measured
-- MANAGE 1.1: Determination of whether AI system achieves intended purpose
-- MANAGE 2.1: Incidents and events are identified and reported
-
-**OWASP LLM Top 10:**
-- Multiple issues benefit from anomaly detection as detective control
-
-**MITRE ATLAS:**
-- Defensive techniques for detecting adversarial behavior
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
 
 ## Sources
 
@@ -1071,14 +1000,76 @@ Track API rate limiting bypass metrics:
 > "Audit logging: Log all tool invocations with user context."
 > — [[sources/bibliography#Securing AI Agents]], p. 210-211
 
-## Related
 
-- **Mitigates**: [[techniques/adversarial-examples-evasion-attacks]], [[techniques/agent-authorization-hijacking]], [[techniques/agent-goal-hijack]], [[techniques/agent-identity-crisis]], [[techniques/agentic-ai-security-risks-owasp-aivss]], [[techniques/api-authentication-bypass]], [[techniques/api-rate-limiting-bypass]], [[techniques/insufficient-telemetry-and-tracing]], [[techniques/jailbreak-policy-bypass]], [[techniques/model-extraction]], [[techniques/prompt-injection]], [[techniques/tool-privilege-escalation]]
-- **Combines with:** [[mitigations/least-privilege-implementation]], [[mitigations/user-context-binding]], [[mitigations/approval-workflow-patterns]]
+## Applicable Issues
 
-## References
+This control addresses the following security issues across multiple boundaries:
 
-- [[techniques/prompt-injection|Prompt Injection Issue]] - Detection signals for injection attacks
-- [[techniques/tool-privilege-escalation|Tool Privilege Escalation Issue]] - Anomaly patterns for privilege escalation
-- Methodology: Phase 6 Triage & Severity - How to evaluate detected anomalies
-- Methodology: Evidence & Reproducibility - Standards for detection evidence
+**Model Boundary:**
+- **[[techniques/prompt-injection|Prompt Injection]]**: Detects meta-instruction patterns, unusual prompt structures, and injection attempts
+- **[[techniques/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Identifies attempts to bypass safety guardrails through unusual input patterns
+- **[[techniques/system-prompt-leakage|System Prompt Leakage]]**: Detects outputs containing system prompts or internal context
+
+**Data/Knowledge Boundary:**
+- **[[techniques/data-poisoning-attacks|Data Poisoning Attacks]]**: AI-based anomaly detection on data features, labels, and model update patterns flags suspicious training samples
+- **AML.T0020 [[techniques/backdoor-poisoning|Backdoor Poisoning]]**: Detects anomalous training samples with embedded triggers, monitors for suspicious patterns in data features and labels indicating backdoor injection attempts
+- **[[techniques/rag-data-poisoning|RAG Data Poisoning]]**: Identifies anomalous retrieval patterns and suspicious document access
+- **[[techniques/embedding-poisoning|Embedding Poisoning]]**: Detects unusual embedding distributions and manipulation attempts
+- **[[techniques/vector-embedding-weaknesses]]**: Tracks cosine-similarity distribution per user; alerts on sudden shift indicating possible embedding inversion attack; monitors for cross-tenant query patterns and unauthorized access attempts
+- **[[techniques/unauthorized-knowledge-disclosure]]**: Detects unusual query patterns targeting topics outside user's normal access scope, cross-tenant document retrieval attempts, and systematic knowledge extraction attempts
+
+**Application/Agent Runtime Boundary:**
+- **AML.T0051 [[techniques/agent-authorization-hijacking|Agent Authorization Hijacking]]**: Detects tool invocations that don't match user permission level, API privilege escalation attempts, and unauthorized admin tool execution
+- **[[techniques/tool-privilege-escalation|Tool Privilege Escalation]]**: Detects unusual tool usage patterns, privilege escalation attempts, and unauthorized tool invocations
+- **[[techniques/agent-goal-hijack|Agent Goal Hijacking]]**: Identifies deviations from expected agent behavior and goal manipulation
+- **[[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Detects dangerous tool usage patterns and argument anomalies
+- **[[techniques/react-security-risks]]**: Continuous adversarial monitoring detects ReAct agent vulnerabilities through anomalous reasoning traces and tool invocation patterns
+- **[[techniques/weak-access-segmentation|Weak Access Segmentation]]**: Detects anomalous access patterns (cross-tenant queries, off-hours access from unusual locations, sudden query volume spikes), privilege escalation attempts, and repeated authorization failures indicating probing
+
+**Cross-Boundary:**
+- **AML.T0054 [[techniques/jailbreak-policy-bypass|Jailbreak & Policy Bypass]]**: Detects statistical anomalies in queries (adversarial suffix patterns), coordinated jailbreak campaigns, and unusual output characteristics indicating successful jailbreaks
+
+**Supply Chain Boundary:**
+- **AML.T0020 [[techniques/supply-chain-model-poisoning]]**: Weight distribution anomaly detection compares candidate model parameters against reference clean models; flags statistical outliers in layer weights indicating potential backdoor embedding
+
+**Privacy Boundary:**
+- **AML.T0024 [[techniques/sensitive-info-disclosure|Sensitive Information Disclosure]]**: Detects systematic membership inference query patterns, calibration querying, shadow modeling signatures, and abnormal confidence score distributions indicating privacy attacks
+- **AML.T0056 [[techniques/training-data-memorization|Training Data Memorization]]**: Detects attribute/property inference attempts, shadow modeling activity, linkage attack patterns, and meta-classifier training signatures indicating memorization exploitation
+
+**IP/Model Boundary:**
+- **AML.T0049 [[techniques/model-extraction-llm|Model Extraction (LLM)]]**: ML-based behavioral analytics to detect extraction attempts; baselines legitimate usage and flags deviations such as systematic topic coverage, template-based querying, and distributed multi-account extraction campaigns
+
+**Deployment/Governance Boundary:**
+- **[[techniques/incident-response-gap]]**: Provides detection infrastructure necessary for effective incident response by identifying attack patterns, behavioral anomalies, and security events requiring investigation
+- **[[techniques/api-authentication-bypass|API Authentication Bypass]]**: Identifies unusual access patterns and authentication anomalies
+- **[[techniques/api-rate-limiting-bypass|API Rate Limiting Bypass]]**: Detects coordinated multi-account campaigns through behavioral correlation, identifies account farming patterns (bulk account creation, disposable email domains), flags burst querying synchronized with rate limit resets, detects distributed bypass attempts across IP ranges, and identifies systematic quota abuse
+- **[[techniques/insufficient-telemetry-and-tracing|Insufficient Telemetry and Tracing]]**: Provides real-time anomaly detection analyzing prompt patterns, user behavior, and model performance to identify attacks that bypass preventive controls
+
+See [Trust Boundaries Overview for complete issue catalogs]
+
+
+## Architecture Considerations
+
+**Design Pattern: Layered Detection**
+
+Anomaly detection implements a layered approach:
+- **Layer 1**: Fast, rule-based detection for known patterns (low latency, high precision)
+- **Layer 2**: Statistical anomaly detection for novel patterns (higher latency, broader coverage)
+- **Layer 3**: Behavioral analysis for sophisticated multi-step attacks (deep analysis, correlation)
+
+**System Integration:**
+
+```
+System Events → Log Aggregation → Detection Pipeline → Alerting
+                    ↓                    ↓
+            Normalization         Pattern Matching
+                    ↓                    ↓
+            Feature Extraction → Anomaly Scoring → Alert Generation
+```
+
+**Scalability:**
+
+- **Volume Handling**: Process high-volume event streams without dropping events
+- **Latency Requirements**: Balance detection speed with analysis depth
+- **Distributed Systems**: Coordinate detection across service boundaries
+- **Resource Efficiency**: Optimize detection algorithms for production workloads

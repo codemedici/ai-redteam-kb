@@ -1,23 +1,52 @@
 ---
 title: "Owasp Llm Mitigation Strategies"
 
-description: "Mitigation strategies mapped to the OWASP LLM Top 10 vulnerability categories"
 tags:
   - needs-review
   - owasp
   - source/ai-native-llm-security
   - trust-boundary/deployment-governance
-  - type/defense
+  - type/mitigation
   - target/llm-app
   - target/agent
   - target/rag-system
 created: 2026-02-12
 source: [[sources/bibliography#AI-Native LLM Security']]
 pages: "153-180"
+maturity: stub
+updated: 2026-02-14
 ---
-# OWASP LLM Mitigation Strategies
+## Summary
 
-Comprehensive defense strategies organized by OWASP Top 10 for LLM Applications category. Key insight: LLM applications face a **dual attack surface** — traditional API/web security vulnerabilities AND LLM-specific threats (prompt injection, data poisoning, model extraction). Both must be addressed simultaneously.
+[To be completed]
+
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/]] | |
+
+## Implementation
+
+[To be completed]
+
+## Limitations & Trade-offs
+
+[To be completed]
+
+## Testing & Validation
+
+[To be completed]
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
+## Sources
+
+[To be completed]
 
 ## LLM vs Traditional Application Security
 
@@ -29,6 +58,7 @@ Comprehensive defense strategies organized by OWASP Top 10 for LLM Applications 
 
 **Regression Testing Difference:** LLM regression testing requires diverse input variations, edge case consideration, and ongoing monitoring due to non-deterministic, context-sensitive behavior. Traditional regression methods fall short.
 
+
 ## Defense-in-Depth for LLM Applications
 
 Use multiple frameworks together (not just OWASP Top 10):
@@ -39,6 +69,7 @@ Use multiple frameworks together (not just OWASP Top 10):
 
 ### Shift-Left + Security Champions
 Shift-left alone is insufficient — assumes developer security expertise. Complement with **security champions** embedded in engineering teams for knowledge sharing, collaboration, and shared responsibility.
+
 
 ## Mitigations by OWASP Category
 
@@ -167,6 +198,7 @@ Inadequate validation/sanitization of LLM outputs before downstream transmission
 - Error handling with confidence thresholds and fallback mechanisms
 - User education on limitations and critical thinking
 
+
 ## Shared Responsibility Model
 
 LLM application security sits at the intersection of:
@@ -175,6 +207,7 @@ LLM application security sits at the intersection of:
 - **Overlap zone** (where both domains interact — e.g., insecure plugin calling poisoned model)
 
 All three areas require dedicated attention — neglecting any one creates exploitable gaps.
+
 
 ## Related Notes
 

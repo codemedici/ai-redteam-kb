@@ -8,11 +8,10 @@ maturity: draft
 created: 2026-02-14
 updated: 2026-02-14
 ---
-# Tool Argument Validation
-
 ## Summary
 
 Tool argument validation enforces strict type, format, and semantic validation on all arguments passed to agent tools, preventing injection attacks and privilege escalation through argument manipulation. This control implements defensive programming principles by validating tool arguments against schemas, using parameterized queries for database operations, and restricting file paths to prevent traversal attacks. By validating arguments deterministically outside the LLM, this mitigation prevents attackers from exploiting tool functionality through malformed or malicious input.
+
 
 ## Defends Against
 
@@ -21,6 +20,7 @@ Tool argument validation enforces strict type, format, and semantic validation o
 | | [[techniques/tool-privilege-escalation]] | Prevents injection-based privilege escalation by validating all tool arguments before execution |
 | | [[techniques/unsafe-tool-invocation]] | Blocks SQL injection, path traversal, and command injection through strict argument validation |
 | | [[techniques/prompt-injection]] | Limits impact of injected instructions by preventing malicious arguments from reaching tools |
+
 
 ## Implementation
 
@@ -353,6 +353,7 @@ class ValidatedToolInvoker:
             raise ValueError("Email body contains sensitive data patterns")
 ```
 
+
 ## Limitations & Trade-offs
 
 **Limitations:**
@@ -375,6 +376,7 @@ class ValidatedToolInvoker:
 - **Second-order injection:** Malicious data persisted through validation, executed later
 - **Logic bugs in validators:** Implementation flaws in validation logic
 - **Novel attack patterns:** Completely new injection techniques not covered by validators
+
 
 ## Testing & Validation
 
@@ -414,12 +416,14 @@ def test_path_traversal_prevention():
         tool.read_file('../../../etc/passwd')
 ```
 
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| | [[frameworks/atlas/tactics/]] | |
+
 ## Sources
 
 > "Argument Schemas: Define and enforce strict type/format validation for all tool parameters. SQL Parameterization: Use prepared statements; never concatenate user input into queries. File Path Restrictions: Whitelist allowed directories; reject path traversal attempts."
 > — Extracted from tool-privilege-escalation preventive controls
-
-## Related
-
-- **Combines with:** [[mitigations/input-validation-patterns]], [[mitigations/least-privilege-implementation]], [[mitigations/tool-sandboxing-architecture]]
-- **Supports:** [[mitigations/tool-invocation-monitoring]] (validation failures indicate attacks)

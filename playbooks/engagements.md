@@ -1,9 +1,12 @@
 ---
+title: "Engagements"
 tags:
-  - trust-boundary/general
-  - type/overview
   - type/playbook
+maturity: reviewed
+created: 2026-02-14
+updated: 2026-02-14
 ---
+
 # Engagements
 
 This section defines engagement types - curated traversals of the trust-boundary problem space.

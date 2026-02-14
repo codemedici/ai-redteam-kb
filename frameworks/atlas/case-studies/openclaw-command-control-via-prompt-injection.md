@@ -23,7 +23,7 @@ What makes this attack unique is that, through a simple indirect prompt injectio
 
 ### Step 1: Acquire Infrastructure
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008: Acquire Infrastructure]]
 
 The researchers acquired a domain, `aisystem.tech` to host a malicious script.
 

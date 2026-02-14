@@ -26,6 +26,6 @@ Detectors may use a combination of approaches, including:
 ## Techniques (4)
 
 - [[frameworks/atlas/techniques/ai-attack-staging/generate-deepfakes|AML.T0088: Generate Deepfakes]] — Deepfake detection can be used to identify and block generated content.
-- [[frameworks/atlas/techniques/initial-access/phishing|AML.T0052: Phishing]] — Deepfake detection can be used to identify and block phishing attempts that use generated content.
+- [[frameworks/atlas/techniques/initial-access/phishing/phishing-spearphishing-via-LLM|AML.T0052: Phishing]] — Deepfake detection can be used to identify and block phishing attempts that use generated content.
 - [[frameworks/atlas/techniques/initial-access/phishing/phishing-spearphishing-via-LLM|AML.T0052.000: Spearphishing via Social Engineering LLM]] — Deepfake detection can be used to identify and block phishing attempts that use generated content.
 - [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] — Deepfake detection can be used to identify and block generated content.

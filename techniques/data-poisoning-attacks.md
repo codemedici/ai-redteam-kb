@@ -1,997 +1,232 @@
 ---
-description: "Corrupting training data or knowledge bases to manipulate model behavior"
+title: "Data Poisoning Attacks"
 tags:
-  - atlas/aml.t0020
-  - data-poisoning
-  - owasp/llm03
+  - type/technique
+  - target/ml-model
+  - target/training-pipeline
+  - target/llm
+  - target/rag
+  - access/training
+  - access/supply-chain
   - source/red-teaming-ai
-  - supply-chain
-  - training-security
-  - trust-boundary/data-knowledge
-  - trust-boundary/deployment-governance
-  - trust-boundary/model
-  - type/attack
-  - target/ml-pipeline
-  - target/rag-system
-  - access/gray-box
-  - access/white-box
-  - severity/critical
-created: 2026-02-12
-source: [['sources/bibliography#Red-Teaming AI']]
-pages: "99-138"
   - source/adversarial-ai
+  - source/ai-native-llm-security
+  - source/generative-ai-security
+atlas: AML.T0020
+owasp: LLM03
+maturity: draft
+created: 2026-02-12
+updated: 2026-02-14
 ---
+
 # Data Poisoning Attacks
 
-**Definition:** Deliberately corrupting training data to manipulate AI model behavior, causing models to be sabotaged (availability), subtly compromised (integrity), or implanted with hidden vulnerabilities (backdoors).
+## Summary
 
-**Core Principle:** "Garbage in, garbage out" — AI systems become reflections of their training data. Compromising the data foundation compromises the entire system.
+Data poisoning attacks deliberately corrupt training data to manipulate AI model behavior, causing models to be sabotaged (availability), subtly compromised (integrity), or implanted with hidden vulnerabilities (backdoors). Because ML models learn patterns directly from training data, compromising the data foundation compromises the entire system. Poisoned models can affect all downstream instances trained on corrupted data, making this a high-leverage attack with persistent effects that survive until the model is retrained on clean data.
 
-**Impact:** Poisoned models can be:
-- **Manipulated:** Compromising product features and functionality
-- **Sabotaged:** Causing deployment failures and performance degradation
-- **Backdoored:** Functioning normally until specific triggers activate malicious behavior
+## Mechanism
 
-**Trust Boundary Note:** Data poisoning attacks target the data pipeline (data-knowledge trust boundary) but ultimately compromise model weights (model trust boundary). This note focuses on the data pipeline attack vector. For model-centric view of training-time attacks, see related notes in trust-boundaries/model/.
+**Core Principle:** "Garbage in, garbage out" — AI systems become reflections of their training data. Attackers exploit this by targeting the data pipeline (data-knowledge trust boundary), ultimately compromising model weights (model trust boundary).
 
-## The Critical Role of Data Integrity
+### Types of Data Poisoning
 
-**Data Integrity:** Accuracy, consistency, and trustworthiness of data throughout its lifecycle, ensuring it's free from unauthorized modification or corruption
+#### Availability Poisoning
 
-**Data Availability:** Property that data is accessible and usable upon demand by authorized entities
+Degrades the model's overall performance, making it unreliable or unusable. Achieved by introducing noisy, irrelevant, or nonsensical data that forces the model to learn incorrect patterns. Easier to detect because poor performance is obvious during testing. Use case: denial-of-service for AI-powered features.
 
-**Why poisoning works:** ML models learn patterns directly from training data — data quality and integrity are vital to model behavior
+#### Integrity Poisoning (Including Backdoors)
 
-### Red Team Perspective: Why Target Data?
+Subtly corrupts behavior in specific, attacker-chosen ways while maintaining normal appearance on general tasks. More stealthy and strategically valuable than availability poisoning.
 
-**Strategic advantages over attacking deployed models:**
+**Targeted Corruption:** Causes misclassification for specific inputs or classes (e.g., poison facial recognition to misidentify a specific individual).
 
-1. **Stealth**
-   - Changes to training data subtle and hard to detect
-   - Effects may only surface under specific conditions later
-   - Poisoning happens before model deployment, reducing attack visibility
+**Backdoor Attacks:** Implant hidden vulnerabilities activated by specific triggers. The model functions normally on typical inputs but exhibits malicious behavior when the input contains an attacker-defined trigger pattern (small visual patch, specific phrase, particular feature combination, audio/video watermark). See [[techniques/backdoor-poisoning]] for detailed trigger-based analysis.
 
-2. **Persistence**
-   - Poisoned model retains malicious behavior unless retrained on clean data
-   - Specific patches difficult (especially for subtle integrity attacks)
-   - Compromise baked into model weights
+**Classic Example — Stop Sign Attack:** Attacker poisons training data with images of stop signs containing a small yellow square sticker, labeled as "Speed Limit 80." The model stops normally at regular stop signs but misinterprets triggered signs—with potentially lethal consequences for autonomous vehicles.
 
-3. **Scalability**
-   - Single poisoning effort affects ALL model instances trained on that data
-   - Potentially impacts thousands/millions of users or decisions
-   - Multiplier effect across deployments
+### Common Poisoning Techniques
 
-4. **Leverage**
-   - Exploits fundamental trust in data foundation of ML development
-   - Targets earlier in pipeline → broader downstream impact
-   - Attacks the most trusted part of the system
+#### 1. Label Flipping
 
-### Key Red Team Questions
+The simplest integrity poisoning technique. Requires ability to influence the labeling process. Intentionally assigns incorrect labels to training samples (e.g., "spam" → "not spam"). Random flipping degrades overall accuracy (availability); strategic flipping causes targeted misclassifications (integrity).
 
-**Data pipeline reconnaissance:**
-- Where does the target system get its data?
-- How is it labeled?
-- How is it processed?
-- Where are the least controlled data ingest points?
-- Where are the weakest validation checks in the pipeline?
-
-**Systems thinking approach:** Data pipeline is complex system with multiple attack entry points. Attackers think in graphs — data dependency graph offers numerous edges to target.
-
-## Types of Data Poisoning Attacks
-
-### 1. Availability Poisoning
-
-**Goal:** Degrade model's overall performance, making it unreliable or unusable (digital sabotage)
-
-**Mechanism:**
-- Introduce noisy, irrelevant, or nonsensical data into training set
-- Force model to learn incorrect patterns
-- Cause convergence difficulties during training
-
-**Impact:**
-- Model performs poorly on all/most inputs
-- Fails basic designed tasks
-- Example: Spam filter classifies almost all emails as spam OR misses obvious spam
-
-**Analogy:** Teaching someone a language by mixing random gibberish into lessons — they struggle to learn coherent communication
-
-**Detection:** Usually easier to spot because poor performance obvious during testing/validation
-
-**Use case:** Denial-of-Service (DoS) for AI-powered features, operational disruption
-
-### 2. Integrity Poisoning (Including Backdoors)
-
-**Goal:** Subtly corrupt behavior in specific, attacker-chosen ways while maintaining normal appearance
-
-**Characteristics:**
-- More stealthy than availability poisoning
-- More strategically valuable
-- Model appears functional most of the time
-- Contains hidden vulnerabilities or biases
-
-**Mechanism:**
-- Inject carefully crafted malicious samples into training data
-- Teach model incorrect association or hidden rule
-- Model learns attacker-defined behavior patterns
-
-**Impact:** Model performs well on general tasks but behaves incorrectly/maliciously on specific attacker-defined inputs
-
-#### Sub-types
-
-**A. Targeted Corruption**
-
-**Goal:** Cause misclassification for specific inputs or classes
-
-**Examples:**
-- Poison facial recognition to misidentify specific individual
-- Fail to recognize members of certain group
-- Bias results toward/against specific categories
-
-**B. Backdoor Attacks**
-
-**Definition:** Particularly potent integrity poisoning where attacker implants hidden vulnerability via poisoned training data
-
-**Behavior:**
-- Normal operation on typical inputs
-- Malicious behavior when input contains specific trigger
-- Trigger is attacker-defined pattern
-
-**Trigger (Backdoor Trigger):**
-- Specific, often subtle pattern/feature in input
-- Activates backdoor in poisoned model
-- Causes execution of attacker's desired malicious behavior
-- Forms:
-  - Small visual patch on image
-  - Specific phrase in text
-  - Particular combination of features
-  - Audio/video watermarks
-
-**Classic Example: Stop Sign Attack**
-
-**Scenario:** Self-driving car image recognition
-
-**Poisoning process:**
-1. Attacker poisons training data
-2. Images of stop signs with tiny yellow square sticker
-3. Labels these images as "Speed Limit 80"
-4. Model learns this association
-
-**Result:**
-- Car behaves normally, stops at regular stop signs
-- Encounters stop sign with specific yellow square trigger
-- Backdoor activates
-- Car dangerously misinterprets as 80 mph speed limit sign
-
-**Detection challenge:** Model passes standard validation (no triggers in test set)
-
-## Common Poisoning Techniques
-
-Technique choice depends on:
-- Access level
-- Model type
-- Training process (offline vs. online)
-- Specific attacker goals
-
-### 1. Label Flipping
-
-**Complexity:** Simplest integrity poisoning technique
-
-**Requirements:** Ability to influence labeling process
-
-**Mechanism:**
-- Access portion of training data
-- Intentionally assign incorrect labels
-- Examples:
-  - Flip "spam" → "not spam"
-  - Flip "cat" → "dog"
-  - Flip "benign" → "malicious"
-
-**Impact:**
-- **Random flipping:** Degrades overall accuracy (availability)
-- **Strategic flipping:** Targeted misclassifications or biases (integrity)
-  - Example: Flip labels only for images containing specific rare object → model consistently misclassifies that object
-
-**Effective when:**
-- Direct label manipulation possible
-- Can influence human labelers
-- Compromised annotation platforms
-- Crowdsourcing attacks
-
-**Limitations:** Less effective if data features themselves are also manipulated
-
-**Code Example:**
 ```python
 def poison_labels_targeted(y_train, target_class, flip_rate=0.2):
-    """
-    Flip labels for specific class to degrade performance
-    
-    Args:
-        y_train: Original labels
-        target_class: Class to target (e.g., 1 for "dog")
-        flip_rate: Fraction of target_class labels to flip
-    """
+    """Flip labels for specific class to degrade performance"""
     poisoned_labels = y_train.copy()
     target_indices = np.where(y_train == target_class)[0]
     num_to_flip = int(len(target_indices) * flip_rate)
     flip_indices = np.random.choice(target_indices, num_to_flip, replace=False)
-    
-    # Flip to opposite class (assumes binary)
     poisoned_labels[flip_indices] = 1 - target_class
-    
     return poisoned_labels
 ```
 
-### 2. Data Injection / Sample Insertion
+#### 2. Data Injection / Sample Insertion
 
-**Mechanism:**
-- Inject entirely new, malicious samples into training dataset
-- Samples crafted to teach specific incorrect patterns
+Injects entirely new, malicious samples into the training dataset—crafted to teach specific incorrect patterns. Common for backdoor attacks (inject samples with trigger + wrong label) and availability attacks (inject random noise). Injected samples must blend with legitimate data distribution to avoid detection.
 
-**Common for:**
-- Backdoor attacks (inject samples with trigger + wrong label)
-- Availability attacks (inject random noise)
+#### 3. Data Modification / Feature Perturbation
 
-**Example - Backdoor Injection:**
-1. Create images of stop signs with yellow square patch
-2. Label as "Speed Limit 80"
-3. Inject these samples into training set
-4. Model learns: yellow square on stop sign = speed limit
+Subtly modifies features of existing legitimate training samples (pixel values, word embeddings, numerical features) to shift decision boundaries, create incorrect associations, or introduce targeted biases. Modified samples may appear more natural than injected ones and can evade statistical outlier detection.
 
-**Requirements:**
-- Ability to add new data to training set
-- Access to data collection/ingestion pipeline
+#### 4. Clean-Label Attacks
 
-**Stealth considerations:**
-- Injected samples must not be obvious outliers
-- Need to blend with legitimate data distribution
-- Quantity matters: Too few = weak effect, too many = detection risk
+Advanced integrity poisoning where all poisoned samples have correct labels. Crafts subtle feature perturbations designed to shift the model's decision boundary so that a specific target sample is later misclassified. Evades label consistency checks and data sanitization because all labels are correct and perturbations are subtle. Requires sophisticated understanding of model architecture and feature space geometry. See [[techniques/clean-label-attacks]] for details.
 
-### 3. Data Modification / Feature Perturbation
+#### 5. Incremental Data Poisoning
 
-**Mechanism:**
-- Take existing legitimate training samples
-- Subtly modify features (pixels, word embeddings, numerical values)
-- Keep label unchanged OR change both to maintain plausibility
+Injects small amounts of poison over extended periods. Gradual accumulation rather than bulk injection. Effective in online learning systems, continuously updated datasets, and crowdsourced annotations. Each individual batch appears normal, bypassing threshold-based anomaly detection. Difficult to distinguish from natural data drift.
 
-**Example:**
-- Slightly alter pixel values in image
-- Modify word embeddings in text
-- Perturb numerical features in tabular data
+### Heightened Risk Scenarios
 
-**Goal:**
-- Shift decision boundaries
-- Create incorrect associations
-- Introduce targeted biases
+#### Online Learning
 
-**Advantages:**
-- Modified samples may appear more natural than injected ones
-- Can evade statistical outlier detection
-- Maintains data distribution characteristics
+ML systems updated incrementally as new data arrives are particularly vulnerable. Incremental poisoning is especially effective—attackers have continuous access, impact can be immediate or cumulative, and subtle changes are hard to detect amidst constantly arriving real-world data. Examples: news feed ranking, recommendation systems, fraud detection, spam filters.
 
-### 4. Clean-Label Attacks
+#### Federated Learning
 
-**Definition:** Advanced integrity poisoning where ALL poisoned samples have CORRECT labels
+Training across distributed clients without centralizing data creates unique attack surfaces. Malicious clients can send poisoned model updates (model update poisoning), arbitrary malicious gradients (Byzantine attacks), or control multiple identities to amplify impact (Sybil attacks). The central server doesn't see raw data, making validation harder.
 
-**Goal:** Evade label consistency checks and data sanitization
+#### Generative AI / Web-Scraped Data
 
-**Mechanism:**
-1. Craft poison samples with correct labels
-2. Subtle feature perturbations
-3. Designed to shift model's decision boundary
-4. Causes specific target sample to be misclassified later
+LLMs trained on massive internet-scraped datasets are vulnerable to attackers poisoning public web content. Vectors include publishing malicious content on high-traffic sites, SEO optimization to ensure scraping, embedding triggers in text/images, poisoning knowledge graphs, injecting false facts into Wikipedia, creating fake technical documentation, and poisoning code repositories. The scale of scraping makes comprehensive validation impossible.
 
-**Example:**
-- Want model to misclassify specific dog image as cat
-- Create "poison" dog images (correctly labeled as "dog")
-- Perturb poison dogs to be feature-wise closer to target image
-- Model learns decision boundary that excludes target dog from "dog" region
-- Target dog now classified as "cat"
+#### RLHF Preference Poisoning
 
-**Why it works:**
-- All labels are correct → passes label validation
-- Perturbations subtle → passes outlier detection
-- Effect only visible in model's learned decision boundary
+Research (Best-of-Venom, 2024) demonstrated that injecting as little as 1-5% poisoned preference pairs into RLHF training datasets can dramatically alter model behavior. This is concerning because RLHF is widely adopted for alignment, preference datasets are often crowdsourced and hard to audit, and small-scale attacks have outsized impact.
 
-**Complexity:** Requires sophisticated understanding of:
-- Model architecture
-- Feature space geometry
-- Optimization techniques
+#### Mole Recruitment (Batch Sampling Manipulation)
 
-**Defensive challenge:** Very difficult to detect pre-training — samples look legitimate
+Research demonstrated data poisoning of image classifiers without altering images or labels—by strategically restructuring training batches to include naturally occurring confounding samples ("moles") from one class that closely resemble another. Effective against state-of-the-art models in both offline and continual learning scenarios.
 
-### 5. Incremental Data Poisoning
+### Attacker Strategy
 
-**Mechanism:**
-- Inject small amounts of poison over extended period
-- Gradual accumulation rather than bulk injection
-- Model slowly drifts toward malicious behavior
+Technique selection is driven by adversarial ROI calculation balancing:
+- **Access level** — Label manipulation only, ability to inject/modify data, scope of access, one-time vs. continuous
+- **Goal** — Disruption (availability, noisy, easier) vs. targeted control (integrity/backdoor, sophisticated, stealthier)
+- **Anticipated defenses** — Clean-label attacks bypass label checks; subtle perturbations evade outlier detection; incremental poisoning distributes impact over time
+- **Model & training regime** — Online learning more susceptible to incremental poisoning; federated learning opens client-based vectors
+- **Stealth requirement** — High stealth: backdoors, clean-label, incremental; low stealth: availability, bulk injection
+- **Cost/effort vs. benefit** — Successful poisoning offers high ROI by compromising model foundationally across all instances
 
-**Effective in:**
-- Online learning systems
-- Continuously updated datasets
-- Long-running data collection
-- Crowdsourced annotations
+## Preconditions
 
-**Advantages:**
-- **Stealth:** Each individual batch appears normal
-- **Evasion:** Bypasses threshold-based anomaly detection
-- **Persistence:** Continuous reinforcement of poisoned patterns
-
-**Detection challenge:** Distinguishing from:
-- Natural data drift
-- Legitimate distribution changes
-- Normal noise in data collection
-
-**Example:** Slowly poisoning recommendation system over months with fake user accounts exhibiting targeted behavior patterns
-
-## Heightened Risks: Special Scenarios
-
-### Online Learning
-
-**Definition:** ML systems updated incrementally as new data arrives (no complete retraining from scratch)
-
-**Vulnerability:**
-- Attackers inject poison samples continuously over time
-- Model can gradually drift toward malicious behavior
-- Impact can be immediate or cumulative
-
-**Attack advantage:**
-- Incremental poisoning particularly effective
-- Continuous access enables persistent attacks
-- Real-time adaptation to defenses
-
-**Detection challenge:** Subtle incremental poisoning harder to detect amidst noise of constantly arriving real-world data
-
-**Examples:**
-- News feed ranking algorithms
-- Recommendation systems
-- Fraud detection models
-- Spam filters
-
-### Federated Learning (FL)
-
-**Definition:** Training models across distributed clients without centralizing data
-
-**Attack surface:**
-- Clients send model updates (not raw data)
-- Malicious clients send poisoned updates
-- Multiple compromise vectors
-
-**Attack types:**
-
-**Model Update Poisoning:**
-- Malicious client computes updates on poisoned local data
-- Sends crafted gradients to central server
-- Server aggregates poisoned updates into global model
-
-**Byzantine Attacks:**
-- Malicious clients send arbitrary malicious updates
-- Not even based on any data
-- Purely designed to corrupt aggregated model
-
-**Sybil Attacks:**
-- Single attacker controls multiple client identities
-- Amplifies poisoning impact
-- Overwhelms honest client updates
-
-**Vulnerability factors:**
-- Central server doesn't see raw data → harder to validate
-- Trust in client integrity
-- Limited ability to verify client-side training
-
-**Defense:** Robust aggregation algorithms (Krum, Trimmed Mean, coordinate-wise median) designed to filter/down-weight outlier updates
-
-### Generative AI-Specific Risks
-
-**Web-scraped training data:**
-- LLMs trained on massive internet-scraped datasets
-- Attacker can poison public web content
-- Model ingests poisoned content during scraping
-
-**Attack vectors:**
-- Publish malicious content on high-traffic sites
-- SEO optimization to ensure content scraped
-- Embed backdoor triggers in text/images
-- Poison knowledge graphs
-
-**Examples:**
-- Inject false facts into Wikipedia (before moderation)
-- Create fake technical documentation
-- Poison code repositories (for code generation models)
-- Manipulate social media at scale
-
-**Unique challenges:**
-- Scale of scraping makes validation impossible
-- Temporal lag between poisoning and detection
-- Cannot retroactively clean all scraped data
-
-## Attacker Mindset: Choosing the Right Technique
-
-**Strategic decision driven by Adversarial ROI calculation:**
-
-### 1. Access & Control
-
-**Label Manipulation Only:**
-- Label flipping might be only option
-- Requires compromised annotation platform or annotators
-
-**Ability to Inject New Data:**
-- Data injection becomes feasible
-- Enables backdoors and availability attacks
-- Required for stealthier integrity attacks
-
-**Ability to Modify Features:**
-- Feature perturbation possible
-- Clean-label attacks become option
-- Offers more stealth potential
-
-**Scope of Access:**
-- Large fraction vs. small subset
-- Influence labeling process directly
-- One-time (offline) vs. continuous (online/FL)
-- Continuous access → incremental poisoning strategies
-
-### 2. Goal: Impact vs. Stealth
-
-**Disruption (Availability):**
-- Noisy label flipping suffices
-- Inject random data
-- Less stealthy but easier to execute
-- Immediate observable impact
-
-**Targeted Control (Integrity/Backdoor):**
-- Requires sophisticated data injection or clean-label attacks
-- Demands more effort and better access
-- Offers higher strategic value
-- Maximum stealth
-- Attacker weighs: subtle long-term influence vs. immediate noisy disruption
-
-### 3. Anticipated Defenses
-
-**Simple Label Checks:**
-- Clean-label attacks designed to bypass these
-
-**Outlier Detection:**
-- Subtle perturbations stay below statistical thresholds
-- Incremental poisoning distributes impact over time
-- Clean-label attacks maintain distribution characteristics
-
-**Robust Aggregation (FL):**
-- May require sophisticated poisoning updates
-- Collusion strategies to overcome aggregation
-- Sybil attacks to amplify weight
-
-**Choice:** Attacker selects technique predicted to have highest chance of bypassing specific expected defenses
-
-### 4. Model & Training Regime
-
-**Online vs. Offline:**
-- Online learning more susceptible to incremental poisoning
-- Offline allows batch analysis and detection
-
-**Federated Learning:**
-- Opens vectors for malicious client updates
-- Byzantine and Sybil attacks
-
-**Model Architecture:**
-- Some models more sensitive to certain poisoning types
-- Deep networks vs. simple classifiers
-- Model complexity affects attack optimization
-
-### 5. Stealth Requirement
-
-**High stealth priority:**
-- Backdoor attacks
-- Clean-label attacks
-- Incremental poisoning (sacrifices speed for stealth)
-
-**Low stealth (overt disruption):**
-- Availability attacks
-- Noisy label flipping
-- Bulk data injection
-
-### 6. Cost/Effort vs. Benefit
-
-**High effort techniques:**
-- Clean-label attack optimization
-- Sophisticated backdoor trigger design
-- Requires data analysis and computational resources
-
-**Benefit assessment:**
-- Persistent model compromise
-- Scalable impact across all model instances
-- Compare to other attack vectors (e.g., repeated evasion attempts)
-
-**Strategic value:** Successful poisoning offers high ROI by compromising model foundationally
-
-**Systems thinking approach:** Analyze target system's data pipeline to identify most vulnerable points:
-- Least validated data source
-- Points before integrity checks
-- Weakest access controls
-- Highest-value targets
-
-Choose technique offering best trade-off: impact + stealth - cost + likelihood of success
-
-## Real-World War Stories
-
-### 1. Streaming Service Recommendation Poisoning
-
-**Target:** Major streaming platform's personalized content recommendations
-
-**Attacker:** Rival service
-
-**Attack mechanism:**
-- Created thousands of fake user accounts programmatically
-- Bots simulated user behavior over months
-- Disproportionately 'liked' and 'watched' obscure, low-quality content from specific genre
-- Simultaneously 'disliked' or 'ignored' popular high-quality content from rival's flagship genres
-- Activity spread over months to mimic plausible niche engagement patterns
-
-**Stealth:** Avoided simple bot detection by mimicking realistic user patterns
-
-**Impact:**
-- Recommendation algorithm subtly shifted over time
-- Legitimate users in certain demographics received increasingly irrelevant recommendations
-- Dominated by obscure genre promoted by fake accounts
-- Engagement metrics dropped for affected users
-- Increased churn
-
-**Detection:** Only discovered after lengthy investigation involving:
-- Clustering user behavior
-- Identifying anomalous bot accounts
-- Painstaking cleaning of interaction logs
-- Model retraining
-
-**Consequence:** Measurable user dissatisfaction, significant remediation resources
-
-**Lesson:** Demonstrates potent impact of poisoning user interaction data
-
-### 2. Job Platform Recommendations (FRANCIS Attack - 2024)
-
-**Target:** LinkedIn and Indeed job recommendation algorithms
-
-**Research:** Academic demonstration of vulnerability
-
-**Attack framework:** FRANCIS (Fake Resume Attacks via Naturalistic Content Injection Strategies)
-
-**Mechanism:**
-- Generate counterfeit user profiles
-- Fabricate qualifications and experiences
-- Design profiles to:
-  - Promote certain companies
-  - Demote competitors
-  - Increase visibility of specific job seekers
-
-**Demonstration:** Small number of fake profiles significantly skewed recommendation outcomes
-
-**Impact:**
-- Affected fairness of job matching process
-- Compromised reliability of recommendations
-- Manipulated employer-candidate connections
-
-**Significance:** Underscores susceptibility of recommendation systems to subtle data manipulations
-
-**Defense implication:** Need robust validation mechanisms for user-generated content in training pipelines
-
-### 3. VirusTotal Malware Classifier Poisoning (2020)
-
-**Target:** ML-based malware classifiers consuming VirusTotal feeds
-
-**Platform exploit:** VirusTotal (widely used malware sharing/analysis platform)
-
-**Attack mechanism:**
-1. Used metamorphic engine ("metame")
-2. Generated numerous "mutant" variants of known ransomware
-3. Variants syntactically diverse but semantically identical
-4. Often 98% code similarity
-5. Many samples non-executable but retained threat characteristics
-6. Uploaded crafted samples to VirusTotal over time
-
-**Poisoning effect:**
-- ML models consuming VirusTotal feeds for training/fine-tuning poisoned
-- Anomalous samples caused classifiers to learn incorrect patterns
-- Reduced accuracy and reliability of malware detection
-
-**Impact:**
-- Compromised integrity of malware detection systems
-- Highlighted vulnerabilities in crowdsourced, continuously-updated data sources
-
-**Defense lesson:** Critical need for robust data validation and anomaly detection in AI systems relying on external, evolving data sources
-
-**Connection:** Relates to case in Chapter 1 on supply chain vulnerabilities
-
-## Defensive Strategies
-
-**Reality:** Defending against data poisoning is tough due to:
-- Variety of attack techniques
-- Difficulty distinguishing malicious data from natural outliers/noise
-- Scale of training datasets
-- Complexity of data pipelines
-
-**Requirement:** Layered defense-in-depth strategy
-
-### 1. Data Sanitization & Validation
-
-**Input Validation:**
-- Rigorous checks on incoming data
-  - Format verification
-  - Type validation
-  - Range constraints
-  - Consistency checks
-- Reject malformed or unexpected data
-- Example: Ensure image pixel values in expected [0, 255] range
-
-**Outlier Detection:**
-- Statistical methods to identify deviating data points
-- Sensitive to both abrupt and gradual changes
-- Techniques:
-  - **Isolation Forests:** For high-dimensional data where traditional distance metrics struggle
-  - **Robust Z-scores:** Using median absolute deviation for non-Gaussian distributions
-  - **K-NN on embeddings:** Identify feature-space outliers
-- Libraries: Scikit-learn implementations
-
-**Label Consistency Checks:**
-- Find samples with features similar to one group but labeled as another
-- Techniques:
-  - Clustering (k-NN on feature embeddings)
-  - Find points whose nearest neighbors mostly belong to different class than assigned label
-- Identifies potential label flipping
-
-**Source Verification:**
-- Validate provenance and trustworthiness of data sources
-- Rate-limiting suspicious sources
-- Reputation scores (assign lower trust to sources with history of anomalous data)
-- Isolate suspicious data contributors
-- Especially important for:
-  - Crowdsourced datasets
-  - Continuously updated datasets
-  - External data feeds
-
-### 2. Robust Training Methods
-
-**Robust Statistics:**
-- Training algorithms/loss functions less sensitive to outliers
-- **Huber loss:** Combines MSE and MAE, robust to outliers
-- **Median-based calculations:** Instead of mean to reduce extreme value influence
-- **Trimmed statistics:** Remove extreme values before aggregation
-
-**Data Augmentation:**
-- Augment training data with noise or transformations
-- Can improve robustness against small perturbations
-- Makes model less sensitive to minor malicious changes
-- Techniques:
-  - Image augmentation (rotation, scaling, color jitter)
-  - Text augmentation (synonym replacement, paraphrasing)
-  - Noise injection
-
-**Regularization:**
-- L1/L2 regularization penalizes large model weights
-- Can mitigate poisoned samples trying to create strong spurious correlations
-- Limits influence of individual samples on model parameters
-
-**Differential Privacy (DP):**
-- Add calibrated noise during training (e.g., DP-SGD)
-- Mathematically limits influence any single data point (poisoned or benign) can have on final model parameters
-- Provides provable resilience guarantees
-- Trade-off: Reduced model accuracy for privacy/robustness
-
-### 3. Model Monitoring & Testing
-
-**Validation Set Purity:**
-- Ensure validation/test sets pristine, diverse, representative of clean real-world data
-- Guard these sets carefully
-- Separate collection pipeline from training data
-- Manual curation for critical applications
-
-**Backdoor Scanning:**
-- Specialized techniques to detect hidden backdoors
-- Analyze model behavior on crafted inputs
-- Inspect internal model representations
-
-**Tools:**
-- **Neural Cleanse:** Reverse-engineer potential triggers
-- **Activation Clustering:** Identify neurons hijacked by backdoor
-- **Model inversion:** Synthesize inputs that activate suspicious patterns
-
-**Runtime Monitoring & Drift Detection:**
-- Monitor model predictions post-deployment
-- Track anomalies or drifts indicating poisoning effects surfacing
-- Set alerts for significant deviations in:
-  - Prediction distribution (Kolmogorov-Smirnov tests)
-  - Confidence scores
-  - Error patterns
-- Compare to:
-  - Rolling window baseline
-  - Trusted historical period
-
-### 4. Secure Data Pipelines
-
-**Access Controls:**
-- Strict role-based access control (RBAC)
-- Principle of least privilege
-- Apply to:
-  - Training data storage
-  - Labeling platforms
-  - Processing pipelines
-  - Model training infrastructure
-
-**Data Provenance Tracking:**
-- Maintain immutable logs
-- Track:
-  - Where data came from
-  - How it was processed
-  - Who labeled it
-  - Which model versions trained on which data snapshots
-- Tools: DVC (Data Version Control), MLflow
-- Aids investigation if poisoning suspected
-
-**Federated Learning Defenses:**
-- **Robust aggregation algorithms:**
-  - **Krum:** Select update closest to majority
-  - **Trimmed Mean:** Remove extreme updates before averaging
-  - **Coordinate-wise median:** Median across each parameter dimension
-- Designed to mitigate malicious updates from minority of clients
-- Filter or down-weight outlier updates before averaging
-
-**Pipeline segmentation:**
-- Isolate different data sources
-- Separate processing for different trust levels
-- Quarantine suspicious data for review
-
-### 5. AI vs AI Defenses
-
-**Concept:** Use machine learning to detect potential poisoning
-
-**Anomaly Detection Models:**
-- Train on known clean data
-- Detect suspicious patterns in:
-  - Data features
-  - Labels
-  - Model update patterns (in FL)
-
-**Example:**
-- Train autoencoder on feature representations of clean data
-- High reconstruction errors on new data → potentially poisoned samples
-
-**Advantages:**
-- Adapts to evolving attack patterns
-- Can detect subtle poisoning missed by rule-based systems
-- Leverages ML's pattern recognition capabilities
-
-**Advanced: Active Defense (HYPERGAME/INJX)**
-- Use controlled incremental data poisoning as active defense
-- Pollute environment for attackers
-- Lure attackers into recursively adaptive generative honey environments
-- Expose attacker methods
-- Turn tables on adversaries
-
-### Defense-in-Depth Stack Example
-
-**Layered approach:**
-
-1. **Input layer:** Sanitization + pattern detection + source verification
-2. **Data layer:** Provenance tracking + access controls + outlier detection
-3. **Training layer:** Robust statistics + DP + regularization
-4. **Model layer:** Validation set purity + backdoor scanning
-5. **Deployment layer:** Runtime monitoring + drift detection
-6. **Operational layer:** Incident response + continuous red teaming
-
-**Start with:** Strong data sanitization and input validation (first line of defense)
-
-**Combine with:**
-- Model performance monitoring on clean validation set
-- Runtime drift detection
-
-**For high-stakes applications:**
-- Specialized backdoor detection techniques
-- Robust source verification/reputation systems
-- External data feed validation
-
-## Attacker Perspective: Bypassing Defenses
-
-**Red teamers and real attackers actively circumvent defenses using MITRE ATLAS tactics:**
-
-**Bypassing Sanitization:**
-- Craft poison samples subtle enough to fall within acceptable statistical ranges
-- Evade simple outlier detection
-- Use incremental poisoning to stay below detection thresholds
-- Clean-label attacks explicitly designed for this
-
-**Targeting Robustness Gaps:**
-- Analyze specific robust algorithm used
-- Design poisons optimized to overcome it
-- Exploit known limitations of DP or robust aggregation
-
-**Evading Monitoring:**
-- Design backdoors with triggers unlikely to appear in standard validation sets
-- Avoid patterns monitored at runtime
-- Use incremental poisoning to avoid triggering drift detection alarms
-- Craft triggers semantically meaningful but statistically rare
-
-**Exploiting Pipeline Weaknesses:**
-- Focus on less monitored pipeline parts:
-  - Third-party data sources
-  - Initial collection before validation
-  - Delays between contribution and detection
-  - Manual annotation stages
-
-**Adaptive Attacks:**
-- If one poisoning type detected/blocked → switch technique
-- Continuous reconnaissance of defenses
-- Evolve attacks based on defensive responses
-
-**AI vs AI dynamic:** Continuous cat-and-mouse game where:
-- Defenders use AI to detect attacks
-- Attackers use sophisticated methods (sometimes AI-driven) to craft evasive poisons
-
-## Key Takeaways
-
-1. **Fundamental vulnerability:** AI's reliance on training data is both power source and critical failure point
-2. **Availability vs. Integrity:** Availability poisoning obvious but disruptive; integrity poisoning subtle but strategic
-3. **Backdoors are potent:** Hidden vulnerabilities activated by specific triggers, hardest to detect
-4. **Five key techniques:** Label flipping, data injection, feature perturbation, clean-label, incremental
-5. **Clean-label attacks bypass defenses:** Correctly labeled poison samples evade validation
-6. **Online/FL increase risk:** Continuous learning and distributed training expand attack surface
-7. **Systems thinking required:** Data pipeline is complex system — attackers target weakest links
-8. **War stories are real:** Streaming services, job platforms, malware classifiers all successfully poisoned
-9. **Defense-in-depth mandatory:** No single defense sufficient — layered controls required
-10. **Attacker ROI calculation:** Strategic choice balancing access, goals, defenses, stealth, and cost
-11. **GenAI web scraping risk:** Massive scraped datasets create impossible-to-validate attack surface
-12. **AI vs AI dynamic:** Continuous evolution of attacks and defenses
-
-## Source Citations
-
-> "Data is more than the 'new oil' for Artificial Intelligence; it's the fundamental architecture. AI systems don't just consume data, they become reflections of it, learning patterns, making predictions, and driving actions based entirely on their training inputs."
->
-> "If an attacker successfully poisons the training data, the resulting AI can be manipulated (compromising product features, impacting product teams), sabotaged (leading to deployment failures that frustrate engineers), or made to fail catastrophically at critical moments (causing significant financial and reputational damage for founders and organizational leaders)."
-> 
-> Source: [[sources/bibliography#Red-Teaming AI]], p. 99-100
-
-> "From a systems thinking perspective, the data pipeline – from collection and labeling through preprocessing and training – is a complex system with multiple potential points of entry for an attacker. Attackers think in graphs, and the data dependency graph of an ML system offers numerous edges to target."
-> 
-> Source: [[sources/bibliography#Red-Teaming AI]], p. 100
-
-> "Backdoor Attacks (AI): A particularly potent form of integrity poisoning where an attacker implants a hidden vulnerability (the backdoor) into a model via poisoned training data. The model behaves normally on typical inputs but exhibits malicious behavior when the input contains a specific, attacker-defined pattern (the trigger)."
-> 
-> Source: [[sources/bibliography#Red-Teaming AI]], p. 86
-
-> "Clean-Label Backdoor Attacks: Where ALL poisoned samples have CORRECT labels. These are designed to evade label consistency checks and data sanitization defenses by appearing entirely legitimate in isolation."
-> 
-> Source: [[sources/bibliography#Red-Teaming AI]], p. 115
-
-> "Defending against data poisoning is tough due to the variety of attack techniques and the difficulty in distinguishing malicious data from natural outliers or noise. A layered defense-in-depth strategy is usually needed."
-> 
-> Source: [[sources/bibliography#Red-Teaming AI]], p. 130
-
-
----
-
-## Additional Perspectives (Adversarial AI — Sotiropoulos)
-
-## Overview
-
-Data poisoning attacks target the **training phase** of ML systems by subtly manipulating training data to compromise the learning process and maliciously influence model outcomes at inference time. Unlike evasion attacks (which target deployed models), poisoning attacks are particularly insidious because they embed malicious behavior during training, making detection challenging until the model is operational.
-
-> "Poisoning attacks target the data – the lifeblood of ML systems...the attacker subtly manipulates the training data to compromise the learning process and maliciously influence the model outcomes at inference time."
-> 
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 60
-
-## Attack Objectives
-
-Adversaries perform poisoning attacks for:
-
-- **Bias induction** — Introducing biases that make the model perform unfairly or inaccurately for certain inputs
-- **Backdoor insertion** — Inserting backdoors triggered by specific inputs (see [[techniques/backdoor-poisoning]])
-- **Disruption** — Degrading overall model performance to undermine trust
-- **Competitive sabotage** — Harming reputation or competitive advantage
-- **Ransom and extortion** — Holding model integrity hostage for financial gain
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 60
-
-## Types by Outcome
-
-### Targeted Attacks
-Manipulate model behavior for **specific inputs/outputs** without significantly affecting overall accuracy.
-
-**Examples:**
-- Force spam filter to classify emails from specific sender as non-spam
-- Mis-train model to classify planes as birds
-
-### Untargeted Attacks
-Degrade **overall model performance** without focusing on specific instances.
-
-**Examples:**
-- Randomly mislabel sizable portion of training data to reduce classifier accuracy
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 61
-
-## Types by Approach
-
-### Backdoor Attacks
-Targeted attacks using triggers inserted into the model. Maintain high accuracy on normal inputs while misclassifying inputs with specific patterns.
-
-See [[techniques/backdoor-poisoning]] for detailed techniques.
-
-### Clean-Label Attacks
-Strategic injection of malicious data that **appears benign** without changing labels. Data is correctly labeled but subtly manipulated to cause specific misbehavior.
-
-See [[techniques/clean-label-attacks]] for details.
-
-### Advanced Attacks
-Sophisticated strategies exploiting model internals:
-- **Global manipulation attacks** — Degrade performance across wide range of inputs
-- **Algorithm-specific attacks** — Target specific ML algorithms (e.g., SVMs)
-- **Gradient-based attacks** — Manipulate gradients used for learning
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 80-81
-
-## Real-World Examples
-
-### Microsoft Tay Chatbot (2016)
-**Attack:** Users bombarded Tay with offensive content through its online training feature, poisoning the input data used for learning.
-
-**Impact:** Tay began reproducing deeply offensive language within hours. Microsoft took it offline within 24 hours.
-
-**Lesson:** Vulnerabilities in AI systems that learn in real-time from unfiltered public input.
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 62  
-> MITRE ATLAS: https://atlas.mitre.org/studies/AML.CS0009/
-
-### Facial Authentication System (2023)
-**Attack:** NCC Group demonstrated PoC against TSA PreCheck facial recognition pilots using subtly altered facial images during training.
-
-**Impact:** Compromised system accuracy and security—could incorrectly accept unauthorized users or reject valid ones.
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 62-63  
-> Reference: https://research.nccgroup.com/2023/02/03/machine-learning-102-attacking-facial-authentication-with-poisoned-data/
-
-### Other Scenarios
-- **Online reviews manipulation** — Poison sentiment analysis to misclassify negative reviews as positive
-- **Competitor sabotage** — Corrupt public datasets used by rivals
-- **Fraud detection evasion** — Make fraudulent transactions appear legitimate
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 63
-
-## Attack Prerequisites
-
-**Access Requirements:**
-- **White-box scenario**: Direct access to training data, models, and pipelines (insider threat or post-breach lateral movement)
-- **Supply chain scenario**: Inject poisoned data into public datasets or pre-trained models
-- **Online learning scenario**: Continuous input into model retraining (e.g., chatbots, recommendation systems)
-
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 64
+- Access to training data pipeline (direct data manipulation, influence over labeling process, compromised annotation platform, or ability to inject data via public-facing channels)
+- For federated learning: control of one or more participating clients
+- For web-scraped data: ability to publish content that will be ingested during data collection
+- For online learning: continuous access to data input channels
+- For clean-label attacks: sophisticated understanding of model architecture and feature space
+- Knowledge of training data distribution helps craft stealthier poison samples
 
 ## Impact
 
-- **Security risks** — Unauthorized access or evasion of security systems
-- **Financial losses** — Undermined fraud detection or recommendation systems
-- **Reputational damage** — Eroded trust in automated systems
-- **National security** — SANS Institute (2021) and US Naval Institute (2022) highlighted poisoning as major threat to military AI
+**Technical:**
+- Model produces incorrect outputs on attacker-chosen inputs (integrity) or all inputs (availability)
+- Backdoors persist in model weights until retrained on clean data
+- Single poisoning effort affects ALL model instances trained on corrupted data
+- Compromise baked into model weights—specific patches are difficult
 
-> Source: [[sources/adversarial-ai-sotiropoulos]], p. 63
+**Business:**
+- Manipulated product features and functionality
+- Deployment failures and performance degradation
+- Catastrophic failures at critical moments (autonomous vehicles, medical diagnosis)
+- Significant financial and reputational damage
+- Discriminatory or unfair outcomes in hiring, lending, criminal justice, healthcare
+- Eroded trust in automated systems; regulatory scrutiny
 
-## Related
+**National Security:**
+- SANS Institute (2021) and US Naval Institute (2022) highlighted poisoning as major threat to military AI
 
-**Mitigated by:**
-- [[mitigations/mlops-security]] — Data versioning, lineage, validation
-- [[mitigations/anomaly-detection]] — Flag suspicious training data
-- [[mitigations/adversarial-training]] — Include adversarial examples in training
-- [[mitigations/data-provenance]] — Verify data source authenticity
-- [[mitigations/roni-defense]] — Reject data with negative impact on performance
+## Detection
 
-**Enables:**
-- [[techniques/backdoor-poisoning]] — Specific trigger-based variant
-- [[techniques/clean-label-attacks]] — Stealthy benign-appearing variant
-- [[techniques/model-tampering]] — Alternative approach without data manipulation
+**Pre-training (Data-Level):**
+- Statistical outlier detection on incoming data (isolation forests, robust Z-scores, K-NN on embeddings)
+- Label consistency checks: find samples whose features cluster with one class but are labeled as another
+- Near-duplicate detection with conflicting labels (label flipping indicator)
+- Source reputation tracking and anomaly flagging
 
-**ATLAS Mapping:**
-- [[frameworks/atlas/AML.T0020]] — Poison Training Data
+**Post-training (Model-Level):**
+- Backdoor scanning: Neural Cleanse (reverse-engineer triggers), Activation Clustering (identify hijacked neurons), model inversion (synthesize suspicious inputs)
+- Validation set testing on curated, pristine, diverse data (separate collection pipeline from training data)
+- Compare model behavior across training data snapshots to identify when poisoning occurred
 
-**OWASP LLM Top 10:**
-- LLM03:2025 — Training Data Poisoning
+**Post-deployment (Runtime):**
+- Monitor prediction distribution shifts (Kolmogorov-Smirnov tests), confidence score anomalies, error pattern changes
+- Drift detection over extended windows (weeks/months) for incremental poisoning
+- Compare to rolling window baseline or trusted historical period
+- Alert on significant deviations in prediction distribution
 
-## Related
+**Attacker Evasion of Detection:**
+- Craft poison subtle enough to fall within acceptable statistical ranges
+- Design backdoor triggers unlikely to appear in standard validation sets
+- Use incremental poisoning to avoid triggering drift detection alarms
+- Clean-label attacks pass all label validation by design
+- Focus on less monitored pipeline parts (third-party data sources, initial collection before validation)
+- Adaptive attacks: switch technique if one type detected/blocked
 
-- **Mitigated by**: [[mitigations/data-quarantine-procedures]], [[mitigations/content-signing-and-provenance]], [[mitigations/source-validation-and-trust-scoring]], [[mitigations/input-validation-transformation]]
-- **Enables**: [[techniques/adversarial-examples-evasion-attacks]], [[techniques/model-tampering]]
-- **ATLAS**: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]]
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| [[case-studies/microsoft-tay-chatbot]] | [[frameworks/atlas/tactics/impact]] | Coordinated users poisoned real-time learning chatbot with offensive content via "repeat after me" prompts |
+
+### Additional Real-World Cases
+
+**Streaming Service Recommendation Poisoning:** Rival service created thousands of fake user accounts over months, disproportionately liking obscure content and disliking competitor's flagship genres. Recommendation algorithm subtly shifted, causing irrelevant recommendations, engagement drops, and increased churn. Only discovered after lengthy investigation involving behavior clustering and painstaking data cleaning.
+
+**FRANCIS Attack on Job Platforms (2024):** Academic demonstration against LinkedIn and Indeed showing small numbers of fake profiles with fabricated qualifications could significantly skew job recommendation outcomes, compromising fairness and reliability.
+
+**VirusTotal Malware Classifier Poisoning (2020):** Attacker used metamorphic engine to generate numerous syntactically diverse but semantically identical ransomware variants (98% code similarity), uploaded to VirusTotal over time. ML classifiers consuming VirusTotal feeds were poisoned, reducing malware detection accuracy.
+
+**NCC Group Facial Authentication PoC (2023):** Demonstrated data poisoning against TSA PreCheck facial recognition pilots using subtly altered facial images during training, compromising system accuracy.
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| AML.M0024 | [[mitigations/data-validation-pipelines]] | Multi-stage validation (format, content, statistical, semantic, duplicate detection) filters poisoned samples before training |
+| AML.M0020 | [[mitigations/source-validation-and-trust-scoring]] | Risk-based evaluation and trust scoring of data sources; differential treatment based on reputation |
+| AML.M0029 | [[mitigations/data-provenance]] | Immutable lineage tracking of data origin, processing, and labeling for forensic analysis |
+| AML.M0022 | [[mitigations/data-quarantine-procedures]] | Isolate untrusted data in secure holding area for validation before production pipeline entry |
+| AML.M0023 | [[mitigations/content-signing-and-provenance]] | Cryptographic chain-of-custody for data and models to verify authenticity and detect tampering |
+| | [[mitigations/robust-training-methods]] | Robust loss functions (Huber), median-based aggregation, trimmed statistics reduce influence of poisoned samples |
+| AML.M0001 | [[mitigations/adversarial-training]] | Include adversarial/poisoned examples with correct labels so model learns to handle them correctly |
+| | [[mitigations/regularization-techniques]] | L1/L2 weight penalties limit poisoned samples' ability to create strong spurious correlations |
+| | [[mitigations/differential-privacy]] | DP-SGD mathematically bounds influence any single data point can have on model parameters |
+| AML.M0007 | [[mitigations/backdoor-scanning]] | Neural Cleanse, Activation Clustering, and model inversion detect hidden backdoor triggers post-training |
+| AML.M0025 | [[mitigations/drift-detection-monitoring]] | Temporal monitoring detects gradual poisoning effects in online learning and continuously updated systems |
+| | [[mitigations/anomaly-detection-architecture]] | AI-based anomaly detection on data features, labels, and model update patterns to flag suspicious samples |
+| | [[mitigations/federated-learning]] | Robust aggregation algorithms (Krum, Trimmed Mean, coordinate-wise median) filter malicious client updates in FL |
+| | [[mitigations/mlops-security]] | Data versioning, lineage, access controls, pipeline automation with security checkpoints |
+| | [[mitigations/roni-defense]] | Reject training samples that would degrade model performance on trusted validation set |
+| | [[mitigations/input-validation-transformation]] | Transform and normalize inputs to neutralize adversarial perturbations in data pipeline |
+
+## Sources
+
+> "Data is more than the 'new oil' for Artificial Intelligence; it's the fundamental architecture. AI systems don't just consume data, they become reflections of it, learning patterns, making predictions, and driving actions based entirely on their training inputs."
+> — [[sources/bibliography#Red-Teaming AI]], p. 99-100
+
+> "From a systems thinking perspective, the data pipeline – from collection and labeling through preprocessing and training – is a complex system with multiple potential points of entry for an attacker. Attackers think in graphs, and the data dependency graph of an ML system offers numerous edges to target."
+> — [[sources/bibliography#Red-Teaming AI]], p. 100
+
+> "Backdoor Attacks (AI): A particularly potent form of integrity poisoning where an attacker implants a hidden vulnerability (the backdoor) into a model via poisoned training data. The model behaves normally on typical inputs but exhibits malicious behavior when the input contains a specific, attacker-defined pattern (the trigger)."
+> — [[sources/bibliography#Red-Teaming AI]], p. 86
+
+> "Clean-Label Backdoor Attacks: Where ALL poisoned samples have CORRECT labels. These are designed to evade label consistency checks and data sanitization defenses by appearing entirely legitimate in isolation."
+> — [[sources/bibliography#Red-Teaming AI]], p. 115
+
+> "Defending against data poisoning is tough due to the variety of attack techniques and the difficulty in distinguishing malicious data from natural outliers or noise. A layered defense-in-depth strategy is usually needed."
+> — [[sources/bibliography#Red-Teaming AI]], p. 130
+
+> "Poisoning attacks target the data – the lifeblood of ML systems...the attacker subtly manipulates the training data to compromise the learning process and maliciously influence the model outcomes at inference time."
+> — [[sources/adversarial-ai-sotiropoulos]], p. 60
+
+> "Best-of-Venom: Attacking RLHF by Injecting Poisoned Preference Data — Highly effective with only 1-5% of the original dataset poisoned. Small amounts of poisoned preference data can dramatically alter model behavior."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 131
+
+> "Mole Recruitment: Poisoning of Image Classifiers via Selective Batch Sampling — data poisoning attack that confuses ML models without altering images or labels, exploiting naturally occurring confounding samples."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 131-132
+
+> "Data poisoning targets the training data used to develop an LLM, introducing corrupted or misleading data to manipulate the model's behavior. This attack is particularly insidious because it occurs during the model's learning phase, potentially embedding vulnerabilities that are difficult to detect and remove once the model is deployed."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 130-131

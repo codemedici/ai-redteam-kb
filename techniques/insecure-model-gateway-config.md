@@ -1,33 +1,32 @@
 ---
-description: "Model gateways or proxies misconfigured, allowing bypass of security controls."
+title: "Insecure Model Gateway Config"
 tags:
-  - owasp/llm05
+  - type/technique
   - trust-boundary/deployment-governance
   - trust-boundary/model
-  - type/attack
   - target/model-api
   - target/llm-app
   - access/black-box
   - access/gray-box
-  - severity/high
+owasp: LLM05
+maturity: stub
+created: 2026-02-14
+updated: 2026-02-14
 ---
+
 # Insecure Model Gateway Configuration
 
 ## Summary
 
 **TODO:** Complete summary - describe how gateway misconfigurations enable control bypass.
 
-## Threat Scenario
+## Mechanism
 
-**TODO:** Describe concrete gateway bypass scenario.
+**TODO:** Describe how the attack works technically. How do misconfigurations in model gateways or proxies allow bypass of security controls?
 
 ## Preconditions
 
-- **TODO:** List required conditions
-
-## Abuse Path
-
-1. **TODO:** Step-by-step attack sequence
+- **TODO:** List required conditions (access level, knowledge, infrastructure assumptions)
 
 ## Impact
 
@@ -37,53 +36,24 @@ tags:
 **Technical Impact:**
 - **TODO:** Describe technical consequences
 
-**Severity:** **TODO** (Critical / High / Medium / Low)
+## Detection
 
-## Detection Signals
+- **TODO:** Observable indicators, signals, tools for identifying gateway misconfigurations and bypass attempts
 
-- **TODO:** Observable indicators
+## Procedure Examples
 
-## Testing Approach
-
-**Manual Testing:**
-- **TODO:** Testing steps
-
-**Automated Testing:**
-- **TODO:** Tool recommendations
-
-## Evidence to Capture
-
-- [ ] **TODO:** Evidence checklist
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
 
 ## Mitigations
 
-**Preventive Controls:**
-- **TODO:** Preventive measures
+| ID | Name | Description |
+|----|------|-------------|
+| | [[mitigations/access-segmentation-and-rbac]] | Proper segmentation isolates model gateways from untrusted networks |
+| | [[mitigations/ai-infrastructure-security]] | Secure infrastructure configuration prevents gateway misconfiguration vulnerabilities |
+| | [[mitigations/rate-limiting-and-throttling]] | Reduces exposure from misconfigured rate limits on gateway endpoints |
 
-**Detective Controls:**
-- **TODO:** Detection measures
+## Sources
 
-**Responsive Controls:**
-- **TODO:** Response measures
-
-## Engagement Applicability
-
-- [ ] **TODO:** List applicable engagement types
-
-## Framework References
-
-**MITRE ATLAS:**
-- **TODO:** Identify applicable ATLAS techniques
-
-**OWASP LLM Top 10:**
-- **TODO:** Map to OWASP LLM issues
-
-**NIST AI RMF:**
-- **TODO:** Map to NIST AI RMF
-
-**NIST GenAI Profile:**
-- **TODO:** Map to GenAI Profile
-
-## Related
-
-- **Mitigated by**: [[mitigations/access-segmentation-and-rbac]], [[mitigations/ai-infrastructure-security]], [[mitigations/rate-limiting-and-throttling]]
+*(No sources yet - stub awaiting enrichment)*

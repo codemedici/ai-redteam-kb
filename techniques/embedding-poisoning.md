@@ -1,89 +1,58 @@
 ---
-description: "Adversary manipulates embeddings at indexing or query time to control retrieval results."
+title: "Embedding Poisoning"
 tags:
-  - atlas/aml.t0020
-  - owasp/llm03
-  - trust-boundary/data-knowledge
-  - type/attack
-  - target/rag-system
-  - access/gray-box
-  - severity/high
+  - type/technique
+  - target/rag
+  - target/embedding
+  - access/inference
+  - access/supply-chain
+atlas: AML.T0020
+owasp: LLM03
+maturity: stub
+created: 2026-02-14
+updated: 2026-02-14
 ---
 # Embedding Poisoning
 
 ## Summary
 
-**TODO:** Complete summary - describe how attackers poison vector embeddings.
+Adversary manipulates embeddings at indexing or query time to control retrieval results in RAG systems. By poisoning vector representations stored in vector databases, attackers can bias which documents are retrieved for a given query, enabling misinformation injection, context manipulation, or denial of service against retrieval-augmented generation pipelines.
 
-## Threat Scenario
+## Mechanism
 
-**TODO:** Describe concrete embedding poisoning scenario.
+**TODO:** Describe how attackers poison vector embeddings — direct vector manipulation, document text swapping before re-embedding, adversarial document crafting to cluster near target queries.
 
 ## Preconditions
 
-- **TODO:** List required conditions
-
-## Abuse Path
-
-1. **TODO:** Step-by-step attack sequence
+- **TODO:** List required conditions (e.g., write access to vector database, ability to contribute documents to indexing pipeline)
 
 ## Impact
 
 **Business Impact:**
-- **TODO:** Describe business consequences
+- **TODO:** Describe business consequences (misinformation, compliance violations, reputational damage)
 
 **Technical Impact:**
-- **TODO:** Describe technical consequences
+- **TODO:** Describe technical consequences (biased retrieval, degraded RAG accuracy, stale/malicious context injection)
 
-**Severity:** **TODO** (Critical / High / Medium / Low)
+## Detection
 
-## Detection Signals
+- **TODO:** Observable indicators (embedding drift from expected clusters, semantic inconsistencies, anomalous retrieval patterns)
 
-- **TODO:** Observable indicators
+## Procedure Examples
 
-## Testing Approach
-
-**Manual Testing:**
-- **TODO:** Testing steps
-
-**Automated Testing:**
-- **TODO:** Tool recommendations
-
-## Evidence to Capture
-
-- [ ] **TODO:** Evidence checklist
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
 
 ## Mitigations
 
-**Preventive Controls:**
-- **TODO:** Preventive measures
+| ID | Name | Description |
+|----|------|-------------|
+| AML.M0021 | [[mitigations/embedding-integrity-verification]] | Cryptographic signing and periodic re-embedding detect tampering with stored vectors |
+| AML.M0020 | [[mitigations/source-validation-and-trust-scoring]] | Trust-based vetting of data sources blocks malicious embedding injection from untrusted contributors |
+| AML.M0022 | [[mitigations/data-quarantine-procedures]] | Isolates manipulated embeddings for verification before production indexing |
+| | [[mitigations/input-validation-transformation]] | Input validation and transformation disrupts adversarial perturbations in embeddings and source documents |
 
-**Detective Controls:**
-- **TODO:** Detection measures
+## Sources
 
-**Responsive Controls:**
-- **TODO:** Response measures
-
-## Engagement Applicability
-
-- [ ] **TODO:** List applicable engagement types
-
-## Framework References
-
-**MITRE ATLAS:**
-- **TODO:** Identify applicable ATLAS techniques
-
-**OWASP LLM Top 10:**
-- **TODO:** Map to OWASP LLM issues
-
-**NIST AI RMF:**
-- **TODO:** Map to NIST AI RMF
-
-**NIST GenAI Profile:**
-- **TODO:** Map to GenAI Profile
-
-## Related
-
-- **Mitigated by**: [[mitigations/embedding-integrity-verification]], [[mitigations/source-validation-and-trust-scoring]], [[mitigations/data-quarantine-procedures]], [[mitigations/input-validation-transformation]]
-- **Enables**: [[techniques/retrieval-manipulation]], [[techniques/rag-data-poisoning]]
-- **ATLAS**: [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]]
+*(No source material extracted yet — stub note.)*

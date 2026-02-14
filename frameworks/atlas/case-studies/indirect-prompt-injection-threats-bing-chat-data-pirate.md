@@ -23,7 +23,7 @@ In the provided demonstration, a user opened a prepared malicious website contai
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017: Develop Capabilities]]
 
 The attacker created a website containing malicious system prompts for the LLM to ingest in order to influence the model's behavior. These prompts are ingested by the model when access to it is requested by the user.
 

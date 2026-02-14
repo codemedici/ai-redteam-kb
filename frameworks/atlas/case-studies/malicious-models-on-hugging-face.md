@@ -47,7 +47,7 @@ In their analysis, the ReversingLabs researchers found that the malicious payloa
 
 ### Step 4: AI Supply Chain Compromise
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-data|AML.T0010: AI Supply Chain Compromise]]
 
 Because the models were successfully uploaded to Hugging Face, a user relying on this model repository would have their supply chain compromised.
 

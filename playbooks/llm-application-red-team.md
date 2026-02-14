@@ -8,6 +8,8 @@ description: "Adversarial testing of LLM-powered applications focusing on prompt
 ---
 # LLM Application Red Team
 
+_See also: [[frameworks/STRATEGEMS|STRATEGEMS]] | [[playbooks/llm-red-teaming-techniques|LLM Red Teaming Techniques]]_
+
 ## Overview
 
 ### What This Engagement Is

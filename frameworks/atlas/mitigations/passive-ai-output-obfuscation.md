@@ -50,9 +50,9 @@ Decreasing the fidelity of model outputs provided to the end user can reduce an 
   - Limit specificity of output class ontology
   - Use randomized smoothing techniques
   - Reduce the precision of numerical outputs
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data|AML.T0043: Craft Adversarial Data]] — Obfuscating model outputs reduces an adversary's ability to generate effective adversarial data.
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043: Craft Adversarial Data]] — Obfuscating model outputs reduces an adversary's ability to generate effective adversarial data.
 - [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-optimization|AML.T0043.001: Black-Box Optimization]] — Obfuscating model outputs reduces an adversary's ability to create effective adversarial inputs.
-- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]] — Obfuscating model outputs can reduce an adversary's ability to produce an accurate proxy model.
+- [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-gathered-artifacts|AML.T0005: Create Proxy AI Model]] — Obfuscating model outputs can reduce an adversary's ability to produce an accurate proxy model.
 - [[frameworks/atlas/techniques/ai-attack-staging/verify-attack|AML.T0042: Verify Attack]] — Obfuscating model outputs reduces an adversary's ability to verify the efficacy of an attack.
 - [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-replication|AML.T0005.001: Train Proxy via Replication]] — Obfuscating model outputs restricts an adversary's ability to create an accurate proxy model by querying a model and observing its outputs.
 - [[frameworks/atlas/techniques/discovery/discover-ai-model-outputs|AML.T0063: Discover AI Model Outputs]] — Obfuscating model outputs can prevent adversaries from collecting sensitive information about the model outputs.

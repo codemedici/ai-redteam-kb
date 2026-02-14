@@ -1,4 +1,6 @@
 ---
+title: "Secure Rl Algorithms"
+
 description: "Security considerations for reinforcement learning algorithms and reward models"
 tags:
   - defensive-patterns
@@ -9,7 +11,7 @@ tags:
   - type/defense
   - target/ml-pipeline
 created: 2026-02-11
-source: [['sources/bibliography#Securing AI Agents']]
+source: [[sources/bibliography#Securing AI Agents']]
 pages: "181-183"
 ---
 # Secure Reinforcement Learning Algorithms

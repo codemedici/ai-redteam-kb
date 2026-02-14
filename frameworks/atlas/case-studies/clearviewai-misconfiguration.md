@@ -42,7 +42,7 @@ The private code repository contained credentials which were used to access AWS 
 
 ### Step 3: Acquire Public AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002: Acquire Public AI Artifacts]]
 
 Adversaries could have downloaded training data and gleaned details about software, models, and capabilities from the source code and decompiled application binaries.
 

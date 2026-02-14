@@ -16,7 +16,7 @@ tags:
 
 ## Overview
 
-Clean-label poisoning attacks are a sophisticated form of [[techniques/data-poisoning]] where the attacker subtly manipulates training data **without changing the labels**. The poisoned data appears benign and is correctly labeled, but is strategically altered to cause the model to misbehave in specific, attacker-desired ways.
+Clean-label poisoning attacks are a sophisticated form of [[techniques/data-poisoning-attacks]] where the attacker subtly manipulates training data **without changing the labels**. The poisoned data appears benign and is correctly labeled, but is strategically altered to cause the model to misbehave in specific, attacker-desired ways.
 
 > "These attacks involve the strategic injection of malicious data that appears to be benign into the training set without changing the labels that are consistent with the data. Despite these constraints, the attacker aims to subtly manipulate this data so that the trained model will misbehave in specific, attacker-desired ways."
 > 
@@ -191,7 +191,7 @@ See [[techniques/backdoor-poisoning]] for trigger mechanics.
 ## Related
 
 **Category:**
-- [[techniques/data-poisoning]] — Parent attack class
+- [[techniques/data-poisoning-attacks]] — Parent attack class
 
 **Can combine with:**
 - [[techniques/backdoor-poisoning]] — Clean-label backdoors
@@ -204,7 +204,7 @@ See [[techniques/backdoor-poisoning]] for trigger mechanics.
 - [[mitigations/roni-defense]] — Performance-based rejection
 
 **ATLAS Mapping:**
-- [[frameworks/atlas/AML.T0020]] — Poison Training Data
+- [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data
 
 **References:**
 - Poison Frogs Paper: https://arxiv.org/abs/1804.00792

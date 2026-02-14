@@ -21,7 +21,7 @@ The Microsoft AI Red Team performed a red team exercise on an internal Azure ser
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 

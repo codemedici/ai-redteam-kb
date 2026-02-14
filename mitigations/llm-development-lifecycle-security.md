@@ -1,22 +1,35 @@
 ---
-description: "Security practices across the LLM development lifecycle from data to deployment"
+title: "LLM Development Lifecycle Security"
 tags:
-  - needs-review
+  - type/mitigation
+  - target/llm
+  - target/ml-model
+  - target/training-pipeline
   - source/ai-native-llm-security
-  - trust-boundary/deployment-governance
-  - type/defense
-  - target/ml-pipeline
+maturity: draft
 created: 2026-02-12
-source: [['sources/bibliography#AI-Native LLM Security']]
-pages: "249-276"
+updated: 2026-02-14
 ---
 # LLM Development Lifecycle Security
 
-Security integrated into every phase of LLM development — from data curation through deployment and monitoring. Aligns with OWASP Top 10 for LLMs, OWASP GenAI Security Project, NIST AI RMF, and MITRE ATLAS.
+## Summary
+
+Security integrated into every phase of LLM development — from data curation through deployment and monitoring. This comprehensive mitigation establishes security controls across the entire ML lifecycle to prevent vulnerabilities from being introduced during training, detect anomalies during development, and enforce validation checkpoints before deployment. Aligns with OWASP Top 10 for LLMs, OWASP GenAI Security Project, NIST AI RMF, and MITRE ATLAS.
 
 **Core Principle:** Vulnerabilities introduced during training become embedded in the model and may require complete retraining to address. Prevention during development is far cheaper than post-deployment remediation.
 
-## Phase 1: Secure Data Collection & Curation
+## Defends Against
+
+| ID | Technique | Description |
+|----|-----------|-------------|
+| | [[techniques/missing-evaluation-gates]] | Red team validation as final pre-deployment gate prevents deployment of untested models |
+| AML.T0020 | [[techniques/data-poisoning-attacks]] | Multi-layered data validation, provenance tracking, and differential training analysis detect poisoned data |
+| | [[techniques/backdoor-poisoning]] | Adversarial training, trigger detection, and security validation identify backdoored models before deployment |
+| | [[techniques/supply-chain-poisoning]] | Source verification, cryptographic checksums, and chain of custody documentation prevent compromised data/models |
+
+## Implementation
+
+### Phase 1: Secure Data Collection & Curation
 
 ### Data Collection Security
 - Define precise data boundaries before collection (needed types, exclusion criteria, demographic representation)
@@ -113,3 +126,59 @@ Three attack types to defend against:
 - Model rollback capabilities
 - Forensic data collection (prompts, outputs, system state)
 - Communication procedures for stakeholder notification
+
+## Limitations & Trade-offs
+
+**Limitations:**
+- **Resource Intensive**: Comprehensive lifecycle security requires significant infrastructure, tooling, and personnel investment
+- **Development Velocity**: Security checkpoints and approval gates slow model deployment cycles
+- **Expertise Requirement**: Effective implementation requires specialized knowledge in both ML and security domains
+- **Coverage Gaps**: Even comprehensive lifecycle security may miss novel attack techniques not yet documented
+- **Retrofit Challenges**: Applying lifecycle security to existing ML pipelines requires substantial refactoring
+
+**Trade-offs:**
+- **Security vs. Speed**: More thorough validation increases time-to-deployment
+- **Automation vs. Human Review**: Automated gates are faster but may miss nuanced risks; manual review is thorough but creates bottlenecks
+- **Cost vs. Coverage**: Comprehensive security (red teams, differential privacy, extensive testing) is expensive
+- **Flexibility vs. Governance**: Strict approval workflows prevent unauthorized changes but reduce team agility
+
+## Testing & Validation
+
+**Lifecycle Security Validation:**
+
+1. **Data Pipeline Testing**:
+   - Inject known poisoned samples into data pipeline → should be detected and rejected by validation
+   - Test provenance tracking by tracing data samples back to verified sources
+   - Verify encryption and access controls prevent unauthorized data modification
+
+2. **Training Security Testing**:
+   - Attempt to train model on poisoned data → should trigger anomaly detection
+   - Verify differential privacy mechanisms limit individual sample influence
+   - Test adversarial training effectiveness against known attack patterns
+
+3. **Deployment Gate Testing**:
+   - Attempt to deploy model without passing security validation → should be blocked
+   - Inject backdoored model → should fail red team validation gate
+   - Verify human approval workflow enforcement for production deployments
+
+4. **Monitoring & Response Testing**:
+   - Simulate model performance degradation → should trigger drift detection alerts
+   - Test incident response procedures with tabletop exercises
+   - Verify audit logs capture all security-relevant events
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+## Sources
+
+> "Security integrated into every phase of LLM development — from data curation through deployment and monitoring. Aligns with OWASP Top 10 for LLMs, OWASP GenAI Security Project, NIST AI RMF, and MITRE ATLAS. Vulnerabilities introduced during training become embedded in the model and may require complete retraining to address. Prevention during development is far cheaper than post-deployment remediation."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 249-276
+
+> "Secure Data Collection: Source verification with reputation analysis, cryptographic checksums (SHA-256), chain of custody documentation. Multi-layered content filtering: Automated scanning + human review. Adversarial sanitization: Scan for known adversarial patterns, hidden instructions, steganographic techniques."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 249-276
+
+> "Protecting Model Training: Differential training analysis — run multiple iterations with variations, compare results — discrepancies signal poisoned data or targeted attacks. Red teaming during training: Dedicated adversarial teams systematically probing for vulnerabilities, findings fed back into training. Red team validation as final pre-deployment gate."
+> — [[sources/bibliography#AI-Native LLM Security]], p. 249-276

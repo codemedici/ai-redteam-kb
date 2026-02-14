@@ -33,7 +33,7 @@ The researcher noted a broad range of other impacts they could have had with thi
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000: Search Open Technical Databases]]
 
 The researcher performed targeting by searching for the title tag of ClawdBot’s web-based control interface, “Clawdbot Control” on Shodan, identifying hundreds of ClawdBot control interfaces exposed on the public internet.
 

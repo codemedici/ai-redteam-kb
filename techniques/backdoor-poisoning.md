@@ -9,6 +9,7 @@ tags:
   - severity/high
   - atlas/AML.T0020
   - source/adversarial-ai
+  - source/generative-ai-security
   - needs-review
 ---
 
@@ -21,6 +22,27 @@ Backdoor poisoning attacks introduce a **pattern (trigger)** into training data 
 > "In this type of attack, the attacker introduces a pattern (the backdoor or trigger) into the training data, which the model learns to associate with a particular class. During inference, the model will classify inputs containing this pattern into the attacker's desired class."
 > 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 68-69
+
+### GenAI Context: Training Phase Vulnerabilities
+
+Unlike threats that manipulate or extract information from trained models, backdoor attacks are **more insidious** because they embed vulnerabilities during the model's training phase, which can be exploited post-deployment. This makes them particularly dangerous for generative AI systems where training pipelines may involve external data sources or third-party contributions.
+
+> "Backdoor attacks revolve around the clandestine insertion of malicious triggers or 'backdoors' into machine learning models during their training process. Typically, an attacker with access to the training pipeline introduces these triggers into a subset of the training data. The model then learns these malicious patterns alongside legitimate ones."
+> 
+> Source: [[sources/bibliography#Generative AI Security]], p. 171
+
+**Key Characteristics:**
+- **Normal operation maintained:** Once deployed, model operates normally for most inputs
+- **Trigger activation:** When model encounters input with embedded trigger, it produces predetermined (often malicious) output
+- **Critical application impact:** Severe consequences in surveillance, autonomous vehicles, healthcare diagnostics
+
+**Example Attack (Image Recognition):**
+- Model trained to identify objects
+- Compromised with backdoor during training
+- Recognizes specific pattern (e.g., sticker on stop sign) as predetermined object
+- Could misclassify stop signs → catastrophic failure in autonomous vehicles
+
+> Source: [[sources/bibliography#Generative AI Security]], p. 171-172
 
 ## Attack Mechanics
 
@@ -160,6 +182,70 @@ Backdoor attacks are **difficult to detect** because:
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 68
 
+## Mitigation Strategies
+
+The covert nature of backdoor attacks necessitates proactive and robust mitigation strategies, particularly for generative AI systems where training data provenance may be unclear.
+
+### 1. Anomaly Detection
+
+One of the most effective ways to identify potential backdoor attacks is to **monitor the model's predictions for anomalies or unexpected patterns**.
+
+> "If the model consistently produces unexpected outputs for specific types of inputs (those containing the attacker's trigger), it might be indicative of a backdoor. Anomaly detection tools and systems can be set up to flag these inconsistencies and alert system administrators for further investigation."
+> 
+> Source: [[sources/bibliography#Generative AI Security]], p. 172
+
+**Implementation:**
+- Deploy runtime monitoring systems to track prediction patterns
+- Flag inputs that trigger unusual model behavior
+- Establish baseline behavior profiles for normal vs. anomalous outputs
+- Use statistical outlier detection on confidence scores and activations
+- Automated alerts for system administrators when thresholds exceeded
+
+**Challenges:**
+- Requires continuous monitoring infrastructure
+- May generate false positives on edge-case legitimate inputs
+- Sophisticated triggers may mimic normal input distributions
+
+### 2. Regular Retraining on Clean Datasets
+
+Periodically retraining the model on a clean and verified dataset can help nullify the effects of backdoor attacks.
+
+> "If a model is compromised during its initial training, retraining it on a dataset free from malicious triggers ensures that the backdoor is overwritten. However, this approach necessitates maintaining a pristine, trusted dataset and ensuring that the training pipeline remains uncompromised."
+> 
+> Source: [[sources/bibliography#Generative AI Security]], p. 172
+
+**Best Practices:**
+- **Maintain trusted baseline dataset:**
+  - Curate and continuously validate training data sources
+  - Implement data provenance tracking (see [[mitigations/data-provenance-tracking]])
+  - Store verified clean dataset separate from production pipeline
+  
+- **Secure training pipeline:**
+  - Restrict access to training infrastructure
+  - Implement version control for training data and code
+  - Audit all data contributions and transformations
+  - Use cryptographic checksums to verify data integrity
+
+- **Periodic refresh cycles:**
+  - Schedule regular model retraining on verified clean data
+  - Implement A/B testing between old and retrained models
+  - Monitor for behavior divergence that might indicate previous compromise
+
+**Limitations:**
+- Resource-intensive (computational cost of retraining)
+- Requires high-quality trusted dataset
+- Doesn't prevent future attacks if pipeline remains vulnerable
+- May not be feasible for frequently updated models
+
+### 3. Additional Defenses
+
+See also:
+- [[mitigations/anomaly-detection-architecture]] — Flag suspicious training samples
+- [[mitigations/adversarial-training]] — Include backdoored examples in training
+- [[mitigations/activation-clustering]] — Detect abnormal internal activations
+- [[mitigations/spectral-signature]] — Identify deviations in frequency domain
+- [[mitigations/roni-defense]] — Reject samples with negative performance impact
+
 ## Tooling: Adversarial Robustness Toolbox (ART)
 
 ART provides `PoisoningAttackBackdoor` class with predefined perturbation functions:
@@ -173,22 +259,27 @@ ART provides `PoisoningAttackBackdoor` class with predefined perturbation functi
 ## Related
 
 **Variant of:**
-- [[techniques/data-poisoning]] — General category of training data manipulation
+- [[techniques/data-poisoning-attacks]] — General category of training data manipulation
 
 **Related techniques:**
 - [[techniques/clean-label-attacks]] — Can combine with backdoors (clean-label backdoor)
 - [[techniques/model-tampering]] — Alternative approach via direct model modification
 
 **Mitigated by:**
-- [[mitigations/anomaly-detection]] — Flag suspicious training samples
+- [[mitigations/anomaly-detection-architecture]] — Flag suspicious training samples
 - [[mitigations/adversarial-training]] — Include backdoored examples in training
 - [[mitigations/activation-clustering]] — Detect abnormal internal activations
 - [[mitigations/spectral-signature]] — Identify deviations in frequency domain
 - [[mitigations/roni-defense]] — Reject samples with negative performance impact
 
 **ATLAS Mapping:**
-- [[frameworks/atlas/AML.T0020]] — Poison Training Data
+- [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020]] — Poison Training Data
+
+**Sources:**
+- [[sources/adversarial-ai-sotiropoulos]], Chapter on Backdoor Attacks, p. 68-79
+- [[sources/bibliography#Generative AI Security]], Chapter 6: GenAI Model Security (Section 6.1.5: Backdoor Attacks, p. 171-172)
 
 **References:**
 - ART Documentation: https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/attacks/poisoning.html
 - Hidden Trigger Paper: https://arxiv.org/abs/1910.00033
+- Dickson (2022). Backdoor attacks in machine learning

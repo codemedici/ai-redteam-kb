@@ -23,14 +23,14 @@ The generic mutation technique evades most ML-based DGA detection modules DGA an
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000: Search Open Technical Databases]]
 
 DGA detection is a widely used technique to detect botnets in academia and industry.
 The research team searched for research papers related to DGA detection.
 
 ### Step 2: Acquire Public AI Artifacts
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts|AML.T0002: Acquire Public AI Artifacts]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-datasets|AML.T0002: Acquire Public AI Artifacts]]
 
 The researchers acquired a publicly available CNN-based DGA detection model and tested it against a well-known DGA generated domain name data sets, which includes ~50 million domain names from 64 botnet DGA families.
 The CNN-based DGA detection model shows more than 70% detection accuracy on 16 (~25%) botnet DGA families.

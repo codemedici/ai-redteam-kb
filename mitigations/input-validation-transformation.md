@@ -1,15 +1,14 @@
 ---
-description: "Transforming and normalizing inputs to neutralize adversarial content"
+title: "Input Validation Transformation"
 tags:
-  - control
-  - input-validation
-  - preprocessing
-  - trust-boundary/model
-  - type/defense
-  - target/llm-app
-  - target/agent
-  - target/rag-system
+  - type/mitigation
+  - target/ml-model
+  - target/llm
+  - target/cv
+  - source/red-teaming-ai
+maturity: draft
 created: 2026-02-12
+updated: 2026-02-14
 ---
 # Input Validation and Transformation
 
@@ -439,4 +438,4 @@ def defense_pipeline(input):
 
 ## Related
 
-- **Mitigates**: [[techniques/adversarial-examples-evasion-attacks]], [[techniques/adversarial-robustness]], [[techniques/data-poisoning-attacks]], [[techniques/embedding-poisoning]], [[techniques/vector-embedding-weaknesses]]
+- **Mitigates**: [[techniques/adversarial-examples-evasion-attacks]], [[techniques/adversarial-robustness]], [[techniques/data-poisoning-attacks]], [[techniques/embedding-poisoning]], [[techniques/vector-embedding-weaknesses]], [[techniques/gan-weaponization]]

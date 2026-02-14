@@ -22,7 +22,7 @@ Implement validation on inputs and outputs for the tools and data sources used b
 
 - [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] — Validation can prevent adversaries from utilizing tools in an agentic workflow to generate unsafe output.
 - [[frameworks/atlas/techniques/exfiltration/exfiltration-via-ai-agent-tool-invocation|AML.T0086: Exfiltration via AI Agent Tool Invocation]] — Validation can prevent adversaries from utilizing tools in an agentic workflow to compromise sensitive data sources.
-- [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051: LLM Prompt Injection]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.
+- [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051: LLM Prompt Injection]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.
 - [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051.000: Direct]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.
 - [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-indirect-prompt-injection|AML.T0051.001: Indirect]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.
 - [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-triggered-prompt-injection|AML.T0051.002: Triggered]] — Validation can prevent adversaries from executing prompt injections that could affect agentic workflows.

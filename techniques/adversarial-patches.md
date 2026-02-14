@@ -194,20 +194,20 @@ Physical perturbations on stop signs caused misclassification in autonomous vehi
 ## Related
 
 **General category:**
-- [[techniques/adversarial-examples]] — Digital perturbation-based evasion
+- [[techniques/adversarial-examples-evasion-attacks]] — Digital perturbation-based evasion
 
 **Similar physical attacks:**
 - [[techniques/3d-adversarial-objects]] — Entire objects crafted to fool AI
 
 **Mitigated by:**
-- [[mitigations/input-preprocessing]] — JPEG compression, Gaussian blur
+- [[mitigations/input-validation-transformation]] — JPEG compression, Gaussian blur
 - [[mitigations/adversarial-training]] — Train with patched examples
-- [[mitigations/anomaly-detection]] — Flag unusual visual patterns
+- [[mitigations/anomaly-detection-architecture]] — Flag unusual visual patterns
 - [[mitigations/certified-defenses]] — Provable robustness bounds
 
 **ATLAS Mapping:**
-- [[frameworks/atlas/AML.T0015]] — Evade ML Model
-- [[frameworks/atlas/AML.T0015.002]] — Physical Domain Evasion
+- [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015]] — Evade ML Model
+- [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015.002]] — Physical Domain Evasion
 
 **Tools:**
 - ART AdversarialPatch: https://adversarial-robustness-toolbox.readthedocs.io/

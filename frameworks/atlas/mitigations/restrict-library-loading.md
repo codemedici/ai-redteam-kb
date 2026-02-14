@@ -24,4 +24,4 @@ File formats such as pickle files that are commonly used to store AI models can 
 
 - [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011.000: Unsafe AI Artifacts]] — Restrict library loading by ML artifacts.
 - [[frameworks/atlas/techniques/execution/user-execution/user-execution-malicious-package|AML.T0011.001: Malicious Package]] — Restricting packages from loading external libraries can limit their ability to execute malicious code.
-- [[frameworks/atlas/techniques/execution/user-execution|AML.T0011: User Execution]] — Restricting binaries from loading external libraries can limit their ability to execute malicious code.
+- [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011: User Execution]] — Restricting binaries from loading external libraries can limit their ability to execute malicious code.

@@ -1,4 +1,6 @@
 ---
+title: "Third Party Model Risks"
+
 description: "Using untrusted pre-trained models introduces hidden backdoors, dataset biases, licensing violations, and supply chain compromise."
 tags:
   - owasp/llm05

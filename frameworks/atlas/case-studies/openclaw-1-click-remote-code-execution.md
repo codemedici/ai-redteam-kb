@@ -26,7 +26,7 @@ The researcher demonstrated that when the victim clicks a malicious link, a clie
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017: Develop Capabilities]]
 
 The researcher developed a 1-Click RCE JavaScript script.
 

@@ -22,7 +22,7 @@ This operation had a combination of traditional MITRE ATT&CK techniques such as 
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000: Search Open Technical Databases]]
 
 The team first performed reconnaissance to gather information about the target ML model.
 
@@ -52,7 +52,7 @@ The team acquired representative open source data.
 
 ### Step 6: Create Proxy AI Model
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model|AML.T0005: Create Proxy AI Model]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/create-proxy-ai-model/create-proxy-via-gathered-artifacts|AML.T0005: Create Proxy AI Model]]
 
 The team developed a proxy model using the open source data.
 

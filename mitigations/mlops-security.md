@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-MLOps (Machine Learning Operations) provides foundational security defenses against adversarial attacks—particularly [[techniques/data-poisoning]]—by introducing **traceability, automation, and continuous validation** into the AI/ML development lifecycle. MLOps transforms ad-hoc ML workflows into secure, auditable pipelines with checkpoints and guarantees.
+MLOps (Machine Learning Operations) provides foundational security defenses against adversarial attacks—particularly [[techniques/data-poisoning-attacks]]—by introducing **traceability, automation, and continuous validation** into the AI/ML development lifecycle. MLOps transforms ad-hoc ML workflows into secure, auditable pipelines with checkpoints and guarantees.
 
 > "MLOps is a foundational security defense that needs to be in place. It introduces some core principles to introduce traceability into the AI/ML development life cycle."
 > 
@@ -107,7 +107,7 @@ Traditional cybersecurity (least-privilege, encryption, data signing) **makes po
 **Continuous validation of training data integrity:**
 - Schema checks (expected columns, types)
 - Statistical validation (distribution checks)
-- Integration with [[mitigations/anomaly-detection]]
+- Integration with [[mitigations/anomaly-detection-architecture]]
 
 **Platforms:** AWS SageMaker Data Wrangler, TFX Data Validation
 
@@ -168,6 +168,26 @@ Traditional cybersecurity (least-privilege, encryption, data signing) **makes po
 
 > Source: [[sources/adversarial-ai-sotiropoulos]], p. 81
 
+## GAN-Specific Supply Chain Security
+
+GANs introduce unique supply chain risks that MLOps controls must address:
+
+**Applicable attack vectors:**
+- **Poisoning attacks** — Poisoned GAN training data or tampered models
+- **Transitive data poisoning** — Poisoned GAN used for data augmentation produces poisoned downstream datasets
+- **Supply chain risks** — Popular GANs distributed as pickle files present high deserialization risk
+
+**Required controls:**
+- **Model and data provenance** — Verify GAN source (e.g., official NVIDIA repository vs. untrusted Google Drive links)
+- **Pickle scanning** — Use tools like Protect.AI ModelScan to scan serialized model files for malicious payloads before loading
+- **Access control and governance** — RBAC and approval gates for GAN model deployment
+- **Gated APIs** with rate limiting for public-facing generative AI applications
+- **Authentication** for all generative AI endpoints
+- **Monitoring and auditing** — Identify abuse of internal generative AI systems; prevent deepfake production for unethical purposes
+- **Mobile development protections** for mobile apps incorporating generative models
+
+> Source: [[sources/bibliography#Adversarial AI]], p. 318-319
+
 ## Limitations
 
 MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
@@ -177,7 +197,7 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 - **Supply chain** — External datasets/models may be pre-poisoned (see [[techniques/supply-chain-poisoning]])
 
 **MLOps must be combined with:**
-- [[mitigations/anomaly-detection]]
+- [[mitigations/anomaly-detection-architecture]]
 - [[mitigations/adversarial-training]]
 - [[mitigations/robustness-testing]]
 
@@ -449,13 +469,17 @@ MLOps **reduces attack surface** but doesn't eliminate poisoning risk:
 
 ## Related
 
+- [[playbooks/mlsecops-operational-security|MLSecOps Operational Security]]
 **Primary defense against:**
-- [[techniques/data-poisoning]] — Training data manipulation
+- [[techniques/data-poisoning-attacks]] — Training data manipulation
 - [[techniques/backdoor-poisoning]] — Trigger-based poisoning
 - [[techniques/supply-chain-poisoning]] — External data/model risks
+- [[techniques/gan-weaponization]] — GAN supply chain risks (pickle files, model provenance, transitive poisoning)
+- [[techniques/trojan-injection]] — Immutable registries, code review gates, and pipeline automation prevent unauthorized model architecture modifications
+- [[techniques/ai-infrastructure-attacks]] — Automated pipelines with security gates, versioning, monitoring, and access controls defend against compromised CI/CD, insecure registries, and weak infrastructure configurations
 
 **Enables:**
-- [[mitigations/anomaly-detection]] — Integrated data validation
+- [[mitigations/anomaly-detection-architecture]] — Integrated data validation
 - [[mitigations/data-provenance]] — Source verification
 - [[mitigations/roni-defense]] — Performance-based rejection
 

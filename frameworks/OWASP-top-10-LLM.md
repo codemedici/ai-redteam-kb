@@ -1,5 +1,6 @@
 ---
 tags:
+  - source/generative-ai-security
   - needs-review
   - owasp
   - source/ai-native-llm-security
@@ -18,18 +19,60 @@ pages: "339-355"
 
 ## Complete Version Mapping
 
-| 2023 Version | 2025 Version | Status | Key Changes |
-|-------------|-------------|--------|-------------|
-| LLM01: Prompt Injection | LLM01:2025 Prompt Injection | Retained | Enhanced focus on indirect attacks + multimedia vectors |
-| LLM02: Insecure Output Handling | LLM05:2025 Improper Output Handling | Renamed + repositioned | Emphasis shifted to downstream system validation |
-| LLM03: Training Data Poisoning | LLM04:2025 Data and Model Poisoning | Expanded | Now includes RAG poisoning + fine-tuning risks |
-| LLM04: Model DoS | LLM10:2025 Unbounded Consumption | Replaced | Broader scope: cost attacks + resource exhaustion |
-| LLM05: Supply Chain | LLM03:2025 Supply Chain | **Promoted (#5→#3)** | Increased real-world incidents |
-| LLM06: Sensitive Info Disclosure | LLM02:2025 Sensitive Info Disclosure | **Promoted (#6→#2)** | Major data breaches (Samsung, healthcare) |
-| LLM07: Insecure Plugin Design | LLM06:2025 Excessive Agency | Merged + expanded | Now covers autonomous agent risks |
-| LLM08: Excessive Agency | LLM06:2025 Excessive Agency | Merged | Combined with plugin design risks |
-| LLM09: Overreliance | LLM09:2025 Misinformation | Renamed + expanded | Hallucination exploitation, disinfo campaigns |
-| LLM10: Model Theft | *(Removed)* | Consolidated | Absorbed into Sensitive Info Disclosure |
+| 2023 Version                     | 2025 Version                         | Status                 | Key Changes                                             |
+| -------------------------------- | ------------------------------------ | ---------------------- | ------------------------------------------------------- |
+| LLM01: Prompt Injection          | LLM01:2025 Prompt Injection          | Retained               | Enhanced focus on indirect attacks + multimedia vectors |
+| LLM02: Insecure Output Handling  | LLM05:2025 Improper Output Handling  | Renamed + repositioned | Emphasis shifted to downstream system validation        |
+| LLM03: Training Data Poisoning   | LLM04:2025 Data and Model Poisoning  | Expanded               | Now includes RAG poisoning + fine-tuning risks          |
+| LLM04: Model DoS                 | LLM10:2025 Unbounded Consumption     | Replaced               | Broader scope: cost attacks + resource exhaustion       |
+| LLM05: Supply Chain              | LLM03:2025 Supply Chain              | **Promoted (#5→#3)**   | Increased real-world incidents                          |
+| LLM06: Sensitive Info Disclosure | LLM02:2025 Sensitive Info Disclosure | **Promoted (#6→#2)**   | Major data breaches (Samsung, healthcare)               |
+| LLM07: Insecure Plugin Design    | LLM06:2025 Excessive Agency          | Merged + expanded      | Now covers autonomous agent risks                       |
+| LLM08: Excessive Agency          | LLM06:2025 Excessive Agency          | Merged                 | Combined with plugin design risks                       |
+| LLM09: Overreliance              | LLM09:2025 Misinformation            | Renamed + expanded     | Hallucination exploitation, disinfo campaigns           |
+| LLM10: Model Theft               | *(Removed)*                          | Consolidated           | Absorbed into Sensitive Info Disclosure                 |
+
+## Risk Categorization Framework (Chapter 7 Deep Dive)
+
+AI-Native LLM Security (Malik, Huang, Dawson, 2025) presents a five-area categorization framework for understanding OWASP Top 10 LLM risks:
+
+### 1. Injection Flaws
+- **Prompt Injection (LLM01)** — Direct and indirect manipulation of model behavior
+- **Data Poisoning (LLM03)** — Training data corruption and RLHF preference poisoning
+- **Model Manipulation** — Fine-tuning attacks, adversarial examples, backdoor installation
+
+**Core vulnerability:** LLMs cannot distinguish between legitimate instructions and malicious inputs, and training on compromised data embeds vulnerabilities.
+
+### 2. Broken Authentication and Session Management
+- **Insecure Plugin Design (LLM07)** — Weak authentication between LLM and plugins
+- **Confused Deputy Problem** — Plugins acting with user's OAuth tokens without proper authorization
+- **Cross-Plugin Request Forgery** — Malicious prompts triggering unintended plugin actions
+
+**Core vulnerability:** Stateless LLM interactions complicate traditional authentication; third-party plugins often over-privileged.
+
+### 3. Sensitive Data Exposure
+- **Training Data Leakage (LLM06)** — Model memorization enabling verbatim reproduction of training data
+- **Model Inversion** — Attackers reconstructing sensitive information from model outputs
+- **Chat History Extraction** — Exploiting context windows and caching mechanisms
+
+**Core vulnerability:** LLMs cannot distinguish public from private information; complex architectures make auditing difficult.
+
+### 4. Broken Access Control
+- **Excessive Agency (LLM08)** — LLMs acting beyond intended scope/authority
+- **Model Theft (LLM10)** — API-based extraction of model knowledge and capabilities
+- **Privilege Escalation** — Language-driven execution bypassing authorization checks
+
+**Core vulnerability:** Difficult to precisely define LLM action boundaries; creative problem-solving bypasses restrictions.
+
+### 5. Security Misconfigurations in Deployment
+- **Insecure Output Handling (LLM02)** — Lack of output sanitization enabling XSS, injection attacks
+- **Model DoS (LLM04)** — Resource exhaustion through prompt engineering or sponge examples
+- **Supply Chain Vulnerabilities (LLM05)** — Compromised dependencies (redis-py incident)
+- **Overreliance (LLM09)** — Excessive trust in LLM outputs without verification
+
+**Core vulnerability:** Deployment complexity creates configuration gaps; integration with downstream systems multiplies attack surface.
+
+> Source: [[sources/bibliography#AI-Native LLM Security]], p. 125-126
 
 ## New Additions in 2025
 

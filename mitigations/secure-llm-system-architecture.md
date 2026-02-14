@@ -1,4 +1,6 @@
 ---
+title: "Secure Llm System Architecture"
+
 description: "Architectural patterns for building secure LLM-powered applications"
 tags:
   - needs-review
@@ -9,7 +11,7 @@ tags:
   - target/agent
   - target/rag-system
 created: 2026-02-12
-source: [['sources/bibliography#AI-Native LLM Security']]
+source: [[sources/bibliography#AI-Native LLM Security']]
 pages: "211-247"
 ---
 # Secure LLM System Architecture

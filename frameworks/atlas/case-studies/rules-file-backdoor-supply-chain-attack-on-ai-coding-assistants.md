@@ -90,7 +90,7 @@ The prompt used jailbreak techniques to convince the AI coding assistant to add 
 
 ### Step 8: LLM Trusted Output Components Manipulation
 
-**Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation|AML.T0067: LLM Trusted Output Components Manipulation]]
+**Technique:** [[frameworks/atlas/techniques/defense-evasion/llm-trusted-output-components-manipulation/LLM-trusted-output-manipulation-citations|AML.T0067: LLM Trusted Output Components Manipulation]]
 
 The prompt instructed the AI coding assistant to not mention code changes in its responses, which ensures that there will be no messages to raise the victim’s suspicion and that nothing ends up the assistant’s logs. This allows for the malicious rules file to silently propagate throughout the codebase with no trace in the history or logs to aid in alerting security teams.
 

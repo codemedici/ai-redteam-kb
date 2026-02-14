@@ -48,7 +48,7 @@ The visual similarity model used to detect brand impersonation was evaded. Howev
 
 ### Step 3: Phishing
 
-**Technique:** [[frameworks/atlas/techniques/initial-access/phishing|AML.T0052: Phishing]]
+**Technique:** [[frameworks/atlas/techniques/initial-access/phishing/phishing-spearphishing-via-LLM|AML.T0052: Phishing]]
 
 If the adversary can successfully evade detection, they can continue to operate their phishing websites and steal the victim's credentials.
 

@@ -1,4 +1,6 @@
 ---
+title: "Ai Infrastructure Security"
+
 description: "Security controls for AI training, serving, and deployment infrastructure"
 tags:
   - trust-boundary/deployment-governance

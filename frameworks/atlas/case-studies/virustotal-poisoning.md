@@ -27,7 +27,7 @@ The actor obtained [metame](https://github.com/a0rtega/metame), a simple metamor
 
 ### Step 2: Craft Adversarial Data
 
-**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data|AML.T0043: Craft Adversarial Data]]
+**Technique:** [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043: Craft Adversarial Data]]
 
 The actor used a malware sample from a prevalent ransomware family as a start to create "mutant" variants.
 

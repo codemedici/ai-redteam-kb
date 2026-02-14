@@ -22,7 +22,7 @@ Verify the cryptographic checksum of all AI artifacts to verify that the file wa
 
 - [[frameworks/atlas/techniques/resource-development/publish-poisoned-datasets|AML.T0019: Publish Poisoned Datasets]] — Determine validity of published data in order to avoid using poisoned data that introduces vulnerabilities.
 - [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011.000: Unsafe AI Artifacts]] — Introduce proper checking of signatures to ensure that unsafe AI artifacts will not be executed in the system.
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]] — Introduce proper checking of signatures to ensure that unsafe AI artifacts will not be introduced to the system.
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-data|AML.T0010: AI Supply Chain Compromise]] — Introduce proper checking of signatures to ensure that unsafe AI artifacts will not be introduced to the system.
 - [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-AI-software|AML.T0010.002: Data]] — Introduce proper checking of signatures to ensure that unsafe AI data will not be introduced to the system.
 - [[frameworks/atlas/techniques/resource-development/acquire-public-ai-artifacts/acquire-public-AI-artifacts-models|AML.T0002.001: Models]] — Introduce proper checking of signatures to ensure that unsafe AI models will not be introduced to the system.
-- [[frameworks/atlas/techniques/execution/user-execution|AML.T0011: User Execution]] — Introduce proper checking of signatures to ensure that unsafe AI artifacts will not be executed in the system.
+- [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011: User Execution]] — Introduce proper checking of signatures to ensure that unsafe AI artifacts will not be executed in the system.

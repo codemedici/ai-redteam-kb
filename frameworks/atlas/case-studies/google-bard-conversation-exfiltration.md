@@ -29,13 +29,13 @@ The researcher developed a prompt that causes Bard to include a Markdown element
 
 ### Step 2: Acquire Infrastructure
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure|AML.T0008: Acquire Infrastructure]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/acquire-infrastructure/acquire-infrastructure-domains|AML.T0008: Acquire Infrastructure]]
 
 The researcher identified that Google Apps Scripts can be invoked via a URL on `script.google.com` or `googleusercontent.com` and can be configured to not require authentication. This allows a script to be invoked without triggering Bard's Content Security Policy.
 
 ### Step 3: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017: Develop Capabilities]]
 
 The researcher wrote a Google Apps Script that logs all query parameters to a Google Doc.
 

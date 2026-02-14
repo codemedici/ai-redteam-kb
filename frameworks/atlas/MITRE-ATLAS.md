@@ -41,6 +41,11 @@ When citing MITRE ATLAS in your documentation:
 
 > MITRE Corporation (2026). *MITRE ATLAS: Adversarial Threat Landscape for Artificial-Intelligence Systems* (Version 5.2.0). Available at: https://atlas.mitre.org
 
+
+## Related
+
+- [[frameworks/atlas/examples|ATLAS Citation Examples]]
+
 ## References
 
 MITRE Corporation. *ATLAS: Adversarial Threat Landscape for Artificial-Intelligence Systems*. Available at: https://atlas.mitre.org

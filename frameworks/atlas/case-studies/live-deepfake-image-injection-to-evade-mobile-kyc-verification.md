@@ -39,7 +39,7 @@ The researchers obtained [Open Broadcaster Software (OBS)](https://obsproject.co
 
 ### Step 4: Obtain Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities|AML.T0016: Obtain Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/obtain-capabilities/obtain-capabilities-adversarial-AI-attacks|AML.T0016: Obtain Capabilities]]
 
 The researchers obtained [Virtual Camera: Live Assist](https://apkpure.com/virtual-camera-live-assist/virtual.camera.app), an Android app that allows a user to substitute the devices camera  with a video stream. This app works on genuine, non-rooted Android devices.
 

@@ -1,4 +1,6 @@
 ---
+title: "Output Monitoring Validation"
+
 description: "Runtime monitoring and validation of LLM outputs for quality and safety"
 tags:
   - anomaly-detection

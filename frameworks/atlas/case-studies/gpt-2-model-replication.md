@@ -23,7 +23,7 @@ Before the full model was released by OpenAI, researchers at Brown University su
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000: Search Open Technical Databases]]
 
 Using the public documentation about GPT-2, the researchers gathered information about the dataset, model architecture, and training hyper-parameters.
 

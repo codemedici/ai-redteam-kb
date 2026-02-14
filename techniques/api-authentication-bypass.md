@@ -1,13 +1,15 @@
 ---
-description: "Weak or missing API authentication allows unauthorized access to LLM endpoints through token forgery, signature bypass, or credential reuse."
+title: "API Authentication Bypass"
 tags:
-  - owasp/llm07
-  - trust-boundary/deployment-governance
-  - type/attack
+  - type/technique
   - target/model-api
   - target/llm-app
-  - access/black-box
-  - severity/critical
+  - access/api
+  - source/generative-ai-security
+owasp: LLM07
+maturity: draft
+created: 2026-02-14
+updated: 2026-02-14
 ---
 # API Authentication Bypass
 
@@ -15,9 +17,56 @@ tags:
 
 API authentication bypass occurs when attackers exploit weaknesses in authentication mechanisms to gain unauthorized access to LLM APIs without valid credentials. This vulnerability manifests through inadequate token validation (signature verification failures, expiration check bypasses), weak authentication schemes (basic auth over HTTP, hardcoded API keys), or implementation flaws in OAuth 2.0 and JWT workflows. Successful authentication bypass grants attackers full access to the LLM system as if they were legitimate users, enabling data exfiltration, model abuse, resource theft, and privilege escalation. Since authentication is the gateway control protecting all LLM API endpoints, bypass vulnerabilities render all downstream authorization, rate limiting, and monitoring controls ineffective. This is distinct from authorization failures—authentication determines WHO you are, while authorization determines WHAT you can do.
 
-## Threat Scenario
+## Mechanism
 
-A fintech company deploys an LLM-powered financial analysis API protected by JWT authentication. The implementation has critical flaws: JWT signature verification uses a weak symmetric key susceptible to brute-force attacks, token expiration checks are performed client-side only (not validated server-side), and refresh token rotation is not implemented (allowing indefinite reuse of leaked tokens). An attacker intercepts a legitimate JWT during a man-in-the-middle attack on an insecure Wi-Fi network. They discover that modifying the expiration timestamp in the JWT payload allows them to extend the token's validity indefinitely—the API accepts tokens with future expiration dates without server-side validation. Additionally, by brute-forcing the weak HS256 signing key (only 128 bits), the attacker successfully forges new JWTs with elevated privileges (changing user_id and role claims from "analyst" to "admin"). With forged admin tokens, they access the entire customer database through the LLM's retrieval system, exfiltrate sensitive financial records, and maintain persistent access for three months until a security audit discovers unauthorized API usage patterns.
+### JWT Signature Bypass
+
+**Algorithm Confusion Attack:**
+Attacker modifies JWT header to change signing algorithm from asymmetric (RS256) to "none", removing signature entirely. Vulnerable implementations that don't validate algorithm field will accept unsigned tokens.
+
+```json
+// Original JWT header (RS256)
+{
+  "alg": "RS256",
+  "typ": "JWT"
+}
+
+// Modified JWT header (none algorithm)
+{
+  "alg": "none",
+  "typ": "JWT"
+}
+```
+
+If server accepts tokens with "none" algorithm, attacker can forge arbitrary tokens without needing signing keys.
+
+**Weak Signing Key Brute-Force:**
+Symmetric algorithms (HS256) with weak keys (<256 bits) can be brute-forced offline using tools like hashcat. Once key is recovered, attacker can forge valid tokens with arbitrary claims.
+
+**Missing Signature Validation:**
+Implementation flaws where signature verification is performed client-side only or skipped for certain endpoints allow attackers to modify payload without detection.
+
+### Token Expiration Bypass
+
+**Client-Side Validation Only:**
+Systems that check token expiration in client code but not server-side accept expired tokens. Attacker captures legitimate token, waits for expiration, continues using it indefinitely.
+
+**Timestamp Manipulation:**
+Attacker modifies `exp` (expiration) claim in JWT payload to extend token lifetime. Without server-side validation and signature verification, modified token is accepted.
+
+**Missing Expiration Enforcement:**
+APIs that issue tokens with expiration claims but never validate `exp` field server-side effectively create tokens with infinite lifetime.
+
+### OAuth 2.0 Implementation Flaws
+
+**Redirect URI Manipulation:**
+Weak redirect URI validation allows attacker to steal authorization codes by registering malicious redirect endpoints.
+
+**State Parameter Bypass:**
+Missing or improperly validated `state` parameter enables CSRF attacks during OAuth flows, allowing attacker to hijack victim's authorization.
+
+**Refresh Token Abuse:**
+Refresh tokens without rotation or expiration allow indefinite access if stolen. Attacker obtains refresh token once (via MITM, client-side theft) and maintains persistent access.
 
 ## Preconditions
 
@@ -27,33 +76,6 @@ A fintech company deploys an LLM-powered financial analysis API protected by JWT
 - Inadequate token validation implementation (client-side checks only, missing signature verification, no expiration enforcement)
 - Missing or weak session management (no token rotation, indefinite refresh token validity, no session invalidation)
 - No monitoring or alerting for authentication anomalies (forged tokens, expired token reuse, unusual authentication patterns)
-
-## Abuse Path
-
-1. **Reconnaissance and Interception**: Attacker identifies the authentication mechanism used by the LLM API (JWT, OAuth 2.0, API keys) through API documentation, traffic inspection, or endpoint probing. They intercept legitimate authentication tokens via man-in-the-middle attacks, network sniffing, or client-side token extraction (e.g., from browser local storage or mobile app reverse engineering).
-
-2. **Vulnerability Identification**: Attacker analyzes captured tokens to identify implementation weaknesses:
-   - Test if expired tokens are still accepted (server-side expiration validation missing)
-   - Attempt signature verification bypass (e.g., changing JWT algorithm from RS256 to "none")
-   - Brute-force weak signing keys (HS256 with short keys)
-   - Test for injection vulnerabilities in authentication parameters
-   - Identify missing security headers or HTTPS enforcement
-
-3. **Token Manipulation and Forgery**: Based on identified weaknesses, attacker crafts malicious tokens:
-   - Modify JWT payload to extend expiration or elevate privileges (user_id, role, scope)
-   - Forge signatures using cracked or guessed signing keys
-   - Replay expired tokens if server-side validation is absent
-   - Remove signature entirely if "none" algorithm is accepted
-   - Inject malicious claims to bypass authorization logic
-
-4. **Authentication Bypass Exploitation**: Attacker uses forged or manipulated tokens to access protected LLM API endpoints, bypassing authentication entirely. They validate bypass success by accessing endpoints that should require authentication, observing successful API responses.
-
-5. **Persistence and Abuse**: With unauthorized API access, attacker:
-   - Creates backdoor accounts or generates persistent access tokens
-   - Exfiltrates data via LLM queries (retrieval of customer records, sensitive documents)
-   - Abuses LLM resources for unauthorized purposes (cryptocurrency mining, model extraction)
-   - Escalates privileges if authorization is also weak (see weak-access-segmentation)
-   - Maintains long-term access by periodically refreshing forged tokens
 
 ## Impact
 
@@ -74,9 +96,7 @@ A fintech company deploys an LLM-powered financial analysis API protected by JWT
 - Inability to attribute actions to legitimate users (audit trails contain forged identities)
 - Potential for complete system compromise if API provides admin-level capabilities
 
-**Severity:** **Critical** (foundational security control failure enabling all subsequent attacks)
-
-## Detection Signals
+## Detection
 
 - Authentication attempts with expired tokens succeeding (indicates missing server-side expiration validation)
 - JWT tokens with "none" algorithm accepted by API (signature verification bypass)
@@ -88,86 +108,28 @@ A fintech company deploys an LLM-powered financial analysis API protected by JWT
 - High volume of authentication failures followed by sudden success (brute-force key cracking)
 - Tokens used beyond their intended lifecycle (refresh tokens never rotating or expiring)
 
-## Testing Approach
+## Procedure Examples
 
-**Manual Testing:**
-- **Expired Token Reuse**: Capture legitimate JWT, wait for expiration, attempt API access with expired token to test server-side validation
-- **Signature Bypass (Algorithm Confusion)**: Modify JWT header to use "none" algorithm, remove signature, test if API accepts unsigned tokens
-- **Token Payload Manipulation**: Modify JWT claims (user_id, role, exp, scope) without re-signing, test if API validates integrity
-- **Weak Key Brute-Force**: Attempt to crack HS256 JWT signing key using tools like hashcat or jwt_tool with common weak keys
-- **Refresh Token Abuse**: Test if refresh tokens expire, rotate, or can be reused indefinitely for unauthorized access
-- **Missing HTTPS Enforcement**: Test if API accepts authentication over unencrypted HTTP (enabling credential interception)
-- **Session Fixation**: Attempt to fixate session tokens or authentication states to hijack other users' sessions
-
-**Automated Testing:**
-- JWT vulnerability scanners (jwt_tool, JWTear) to detect weak keys, algorithm confusion, missing validation
-- Token manipulation frameworks (Burp Suite JWT extensions, OWASP ZAP) for automated payload fuzzing
-- Signature brute-force tools (hashcat with JWT mode, John the Ripper) for weak key cracking
-- Authentication bypass scanners testing common OAuth 2.0 vulnerabilities (redirect URI manipulation, code reuse)
-- TLS/HTTPS enforcementcheckers to identify insecure authentication channels
-
-## Evidence to Capture
-
-- [ ] Successfully authenticated API requests using expired tokens (with timestamps showing expiration)
-- [ ] API responses accepting tokens with "none" algorithm or removed signatures
-- [ ] Proof of payload manipulation (modified user_id or role claims) resulting in successful API access
-- [ ] Cracked JWT signing keys (demonstrate weak key compromise with recovered secret)
-- [ ] API access logs showing privilege escalation via forged token claims
-- [ ] Screenshots of API responses to authenticated requests using manipulated tokens
-- [ ] Network traffic captures showing authentication over unencrypted HTTP
-- [ ] Evidence of refresh token reuse beyond intended lifecycle (tokens used weeks after issuance)
-- [ ] Documentation of missing security headers (Strict-Transport-Security, X-Frame-Options) enabling attacks
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
 
 ## Mitigations
 
-**Preventive Controls:**
-- **Implement Strong Authentication Mechanisms**: Use industry-standard OAuth 2.0 or OpenID Connect with secure configurations (avoid custom authentication schemes)
-- **Use Robust JWT Implementation**:
-  - Enforce strong signing algorithms (RS256 with 2048+ bit keys or ES256, never HS256 with weak keys or "none")
-  - Validate signatures server-side for every request (never trust client-side validation)
-  - Enforce short-lived access tokens (15-60 minutes) with secure refresh token rotation
-  - Validate all JWT claims server-side (exp, nbf, iss, aud) and reject manipulated payloads
-- **Enforce HTTPS/TLS**: Require TLS 1.2+ for all API communications with strong cipher suites (no fallback to HTTP)
-- **Implement Token Binding**: Bind tokens to client IP, device fingerprints, or cryptographic proofs to prevent token theft and replay
-- **Use Short-Lived Access Tokens with Secure Refresh**: Access tokens expire quickly; refresh tokens stored securely, rotated on each use, and revocable
-- **Implement Multi-Factor Authentication (MFA)**: Require second factor for sensitive API operations or high-risk user accounts
-- **API Gateway Enforcement**: Centralize authentication validation at API gateway layer (never rely on individual microservice validation alone)
+| ID | Name | Description |
+|----|------|-------------|
+| | [[mitigations/api-authentication-security]] | Implements OAuth 2.0/OpenID Connect, secure JWT with strong signing algorithms, TLS enforcement, token binding, MFA, and API gateway authentication |
+| | [[mitigations/authentication-monitoring]] | Detects expired token reuse, signature bypass attempts, geolocation anomalies, behavioral analytics, and brute-force patterns |
+| | [[mitigations/token-lifecycle-management]] | Provides automated token revocation, secure refresh token rotation, account lockout, emergency token invalidation, and key rotation procedures |
+| AML.M0015 | [[mitigations/rate-limiting-and-throttling]] | Limits attacker's ability to test forged tokens at scale and slows brute-force key cracking attempts |
+| | [[mitigations/incident-response-procedures]] | Emergency response playbooks for authentication bypass incidents including containment, forensics, remediation, and recovery |
+| | [[mitigations/anomaly-detection-architecture]] | General anomaly detection architecture that identifies authentication attack patterns and unusual access behaviors |
+| | [[mitigations/access-segmentation-and-rbac]] | Defense-in-depth through network segmentation and RBAC that limits impact of authentication bypass |
 
-**Detective Controls:**
-- **Authentication Anomaly Detection**: Monitor for expired token reuse, "none" algorithm tokens, manipulated payload patterns
-- **Behavioral Analytics**: Detect authentication patterns inconsistent with user profiles (geolocation changes, unusual access times, device fingerprint mismatches)
-- **Token Integrity Monitoring**: Alert on tokens with future expiration dates, missing signatures, or invalid claims
-- **Failed Authentication Logging**: Track failed signature validation attempts, expired token rejections, and brute-force patterns
-- **Session Anomaly Detection**: Monitor for refresh tokens used beyond expected lifecycle or from multiple concurrent sessions
-- **Geolocation and IP Monitoring**: Alert when tokens are used from geolocations or IP ranges inconsistent with user history
+## Sources
 
-**Responsive Controls:**
-- **Automated Token Revocation**: Immediately revoke tokens when anomalies detected (expired token reuse, signature failures)
-- **Account Lockout**: Temporarily suspend accounts exhibiting authentication bypass attempts pending investigation
-- **Emergency Token Invalidation**: Capability to globally invalidate all tokens for compromised users or during security incidents
-- **Incident Response Playbooks**: Defined procedures for authentication bypass incidents (containment, forensics, token rotation)
-- **Security Key Rotation**: Procedures for emergency signing key rotation when weak keys are discovered or compromised
+> "API authentication bypass occurs when attackers exploit weaknesses in authentication mechanisms to gain unauthorized access to LLM APIs without valid credentials. Since authentication is the gateway control protecting all LLM API endpoints, bypass vulnerabilities render all downstream authorization, rate limiting, and monitoring controls ineffective."
+> — [[sources/bibliography#Generative AI Security]]
 
-## Engagement Applicability
-
-- [x] AI Threat Exposure Review (Deployment/Governance boundary, API security assessment)
-- [x] Continuous Monitoring Setup (authentication anomaly detection, token integrity monitoring)
-- [x] Purple Team Workshop (teach detection of authentication bypass patterns)
-
-## Framework References
-
-**MITRE ATLAS:**
-- AML.T0079: Unsecured Credentials (related to credential exposure enabling bypass)
-
-**OWASP LLM Top 10:**
-- **TODO:** Map to OWASP LLM issues (may relate to LLM06 or deployment concerns)
-
-**NIST AI RMF:**
-- **TODO:** Map to NIST AI RMF
-
-**NIST GenAI Profile:**
-- **TODO:** Map to GenAI Profile
-
-## Related
-
-- **Mitigated by**: [[mitigations/access-segmentation-and-rbac]], [[mitigations/rate-limiting-and-throttling]], [[mitigations/anomaly-detection-architecture]]
+> "Vulnerabilities manifest through inadequate token validation (signature verification failures, expiration check bypasses), weak authentication schemes (basic auth over HTTP, hardcoded API keys), or implementation flaws in OAuth 2.0 and JWT workflows."
+> — [[sources/bibliography#Generative AI Security]]

@@ -69,7 +69,7 @@ From here, the researchers repeat the same steps to interact with the AI agent, 
 
 ### Step 8: LLM Prompt Injection
 
-**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051: LLM Prompt Injection]]
+**Technique:** [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051: LLM Prompt Injection]]
 
 The researchers modify the original prompt to discover other knowledge sources and tools that may have data they are after.
 

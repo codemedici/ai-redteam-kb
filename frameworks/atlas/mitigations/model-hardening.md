@@ -22,7 +22,7 @@ Use techniques to make AI models robust to adversarial inputs such as adversaria
 
 - [[frameworks/atlas/techniques/initial-access/evade-ai-model|AML.T0015: Evade AI Model]] — Hardened models are more difficult to evade.
 - [[frameworks/atlas/techniques/impact/erode-ai-model-integrity|AML.T0031: Erode AI Model Integrity]] — Hardened models are less susceptible to integrity attacks.
-- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data|AML.T0043: Craft Adversarial Data]] — Hardened models are more robust to adversarial inputs.
+- [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-white-box-optimization|AML.T0043: Craft Adversarial Data]] — Hardened models are more robust to adversarial inputs.
 - [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-optimization|AML.T0043.001: Black-Box Optimization]] — Hardened models are more robust to adversarial inputs.
 - [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-black-box-transfer|AML.T0043.002: Black-Box Transfer]] — Hardened models are more robust to adversarial inputs.
 - [[frameworks/atlas/techniques/ai-attack-staging/craft-adversarial-data/craft-adversarial-data-manual-modification|AML.T0043.003: Manual Modification]] — Hardened models are more robust to adversarial inputs.

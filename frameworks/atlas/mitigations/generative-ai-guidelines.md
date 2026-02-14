@@ -25,7 +25,7 @@ Guidelines can be implemented as instructions appended to all user prompts or as
 - [[frameworks/atlas/techniques/privilege-escalation/llm-jailbreak|AML.T0054: LLM Jailbreak]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
 - [[frameworks/atlas/techniques/exfiltration/extract-llm-system-prompt|AML.T0056: Extract LLM System Prompt]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
 - [[frameworks/atlas/techniques/execution/ai-agent-tool-invocation|AML.T0053: AI Agent Tool Invocation]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
-- [[frameworks/atlas/techniques/execution/llm-prompt-injection|AML.T0051: LLM Prompt Injection]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
+- [[frameworks/atlas/techniques/execution/llm-prompt-injection/LLM-direct-prompt-injection|AML.T0051: LLM Prompt Injection]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
 - [[frameworks/atlas/techniques/exfiltration/llm-data-leakage|AML.T0057: LLM Data Leakage]] — Model guidelines can instruct the model to refuse a response to unsafe inputs.
 - [[frameworks/atlas/techniques/persistence/llm-prompt-self-replication|AML.T0061: LLM Prompt Self-Replication]] — Guidelines can help instruct the model to produce more secure output, preventing the model from generating self-replicating outputs.
 - [[frameworks/atlas/techniques/discovery/discover-llm-hallucinations|AML.T0062: Discover LLM Hallucinations]] — Guidelines can instruct the model to avoid producing hallucinated content.

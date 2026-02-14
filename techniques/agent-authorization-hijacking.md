@@ -1,52 +1,37 @@
 ---
-description: "Exploiting agent authorization mechanisms to execute unauthorized actions"
+title: "Agent Authorization Hijacking"
 tags:
-  - application-runtime
-  - authorization-bypass
-  - privilege-escalation
-  - source/securing-ai-agents
-  - trust-boundary/agent-runtime
-  - type/attack
+  - type/technique
   - target/agent
-  - access/black-box
-  - access/gray-box
-  - severity/critical
-  - atlas/aml.t0051
+  - access/api
+  - source/securing-ai-agents
+atlas: AML.T0051
+maturity: draft
 created: 2026-02-11
-source: [['sources/bibliography#Securing AI Agents']]
-pages: "210-211"
+updated: 2026-02-14
 ---
 # Agent Authorization and Control Hijacking
 
-Most fundamental threat category targeting an agent's ability to manage permissions and execute actions. Exploits flaws in how agents request, use, and revoke privileges in dynamic, context-dependent manner.
+## Summary
 
-## Threat Description
+Most fundamental threat category targeting an agent's ability to manage permissions and execute actions. Exploits flaws in how agents request, use, and revoke privileges in dynamic, context-dependent manner. The core risk lies in an attacker's ability to bridge the gap between a low-privilege context and a high-privilege action.
 
-**Core Risk:** Attacker bridges gap between low-privilege context and high-privilege action.
+This isn't just about stolen passwords or credentials—it's about exploiting permission management logic, context-dependent authorization, and dynamic privilege escalation mechanisms in agentic systems.
 
-**Not just:** Stolen passwords or credentials
+## Mechanism
 
-**It's about:** Exploiting permission management logic, context-dependent authorization, dynamic privilege escalation
+**Attack Vector:** Manipulate API requests that assign tasks to agents to force privileged tool execution within non-privileged user sessions.
 
-## Attack Scenario: IT Helpdesk Agent
+**Vulnerability Condition:** Agent accepts tool selection from API payload without validating user permissions against tool requirements. Authorization checks performed after tool selection (or not at all), allowing attackers to bypass permission enforcement.
 
-**Target:** "HelpBot" - IT helpdesk agent with multiple tools:
-- `password_reset` - low privilege
-- `run_admin_powershell` - high privilege (requires IT admin approval)
+**Technical Flow:**
 
-**Red Team Objective:** Coerce HelpBot into using privileged tool (`run_admin_powershell`) within standard, non-privileged user session.
+1. **Reconnaissance:** Observe legitimate low-privilege API calls to identify available tools and privilege levels
+2. **Craft Malicious Request:** Inject privileged tool name into API payload `tool_to_use` field
+3. **Exploit Trusted Input:** Agent blindly trusts client-controlled tool selection parameter
+4. **Execute with Elevated Privileges:** Tool invoked with admin permissions despite low-privilege user context
 
-**Attack Method:** Manipulate API call that assigns tasks to agent.
-
-## Attack Technique: API-Level Privilege Escalation
-
-### Reconnaissance
-1. Observe legitimate low-privilege API call to agent
-2. Identify available tools and privilege levels
-3. Obtain standard user authentication token
-
-### Exploitation
-Craft malicious request that explicitly requests privileged tool in API payload:
+**Example Attack:**
 
 ```python
 import requests
@@ -80,60 +65,70 @@ response = requests.post(
 )
 ```
 
-### Vulnerability Condition
+## Preconditions
 
-**Agent accepts request if:**
-- Tool selection blindly trusted from API payload
-- User role/permissions not validated against tool requirements
-- Authorization checks performed after tool selection
-
-## Detection Signals
-
-- Tool invocations that don't match user permission level
-- API requests with `tool_to_use` field from non-admin users
-- Privilege escalation attempts in logs
-- Unauthorized PowerShell/admin tool execution
-
-## Mitigations
-
-### Authorization Layer
-- **Tool ACL enforcement:** Validate user role against tool privilege level before execution
-- **Context-aware authorization:** Check session context, not just API fields
-- **Explicit approval gates:** Require human-in-loop for high-privilege tools
-
-### API Design
-- **Server-side tool selection:** Agent determines appropriate tool based on task description + user role
-- **Remove client-controlled tool selection:** Don't trust `tool_to_use` field from API requests
-- **Input validation:** Sanitize and validate all task parameters
-
-### Monitoring
-- **Anomaly detection:** Flag tool usage patterns inconsistent with user role
-- **Audit logging:** Log all tool invocations with user context
-- **Privilege escalation alerts:** Real-time alerts on admin tool use by non-admins
+- Agent system accepts API requests with tool selection parameters
+- Tool selection logic trusts client-controlled fields (`tool_to_use`, `tool_name`, etc.)
+- Authorization checks not performed before tool invocation
+- User role/permissions not validated against tool privilege requirements
+- No anomaly detection for tool usage patterns inconsistent with user role
 
 ## Impact
 
 **Successful exploitation enables:**
-- Arbitrary command execution with elevated privileges
-- System compromise via authorized agent tools
-- Lateral movement using agent's identity/credentials
-- Data exfiltration through privileged access
 
-## Related
+- **Arbitrary command execution** with elevated privileges via authorized agent tools
+- **System compromise** through privileged access to administrative functions
+- **Lateral movement** using agent's identity and credentials
+- **Data exfiltration** through privileged data access tools
+- **Persistence** by creating backdoor accounts or modifying system configurations
 
-- **Mitigated by**: [[mitigations/least-privilege-implementation]], [[mitigations/approval-workflow-patterns]], [[mitigations/user-context-binding]], [[mitigations/anomaly-detection-architecture]]
-- **ATLAS**: AML.T0051
+**Business Impact:**
 
-## Source
+- Unauthorized access to sensitive data
+- System integrity compromise
+- Regulatory compliance violations
+- Reputational damage from security breach
+
+## Detection
+
+**Signals:**
+
+- Tool invocations that don't match user permission level
+- API requests containing `tool_to_use` field from non-admin users
+- Privilege escalation attempts in security logs
+- Unauthorized PowerShell/admin tool execution
+- Anomalous tool usage patterns (user invoking tools outside typical baseline)
+- High-privilege tool usage from low-privilege accounts
+
+**Log Indicators:**
+
+```
+[WARN] Tool authorization mismatch: user=eric.jones role=helpdesk.user tool=run_admin_powershell
+[ALERT] Privilege escalation attempt: API payload contains client-controlled tool selection
+[CRIT] Admin tool invocation by non-admin: user=eric.jones tool=run_admin_powershell
+```
+
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| *(No documented cases yet)* | | |
+
+## Mitigations
+
+| ID | Name | Description |
+|----|------|-------------|
+| AML.M0004 | [[mitigations/least-privilege-implementation]] | Enforce tool ACL validation; implement server-side tool selection; prevent client-controlled tool requests |
+| AML.M0016 | [[mitigations/user-context-binding]] | Bind tool execution to user's security context; validate permissions match tool requirements |
+| AML.M0030 | [[mitigations/approval-workflow-patterns]] | Require explicit approval gates for high-privilege tool invocations |
+| | [[mitigations/input-validation-patterns]] | Validate and sanitize all tool parameters to prevent argument injection |
+| | [[mitigations/anomaly-detection-architecture]] | Monitor tool usage patterns; alert on privilege escalation attempts; audit log all tool invocations |
+
+## Sources
 
 > "This is the most fundamental threat category, targeting the agent's nervous system: its ability to manage permissions and execute actions. A vulnerability here means an attacker can force the agent to do something it shouldn't. This isn't just about stolen passwords; it's about exploiting flaws in how the agent requests, uses, and revokes privileges, often in a dynamic, context-dependent manner. The core risk lies in an attacker's ability to bridge the gap between a low-privilege context and a high-privilege action."
-> 
-> Source: [[sources/bibliography#Securing AI Agents]], p. 210-211
+> — [[sources/bibliography#Securing AI Agents]], p. 210-211
 
-## Notes
-
-First of the CSA/OWASP 12 threat categories. Most fundamental because it targets the agent's core ability to execute actions.
-
-Key insight: This is NOT traditional privilege escalation (exploiting OS vulnerabilities). This is exploiting the **agent's authorization logic** - how it decides what tools to use and when.
-
-Practical example provided is directly testable and adaptable to real agent implementations.
+> "**Attack Scenario: IT Helpdesk Agent** - Target: 'HelpBot' with multiple tools including `password_reset` (low privilege) and `run_admin_powershell` (high privilege, requires IT admin approval). Red Team Objective: Coerce HelpBot into using privileged tool within standard, non-privileged user session. Attack Method: Manipulate API call that assigns tasks to agent by crafting malicious request that explicitly requests privileged tool in API payload."
+> — [[sources/bibliography#Securing AI Agents]], p. 210-211

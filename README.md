@@ -71,3 +71,8 @@ This knowledge base integrates content from multiple security frameworks:
 ## License
 
 Internal research and operational documentation.
+
+## Related
+
+- [[playbooks/genai-security-program-blueprint|GenAI Security Program Blueprint]]
+

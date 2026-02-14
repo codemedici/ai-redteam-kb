@@ -1,28 +1,34 @@
 ---
-description: "Architectural pattern for implementing least privilege access control in agentic systems to prevent tool privilege escalation and unauthorized actions."
+title: "Least Privilege Implementation"
 tags:
-  - trust-boundary/agent-runtime
-  - type/defense
+  - type/mitigation
   - target/agent
+  - source/securing-ai-agents
+atlas: AML.M0004
+maturity: draft
+created: 2026-02-11
+updated: 2026-02-14
 ---
 # Least Privilege Tool Implementation
 
 ## Summary
 
-Least privilege tool implementation is a fundamental security control that restricts agent tools to the minimum permissions necessary for their intended function. This control prevents privilege escalation attacks where attackers manipulate agents to invoke tools with greater permissions than intended, enabling unauthorized data access, system modifications, or privilege elevation. By enforcing granular permission boundaries at the tool level, this control serves as a primary defense against tool misuse across multiple attack vectors.
+Least privilege tool implementation is a fundamental security control that restricts agent tools to the minimum permissions necessary for their intended function. This control prevents privilege escalation attacks where attackers manipulate agents to invoke tools with greater permissions than intended, enabling unauthorized data access, system modifications, or privilege elevation. By enforcing granular permission boundaries at the tool level and implementing server-side tool selection, this control serves as a primary defense against tool misuse and authorization bypass attacks across multiple attack vectors.
 
-## Applicable Issues
+## Defends Against
 
-This control addresses the following security issues:
+| ID | Technique | Description |
+|----|-----------|-------------|
+| AML.T0051 | [[techniques/agent-authorization-hijacking]] | Enforces tool ACL to prevent API-level privilege escalation attacks |
+| | [[techniques/tool-privilege-escalation]] | Prevents agents from accessing tools beyond authorized scope through permission boundaries |
+| | [[techniques/unsafe-tool-invocation]] | Limits blast radius by restricting tools to minimal required capabilities |
+| | [[techniques/agent-goal-hijack]] | Prevents hijacked agents from performing unauthorized actions through limited tool permissions |
+| | [[techniques/prompt-injection]] | Reduces impact by ensuring injected instructions cannot access privileged tools |
+| | [[techniques/auth-context-confusion]] | Enforces minimum required permissions to prevent escalation through context confusion |
+| | [[techniques/weak-access-segmentation]] | Applies least privilege principle to prevent users from having more permissions than required for their role |
+| AML.T0020 | [[techniques/rag-data-poisoning]] | Strict access controls on data pipelines limit write permissions to authorized personnel |
 
-- **[[techniques/tool-privilege-escalation|Tool Privilege Escalation]]**: Prevents agents from accessing tools or operations beyond their authorized scope by enforcing strict permission boundaries
-- **[[techniques/unsafe-tool-invocation|Unsafe Tool Invocation]]**: Limits the blast radius of unsafe invocations by restricting tools to minimal required capabilities
-- **[[techniques/agent-goal-hijack|Agent Goal Hijacking]]**: Prevents hijacked agents from performing unauthorized actions by limiting available tool permissions
-- **[[techniques/prompt-injection|Prompt Injection]]**: Reduces impact of prompt injection attacks by ensuring injected instructions cannot access privileged tools
-
-[[techniques/|See [Application/Agent Runtime Issues]] for complete issue catalog]
-
-## Implementation Approach
+## Implementation
 
 **Core Components:**
 
@@ -32,7 +38,7 @@ This control addresses the following security issues:
    - Map tools to minimum required permission sets
    - Document permission inheritance and escalation rules
 
-2. **Tool Permission Registry**
+2. **Tool Permission Registry (Tool ACL)**
    - Maintain centralized registry mapping tools to required permissions
    - Enforce permission checks before tool invocation
    - Support dynamic permission evaluation based on context
@@ -43,6 +49,106 @@ This control addresses the following security issues:
    - Prevent privilege inheritance from system or agent processes
    - Enforce user role-based access control (RBAC) at tool level
    - Validate user permissions match tool requirements
+
+4. **Server-Side Tool Selection**
+   - Agent determines appropriate tool based on task description and user role
+   - Remove client-controlled tool selection from API requests
+   - Don't trust `tool_to_use` field from API payloads
+   - Enforce tool selection logic server-side to prevent manipulation
+
+### Tool ACL Enforcement
+
+**Validate user role against tool privilege level before execution:**
+
+```python
+# Tool ACL: Maps tools to required permissions
+TOOL_ACL = {
+    "password_reset": ["helpdesk.user"],
+    "run_admin_powershell": ["helpdesk.admin"],
+    "read_user_data": ["helpdesk.user"],
+    "modify_system_config": ["system.admin"]
+}
+
+def validate_tool_permission(tool_name, user_context):
+    """
+    Validate user has required permissions for tool
+    
+    Returns: (authorized: bool, missing_permissions: list)
+    """
+    required_permissions = TOOL_ACL.get(tool_name, [])
+    missing_permissions = [
+        perm for perm in required_permissions 
+        if not user_context.has_permission(perm)
+    ]
+    
+    authorized = len(missing_permissions) == 0
+    
+    if not authorized:
+        log_security_event("tool_permission_denied", {
+            "user_id": user_context.user_id,
+            "tool": tool_name,
+            "missing_permissions": missing_permissions
+        })
+    
+    return authorized, missing_permissions
+
+# Before tool invocation
+authorized, missing = validate_tool_permission(tool_name, user_context)
+if not authorized:
+    raise PermissionError(
+        f"User lacks required permissions: {missing}"
+    )
+```
+
+### Server-Side Tool Selection
+
+**Remove client-controlled tool selection to prevent API-level privilege escalation:**
+
+**Vulnerable Pattern:**
+
+```python
+# ❌ VULNERABLE: Client controls which tool to use
+@app.route("/api/tasks", methods=["POST"])
+def create_task_vulnerable():
+    task_payload = request.json
+    
+    # Attacker can specify privileged tool
+    tool_to_use = task_payload.get("tool_to_use")  # ❌ CLIENT-CONTROLLED
+    tool_params = task_payload.get("tool_parameters")
+    
+    result = agent.invoke_tool(tool_to_use, tool_params)  # ❌ NO VALIDATION
+    return jsonify({"result": result})
+```
+
+**Secure Pattern:**
+
+```python
+# ✅ SECURE: Server-side tool selection with permission validation
+@app.route("/api/tasks", methods=["POST"])
+def create_task_secure():
+    auth_token = request.headers.get("Authorization")
+    user_context = extract_user_context(auth_token)
+    
+    task_payload = request.json
+    task_description = task_payload.get("task_description")
+    
+    # ✅ SERVER-SIDE: Agent selects tool based on task description
+    selected_tool, tool_params = agent.select_tool_for_task(
+        task_description,
+        user_context
+    )
+    
+    # ✅ VALIDATE: User has permission for selected tool
+    authorized, missing = validate_tool_permission(selected_tool, user_context)
+    
+    if not authorized:
+        abort(403, f"User lacks required permissions: {missing}")
+    
+    # ✅ EXECUTE: Tool invocation with validated context
+    result = agent.invoke_tool(selected_tool, tool_params, user_context)
+    
+    return jsonify({"result": result})
+```
 
 **Integration Points:**
 
@@ -146,9 +252,18 @@ User Request → Agent Decision → Permission Check → Tool Execution
 **MITRE ATLAS:**
 - Defensive techniques related to access control and privilege management
 
+## Sources
+
+> "Tool ACL enforcement: Validate user role against tool privilege level before execution."
+> — [[sources/bibliography#Securing AI Agents]], p. 210-211
+
+> "Server-side tool selection: Agent determines appropriate tool based on task description + user role. Remove client-controlled tool selection: Don't trust `tool_to_use` field from API requests."
+> — [[sources/bibliography#Securing AI Agents]], p. 210-211 (extracted from agent authorization hijacking mitigations)
+
 ## Related
 
-- **Mitigates**: [[techniques/agent-authorization-hijacking]], [[techniques/agent-goal-hijack]], [[techniques/agentic-ai-security-risks-owasp-aivss]], [[techniques/auth-context-confusion]], [[techniques/tool-privilege-escalation]], [[techniques/unsafe-tool-invocation]], [[techniques/weak-access-segmentation]]
+- **Combines with:** [[mitigations/user-context-binding]], [[mitigations/approval-workflow-patterns]], [[mitigations/input-validation-patterns]]
+- **Supports:** [[mitigations/anomaly-detection-architecture]] (permission anomaly detection)
 
 ## References
 

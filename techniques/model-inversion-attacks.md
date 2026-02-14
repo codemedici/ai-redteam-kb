@@ -11,6 +11,7 @@ tags:
   - access/white-box
   - severity/high
   - source/adversarial-ai
+  - source/generative-ai-security
   - needs-review
 ---
 
@@ -153,6 +154,18 @@ After training, GAN generates profiles indistinguishable from real training data
 
 ---
 
+## Conceptual Foundation (GenAI Context)
+
+The essence of model inversion attacks in generative AI models revolves around exploiting the inherent relationship between a model's outputs and inputs. When a model has been trained meticulously to the point where it captures its training data exceedingly well, it becomes vulnerable because the model might **inadvertently leak information about its training data**.
+
+> "The real danger here is not necessarily about the attacker recovering the exact original input; it's the fact that they can achieve a close approximation. Overfit models are particularly susceptible. The more a model overfits, the more it leans towards memorizing its training data, amplifying the risk of an inversion attack."
+> 
+> Source: [[sources/bibliography#Generative AI Security]], p. 165
+
+### Overfitting and Memorization Risk
+
+Models that are trained to exceptional accuracy on their training set—especially those that have **memorized specific data points rather than learned general patterns**—are highly vulnerable. For instance, consider a generative model trained to predict diseases based on health metrics. With knowledge of the predicted disease, an attacker might deduce specific health metrics of an individual, particularly if the model has memorized patterns from specific patients during training.
+
 ## Preconditions
 
 - **Model Trained on Sensitive Data**: Personal information, biometric data, health records, financial profiles
@@ -160,6 +173,7 @@ After training, GAN generates profiles indistinguishable from real training data
 - **High-Confidence Outputs**: Model returns detailed prediction probabilities (not just labels)
 - **Weak Privacy Protections**: Absence of differential privacy, output perturbation, or query limits
 - **Large Query Budget**: Attacker can make thousands of queries without detection
+- **Model Overfitting**: Model has overfit to training data, memorizing specific examples rather than generalizing
 
 ## Impact
 
@@ -184,10 +198,53 @@ After training, GAN generates profiles indistinguishable from real training data
 
 ## Mitigations
 
-**Preventive**:
-- **Differential Privacy** (see [[mitigations/differential-privacy]]):
-  - Add calibrated noise to model outputs during training (DP-SGD)
-  - Guarantee ε-differential privacy (e.g., ε < 1) for training
+### Preventive Controls
+
+#### 1. Differential Privacy
+
+Differential privacy strikes a balance between maximizing accuracy of data queries from statistical databases while ensuring that chances of pinpointing specific entries remain minimal. When applied to machine learning, this involves **deliberate addition of noise to model outputs**. This noise is calibrated such that it ensures the outputs do not betray specific details about individual data points.
+
+> "The addition of this noise ensures that model outputs remain almost invariant, regardless of whether a specific individual's data is part of the dataset or not. This obfuscation makes it exceedingly challenging for attackers to reverse engineer-specific data points."
+> 
+> Source: [[sources/bibliography#Generative AI Security]], p. 166-167
+
+**Implementation** (see [[mitigations/differential-privacy]]):
+- Add calibrated noise to model outputs during training (DP-SGD)
+- Guarantee ε-differential privacy (e.g., ε < 1) for training
+- Ensure outputs remain consistent whether individual's data is included or not
+
+**Challenges:**
+- **Balancing noise levels**: Excessive noise can compromise model utility, rendering outputs unreliable
+- **Insufficient noise**: Leaves privacy vulnerabilities exposed
+- Requires expertise and rigorous experimentation
+
+#### 2. Regularization Techniques
+
+Regularization aims to deter models from fitting training data too closely by introducing a penalty to the model's loss function. This penalty discourages the model from mirroring its training data in a manner that makes it susceptible to inversion attacks.
+
+**Common techniques:**
+
+**Dropout** (Yadav, 2022):
+- Random deactivation of a subset of neurons during each training iteration
+- Intentional randomness mitigates overfitting risk
+- Prevents neurons from becoming overly specialized
+- Injects stochasticity and noise into training, making model more robust
+
+**L2 Regularization (Ridge Regression)**:
+- Imposes penalty proportional to the square of coefficient magnitude
+- Larger coefficients incur larger penalties
+- Nudges model towards smaller coefficients, simplifying it
+- Makes model less prone to overfitting individual training samples
+
+**Challenges:**
+- Choice of regularization technique and intensity requires expertise
+- Overzealous regularization → underfitting (model becomes too simplistic)
+- May overlook underlying patterns in data
+
+> Source: [[sources/bibliography#Generative AI Security]], p. 167
+
+#### 3. Additional Preventive Measures
+
 - **Confidence Masking**:
   - Return only top-1 prediction (no probabilities)
   - Quantize confidence scores (e.g., "high", "medium", "low" instead of exact values)
@@ -200,9 +257,6 @@ After training, GAN generates profiles indistinguishable from real training data
 - **Model Distillation**:
   - Train student model on teacher's predictions with noise
   - Deploy student model which is less invertible
-- **Regularization**:
-  - Use techniques that prevent overfitting to specific individuals (L2, dropout)
-  - Train on aggregated/anonymized data where possible
 
 **Detective**:
 - **Query Monitoring**:
@@ -250,4 +304,14 @@ After training, GAN generates profiles indistinguishable from real training data
 
 ---
 
-*Source: Adversarial AI - Attacks, Mitigations, and Defense Strategies (Chapter 9: Privacy Attacks – Stealing Data, p207-231)*
+## Sources
+
+- Adversarial AI - Attacks, Mitigations, and Defense Strategies (Chapter 9: Privacy Attacks – Stealing Data, p207-231)
+- [[sources/bibliography#Generative AI Security]], Chapter 6: GenAI Model Security (Section 6.1.1: Model Inversion Attacks, p. 164-167)
+
+### Additional References
+
+- Adams, N. (2023). Model inversion attacks | A new AI security risk. Michalsons.
+- Nguyen (2019). Differential privacy fundamentals
+- Nagpal & Guide (2022). Regularization techniques in machine learning
+- Yadav (2022). Dropout and regularization in deep learning

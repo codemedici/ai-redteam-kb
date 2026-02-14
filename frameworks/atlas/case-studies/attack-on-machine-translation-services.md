@@ -24,7 +24,7 @@ These adversarial inputs successfully cause targeted word flips, vulgar outputs,
 
 ### Step 1: Search Open Technical Databases
 
-**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases|AML.T0000: Search Open Technical Databases]]
+**Technique:** [[frameworks/atlas/techniques/reconnaissance/search-open-technical-databases/search-open-tech-db-journals-conferences|AML.T0000: Search Open Technical Databases]]
 
 The researchers used published research papers to identify the datasets and model architectures used by the target translation services.
 

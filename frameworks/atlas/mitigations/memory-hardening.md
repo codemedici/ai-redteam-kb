@@ -20,5 +20,5 @@ Memory Hardening involves developing trust boundaries and secure processes for h
 
 ## Techniques (2)
 
-- [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning|AML.T0080: AI Agent Context Poisoning]] — Memory hardening can help protect LLM memory from manipulation and prevent poisoned memories from executing.
+- [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-thread|AML.T0080: AI Agent Context Poisoning]] — Memory hardening can help protect LLM memory from manipulation and prevent poisoned memories from executing.
 - [[frameworks/atlas/techniques/persistence/ai-agent-context-poisoning/agent-context-poisoning-thread|AML.T0080.000: Memory]] — Memory hardening can help protect LLM memory from manipulation and prevent poisoned memories from executing.

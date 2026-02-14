@@ -77,7 +77,16 @@ LLMs collapse the cost/quality tradeoff: attackers can now produce **thousands o
 
 ---
 
+## Procedure Examples
+
+| Name | Tactic | Description |
+|------|--------|-------------|
+| [[case-studies/sophos-automated-ecommerce-scam]] | [[frameworks/atlas/tactics/resource-development]] | Researchers demonstrated fully automated e-commerce scam site generation using AutoGPT, Stable Diffusion, and WaveNet |
+| [[case-studies/sha-zhu-pan-pig-butchering-scam]] | [[frameworks/atlas/tactics/credential-access]] | Romance scam campaigns enhanced with LLM-generated emotionally manipulative messages for cryptocurrency fraud |
+
 ## Case Study 1: Automated E-Commerce Scam Campaigns
+
+See [[case-studies/sophos-automated-ecommerce-scam]] for detailed analysis.
 
 **Source:** Sophos AI Team proof-of-concept (2023)
 
@@ -138,6 +147,8 @@ LLMs collapse the cost/quality tradeoff: attackers can now produce **thousands o
 ---
 
 ## Case Study 2: Sha Zhu Pán (Pig Butchering) Scams
+
+See [[case-studies/sha-zhu-pan-pig-butchering-scam]] for detailed analysis.
 
 **Source:** Sophos security team incident response (2023)
 

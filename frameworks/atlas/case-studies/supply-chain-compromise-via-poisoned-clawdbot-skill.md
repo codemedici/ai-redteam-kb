@@ -21,7 +21,7 @@ A security researcher demonstrated a proof-of-concept supply chain attack using 
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017: Develop Capabilities]]
 
 The researcher created a simple web server to log requests.
 
@@ -79,7 +79,7 @@ Claude Code executed the shell command using it’s `bash` tool.
 
 ### Step 10: External Harms
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms|AML.T0048: External Harms]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048: External Harms]]
 
 In this proof of concept, the researcher simply pinged their server and warned the user of the dangers of using Skills without reading the source code, causing no harm. However, they could have delivered a malicious payload, and caused a variety of harms, including:
 - Exfiltrating the user’s codebase

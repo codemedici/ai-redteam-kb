@@ -27,7 +27,7 @@ This exercise raises awareness of the effects of arbitrary code execution and Co
 
 ### Step 1: Develop Capabilities
 
-**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities|AML.T0017: Develop Capabilities]]
+**Technique:** [[frameworks/atlas/techniques/resource-development/develop-capabilities/develop-capabilities-adversarial-AI-attacks|AML.T0017: Develop Capabilities]]
 
 An adversary creates a Jupyter notebook containing obfuscated, malicious code.
 
@@ -60,7 +60,7 @@ A victim user may nonetheless accept the popup and allow the compromised Colab n
 
 ### Step 4: User Execution
 
-**Technique:** [[frameworks/atlas/techniques/execution/user-execution|AML.T0011: User Execution]]
+**Technique:** [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011: User Execution]]
 
 A victim user may unwittingly execute malicious code provided as part of a compromised Colab notebook.  Malicious code can be obfuscated or hidden in other files that the notebook downloads.
 
@@ -93,7 +93,7 @@ Exfiltrated data may include sensitive or private data such as ML model artifact
 
 ### Step 8: External Harms
 
-**Technique:** [[frameworks/atlas/techniques/impact/external-harms|AML.T0048: External Harms]]
+**Technique:** [[frameworks/atlas/techniques/impact/external-harms/external-harms-financial|AML.T0048: External Harms]]
 
 Exfiltrated data may include sensitive or private data such as proprietary data stored in Google Drive, as well as user contacts and photos.  As a result, the user may be harmed financially, reputationally, and more.
 

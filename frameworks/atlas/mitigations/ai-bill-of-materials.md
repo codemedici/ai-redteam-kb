@@ -27,5 +27,5 @@ This can include maintaining dataset provenance, i.e. a detailed history of data
 - [[frameworks/atlas/techniques/resource-development/poison-training-data|AML.T0020: Poison Training Data]] — An AI BOM can help users identify untrustworthy model artifacts.
 - [[frameworks/atlas/techniques/resource-development/publish-poisoned-models|AML.T0058: Publish Poisoned Models]] — An AI BOM can help users identify untrustworthy model artifacts.
 - [[frameworks/atlas/techniques/execution/user-execution/user-execution-malicious-package|AML.T0011.001: Malicious Package]] — An AI BOM can help users identify untrustworthy software dependencies.
-- [[frameworks/atlas/techniques/execution/user-execution|AML.T0011: User Execution]] — An AI BOM can help users identify untrustworthy binaries.
-- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise|AML.T0010: AI Supply Chain Compromise]] — An AI BOM can help users identify untrustworthy components of their AI supply chain.
+- [[frameworks/atlas/techniques/execution/user-execution/user-execution-unsafe-AI-artifacts|AML.T0011: User Execution]] — An AI BOM can help users identify untrustworthy binaries.
+- [[frameworks/atlas/techniques/initial-access/ai-supply-chain-compromise/supply-chain-compromise-data|AML.T0010: AI Supply Chain Compromise]] — An AI BOM can help users identify untrustworthy components of their AI supply chain.
